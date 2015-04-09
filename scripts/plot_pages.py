@@ -11,8 +11,8 @@ dayssince = []
 pages = []
 
 # the template already has 8 pages. thx reecer.
-dayssince.append(0)
-pages.append(8)
+#dayssince.append(0)
+#pages.append(8)
 
 with open("pages.md") as file:
     for line in file.readlines():
@@ -55,7 +55,7 @@ plt.xlabel("Days since start (April 7, 2015)")
 plt.ylabel("Pages")
 plt.title("")
 plt.text(0.8*maxdayssince, 1.22*max(pages), r"%s pages"   % (lastpages))
-plt.text(0,                1.22*max(pages), r"Updated %s" % (lasttime))
+#plt.text(0,                1.22*max(pages), r"Updated %s" % (lasttime))
 plt.axis([-1, maxdayssince+1, 0, 1.2*max(pages)])
 plt.grid(False)
 plt.plot(dayssince, pages, "-")
