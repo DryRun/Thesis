@@ -1,1 +1,3 @@
 # Thesis
+
+![progress](pages.png)
