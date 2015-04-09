@@ -10,9 +10,9 @@ last = ""
 dayssince = []
 pages = []
 
-# the template already has 8 pages. thx reecer.
-#dayssince.append(0)
-#pages.append(8)
+# Started tracking at 28 pages
+dayssince.append(0)
+pages.append(28)
 
 with open("pages.md") as file:
     for line in file.readlines():
