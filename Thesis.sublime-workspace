@@ -584,6 +584,7 @@
 	},
 	"file_history":
 	[
+<<<<<<< HEAD
 		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch1-introduction.tex",
 		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch2-bsm.tex",
 		"/Users/dryu/Documents/Physics/ATLAS/Thesis/sftp-config.json",
@@ -610,6 +611,46 @@
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/VLL.xml",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/WZ_Powheg.xml",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/WZ_Sherpa.xml",
+=======
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch2-theory.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch3-experiment.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch4-reconstruction.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch5-modelindependent.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch6-resonance.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch7-conclusion.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch1-introduction.tex",
+		"/Users/dryu/Documents/DataScience/Retinopathy/Code/diabetic-retinopathy-code/create_image_sframes.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/BigTalks/ExoticsTrileptons30Min/ExoticsTrileptons30Min.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/type3seesaw-text.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/type3seesaw-metadata.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/interpretation.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/note.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-interpretation.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/changelog.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_Circ/david.txt",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_032315_EB/Slides_032315_EB.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_033015_Round2Comments/Slides_033015_Round2Comments.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_Circ/rob.txt",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_Circ/kevin.txt",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_Circ/filippo.txt",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/backgrounds.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/results.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/systematics.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/introduction.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/TruthStudies.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/models.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/definitions.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/SignalTruthStudies.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/SampleValidation.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-vll-validation.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-systematics.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-signal-validation.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-results.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-m3l.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-fitvalidation.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-fitplots.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-controlregions.tex",
+>>>>>>> b13118cb3d5738bcc00f316011f1fb4ebf8255c5
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/eventselection.tex",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/DeltaRComparison.py",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/slides.tex",
@@ -692,6 +733,7 @@
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/ZZ.xml",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/WZ.xml",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx",
+<<<<<<< HEAD
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/susy_crosssections_8TeV.txt",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/DryCanvas.h",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/RatioCanvas.h",
@@ -712,6 +754,11 @@
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/ThreeLDijetNoM3LMinBachelorMll.xml",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/ElseNoM3LMinBachelorMll.xml",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FourLNoM3LMinBachelorMll.xml"
+=======
+		"/Volumes/Macintosh HD/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/Fiducial/mv.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/data/SeabornInterface/ColorPalettes.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_ElseNoM3L.xml"
+>>>>>>> b13118cb3d5738bcc00f316011f1fb4ebf8255c5
 	],
 	"find":
 	{
