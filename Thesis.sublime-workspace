@@ -387,13 +387,6 @@
 	},
 	"buffers":
 	[
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -431,6 +424,13 @@
 	},
 	"file_history":
 	[
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch2-theory.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch3-experiment.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch4-reconstruction.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch5-modelindependent.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch6-resonance.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch7-conclusion.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch1-introduction.tex",
 		"/Users/dryu/Documents/DataScience/Retinopathy/Code/diabetic-retinopathy-code/create_image_sframes.py",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/BigTalks/ExoticsTrileptons30Min/ExoticsTrileptons30Min.tex",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/type3seesaw-text.tex",
@@ -551,14 +551,7 @@
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx",
 		"/Volumes/Macintosh HD/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/Fiducial/mv.sh",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/data/SeabornInterface/ColorPalettes.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_ElseNoM3L.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_FourLNoM3L.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_InclusiveNoM3L.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_InclusiveNoM3L_FastSim.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_InclusiveNoM3L_FullSim.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_ThreeLDijetNoM3L.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/HistogramManager.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/python/LuminosityLookup.py"
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_ElseNoM3L.xml"
 	],
 	"find":
 	{
@@ -807,83 +800,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"incomplete_sync": null,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
