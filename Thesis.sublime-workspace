@@ -4,407 +4,567 @@
 		"selected_items":
 		[
 			[
-				"Else",
-				"ElseNoM3L"
+				"InclusiveShap",
+				"InclusiveShapeTest"
 			],
 			[
-				"aver",
-				"average_integral"
+				"floa",
+				"floatParsFinal"
 			],
 			[
-				"SignalSy",
-				"MakeSignalSystematicsTables"
+				"GetLeafA",
+				"GetLeafAsVectorDouble"
 			],
 			[
-				"Zll",
-				"Zlle_dR"
+				"m_signal_re",
+				"m_signal_reweighting_schemes_"
 			],
 			[
-				"Accep",
-				"AcceptancePlots"
+				"SignalRe",
+				"SignalReweightingScheme"
 			],
 			[
-				"THreeLDij",
-				"ThreeLDijetNoM3L"
+				"systematics_li",
+				"systematics_list_strings"
 			],
 			[
-				"plot_op",
-				"p_plot_options"
-			],
-			[
-				"force",
-				"force_draw_signal"
-			],
-			[
-				"FourL",
-				"FourLNoM3L"
-			],
-			[
-				"syst",
-				"systematic_name"
-			],
-			[
-				"total_background_de",
-				"total_background_devent_counts_fine"
-			],
-			[
-				"total_d",
-				"total_background_devent_counts_fine"
-			],
-			[
-				"c_background_mcnumber",
-				"c_background_mcnumber_remapped"
-			],
-			[
-				"Syste",
-				"SystematicsContainer"
-			],
-			[
-				"fiduci",
-				"fiducial_lepton_tlvs"
-			],
-			[
-				"m_is_tightf",
-				"m_is_tightfiducial_electron_"
-			],
-			[
-				"Vec",
-				"VectorLeptonEventSelector"
-			],
-			[
-				"decay",
-				"decay_index_2"
-			],
-			[
-				"decay_in",
-				"decay_index_1"
-			],
-			[
-				"Fid",
-				"FiducialCutflows"
-			],
-			[
-				"decay_ind",
-				"decay_index_2"
-			],
-			[
-				"decay_",
-				"decay_index_1"
-			],
-			[
-				"effici",
-				"efficiency_histogram"
-			],
-			[
-				"effi",
-				"efficiency_histogram"
-			],
-			[
-				"COn",
-				"ConvertDecayIndexToString"
-			],
-			[
-				"flavor",
-				"flavor_channel"
-			],
-			[
-				"c_event",
-				"c_event_decay_index"
-			],
-			[
-				"c_even",
-				"c_event_decay_index"
-			],
-			[
-				"GetEven",
-				"GetEventDecayIndex"
-			],
-			[
-				"p_decay_in",
-				"p_decay_index_1"
-			],
-			[
-				"p_decay",
-				"p_decay_index_2"
-			],
-			[
-				"p_deca",
-				"p_decay_index_2"
-			],
-			[
-				"p_dec",
-				"p_decay_index_1"
-			],
-			[
-				"p_decy",
-				"p_decay_index_1"
-			],
-			[
-				"m_signal",
-				"m_signal_reweighting_tool_"
-			],
-			[
-				"m_signal_",
-				"m_signal_model_mcnumbers"
-			],
-			[
-				"parti",
-				"particle_1_good"
-			],
-			[
-				"par",
-				"particle_1_good"
-			],
-			[
-				"it_par",
-				"it_particles_1"
-			],
-			[
-				"signal_eve",
-				"signal_event_trees"
-			],
-			[
-				"MassWi",
-				"GetMassWindowHalfWidth"
-			],
-			[
-				"fidu",
-				"fiducial_leptons"
-			],
-			[
-				"m_even",
-				"m_event_selection_"
-			],
-			[
-				"IsNotFid",
-				"IsNotFiducialElectron"
-			],
-			[
-				"IsFid",
-				"IsFiducialElectron"
-			],
-			[
-				"FakeFac",
-				"FakeFactorClassification"
-			],
-			[
-				"FakeF",
-				"FakeFactorClassificationUnweighted"
-			],
-			[
-				"Fast",
-				"FastSimValidation"
-			],
-			[
-				"b_IsF",
-				"b_IsFiducialElectron"
-			],
-			[
-				"ThreeLDij",
-				"ThreeLDijetNoM3L"
-			],
-			[
-				"fit_Variabl",
-				"fit_variable_list"
-			],
-			[
-				"m_results_tree",
-				"m_results_tree_variables_i_"
-			],
-			[
-				"diag",
-				"diagonalization_matrix"
-			],
-			[
-				"CutflowSy",
-				"CutflowSystematicDirection"
-			],
-			[
-				"signal_re",
-				"signal_reweighting_tool"
-			],
-			[
-				"SEtBr",
-				"SetBranchAddress"
-			],
-			[
-				"m_stand",
-				"m_standalone_histogram_styles_"
-			],
-			[
-				"m_stan",
-				"m_standalone_histogram_styles_"
-			],
-			[
-				"m_standa",
-				"m_standalone_histogram_styles_"
-			],
-			[
-				"m_standalone",
-				"m_standalone_histogram_legends_"
-			],
-			[
-				"p_flavor",
-				"p_flavor_branching_ratios"
-			],
-			[
-				"Vecto",
-				"VectorLeptons"
-			],
-			[
-				"m_signal_reweig",
-				"m_signal_reweighted_output_histograms_"
-			],
-			[
-				"VectorLep",
-				"VectorLeptonAnalysis"
-			],
-			[
-				"SherpaPow",
-				"SherpaPowhegDiboson_HighLowZ2Mass"
-			],
-			[
-				"m_hist",
-				"m_histograms_low_mass_Z2_"
-			],
-			[
-				"m_sig",
-				"m_signal_masses"
-			],
-			[
-				"SEtB",
-				"SetBranchStatus"
-			],
-			[
-				"p_",
-				"p_cut_parameters"
-			],
-			[
-				"c_mc",
-				"c_mcnumber_remapped"
-			],
-			[
-				"c_shape_sys",
-				"c_shape_syst_name"
-			],
-			[
-				"initial_frac",
-				"initial_fractional_uncertainty_down"
+				"Sys",
+				"SystematicsManager"
 			],
 			[
 				"Syst",
 				"SystematicsContainer"
 			],
 			[
+				"h_individu",
+				"h_individual_syst_up"
+			],
+			[
+				"h_ind",
+				"h_individual_syst_down"
+			],
+			[
+				"cutflow_sys",
+				"cutflow_systematics_directions_enum"
+			],
+			[
+				"VectorL",
+				"VectorLeptonAnalysis"
+			],
+			[
+				"Acce",
+				"AcceptanceSystematics"
+			],
+			[
+				"Objec",
+				"ObjectName"
+			],
+			[
+				"bachelor",
+				"bachelor_parent_index"
+			],
+			[
+				"l3_high",
+				"l3_highest_mass_sibling_index"
+			],
+			[
+				"fit_var",
+				"fit_variable_pair"
+			],
+			[
+				"fit",
+				"fit_parameter_index"
+			],
+			[
+				"control",
+				"control_categories"
+			],
+			[
+				"simula",
+				"simulated_yields"
+			],
+			[
+				"simulate",
+				"simulated_yield_uncertainties"
+			],
+			[
+				"flavor_channel",
+				"p_flavor_channel"
+			],
+			[
+				"p_flavo",
+				"p_flavor_branching_ratios"
+			],
+			[
+				"produc",
+				"production_mode"
+			],
+			[
+				"predic",
+				"predicted_cross_sections"
+			],
+			[
+				"decay",
+				"decay_modes_pretty"
+			],
+			[
+				"model_pro",
+				"model_production_mode"
+			],
+			[
+				"model_pr",
+				"model_production_mode"
+			],
+			[
+				"production_m",
+				"model_production_mode"
+			],
+			[
+				"Vector",
+				"VectorLeptonAnalysis"
+			],
+			[
+				"m_signal_reweig",
+				"m_signal_reweighted_output_histograms_"
+			],
+			[
+				"m_sig",
+				"m_signal_reweighting_schemes_"
+			],
+			[
+				"Sig",
+				"SignalReweightingScheme"
+			],
+			[
+				"m_sign",
+				"m_signal_reweighting_tools_"
+			],
+			[
+				"m_signal",
+				"m_signal_reweighting_schemes_"
+			],
+			[
+				"vbf",
+				"vbfnlo_y"
+			],
+			[
+				"flavor",
+				"flavor_channel"
+			],
+			[
+				"ZZ_Pow",
+				"ZZ_Powheg"
+			],
+			[
+				"p_job_",
+				"p_job_name_reduced"
+			],
+			[
+				"m3l",
+				"m3l_colors"
+			],
+			[
+				"hist",
+				"histogram_filename"
+			],
+			[
+				"FitV",
+				"FitVoigtianPlusLandau"
+			],
+			[
+				"input_var",
+				"input_variables_d"
+			],
+			[
+				"input_variable",
+				"input_variables_vd"
+			],
+			[
+				"m_tmva_",
+				"m_tmva_variables_vd_"
+			],
+			[
+				"bachelo",
+				"bachelor_truth_index"
+			],
+			[
+				"system",
+				"systematics_manager"
+			],
+			[
+				"Fake",
+				"FakeFactorClassification"
+			],
+			[
+				"fiducial",
+				"fiducial_fermion_pdgIds_iterator"
+			],
+			[
+				"fiducial_ferm",
+				"fiducial_fermion_pdgIds"
+			],
+			[
+				"indices",
+				"indices_to_remove"
+			],
+			[
+				"fiduc",
+				"fiducial_fermions"
+			],
+			[
+				"bachel",
+				"m_bachelor_parent"
+			],
+			[
+				"great",
+				"greatgrandparent_index"
+			],
+			[
+				"fiduci",
+				"fiducial_leptons"
+			],
+			[
+				"best_Z",
+				"best_Z_candidate"
+			],
+			[
+				"SherpaMassless",
+				"SherpaMasslessCBMoreStats"
+			],
+			[
+				"efficien",
+				"efficiency_histograms"
+			],
+			[
+				"signal",
+				"signal_mcnumber"
+			],
+			[
+				"effic",
+				"efficiency_histograms"
+			],
+			[
+				"sig",
+				"signal_mcnumber"
+			],
+			[
+				"cutflow",
+				"cutflow_events_default"
+			],
+			[
+				"cutflow_ev",
+				"cutflow_events_comparison"
+			],
+			[
+				"column",
+				"column_mask"
+			],
+			[
+				"event",
+				"cutflow_events"
+			],
+			[
+				"CalculateSing",
+				"CalculateSingleSkimLuminosity"
+			],
+			[
+				"Calculate",
+				"CalculateSingleSkimLuminosity"
+			],
+			[
+				"lumi",
+				"luminosity_file"
+			],
+			[
+				"patter",
+				"pattern_mcnumber"
+			],
+			[
+				"Vect",
+				"VectorLeptonAnalysis"
+			],
+			[
+				"xsec",
+				"xsec_CN"
+			],
+			[
+				"widt",
+				"width_sigmac_total"
+			],
+			[
+				"MakeMC",
+				"MakeMcLimitsJobOptions"
+			],
+			[
+				"MakeMcL",
+				"MakeMcLimitsJobOptions"
+			],
+			[
+				"c_charg",
+				"c_chargeflip_sf"
+			],
+			[
 				"m_sys",
 				"m_systematics_containers_"
 			],
 			[
-				"m_proc",
-				"m_process_list_"
+				"m_",
+				"m_systematics_list_"
 			],
 			[
-				"GetIntegral",
-				"GetIntegralSystematicUncertainty"
+				"Convert",
+				"ConvertHistogramToTGraph"
 			],
 			[
-				"m_proces",
+				"m_process_",
 				"m_process_integral_uncertainties_"
 			],
 			[
-				"Sys",
-				"SystematicsManager_cxx"
+				"m_total_int",
+				"m_total_integral_uncertainty_"
 			],
 			[
-				"peak_width_un",
-				"peak_width_uncertainty_tp"
+				"sys_uncertaint",
+				"syst_uncertainty2"
 			],
 			[
-				"m_event",
-				"m_event_"
+				"final_fra",
+				"final_fractional_uncertainty_up"
 			],
 			[
-				"Fake",
+				"inita",
+				"initial_fractional_uncertainty_up"
+			],
+			[
+				"TGraph",
+				"TGraphAsymmErrors"
+			],
+			[
+				"failed",
+				"failed_job_scripts"
+			],
+			[
+				"failed_job",
+				"failed_job_folder"
+			],
+			[
+				"MakeMcLimi",
+				"MakeMcLimitsTGraphs"
+			],
+			[
+				"m_hist_el_ff_pt_vs_eta_",
+				"m_hist_el_ff_pt_vs_eta_syst_up_"
+			],
+			[
+				"working",
+				"working_directory"
+			],
+			[
+				"m_signal_mode",
+				"m_signal_model_mcnumbers"
+			],
+			[
+				"m_signal_",
+				"m_signal_model_mcnumbers"
+			],
+			[
+				"signal_mcnu",
+				"m_signal_mcnumbers"
+			],
+			[
+				"best_dR",
+				"best_dR"
+			],
+			[
+				"best_sig",
+				"best_significance_tp"
+			],
+			[
+				"classifi",
+				"classification_file"
+			],
+			[
+				"varia",
+				"variable_index"
+			],
+			[
+				"p_signa",
+				"p_signal_mcnumber"
+			],
+			[
+				"FakeF",
 				"FakeFactorDToNWord"
 			],
 			[
-				"c_cat",
+				"seabor",
+				"m_seaborn"
+			],
+			[
+				"h_DeltaM",
+				"h_DeltaM_vs_DeltaR"
+			],
+			[
+				"h_del",
+				"h_DeltaM_vs_DeltaR"
+			],
+			[
+				"c_dton",
+				"c_dtonwords"
+			],
+			[
+				"c_dto",
+				"c_dtonword"
+			],
+			[
+				"c_br",
+				"c_branch_container"
+			],
+			[
+				"c_bra",
+				"c_branch_name"
+			],
+			[
+				"m_conf",
+				"m_configuration_name_"
+			],
+			[
+				"m_results_",
+				"m_results_tree_file_"
+			],
+			[
+				"VLLC",
+				"VLLCutFlow"
+			],
+			[
+				"GetLoca",
+				"GetLocalFilesRucio"
+			],
+			[
+				"AddData",
+				"AddDatasetRucio"
+			],
+			[
+				"cr_ca",
+				"cr_categories_pretty"
+			],
+			[
+				"example_mc",
+				"example_mcnumber_headers"
+			],
+			[
+				"VLLCut",
+				"VLLCutFlowBase"
+			],
+			[
+				"Requir",
+				"RequireBachelorZ"
+			],
+			[
+				"m_si",
+				"m_signal_model_mcnumbers"
+			],
+			[
+				"examp",
+				"example_mcnumber_headers"
+			],
+			[
+				"signal_input",
+				"signal_input_file_path"
+			],
+			[
+				"c_signal",
+				"c_signal_mcnumber"
+			],
+			[
+				"original",
+				"original_integral_significance"
+			],
+			[
+				"original_int",
+				"original_integral_err2"
+			],
+			[
+				"f_backg",
+				"f_background_histograms"
+			],
+			[
+				"c_categ",
 				"c_category"
 			],
 			[
-				"c_str",
-				"c_strategy_categories"
+				"c_categor",
+				"c_category_normalizations"
 			],
 			[
-				"c_norm",
-				"c_normalization_hist"
+				"c_cate",
+				"c_category_list"
 			],
 			[
-				"c_hist",
-				"c_histogram_name"
+				"c_signal_mc",
+				"c_signal_mcnumber"
 			],
 			[
-				"histo",
-				"histogram_list"
+				"m_catego",
+				"m_category_configuration_files"
 			],
 			[
-				"m_output_hist",
-				"m_output_histograms_successive_cuts_"
+				"submis",
+				"submission_script"
 			],
 			[
-				"m_tmva_var",
-				"m_tmva_variables_vi_"
-			],
-			[
-				"m_ev",
-				"m_event_Z_flag_"
-			],
-			[
-				"m_tau_sel",
-				"m_tau_selection"
-			],
-			[
-				"index1",
-				"lepton_index1"
-			],
-			[
-				"Multi",
-				"MultileptonOffZ"
-			],
-			[
-				"m_muon",
-				"m_muon_selection"
-			],
-			[
-				"m_Z",
-				"m_Z_candidates_"
-			],
-			[
-				"Find",
-				"FindZCandidates"
+				"branching",
+				"branching_ratio_pair"
 			]
 		]
 	},
 	"buffers":
 	[
 	],
-	"build_system": "",
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 347.0,
 		"selected_items":
 		[
 			[
-				"remove",
-				"Package Control: Remove Package"
+				"package",
+				"Package Control: Disable Package"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
 			],
 			[
-				"latextools",
-				"LaTeXTools: Reconfigure and migrate settings"
+				"Package",
+				"Package Control: Enable Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Package ",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Alignment",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"instla",
+				"Package Control: Install Package"
 			]
 		],
 		"width": 593.0
@@ -424,6 +584,34 @@
 	},
 	"file_history":
 	[
+<<<<<<< HEAD
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch1-introduction.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch2-bsm.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/sftp-config.json",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch6-resonance.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/thesis.bib",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/Makefile",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch3-experiment.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch2-theory.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/thesis.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/references.bib",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch2-theory.bib",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch4-reconstruction.bib",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch3-experiment.bib",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch1-introduction.bib",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch4-leptons.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch5-modelindependent.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch7-conclusion.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch3-atlas.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/ZZ_Sherpa.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/python/WebFigures.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/ZZ_Powheg.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/Seesaw.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/Reducible.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/VLL.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/WZ_Powheg.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/WZ_Sherpa.xml",
+=======
 		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch2-theory.tex",
 		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch3-experiment.tex",
 		"/Users/dryu/Documents/Physics/ATLAS/Thesis/ch4-reconstruction.tex",
@@ -462,132 +650,253 @@
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-fitvalidation.tex",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-fitplots.tex",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/appendix-controlregions.tex",
+>>>>>>> b13118cb3d5738bcc00f316011f1fb4ebf8255c5
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/eventselection.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/controlregions.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_Circ/udine.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_Circ/tom.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_Circ/klaus.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Qual/qual3.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/figures/david/c_xsec_t3ss.png",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/BigTalks/ExoticsTrileptons30Min/missfont.log",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_Circ/fillipo.txt",
-		"/Volumes/Shared/Downloads/kaggle.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/type3seesaw.bib",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/data/TrileptonBackgroundList.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/Tables.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_030515_Circulation1Comments/Slides_030515_Circulation1Comments.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_013015_WeeklyUpdate/Slides_013015_WeeklyUpdate.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/EventLoop/Root/Driver.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/util/SubmitAna.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/JetUncertainties/data/JES_2012/Moriond2013/InsituJES2012_14NP.config",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/AnaVLL.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/EventLoop/Root/BatchDriver.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/MuonMomentumCorrections/Root/SmearingClass.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Systematics.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/Fiducial.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/Common.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/RetrieveSystematicsTables.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/DeltaRComparison.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/slides.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/Fits.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_092514_WeeklyUpdate/Slides_092514_WeeklyUpdate.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/SeabornInterface.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/FitPlots.py",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/DoVLLCutFlow.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/SignalTruthStudies.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/VectorLeptonEventSelector.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VectorLeptonEventSelector.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/type3seesaw-aux.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/AcceptanceConfigurations/TypeIIISeesaw_MH_100GeV.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/AcceptanceConfigurations/TypeIIISeesaw_MH_500GeV.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/AcceptanceConfigurations/TypeIIISeesaw_MH_120GeV.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/MakeCutflowSubmissionScripts.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/atlasstyle/Root/LinkDef.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/AnaPostProcessing.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/VectorLeptonTruthMatching.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/data/LocalDatasets/seesaw_local_nofilter.191039.MadgraphPythia8_AU2CTEQ6L1_TypeIIISeeSaw_emu_500.NTUP_TRUTH.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round3_EB/kenji.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round3_EB/stefania.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/type3seesaw-text.aux",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/type3seesaw.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_EB/koji.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_EB/kenji.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/comments/round2_EB/stefania.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/DataBackgroundCanvas.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/Root/DataBackgroundCanvas.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlow.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/MakeAnaVLLConfigurations.py",
-		"/Volumes/Macintosh HD/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/rundir/ML/MakeSystematicsSubmits.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/RetrieveTables.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/HighDeltaR4L.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/AnaVLL.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlow.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlowBase.h",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlowBase.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/Root/TrileptonEventManager.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/Root/FakeFactorManager.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFunctions.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/Root/Constants.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/Root/SystematicsContainer.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlow.cxx",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/SystematicsContainer.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/Root/SystematicsContainer.cxx",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/Root/SystematicsManager.cxx",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/SystematicsManager.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/RetrievePlots.py",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/paper.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/AnaVLL.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/JetUncertainties/share/JES_2012/Final/InsituJES2012_14NP.config",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Systematics.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_091614_DBL5/Slides_091614_DBL5.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Qual/qual3.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Qual/qual2.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_031214_DBL3/Slides_031214_DBL3.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_042314_DBL4/Slides_042314_DBL4.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_073114_USATLAS/Slides_073114_USATLAS.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_091614_DBL5/Slides_091614_DBL5",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/DataBackgroundCanvas.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/SystematicsCanvas.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/Root/SystematicsCanvas.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/data/TrileptonBackgroundList.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/Root/DataBackgroundCanvas.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/AnaPostProcessing.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/rundir/ML/MakeSystematicsSubmits.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/MakeCutflowSubmissionScripts.py",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/JetUncertainties/Root/JESUncertaintyProvider.cxx",
-		"/Users/dryu/Dropbox/ATLAS/Editor_comments/Round5_ExoticsApproval/koji.txt",
-		"/Users/dryu/Dropbox/ATLAS/Editor_comments/Round5_ExoticsApproval/convenors.txt",
-		"/Users/dryu/Dropbox/ATLAS/Editor_comments/Round5_ExoticsApproval/tobias.txt",
-		"/Users/dryu/Dropbox/ATLAS/Editor_comments/Round5_ExoticsApproval/enrique.txt",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/ApplyJetCalibration/Root/ApplyJetCalibration.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrigRootAnalysis/Root/TrigDecisionFunctions.cxx",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrigRootAnalysis/TrigRootAnalysis/DataAccess.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrigRootAnalysis/Root/DataAccess.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/JetUncertainties/JetUncertainties/JESUncertaintyProvider.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/JetUncertainties/testingMacros/run/propagate_jes_uncert.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/JetUncertainties/JetUncertainties/MultijetJESUncertaintyProvider.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/egammaAnalysisUtils/egammaAnalysisUtils/EnergyRescalerUpgrade.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/data/IrreducibleBackgroundList.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/MakeAnaVLLConfigurations.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/AnaVLL.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/util/SubmitAna.cxx",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/D3PDReader/D3PDReader/JetD3PDObject.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFunctions.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_020115_Interpretation/Slides_020115_Interpretation.tex",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FiducialElectron_ElseNoM3L.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FiducialElectron_FourLNoM3L.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FiducialElectron_InclusiveNoM3L.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FiducialElectron_InclusiveNoM3L_FastSim.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FiducialElectron_InclusiveNoM3L_FullSim.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FiducialElectron_ThreeLDijetNoM3L.xml",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlowBase.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlow.h",
-		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/SignalReweightingTool.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootCore/include/ApplyJetCalibration/ApplyJetCalibration.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/samples.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/results.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/interpretation.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/note.bib",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/note.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/models.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/definitions.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/note.bib",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/ObjectDefinitionsML/SignalMuonSelection.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors/Root/MuonCutFunctions.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors/Root/EventCutFunctions.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_090914_WeeklyUpdate/Slides_090914_WeeklyUpdate.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/backgrounds.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/my_crosssections_8TeV.txt",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.1Central/CutflowSubmissionScripts/submit_SherpaMll4_control.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.1Central/CutflowSubmissionScripts/submit_all_SherpaMll4.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.1Central/CutflowSubmissionScripts/submit_SherpaMll4_signal.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/DoDibosonRecoStudies.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/D3PDReader/D3PDReader/EventInfoD3PDObject.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/D3PDReader/D3PDReader/Event.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/DoDibosonTruthStudies.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/DibosonTruthStudies.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/DibosonTruthStudies.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_090214_WeeklyUpdate/Slides_090214_WeeklyUpdate.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/Presentations/Slides_082814_DibosonStudies/Slides_082814_DibosonStudies.tex",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/batch_submit_all.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/submit_ZZ_Powheg.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/preprocess_all.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/submit_Reducible.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/submit_Seesaw.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/submit_VLL.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/submit_WZ_Powheg.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/submit_WZ_Sherpa.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits/submit_ZZ_Sherpa.sh",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/TopDirs.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/ZZ.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/WZ.xml",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx",
+<<<<<<< HEAD
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/susy_crosssections_8TeV.txt",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/DryCanvas.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/RootUtils/RatioCanvas.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootCore/obj/x86_64-mac109-clang51-opt/RootUtils/obj/RatioCanvas.d",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/Common.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/Limits.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/python/CrossSectionLookup.py",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/OffZ.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python/NBranchFrac.C",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/HighDeltaR4L.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/HighDeltaR4L.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FourL.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/Root/ZZReweightingTool.cxx",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon/TrileptonCommon/ZZReweightingTool.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/SignalReweightingTool.h",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FourLNoM3LMinBachelorMll.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/InclusiveNoM3LMinBachelorMll.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/ThreeLDijetNoM3LMinBachelorMll.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/ElseNoM3LMinBachelorMll.xml",
+		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FourLNoM3LMinBachelorMll.xml"
+=======
 		"/Volumes/Macintosh HD/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/Fiducial/mv.sh",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils/data/SeabornInterface/ColorPalettes.xml",
 		"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu/FiducialMuon_ElseNoM3L.xml"
+>>>>>>> b13118cb3d5738bcc00f316011f1fb4ebf8255c5
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/JetUncertainties",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Fits",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons",
 			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV",
 			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootUtils",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/Root",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/rundir/SignalTruthStudies",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/SignalTruthStudyConfigurations",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/python",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/EventLoop/Root",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/SignalFiducialMuon",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/SignalFiducialElectron",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/SignalFiducialMuon",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/SignalFiducialElectron",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/Data",
 			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/mclimitCode",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/mclimitCode/Root",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/mclimitCode",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/D3PDReader",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors",
 			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon",
 			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
-			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon"
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/mclimitCode",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/Data",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/IrreducibleBackgrounds",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/ReducibleBackgrounds",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Zmu",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/mclimitCode/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/CutsAndCategories",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/MuonSelectorTools",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/ObjectDefinitionsML",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/ObjectDefinitionsSeesaw",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsSeesaw",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/MuonSelectorTools",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML/IrreducibleBackgrounds",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsSeesaw",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/mclimitCode",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/JetUncertainties",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/mclimitCode",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/PATCore",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/MuonEfficiencyCorrections",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/ObjectDefinitionsSeesaw",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/ObjectDefinitionsML",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsSeesaw",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/ObjectDefinitionsSeesaw",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurationsML",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL",
+			"<project>",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/JobConfigurations/IrreducibleBackgrounds",
+			"<project>",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/egammaAnalysisUtils",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/VectorLeptonAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/TrileptonCommon",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/Selectors",
+			"<project>",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons",
+			"<project>",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/EventLoop",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/RootCoreUtils",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/EventLoop",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/SampleHandler",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/EventLoop",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/VectorLeptons/EventLoop/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoop/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/D3PDReader",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/data",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/data/ElectronObjectDefinitions",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoop/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/python",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/data/ElectronObjectDefinitions",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/D3PDReader/D3PDReader",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/data",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/data",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoopGrid",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoopGrid/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/python",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/data/ElectronObjectDefinitions",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/D3PDReader/D3PDReader",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/egammaAnalysisUtils",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/D3PDReader",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoop",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/Selectors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/util",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoop",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoopGrid",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/FakeFactorObjectCountingJobs/FF_20130212",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/TrigRootAnalysis/Root",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/TrigRootAnalysis/TrigRootAnalysis",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/SampleHandler",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/SampleHandler",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoop",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/EventLoop",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/Selectors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/TrigMuonEfficiency",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/FakeFactors",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/DataHandling",
+			"/Users/dryu/Documents/Physics/ATLAS/Multilepton/Code/FakeFactors/D3PDReader"
 		]
 	},
 	"find_state":
@@ -595,201 +904,269 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-			"angle=0",
-			"$",
-			"$Z+\\mu$",
-			"$Z+e$",
-			"$\\Delta m$",
-			" ",
-			"\\\\",
-			",",
-			"\\pm",
-			"\\pm ",
-			"$",
-			"$ ",
-			"$          ",
-			" $",
-			"$ ",
+			"Haag1975257",
+			"opusza",
+			"\\nu_{L_i}",
+			"Theories of",
+			"footen",
+			"maath",
+			"streng",
+			"sec:bsm-motivations",
+			"apj",
+			"bib",
+			"bibliographystyle",
+			"foote",
+			".bib",
 			"&",
-			"500",
-			"\\threelonly",
-			"else category",
-			"dijet category",
-			"else",
-			"dijet",
-			"$4L$",
-			"diet",
-			"show the fitted parameters for the inclu",
-			"Monte Carlo",
-			"Pythia Powheg",
-			"distribution of the $\\Delta m$",
-			"the Vetctor-Like leptons",
-			"table:SeesawInclusiveFitParams",
-			"fig:fit-parameters-seesaw",
-			"\\Sigma",
-			"\\Sigma^{+}",
-			"\\Sigma",
-			"\\Sigma^0",
-			"{\\Sigma",
-			"\\Sigma^{\\mp}",
-			"hl",
-			"#Sigma^{0}",
-			"#Sigma^{#pm}",
-			"#Sigma",
-			"Sigma",
-			"Delta M",
-			"Delta M$",
-			"Delta M",
-			"fig:fit-Sig_i",
-			"item",
-			"footnote",
-			"Delta R",
-			"OpenSans",
-			"section",
-			"HelveticaNeue",
-			"Helv",
-			"Helvetica Neue",
-			"Calibri",
-			"beamerboxesrounded",
-			"output_directory",
-			"Weekly Update",
-			"AU2 underlying event tune",
-			"EtaInter",
-			".config",
-			"EtaIntercalibration",
-			"fetchDir",
-			"for",
-			"p_signal_mcnumber",
-			",",
-			"MuonMS",
-			"RunIndividualCategoryCutFlow",
-			"signal_categories",
-			"fiducial_leptons",
-			"cd Jobset_MLv5.1",
-			"\\n\")",
-			"mZ\")->Fi",
-			"m_truth_Zlle_mZ_",
-			"dR",
-			"lle",
-			"dR",
-			"Zlle_dR",
-			"100, 0., 10",
-			"#DeltaR",
-			"dR",
-			"DeltaR",
-			"dR",
-			"c_mZ",
-			"dR",
-			"Getting tree",
-			"Draw(\"",
-			"Draw",
-			"l_Zllmu_dR",
-			"\"e\"",
-			"FIducial",
-			"Zlle",
-			"lepton_flavor",
-			"lle_",
-			"hist_dR",
-			"m_truth_Zlll_dR_",
-			"Zlle_events",
-			"7.",
-			"70",
-			"m_truth_Zlll_dR",
-			" &",
-			"m_is_fid",
-			"Up",
-			"Lepton_OfflineSFs",
-			"Signal",
-			"signal_mcnumber",
-			"MakeSignalSystematicsTables",
-			"MakeSystematicsPlots",
-			"systematicsplots",
-			"Background_histograms",
-			"process_name",
-			"All",
-			"MakeSystematicsPlots",
-			"(remapped)",
-			"correspond",
-			"value",
-			"and co",
-			"fig:heavy-lepton-feynman-diagrams",
-			"heavy-lepton-feynman-diagrams",
-			"diagrams",
-			"heavy-lepton-feynman-diagrams",
-			"===",
-			"separately",
-			"primary vertex",
+			"subsection",
+			"ch7",
+			"Normalized",
+			"_hist",
 			"inclusive",
-			"fig:fiducial-efficiencies-inclusive",
-			"orange",
-			"FourL"
+			"DataHist",
+			"fitTo",
+			"inclusive",
+			"DataHist",
+			"variations",
+			"fit_variable",
+			"ob_name_",
+			"job_name",
+			"p_job_name",
+			"job_name",
+			"p_variable_name",
+			"fitTo",
+			"p_variable_range",
+			"variable_range =",
+			"fit_variable",
+			"InclusiveShapeTest_",
+			"result",
+			"category",
+			"fitTo",
+			"inclusive_folder",
+			"tag",
+			"chiS",
+			"Fit(",
+			"CorrelationMatrix",
+			"binned",
+			"Fit(",
+			"(",
+			"Data",
+			"align",
+			"\\Delta R",
+			"+= ",
+			" += ",
+			"caption",
+			"--fit",
+			"Corre",
+			"covariance",
+			"correlation",
+			"p_fit_result",
+			"p_variable_name",
+			"fit_parameters",
+			"GetNrows",
+			"MakeFitParameterTable",
+			"p_fit_variable",
+			"args.fit",
+			"output_folder =",
+			"DoFitGuts",
+			"p_output_filename",
+			"PlotFitVariations",
+			"getError",
+			"+ ",
+			"SigFig",
+			"getErrorLow",
+			"SigFig",
+			"fit_parameter.getErrorHi()",
+			"colz",
+			"fitTo",
+			"HL1_pdgID",
+			"HL_pdgId",
+			"return (double)(",
+			" return (double)(",
+			"GetVectorLeafAsDouble",
+			"GetAnyVariableAsDouble",
+			"m_results_tree_variables_d_",
+			"kFiftyFifty",
+			"kAllElectron",
+			"m_signal_reweighting_schemes_.push",
+			"m_signal_reweighting_schemes_.",
+			"signal_reweighting_sch",
+			"HL_boson_pdgID",
+			"m_total_event_weight_",
+			"results",
+			"HL_pdgId",
+			"HL_pdg",
+			"MakeResultsTree",
+			"MakeResul",
+			"Initialize",
+			"signal_rewei",
+			"MakeResultsTree",
+			"c_signal_reweights",
+			"m_signal_reweighting_tools_",
+			"kAllMuon",
+			"kFiftyFifty",
+			"kAll",
+			"signal_rewei",
+			"m_signal_rewe",
+			"m_results_tree_variables_i_",
+			"m_tmva_variables_vd_",
+			"Branch",
+			"]",
+			"HL_l",
+			"Branch",
+			"m_make_output_tree_",
+			"OutputTre",
+			"OutputN",
+			"Events_",
+			"Events",
+			"LeptonSc",
+			"VBF@",
+			"Ze",
+			"$Z+e$",
+			"OffZ",
+			"HighDeltaR",
+			"ElseNoM3L",
+			"Zmu",
+			"Ze",
+			"$Z+e$",
+			"Inclusive",
+			"/Systematics/",
+			"Ze"
 		],
-		"highlight": true,
+		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
-			"angle=270",
-			" $ ",
-			"$",
-			"\\threelo",
-			"\\lzero",
-			"{\\lpm",
-			"\\lmp",
-			"N^{0}",
-			"L^{#pm}",
-			"deltam",
-			"output_variable",
-			"RequireTightFiducialElectron",
-			"RequireLooseFiducial",
-			"\\mathrm{U}(1)",
-			"",
-			"	<!--<Cut Name=\"BlindData\"></Cut>-->",
-			"SignalTruthStudyConfigurations",
-			"SignalTruthStudiesv1.0",
-			"",
-			"	<Item name=\"EventSelection\">$ROOTCOREDIR/data/VectorLeptonAnalysis/AnaVLL/SignalTruthStudyConfigurations/EmptyEventSelection.xml</Item>",
-			"",
-			"<Item name=\"AnaType\">SignalTruthStudies</Item>",
-			"$-$",
-			"$ZZ\\rightarrow 4l$",
-			"rm -f Zmu",
-			"rm -f Ze",
-			"rightarrow lll",
-			"WZPowheg",
-			"www/figureViewer",
+			"getErrorLo",
+			"5.1",
+			"base_files.append(\"",
+			"systematics_tstring",
+			"TString",
+			"l3_sibling_candidate_mlls",
+			"p_fit_variable_pair",
+			"p_mc_sample_pair",
+			"p_category",
+			"p_flavor_channel",
 			"/global/homes/d/dryu",
-			"MLv5.1",
-			"m_FF_systematic_",
+			"SystWZShape",
+			"WZShape",
+			"\\textcolor{black}{-}",
+			"SignalReweightingScheme",
+			"LimitSetting/Histograms/Central",
+			"low",
+			"RootUtils/SimpleConfiguration.h",
+			"fiducial_",
+			"analysis_",
+			"good_fermion_pdgIds",
+			"good_fermions",
 			"",
-			"GeV_FiducialMuon",
-			"GeV_FiducialElectron",
-			"muon",
-			"FiducialMuonEventSelection.xml",
-			"FiducialElectronEventSelection.xml",
-			"FiducialElectronEventSelection",
-			"MediumElectrons",
+			">>",
+			"\\t",
+			"160GeV",
+			"rightarrow l",
+			"160GeV",
+			"rightarrow l",
+			"_160GeV",
+			"160GeV",
+			"\\ref{sec:",
+			"\\label{sec:",
+			"Events",
+			"p_output_variable",
+			"c_signal_mcnumber_2",
+			"p_signal_mcnumber",
+			"p_flavor_channel",
+			"p_category",
+			"v9.1",
 			"",
-			"m_cut_list_",
-			"m_tmva_variables_i_",
-			"m_tmva_variables_d_",
-			"m_tmva_variables_i_",
-			"m_tmva_variables_vi_",
-			"m_tmva_variables_d_",
+			"dryu",
+			"FakeFactorWeightMuUp",
+			"FakeFactorWeightElUp",
+			"FakeFactorWeightElDown",
+			"FakeFactorWeightMuDown",
+			"FakeFactorWeightMuUp",
+			"FakeFactorWeightElDown",
+			"FakeFactorWeightElUp",
+			"p_normalization_uncertainty",
+			"const TString p_",
+			"\\$",
+			"\\/",
+			"4.5in",
+			"",
+			"ElseNoM3L",
+			"ThreeLDijetNoM3L",
+			"FourLNoM3L",
+			"_140GeV}}",
+			"",
+			"_Zmu_",
+			"140GeV",
+			"CR",
+			"_Ze_",
+			"",
+			"m_event_cut_results_",
+			".root/\\n",
+			"\\t",
+			"$K$-factor",
+			"CommonEventSelection.xml",
+			"subsection*",
+			"TotalEventWeight",
+			"m_total_event_weight_",
+			"91.1876",
+			"expected_DeltaM",
+			"100, 0., 250., 50, 0., 5.",
+			"containers[\"dR\"]",
+			"->end",
+			"->begin",
+			"push_back(",
+			"m_liv_ZZ_events_.push_back(",
+			"signal_",
+			"control_table_file",
+			"[VLLCutFlowBase]",
+			"	<Cut Name=\"VetoBachelorZ\">\n		<Parameter>10</Parameter>\n	</Cut>\n	<Cut Name=\"RequireBachelorZ\">\n		<Parameter>10</Parameter>\n	</Cut>\n",
+			"	<Cut Name=\"VetoBachelorZ\">\n		<Parameter>10</Parameter>\n	</Cut>\n",
+			"~GeV",
+			"m_{l^{+}l^{-}}",
+			"_140GeV",
+			"InclusiveNoM3L",
+			"ElseNoM3L_",
+			"FourLNoM3L_",
+			"ThreeLDijetNoM3L",
+			"",
+			"Zmu",
+			"Ze",
+			"figures/david/CR/c_output_",
+			"figures/CR/c_output_",
+			"140GeV",
+			"Zmu",
+			"Ze",
+			"140GeV",
+			"Zmu",
+			"Ze",
+			"</ListItem>",
+			"m_signal_samples:",
+			"m_signal_samples.",
+			"m_signal_samples[",
+			"m_signal_masses.",
+			"m_signal_masses[",
+			"m_signal_masses",
+			"158698",
+			"158699",
+			"VLLCutFlowBase",
+			"	<ChooseZl>HighestMll_DeltaR</ChooseZl>\n",
+			"	<ChooseZl>MZ_DeltaR</ChooseZl>\n",
+			"ChooseZl (#PCDATA)",
+			"<!ELEMENT ChooseZl (#PCDATA)>\n",
+			"<?xml version=\"1.0\"?>\n<!DOCTYPE VLLCutConfiguration [\n<!ELEMENT VLLCutConfiguration (ConfigurationName*, ChooseZl*, Cut*)>\n<!ELEMENT ConfigurationName (#PCDATA)>\n<!ELEMENT ChooseZl (Parameter*, Descriptor*)>\n<!ELEMENT Cut (Parameter*, Descriptor*)>\n<!ELEMENT Parameter (#PCDATA)>\n<!ELEMENT Descriptor (#PCDATA)>\n<!ATTLIST Cut Name CDATA \"none\">\n]>\n<!ELEMENT ChooseZl (#PCDATA)>\n",
+			"<?xml version=\"1.0\"?>\n<!DOCTYPE VLLCutConfiguration [\n<!ELEMENT VLLCutConfiguration (ConfigurationName*, ChooseZl*, Cut*)>\n<!ELEMENT ConfigurationName (#PCDATA)>\n<!ELEMENT ChooseZl (Parameter*, Descriptor*)>\n<!ELEMENT Cut (Parameter*, Descriptor*)>\n<!ELEMENT Parameter (#PCDATA)>\n<!ELEMENT Descriptor (#PCDATA)>\n<!ATTLIST Cut Name CDATA \"none\">\n]>\n",
+			"	<Cut Name=\"VectorLeptonType\">\n		<Parameter>2</Parameter> <!-- 1 = electron, 2 = muon, 3 = tau -->\n	</Cut>\n",
+			"ObjectSelector::kElectron",
 			"m_tmva_variables_vd_",
-			"EventSelector::LeptonSortingContainer",
-			"EventSelector",
-			"EventSelector::LeptonSortingContainer",
-			"ObjectSelector::kTau",
-			"ObjectSelector::kMuon",
-			"ObjectSelector::kElectron",
-			"ObjectSelector::ObjectName",
-			"ObjectSelector::kTau",
-			"ObjectSelector::kMuon",
-			"ObjectSelector::kElectron",
-			"ObjectSelector::ObjectName",
-			"\\t"
+			"m_tmva_variables_vi_",
+			"\\cite{DeViveiros:1670929}",
+			"DeltaMWindow",
+			"width_sigmac_total(x)",
+			"width_sigmac_h(x)"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -811,7 +1188,7 @@
 	},
 	"input":
 	{
-		"height": 33.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -838,11 +1215,11 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 174.0
+		"height": 152.0
 	},
 	"output.sftp":
 	{
-		"height": 112.0
+		"height": 178.0
 	},
 	"replace":
 	{
@@ -855,52 +1232,84 @@
 		"selected_items":
 		[
 			[
-				"type3seesaw-text.tex",
-				"Documents/TypeIIISeesaw8TeV/paper/type3seesaw-text.tex"
+				"webfigures",
+				"VectorLeptons/RootUtils/python/WebFigures.py"
 			],
 			[
-				"truthstu",
-				"VectorLeptons/VectorLeptonAnalysis/python/TruthStudies.py"
+				"fits.py",
+				"VectorLeptons/VectorLeptonAnalysis/python/Fits.py"
 			],
 			[
-				"tables.py",
-				"VectorLeptons/VectorLeptonAnalysis/python/Tables.py"
+				"vllcutflowbase.cxx",
+				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlowBase.cxx"
 			],
 			[
-				"trileptonback",
-				"VectorLeptons/TrileptonCommon/data/TrileptonBackgroundList.xml"
+				"vllcutflowbase.h",
+				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlowBase.h"
+			],
+			[
+				"dovllc",
+				"VectorLeptons/VectorLeptonAnalysis/python/DoVLLCutFlow.py"
+			],
+			[
+				"vllcutflow.h",
+				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlow.h"
 			],
 			[
 				"anavll.cxx",
 				"VectorLeptons/VectorLeptonAnalysis/Root/AnaVLL.cxx"
 			],
 			[
-				"submitana.cxx",
-				"VectorLeptons/VectorLeptonAnalysis/util/SubmitAna.cxx"
+				"vllcutflow.cxx",
+				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlow.cxx"
 			],
 			[
-				"common",
-				"VectorLeptons/VectorLeptonAnalysis/python/Common.py"
+				"systematicscont",
+				"VectorLeptons/RootUtils/RootUtils/SystematicsContainer.h"
 			],
 			[
-				"retrievesyst",
-				"Documents/TypeIIISeesaw8TeV/RetrieveSystematicsTables.py"
+				"systematicscontainer.cxx",
+				"VectorLeptons/RootUtils/Root/SystematicsContainer.cxx"
 			],
 			[
-				"anavll",
-				"VectorLeptons/VectorLeptonAnalysis/Root/AnaVLL.cxx"
+				"systematicsmanager.cxx",
+				"VectorLeptons/RootUtils/Root/SystematicsManager.cxx"
 			],
 			[
-				"syst",
+				"systematics.xml",
 				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Systematics.xml"
 			],
 			[
-				"fiducial.py",
-				"VectorLeptons/VectorLeptonAnalysis/python/Fiducial.py"
+				"systematicsmanager.h",
+				"VectorLeptons/RootUtils/RootUtils/SystematicsManager.h"
 			],
 			[
-				"dovllcu",
+				"dovll",
 				"VectorLeptons/VectorLeptonAnalysis/python/DoVLLCutFlow.py"
+			],
+			[
+				"trileptonback",
+				"VectorLeptons/TrileptonCommon/data/TrileptonBackgroundList.xml"
+			],
+			[
+				"seaborn",
+				"VectorLeptons/RootUtils/RootUtils/SeabornInterface.h"
+			],
+			[
+				"databackgroun",
+				"VectorLeptons/RootUtils/Root/DataBackgroundCanvas.cxx"
+			],
+			[
+				"databackground",
+				"VectorLeptons/RootUtils/RootUtils/DataBackgroundCanvas.h"
+			],
+			[
+				"systematicscontainer.h",
+				"VectorLeptons/RootUtils/RootUtils/SystematicsContainer.h"
+			],
+			[
+				"tril",
+				"VectorLeptons/TrileptonCommon/data/TrileptonBackgroundList.xml"
 			],
 			[
 				"makecutfl",
@@ -911,331 +1320,119 @@
 				"VectorLeptons/VectorLeptonAnalysis/python/AnaPostProcessing.py"
 			],
 			[
-				"signaltruth",
-				"VectorLeptons/VectorLeptonAnalysis/Root/SignalTruthStudies.cxx"
+				"irreduci",
+				"VectorLeptons/TrileptonCommon/data/IrreducibleBackgroundList.xml"
 			],
 			[
-				"vectorleptonev",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VectorLeptonEventSelector.h"
+				"energyrescal",
+				"VectorLeptons/egammaAnalysisUtils/egammaAnalysisUtils/EnergyRescalerUpgrade.h"
 			],
 			[
-				"dovll",
-				"VectorLeptons/VectorLeptonAnalysis/python/DoVLLCutFlow.py"
+				"energyrescalerupgrade.h",
+				"VectorLeptons/egammaAnalysisUtils/egammaAnalysisUtils/EnergyRescalerUpgrade.h"
 			],
 			[
-				"tables.",
-				"VectorLeptons/VectorLeptonAnalysis/python/Tables.py"
+				"jetd3pd",
+				"VectorLeptons/D3PDReader/D3PDReader/JetD3PDObject.h"
 			],
 			[
-				"fiducial",
-				"VectorLeptons/VectorLeptonAnalysis/python/Fiducial.py"
+				"jesuncer",
+				"VectorLeptons/JetUncertainties/Root/JESUncertaintyProvider.cxx"
 			],
 			[
-				"systematics.xml",
-				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Systematics.xml"
+				"jesuncertain",
+				"VectorLeptons/JetUncertainties/JetUncertainties/JESUncertaintyProvider.h"
 			],
 			[
-				"vllcutflow.cxx",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlow.cxx"
+				"multijes",
+				"VectorLeptons/JetUncertainties/JetUncertainties/MultijetJESUncertaintyProvider.h"
 			],
 			[
-				"databack",
-				"VectorLeptons/RootUtils/Root/DataBackgroundCanvas.cxx"
+				"multijet",
+				"VectorLeptons/JetUncertainties/JetUncertainties/MultijetJESUncertaintyProvider.h"
 			],
 			[
-				"databackg",
-				"VectorLeptons/RootUtils/RootUtils/DataBackgroundCanvas.h"
+				"jetcalibration",
+				"VectorLeptons/RootCore/include/ApplyJetCalibration/ApplyJetCalibration.h"
 			],
 			[
-				"anapostpro",
-				"VectorLeptons/VectorLeptonAnalysis/python/AnaPostProcessing.py"
-			],
-			[
-				"fakefactorman",
-				"VectorLeptons/TrileptonCommon/Root/FakeFactorManager.cxx"
-			],
-			[
-				"trileptonev",
-				"VectorLeptons/TrileptonCommon/Root/TrileptonEventManager.cxx"
-			],
-			[
-				"common.py",
-				"VectorLeptons/VectorLeptonAnalysis/python/Common.py"
-			],
-			[
-				"constants",
-				"VectorLeptons/RootUtils/Root/Constants.cxx"
-			],
-			[
-				"vllcutflowbase.cxx",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlowBase.cxx"
-			],
-			[
-				"vllcutfunctions.cxx",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFunctions.cxx"
-			],
-			[
-				"retrievet",
-				"Documents/TypeIIISeesaw8TeV/RetrieveTables.py"
-			],
-			[
-				"systematicscontainer.cxx",
-				"VectorLeptons/RootUtils/Root/SystematicsContainer.cxx"
-			],
-			[
-				"systematicscontainer.h",
-				"VectorLeptons/RootUtils/RootUtils/SystematicsContainer.h"
-			],
-			[
-				"systematicsmanager.cxx",
-				"VectorLeptons/RootUtils/Root/SystematicsManager.cxx"
-			],
-			[
-				"systematicsmanager.h",
-				"VectorLeptons/RootUtils/RootUtils/SystematicsManager.h"
-			],
-			[
-				"common.",
-				"VectorLeptons/VectorLeptonAnalysis/python/Common.py"
-			],
-			[
-				"tables",
-				"VectorLeptons/VectorLeptonAnalysis/python/Tables.py"
-			],
-			[
-				"anavll.h",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/AnaVLL.h"
-			],
-			[
-				"retrievepl",
-				"Documents/TypeIIISeesaw8TeV/RetrievePlots.py"
-			],
-			[
-				"dataaccess.h",
-				"VectorLeptons/TrigRootAnalysis/TrigRootAnalysis/DataAccess.h"
-			],
-			[
-				"vllcutfunc",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFunctions.cxx"
-			],
-			[
-				"vllcutflow.h",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlow.h"
-			],
-			[
-				"vllcutflowbase.h",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlowBase.h"
-			],
-			[
-				"signalrew",
-				"VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx"
-			],
-			[
-				"signalre",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/SignalReweightingTool.h"
-			],
-			[
-				"vllcutfunctions.h",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFunctions.h"
-			],
-			[
-				"vllcuflowbase.cxx",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlowBase.cxx"
-			],
-			[
-				"default",
-				"VectorLeptons/TrileptonCommon/data/DefaultDatasets.xml"
-			],
-			[
-				"histogrammanager.h",
-				"VectorLeptons/RootUtils/RootUtils/HistogramManager.h"
-			],
-			[
-				"signalreweighting",
-				"VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx"
-			],
-			[
-				"samples.tex",
-				"Documents/ML2012InternalNote/samples.tex"
-			],
-			[
-				"cutopt",
-				"VectorLeptons/VectorLeptonAnalysis/python/CutOptimization.py"
-			],
-			[
-				"signalreweightingtool.cxx",
-				"VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx"
-			],
-			[
-				"signalreweightingtool.h",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/SignalReweightingTool.h"
-			],
-			[
-				"drycanvas.cxx",
-				"VectorLeptons/RootUtils/Root/DryCanvas.cxx"
-			],
-			[
-				"drycanvas.h",
-				"VectorLeptons/RootUtils/RootUtils/DryCanvas.h"
-			],
-			[
-				"retrievetables",
-				"Documents/TypeIIISeesaw8TeV/RetrieveTables.py"
-			],
-			[
-				"makeutfl",
-				"VectorLeptons/VectorLeptonAnalysis/python/MakeCutflowSubmissionScripts.py"
-			],
-			[
-				"signalrewe",
-				"VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx"
-			],
-			[
-				"d3pdperfs",
-				"VectorLeptons/D3PDReader/Root/D3PDPerfStats.cxx"
-			],
-			[
-				"d3pdperfstats.h",
-				"VectorLeptons/D3PDReader/D3PDReader/D3PDPerfStats.h"
-			],
-			[
-				"setupsig",
-				"VectorLeptons/VectorLeptonAnalysis/python/SetupSignalReweighting.py"
-			],
-			[
-				"branching",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/BranchingFractions.h"
-			],
-			[
-				"branchi",
-				"VectorLeptons/VectorLeptonAnalysis/Root/BranchingFractions.cxx"
-			],
-			[
-				"nbranch",
-				"VectorLeptons/VectorLeptonAnalysis/python/NBranchFrac.C"
-			],
-			[
-				"submitana",
+				"submitana.cxx",
 				"VectorLeptons/VectorLeptonAnalysis/util/SubmitAna.cxx"
 			],
 			[
-				"driver.cxx",
-				"VectorLeptons/EventLoop/Root/Driver.cxx"
+				"systematics",
+				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Systematics.xml"
 			],
 			[
-				"limits.py",
-				"VectorLeptons/VectorLeptonAnalysis/python/Limits.py"
+				"note.bib",
+				"Documents/ML2012InternalNote/note.bib"
 			],
 			[
-				"mclimitjo",
-				"VectorLeptons/mclimitCode/python/McLimitJO.py"
+				"muoncutfunctions",
+				"VectorLeptons/Selectors/Root/MuonCutFunctions.cxx"
 			],
 			[
-				"limits.",
-				"VectorLeptons/VectorLeptonAnalysis/python/Limits.py"
+				"eventcut",
+				"VectorLeptons/Selectors/Root/EventCutFunctions.cxx"
+			],
+			[
+				"models.",
+				"Documents/TypeIIISeesaw8TeV/models.tex"
+			],
+			[
+				"my_",
+				"VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/my_crosssections_8TeV.txt"
+			],
+			[
+				"anavll",
+				"VectorLeptons/VectorLeptonAnalysis/Root/AnaVLL.cxx"
+			],
+			[
+				"dodibo",
+				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonRecoStudies.py"
 			],
 			[
 				"eventcutfunctions.cxx",
 				"VectorLeptons/Selectors/Root/EventCutFunctions.cxx"
 			],
 			[
-				"eventcutfunctions.h",
-				"VectorLeptons/Selectors/Selectors/EventCutFunctions.h"
+				"anavll.h",
+				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/AnaVLL.h"
 			],
 			[
-				"eventselector.cxx",
-				"VectorLeptons/Selectors/Root/EventSelector.cxx"
+				"trilepton",
+				"VectorLeptons/TrileptonCommon/data/TrileptonBackgroundList.xml"
 			],
 			[
-				"histogram",
-				"VectorLeptons/RootUtils/RootUtils/HistogramManager.h"
+				"eventinfo",
+				"VectorLeptons/D3PDReader/D3PDReader/EventInfoD3PDObject.h"
 			],
 			[
-				"appendix-sig",
-				"Documents/TypeIIISeesaw8TeV/appendix-signal-validation.tex"
+				"event.h",
+				"VectorLeptons/D3PDReader/D3PDReader/Event.h"
 			],
 			[
-				"results.tex",
-				"Documents/TypeIIISeesaw8TeV/results.tex"
+				"dodi",
+				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonTruthStudies.py"
 			],
 			[
-				"eventselection.tex",
-				"Documents/TypeIIISeesaw8TeV/eventselection.tex"
+				"dibo",
+				"VectorLeptons/VectorLeptonAnalysis/Root/DibosonTruthStudies.cxx"
 			],
 			[
-				"control",
-				"Documents/TypeIIISeesaw8TeV/controlregions.tex"
+				"dibosontr",
+				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/DibosonTruthStudies.h"
 			],
 			[
-				"vllcutflow",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlow.cxx"
+				"zz_pow",
+				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Fits/ZZ_Powheg.xml"
 			],
 			[
-				"vectorleptont",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VectorLeptonTruthMatching.cxx"
+				"dodib",
+				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonRecoStudies.py"
 			],
 			[
-				"samplevalidation.h",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/SampleValidation.h"
-			],
-			[
-				"vllcutflowbase",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlowBase.cxx"
-			],
-			[
-				"vllcut",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFunctions.cxx"
-			],
-			[
-				"vllcutfun",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFunctions.cxx"
-			],
-			[
-				"signalreweightingtool",
-				"VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx"
-			],
-			[
-				"samplevalid",
-				"VectorLeptons/VectorLeptonAnalysis/python/SampleValidation.py"
-			],
-			[
-				"ratiocanvas.cxx",
-				"VectorLeptons/RootUtils/Root/RatioCanvas.cxx"
-			],
-			[
-				"ratiocanvas.h",
-				"VectorLeptons/RootUtils/RootUtils/RatioCanvas.h"
-			],
-			[
-				"ratiocanvas",
-				"VectorLeptons/RootUtils/RootUtils/RatioCanvas.h"
-			],
-			[
-				"histogramman",
-				"VectorLeptons/RootUtils/Root/HistogramManager.cxx"
-			],
-			[
-				"comm",
-				"VectorLeptons/VectorLeptonAnalysis/python/Common.py"
-			],
-			[
-				"defaultd",
-				"VectorLeptons/TrileptonCommon/data/DefaultDatasets.xml"
-			],
-			[
-				"vectorleptontr",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VectorLeptonTruthMatching.h"
-			],
-			[
-				"vectorleptontruthmatching",
-				"VectorLeptons/VectorLeptonAnalysis/Root/VectorLeptonTruthMatching.cxx"
-			],
-			[
-				"note.bib",
-				"Documents/TypeIIISeesaw8TeV/note.bib"
-			],
-			[
-				"susy_cross",
+				"crosssections",
 				"VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/susy_crosssections_8TeV.txt"
 			],
 			[
@@ -1243,91 +1440,299 @@
 				"VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/my_crosssections_8TeV.txt"
 			],
 			[
+				"vllcutfl",
+				"VectorLeptons/VectorLeptonAnalysis/Root/VLLCutFlow.cxx"
+			],
+			[
+				"signalreweig",
+				"VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx"
+			],
+			[
+				"drycanvas.h",
+				"VectorLeptons/RootUtils/RootUtils/DryCanvas.h"
+			],
+			[
+				"ratiocanvas.h",
+				"VectorLeptons/RootUtils/RootUtils/RatioCanvas.h"
+			],
+			[
+				"ratiocanvas",
+				"VectorLeptons/RootCore/obj/x86_64-mac109-clang51-opt/RootUtils/obj/RatioCanvas.d"
+			],
+			[
+				"common.py",
+				"VectorLeptons/VectorLeptonAnalysis/python/Common.py"
+			],
+			[
 				"offz.xml",
 				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/OffZ.xml"
 			],
 			[
-				"dodi",
-				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonRecoStudies.py"
+				"nbranc",
+				"VectorLeptons/VectorLeptonAnalysis/python/NBranchFrac.C"
 			],
 			[
-				"patch.sh",
-				"VectorLeptons/AnaVLL/Jobset_MLv5.1Central/CutflowSubmissionScripts/patch.sh"
+				"crossse",
+				"VectorLeptons/TrileptonCommon/python/CrossSectionLookup.py"
 			],
 			[
-				"retrievetable",
-				"Documents/TypeIIISeesaw8TeV/RetrieveTables.py"
+				"webfigu",
+				"VectorLeptons/RootUtils/python/WebFigures.py"
 			],
 			[
-				"backgroundsampl",
-				"VectorLeptons/TrileptonCommon/Root/BackgroundSampleManager.cxx"
+				"limits.py",
+				"VectorLeptons/VectorLeptonAnalysis/python/Limits.py"
 			],
 			[
-				"trileptonevent",
-				"VectorLeptons/TrileptonCommon/TrileptonCommon/TrileptonEventManager.h"
+				"objec",
+				"VectorLeptons/Selectors/Selectors/ObjectSelector.h"
 			],
 			[
-				"dodib",
-				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonRecoStudies.py"
+				"makecut",
+				"VectorLeptons/VectorLeptonAnalysis/python/MakeCutflowSubmissionScripts.py"
 			],
 			[
-				"fits.py",
-				"VectorLeptons/VectorLeptonAnalysis/python/Fits.py"
+				"zzrew",
+				"VectorLeptons/TrileptonCommon/TrileptonCommon/ZZReweightingTool.h"
 			],
 			[
-				"eventcut",
-				"VectorLeptons/Selectors/Root/EventCutFunctions.cxx"
+				"vllcutflowbase",
+				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/VLLCutFlowBase.h"
 			],
 			[
-				"zzrewe",
-				"VectorLeptons/TrileptonCommon/Root/ZZReweightingTool.cxx"
+				"lumin",
+				"VectorLeptons/TrileptonCommon/data/Luminosities.xml"
 			],
 			[
-				"eventcutfunc",
-				"VectorLeptons/Selectors/Root/EventCutFunctions.cxx"
+				"dibosontruth",
+				"VectorLeptons/VectorLeptonAnalysis/Root/DibosonTruthStudies.cxx"
 			],
 			[
-				"dovllcutflow",
-				"VectorLeptons/VectorLeptonAnalysis/python/DoVLLCutFlow.py"
+				"dibosont",
+				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonTruthStudies.py"
+			],
+			[
+				"dodibosontruth",
+				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonTruthStudies.py"
+			],
+			[
+				"makecutflo",
+				"VectorLeptons/VectorLeptonAnalysis/python/MakeCutflowSubmissionScripts.py"
 			],
 			[
 				"dodiboson",
 				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonRecoStudies.py"
 			],
 			[
-				"eventcutf",
-				"VectorLeptons/Selectors/Root/EventCutFunctions.cxx"
+				"mcsamplelum",
+				"VectorLeptons/TrileptonCommon/python/MCSampleLuminosities.py"
+			],
+			[
+				"dq2help",
+				"VectorLeptons/RootUtils/python/DQ2Helper.py"
+			],
+			[
+				"databackg",
+				"VectorLeptons/RootUtils/Root/DataBackgroundCanvas.cxx"
+			],
+			[
+				"mclimitjo",
+				"VectorLeptons/mclimitCode/python/McLimitJO.py"
+			],
+			[
+				"dovl",
+				"VectorLeptons/VectorLeptonAnalysis/python/DoVLLCutFlow.py"
+			],
+			[
+				"ratiocan",
+				"VectorLeptons/RootUtils/RootUtils/RatioCanvas.h"
+			],
+			[
+				"ratiocanvas.cxx",
+				"VectorLeptons/RootUtils/Root/RatioCanvas.cxx"
+			],
+			[
+				"backgroundstud",
+				"VectorLeptons/VectorLeptonAnalysis/python/BackgroundStudies.py"
+			],
+			[
+				"default",
+				"VectorLeptons/TrileptonCommon/data/DefaultDatasets.xml"
+			],
+			[
+				"dq2",
+				"VectorLeptons/RootUtils/python/DQ2Helper.py"
+			],
+			[
+				"simpleconf",
+				"VectorLeptons/RootUtils/RootUtils/SimpleConfiguration.h"
+			],
+			[
+				"xmlhelper.h",
+				"VectorLeptons/RootUtils/RootUtils/XMLHelper.h"
+			],
+			[
+				"xmlhelper.cxx",
+				"VectorLeptons/RootUtils/Root/XMLHelper.cxx"
+			],
+			[
+				"dovlls",
+				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/ObjectDefinitionsML/VLLEventSelection.xml"
+			],
+			[
+				"eventselector.h",
+				"VectorLeptons/Selectors/Selectors/EventSelector.h"
+			],
+			[
+				"susy_cross",
+				"VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/susy_crosssections_8TeV.txt"
+			],
+			[
+				"taucutfun",
+				"VectorLeptons/Selectors/Root/TauCutFunctions.cxx"
+			],
+			[
+				"muoncut",
+				"VectorLeptons/Selectors/Root/MuonCutFunctions.cxx"
+			],
+			[
+				"objectselector.cxx",
+				"VectorLeptons/Selectors/Root/ObjectSelector.cxx"
+			],
+			[
+				"objectselector.h",
+				"VectorLeptons/Selectors/Selectors/ObjectSelector.h"
+			],
+			[
+				"electroncutfunc",
+				"VectorLeptons/Selectors/Root/ElectronCutFunctions.cxx"
+			],
+			[
+				"skims.sh",
+				"VectorLeptons/AnaVLL/rundir/skims.sh"
+			],
+			[
+				"twoz.xml",
+				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/TwoZ.xml"
+			],
+			[
+				"wz.xml",
+				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/WZ.xml"
 			],
 			[
 				"eventsel",
 				"VectorLeptons/Selectors/Root/EventSelector.cxx"
 			],
 			[
-				"truthpar",
-				"VectorLeptons/D3PDReader/D3PDReader/TruthParticleD3PDObject.h"
+				"vectorleptoneventcut",
+				"VectorLeptons/VectorLeptonAnalysis/Root/VectorLeptonEventCutFunctions.cxx"
+			],
+			[
+				"vectorleptonev",
+				"VectorLeptons/VectorLeptonAnalysis/Root/VectorLeptonEventSelector.cxx"
+			],
+			[
+				"luminosities.xml",
+				"VectorLeptons/TrileptonCommon/data/Luminosities.xml"
+			],
+			[
+				"mclimitjo.py",
+				"VectorLeptons/mclimitCode/python/McLimitJO.py"
+			],
+			[
+				"histogramman",
+				"VectorLeptons/RootUtils/RootUtils/HistogramManager.h"
+			],
+			[
+				"my_cro",
+				"VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/my_crosssections_8TeV.txt"
+			],
+			[
+				"susy_cros",
+				"VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/susy_crosssections_8TeV.txt"
+			],
+			[
+				"backgroundst",
+				"VectorLeptons/VectorLeptonAnalysis/python/BackgroundStudies.py"
+			],
+			[
+				"ratiocanva",
+				"VectorLeptons/RootUtils/RootUtils/RatioCanvas.h"
+			],
+			[
+				"constants.h",
+				"VectorLeptons/RootUtils/RootUtils/Constants.h"
+			],
+			[
+				"susy_cro",
+				"VectorLeptons/TrileptonCommon/data/SUSYToolsCopy/susy_crosssections_8TeV.txt"
+			],
+			[
+				"drycanvas.cxx",
+				"VectorLeptons/RootUtils/Root/DryCanvas.cxx"
+			],
+			[
+				"databackgroundcanvas.cxx",
+				"VectorLeptons/RootUtils/Root/DataBackgroundCanvas.cxx"
+			],
+			[
+				"databackgroundcanvas.h",
+				"VectorLeptons/RootUtils/RootUtils/DataBackgroundCanvas.h"
+			],
+			[
+				"run_",
+				"VectorLeptons/AnaVLL/run_diboson_mergejobs.sh"
+			],
+			[
+				"crosssec",
+				"VectorLeptons/TrileptonCommon/python/CrossSectionLookup.py"
+			],
+			[
+				"run_di",
+				"VectorLeptons/AnaVLL/run_diboson_mergejobs.sh"
+			],
+			[
+				"defaultdat",
+				"VectorLeptons/TrileptonCommon/data/DefaultDatasets.xml"
+			],
+			[
+				"submit_all_irr",
+				"VectorLeptons/AnaVLL/rundir/ML/submit_all_irreducible.sh"
+			],
+			[
+				"anavlvl.cxx",
+				"VectorLeptons/VectorLeptonAnalysis/Root/VectorLeptonEventSelector.cxx"
+			],
+			[
+				"dq2h",
+				"VectorLeptons/RootUtils/python/DQ2Helper.py"
+			],
+			[
+				"luminosity",
+				"VectorLeptons/TrileptonCommon/python/LuminosityLookup.py"
 			],
 			[
 				"diboson",
 				"VectorLeptons/VectorLeptonAnalysis/Root/DibosonTruthStudies.cxx"
 			],
 			[
-				"dodibo",
-				"VectorLeptons/VectorLeptonAnalysis/python/DoDibosonTruthStudies.py"
+				"histogrammanager.h",
+				"VectorLeptons/RootUtils/RootUtils/HistogramManager.h"
 			],
 			[
-				"signalreweig",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/SignalReweightingTool.h"
+				"histogra",
+				"VectorLeptons/RootUtils/Root/HistogramManager.cxx"
 			],
 			[
-				"signalreweigh",
-				"VectorLeptons/VectorLeptonAnalysis/Root/SignalReweightingTool.cxx"
+				"muoncutfunc",
+				"VectorLeptons/Selectors/Root/MuonCutFunctions.cxx"
 			],
 			[
-				"drcanvas.cxx",
-				"VectorLeptons/RootUtils/Root/DryCanvas.cxx"
+				"mclimitjo.",
+				"VectorLeptons/mclimitCode/python/McLimitJO.py"
 			],
 			[
-				"dovllc",
+				"dov",
 				"VectorLeptons/VectorLeptonAnalysis/python/DoVLLCutFlow.py"
 			],
 			[
@@ -1335,52 +1740,24 @@
 				"VectorLeptons/VectorLeptonAnalysis/data/AnaVLL/Categories/Ze/FourL.xml"
 			],
 			[
-				"histo",
-				"VectorLeptons/RootUtils/Root/HistogramManager.cxx"
-			],
-			[
-				"dovllcut",
-				"VectorLeptons/VectorLeptonAnalysis/python/DoVLLCutFlow.py"
-			],
-			[
-				"makecut",
-				"VectorLeptons/VectorLeptonAnalysis/python/MakeCutflowSubmissionScripts.py"
-			],
-			[
-				"anapostp",
+				"anapo",
 				"VectorLeptons/VectorLeptonAnalysis/python/AnaPostProcessing.py"
-			],
-			[
-				"drycanvas",
-				"VectorLeptons/RootUtils/RootUtils/DryCanvas.h"
-			],
-			[
-				"histogrammanager.cxx",
-				"VectorLeptons/RootUtils/Root/HistogramManager.cxx"
-			],
-			[
-				"dibosontr",
-				"VectorLeptons/VectorLeptonAnalysis/Root/DibosonTruthStudies.cxx"
-			],
-			[
-				"dibosontruth",
-				"VectorLeptons/VectorLeptonAnalysis/VectorLeptonAnalysis/DibosonTruthStudies.h"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 295.0,
+	"side_bar_width": 267.0,
 	"status_bar_visible": true
 }
