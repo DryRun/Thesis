@@ -18,7 +18,7 @@ Indeed, a generation of experiments passed before the Higgs boson was discovered
 
 The strong sector began as a study of the patterns of hadrons observed in cosmic ray and accelerator experiments. The light hadrons were observed to fall into a two-dimension octuplet pattern in isospin and strangeness space (???), a symmetry dubbed ``the eightfold way'' by Murray Gell-Mann. In 1963, Gell-Mann and George Zweig independently suggested an origin for this symmetry in hadronic substructure, namely that the hadrons were composite particles formed from three more fundamental particles, now called the up, down, and strange quarks. This model was quickly disrupted by the observation of the spin-$\frac32$ $\Delta^{+++}$ particle (WHAT ORDER DID THIS HAPPEN IN?), which was composed of three up quarks in the same spin state and therefore would violate Dirac statistics. Han and Nambu, and, independently, Greenburg, proposed an extra quantum number under which the quarks were charged, called \emph{color} and taking on the three discrete values of red, green, and blue. This proposal led to the development of the $SU(3)$ gauge theory now known as quantum chromodynamics, which successfully explains the confinement of quarks into the observed spectrum of hadrons. 
 
-The Standard Model is now understood as a gauge theory with gauge group $SU(3)_c\times SU(2)_L \times U(1)_Y$, roughly corresponding to the strong, weak, and electromagnetic forces, respectively. Matter particles consist of quarks and leptons. Quarks are charged under the whole gauge group, experiencing both the strong force, which confines them into hadrons, and the electroweak force, responsible for radioactive decays and electromagnetic interactions. Leptons and neutrinos, on the other hand, are charged only under $SU(2)_L\times U(1)_Y$, and therefore exist as unconfined particles which participate in radioactive decays and electromagnetic interactions. Force particles 
+The Standard Model is now understood as a gauge theory with gauge group $SU(3)_c\times SU(2)_L \times U(1)_Y$, roughly corresponding to the strong, weak, and electromagnetic forces, respectively. Matter particles consist of quarks and leptons. Quarks are charged under the whole gauge group, experiencing both the strong force, which confines them into hadrons, and the electroweak force, responsible for radioactive decays and electromagnetic interactions. Leptons and neutrinos, on the other hand, are charged only under $SU(2)_L\times U(1)_Y$, and experience only the electroweak force. 
 
 \subsection{Particle Content}
 
@@ -43,8 +43,55 @@ The fermionic content of the Standard Model is summarized in table~\ref{table:st
 	Fermion masses
 \end{table}
 
+\subsection{Gauge Theory}
+The interaction of fermions with gauge bosons arises from the requirement that the Lagrangian be invariant under \emph{local transformations} under the gauge group $G$. To give a simple example, consider a single massless fermion field $\psi(x)$. By itself, the dynamics of $\psi$ can be derived from the simple Lagrangian,
+
+\begin{equation}
+	\mathcal{L} = i\overline{\psi}(x) \slashed{\partial} \psi(x),
+\end{equation}
+where $\slashed{partial}\equiv \gamma^{\mu}\partial_{\mu}$ and $\gamma^{\mu}$ are the $\gamma$-matrices associated with the Lorentz group. We then require that the Lagrangian be invariant under local transformations under the action of $G$:
+ \begin{align*}
+ 	\psi(x) &\rightarrow V(x) \psi(x), \\
+ 	V(x) &= e^{i\alpha(x)^a t^a} \\
+ \end{align*}
+ where $t^a$ are the generators of the Lie algebra of $G$, and $\alpha(x)_a$ are arbitrary continuous functions. The kinetic term in the Lagrangian, $i\overline{\psi}(x)\gamma^{\mu}\partial_{\mu}\psi(x)$, can be made invariant by promoting the simple derivate $\partial_{\mu}$ to a \emph{covariant derivative}, $D_{\mu}$, defined as:
+
+\begin{equation}
+	D_{\mu} = \partial_{\mu} - i g t^a A^a_{\mu},
+\end{equation}
+
+where $g$ is a coupling constant associated with the gauge interaction, $t_a$ are the generators of the Lie algebra of $G$, and $A^a_{\mu}(x)$ are vector fields associated with the gauge bosons of $G$, which transform under the action of $G$ as:
+
+\begin{equation}
+	A^a_{\mu}(x)t_a \rightarrow V(x) \left(A^a_{\mu}(x)t^a + \frac{i}{g} \partial_{\mu}\right) V^{\dagger}(x) \\
+\end{equation}
+
+For infinitesimal $\alpha(x)^a$, the transformations can be expressed more simply as:
+\begin{align}
+	\psi(x)&\rightarrow (1 + i\alpha^a t^a + \mathcal{O}(\alpha^2))\psi(x) \\
+	A^a_{\mu} &\rightarrow A_{\mu}^a + \frac{1}{g}\partial_{\mu}\alpha^a(x) + f^{abc}A^b_{\mu}\alpha^c + \mathcal{O}(\alpha^2),
+\end{align}
+where $f^{abc}$ are the structure constants of $G$, defined by
+\begin{equation}
+	[t^a,\ t^b] = if^{abc}t^c.
+\end{equation}
+
+Note that the structure constants are zero for Abelian gauge groups, such as $G=U(1)$. The Lagrangian for the gauge theory, including gauge-invariant terms involving $A^a_{\mu}(x)$ itself, is:
+
+\begin{equation}
+	\mathcal{L} = \overline{\psi}(x) (i\slashed{D}) \psi(x) - \frac{1}{2} (F^a_{\mu\nu})^2,
+\end{equation}
+
+where $F_{\mu\nu}^a=\partial_{\mu}A^a_{\nu}(x) - \partial_{\nu} A^a_{\mu}(x) + g f^{abc}A_{\mu}^b A_{\nu}^c$ is the field strength tensor of $A^a_{\mu}(x)$. 
+
+The interactions of the fields $\psi(x)$ and $A^a_{\mu(x)}$ are manifest in the Lagrangian. For example, the interaction of $\psi$ with $A^a$ is described by the interaction term
+\begin{equation}
+	\mathcal{L}_{\mathrm{int}} = \overline{\psi} \gamma^{\mu}A^a_{\mu}t^a \psi.
+\end{equation}
+
+For non-Abelian gauge groups, square of the field strength tensor also yields cubic and quartic self-interaction terms
+
 \subsection{Strong Sector}
-<<<<<<< HEAD
 % Introductory paragraph: Quarks are charged under SU(3), giving three colors of quark times six quark flavors. The strong force confines five of the six into color-neutral hadrons. Write down some examples... like, the strange mesons, for example. 
 
 % Important point 1: confinement. Write down the running of the coupling, and show that it diverges (or at least appears to). Renders perturbation theory ineffective. 
@@ -54,6 +101,25 @@ The fermionic content of the Standard Model is summarized in table~\ref{table:st
 % Long lifetimes: Quarkonia with low bound state energies have to decay via off-diagonal CKM matrix elements, so charm and bottom mesons often have long lifetimes.
 
 % Very short lifetime: the top quark decays too fast to hadronize. 
+The strong sector of the Standard Model is a non-abelian $SU(3)_c$ gauge theory, describing the interactions of quarks under the strong force. The theory, called \emph{quantum chromodynamics} (QCD), contains the six observed quarks, called the up, down, charm, strange, top, and bottom quarks, as well as eight massless force carriers called gluons. 
+
+QCD describes drastically different phenomena at high and low energies. In the high energy limit, the strength of the interaction goes to zero, and quarks and gluons behave as nearly free particles. At low energies, the strength of the interaction diverges, confining quarks into \emph{hadrons}, bound states that are neutral under the strong force. The behavior emerges from the running of the strong coupling constant, $\alpha_s = \frac{g_s}{4\pi}$, with the energy scale of the interaction, $Q$, as calculated under the renormalization group flow. To one-loop order in $\alpha_s$, the running is given by:
+
+\begin{equation}
+\alpha_s(Q) = \frac{\alpha_s(M)}{1 + (b_0 \alpha_s/2\pi)\log(Q/M)},
+\end{equation}
+
+where $b_0=11-\frac{2}{3}n_f$ for $n_f$ fermion fields. With $n_f=6$, corresponding to the six quark flavors, $\frac{d\alpha_s{Q}}{dQ}<0$; hence the coupling decreases with $Q$. On the other hand, as $Q$ decreases, $\alpha_s(Q)$ increases, diverging at
+\begin{equation}
+Q=M\exp\left(\frac{8\pi^2}{b_0g^2}\right) \equiv \Lambda.
+\end{equation}
+
+Note that the exact nature of the divergence remains an open question; this simple expression results from a one-loop calculation, which becomes unreliable once $\alpha_s$ becomes large. Nonetheless, $\Lambda$ indicates the momentum scale at which the strong interaction becomes strong and confines quarks into hadrons, and has been measured to be $\Lambda \approx 200~\mbox{MeV}$. 
+
+\subsubsection{Confinement: Hadrons and Jets}
+
+\subsubsection{Parton Distribution Functions} 
+
 
 \subsection{Electroweak Sector}
 % Introductory paragraph: lagrangian, weak decays. 
@@ -61,16 +127,6 @@ The fermionic content of the Standard Model is summarized in table~\ref{table:st
 % Electroweak symmetry breaking and the Higgs
 
 % Diboson production
-=======
-The strong sector of the Standard Model, or \emph{quantum chromodynamics} (QCD), describes the observed spectrum of hadrons and their interactions. The theory underlying the diverse array of hadrons observed in nature contains six quarks: three with charge $Q=\pm\frac23e$, the up ($u$), charm ($c$), and top ($t$), and three with charge $Q=\mp\frac13e$, the down ($d$), strange ($s$), and bottom ($b$). Each quark transforms in the fundamental representation of the $SU(3)_c$ gauge group, $\mathbf{3}$; the antiquarks transform in the conjugate representation, $\overline{mathbf{3}}$. 
-
-\subsubsection{Confinement}
-A key prediction of QCD is the confinement of quarks into hadrons: free quarks have never been observed in nature. The prediction emerges from the running of the strong coupling constant $\alpha_s=\frac{g_s}{4\pi}$ under the renormalization group. % Continue describing this!
-
-\subsubsection{Asymptotic Freedom}
-
-\subsubsection{Parton Distribution Functions} 
->>>>>>> b13118cb3d5738bcc00f316011f1fb4ebf8255c5
 
 
 \subsubsection{Electroweak Gauge Interactions}
