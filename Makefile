@@ -21,7 +21,8 @@ testpdflatex:
 	biber    ${BASENAME}
 	pdflatex  ${BASENAME}
 	pdflatex  ${BASENAME}
-
+	sh scripts/pages.sh
+	
 test:
 	pdflatex testnote
 	pdflatex testnote

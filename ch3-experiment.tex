@@ -14,7 +14,24 @@ The LHC project was approved in 1994 by the CERN Council, and construction proce
 
 Proton-proton collisions at a center-of-mass energy of $\sqrt{s}=7~\mbox{TeV}$ commenced in early 2010. The LHC delivered an integrated luminosity of $\int L dt=48.1~\mbox{pb}^{-1}$ to the ATLAS detector in 2010, and $\int L dt=5.46~\mbox{fb}^{-1}$ in 2011. In 2012, the collision energy was increased to $\sqrt{s}=8~\mbox{TeV}$, and a dataset of $\int L dt=22.8~\mbox{fb}^{-1}$ was delivered. 
 
+\subsection{Accelerator Components}
+The primary devices used for acceleration are synchrotrons, made up of a variety of magnets and radio frequency (RF) cavities. The magnets are used to manipulate the particle beams: dipole magnets are used for bending the beams in a circle and for steering the beams down transfer lines between the accelerators, while quadrupole and higher moment magnets are used to focus the beams. RF cavities are metallic structures used for particle acceleration. An example of an LHC RF cavity is shown in figure~\ref{fig:rf-cavity}. The RF cavities are driven by a power source at their resonant frequency, creating an oscillating electromagnetic field inside the structure. The frequency of the RF cavities is matched to the rotation frequency of the particle beams.
+
+The RF oscillations result in the particle beam bunching into so-called RF buckets, shown schematically in figure~\ref{fig:RF-bucket}; the center of the bucket corresponds to particles with the reference energy (determined by the magnets) which experience no force in the RF cavities. During \emph{flat-top} operation, where the particle are held at fixed energy in the synchrotron, particles at the center of the RF bucket remain stationary at that point (neglecting energy losses due to synchrotron radiation), while nearby particles oscillate around the fixed point. During a \emph{ramp}, where particles are accelerated, the magnetic fields of the dipoles are slowly increased, shifting the RF bucket and causing the particle bunches to fall on the accelerating edge of the electric field oscillations. 
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.5\textwidth}{!}{\includegraphics{figures/ch3-experiment/LHC_RF_buckets}}
+	\caption{Schematic picture of an RF bucket. Particles at the center of the RF bucket experience no acceleration}
+	\label{fig:RF-bucket}
+\end{figure}
+
+
+
 \subsection{The Accelerator Complex}
+
+\underline{\textbf{Injection Chain}}
+
 \begin{figure}[htbp]
 	\centering
 	\resizebox{3.5in}{!}{\includegraphics{figures/ch3-experiment/converted/LHC_accelerator_complex.png}}
@@ -25,17 +42,23 @@ Proton-proton collisions at a center-of-mass energy of $\sqrt{s}=7~\mbox{TeV}$ c
 
 The LHC itself is the last stage of a 4-part acceleration chain, shown in figure~\ref{fig:LHC-accelerator-complex}. A full description can be found at~\cite{Benedikt:2004wm}. The staged acceleration chain meets the stringent performance requirements of the LHC, namely providing up to 2808 proton bunches with a very small transverse emittance and controllable longitudinal emittance. 
 
-The primary devices making up the accelerators are radio frequency (RF) cavities and magnets. RF cavities are metallic structures used for particle acceleration. An example of an LHC RF cavity is shown in figure~\ref{fig:rf-cavity}. The RF cavities are driven by a power source, typically a klystron, at their resonant frequency, creating an oscillating electromagnetic field inside the structure. Proton bunches synchronized with the oscillation of the electic fields are accelerated down the cavity. 
-% Talk about the bunch spacing here.
-
-A variety of types of magnet are used to manipulate the proton beams. Dipole magnets, such as that shown in figure~\ref{fig:LHC-dipole}, provide the centripetal force that bends the beams in a circle. Quadrupole and higher order magnets focus the beams.
-
 Protons are produced from hydrogen gas using a duoplasmatron source, which strips electrons from protons in a high electric field. After passing through a $90~\mbox{kV}$ pre-injector, a radio frequency quadrupole (RFQ) focuses and accelerates the protons to $750~\mbox{kV}$. A linear accelerator (LINAC2) then accelerates the protons to $50~\mbox{MeV}$ using RF cavities. The protons then pass through an $80~\mbox{m}$-long transfer line into the the Proton Synchrotron Booster (PSB) and Proton Synchrotron (PS). 
 
-The PSB consists of four stacked circular synchrotrons, $157~\mbox{m}$ in circumference, and accelerates the protons to $1.4 \GeV$. The use of four separate rings mitigates the space charge effects caused by the repulsion of protons within a bunch, which scale as $N_b/(\beta\gamma^2)$, where $N_b$ is the number of protons per bunch. The protons are then injected into single-ring PS, where the higher injection energy reduces the space charge effect. The PS accelerates the beams to $25 \GeV$, and also bunches the protons in preparation for injection into the LHC. A third synchrotron in the chain, the $7~\mbox{km}$-circumference Super Proton Synchrotron (SPS), accelerates the protons to $450 \GeV$, where they are injected into the LHC. 
+The PSB consists of four stacked circular synchrotrons, $157~\mbox{m}$ in circumference, and accelerates the protons to $1.4 \GeV$. The use of four separate rings mitigates the space charge effects caused by the repulsion of protons within a bunch, which scale as $N_b/(\beta\gamma^2)$, where $N_b$ is the number of protons per bunch. The protons are then injected into single-ring PS, where the higher injection energy reduces the space charge effect. The RF cavities of the PS, operating at several frequencies, accelerate the beams to $26 \GeV$, and also split the protons into the bunches eventually inject into the LHC. Nominally, this yields 72 bunches separated by 25~ns, but for Run I, 50~ns spacing was used instead. 
 
-The protons reach a momentum of $1.4~\mbox{GeV}/c$ in the Proton Synchrotron Booster (PSB), $25~\mbox{GeV}/c$ in the Proton Synchrotron (PS), and $450~\mbox{GeV}/c$ in the Super Proton Synchrotron (SPS), before being injected into the LHC for acceleration up to the final collision energy. 
+The protons are extracted from the PS at intervals of 3.6~s and injected into the third synchrotron in the chain, the $7~\mbox{km}$-circumference Super Proton Synchrotron (SPS). Immediately prior to extraction, the bunches are rotated by increasing the RF voltage, reducing the longitudinal emittance in order to ease capture in the SPS RF buckets, which have a frequency of $200~\mbox{MHz}$.  Up to four PS batches are injected per SPS cycle, after which the particle are accelerated at an average of $78~\GeV/s$ to the LHC injection energy of $450 \GeV$. Flat-top is maintained for about one second, during which the injection is prepared:
 
+\begin{itemize}
+	\item The magnets used for the beam extraction are ramped, safety checks are performed, and the SPS phase is tuned to match that of the LHC.
+	\item The bunch length is compressed using an RF voltage increase, as in the PS-SPS transfer.
+	\item The tails of the bunches are removed, down to $3$--$3.5\sigma$.
+\end{itemize}
+
+The SPS cycle takes 21.6 seconds, leading to a total LHC filling time of about nine minutes.
+
+\underline{\textbf{LHC Main Ring}}
+The LHC main ring accelerates protons from the injection energy of $450 \GeV$ to the collision energy, $3.5 \TeV$ or $4 \TeV$ for proton-proton collisions during Run I. 
+% Hardware: how many magnets? How many RF cavities? 400 MHz; bunch spacing of 50 ns.
 
 \subsection{Accelerator Parameters}
 From the experiments' point of view, there are two main parameters to optimize in order to maximize sensitivity to new physics: the collision energy, $\sqrt{s}$, and the integrated luminosity, $\int L dt$. The collision energy is limited to $\sqrt{s}=14~\mbox{TeV}$ by the bending power of the dipole magnets, which have a field strength of $8.73~\mbox{T}$; however, due to the faulty splice design mentioned above, the energy was limited to $\sqrt{s}=7-8~\mbox{TeV}$ in Run I. 
@@ -48,9 +71,9 @@ where $n_b$ is the number of colliding bunch pairs, $f_r=11245.5~\mbox{Hz}$ is t
 
 In general, a higher integrated luminosity is desired; however, a high number of simultaneous collisions, $\mu=L/n_b$, can degrade the performance of the detectors. 
 
-%\subsection{Interaction Regions}
+% Limiting factors. Why can't we get infinite luminosity?
 
-\subsection{Run I Performance}
+% Fill cycle: how to maximize luminosity accumulation over time.
 
 
 
@@ -76,7 +99,13 @@ ATLAS relies on two powerful superconducting magnets to bend the trajectories of
 
 \subsection{Data Acquisition}
 
-\subsection{Data Preparation/Performance}
+
+
+
+\section{Data Taking}
+\subsection{Performance during Run I}
+
+\subsection{Luminosity Measurement}
 
 
 \printbibliography
