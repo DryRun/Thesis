@@ -19,7 +19,7 @@ testpdflatex:
 	pdflatex  ${BASENAME}
 	pdflatex  ${BASENAME}
 	biber    ${BASENAME}
-	latex  ${BASENAME}
+	pdflatex  ${BASENAME}
 	pdflatex  ${BASENAME}
 
 test:
