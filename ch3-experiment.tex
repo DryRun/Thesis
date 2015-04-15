@@ -15,7 +15,7 @@ The LHC project was approved in 1994 by the CERN Council, and construction proce
 Proton-proton collisions at a center-of-mass energy of $\sqrt{s}=7~\mbox{TeV}$ commenced in early 2010. The LHC delivered an integrated luminosity of $\int L dt=48.1~\mbox{pb}^{-1}$ to the ATLAS detector in 2010, and $\int L dt=5.46~\mbox{fb}^{-1}$ in 2011. In 2012, the collision energy was increased to $\sqrt{s}=8~\mbox{TeV}$, and a dataset of $\int L dt=22.8~\mbox{fb}^{-1}$ was delivered. 
 
 \subsection{Accelerator Components}
-The primary devices used for acceleration are synchrotrons, made up of a variety of magnets and radio frequency (RF) cavities. The magnets are used to manipulate the particle beams: dipole magnets are used for bending the beams in a circle and for steering the beams down transfer lines between the accelerators, while quadrupole and higher moment magnets are used to focus the beams. RF cavities are metallic structures used for particle acceleration. An example of an LHC RF cavity is shown in figure~\ref{fig:rf-cavity}. The RF cavities are driven by a power source at their resonant frequency, creating an oscillating electromagnetic field inside the structure. The frequency of the RF cavities is matched to the rotation frequency of the particle beams.
+The primary devices used for acceleration are synchrotrons, made up of a variety of magnets and radio frequency (RF) cavities. The magnets are used to manipulate the particle beams: dipole magnets are used for bending the beams in a circle and for steering the beams down transfer lines between the accelerators, while quadrupole and higher moment magnets are used to focus the beams. RF cavities are metallic structures used for particle acceleration. The RF cavities are driven by klystrons, radio frequency amplifiers that act as power sources, at their resonant frequency, creating an oscillating electric field inside the structure. The frequency of the RF cavities is matched to the rotation frequency of the particle beams.
 
 The RF oscillations result in the particle beam bunching into so-called RF buckets, shown schematically in figure~\ref{fig:RF-bucket}; the center of the bucket corresponds to particles with the reference energy (determined by the magnets) which experience no force in the RF cavities. During \emph{flat-top} operation, where the particle are held at fixed energy in the synchrotron, particles at the center of the RF bucket remain stationary at that point (neglecting energy losses due to synchrotron radiation), while nearby particles oscillate around the fixed point. During a \emph{ramp}, where particles are accelerated, the magnetic fields of the dipoles are slowly increased, shifting the RF bucket and causing the particle bunches to fall on the accelerating edge of the electric field oscillations. 
 
@@ -26,7 +26,7 @@ The RF oscillations result in the particle beam bunching into so-called RF bucke
 	\label{fig:RF-bucket}
 \end{figure}
 
-
+\clearpage
 
 \subsection{The Accelerator Complex}
 
@@ -40,7 +40,7 @@ The RF oscillations result in the particle beam bunching into so-called RF bucke
 \end{figure}
 
 
-The LHC itself is the last stage of a 4-part acceleration chain, shown in figure~\ref{fig:LHC-accelerator-complex}. A full description can be found at~\cite{Benedikt:2004wm}. The staged acceleration chain meets the stringent performance requirements of the LHC, namely providing up to 2808 proton bunches with a very small transverse emittance and controllable longitudinal emittance. 
+The LHC itself is the last stage of a chain of lower-energy accelerators, shown in figure~\ref{fig:LHC-accelerator-complex}. A full description of the injection chain can be found at~\cite{Benedikt:2004wm}. The staged acceleration chain allows for maintaining a high-quality beam over many decades of energy. It consists of a linear accelerator and three synchrotrons which were used for previous generations of experiments at CERN. The reuse of the older accelerators is economical while still meeting the stringent performance requirements of the LHC, providing up to 2808 proton bunches with a very small transverse emittance and controllable longitudinal emittance. 
 
 Protons are produced from hydrogen gas using a duoplasmatron source, which strips electrons from protons in a high electric field. After passing through a $90~\mbox{kV}$ pre-injector, a radio frequency quadrupole (RFQ) focuses and accelerates the protons to $750~\mbox{kV}$. A linear accelerator (LINAC2) then accelerates the protons to $50~\mbox{MeV}$ using RF cavities. The protons then pass through an $80~\mbox{m}$-long transfer line into the the Proton Synchrotron Booster (PSB) and Proton Synchrotron (PS). 
 
@@ -57,38 +57,119 @@ The protons are extracted from the PS at intervals of 3.6~s and injected into th
 The SPS cycle takes 21.6 seconds, leading to a total LHC filling time of about nine minutes.
 
 \underline{\textbf{LHC Main Ring}}
-The LHC main ring accelerates protons from the injection energy of $450 \GeV$ to the collision energy, $3.5 \TeV$ or $4 \TeV$ for proton-proton collisions during Run I. 
-% Hardware: how many magnets? How many RF cavities? 400 MHz; bunch spacing of 50 ns.
+The LHC main ring accelerates protons from the injection energy of $450 \GeV$ to the collision energy, $3.5 \TeV$ or $4 \TeV$ for proton-proton collisions during Run I. The 26.7~km ring consists of eight arcs and eight straight sections, shown in figure~\ref{fig:LHC-segments}. Each straight section is called an \emph{insertion region} (IR), and contain either collider experiments or important services. IRs 1, 2, 5, and 8 contain the ATLAS, LHCb, CMS, and ALICE experiments, respectively; IR 4 contains two independent $400~\mbox{MHz}$ RF systems, one for each of the counter-rotating beams; IR 6 contains the beam dump system; and IRs 3 and 7 contain collimation systems. The beams are contained in separate beam pipes except at the collision points.
 
-\subsection{Accelerator Parameters}
-From the experiments' point of view, there are two main parameters to optimize in order to maximize sensitivity to new physics: the collision energy, $\sqrt{s}$, and the integrated luminosity, $\int L dt$. The collision energy is limited to $\sqrt{s}=14~\mbox{TeV}$ by the bending power of the dipole magnets, which have a field strength of $8.73~\mbox{T}$; however, due to the faulty splice design mentioned above, the energy was limited to $\sqrt{s}=7-8~\mbox{TeV}$ in Run I. 
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.5\textwidth}{!}{\includegraphics{figures/ch3-experiment/LHC_segments}}
+	\caption{Layout of the LHC. The ring consists of eight arcs and eight long straight sections (LSS). Each junction between an arc and a LSS contains a dispersion suppressor cell (DSL, DSR). TI2 and TI8 are the two injection tunnels (``tunnel d'injection'') leading from the SPS to the LHC.}
+	\label{fig:LHC-segments}
+\end{figure}
 
-The optimization of luminosity is somewhat more complicated.  The luminosity of the colliding beams is given by:
+
+The beams are controlled by over 7,000 magnets. The primary bending and focusing are performed by 1232 superconducting dipole and 392 superconducting quadrupole magnets. The dipole magnets, shown in figure~\ref{fig:LHC-dipole-magnets}, have a nominal field of $8.33~\mbox{T}$ and a length of $15~\mbox{m}$. The conducting coils are constructed from Nb-Ti Rutherford cables, and are cooled to $1.9~\mbox{K}$ using superfluid helium. The dipoles have a double-bore structure, providing the bending field for both beams. 
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/LHC_dipole_sketch}}
+	}
+	\hfill
+	\subfloat[] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/LHC_dipole_xsec}}
+	}
+	\caption{Two views of the LHC superconducting dipole magnet. The magnets are $15~\mbox{m}$ long and have two bores, one for each of the counter-rotating beams.}
+	\label{fig:LHC-dipole-magnets}
+\end{figure}
+
+The acceleration is provided by two superconducting RF systems, one for each beam. The RF cavities are constructed from copper with a thin ($1-2~\micron$) layer of niobium, and operate at $4.5~\mbox{K}$. The single-cell cavities, each nominally providing $2~\mbox{MV}$, are arranged into cryomodules containing eight cells, for a total peak voltage of $16~\mbox{MV}$. A module consisting of two cells is shown in figure~\ref{fig:RF-module}. The RF frequency is $400~\mbox{MHz}$, giving an RF bucket length of $2.5~\mbox{ns}$, or $75~\mbox{cm}$. 
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ A prototype cryomodule containing two cavities.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/LHC_RF_cryomodule}}
+	}
+	\hfill
+	\subfloat[ The RF cryomodules installed at IR4.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/LHC_RF_IR4}}
+	}
+	\caption{The LHC RF cryomodules.}
+	\label{fig:RF-module}
+\end{figure}
+
+At the collision points, the two beams converge in a single pipe for approximately $130~\mbox{m}$. A steering dipole directs the beams into collision, and a triplet of quadrupoles on each side of the interaction region focus the beam onto the interaction point, squeezing the beams in the transverse directions from a typical orbiting width of $\mathcal{O}(1~\mbox{mm})$ to a collision width of $\mathcal{O}(10~\micron)$. 
+
+
+\subsection{Beam Parameters}
+From the experiments' point of view, there are two main parameters to optimize in order to maximize sensitivity to new physics: the collision energy, $\sqrt{s}$, and the integrated luminosity, $\int L dt$. The collision energy is limited to $\sqrt{s}=14~\mbox{TeV}$ by the bending power of the dipole magnets, which have a nominal field strength of $8.33~\mbox{T}$; however, due to the faulty splice design mentioned above, the energy was limited to $\sqrt{s}=7-8~\mbox{TeV}$ in Run I. 
+
+The optimization of luminosity is somewhat more complicated.  The instantaneous luminosity of the colliding beams is given by:
 \begin{equation}\label{eqn:lumi}
-	L = \frac{n_b f_r N_1 N_2 \gamma_b}{4\pi \varepsilon_n \beta_{*}},
+	L = \frac{n_b f_r N_1 N_2 \gamma_b}{4\pi \epsilon_n \beta_{*}} F(\alpha),
 \end{equation}
-where $n_b$ is the number of colliding bunch pairs, $f_r=11245.5~\mbox{Hz}$ is the LHC revolution frequency, $N_{1,2}$ are the number of proton in the two beams, $\gamma_b$ is the relativistic gamma factor, $\varepsilon_n$ is the normalized emittance, and $\beta_{*}$ is the beta function at the collision point. TALK ABOUT THE LIMITS ON THESE NUMBERS.
+where $n_b$ is the number of colliding bunch pairs, $f_r=11245.5~\mbox{Hz}$ is the LHC revolution frequency, $N_{1,2}$ are the number of proton in the two beams, $\gamma_b$ is the relativistic gamma factor, $\epsilon_n$ is the normalized emittance, $\beta_{*}$ is the beta function at the collision point, and $F(\alpha)$ is the reduction in luminosity due to a nonzero beam crossing half-angle of $\alpha$. 
 
-In general, a higher integrated luminosity is desired; however, a high number of simultaneous collisions, $\mu=L/n_b$, can degrade the performance of the detectors. 
+% TO DO: beta* formula?
 
-% Limiting factors. Why can't we get infinite luminosity?
+In general, a higher total integrated luminosity, $L{\mathrm{int}}=\int L dt$, is desired. This depends on a number of factors:
 
-% Fill cycle: how to maximize luminosity accumulation over time.
+\begin{itemize}
+	\item The instantaneous luminosity per bunch, $L_b=\frac{f_r N_1 N_2}{4\pi\epsilon_n \beta_{*}}$. A higher $L_b$ increases the number of simultaneous collisions per bunch crossing (\emph{pileup}), $\mu=L_b/\sigma_{\mathrm{inel}}$, which degrades the performance of the experiments. 
+	% Removed for now. According to Frank Zimmerman's slides, no beam-beam limit was found in MDs! 
+	% From the accelerator's point of view, the number of protons per bunch, $N_{1,2}$, and the transverse emittance are limited by non-linear beam-beam effects~\cite{Papotti:2014vb}. Typical values during 2012 were $N_{1,2}=1.65\times 10^{11}$ and $\epsilon_n=2.5~\micron$, giving pileup values at the start of a fill of around 30, with tails up to $\sim$40. 
 
+	\item The number of bunches in the LHC, $n_b$. During Run I, the LHC was filled with 1380 bunches with $50~\mbox{ns}$ spacing between bunches, as opposed to the nominal 2808 bunches with $25~\mbox{ns}$ spacing. The advantages of $50~\mbox{ns}$ spacing include less days needed for electron-cloud scrubbing, smalled transverse emittances, and a smaller crossing angle~\cite{Papotti:2014vb}. The primary disadvantage is a higher pileup for the experiments. 
+
+	\item The crossing angle, $\alpha$. A nonzero crossing angle is required to prevent \emph{parasitic collisions} between bunches adjacent to the nominal collision point. For bunches spaced by $25~\mbox{ns}$, there are 34 unwanted parasitic collision points inside the common beam pipe at each interaction region. The reduction in luminosity is:
+
+	\begin{equation}
+		F(\alpha)=\frac{1}{\sqrt{1+\left(\frac{2\alpha \sigma_z}{2\sigma^*}\right)}},
+	\end{equation}
+	
+	where $\sigma_z$ is the RMS bunch length and $\sigma^{*}$ is the transverse beam width at the collision point. During normal 2012 running conditions, the crossing half-angle was $\alpha=145~\mu\mbox{rad}$, and the luminosity reduction factor was about $18\%$. 
+
+	\item The fill schedule of the LHC. The instantaneous luminosity of the LHC decreases over time. The dominant loss of luminosity is due to the loss of protons from the collisions themselves, with a typical decay constant of $\tau_{\mathrm{nuclear},1/e}=29~\mbox{h}$. Including other sources of loss such as intra-bunch scattering, scattering from collisions with gas in the beam pipe, beam-beam effects, and RF noise, the typical luminosity lifetime is $\tau_L=14.9~\mbox{h}$. 
+
+	The the fill schedule can be optimized to maximize the luminosity based on $\tau_L$ and the average turnaround time, $T_{\mathrm{turnaround}}$. This can be quantified using the \emph{H{\"u}bner} factor, $\mathrm{HF}_{\mathrm{peak}}$, defined as the ratio of the delivered integrated luminosity to the hypothetical integrated luminosity with $\tau_L=\infty$ and $T_{\mathrm{turnaround}}=0$. In 2011, this was typically in the range $15\%$--$20\%$.
+\end{itemize}
+
+The delivered luminosity in 2011 and 2012 will be discussed later in section~\ref{sec:luminosity-measurement}.
 
 
 \section{The ATLAS Experiment}
-The ATLAS detector is a large, cylindrical collider detector located at IP1 on the LHC ring (figure~\ref{fig:LHC-IPs}). The detector measures the energy and momenta of charged and colored particles produced in the collisions provided by the LHC. It consists of several subsystems occupying a cylinder , weighing (x tons). Closest to the interaction region, the inner detector performs momenta measurements of charged particles by tracking their movement through a solenoidal magnetic field (section~\ref{sec:inner-detector}). Past the inner detector solenoid magnet, electromagnetic and hadronic calorimeters measure the energy of electrons, photons, and hadrons. Finally, the muon spectrometer provides additional tracking and particle identification for muons in large toroidal magnetic field. 
+The ATLAS detector is a large, cylindrical collider detector located at IR1 on the LHC ring (figure~\ref{fig:LHC-IPs}). The detector measures the energy and momenta of charged and colored particles produced in the collisions provided by the LHC. It consists of several subsystems occupying a cylinder with a diameter of $25~\mbox{m}$ and a length of $46~\mbox{m}$, with a combined weight of approximately 7,000 tons. Closest to the interaction region, the inner detector (ID) performs momenta measurements of charged particles by tracking their movement through a solenoidal magnetic field (section~\ref{sec:inner-detector}). Past the inner detector solenoid magnet, electromagnetic and hadronic calorimeters measure the energy of electrons, photons, and hadrons. Finally, the muon spectrometer (MS) provides additional tracking and particle identification for muons in large toroidal magnetic field. 
 
-
-
+\underline{\textbf{Coordinate System}}
+The ATLAS detector uses a right-handed coordinate system, with $\hat{x}$ pointing from the interaction point towards the center of the LHC ring, $\hat{y}$ pointing up, and $\hat{z}$ pointing along the ring towards IR2. Due to the symmetry of the detector, cylindrical coordinates ($r,\theta,\phi$) are often used, with $r$ the transverse distance from the beam line, $\theta$ the polar angle from the beamline, and $\phi$ the azimuthal angle in the $x$-$y$ plane. The polar angle can also be expressed in term of the pseudorapidity, $\eta = -\log \tan \frac{\theta}{2}$, which is useful for describing the geometry of particles in part because difference in pseudorapidity, $\Delta\eta$, are invariant under longitudinal Lorentz boost along $\hat{z}$. For massless particles, the pseudorapidity is equal to the rapidity, $y=\frac12 \log \frac{E+p_z}{E-p_z}$. 
 
 \subsection{Magnets}
-ATLAS relies on two powerful superconducting magnets to bend the trajectories of charged particles, allowing the tracking detectors to provide measurements of their momenta. 
+ATLAS relies on four powerful superconducting magnets to bend the trajectories of charged particles, allowing the tracking detectors to provide measurements of their momenta. The solenoid provides a $2~\mbox{T}$ axial magnetic field in the volume of the inner detector, while the barrel and two endcap toroids provide a toroidal magnetic field ranging from $0.5$--$1~\mbox{T}$ for the muon spectrometer. Key parameters for the magnet system are shown in table~\ref{table:ATLAS-magnet-parameters}.
 
-% Solenoid
+\begin{table}[htbp]
+	\centering
+	ATLAS magnet parameters
+\end{table}
 
-% Toroid
+
+\underline{\textbf{Solenoid}}
+The central solenoid is shown in figure~\ref{fig:solenoid}. The solenoid consists of a single coil with 1154 windings made of high strength Al-stabilized NbTi conductor. The coil has an inner radius of $2.46~\mbox{m}$, an outer radius of $2.56~\mbox{m}$, and a length of $5.8~\mbox{m}$. With a nominal current of $7.73~\mbox{kA}$, the magnetic field is $1.998~\mbox{T}$ at the center of the solenoid, falling to $1.8~\mbox{T}$ at $z=1.7~\mbox{m}$ and $0.9~\mbox{T}$ the end of the ID cavity. The magnetic flux is returned via the steel in the hadronic calorimeter and its support structures.Liquid helium is used to cool the superconducting coil to an operating temperature of $4.5~\mbox{K}$. At nominal current, the stored energy is $40~\mbox{MJ}$. 
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_solenoid_2}}
+	\caption{The central solenoid in the factory after completion of the coil winding~\cite{TheATLASCollaboration:2008fg}.}
+	\label{fig:solenoid}
+\end{figure}
+
+
+\underline{\textbf{Toroid}}
+The magnetic field for the muon spectrometer is provided by three large toroid magnets, each with eight superconducting coils. The barrel toroid measures $25.3~\mbox{m}$ in length, with inner and outer diameters of $9.4~\mbox{m}$ and $20.1~\mbox{m}$, respectively. The two end-cap toroids are $5.0~\mbox{m}$ in length, with inner and outer diameters of $1.65~\mbox{m}$ and $10.7~\mbox{m}$, respectively. Both types of toroid contain eight coils, with 120 windings each in the barrel and 116 windings each in the end-caps. The endcap coils are rotated by $22.5^{\circ}$ from the barrel coils to optimize the bending power in the overlap region between the magnets. Like the solenoid, the conductor is Al-stabilized NbTi, operated at $4.5~\mbox{K}$. The nominal current is $20.5~\mbox{kA}$, producing a magnetic field that varies from $0.15~\mbox{T}$ to $2.5~\mbox{T}$ in the barrel region, and $0.2~\mbox{T}$ to $3.5~\mbox{T}$ in the end-caps. The bending power of the toroid is shown as a function of $\eta$ in figure~\ref{fig:toroid-bending-power}. The total stored energy at nominal current is $1.58~\mbox{GJ}$. 
+
+% TO DO: Endcap z position?
+
+\begin{figure}[htbp]
+	Toroid pictures
+\end{figure}
 
 
 \subsection{Tracking}
