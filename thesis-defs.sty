@@ -2,3 +2,124 @@
 \newcommand{\cm}{\ensuremath{\mathrm{cm}}}
 \newcommand{\mm}{\ensuremath{\mathrm{mm}}}
 \newcommand{\km}{\ensuremath{\mathrm{km}}}
+\newcommand{\Et}      {\ensuremath{E_{\mathrm{T}}}}
+\newcommand{\Ht}      {\ensuremath{H_{\mathrm{T}}^{\mathrm{jets}}}}
+\newcommand{\Htjets}  {\Ht}
+\newcommand{\htjets}  {\Ht}
+%\newcommand{\St}      {\ensuremath{S_{\mathrm{T}}}}
+\newcommand{\St}      {\meff}
+\newcommand{\st}      {\St}
+\newcommand{\htlep}   {\ensuremath{H_{\mathrm{T}}^{\mathrm{leptons}}}}
+\newcommand{\Htlep}   {\htlep}
+\newcommand{\mt}      {\ensuremath{m_{\mathrm{T}}}}
+\newcommand{\mtw}     {\ensuremath{m_{\mathrm{T}}^W}}
+\newcommand{\mo}      {\ensuremath{^{-1}}}
+\newcommand{\degrees} {\ensuremath{^{\circ}}}
+\newcommand{\etag}    {\ensuremath{\eta^{\gamma}}}
+\newcommand{\Kt}      {\ensuremath{\mathrm{k_{T}}}}
+\newcommand{\Etg}     {\ensuremath{E_{\mathrm{T}}^{\gamma}}}
+\newcommand{\Etiso}   {\ensuremath{E_{\mathrm{T}}^{\mathrm{iso}}}}
+\newcommand{\eg}      {\textit{e.g.}}
+\newcommand{\gte}     {\geq} % because I always forget
+\newcommand{\Zgamma}{\Zboson/$\gamma^*$}
+\newcommand{\Zg}{\Zboson/$\gamma^*$}
+\newcommand{\ZZ}{\ensuremath{ZZ}}
+\newcommand{\WZ}{\ensuremath{WZ}}
+\newcommand{\Zjets}{\ensuremath{Z}+\mbox{jets}}
+\newcommand{\ttbarZ}{\ensuremath{t\overline{t}+Z}}
+\newcommand{\ttbarW}{\ensuremath{t\overline{t}+W}}
+\newcommand{\ttbarV}{\ensuremath{t\overline{t}+V}}
+\newcommand{\ttbarWW}{\ensuremath{t\overline{t}+WW}}
+
+\newcommand{\ptlead}{\ensuremath{p_{\mathrm{T}}^{\mathrm{lead}}}}
+\newcommand{\ptsubl}{\ensuremath{p_{\mathrm{T}}^{\mathrm{sub}}}}
+\newcommand{\impactp}{\ensuremath{d_{0}}}
+\newcommand{\impactsig}{\ensuremath{d_{0}/\sigma_{d_{0}}}}
+\newcommand{\Etmiss}{\met}
+\newcommand{\metrel}{\ensuremath{E_{\mathrm{T,Rel}}^{\mathrm{miss}}}}
+\newcommand{\meff}{\ensuremath{m_{\mathrm{eff}}}}
+\newcommand{\antikt}{\ensuremath{\mbox{anti-}k_{\mathrm{T}}}}
+
+\newcommand{\ptl}{\ensuremath{p_{\mathrm{T}}^\ell}}
+\newcommand{\ptjet}{\ensuremath{p_{\mathrm{T}}^\mathrm{jet}}}
+\newcommand{\etal}{\ensuremath{|\eta^\ell|}}
+\newcommand{\etajet}{\ensuremath{|\eta^\mathrm{jet}|}}
+
+\newcommand{\mll}{\ensuremath{m_{ll}}}
+
+\newcommand{\zgs}{\ensuremath{Z/\gamma^{*}}}
+
+\newcommand{\xt}{\ensuremath{\mathrm{x_{T}}}}
+
+\newcommand{\lnumerator}[1]{\ensuremath{\ell_{#1}^{\mathrm{N}}}}
+\newcommand{\ldenominator}[1]{\ensuremath{\ell_{#1}^{\mathrm{D}}}}
+\newcommand{\lreal}[1]{\ensuremath{\ell_{#1}^{\mathrm{R}}}}
+\newcommand{\lfake}[1]{\ensuremath{\ell_{#1}^{\mathrm{F}}}}
+\newcommand{\NNN}{\lnumerator{1}\lnumerator{2}\lnumerator{3}}
+\newcommand{\NND}{\lnumerator{1}\lnumerator{2}\ldenominator{3}}
+\newcommand{\NDN}{\lnumerator{1}\ldenominator{2}\lnumerator{3}}
+\newcommand{\NDD}{\lnumerator{1}\ldenominator{2}\ldenominator{3}}
+\newcommand{\DNN}{\ldenominator{1}\lnumerator{2}\lnumerator{3}}
+\newcommand{\DND}{\ldenominator{1}\lnumerator{2}\ldenominator{3}}
+\newcommand{\DDN}{\ldenominator{1}\ldenominator{2}\lnumerator{3}}
+\newcommand{\DDD}{\ldenominator{1}\ldenominator{2}\ldenominator{3}}
+
+\newcommand{\RRR}{\lreal{1}\lreal{2}\lreal{3}}
+\newcommand{\RRF}{\lreal{1}\lreal{2}\lfake{3}}
+\newcommand{\RFR}{\lreal{1}\lfake{2}\lreal{3}}
+\newcommand{\RFF}{\lreal{1}\lfake{2}\lfake{3}}
+\newcommand{\FRR}{\lfake{1}\lreal{2}\lreal{3}}
+\newcommand{\FRF}{\lfake{1}\lreal{2}\lfake{3}}
+\newcommand{\FFR}{\lfake{1}\lfake{2}\lreal{3}}
+\newcommand{\FFF}{\lfake{1}\lfake{2}\lfake{3}}
+
+\newcommand{\ptcone}[1]{{\footnotesize \frac{\texttt{ptcone#1}}{\pt}}}
+\newcommand{\etcone}[1]{{\footnotesize \frac{\texttt{Etcone#1}}{\pt}}}
+\newcommand{\ptconeE}[1]{{\footnotesize \frac{\texttt{ptcone#1}}{\Et}}}
+\newcommand{\etconeE}[1]{{\footnotesize \frac{\texttt{TopoEtcone#1}}{\Et}}}
+\newcommand{\etcones}[1]{{\footnotesize \texttt{Etcone#1}}}
+\newcommand{\ptcones}[1]{{\footnotesize \texttt{ptcone#1}}}
+
+\newcommand{\alpgen}{{\sc alpgen}}
+\newcommand{\jimmy}{{\sc jimmy}}
+\newcommand{\mcatnlo}{{\sc mc@nlo}}
+\newcommand{\vbfnlo}{{\sc VBFNLO}}
+\newcommand{\sherpa}{{\sc sherpa}}
+\newcommand{\powheg}{{\sc powheg}}
+\newcommand{\herwig}{{\sc herwig}}
+\newcommand{\pythia}{{\sc pythia}}
+\newcommand{\pythiab}{{\sc pythiab}}
+\newcommand{\madgraph}{{\sc madgraph}}
+\newcommand{\acermc}{{\sc AcerMC}}
+
+\newcommand{\dchp}{\ensuremath{\mathrm{H}^{\pm\pm}}}
+\newcommand{\exnue}{\ensuremath{\nu_{e}^{*}}}
+\newcommand{\exnum}{\ensuremath{\nu_{\mu}^{*}}}
+\newcommand{\dfour}{\ensuremath{d_4}}
+
+\newcommand{\ourlumi}{4.6 \ifb}
+\newcommand{\DeltaR}{\ensuremath{\Delta R}}
+
+\newcommand{\epsfid}{\ensuremath{\epsilon_{fid}}}
+
+\newcommand{\ie}{{\it i.e.}}
+
+\newcommand{\nosubsubsection}[1]{%
+  % I give up.
+  \subsubsection{#1}%
+}
+
+\newcommand{\Dslash}{\ensuremath{\slashed{D}}}
+\newcommand{\dslash}{\ensuremath{\slashed{d}}}
+
+\newcommand{\ptz}{\ensuremath{p_{\mathrm{T}}(Z)}}
+
+\newcommand{\threelo}{\ensuremath{3\ell-\mathrm{only}}}
+\newcommand{\fourl}{\ensuremath{4\ell}}
+\newcommand{\threeljj}{\ensuremath{3\ell+jj}}
+\newcommand{\sigmavis}{\ensuremath{\sigma_{\mathrm{vis}}}}
+
+\newcommand{\lpm}{\ensuremath{L^{\pm}}}
+\newcommand{\lmp}{\ensuremath{L^{\mp}}}
+\newcommand{\lzero}{\ensuremath{N^{0}}}
+\newcommand{\deltam}{\ensuremath{\Delta m}}
