@@ -137,22 +137,90 @@ The delivered luminosity in 2011 and 2012 will be discussed later in section~\re
 
 
 \section{The ATLAS Experiment}
-The ATLAS detector is a large, cylindrical collider detector located at IR1 on the LHC ring (figure~\ref{fig:LHC-IPs}). The detector measures the energy and momenta of charged and colored particles produced in the collisions provided by the LHC. It consists of several subsystems occupying a cylinder with a diameter of $25~\mbox{m}$ and a length of $46~\mbox{m}$, with a combined weight of approximately 7,000 tons. Closest to the interaction region, the inner detector (ID) performs momenta measurements of charged particles by tracking their movement through a solenoidal magnetic field (section~\ref{sec:inner-detector}). Past the inner detector solenoid magnet, electromagnetic and hadronic calorimeters measure the energy of electrons, photons, and hadrons. Finally, the muon spectrometer (MS) provides additional tracking and particle identification for muons in large toroidal magnetic field. 
+The ATLAS detector is a large, cylindrical collider detector located at IR1 on the LHC ring (figure~\ref{fig:LHC-IPs}). The detector measures the energy and momenta of charged and colored particles produced in the collisions provided by the LHC. It consists of several subsystems occupying a cylinder with a diameter of $25~\mbox{m}$ and a length of $46~\mbox{m}$, with a combined weight of approximately 7,000 tons. Closest to the interaction region, the inner detector performs momenta measurements of charged particles by tracking their movement through a solenoidal magnetic field (section~\ref{sec:inner-detector}). Past the inner detector solenoid magnet, electromagnetic and hadronic calorimeters measure the energy of electrons, photons, and hadrons. Finally, the muon spectrometer provides additional tracking and particle identification for muons in large toroidal magnetic field. 
 
 \underline{\textbf{Coordinate System}}
 The ATLAS detector uses a right-handed coordinate system, with $\hat{x}$ pointing from the interaction point towards the center of the LHC ring, $\hat{y}$ pointing up, and $\hat{z}$ pointing along the ring towards IR2. Due to the symmetry of the detector, cylindrical coordinates ($r,\theta,\phi$) are often used, with $r$ the transverse distance from the beam line, $\theta$ the polar angle from the beamline, and $\phi$ the azimuthal angle in the $x$-$y$ plane. The polar angle can also be expressed in term of the pseudorapidity, $\eta = -\log \tan \frac{\theta}{2}$, which is useful for describing the geometry of particles in part because difference in pseudorapidity, $\Delta\eta$, are invariant under longitudinal Lorentz boost along $\hat{z}$. For massless particles, the pseudorapidity is equal to the rapidity, $y=\frac12 \log \frac{E+p_z}{E-p_z}$. 
 
 \subsection{Magnets}
-ATLAS relies on four powerful superconducting magnets to bend the trajectories of charged particles, allowing the tracking detectors to provide measurements of their momenta. The solenoid provides a $2~\mbox{T}$ axial magnetic field in the volume of the inner detector, while the barrel and two endcap toroids provide a toroidal magnetic field ranging from $0.5$--$1~\mbox{T}$ for the muon spectrometer. Key parameters for the magnet system are shown in table~\ref{table:ATLAS-magnet-parameters}.
+ATLAS relies on four powerful superconducting magnets to bend the trajectories of charged particles, allowing the tracking detectors to provide measurements of their momenta. The solenoid provides a $2~\mbox{T}$ axial magnetic field in the volume of the inner detector, while the barrel and two endcap toroids provide a toroidal magnetic field ranging from $0.5$--$1~\mbox{T}$ for the muon spectrometer. The geometry of the magnets is shown in figure~\ref{figure:ATLAS-magnets-sketch}. Key parameters for the magnet system are shown in table~\ref{table:ATLAS-magnet-parameters}.
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_magnets_sketch}}
+	\caption{The geometry of the magnet windings and tile calorimeter steel. The three toroids and solenoid are shown in red. The remaining colors show layers of the tile calorimeter with different magnetic properties and an outside return yoke.}
+	\label{fig:ATLAS_magnets-sketch}
+\end{figure}
+
 
 \begin{table}[htbp]
 	\centering
-	ATLAS magnet parameters
+	\begin{tabular}{|l|l|c|c|c|c|}
+		\hline
+		\textbf{Property} & \textbf{Feature} & \textbf{Unit} & \textbf{Solenoid} & \textbf{Barrel toroid} & \textbf{End-cap toroids} \\
+		\hline
+		\textbf{Size} & Inner diameter & m & $2.46$ & $9.4$ & $1.65$ \\
+		\hline
+		 & Outer diameter & m & $2.56$ & $20.1$ & $10.7$ \\
+		\hline
+		 & Axial length & m & $5.8$ & $25.3$ & $5.0$ \\
+		\hline
+		 & Number of coils & & $1$ & $8$ & $2\times 8$ \\
+		\hline
+		\textbf{Mass} & Conductor & t & $3.8$ & $118$ & $2\times 20.5$ \\
+		\hline
+		 & Cold mass & t & $5.4$ & $370$ & $2\times 140$ \\
+		\hline
+		 & Total assembly & t & $5.7$ & $830$ & $2\times 239$ \\
+		\hline
+		\textbf{Coils} & Turns per coil & & $1154$ & $120$ & $116$ \\
+		\hline
+		 & Nominal current & kA & $7.73$ & $20.5$ & $20.5$ \\
+		\hline
+		 & Magnet stored energy & GJ & $0.04$ & $1.08$ & $2\times 0.25$ \\
+		\hline
+		 & Peak field in the windings & T & $2.6$ & $3.9$ & $4.1$ \\
+		\hline
+		 & Field range in the bore & T & $0.9$-$2.0$ & $0.2$-$2.5$ & $0.2$-$3.5$ \\
+		\hline
+		\textbf{Conductor} & Overall size & mm$^2$ & $30\times 4.25$ & $57\times12$ & $41\times 12$ \\
+		\hline
+		 & Ratio Al:Cu:NbTi & & $15.6:0.9:1$ & $28:1.3:1$ & $19:1.3:1$ \\
+		\hline
+		 & Number of strands (NbTi) & & $12$ & $38$-$40$ & $40$ \\
+		\hline
+		 & Strand diameter (NbTi) & mm & $1.22$ & $1.3$ & $1.3$ \\
+		\hline
+		 & Critical current (at $5~\mbox{T}$ and $4.2~\mbox{K}$) & kA & $20.4$ & $58$ & $60$ \\
+		\hline
+		 & Operating/critical current ratio at $4.5~\mbox{K}$ & \% & $20$ & $30$ & $30$ \\
+		\hline
+		 & Residual resistivity ratio (RRR) for Al & & $>500$ & $>800$ & $>800$ \\
+		\hline
+		 & Temperature margin & K & $2.7$ & $1.9$ & $1.9$ \\
+		\hline
+		 & Number of units $\times$ length & m & $4\times 2290$ & $8\times 4 \times 1730$ & $2\times8\times2\times800$ \\
+		\hline
+		 & Total length (produced) & km & $10$ & $56$ & $2\times13$ \\
+		\hline
+		\textbf{Heat load} & At $4.5~\mbox{K}$ & W & $130$ & $990$ & $330$ \\
+		\hline
+		 & At $60$-$80~\mbox{K}$ & kW & $0.5$ & $7.4$ & $1.7$ \\
+		\hline
+		 & Liquid helium mass flow & g/s & $7$ & $410$ & $280$ \\
+		\hline
+	\end{tabular}
+	\caption{Main parameters of the ATLAS magnet system. From~\cite{TheATLASCollaboration:2008fg}.}
+	\label{table:ATLAS-magnet-parameters}
 \end{table}
 
 
+
+
 \underline{\textbf{Solenoid}}
-The central solenoid is shown in figure~\ref{fig:solenoid}. The solenoid consists of a single coil with 1154 windings made of high strength Al-stabilized NbTi conductor. The coil has an inner radius of $2.46~\mbox{m}$, an outer radius of $2.56~\mbox{m}$, and a length of $5.8~\mbox{m}$. With a nominal current of $7.73~\mbox{kA}$, the magnetic field is $1.998~\mbox{T}$ at the center of the solenoid, falling to $1.8~\mbox{T}$ at $z=1.7~\mbox{m}$ and $0.9~\mbox{T}$ the end of the ID cavity. The magnetic flux is returned via the steel in the hadronic calorimeter and its support structures.Liquid helium is used to cool the superconducting coil to an operating temperature of $4.5~\mbox{K}$. At nominal current, the stored energy is $40~\mbox{MJ}$. 
+The central solenoid is shown in figure~\ref{fig:solenoid}. The solenoid consists of a single coil with 1154 windings made of high strength Al-stabilized NbTi conductor. The coil has an inner radius of $2.46~\mbox{m}$, an outer radius of $2.56~\mbox{m}$, and a length of $5.8~\mbox{m}$. With a nominal current of $7.73~\mbox{kA}$, the magnetic field is $1.998~\mbox{T}$ at the center of the solenoid, falling to $1.8~\mbox{T}$ at $z=1.7~\mbox{m}$ and $0.9~\mbox{T}$ the end of the inner detector cavity. The magnetic flux is returned via the steel in the hadronic calorimeter and its support structures. Liquid helium is used to cool the superconducting coil to an operating temperature of $4.5~\mbox{K}$. At nominal current, the stored energy is $40~\mbox{MJ}$. 
+
+The magnetic field at $z=0$ is shown in figure~\ref{fig:ATLAS-solenoid-Bfield}.
 
 \begin{figure}[htbp]
 	\centering
@@ -161,18 +229,83 @@ The central solenoid is shown in figure~\ref{fig:solenoid}. The solenoid consist
 	\label{fig:solenoid}
 \end{figure}
 
-
-\underline{\textbf{Toroid}}
-The magnetic field for the muon spectrometer is provided by three large toroid magnets, each with eight superconducting coils. The barrel toroid measures $25.3~\mbox{m}$ in length, with inner and outer diameters of $9.4~\mbox{m}$ and $20.1~\mbox{m}$, respectively. The two end-cap toroids are $5.0~\mbox{m}$ in length, with inner and outer diameters of $1.65~\mbox{m}$ and $10.7~\mbox{m}$, respectively. Both types of toroid contain eight coils, with 120 windings each in the barrel and 116 windings each in the end-caps. The endcap coils are rotated by $22.5^{\circ}$ from the barrel coils to optimize the bending power in the overlap region between the magnets. Like the solenoid, the conductor is Al-stabilized NbTi, operated at $4.5~\mbox{K}$. The nominal current is $20.5~\mbox{kA}$, producing a magnetic field that varies from $0.15~\mbox{T}$ to $2.5~\mbox{T}$ in the barrel region, and $0.2~\mbox{T}$ to $3.5~\mbox{T}$ in the end-caps. The bending power of the toroid is shown as a function of $\eta$ in figure~\ref{fig:toroid-bending-power}. The total stored energy at nominal current is $1.58~\mbox{GJ}$. 
-
-% TO DO: Endcap z position?
-
 \begin{figure}[htbp]
-	Toroid pictures
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_solenoid_Bfield}}
+	\caption{The solenoid magnetic field in the radial ($B_r$) and longitudinal ($B_z$) directions, shown for $z=0$ and $\phi=20\pi/16$ at different values of $r$. The field determined from a fit of the field model to measurements using an array of Hall probes~\cite{Aleksa:2008br}.}
+	\label{fig:ATLAS-solenoid-Bfield}
 \end{figure}
 
 
-\subsection{Tracking}
+
+\underline{\textbf{Toroid}}
+The magnetic field for the muon spectrometer is provided by three large toroid magnets, each with eight superconducting coils. The magnets are shown in figure~\ref{fig:ATLAS-toroids}. The barrel toroid measures $25.3~\mbox{m}$ in length, with inner and outer diameters of $9.4~\mbox{m}$ and $20.1~\mbox{m}$, respectively. The two end-cap toroids are $5.0~\mbox{m}$ in length, with inner and outer diameters of $1.65~\mbox{m}$ and $10.7~\mbox{m}$, respectively. Both types of toroid contain eight coils, with 120 windings each in the barrel and 116 windings each in the end-caps. The endcap coils are rotated by $22.5^{\circ}$ from the barrel coils to optimize the bending power in the overlap region between the magnets. Like the solenoid, the conductor is Al-stabilized NbTi, operated at $4.5~\mbox{K}$. The nominal current is $20.5~\mbox{kA}$, producing a magnetic field that varies from $0.15~\mbox{T}$ to $2.5~\mbox{T}$ in the barrel region, and $0.2~\mbox{T}$ to $3.5~\mbox{T}$ in the end-caps. The bending power of the toroid is shown as a function of $\eta$ in figure~\ref{fig:toroid-bending-power}. The total stored energy at nominal current is $1.58~\mbox{GJ}$. 
+
+The field integral of the toroid is shown as a function of $\eta$ in figure~\ref{fig:ATLAS-toroid-Bintegral}. The field integral drops at the boundary between the barrel and end-caps, where the fields from the two magnets partially cancel. 
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ Barrel toroid.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_toroid}}
+	}
+	\hfill
+	\subfloat[ End-cap toroid, inserted into the barrel toroid.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_toroid_endcap_inserted2}}
+	}
+	\caption{Images of the barrel and end-cap toroid magnets during installation.}
+	\label{fig:ATLAS-toroids}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_toroid_Bintegral}}
+	\caption{The predicted toroid magnetic field integral as a function of $|\eta|$. The paths are for infinite momentum muons, i.e. straight lines, from the innermost to the outermost MDT layer (section~\ref{sec:muon-spectrometer}).}
+	\label{fig:ATLAS-toroid-Bintegral}
+\end{figure}
+
+
+
+\subsection{Inner Detector}
+The inner detector performs tracking charged particles traversing the $2~\mbox{T}$ solenoidal magnetic field in the region $|\eta|<2.5$. It also performs electron identification in the range $|\eta|<2.0$. It consists of three subdetectors occupying the volume closest to the interaction region, directly outside the beam pipe, as shown in figure~\ref{fig:ATLAS-ID}. Proceeding outwards from the interaction point, these are the pixel detector, the silicon tracker (SCT), and the transition radiation tracker (TRT). The pixel detector nominally provides three track measurements with high spatial resolution using silicon pixels. The SCT provides an additional four measurements using silicon strips. Finally, for particles with $|\eta|<2.0$, the TRT provides an average of 36 measurements per track using gaseous straw tubes, which aids the pattern recognition, improves the momentum resolution, and performs electron identification. The paths traversed by tracks through the barrel and end-cap layers are shown in figure~\ref{fig:ATLAS-ID-tracks}.
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ 3D model of the inner detector, showing the arrangement of the pixel detector, SCT, and TRT in the barrel and end-caps.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_sketch}}
+	}
+	\hfill
+	\subfloat[ Layout of the inner detector in the $r-z$ plane.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_layout_rz}}
+	}
+	\caption{Layout of the ATLAS inner detector.}
+	\label{fig:ATLAS-ID}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ Trajectory of a $10 \GeV$ charged particle with $\eta=0.3$ traversing the barrel elements of the inner detector.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_track_barrel}}
+	}
+	\hfill
+	\subfloat[ Trajectories of $10 \GeV$ charged particles with $\eta=1.4$ and $\eta=2.2$ traversing the barrel and end-cap elements of the inner detector.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_track_endcap}}
+	}
+	\caption{Drawings of the inner detector sensors and structural elements traversed by $10 \GeV$ charged particles originating from the interaction point at various angles.}
+	\label{fig:ATLAS-ID-tracks}
+\end{figure}
+
+
+\underline{\textbf{Pixel Detector}}
+The pixel detector consists of 1744 identical pixel sensors, each measuring $19\times63~\mbox{mm}^2$ and containing $144\times 328=47232$ pixels, for a total of $80.4\times 10^6$ pixels. The size of the pixels is dictated by the front-end electronics: in 128 of the 144 columns, the pixels have a pitch of $50\times 400 \micron^2$, while the remaining 16 columns have a pitch of $50\times 600 \micron^2$. For space reasons, eight pairs of pixels in each column are ganged to a common readout, giving a total of 46080 readout channels per sensor.
+
+ The sensors are $256~\micron$-thick detectors constructed from $n$-type wafers, with high dose positive ($p^+$) and negative ($n^+$) dose regions implanted on each side of a wafer. Initially, the asymmetric depletion region at the $p^+-n$ is operated in reverse bias with a voltage of $150~\mbox{V}$, and fills the sensor bulk volume, shown in figure~\ref{fig:ATLAS-pixel-normal}. The charge carriers generated by the passage of an ionizing particle through the bulk are collected at the $n^+$ side of the sensor, where the readout electronics are bump-bonded to the pixel. However, over time, radiation damage induces type inversion in the bulk, after which the junction moves to the $n^+$ side of the sensor and the depletion zone grow from the pixel side, as shown in figure~\ref{fig:ATLAS-pixel-inverted}. The double-sided 
+
+ the readout electronics are bump-bonded to the $n^+$ side. 
+
+Most (90\%) of the pixels measure $50\times 400 \micron^2$, dictated by the readout pitch of the front-end electronics, with respective intrinsic accuracies of $10 \micron$ and $115 \micron$. The remaining pixels measure $50\times 600 \micron^2$. 
+
+The detector contains 1744 identical pixel sensors, each $19\times 63~\mbox{mm}^2$. The pixel sensors contain 47232 pixels and 
+The sensors are arranged into three barrel layers and three end-cap disks on each side of the interaction region.
 
 \subsection{Calorimetry}
 
