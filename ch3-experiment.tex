@@ -136,13 +136,17 @@ In general, a higher total integrated luminosity, $L{\mathrm{int}}=\int L dt$, i
 The delivered luminosity in 2011 and 2012 will be discussed later in section~\ref{sec:luminosity-measurement}.
 
 
-\section{The ATLAS Experiment}
+\section{The ATLAS Experiment}\label{sec:the-atlas-experiment}
+
 The ATLAS detector is a large, cylindrical collider detector located at IR1 on the LHC ring (figure~\ref{fig:LHC-IPs}). The detector measures the energy and momenta of charged and colored particles produced in the collisions provided by the LHC. It consists of several subsystems occupying a cylinder with a diameter of $25~\mbox{m}$ and a length of $46~\mbox{m}$, with a combined weight of approximately 7,000 tons. Closest to the interaction region, the inner detector performs momenta measurements of charged particles by tracking their movement through a solenoidal magnetic field (section~\ref{sec:inner-detector}). Past the inner detector solenoid magnet, electromagnetic and hadronic calorimeters measure the energy of electrons, photons, and hadrons. Finally, the muon spectrometer provides additional tracking and particle identification for muons in large toroidal magnetic field. 
 
-\underline{\textbf{Coordinate System}}
+This section describes the design of the magnets, inner detector, calorimeters, and muon spectrometer. The identification of objects and the associated performance are described in section~\ref{sec:object-reconstruction}. 
+
+\subsection{Coordinate System}\label{sec:ATLAS-coordinate-system}
+
 The ATLAS detector uses a right-handed coordinate system, with $\hat{x}$ pointing from the interaction point towards the center of the LHC ring, $\hat{y}$ pointing up, and $\hat{z}$ pointing along the ring towards IR2. Due to the symmetry of the detector, cylindrical coordinates ($r,\theta,\phi$) are often used, with $r$ the transverse distance from the beam line, $\theta$ the polar angle from the beamline, and $\phi$ the azimuthal angle in the $x$-$y$ plane. The polar angle can also be expressed in term of the pseudorapidity, $\eta = -\log \tan \frac{\theta}{2}$, which is useful for describing the geometry of particles in part because difference in pseudorapidity, $\Delta\eta$, are invariant under longitudinal Lorentz boost along $\hat{z}$. For massless particles, the pseudorapidity is equal to the rapidity, $y=\frac12 \log \frac{E+p_z}{E-p_z}$. 
 
-\subsection{Magnets}
+\subsection{Magnets}\label{sec:ATLAS-magnets}
 ATLAS relies on four powerful superconducting magnets to bend the trajectories of charged particles, allowing the tracking detectors to provide measurements of their momenta. The solenoid provides a $2~\mbox{T}$ axial magnetic field in the volume of the inner detector, while the barrel and two endcap toroids provide a toroidal magnetic field ranging from $0.5$--$1~\mbox{T}$ for the muon spectrometer. The geometry of the magnets is shown in figure~\ref{figure:ATLAS-magnets-sketch}. Key parameters for the magnet system are shown in table~\ref{table:ATLAS-magnet-parameters}.
 
 \begin{figure}[htbp]
@@ -217,7 +221,8 @@ ATLAS relies on four powerful superconducting magnets to bend the trajectories o
 
 
 
-\underline{\textbf{Solenoid}}
+\subsubsection{Solenoid}\label{sec:ATLAS-magnets-solenoid}
+
 The central solenoid is shown in figure~\ref{fig:solenoid}. The solenoid consists of a single coil with 1154 windings made of high strength Al-stabilized NbTi conductor. The coil has an inner radius of $2.46~\mbox{m}$, an outer radius of $2.56~\mbox{m}$, and a length of $5.8~\mbox{m}$. With a nominal current of $7.73~\mbox{kA}$, the magnetic field is $1.998~\mbox{T}$ at the center of the solenoid, falling to $1.8~\mbox{T}$ at $z=1.7~\mbox{m}$ and $0.9~\mbox{T}$ the end of the inner detector cavity. The magnetic flux is returned via the steel in the hadronic calorimeter and its support structures. Liquid helium is used to cool the superconducting coil to an operating temperature of $4.5~\mbox{K}$. At nominal current, the stored energy is $40~\mbox{MJ}$. 
 
 The magnetic field at $z=0$ is shown in figure~\ref{fig:ATLAS-solenoid-Bfield}.
@@ -238,7 +243,8 @@ The magnetic field at $z=0$ is shown in figure~\ref{fig:ATLAS-solenoid-Bfield}.
 
 
 
-\underline{\textbf{Toroid}}
+\subsubsection{Toroid}\label{sec:ATLAS-magnets-toroid}
+
 The magnetic field for the muon spectrometer is provided by three large toroid magnets, each with eight superconducting coils. The magnets are shown in figure~\ref{fig:ATLAS-toroids}. The barrel toroid measures $25.3~\mbox{m}$ in length, with inner and outer diameters of $9.4~\mbox{m}$ and $20.1~\mbox{m}$, respectively. The two end-cap toroids are $5.0~\mbox{m}$ in length, with inner and outer diameters of $1.65~\mbox{m}$ and $10.7~\mbox{m}$, respectively. Both types of toroid contain eight coils, with 120 windings each in the barrel and 116 windings each in the end-caps. The endcap coils are rotated by $22.5^{\circ}$ from the barrel coils to optimize the bending power in the overlap region between the magnets. Like the solenoid, the conductor is Al-stabilized NbTi, operated at $4.5~\mbox{K}$. The nominal current is $20.5~\mbox{kA}$, producing a magnetic field that varies from $0.15~\mbox{T}$ to $2.5~\mbox{T}$ in the barrel region, and $0.2~\mbox{T}$ to $3.5~\mbox{T}$ in the end-caps. The bending power of the toroid is shown as a function of $\eta$ in figure~\ref{fig:toroid-bending-power}. The total stored energy at nominal current is $1.58~\mbox{GJ}$. 
 
 The field integral of the toroid is shown as a function of $\eta$ in figure~\ref{fig:ATLAS-toroid-Bintegral}. The field integral drops at the boundary between the barrel and end-caps, where the fields from the two magnets partially cancel. 
@@ -265,7 +271,8 @@ The field integral of the toroid is shown as a function of $\eta$ in figure~\ref
 
 
 
-\subsection{Inner Detector}
+\subsection{Inner Detector}\label{sec:ATLAS-inner-detector}
+
 The inner detector performs tracking charged particles traversing the $2~\mbox{T}$ solenoidal magnetic field in the region $|\eta|<2.5$. It also performs electron identification in the range $|\eta|<2.0$. It consists of three subdetectors occupying the volume closest to the interaction region, directly outside the beam pipe, as shown in figure~\ref{fig:ATLAS-ID}. Proceeding outwards from the interaction point, these are the pixel detector, the semiconductor tracker (SCT), and the transition radiation tracker (TRT). The pixel detector nominally provides three track measurements with high spatial resolution using silicon pixels. The SCT provides an additional four measurements using silicon strips. Finally, for particles with $|\eta|<2.0$, the TRT provides an average of 36 measurements per track using gaseous straw tubes, which aids the pattern recognition, improves the momentum resolution, and performs electron identification. The paths traversed by tracks through the barrel and end-cap layers are shown in figure~\ref{fig:ATLAS-ID-tracks}.
 
 \begin{figure}[htbp]
@@ -295,7 +302,7 @@ The inner detector performs tracking charged particles traversing the $2~\mbox{T
 \end{figure}
 
 
-\underline{\textbf{Pixel Detector}}
+\subsubsection{Pixel Detector}\label{sec:ATLAS-id-pixel-detector}
 
 The pixel detector consists of 1744 identical pixel sensors, each measuring $19\times63~\mbox{mm}^2$ and containing $144\times 328=47232$ pixels, for a total of $80.4\times 10^6$ pixels. The size of the pixels is dictated by the front-end electronics: in 128 of the 144 columns, the pixels have a pitch of $50\times 400 \micron^2$, while the remaining 16 columns have a pitch of $50\times 600 \micron^2$. For space reasons, eight pairs of pixels in each column are ganged to a common readout, giving a total of 46080 readout channels per sensor.
 
@@ -330,7 +337,7 @@ In the barrel, the pixels have an intrinsic accuracy of $10~\micron$ in the $R-\
 	\label{table:ATLAS-pixel-layout}
 \end{table}
 
-\underline{\textbf{SCT}}
+\subsubsection{SCT}\label{sec:ATLAS-id-sct}
 
 The SCT consists of 15912 sensors using single-sided, p-in-n type silicon strips. The use of single-sided strips lowers both the cost and the number of readout channels of the detector, which covers significantly more area than the pixel detector ($61.1~\mbox{m}^2$ versus $2.3~\mbox{m}^2$). In the barrel, the strips have a pitch of $80~\micron$ and a length of $12~\cm$. In the endcaps, the sensors are trapezoidal with radially arranged strips, with a mean strip pitch of $80~\micron$ and a length of $12~\cm$. Each sensor has 768 active strips. Like the pixel sensors, the operating voltage will be $\sim150~\mbox{V}$ initially, and will increase to $250$-$350~\mbox{V}$ after several years of irradiation, depending on the location of the sensor. 
 
@@ -356,11 +363,120 @@ The intrinsic accuracy of the SCT sensors is $17~\micron$ along the strip pitch,
 	\label{fig:ATLAS-SCT-layout}
 \end{table}
 
-\underline{\textbf{TRT}}
+\subsubsection{TRT}\label{sec:ATLAS-id-trt}
 
-The TRT is constructed from polyimide drift (straw) tubes, measuring $4~\mm$ in diameter and $144~\cm$ ($37~\cm$) in length in the barrel (end-caps). 
+The TRT detector elements are polyimide drift (straw) tubes. The straws are arranged such that charged particles with $\pt > 500~\MeV$ and $|\eta|<2.0$ traverse at least 36 straws, except in the barrel/end-cap transition region where particles traverse as few as 22 straws. The straws are interleaved with polypropylene fibers in the barrel and polypropylene foils in the end-caps to provide transition radiation; electrons with $\pt>2.0~\GeV$ typically leave $7$-$10$ high-threshold hits. The intrinsic resolution of the straws is $130~\micron$ in the transverse direction.
 
-\subsection{Calorimetry}
+The straws measure $4~\mm$ in diameter and $144~\cm$ ($37~\cm$) in length in the barrel (end-caps). The straw walls consist of two $35~\micron$ films bonded back-to-back. The base film material is a $25~\micron$ thick layer of polyamide, which is coated on the exterior side with a $0.2~\micron$ thick layer of Al and a $5$-$6~\micron$ thick protective layer of graphite-polyamide. The other side of the film is coated with a $5$-$6~\micron$ thick layer of polyurethane, which is used to heat-seal the two film layers together. The anodes of the detectors are tungsten wires running down the axis of the tubes, with $31~\micron$ diameter and plated with $0.5$-$0.7~\micron$ of gold. The wires are supported at the end of the straw by an end plug, where they connect to the front-end electronics. At the middle of the straw, the wires are supported by a plastic insert, and are also split electrically by a fused glass capillary to reduce occupancy. The active length of each half of the wire is $71.2~\cm$, with a $2~\cm$ inefficient length at the middle. The signal attenuation length is $\sim 4~\mbox{m}$, and the signal propagation time is $\sim 4 \mbox{ns}/\mbox{m}$. The straws are filled with a mixture of 70\% Xe, 27\% CO$_2$, and $3\%$ O$_2$. With a cathode voltage of $-1530~\mbox{V}$, the gain in the straws is $2.5\times 10^4$.
+
+The layout of the straws in the barrel and end-caps is summarized in table~\ref{table:ATLAS-TRT-layout}. In the barrel, the straws are arranged into three layers of modules as shown in figure~\ref{fig:barrel-modules}, with different dimensions and straw counts depending on the layer. The straws are interleaves with transition radiation material, polypropylene fibers measuring $19~\micron$ in diameter. The module shell is made from $400~\micron$ thick carbon fiber, and serve not only as a support structure, but also as a gas manifold for CO$_2$, which prevents high-voltage discharges, flushes any Xe leaking from the straws, and conducts heat away from the straws.  
+
+The endcaps consist of 160 layers of 768 straws, arranged radially into 20 wheels with 8 layers each. The inner 12 wheels (type-A) are spaced $8~\mm$ in $z$, while the outer 8 wheels (type-B) are spaced by $15~\mm$. Each successive layer in a wheel is separated by a $15~\micron$ thick polypropylene radiator foil, and is rotated by $3/8$ of the azimuthal straw spacing to optimize the uniformity of the number of straw crossed.
+
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|c|}
+		\hline
+		 & $z$ (mm) & $R$ (mm) & Modules & Layers & Straws/Module \\
+		 \hline
+		 \textbf{Barrel (both sides)} & $\mathbf{0\mhyphen780}$ & $\mathbf{554\mhyphen1082}$ & $\mathbf{96}$ & $\mathbf{73}$ & $\mathbf{52544}$ \\
+		 Type-1 module (inner) & $400\mhyphen712.1$ & $563\mhyphen624$ & \multirow{2}{*}{$32$} & $9$ & \multirow{2}{*}{$329$} \\
+		 Type-1 module (outer) & $7.5\mhyphen712.1$ & $625\mhyphen 694$ & & $10$ & \\
+		 Type-2 module & $7.5\mhyphen 712.1$ & $697\mhyphen860$ & $32$ & $24$ & $520$ \\
+		 Type-3 module & $7.5\mhyphen 712.1$ & $863\mhyphen 1066$ & $32$ & $30$ & $793$ \\
+		 \hline
+		 \textbf{End-cap (one side)} & $\mathbf{827\mhyphen 2744}$ & $\mathbf{615\mhyphen1106}$ & $\mathbf{20}$ & $\mathbf{160}$ & $\mathbf{122880}$ \\
+		 Type-A wheels & $848\mhyphen1705$ & $644\mhyphen1004$ & $12$ & $8$ & $6144$ \\
+		 Type-B wheels & $1740\mhyphen2710$ & $644\mhyphen1004$ & $8$ & $8$ & $6144$ \\
+		 \hline
+	\end{tabular}
+	\caption{Layout and straw counts of the TRT barrel modules and end-cap wheels. The totals for the barrel and end-caps, shown in bold, include services and electronics.}	
+	\label{table:ATLAS-TRT-layout}
+\end{table}
+
+
+\subsection{Calorimetry}\label{sec:ATLAS-calorimeters}
+The calorimeter system occupies the volume directly exterior to the solenoid magnet, and measures the energy of electrons, photon, and hadrons up to a pseudorapidity of $|\eta|=4.9$. The arrangement of the calorimeters is shown in figure~\ref{fig:ATLAS-calorimeters}. The system consists of a number of independent sampling calorimeters. The electromagnetic calorimeter measures the energy of electrons and photons using lead and liquid argon (LAr) to measure the energy of electrons and photons. The hadronic calorimeter measures the energy of hadrons using steel and scintillator tiles in the barrel and copper and LAr in the end-caps. Finally, electromagnetic and hadronic calorimetry is performed in the forward region using copper-LAr and tungsten-LAr technology. Besides performing energy measurements, the calorimeters providing containment electrons, photons, and hadrons, which effectively provides shielding for the muon spectrometer~\ref{sec:ATLAS-muon-spectrometer}. 
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_calorimeters_sketch}}
+	\caption{A 3D model of the ATLAS calorimeters, showing the electromagnetic barrel and end-caps, hadronic barrel and end-caps, and the forward calorimeter.}
+	\label{fig:ATLAS-calorimeters}
+\end{figure}
+
+
+\subsubsection{Electromagnetic Calorimeter}\label{sec:ATLAS-calorimeters-ecal}
+% TO DO: Pictures!
+
+The electromagnetic calorimeter consists of two half-barrels ($0<\eta<\pm1.475$) and two end-caps ($1.375<|\eta|<3.2$), all of which use LAr as the active material and steel-clad lead plates as the absorber. The lead plates are arranged in an accordion geometry to provide a uniform, gapless coverage in $\hat{\phi}$, shown for a barrel module in figure~\ref{fig:ATLAS-LAr-module}. The plates are interleaved with electrodes built from copper etchings on polymide. The outer conductive layers of the electrodes distribute the $2000~\mbox{V}$ high voltage over the electrode surface, which drifts the charges induced by ionization in the LAr towards the electrodes with a drift time of $450~\mbox{ns}$. The inner layer of the electrode, separated from the outer layers by isolating foils, collects the signals via capacitive coupling.
+
+The two half-barrels occupy the region $2.8~\mbox{m}<R<4~\mbox{m}$ and $0~\mbox{m}<z<\pm3.2~\mbox{m}$. Each has 1024 lead plates with a thickness of $1.53~\mm$ for $|\eta|<0.8$ and $1.13~\mm$ for $|\eta|>0.8$. The barrels are divided into 16 modules, each covering an azimuthal angle of $\Delta \phi = 22.5^{\circ}$. Each module has three layers in depth to provide a rough measurement of the longitudinal profile of the electromagnetic showers. The segmentation of each layer in $\Delta\eta\times\Delta\phi$ is shown in table~\ref{table:ATLAS-LAr-segmentation}. The fine segmentation of the front layer, closest to the interaction point, aids particle identification and, in combination with the middle layer, allows for a reasonable measurement of photon trajectories.  
+
+The end-caps, one on either side of the interaction region, measure $63~\cm$ in thickness with inner and outer radii of $33~\cm$ and $209.8~\cm$, respectively. Each end-cap contains two co-axial sub-wheels, divided by a $3~\mm$ gap at $|\eta|=2.5$. The inner and outer wheels contain 256 and 768 lead absorbers, respectively, with the same accordion geometry as used in the barrel.
+
+% Material, dead material, and presampler design
+The total amount of material before and in the electromagnetic calorimeters is shown in figure~\ref{fig:ATLAS-material-interaction-lengths} in terms of interaction lengths $X_0$. Note that 
+
+% Conclusion
+In total, the electromagnetic calorimeter has 101,760 readout channels for the barrel, 62,208 channels for the end-caps, 7,808 channels for the barrel presampler, and 1,536 channels for the end-cap presamplers. 
+
+\begin{figure}
+	LAr pictures
+\end{figure}
+
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		Layer & $\eta$ range & Granularity $\Delta\eta\times\Delta\phi$ \\
+		\hline
+		Barrel presampler & $|\eta|<1.52$ & $0.025\times0.1$ \\
+		\hline
+		\multirow{2}{*}{Barrel 1} & $|\eta|<1.40$ & $0.025 / 8 \times 0.1$ \\
+		 & $1.40<|\eta|<1.475$ & $0.025\times0.025$ \\
+		\hline
+		\multirow{2}{*}{Barrel 2} & $|\eta|<1.40$ & $0.025\times0.025$ \\
+		 & $1.40<|\eta|<1.475$ & $0.075\times 0.025$ \\
+		\hline
+		Barrel 3 & $|\eta|<1.35$ & $0.050\times0.025$ \\
+		\hline
+		\hline
+		\multirow{7}{*}{End-cap 1} & $1.375<|\eta|<1.425$ & $0.050\times0.1$ \\
+		 & $1.425<|\eta|<1.5$ & $0.025\times0.1$ \\
+		 & $1.5<|\eta|<1.8$ & $0.025/8\times0.1$ \\
+		 & $1.8<|\eta|<2.0$ & $0.025/6\times0.1$ \\
+		 & $2.0<|\eta|<2.4$ & $0.025/4\times0.1$ \\
+		 & $2.4<|\eta|<2.5$ & $0.025\times0.1$ \\
+		 & $2.5<|\eta|<3.2$ & $0.1\times0.1$ \\
+		\hline
+		\multirow{3}{*}{End-cap 2} & $1.375<|\eta|<1.425$ & $0.050\times0.025$ \\
+		 & $1.425<|\eta|<2.5$ & $0.025\times0.025$ \\
+		 & $2.5<|\eta|<3.2$ & $0.1\times0.1$ \\
+		\hline
+		End-cap 3 & $1.5<|\eta|<2.5$ & $0.050\times0.025$ \\
+		\hline
+	\end{tabular}
+	\caption{Granularity of each layer of the LAr electromagnetic calorimeter.}
+	\label{table:ATLAS-LAr-segmentation}
+\end{table}
+
+
+
+
+
+The calorimeter system surrounds the solenoid, and consists of electromagnetic and hadronic components. The electromagnetic calorimeter is a lead/liquid argon (LAr) sampling calorimeter, and comprises a barrel ($|\eta|<1.475$) and two endcaps ($1.375<|\eta|<3.2)$. In the range $|\eta|<2.5$, the detector is finely segmented in $\eta$ to provide good spatial resolution. The hadronic calorimeter (HCAL) uses steel/scintillator tiles in the barrel ($|\eta|<1.7$) and copper/LAr in the endcaps ($1.5<|\eta|<3.2$). In the forward region ($3.1<|\eta|<4.9$), electromagnetic and hadronic calorimetry is performed using copper/LAr and tungsten/LAr technology.
+
+
+
+\subsubsection{Hadronic Calorimeter}\label{sec:ATLAS-calorimeters-hcal}
+
+
+\subsubsection{Forward Calorimeter}\label{sec:ATLAS-calorimeters-fcal}
+
+
 
 \subsection{Muon System}
 
