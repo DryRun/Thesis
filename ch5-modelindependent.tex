@@ -2,28 +2,20 @@
 
 Events containing three or more leptons are useful probes of phenomena beyond the Standard Model. On one hand, the expected Standard Model backgrounds are typically small; depending on the kinematic requirements on the three leptons, such events arise dominantly from diboson production ($WZ$, $ZZ$), or from event where one or more leptons arises from misidentified or semileptonically decaying jets. On the other hand, the production of three or more leptons is predicted by many models of phenomena beyond the Standard Model, as described in section~\ref{sec:beyond-the-standard-model}. This dissertation presents two such searches: a model-independent search for non-resonant production of three or more leptons in many signal regions, and a signature-driven search for resonance trilepton production in the context of heavy leptons. 
 
-This chapter presents a search for physics beyond the Standard Model using events containing three or more leptons. The search makes no assumptions about the model 
+This chapter presents a search for physics beyond the Standard Model using events containing three or more leptons. The search uses $20.3~\ifb$ of $pp$ collision data taken at $\sqrt{s}=8~\mbox{TeV}$ with the ATLAS detector. Many signal regions are defined based on the properties of the leptons, jets, and overall momentum imbalance of the event, with the goal of being broadly sensitive to the non-resonant production of trilepton final states by phenomena beyond the Standard Model. 
 
 \section{Search Strategy}
-\subsection{Event Preselection}\label{sec:event-preselection}
-Collision events for this analysis are taken from the \verb.Egamma. and \verb.Muons. streams, counting events present in both streams only once. Events are required to have fired one of the lowest $\pt$-threshold, unprescaled single lepton triggers:
 
-\begin{itemize}
-	\item Electrons: \verb.EF_e24vhi_medium1. $\parallel$ \verb.EF_e60_medium1.
-	\item Muons: \verb.EF_mu24i_tight. $\parallel$ \verb.EF_mu36_tight.
-\end{itemize}
+\subsection{Object Definitions}\label{sec:object-definitions}
 
-Note that the triggers with the lower $\pt$ thresholds of $24~\mbox{GeV}$ also have an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.1$ for electrons, and $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.12$ for muons. The triggers with higher $\pt$ thresholds are used in tandem to avoid efficiency loss at higher $\pt$. 
-Triggered events are required to have an offline lepton matched to the EF trigger object within $\Delta R<0.1$. The matched offline lepton must pass the analysis object cuts~(section~\ref{sec:lepton-selections}), and additionally is required to have $\pt>26~\mbox{GeV}$ to avoid trigger turn-on effects near the transverse momentum threshold. Trigger-matched muons are further required to satisfy $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
+\subsubsection{Electrons and Muons}
 
-Monte Carlo events are selected using the trigger simulation. The discrepancies between the trigger performance in data and Monte Carlo are usually smaller than 2\%~\cite{Ancu:1501709}. 
+A summary of the electron and muon selections is shown in table~\ref{table:lepton-selections}. Electrons and muons are required to have a transverse momentum of at least $\pt>15 \GeV$. The transverse momentum cut is driven by the availability of triggers with which to perform the data-driven reducible background estimate, described in section~\label{sec:fake-factors}. 
 
-\subsection{Lepton Selections}\label{sec:lepton-selections}
-A summary of the lepton selections is shown in table~\ref{table:lepton-selections}. The selections are taken from the exotics model-independent trilepton analysis~\cite{DeViveiros:1670929}, in order to reuse the fake factors for the reducible background estimation (see section~\ref{sec:electron-fake-factors}). At least one lepton must satisfy $\pt>26~\mbox{GeV}$ and be matched to the event trigger, as mentioned in section~\ref{sec:event-preselection}. The remaining leptons must have transverse momentum of at least $\pt>15~\mbox{GeV}$; this cut is driven by the availability of triggers with which to derive fake factors for the reducible background estimate. 
-
-Electrons are reconstructed using algorithms optimized for high $\pt$ electrons (\verb.el_author.$==1$ or $3$). The geometrical acceptance is $|\eta|<2.47$, excluding the transition region $1.37<|\eta|<1.52$ between the barrel and end-cap calorimeters. Candidates in regions affected by the presence of a dead front end board in the first or second sampling or by the presence of a dead high voltage supply or by the presence of a masked cell in the core are removed using the object quality flag (\verb.el_OQ.$\&1446==0$). Candidates are required to pass the tight++ set of ID cuts~\cite{Aad:2014fxa}, which include cuts on the track properties, the shower shape in the electromagnetic calorimeter, energy leakage into the hadronic calorimeter, $E/p$, and the spatial matching between the track and the calorimeter cluster. 
+Electrons are required to have $|\eta|<2.47$, excluding the transition region $1.37<|\eta|<1.52$ between the barrel and end-cap calorimeters. Candidates in regions affected by the presence of a dead front end board in the first or second sampling or by the presence of a dead high voltage supply or by the presence of a masked cell in the core are removed using the object quality flag (\verb.el_OQ.$\&1446==0$). Candidates are required to pass the tight++ set of ID cuts~\cite{Aad:2014fxa}, which include cuts on the track properties, the shower shape in the electromagnetic calorimeter, energy leakage into the hadronic calorimeter, $E/p$, and the spatial matching between the track and the calorimeter cluster. 
 
 Muon candidates are reconstructed with the STACO (STAtistical COmbination) algorithm, and are required to be \emph{combined}, with associated hits in the inner detector and muon spectrometer~\cite{ATLAS-CONF-2013-088}. The geometrical acceptance is $|\eta|<2.5$, and $|\eta|<2.4$ if the muon is used for trigger matching. The inner detector track associated with the muon must have:
+
 \begin{itemize}
   %\item A B-layer hit (if expected).
   %\item $\geq1$ pixel hit and $\geq6$ SCT hits.
@@ -33,7 +25,8 @@ Muon candidates are reconstructed with the STACO (STAtistical COmbination) algor
  % \item Else if $|\eta| < 0.1$ or $|\eta| > 1.9$ and $n_{\mathrm{TRT}}^{\mathrm{hits}}+n_{\mathrm{TRT}}^{\mathrm{outliers}} > 5$, then require $n_{\mathrm{TRT}}^{\mathrm{outliers}} < 0.9 \times (n_{\mathrm{TRT}}^{\mathrm{hits}}+n_{\mathrm{TRT}}^{\mathrm{outliers}})$.
 \end{itemize}
 
-All leptons are required to be isolated from other activity in the event, in order to reduce the impact of non-prompt and fake leptons. The cuts on electrons and muons are similar, and limit the amount of nearby activity as measured by inner detector tracks and calorimeter energy deposits:
+\textcolor{red}{$d_0$}
+Both electrons and muons are required to be isolated from other activity in the event, in order to reduce the impact of non-prompt and fake leptons. The cuts on electrons and muons are similar, and limit the amount of nearby activity as measured by inner detector tracks and calorimeter energy deposits:
 \begin{itemize}
 	\item For both electrons and muons, a cut is applied on \verb.ptcone30., the sum of transverse momenta of tracks associated to the same primary vertex as the lepton within a cone of $\Delta R<0.3$. 
 	\item For muons, a cut is applied on \verb.Etcone30., the scalar sum of transverse energies of calorimeter cells within $\Delta R<3.0$ of the muon track. 
@@ -61,27 +54,34 @@ All isolation variables are required to be less than $10\%$ of the lepton transv
 	\label{table:lepton-selections}
 \end{table}
 
+\subsubsection{Tau Leptons}
 
-\subsection{Jet Selection}\label{sec:jet-selection}
-In this analysis, jets are used to define a dijet signal region, targeting a $W/Z/h\rightarrow jj$ decay on the opposite side of the event. Jets are reconstructed from topological clusters using the \antikt\ jet algorithm~\cite{Cacciari:2008gp} with a distance parameter of $R = 0.4$ and full four-momentum recombination and are calibrated with a local cluster weighting (LCW) algorithm ({AntiKt4LCTopoJets})~\cite{ATLAS-CONF-2010-053}. The LCW algorithm determines if a topological cluster in the calorimeter is of hadronic or electromagnetic origin, and applies the appropriate energy correction. The jet response also depends on pileup conditions; this is accounted for using the jet area subtraction method provided by the JetEtMiss group~\cite{JetEtmissRecommendations2012}.
+\subsubsection{Jets and Missing Transverse Energy}
+
+Jets are reconstructed from topological clusters using the \antikt\ jet algorithm~\cite{Cacciari:2008gp} with a distance parameter of $R = 0.4$ and full four-momentum recombination and are calibrated with a local cluster weighting (LCW) algorithm ({AntiKt4LCTopoJets})~\cite{ATLAS-CONF-2010-053}. The LCW algorithm determines if a topological cluster in the calorimeter is of hadronic or electromagnetic origin, and applies the appropriate energy correction. The jet response also depends on pileup conditions; this is accounted for using the jet area subtraction method provided by the JetEtMiss group~\cite{JetEtmissRecommendations2012}.
 
 Jets are required to have $\pt>30~\mbox{GeV}$, in order to limit the presence of pileup jets. For the geometrical acceptance, jets must lie in the range $|\eta|<4.5$, so that the jet falls within instrumented regions of the detector. Pileup jets are additionally suppressed with a cut on the jet vertex fraction: the $\sum \pt$ of tracks within the jet cone and associated with the selected primary vertex must be at least $50\%$ of the $\sum \pt$ of all tracks within the jet cone~\cite{jvf}. 
 
+\textcolor{red}{MET}
 
-% David edit: do we use MET anywhere in the analysis?
-%\subsection{Missing Transverse Energy Definition} 
-%\label{sec:Selection_MET}
-%
-%The \met\ is calculated from an object-based algorithm {\tt MET\_Egamma10NoTau\_RefFinal}~\cite{Aad:2012re}:
-%
-%\begin{equation}
-%{\met}^{\mathrm{RefFinal}} = {\met}^{\mathrm{RefEle}} + {\met}^{\mathrm{RefJet}} + {\met}^{\mathrm{RefMuon}} + {\met}^{\mathrm{CellOut}} + {\met}^{\mathrm{RefGamma}}.
-%\label{eqn:met}
-%\end{equation}
-%
-%Muons passing the selection criteria and with $\pT > 10 \gev$ are included in the $ {\met}^{\mathrm{RefMuon}} $ term.  Topoclusters not assigned to reconstructed objects are included in the ${\met}^{\mathrm{CellOut}}$ term.
-%
-%The \met\ is then corrected for small differences between object definitions used in {\tt MET\_Egamma10NoTau\_RefFinal} and the SUSY group standard definitions outlined above (e.g. the smearing of the lepton \pT\ in the MC). This is done using the {\tt METUtility} tool.
+
+
+
+\subsection{Event Selection}
+
+
+Collision events for this analysis are taken from the \verb.Egamma. and \verb.Muons. streams, counting events present in both streams only once. Events are required to have fired one of the lowest $\pt$-threshold, unprescaled single lepton triggers:
+
+\begin{itemize}
+	\item Electrons: \verb.EF_e24vhi_medium1. $\parallel$ \verb.EF_e60_medium1.
+	\item Muons: \verb.EF_mu24i_tight. $\parallel$ \verb.EF_mu36_tight.
+\end{itemize}
+
+Note that the triggers with the lower $\pt$ thresholds of $24~\mbox{GeV}$ also have an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.1$ for electrons, and $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.12$ for muons. The triggers with higher $\pt$ thresholds are used in tandem to avoid efficiency loss at higher $\pt$. 
+Triggered events are required to have an offline lepton matched to the EF trigger object within $\Delta R<0.1$. The matched offline lepton must pass the analysis object cuts~(section~\ref{sec:lepton-selections}), and additionally is required to have $\pt>26~\mbox{GeV}$ to avoid trigger turn-on effects near the transverse momentum threshold. Trigger-matched muons are further required to satisfy $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
+
+Monte Carlo events are selected using the trigger simulation. The discrepancies between the trigger performance in data and Monte Carlo are usually smaller than 2\%~\cite{Ancu:1501709}. 
+
 
 \subsection{Overlap Removal}\label{sec:overlap-removal}
 Objects that lie close to each other within the detector are removed from the analysis using the following procedure:
@@ -100,6 +100,24 @@ Objects that lie close to each other within the detector are removed from the an
 	remove the jet. This is intended to reduce efficiency loss (in the next bullet point) from jets induced by muons at high muon $\pt$. 
 	\item If $\Delta R($jet$, \mu) < 0.3$, remove muon. This reduces the reducible muon backgrounds.
 \end{itemize}
+
+
+
+% David edit: do we use MET anywhere in the analysis?
+%\subsection{Missing Transverse Energy Definition} 
+%\label{sec:Selection_MET}
+%
+%The \met\ is calculated from an object-based algorithm {\tt MET\_Egamma10NoTau\_RefFinal}~\cite{Aad:2012re}:
+%
+%\begin{equation}
+%{\met}^{\mathrm{RefFinal}} = {\met}^{\mathrm{RefEle}} + {\met}^{\mathrm{RefJet}} + {\met}^{\mathrm{RefMuon}} + {\met}^{\mathrm{CellOut}} + {\met}^{\mathrm{RefGamma}}.
+%\label{eqn:met}
+%\end{equation}
+%
+%Muons passing the selection criteria and with $\pT > 10 \gev$ are included in the $ {\met}^{\mathrm{RefMuon}} $ term.  Topoclusters not assigned to reconstructed objects are included in the ${\met}^{\mathrm{CellOut}}$ term.
+%
+%The \met\ is then corrected for small differences between object definitions used in {\tt MET\_Egamma10NoTau\_RefFinal} and the SUSY group standard definitions outlined above (e.g. the smearing of the lepton \pT\ in the MC). This is done using the {\tt METUtility} tool.
+
 
 
 \section{Background Estimation}
