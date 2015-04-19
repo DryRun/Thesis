@@ -132,7 +132,7 @@ The analysis defines a large number of non-exclusive signal regions, designed to
 \begin{itemize}
 	\item \textbf{on-$Z$} events, containing an opposite-sign, same-flavor lepton pair consistent with the decay of a $Z$ boson, with invariant mass within $20 \GeV$ of $m_Z$;
 	\item \textbf{off-$Z$, OSSF} events, containing an opposite-sign, same-flavor pair but vetoing on-$Z$ events; and
-	\item \textbf{off-$Z$, no-OSSF} events, containing no opposite-sign, same-flavor pairs.
+	\item \textbf{off-$Z$, mixed} events, containing no opposite-sign, same-flavor pairs.
 \end{itemize}
 
 The on-$Z$ category also includes events containing three leptons (two of which form a same-flavor, opposite-sign pair) with invariant mass within $20 \GeV$ of $m_Z$, to include events where, for example, a photon from final state radiation converts and is reconstructed as a prompt electron.
@@ -157,10 +157,41 @@ After dividing the events into these six exclusive categories, many signal regio
 		\mtw = \sqrt{2 \vec{p}_{\mathrm{T}}^{\ell}|\ptmiss|(1-\cos(\Delta\phi))},
 	\end{equation}
 	where $\Delta phi$ is the azimuthal angle between the transverse momentum of the lepton, $\vec{p}_{\mathrm{T}}^{\ell}$, and the missing transverse momentum, $\ptmiss$. 
-	\item $n_{b}$, the number of $b$-tagged jets. New physics scenarios related to the hierarchy problem (section~\ref{sec:bsm}) often couple preferentially to the third generation, due to the dominant effect of the top quark in the running of the Higgs mass. 
+	\item $N_{b-\mathrm{tags}}$, the number of $b$-tagged jets. New physics scenarios related to the hierarchy problem (section~\ref{sec:bsm}) often couple preferentially to the third generation, due to the dominant effect of the top quark in the running of the Higgs mass. 
 \end{itemize}
 
 The signal regions are defined in table~\ref{table:model-independent-signal-regions}. The signal regions use one of $\htlep$, the minimum $\pt^{\ell}$, $\Etmiss$, $\meff$, and $n_b$ as binning variables. $\Htjets$, $\Etmiss$, and $\mtw$ are used to impose additional requirements on the signal regions. In total, 138 signal regions are defined.
+
+\begin{table}[tbp]
+  \begin{center}
+    \begin{tabular}{l l r r r r l}
+      \hline
+      Variable     &Meaning\\
+      \hline
+      \Ht          &\multicolumn{6}{l}{$\Sigma\pt$ of all jets in the event}\\
+      \mtw         &\multicolumn{6}{l}{Transverse mass of $W$-boson candidate (on-$Z$ events only)}\\
+      \hline
+      \hline
+      Variable     &Meaning &\multicolumn{4}{c}{Lower Bounds [GeV]}  &Additional Requirements\\
+      \hline       
+      \htlep       &$\Sigma\pt$ of leading three leptons &0&200&500&800     &\\
+      Min. $\ptl$  &\pt\ of softest (third) lepton       &0&50&100&150      &\\
+      \met         &\multirow{2}{*}{Missing transverse momentum}       &0&100&200&300     &$\Ht < 150$ \GeV\\
+      \met         &                                     &0&100&200&300     &$\Ht \geq 150$ \GeV\\
+      \st          &\multirow{3}{*}{All transverse activity} &0&600&1000&1500   &\\
+      \st          &                                     &0&600&1200&       &$\met{}\geq100$ \GeV\\
+      \st          &                                     &0&600&1200&       &$\mtw{}\geq100$ \GeV, on-$Z$\\
+      \hline
+      \hline
+      Variable     &Meaning &\multicolumn{4}{c}{Lower Bounds}\\
+      \hline
+      $b$-tags     &Number of $b$-tagged jets            &1&2&&                           &\\
+      \hline
+    \end{tabular}
+    \caption{Kinematic signal regions defined in the analysis.}
+    \label{table:model-independent-signal-regions}
+  \end{center}
+\end{table}
 
 
 
@@ -511,13 +542,456 @@ The uncertainty on the background prediction is the combination of two component
 	\label{fig:prompt-subtractions}
 \end{figure}
 
+\subsubsection{Tau Lepton Fakes}\label{sec:model-independent-ff-tau}
+The detector signature of hadronically decaying tau leptons, consisting of a jet with one or more associated tracks, is not as distinctive as the signature of electrons and muons. Differentiating between jet, which are copiously produced in proton-proton collisions, and hadronically decaying tau leptons is difficult, and accordingly the reducible backgrounds in the 2L$+\tau_{\mathrm{had}}$ categories tend to be much larger than those in the 3L categories. 
+
+\textcolor{red}{Lots of work to do here, to avoid copying and pasting PO's work!}
+
+As taus can decay hadronically, their detector signature is not as distinctive as the one
+associated with electrons and muons.  Therefore, jets, which are produced in abundance in
+proton-proton collisions, are the main source of tau fakes, leading to large expected
+fake-rates.  As the tau identification algorithms use multi-variate discriminants based on
+calorimeter shower shapes and tracking information, the fake efficiency is strongly
+dependent on the jet fragmentation. This in turn introduces a dependency of the fake-rates
+on the parton initiating the jet (gluon, light-quark or heavy-quark).
+
+Consequently, the fake-factors are less sensitive to the jet flavour if a tighter
+efficiency working point is chosen for the denominator (as some shower shape requirements
+are already applied).  However, it is important to still choose a working point that is
+loose enough so that the denominator statistics are sufficiently large. A study of the
+flavour-dependency of the fake-factors was performed in simulation samples.  For each jet
+faking a $\tau$, the largest $p_{T}$ truth-particle present inside of the $\tau$
+reconstruction cone was taken as an estimator of the parton initiating the jet.
+Different denominator selections were chosen as a function of the existing loose
+identification working point.  Denominators failing the \texttt{BDT-Medium} selection while
+having a \texttt{BDTScore} larger than 0.7, 0.8, 0.9 or 1.0 $\times$ \texttt{BDTScore$_{Loose}$}
+were all studied (where \texttt{BDTScore$_{Loose}$} is the $p_{T}$ dependent cut on the \texttt{  BDTScore} used by the $\tau$ identification algorithm).  Illustratively, each sequential
+cut tightening denominator score reduces the statistics by a factor of roughly 2.  In the
+end, the minimal threshold of 0.9 $\times$ \texttt{BDTScore$_{Loose}$} was chosen as it
+offered a greatly reduced sensitivity to the flavour of the initiating parton in the jet,
+while still offering large enough statistics for the sample. Further tightening of the cut
+provided little improvement in flavour dependence. Using a $p_{T}$-dependent denominator
+requirement ensures that the prompt efficiency is the same for all denominator taus, while
+lowring the fake-factor dependent on $p_{T}$.
+
+%A consequence of this choice of denominator is that the \met\ is incorrectly
+%calibrated in events with denominator taus.  This is corrected in the analysis by
+%modifying the \verb.RefJet. and \verb.RefTau. terms of \verb.MET_RefFinal. to use the tau
+%energy instead of the jet energy.
+
+The fake-factors are nominally parameterized as a function of the $p_{T}$ and $|\eta|$ of the
+tau candidate, binned in 2 dimensions to preserve correlations. An additional scaling
+correction is applied as a function of the highest \texttt{MV1} $b$-tagging weight of any jet
+in the event.  The former two target dependencies associated with the jet shower shapes as a
+function of kinematics and detector homogeinity.  The latter is taken to account for the
+heavy-flavour component.
+
+\subsubsection{Fake Factor Measurement}\label{sec:model-independent-ff-tau-measurement}
+
+It is also important to measure the fake-factors in a sample which is expected to have a
+similar flavour composition as the signal regions used (the majority of trilepton events
+with a fake tau are expected to come from electroweak production with an associated jet
+faking the tau, for example $Z$ + jets events).  This is particularly important as no
+observable can be used to directly and accurately classify each fake taus as potentially
+gluon- or quark-initiated.
+ 
+While the tau fake-factors were measured in the past from a $\gamma + $ jets sample, the
+approach chosen for this iteration of the analysis is different.  
+%Due to the increased
+%pile-up conditions of the 2012 run, the purity of the photon sample is greatly
+%compromised, leading to a larger contribution from multijet events, which then introduces
+%a larger contribution from gluon-initiated jets, biasing the fake-factors.  
+%Furthermore,
+The low $p_{T}$ photon triggers were heavily prescaled during the 2012 run, limiting the
+statistics available to measure fake-factors at low $p_{T}$ values.  Instead, a $W$ + jets
+sample is used due to its high statistics and similar final-state kinematics.  A leading
+numerator muon is required to be reconstructed as a tag (along with the associated trigger
+requirement), and the fake-factors are then measured from the probe tau candidates.  No
+other requirements are made on the events.  Alternatively, selection requirements could be
+made to reject the main source of $\tau_{\mathrm{had}}$ prompts ($Z\rightarrow
+\tau_{\mu}\tau_{\mathrm{had}}$), but such requirements can potentially introduce a bias on
+the fake-factors (for example, introducing a same-sign requirement is expected to
+drastically reduce the quark-initiated jet contribution).  Instead, the contribution from
+prompt $\tau_{\mathrm{had}}$ is subtracted directly from Monte Carlo simulations.  The two
+non-negligible contributions come from $Z$ + jets and $t\bar{t}$ events.
+
+\begin{figure}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_NumM}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_NumPt}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_DenM}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_DenPt}
+\caption{\label{fig:taufakeprompt} Invariant mass of the muon and tau pair (left) and
+  $p_{T}$ of the tau candidate (right), for the numerator (top) and denominator selections
+  (down).  The prompt contribution estimated from MC simulations is shown along with the
+  measured data.}
+\end{figure}
+
+\begin{figure}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_FFPt}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_FFEta}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_FFMV1}
+\caption{\label{fig:taufakefactors} Fake-factors binned in $p_{T}$ and $|\eta|$ (left) and
+  their associated statistical uncertainty (right). The extra scaling as a function of MV1
+  weight is also shown (bottom).  These fake-factors were derived in $W$ + jets
+  events. The prompt contribution has been subtracted using MC predictions.}
+\end{figure}
+
+Figure~\ref{fig:taufakeprompt} shows sample data distributions for the numerator and
+denominator tau candidates, along with the prompt contribution which must be subtracted
+when calculating the fake-factors. Figure~\ref{fig:taufakefactors} shows the obtained
+fake-factors.
+
+\subsubsection{Systematic Uncertainties}\label{sec:model-independent-ff-tau-systematics}
+
+Various studies have been carried out to estimate the systematic uncertainties associated
+with the tau fake estimates.  The main considered sources of uncertainties are the following:
+
+\begin{itemize}
+\item Uncertainties on the MC prompt estimates
+\item Uncertainties associated with the binning choice
+%\item Dependency of the fake-factors of the $W$ + jets selection
+\item Flavour dependence of the fake-factors (gluon, light-quarks, heavy-quarks)
+\end{itemize}
+
+For the prompt estimates, the normalization of the MC samples have been fluctuated by
+their associated uncertainties (as listed in~\ref{s:syst}).  This results in variations
+between 5\% and 17\%, being the largest in the 30-40 GeV $p_{T}$ range (where the prompt
+subtraction is the largest due to the $Z$ sample kinematics).
+
+To estimate the effect of the binning on the fake estimates, a closure test is used.  The
+fake-factors are re-applied to the same sample they were derived from.  The results of
+this test are shown in figure~\ref{fig:tauclosure}.  Excellent agreement is seen, and a
+systematic of 5\% is attributed to this effect.
+
+\begin{figure}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_ClosurePt}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_ClosureEta}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_ClosureMass}
+%\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_NJetsDep}
+\caption{\label{fig:tauclosure} Distributions of the $\tau$ p$_{T}$ (left), $\tau$ $\eta$
+  (right), and invariant mass of the two leptons in the event (bottom).}
+\end{figure}
+
+%The uncertainty associated with the assumption that the fake-factors are entirely
+%uncorrelated in ($p_{T}$, $\eta$) is evaluated by comparing the fake-factors obtained
+%using a 2-D matrix in ($p_{T}$, $\eta$) and the product of the two 1-D fake-factors.  The
+%RMS of the distribution is used to estimate the order of this effect, and is approximately
+%15\%.
+
+Finally, to estimate the sensitivity of the fake-factors to the flavour composition of the
+sample used to derive them, the $t\bar{t}$ validation region described in~\ref{s:CR_Top}
+is used. This sample was found in MC studies to have a largely different flavour
+composition than the nominal $W$ + jets sample, and can therefore be used to put a
+conservative systematic on this effect.  A flat variation of 25\% is found to bracket this
+effect conservatively across all observables.
+
+As a cross-check, the same effect can be probed less directly by tuning the requirements
+of the $W$ + jets sample. The selection requirements applied to the $W$ + jets sample will
+directly affect the kinematics and flavour composition of the sample, and lead to
+differences in the derived fake-factors. While there is no direct way to measure how
+different the compositions are between the $W$ + jets control sample and the signal
+regions, it is possible to approximate how sensitive the fake-factors are to such changes.
+Some selection requirements aimed at rejecting $Z$ + jets events are applied to derive
+different sets of fake-factors, inspired by~\cite{zttnote,tauidnote}.  The following
+requirements are applied separately:
+
+\begin{itemize}
+\item $\cos{\Delta\phi(\mu, \met)} + \cos{\Delta\phi(\tau, \met)} <$ -0.15
+\item $m_{T}^{\mu} >$ 70 GeV
+\item $m_{Z}^{vis.} <$ 42 GeV or $m_{Z}^{vis.} >$ 82 GeV
+\item $p_{T}^{\mu} >$ 35 GeV
+\end{itemize}
+
+\begin{figure}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_PromptsDep}
+\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_CutsDep}
+%\centering \includegraphics[width=0.48\textwidth]{figures/ch5-model-independent/TauFakes_NJetsDep}
+\caption{\label{fig:fakesys} Dependency of the fake-factors on the prompt normalization
+  (left) and the $W$ event requirements based on the cuts to reject $Z$ events (right).}
+\end{figure}
+
+The resulting sets of fake-factors are shown in figure~\ref{fig:fakesys}.  The variations
+are no larger than 12\%, and are therefore bracketed by the 25\% estimate from the
+$t\bar{t}$ sample.
+
+In the end, the systematics are found to vary between 25\% and 30\%, being largest where
+the prompt subtraction is most significant.
 
 
+% Alternatively,
+%making different requirements on the number of jets produced in association with the $W$
+%leads to variations in the flavour composition of the sample. Fake-factors derived with
+%different requirements on the number of jets are also shown in figure~\ref{fig:fakesys}.
+%The scale of these variations due to different selection requirements on the $W$ + jets
+%events is typically in the order of 20\% or less.
 
-\section{Systematic Uncertainties}
 
-\section{Background Validation}
+%Ultimately, a more direct way to probe how well the fake-factors model the reducible
+%backgrounds consists in studying validation regions.  Three different validations regions are
+%used, aimed at probing prompt and fake taus in $Z$-like and $t\bar{t}$ dilepton events,
+%and in trilepton events where a $Z$ boson is well-reconstructed.  These 3 validation
+%regions probe different topologies, and would reveal any mismodeling associated with this
+%method.  Using the good degree of agreement found in the validation, and the magnitude of
+%the effects studied above, a conservative flat uncertainty of 25\% is used for all $\tau$
+%fake estimates.
 
-\section{Results and Limits}
+\section{Systematic Uncertainties}\label{sec:model-independent-systematics}
+Systematic uncertainties are assigned to the signal and background predictions to account for possible modelling inaccuracies. The sources of uncertainty considered are:
+
+\begin{itemize}
+	\item Uncertainties on the reducible background estimates from the data-driven estimation method, as described in section~\ref{sec:fake-factor-method}. The uncertainties ranges between $20\%$ to $30\%$ for the electron fake factors, $25\%$ to $50\%$ for the muon fake factors, and $25\%$ to $30\%$ for the tau lepton fake factors.
+
+	\item The signal and background samples must be normalized to the integrated luminosity of the data. The weight assigned to each event is:
+	\begin{equation}
+		w = \frac{\mathcal{L} \sigma_{\mathrm{process}}}{N_{\mathrm{sim}}},
+	\end{equation}
+	where $\mathcal{L}$ is the integrated luminosity of the data, $\sigma_{\mathrm{process}}$ is the cross section of the simulated process, and $N_{\mathrm{sim}}$ is the number of simulated events. The integrated luminosity carries an uncertainty of $2.8\%$, as described in section~\ref{sec:luminosity-measurement}. The cross sections are taken from calculations with uncertainties due to various sources, including the fixed order of the calculation, the choice of renormalization and factorization scales, and the PDFs. The uncertainties are shown in table~\ref{table:model-independent-cross-section-uncertainties}. 
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{c r c}
+      \hline
+      Sample     &Uncertainty &Reference\\
+      \hline
+      $Z$+jets   &10\% \\
+      $\ttbar+V$ &22\% &\cite{ttV} \\
+      $ZZ$       &4.3\% &App.~\ref{app:vbfnlo} \\
+      $WZ$       &7.6\% &App.~\ref{app:vbfnlo}\\
+      $\ttbar$   &10\% &\cite{TopXS} \\
+      single-$t$ &10\% &\cite{atlas_topmc}\\
+      \hline
+    \end{tabular}
+    \caption{Systematic uncertainties used for the MC samples that contribute to the background estimates.}
+    \label{tab:modle-independent-cross-section-uncertainties}
+  \end{center}
+\end{table}
+
+
+	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron and muon scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$-$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$-$2.2\%$~\cite{TauUncertainties}.
+
+	\item The lepton energy scales carry uncertainty which has a small effect on the signal regions due to leptons or events near $\Et$ or $\pt$ thresholds. The uncertainties are also provided by the combined performance groups.
+
+	\item  The jet energies are scaled and smeared according to recommendations from the \texttt{JetEtMiss} combined performance group~\cite{JES,JER}. The uncertainty affects the $\Htjets$ and $\meff$ distributions, and also the lepton-jet overlap removal procedure.
+
+	\item The lepton and jet energy uncertainties are also propagated to the missing transverse energy, $\Etmiss$, using the \texttt{MissingETUtility} package~\cite{METUtility}. 
+
+	\item The efficiencies of the $b$-tagging algorithm carry uncertainties which are parameterized based on matching the identified $b$-jets to truth $b$-jets, as recommended by the \texttt{flavor tagging} combined performance group.
+
+	\item Finally, the Monte Carlo samples carry statistical uncertainty due to simulating a finite number of events. 
+\end{itemize}
+
+The dominant sources of uncertainty depend on the signal region, but are generally due to Monte Carlo statistical uncertainties, the fake factor uncertainites, and theoretical cross section uncertainties. 
+
+\section{Background Validation}\label{sec:model-independent-validation-regions}
+The background estimates are verified in several dedicated validation regions, which are orthogonal to the signal regions. Events containing two leptons are used to test the selection of prompt leptons and their corresponding scale factors and energy corrections. The reducible backgrounds are tested in $t\overline{t}$ validation regions, where the events are required to have two same-sign leptons to target semileptonic decays where one lepton arises from a reducible process. Finally, the fake factor procedure is validation in events with modified lepton selections, where the signal leptons are ``between'' the numerator and denominator definitions used in the nominal reducible background estimate.
+
+\subsection{Dilepton Validation Regions}\label{sec:model-independent-validation-regions-dilepton}
+Three dilepton validation regions target the three flavors of leptons: $ee$, $\mu\mu$, and $\mu\tau_{\mathrm{had}}$. The $ee$ and $\mu\mu$ regions require an opposite-sign lepton pair of the appropriate flavor. The invariant mass distributions of the dilepton system in these regions are shown in figure~\ref{fig:model-independent-VR-dilepton}. Some disagreement is observed in the $ee$ invariant mass distribution; this discrepancy is covered by the electron energy scale systematic uncertainties. 
+
+\begin{figure}[htbp]
+  \subfloat[$ee$]{
+    \includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/DYOSee_cut_3f_AllLeptonMass}
+  }
+  \subfloat[$\mu\mu$]{
+    \includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/DYOSmm_cut_3f_AllLeptonMass}
+  }
+  \caption{Dilepton invariant mass distributions for the $ee$ (left) and $\mu\mu$ (right) validation regions.}
+  \label{fig:dilepton_masses}
+\end{figure}
+
+The $ee$ and $\mu\mu$ validation regions are also used to generate scale factors to account for efficiency
+differences between simulation and data when applying cuts on lepton isolation or impact parameter. The scale factors are computed from events with a dilepton pair with invariant mass within $10 \GeV$ of $m_Z$, and are shown in figure~\ref{fig:model-independent-lepton-SFs}. The scale factors are mostly consistent with unity to within $0.5\%$, except for isolation requirements on the low-$\pt$ leptons, where the scale factors deviate from unity by up to $2\%$. 
+
+\begin{figure}[tbp]
+  \subfloat[Electron \pt\ Scale Factors]{
+    \includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/c_e_pt_allSF}
+  }
+  \subfloat[Electron $|\eta|$ Scale Factors]{
+    \includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/c_e_eta_allSF}
+  }
+  \subfloat[Muon \pt\ Scale Factors]{
+    \includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/c_m_pt_allSF}
+  }
+  \subfloat[Muon $|\eta|$ Scale Factors]{
+    \includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/c_m_eta_allSF}
+  }
+  \caption{Scale factors for electrons and muons as functions of \pt\ (left) and $|\eta|$ (right).}
+  \label{fig:lepton_SFs}
+\end{figure}
+
+The $\mu\tau_{\mathrm{had}}$ region applies addition cuts to reduce the large contribution from fake tau leptons in $W$+jets events:
+
+\begin{itemize}
+	\item $\cos{\Delta\phi(\mu, \met)} + \cos{\Delta\phi(\tau, \met)} >$ -0.15,
+	\item $\Delta\phi(\mu, \tau_{had}) >$ 2.4,
+	\item $m_{\mathrm{T}}^{\mu} < 50 \GeV$,
+	\item $42< m_{Z}^{vis.} < 82 \GeV$, and
+	\item $\pt^{\mu} < 40 \GeV$.
+\end{itemize}
+
+The $\pt$ and $\eta$ distributions of the $\mu$ and $\tau_{\mathrm{had}}$ are shown in figure~\ref{fig:model-independent-VR-mutau}.
+
+\begin{figure}[htbp]
+	\subfloat[Leading Lepton \pt]
+		{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/OSZ_LeadingPt}}
+	\subfloat[Leading Lepton $|\eta|$]
+		{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/OSZ_LeadingEta}}
+	\subfloat[Subleading Lepton \pt]
+		{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/OSZ_SubleadPt}}
+	\subfloat[Subleading Lepton $|\eta|$]
+		{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/OSZ_SubleadEta}}
+	\caption{$\pt$ and $\eta$ distribution of the muon and the hadronically decaying tau lepton in the $\mu\tau_{\mathrm{had}}$ validation region.}
+	\label{fig:model-independent-VR-mutau}
+\end{figure}
+
+
+\subsection{$t\overline{t}$ Validation Regions}\label{sec:model-independent-validation-regions-ttbar}
+In signal regions that veto $Z$ bosons and require large $\Htjets$ or $\Etmiss$, a large reducible background component is expected from $t\overline{t}$ events, where both $W$ bosons decay leptonically and a third lepton arises from a misidentified jet or semileptonic heavy flavor decay. This process is tested in the $t\overline{t}$ validation regions, which require at least one $b$-tagged jet with $\pt>30 \GeV$, exactly two electrons or muons with the same charge, and $\Ht<500 \GeV$. The requirement that the leptons have the same sign vetoes dilepton $t\overline{t}$ events with two prompt leptons from $W$ decays, while the $\Ht$ requirement reduces the potential contamination from new BSM phenomena. Note that events containing hadronically decaying tau leptons are used to derive a systematic uncertainty on the tau fake factors due to the flavor composition of the events (section~\ref{sec:model-independent-ff-tau-systematics}), and so are not used as a validation region. 
+
+The $\pt$ and $\eta$ distributions of the leading and subleading leptons are shown in figure~\ref{fig:model-independent-VR-ttbar}.
+
+\begin{figure}[tbp]
+  \subfloat[Leading Lepton \pt]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/semileptop_emu_mue_LeadPt}}
+  \subfloat[Leading Lepton $|\eta|$]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/semileptop_emu_mue_LeadEta}}
+  \subfloat[Subleading Lepton \pt]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/semileptop_emu_mue_SubleadPt}}
+  \subfloat[Subleading Lepton $|\eta|$]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/semileptop_emu_mue_SubleadEta}}
+  \subfloat[\meff]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/semileptop_emu_mue_ST}}
+  \subfloat[\met]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/semileptop_emu_mue_MET}}
+  \caption{\ttbar\ validation regions for all flavor ($e, \mu$) combinations.}
+  \label{fig:model-independent-VR-ttbar}
+\end{figure}
+
+\subsection{Intermediate Fake Factor Validation Regions}\label{sec:model-independent-validation-regions-intermediate-ff}
+The fake factor method is further validated in regions containing events with two signal (numerator) leptons and one ``intermediate'' lepton, which fulfills selection criteria looser than the numerator criteria but tighter than the denominator criteria. Separate fake factors are derived for intermediate leptons; these are defined schematically as $\langle$intermediate$\rangle/\langle$denominator$\rangle$, rather than $\langle$numerator$\rangle/\langle$denominator$\rangle$. Specifically, the intermediate leptons satisfy most of the numerator criteria except for:
+
+\begin{itemize}
+	\item \textbf{Electrons}: the electron must pass the \texttt{medium++} cuts, but fail the \texttt{tight++} cuts.  
+	\item \textbf{Muons}: the candidate must have either its track or calorimeter transverse isolation energy
+	satisfy $0.10 < \mathrm{iso}/\pt < 0.15$.
+	\item \textbf{Taus}: the tau candidate must pass the \texttt{Medium-BDT} identification requirement, but fail the
+	\texttt{tight-BDT} identification requirement.
+\end{itemize}
+
+The first two regions, targeting reducible electrons and muons, require an OSSF pair of electrons or muons, plus a third intermediate electron or muon of different flavor. The events are largely due to $Z\rightarrow ee$ or $Z\rightarrow \mu\mu$ events, with an additional lepton that is either prompt and fails the signal lepton criteria, or is due to a reducible process. 
+
+\begin{figure}[tbp]\centering
+  \subfloat[Event Composition]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zmm_offZe_intelec_Simple3LEventClassification}}
+  \subfloat[Electron \pt]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zmm_offZe_intelec_OffZPt}}
+  \subfloat[Electron $\eta$]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zmm_offZe_intelec_OffZEta}}
+  \subfloat[Electron \mt]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zmm_offZe_intelec_OffZMT}}
+  \subfloat[\meff]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zmm_offZe_intelec_ST}}
+  \subfloat[\met]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zmm_offZe_intelec_MET}}
+  \caption{Expected backgrounds in the intermediate-electron validation region, using the
+    nominal background estimation techniques.}
+  \label{fig:model-independent-VR-intermediate-e}
+\end{figure}
+
+\begin{figure}[tbp]\centering
+  \subfloat[Event Composition]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zee_offZmu_intmuon_Simple3LEventClassification}}
+  \subfloat[Muon \pt]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zee_offZmu_intmuon_OffZPt}}
+  \subfloat[Muon $\eta$]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zee_offZmu_intmuon_OffZEta}}
+  \subfloat[Muon
+    \mt]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zee_offZmu_intmuon_OffZMT}}
+  \subfloat[\meff]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zee_offZmu_intmuon_ST}}
+  \subfloat[\met]{\includegraphics[width=.48\columnwidth]{figures/ch5-model-independent/Z_emu_Zee_offZmu_intmuon_MET}}
+  \caption{Expected backgrounds in the intermediate-muon validation region, using the
+    nominal background estimation techniques.}
+  \label{fig:model-independent-VR-intermediate-mu}
+\end{figure}
+
+The events containing an intermediate $\tau_{\mathrm{had}}$ are much more abundant than intermediate electrons or muons, so three $\tau_{\mathrm{had}}$ validation regions are defined, mirroring the signal region categories. Events are required to contain two electrons or muons plus an intermediate $\tau_{\mathrm{had}}$, and are separated into on-$Z$, off-$Z$/OSSF, and off-$Z$/mixed categories, depending on the two electrons or muons. The $\pt$ and $\eta$ of the intermediate $\tau_{\mathrm{had}}$ is shown for each category in figure~\ref{fig:model-independent-VR-intermediate-tau}.
+
+\begin{figure}[tbp]\centering
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $p_{T}$, on-$Z$]{\includegraphics[width=.44\columnwidth]{figures/ch5-model-independent/inttau_onZ_DY_TauPt}}
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, on-$Z$]{\includegraphics[width=.44\columnwidth]{figures/ch5-model-independent/inttau_onZ_DY_TauEta}}
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $p_{T}$, off-$Z$/OSSF]{\includegraphics[width=.44\columnwidth]{figures/ch5-model-independent/inttau_offZ_OSSF_DY_TauPt}}
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, off-$Z$/OSSF]{\includegraphics[width=.44\columnwidth]{figures/ch5-model-independent/inttau_offZ_OSSF_DY_TauEta}}
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $p_{T}$, off-$Z$/mixed]{\includegraphics[width=.44\columnwidth]{figures/ch5-model-independent/inttau_offZ_mixed_DY_TauPt}}
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, off-$Z$/mixed]{\includegraphics[width=.44\columnwidth]{figures/ch5-model-independent/inttau_offZ_mixed_DY_TauEta}}
+  \subfloat[Intermediate tau $m_{T}$]
+
+  \caption{$\pt$ and $\eta$ distributions of the intermediate $\tau_{\mathrm{had}}$ in the on-$Z$, off-$Z$/OSSF, and off-$Z$/mixed intermediate validation regions. }
+  \label{fig:model-independent-VR-intermediate-tau}
+\end{figure}
+
+
+\section{Results and Limits}\label{sec:model-independent-results}
+The results of the search as organized as follows. For each category, the distributions of the various kinematic variables ($\htlep$, $\htjets$, $\meff$, $\Etmiss$, $\mtw$, $N_{\mathrm{jets}}$, $N_{b-\mathrm{tags}}$, and the $\pt$ of the third lepton) are produced (where applicable). Then, in each of the 138 signal regions, the number of observed and expected events are compared, and, absent any significant deviations, $95\%$ confidence level (CL) upper limits are derived on the number of events from new physics, $N_{95}$, and the corresponding \emph{visible cross section}, $\sigma_{95}^{\mathrm{vis}}$, defined as
+
+\begin{equation}
+	\sigma_{95}^{\mathrm{vis}} = \frac{N_{95}}{\mathcal{L}},
+\end{equation}
+
+where $\mathcal{L}=20.3~\mbox{fb}^{-1}$ is the integrated luminosity of the data.
+
+The plots for the $\htlep$ signal regions are shown here for demonstrative purposes. The full set of plots is available at~\cite{model-independent-webpage}. The $\htlep$ distributions are shown in figure~\ref{fig:model-independent-htlep}. The observed and expected event counts in the three corresponding signal regions ($\htlep>200 \GeV$, $\htlep>500 \GeV$, and $\htlep>800 \GeV$) are shown in table~\ref{table:model-independent-htlep}. Finally, the upper limits on $\sigma_{95}^{\mathrm{vis}}$ are shown in figure~\ref{fig:model-independent-htlep-sigmavis}. 
+
+The deviations between the observed and expected in all 138 signal regions are shown in figure~\ref{fig:model-independent-summary-sigma}, in units of the total uncertainty on the background expectation. 
+
+\begin{figure}[htbp]
+	\centering
+
+	\caption{$\htlep$ distributions in the six categories.}
+	\label{fig:model-independent-htlep}
+\end{figure}
+
+\begin{table}[htbp]
+	\centering
+
+	\caption{Observed and expected event counts in the $\htlep$ signal regions, along with the inclusive counts for the entire category.}
+	\label{table:model-independent-htlep}
+\end{table}
+
+\begin{figure}
+	\centering
+
+	\caption{95\% CL upper limits on the visible cross section of trilepton event production from new physics, $\sigma_{95}^{\mathrm{vis}}$, in each $\htlep$ signal region. }
+	\label{fig:model-independent-htlep-sigmavis}
+\end{figure}
+
+\begin{figure}
+	\centering
+
+	\caption{Deviations between the observed event counts and the background expectations in each signal region, in units of the total uncertainty on the background prediction.}
+	\label{fig:model-independent-summary-sigma}
+\end{figure}
+
+
 
 \section{Interpretations}
+The 95\% CL upper limits on trilepton event production from new physics derived in section~\ref{sec:model-independent-results} provide a useful tool with which to confront models of new physics producing trilepton final states. In order to compare the predictions of a model, i.e. a set of simulated events at \textcolor{red}{particle level} from an event generator, per-lepton fiducial efficiencies are provided to quantify approximately the efficiency of reconstructing and selecting fiducial leptons at truth level. The definition of fiducial truth leptons is as follows: 
+
+\begin{itemize}
+\item \underline{\textbf{Electrons}}: Electrons are selected from the truth particles with
+  $\pt > 10 \gev$, $|\eta|<2.47$ and $|\eta|\notin(1.37,1.52)$. Along
+  with these geometric requirements, electrons are required to be
+  stable (status()=1), and originate from the hard interaction
+  (barcode$<200000$) as opposed to interaction with detector
+  (GEANT). The pdgID of the mother of the electron must not satisfy ($80<$ mother $<10^{6}$)
+  or ($9000000<$ mother $<9900000$).
+  The electrons are required to be isolated, see below for
+  truth-isolation definition.
+\item Muons: Muons are selected by requiring $\pt > 10 \gev$,
+  $|\eta|<2.5$. Muons are also required to be stable (status()=1), and
+  originate from the hard interaction (barcode$<200000$). The pdgID of the mother of the muon must not satisfy 
+  ($80<$ mother $<10^{6}$) or ($9000000<$ mother $<9900000$).The muons
+  are required to be isolated, see below for truth-isolation
+  definition.
+\item Truth isolation: The isolation at fiducial level is constructed
+  by adding the $\pt$ for all charged particles with $\pt > 1 \gev$
+  which are within a cone of 0.3 ($\Delta R_{(\eta\phi)}<0.3$) from
+  the electron or muon. These charged particles are required to be
+  stable (status()=1) and have barcode$<200000$. 
+  %Neutrinos, gravitons,stable SUSY particles (LSP's) are excluded from the sum. 
+  Particles invisible to the detector (such as neutrinos) are excluded from the sum.
+  This sum, denoted by truth\_ptcone30, is required to satisfy
+  truth\_ptcone30$/\pt<0.15$ for electrons and muons.
+  Similarly the sum of all particles
+  (stable, barcode$<200000$, excluding invisibles) 
+  which satisfy $0.1<\Delta R_{(\eta\phi)}<0.3$ for the electron or muon is calculated. This sum, denoted by
+  truth\_etcone30, is required to satisfy truth\_etcone30$/\pt<0.15$ for electrons and muons.
+\item Taus: Taus are selected by requiring $\pt^{vis} > 15 \gev$,
+  $|\eta^{vis}|<2.5$. Only hadronically decaying taus are selected. The taus are also required to originate from
+the hard interaction (barcode$<200000$) and the pdgID of the mother of the tau must not satisfy ($80<$ mother $<10^{6}$)
+  or ($9000000<$ mother $<9900000$).
+\end{itemize}
