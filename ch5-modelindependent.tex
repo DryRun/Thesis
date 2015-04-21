@@ -195,12 +195,12 @@ The signal regions are defined in table~\ref{table:model-independent-signal-regi
 
 
 
-\section{Background Estimation}
+\section{Background Estimation}\label{sec:model-independent-background-estimation}
 The relevant Standard Model processes contributing to multilepton final states are diboson production ($WZ$, $ZZ$), production of a top quark pair in association with an weak gauge boson ($t\overline{t}+V$), and triboson production ($VVV^{(*)}$, where $V=W$ or $Z$). These backgrounds, called \emph{prompt} backgrounds, are estimated using Monte Carlo (MC) simulation. Significant backgrounds also arise from processes where at least one reconstructed lepton is due to the semileptonic decay of a hadron, the misidentification of a jet, or the asymmetric conversion of a photon in the detector; such backgrounds are called \emph{reducible} backgrounds. These backgrounds are estimated using either MC simulation or a data-driven technique called the \emph{fake factor} method. 
 
 \textcolor{red}{Put some Feynman diagrams here.}
 
-\subsection{Prompt Backgrounds}
+\subsection{Prompt Backgrounds}\label{sec:model-independent-prompt-backgrounds}
 The prompt backgrounds are estimated using Monte Carlo simulation. The hard-scattering processes are modeled by dedicated event generators, possibly including the emission of additional partons. Additional QCD radiation is modeled using a parton shower. The detector response to the simulated events is simulated with the ATLAS simulation framework~\cite{atlas-simulation-framework} using the \geant toolkit~\cite{geant}. Additional $pp$ collisions in the same or nearby bunch crossings (pileup) are included by overlaying simulated minimum-bias interactions from \pythia on the hard scattering event. Simulated events are assigned weights to reproduce the observed pileup distributions in data, and also to account for small differences in the trigger, reconstruction, and identification efficiencies between simulation and data. 
 
 The generators used to simulated the prompt backgrounds are shown in table~\ref{table:model-independent-mc-generators}. A more detailed list including cross sections is shown in table~\ref{table:appendix-model-independent-mc-generators}. 
@@ -218,11 +218,11 @@ The generators used to simulated the prompt backgrounds are shown in table~\ref{
 \end{itemize}
 
 
-\subsection{Reducible Backgrounds}
+\subsection{Reducible Backgrounds}\label{sec:model-independent-reducible-backgrounds}
 The reducible backgrounds encompass a variety of processes in which a reconstructed lepton arises due to something away from the ``hard scatter'' in the event. The backgrounds are estimated using simulation or a data-driven technique depending on the source. The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated from Monte Carlo, with scale factors applied to account for an observed overestimation in the photon-to-electron conversion rate (see section~\ref{sec:photon-conversions}). Other reducible contributions, such as $W/Z+$jets or $t\overline{t}$ where a jet fakes an electron or decays semileptonically, are estimated using the fake factor method as implemented in the $8~\mbox{TeV}$ model-independent multilepton analysis~\cite{DeViveiros:1670929}. 
 
 \subsubsection{Photon Conversions}\label{sec:photon-conversions}
-A different procedure is used for estimating the trilepton background due to $Z+\gamma$, where the photon converts asymmetrically in material and is reconstructed as an electron. The background is estimated with simulation, using the \sherpa~sample (section~\ref{sec:samples}), instead of the fake factor method.  Accordingly, the $Z+\gamma$ contribution is treated as prompt contamination in the fake factor method, and must be subtracted from the predictions. 
+The trilepton background due to $Z+\gamma$, where the photon converts asymmetrically in material and is reconstructed as an electron, is estimated with simulation, using the \sherpa~sample (section~\ref{sec:samples}).
 
 The rate of photons being reconstructed as electrons is observed to be overestimated in Monte Carlo, especially for denominator electrons. The net effect of this mismodeling is a \emph{deficit} in the background prediction, due to its larger effect on the subtraction of prompt contamination than on the prompt background estimation itself. Scale factors are derived to account for the mismodeling of the conversion rate. 
 
@@ -242,7 +242,7 @@ The principle of the method is the same as that used to estimate the electron ``
 
 
 
-\subsubsection{Fake Factor Method}\label{sec:fake-factor-method}
+\subsubsection{Fake Factor Method}\label{sec:model-independent-fake-factor-method}
 The fake factor method estimates the reducible backgrounds in each signal region by characterizing the fake or non-prompt leptons in terms of quantities sensitive to the fake process, such as isolation, impact parameter, or particle identification cuts. By relaxing the cuts on these quantities, we can collect a control sample of signal-like events with fake or non-prompt leptons; then, using the distributions of these quantities in a second control sample, we can extrapolate the first control sample to the signal region. The success of the method depends largely on how closely the second control sample resembles the signal region. 
 
 In more detail, the objects (electrons or muons) satisfying the nominal selection critera are called \emph{numerator} ($N$) objects. The complementary set of objects that satisfy most of the nominal selection criteria, but fail certain other criteria sensitive to relevant reducible process, are called \emph{denominator} ($D$) objects. The ratio $N/D$ defines the \emph{fake factor} ($f$). 
@@ -962,36 +962,10 @@ The deviations between the observed and expected in all 138 signal regions are s
 The 95\% CL upper limits on trilepton event production from new physics derived in section~\ref{sec:model-independent-results} provide a useful tool with which to confront models of new physics producing trilepton final states. In order to compare the predictions of a model, i.e. a set of simulated events at \textcolor{red}{particle level} from an event generator, per-lepton fiducial efficiencies are provided to quantify approximately the efficiency of reconstructing and selecting fiducial leptons at truth level. The definition of fiducial truth leptons is as follows: 
 
 \begin{itemize}
-\item \underline{\textbf{Electrons}}: Electrons are selected from the truth particles with
-  $\pt > 10 \gev$, $|\eta|<2.47$ and $|\eta|\notin(1.37,1.52)$. Along
-  with these geometric requirements, electrons are required to be
-  stable (status()=1), and originate from the hard interaction
-  (barcode$<200000$) as opposed to interaction with detector
-  (GEANT). The pdgID of the mother of the electron must not satisfy ($80<$ mother $<10^{6}$)
-  or ($9000000<$ mother $<9900000$).
-  The electrons are required to be isolated, see below for
-  truth-isolation definition.
-\item Muons: Muons are selected by requiring $\pt > 10 \gev$,
-  $|\eta|<2.5$. Muons are also required to be stable (status()=1), and
-  originate from the hard interaction (barcode$<200000$). The pdgID of the mother of the muon must not satisfy 
-  ($80<$ mother $<10^{6}$) or ($9000000<$ mother $<9900000$).The muons
-  are required to be isolated, see below for truth-isolation
-  definition.
-\item Truth isolation: The isolation at fiducial level is constructed
-  by adding the $\pt$ for all charged particles with $\pt > 1 \gev$
-  which are within a cone of 0.3 ($\Delta R_{(\eta\phi)}<0.3$) from
-  the electron or muon. These charged particles are required to be
-  stable (status()=1) and have barcode$<200000$. 
-  %Neutrinos, gravitons,stable SUSY particles (LSP's) are excluded from the sum. 
-  Particles invisible to the detector (such as neutrinos) are excluded from the sum.
-  This sum, denoted by truth\_ptcone30, is required to satisfy
-  truth\_ptcone30$/\pt<0.15$ for electrons and muons.
-  Similarly the sum of all particles
-  (stable, barcode$<200000$, excluding invisibles) 
-  which satisfy $0.1<\Delta R_{(\eta\phi)}<0.3$ for the electron or muon is calculated. This sum, denoted by
-  truth\_etcone30, is required to satisfy truth\_etcone30$/\pt<0.15$ for electrons and muons.
-\item Taus: Taus are selected by requiring $\pt^{vis} > 15 \gev$,
-  $|\eta^{vis}|<2.5$. Only hadronically decaying taus are selected. The taus are also required to originate from
-the hard interaction (barcode$<200000$) and the pdgID of the mother of the tau must not satisfy ($80<$ mother $<10^{6}$)
-  or ($9000000<$ mother $<9900000$).
+	\item \underline{\textbf{Transverse momentum}}: Electrons and muons are required to have $\pt>10 \GeV$, while tau leptons are required to have $\pt>15 \GeV$.
+	\item \underline{\textbf{Pseudorapidity}}: The same pseudorapidity cuts as the reconstructed signal leptons are applied. Electrons must have $|\eta|<2.47$, excluding the region $1.37<|\eta|<1.52$, and muons and tau leptons must have $|\eta|<2.5$.
+	\item \underline{\textbf{Isolation}}: For electrons and muons, the sum of the transverse momenta of all charged particles with $\pt>1 \GeV$ within a cone of radius $\Delta R=0.3$ of the lepton, denoted \texttt{truth\_ptcone30}, must satisfy \texttt{truth\_ptcone30}/$\pt<0.15$. Similarly, the \texttt{truth\_Etcone30}, defined as the sum of all stable, visible particles within a cone of radius $\Delta R=0.3$, is required to satisfy \texttt{truth\_Etcone30}$/\pt<0.15$.
+	\item \underline{\textbf{Origin and Decay}}: Leptons must originate from the hard scattering interaction (as opposed to the interaction with the detector as simulated by \geant), and not arise from the decay of a hadron. Electrons and muons are also required to be stable; tau leptons are required to decay hadronically. 
 \end{itemize}
+
+\textcolor{red}{Efficiencies. Doubly charged higgs interpretation?}
