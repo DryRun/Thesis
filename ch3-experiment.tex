@@ -291,11 +291,11 @@ The inner detector performs tracking charged particles traversing the $2~\mbox{T
 \begin{figure}[htbp]
 	\centering
 	\subfloat[ Trajectory of a $10 \GeV$ charged particle with $\eta=0.3$ traversing the barrel elements of the inner detector.] {
-		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_track_barrel}}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_track_barrel}}
 	}
 	\hfill
 	\subfloat[ Trajectories of $10 \GeV$ charged particles with $\eta=1.4$ and $\eta=2.2$ traversing the barrel and end-cap elements of the inner detector.] {
-		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_track_endcap}}
+		\resizebox{0.55\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_track_endcap}}
 	}
 	\caption{Drawings of the inner detector sensors and structural elements traversed by $10 \GeV$ charged particles originating from the interaction point at various angles.}
 	\label{fig:ATLAS-ID-tracks}
@@ -349,9 +349,10 @@ The intrinsic accuracy of the SCT sensors is $17~\micron$ along the strip pitch,
 
 \begin{table}[htbp]
 	\centering
+	\scriptsize
 	\begin{tabular}{|l|c|c|c|c|}
 		\hline
-		\textbf{Barrel cylinder layer} & \textbf{Radius (mm)} & \textbf{Full length (mm)} & \textbf{Module tilt angle} & \textbf{Number of modules} \\
+		\textbf{Barrel layer} & \textbf{Radius (mm)} & \textbf{Length (mm)} & \textbf{Module tilt angle} & \textbf{Number of modules} \\
 		\hline
 		3 & $299$ & $1498$ & $11.00^{\circ}$ & $384$ \\
 		4 & $371$ & & $11.00^{\circ}$ & $480$ \\
@@ -397,34 +398,75 @@ The endcaps consist of 160 layers of 768 straws, arranged radially into 20 wheel
 
 
 \subsection{Calorimetry}\label{sec:ATLAS-calorimeters}
-The calorimeter system occupies the volume directly exterior to the solenoid magnet, and measures the energy of electrons, photon, and hadrons up to a pseudorapidity of $|\eta|=4.9$. The arrangement of the calorimeters is shown in figure~\ref{fig:ATLAS-calorimeters}. The system consists of a number of independent sampling calorimeters. The electromagnetic calorimeter measures the energy of electrons and photons using lead and liquid argon (LAr) to measure the energy of electrons and photons. The hadronic calorimeter measures the energy of hadrons using steel and scintillator tiles in the barrel and copper and LAr in the end-caps. Finally, electromagnetic and hadronic calorimetry is performed in the forward region using copper-LAr and tungsten-LAr technology. Besides performing energy measurements, the calorimeters providing containment electrons, photons, and hadrons, which effectively provides shielding for the muon spectrometer~\ref{sec:ATLAS-muon-spectrometer}. 
+The calorimeter system occupies the volume directly exterior to the solenoid magnet, and measures the energy of electrons, photon, and hadrons up to a pseudorapidity of $|\eta|=4.9$. The arrangement of the calorimeters is shown in figure~\ref{fig:ATLAS-calorimeters}. The system consists of a number of independent sampling calorimeters. The electromagnetic calorimeter measures the energy of electrons and photons using lead and liquid argon (LAr) to measure the energy of electrons and photons. The hadronic calorimeter measures the energy of hadrons using steel and scintillator tiles in the barrel and copper and LAr in the end-caps. Finally, electromagnetic and hadronic calorimetry is performed in the forward region using copper-LAr and tungsten-LAr technology. Besides performing energy measurements, the calorimeters providing containment electrons, photons, and hadrons, which effectively provides shielding for the muon spectrometer~\ref{sec:ATLAS-muon-spectrometer}. The total amount of material in front of and in the calorimeters is shown in terms of radiation lengths, $X_0$, and interaction lengths, $\lambda$, in figures~\ref{fig:ATLAS-calorimeters-X0} and \ref{fig:ATLAS-calorimeters-lambda0}.
 
 \begin{figure}[htbp]
 	\centering
-	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_calorimeters_sketch}}
+	\resizebox{0.7\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_calorimeters_sketch}}
 	\caption{A 3D model of the ATLAS calorimeters, showing the electromagnetic barrel and end-caps, hadronic barrel and end-caps, and the forward calorimeter.}
 	\label{fig:ATLAS-calorimeters}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\subfloat[ Material before the calorimeters.] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_before_calo_csc03}}
+	}\hfill
+	\subfloat[ Material in the crack region between the barrel and end-cap cryostats.] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_crack_csc03}}
+	} \\
+	\subfloat[ Material in and before the barrel LAr calorimeter.] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_layers_barrel_csc03}}
+	}\hfill
+	\subfloat[ Material in and before the end-cap LAr calorimeters.] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_layers_endcap_csc03}}
+	}
+	\caption{Cumulative amounts of material versus $|\eta|$ in front of and within the LAr electromagnetic calorimeter, in terms of radiation lengths, $X_0$.}
+	\label{fig:ATLAS-calorimeters-X0}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.6in}{!}{\includegraphics{figures/ch3-experiment/lambda_csc03}}
+	\caption{Cumulative amounts of material versus $|\eta|$ due to each calorimeter in terms of interaction lengths, $\lambda$. The material in front of the calorimeters is also shown in tan.}
+	\label{fig:ATLAS-calorimeters-lambda0}
+\end{figure}
+
+
 
 \subsubsection{Electromagnetic Calorimeter}\label{sec:ATLAS-calorimeters-ecal}
-% TO DO: Pictures!
 
-The electromagnetic calorimeter consists of two half-barrels ($0<\eta<\pm1.475$) and two end-caps ($1.375<|\eta|<3.2$), all of which use LAr as the active material and steel-clad lead plates as the absorber. The lead plates are arranged in an accordion geometry to provide a uniform, gapless coverage in $\hat{\phi}$, shown for a barrel module in figure~\ref{fig:ATLAS-LAr-module}. The plates are interleaved with electrodes built from copper etchings on polymide. The outer conductive layers of the electrodes distribute the $2000~\mbox{V}$ high voltage over the electrode surface, which drifts the charges induced by ionization in the LAr towards the electrodes with a drift time of $450~\mbox{ns}$. The inner layer of the electrode, separated from the outer layers by isolating foils, collects the signals via capacitive coupling.
+The electromagnetic calorimeter consists of two half-barrels ($0<\eta<\pm1.475$) and two end-caps ($1.375<|\eta|<3.2$), all of which use LAr as the active material and steel-clad lead plates as the absorber. The lead plates are arranged in an accordion geometry to provide a uniform, gapless coverage in $\phi$, shown for a barrel module in figure~\ref{fig:ATLAS-LAr-module}. The plates are interleaved with electrodes built from copper etchings on polymide, consisting of three conducting layers. The outer conductive layers of the electrodes distribute the $2000~\mbox{V}$ high voltage over the electrode surface, which drifts the charges induced by ionization in the LAr towards the electrodes with a drift time of $450~\mbox{ns}$. The inner layer of the electrode, separated from the outer layers by isolating foils, collects the signals via capacitive coupling.
 
-The two half-barrels occupy the region $2.8~\mbox{m}<R<4~\mbox{m}$ and $0~\mbox{m}<z<\pm3.2~\mbox{m}$. Each has 1024 lead plates with a thickness of $1.53~\mm$ for $|\eta|<0.8$ and $1.13~\mm$ for $|\eta|>0.8$. The barrels are divided into 16 modules, each covering an azimuthal angle of $\Delta \phi = 22.5^{\circ}$. Each module has three layers in depth to provide a rough measurement of the longitudinal profile of the electromagnetic showers. The segmentation of each layer in $\Delta\eta\times\Delta\phi$ is shown in table~\ref{table:ATLAS-LAr-segmentation}. The fine segmentation of the front layer, closest to the interaction point, aids particle identification and, in combination with the middle layer, allows for a reasonable measurement of photon trajectories.  
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ A LAr barrel module.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_LAr_module}}
+	}
+	\subfloat[ Closeup image of the LAr accordion geometry.] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_LAr_zigzags}}
+	}
+	\caption{The LAr calorimeter uses an accordion geometry to provide uniform coverage in $\phi$. Steel-clad lead plates are interleaved with electrodes, consisting of three copper layers separated by polyamide sheets. The barrel module is divided into three layers in depth, with fine segmentation in $\eta$ in the layer closest the interaction point.}
+	\label{fig:ATLAS-LAr-module}
+\end{figure}
 
-The end-caps, one on either side of the interaction region, measure $63~\cm$ in thickness with inner and outer radii of $33~\cm$ and $209.8~\cm$, respectively. Each end-cap contains two co-axial sub-wheels, divided by a $3~\mm$ gap at $|\eta|=2.5$. The inner and outer wheels contain 256 and 768 lead absorbers, respectively, with the same accordion geometry as used in the barrel.
 
-% Material, dead material, and presampler design
-The total amount of material before and in the electromagnetic calorimeters is shown in figure~\ref{fig:ATLAS-material-interaction-lengths} in terms of interaction lengths $X_0$. Note that 
+The two half-barrels occupy the region $2.8~\mbox{m}<R<4~\mbox{m}$ and $0~\mbox{m}<z<\pm3.2~\mbox{m}$. Each has 1024 lead plates with a thickness of $1.53~\mm$ for $|\eta|<0.8$ and $1.13~\mm$ for $|\eta|>0.8$. The barrels are divided into 16 modules, each covering an azimuthal angle of $\Delta \phi = 22.5^{\circ}$. Each module has three layers in depth to provide a rough measurement of the longitudinal profile of the electromagnetic showers. The segmentation of each layer in $\Delta\eta\times\Delta\phi$ is shown in table~\ref{table:ATLAS-LAr-segmentation}. The fine segmentation of the front layer aids particle identification, and, in combination with the middle layer, allows for a measurement of photon trajectories. A LAr half barrel prior to installation is shown in figure~\ref{fig:LAr-barrel}.
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_LAr_barrel}}
+	\caption{Photograph of a LAr calorimeter half-barrel prior to installation.}
+	\label{fig:LAr-barrel}
+\end{figure}
+
+
+The end-caps, one on either side of the interaction region, measure $63~\cm$ in thickness with inner and outer radii of $33~\cm$ and $209.8~\cm$, respectively. Each end-cap contains two co-axial sub-wheels, divided by a $3~\mm$ gap at $|\eta|=2.5$. The inner and outer wheels contain 256 and 768 lead absorbers, respectively, with the same accordion geometry as used in the barrel. In the region $1.5<|\eta|<2.5$, the outer wheel of the end-caps presents three layers in the longitudinal direction, with fine $\eta$ segmentation in the front layer. For $|\eta|<1.5$ in the outer wheel and the entire inner wheel ($2.5<|\eta|<3.2$), there are two longitudinal layers and coarser transverse granularity.
+
+The total amount of material before and in the electromagnetic calorimeters is shown in figure~\ref{fig:ATLAS-calorimeters-X0} in terms of radiation lengths, $X_0$. The beam pipe, inner detector, solenoid, cryostats, and other services and support structures present a significant amount of material in between the interaction point and the calorimeters. To provide a measurement of the energy loss due to particles interacting before the calorimeters, a presampler is installed in front of the first LAr layer. The presampler is a liquid argon layer $11~\mm$ in depth, divided into 64 azimuthal sectors (32 in each half-barrel) of dimension $\Delta\eta\times\Delta\phi=1.52\times0.2$. Each sector contains eight modules, the central seven of which span $\Delta\eta=0.2$, and the outermost of which measures $\Delta\eta=0.12$.  The modules contain interleaved cathodes and anodes with $1.9$-$2.0~\mm$ spacing. Like the three LAr calorimeter layers, the anodes contain three conducting layers, the outer two of which supply the $2000~\mbox{V}$ operating voltage, and the innermost of which performs the signal readout via capacitive coupling.
 
 % Conclusion
 In total, the electromagnetic calorimeter has 101,760 readout channels for the barrel, 62,208 channels for the end-caps, 7,808 channels for the barrel presampler, and 1,536 channels for the end-cap presamplers. 
-
-\begin{figure}
-	LAr pictures
-\end{figure}
 
 
 \begin{table}[htbp]
@@ -464,31 +506,70 @@ In total, the electromagnetic calorimeter has 101,760 readout channels for the b
 \end{table}
 
 
+\subsubsection{Tile Calorimeter}\label{sec:ATLAS-calorimeters-tile}
+The tile calorimeter performs hadronic calorimetry in the region $|\eta|<1.7$, occupying the radial range $2.28~\mbox{m}<R<4.25~\mbox{m}$. Divided into a $5.8~\mbox{m}$-long central barrel and two $2.6~\mbox{m}$-long extended barrels on either side, the tile calorimeter uses steel as the absorber and scintillating tiles as the active material. The total depth is approximately $7.4\lambda$. 
+
+Each of the three calorimeter sections is divided azimuthally into 64 modules, each spanning $\Delta\phi=5.625$. A module is shown schematically in figure~\ref{fig:ATLAS-calorimeters-tile-module}. The outer edge of a module is a steel girder which houses the tile calorimeter readout electronics and also provides flux return for the solenoidal magnetic field. The body of the module is a self-supporting structure built from steel absorber plates, with $4~\mm$-thick spacer plates glued in staggered fashion to $5~\mm$-thick master plates. The staggered spacing creates the gaps into which the scintillating tiles are inserted, with a steel-to-scintillator volume ratio of approximately $4.7:1$. 
+
+The scintillating tiles use polystyrene as the base material, in which ionizing particles induce the production of ultraviolet light. The polystyrene is doped with wavelength-shifting fluors, 1.5\% PTP and 0.044\% POPOP, which convert the scintillation light into the visible light. The tiles measure $3~\mm$ thick, and vary between $97$-$187~\mm$ in radial length and $200$-$400~\mm$ in azimuthal length. A plastic sleeve envelops each tile, both for the protection of the tile during installation and also to improve the scintillation light collection efficiency due to a reflectivity of $\sim 95\%$. 
+
+At the tile edges, the light is collected by wavelength-shifting fibers, which transmit the light to photomultiplier tubes housed in the girder. The fibers occupy a gap between adjacent modules approximately $1.5~\mm$ wide. The fibers are grouped to form a three-dimensional sampling structure as shown in figure~\ref{fig:ATLAS-calorimeters-tile-cell-layout}, with cells measuring $\Delta\eta\times\Delta\phi=0.1\times0.1$ in the transverse direction. Longitudinally, the grouping provides three radial sampling layers, with depths at $\eta=0$ of approximately $1.5\lambda$, $4.1\lambda$, and $1.8\lambda$ in order of increasing distance from the interaction point. 
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ Schematic view of a tile calorimeter module, showing assembly of the steel absorber, the inserted scintillator tiles, and the readout of lighting through wavelength-shifting fibers to the photomultiplier tubes.] {\label{fig:ATLAS-calorimeters-tile-module}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_TILE_module}}
+	}
+	\subfloat[ Layout of the tile calorimeter cells, defined by the grouping of the readout fibers connecting the scintillating tiles to the photomultiplier tubes.] {\label{fig:ATLAS-calorimeters-tile-cell-layout}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_TILE_cell_layout}}
+	}
+	\caption{Schematic views of the ATLAS tile calorimeter, showing an individual module and the grouping of modules into readout cells.}
+	\label{fig:ATLAS-calorimeters-tile}
+\end{figure}
 
 
 
-The calorimeter system surrounds the solenoid, and consists of electromagnetic and hadronic components. The electromagnetic calorimeter is a lead/liquid argon (LAr) sampling calorimeter, and comprises a barrel ($|\eta|<1.475$) and two endcaps ($1.375<|\eta|<3.2)$. In the range $|\eta|<2.5$, the detector is finely segmented in $\eta$ to provide good spatial resolution. The hadronic calorimeter (HCAL) uses steel/scintillator tiles in the barrel ($|\eta|<1.7$) and copper/LAr in the endcaps ($1.5<|\eta|<3.2$). In the forward region ($3.1<|\eta|<4.9$), electromagnetic and hadronic calorimetry is performed using copper/LAr and tungsten/LAr technology.
+\subsubsection{Hadronic End-Cap Calorimeters}\label{sec:ATLAS-calorimeters-HEC}
+Outside the tile calorimeter, two hadronic end-cap calorimeters (HEC) perform hadronic calorimetry in the pseudorapidity range $1.5<|\eta|<3.2$. The HECs use copper and LAr arranged into a flat plate geometry, as shown in figure~\ref{fig:ATLAS-calorimeters-HEC-layout}. Each HEC consists of two wheels (HEC1 and HEC2), which are further divided into two longitudinal segments.  The plates have an inner radius of $372~\mm$ or $475~\mm$ depending on $z$, and an outer radius of $2030~\mm$. HEC1 contains 24 copper plates, each $24~\mm$ thick and spaced by $8.5~\mm$, plus a $12.5~\mm$-thick front plate. HEC2 contains 16 copper plates measuring $50~\mm$ in thickness, with a $25~\mm$-thick front plate. The sampling fractions are thus $4.4\%$ for HEC1 and $2.2\%$ for HEC2. 
 
+The gaps contain 3 electrodes spaced by $1.8~\mm$, the outer two of which supply a nominal operating voltage of $1800~\mbox{V}$, and the middle of which performs the readout. The readout pads provide a transverse segmentation of $\Delta\eta\times\Delta\phi=0.1\times0.1$ for $|\eta|<2.5$, and $\Delta\eta\times\Delta\phi=0.2\times0.2$ for $2.5<|\eta|<3.2$. In total, 5,632 channels are read from the HEC. 
 
-
-\subsubsection{Hadronic Calorimeter}\label{sec:ATLAS-calorimeters-hcal}
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics[angle=270]{figures/ch3-experiment/ATLAS_HEC_layout}}
+	\caption{Schematic $R-\phi$ (left) and $R-z$ (right) views of the ATLAS hadronic end-cap calorimeters.}
+	\label{fig:ATLAS-calorimeters-HEC-layout}
+\end{figure}
 
 
 \subsubsection{Forward Calorimeter}\label{sec:ATLAS-calorimeters-fcal}
+The forward calorimeter (FCal) performs both electromagnetic and hadronic calorimetry in the very forward region, $3.2<|\eta|<4.9$, and also shields the muon system from high particle fluxes. On each side, the FCal is divided into three layers measuring $45~\cm$ in depth, an electromagnetic layer (FCal1) and two hadronic layers (FCal2 and FCal 3). All three layers use LAr as the active medium, with very thin gaps due to avoid ion buildup due to the high particle flux. FCal1 uses copper absorbers to optimize the resolution and heat removal. FCal2 and FCal3 use tungsten absorbers, which provides good containment and reduces the lateral spread of hadronic showers. Finally, a passive brass plug behind FCal3 provides shielding for the muon system. The layout of the three layers and shielding plug is shown in figure~\ref{fig:ATLAS-calorimeters-fcal-layout}. 
+
+FCal1 consists of stacked copper plates with $0.27~\mm$ LAr gaps. The electrodes occupy 12,260 holes drilled through the copper plates, and consist of a copper rod coaxial with a copper tube, as shown in figure~\ref{fig:ATLAS-calorimeters-fcal1-electrodes}. FCal2 and FCal3 consist of two $2.35~\cm$-thick copper end-plates spanned by an array electrodes similar to those in FCal1, except with tungsten rods, as shown in figure~\ref{fig:ATLAS-calorimeter-fcal23-electrodes}. The arrays contains 10,200 and 8,224 electrodes in FCal2 and FCal3, respectively. In total, the three layers, FCal1, FCal2, and FCal3, contain 1008, 500, and 254 readout channels, respectively, and constitute 27.6, 91.3, and 89.2 radiation lengths and 2.66, 3.68, and 60 interaction lengths. 
+
+\begin{figure}
+	\centering
+
+	\label{fig:ATLAS-calorimeters-fcal-layout}
+\end{figure}
 
 
+\begin{figure}
+	\centering
+	\subfloat[ FCal electromagnetic electrode layout.] {\label{fig:ATLAS-calorimeter-fcal1-electrodes}
 
-\subsection{Muon System}
+	}
+	\subfloat[ FCal hadronic absorber matrix.] {\label{fig:ATLAS-calorimeter-fcal23-electrodes}
+
+	}
+	\label{fig:ATLAS-calorimeter-fcal-electrodes}
+
+
+\subsection{Muon Spectrometer}\label{sec:ATLAS-muon-spectrometer}
 
 \subsection{Data Acquisition}
 
 
-
-
-\section{Data Taking}
-\subsection{Performance during Run I}
-
-\subsection{Luminosity Measurement}
 
 
 \printbibliography
