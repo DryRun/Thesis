@@ -30,7 +30,7 @@ The RF oscillations result in the particle beam bunching into so-called RF bucke
 
 \subsection{The Accelerator Complex}
 
-\underline{\textbf{Injection Chain}}
+\subsubsection{Injection Chain}
 
 \begin{figure}[htbp]
 	\centering
@@ -56,7 +56,7 @@ The protons are extracted from the PS at intervals of 3.6~s and injected into th
 
 The SPS cycle takes 21.6 seconds, leading to a total LHC filling time of about nine minutes.
 
-\underline{\textbf{LHC Main Ring}}
+\subsubsection{LHC Main Ring}
 The LHC main ring accelerates protons from the injection energy of $450 \GeV$ to the collision energy, $3.5 \TeV$ or $4 \TeV$ for proton-proton collisions during Run I. The 26.7~km ring consists of eight arcs and eight straight sections, shown in figure~\ref{fig:LHC-segments}. Each straight section is called an \emph{insertion region} (IR), and contain either collider experiments or important services. IRs 1, 2, 5, and 8 contain the ATLAS, LHCb, CMS, and ALICE experiments, respectively; IR 4 contains two independent $400~\mbox{MHz}$ RF systems, one for each of the counter-rotating beams; IR 6 contains the beam dump system; and IRs 3 and 7 contain collimation systems. The beams are contained in separate beam pipes except at the collision points.
 
 \begin{figure}[htbp]
@@ -130,7 +130,7 @@ In general, a higher total integrated luminosity, $L{\mathrm{int}}=\int L dt$, i
 
 	\item The fill schedule of the LHC. The instantaneous luminosity of the LHC decreases over time. The dominant loss of luminosity is due to the loss of protons from the collisions themselves, with a typical decay constant of $\tau_{\mathrm{nuclear},1/e}=29~\mbox{h}$. Including other sources of loss such as intra-bunch scattering, scattering from collisions with gas in the beam pipe, beam-beam effects, and RF noise, the typical luminosity lifetime is $\tau_L=14.9~\mbox{h}$. 
 
-	The the fill schedule can be optimized to maximize the luminosity based on $\tau_L$ and the average turnaround time, $T_{\mathrm{turnaround}}$. This can be quantified using the \emph{H{\"u}bner} factor, $\mathrm{HF}_{\mathrm{peak}}$, defined as the ratio of the delivered integrated luminosity to the hypothetical integrated luminosity with $\tau_L=\infty$ and $T_{\mathrm{turnaround}}=0$. In 2011, this was typically in the range $15\%$--$20\%$.
+	The the fill schedule can be optimized to maximize the luminosity based on $\tau_L$ and the average turnaround time, $T_{\mathrm{turnaround}}$. This can be quantified using the \emph{H{\"u}bner factor}, $\mathrm{HF}_{\mathrm{peak}}$, defined as the ratio of the delivered integrated luminosity to the hypothetical integrated luminosity with $\tau_L=\infty$ and $T_{\mathrm{turnaround}}=0$. In 2011, this was typically in the range $15\%$--$20\%$.
 \end{itemize}
 
 The delivered luminosity in 2011 and 2012 will be discussed later in section~\ref{sec:luminosity-measurement}.
@@ -140,7 +140,7 @@ The delivered luminosity in 2011 and 2012 will be discussed later in section~\re
 
 The ATLAS detector is a large, cylindrical collider detector located at IR1 on the LHC ring (figure~\ref{fig:LHC-IPs}). The detector measures the energy and momenta of charged and colored particles produced in the collisions provided by the LHC. It consists of several subsystems occupying a cylinder with a diameter of $25~\mbox{m}$ and a length of $46~\mbox{m}$, with a combined weight of approximately 7,000 tons. Closest to the interaction region, the inner detector performs momenta measurements of charged particles by tracking their movement through a solenoidal magnetic field (section~\ref{sec:inner-detector}). Past the inner detector solenoid magnet, electromagnetic and hadronic calorimeters measure the energy of electrons, photons, and hadrons. Finally, the muon spectrometer provides additional tracking and particle identification for muons in large toroidal magnetic field. 
 
-This section describes the design of the magnets, inner detector, calorimeters, and muon spectrometer. The identification of objects and the associated performance are described in section~\ref{sec:object-reconstruction}. 
+This section describes the design of the magnets, inner detector, calorimeters, and muon spectrometer. The identification of objects and the associated performance are described in section~\ref{sec:event-reconstruction}. 
 
 \subsection{Coordinate System}\label{sec:ATLAS-coordinate-system}
 
@@ -153,12 +153,13 @@ ATLAS relies on four powerful superconducting magnets to bend the trajectories o
 	\centering
 	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_magnets_sketch}}
 	\caption{The geometry of the magnet windings and tile calorimeter steel. The three toroids and solenoid are shown in red. The remaining colors show layers of the tile calorimeter with different magnetic properties and an outside return yoke.}
-	\label{fig:ATLAS_magnets-sketch}
+	\label{fig:ATLAS-magnets-sketch}
 \end{figure}
 
 
 \begin{table}[htbp]
 	\centering
+	\scriptsize
 	\begin{tabular}{|l|l|c|c|c|c|}
 		\hline
 		\textbf{Property} & \textbf{Feature} & \textbf{Unit} & \textbf{Solenoid} & \textbf{Barrel toroid} & \textbf{End-cap toroids} \\
@@ -265,7 +266,7 @@ The field integral of the toroid is shown as a function of $\eta$ in figure~\ref
 \begin{figure}[htbp]
 	\centering
 	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_toroid_Bintegral}}
-	\caption{The predicted toroid magnetic field integral as a function of $|\eta|$. The paths are for infinite momentum muons, i.e. straight lines, from the innermost to the outermost MDT layer (section~\ref{sec:muon-spectrometer}).}
+	\caption{The predicted toroid magnetic field integral as a function of $|\eta|$. The integral is taken over a striaght line through the interaction point, from the innermost to the outermost muon detector (section~\ref{sec:ATLAS-muon-spectrometer}).}
 	\label{fig:ATLAS-toroid-Bintegral}
 \end{figure}
 
@@ -273,7 +274,7 @@ The field integral of the toroid is shown as a function of $\eta$ in figure~\ref
 
 \subsection{Inner Detector}\label{sec:ATLAS-inner-detector}
 
-The inner detector performs tracking charged particles traversing the $2~\mbox{T}$ solenoidal magnetic field in the region $|\eta|<2.5$. It also performs electron identification in the range $|\eta|<2.0$. It consists of three subdetectors occupying the volume closest to the interaction region, directly outside the beam pipe, as shown in figure~\ref{fig:ATLAS-ID}. Proceeding outwards from the interaction point, these are the pixel detector, the semiconductor tracker (SCT), and the transition radiation tracker (TRT). The pixel detector nominally provides three track measurements with high spatial resolution using silicon pixels. The SCT provides an additional four measurements using silicon strips. Finally, for particles with $|\eta|<2.0$, the TRT provides an average of 36 measurements per track using gaseous straw tubes, which aids the pattern recognition, improves the momentum resolution, and performs electron identification. The paths traversed by tracks through the barrel and end-cap layers are shown in figure~\ref{fig:ATLAS-ID-tracks}.
+The inner detector performs tracking of charged particles traversing the $2~\mbox{T}$ solenoidal magnetic field in the region $|\eta|<2.5$. It also performs electron identification in the range $|\eta|<2.0$. It consists of three subdetectors occupying the volume closest to the interaction region, directly outside the beam pipe, as shown in figure~\ref{fig:ATLAS-ID}. Proceeding outwards from the interaction point, these are the pixel detector, the semiconductor tracker (SCT), and the transition radiation tracker (TRT). The pixel detector provides three track measurements with high spatial resolution using silicon pixels. The SCT provides an additional four measurements using silicon strips. Finally, for particles with $|\eta|<2.0$, the TRT provides an average of 36 measurements per track using gaseous straw tubes, which aids the pattern recognition, improves the momentum resolution, and performs electron identification. The paths traversed by tracks through the barrel and end-cap layers are shown in figure~\ref{fig:ATLAS-ID-tracks}.
 
 \begin{figure}[htbp]
 	\centering
@@ -295,6 +296,7 @@ The inner detector performs tracking charged particles traversing the $2~\mbox{T
 	}
 	\hfill
 	\subfloat[ Trajectories of $10 \GeV$ charged particles with $\eta=1.4$ and $\eta=2.2$ traversing the barrel and end-cap elements of the inner detector.] {
+		\vspace{-0.4in}
 		\resizebox{0.55\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_ID_track_endcap}}
 	}
 	\caption{Drawings of the inner detector sensors and structural elements traversed by $10 \GeV$ charged particles originating from the interaction point at various angles.}
@@ -307,6 +309,20 @@ The inner detector performs tracking charged particles traversing the $2~\mbox{T
 The pixel detector consists of 1744 identical pixel sensors, each measuring $19\times63~\mbox{mm}^2$ and containing $144\times 328=47232$ pixels, for a total of $80.4\times 10^6$ pixels. The size of the pixels is dictated by the front-end electronics: in 128 of the 144 columns, the pixels have a pitch of $50\times 400 \micron^2$, while the remaining 16 columns have a pitch of $50\times 600 \micron^2$. For space reasons, eight pairs of pixels in each column are ganged to a common readout, giving a total of 46080 readout channels per sensor.
 
  The sensors are $256~\micron$-thick detectors constructed from $n$-type wafers, with high dose positive ($p^+$) and negative ($n^+$) dose regions implanted on each side of a wafer. Initially, the asymmetric depletion region at the $p^+-n$ junction is operated in reverse bias with a voltage of $150~\mbox{V}$, and fills the sensor bulk volume, shown in figure~\ref{fig:ATLAS-pixel-normal}. The charge carriers generated by the passage of an ionizing particle through the bulk are collected at the $n^+$ side of the sensor, where the readout electronics are bump-bonded to the pixel. The nominal threshold for readout is about 3,500 electrons, which a minimally ionizing particle cross a pixel leaves a signal of about 20,000 electrons. However, over time, radiation damage induces type inversion in the bulk, after which the junction moves to the $n^+$ side of the sensor and the depletion zone grow from the pixel side, as shown in figure~\ref{fig:ATLAS-pixel-inverted}. The double-sided construction thus allows the pixel sensors to continue operating after type inversion.
+
+ \begin{figure}[htbp]
+ 	\centering
+ 	\subfloat[ Before type inversion.] {\label{fig:ATLAS-pixel-normal}
+ 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_pixel_depletion_zones_normal}}
+ 	}
+ 	\hfill
+ 	\subfloat[ After type inversion.] {\label{fig:ATLAS-pixel-inverted}
+ 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_pixel_depletion_zones_inverted}}
+ 	}
+ 	\caption{Comparison of depletion zones in $n^+$-in-$n$ pixel sensors before and after type inversion. Before type inversion, the electrical field grows from the bottom side, reaching the pixel implants at full depletion. After type inversion, the depletion zone grows from the pixel side, allowing operation even if the bulk is not fully depleted.}
+ 	\label{fig:ATLAS-pixel}
+ \end{figure}
+ 
 
 The pixel sensors are assembled into pixel modules, shown in figure~\ref{fig:ATLAS-pixel-module}. Each modules contains 16 front-end electronics chips each with 2880 electronics channels. The front-ends are bump bonded to the pixel sensor elements. The other side of the pixel sensor tile is glued to a flexible polyimide printed circuit board (\emph{flex-hybrid}) that houses the module control chip.
 
@@ -410,16 +426,16 @@ The calorimeter system occupies the volume directly exterior to the solenoid mag
 \begin{figure}
 	\centering
 	\subfloat[ Material before the calorimeters.] {
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_before_calo_csc03}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_before_calo_csc03}}
 	}\hfill
 	\subfloat[ Material in the crack region between the barrel and end-cap cryostats.] {
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_crack_csc03}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_crack_csc03}}
 	} \\
 	\subfloat[ Material in and before the barrel LAr calorimeter.] {
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_layers_barrel_csc03}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_layers_barrel_csc03}}
 	}\hfill
 	\subfloat[ Material in and before the end-cap LAr calorimeters.] {
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_layers_endcap_csc03}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch3-experiment/x0_layers_endcap_csc03}}
 	}
 	\caption{Cumulative amounts of material versus $|\eta|$ in front of and within the LAr electromagnetic calorimeter, in terms of radiation lengths, $X_0$.}
 	\label{fig:ATLAS-calorimeters-X0}
@@ -427,7 +443,7 @@ The calorimeter system occupies the volume directly exterior to the solenoid mag
 
 \begin{figure}
 	\centering
-	\resizebox{0.6in}{!}{\includegraphics{figures/ch3-experiment/lambda_csc03}}
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/lambda_csc03}}
 	\caption{Cumulative amounts of material versus $|\eta|$ due to each calorimeter in terms of interaction lengths, $\lambda$. The material in front of the calorimeters is also shown in tan.}
 	\label{fig:ATLAS-calorimeters-lambda0}
 \end{figure}
@@ -451,12 +467,12 @@ The electromagnetic calorimeter consists of two half-barrels ($0<\eta<\pm1.475$)
 \end{figure}
 
 
-The two half-barrels occupy the region $2.8~\mbox{m}<R<4~\mbox{m}$ and $0~\mbox{m}<z<\pm3.2~\mbox{m}$. Each has 1024 lead plates with a thickness of $1.53~\mm$ for $|\eta|<0.8$ and $1.13~\mm$ for $|\eta|>0.8$. The barrels are divided into 16 modules, each covering an azimuthal angle of $\Delta \phi = 22.5^{\circ}$. Each module has three layers in depth to provide a rough measurement of the longitudinal profile of the electromagnetic showers. The segmentation of each layer in $\Delta\eta\times\Delta\phi$ is shown in table~\ref{table:ATLAS-LAr-segmentation}. The fine segmentation of the front layer aids particle identification, and, in combination with the middle layer, allows for a measurement of photon trajectories. A LAr half barrel prior to installation is shown in figure~\ref{fig:LAr-barrel}.
+The two half-barrels occupy the region $2.8~\mbox{m}<R<4~\mbox{m}$ and $0~\mbox{m}<z<\pm3.2~\mbox{m}$. Each has 1024 lead plates with a thickness of $1.53~\mm$ for $|\eta|<0.8$ and $1.13~\mm$ for $|\eta|>0.8$. The barrels are divided into 16 modules, each covering an azimuthal angle of $\Delta \phi = 22.5^{\circ}$. Each module has three layers in depth to provide a rough measurement of the longitudinal profile of the electromagnetic showers. The segmentation of each layer in $\Delta\eta\times\Delta\phi$ is shown in table~\ref{table:ATLAS-LAr-segmentation}. The fine segmentation of the front layer aids particle identification, and, in combination with the middle layer, allows for a measurement of photon trajectories. A LAr half barrel is shown in figure~\ref{fig:LAr-barrel}, prior to installation.
 
 \begin{figure}[htbp]
 	\centering
 	\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_LAr_barrel}}
-	\caption{Photograph of a LAr calorimeter half-barrel prior to installation.}
+	\caption{Photograph of a LAr calorimeter half-barrel, prior to installation.}
 	\label{fig:LAr-barrel}
 \end{figure}
 
@@ -569,12 +585,134 @@ FCal1 consists of stacked copper plates with $0.27~\mm$ LAr gaps. The electrodes
 
 
 \subsection{Muon Spectrometer}\label{sec:ATLAS-muon-spectrometer}
+The muon spectrometer detects charged particles that penetrate the barrel and end-cap calorimeters. It forms the exterior of the ATLAS detector, occupying the volume of the barrel toroid with four large wheels on each side of the interaction point. Using a combination of several technologies, the muon spectrometer performs precision measurements of muon momenta in the region $|\eta|<2.7$, with a design resolution of 10\% for $1 \TeV$ tracks, and also provides triggering on muons for $|\eta|<2.4$. 
+
+The structure of the muon spectrometer is shown in figures~\ref{fig:ATLAS-muon-spectrometer-layout} and \ref{fig:ATLAS-muon-spectrometer-schematic}. The barrel systems are arranged in three layers with radii of approximately $5~\mbox{m}$, $7.5~\mbox{m}$, and $10~\mbox{m}$, mounted inside and on the eight coils of the barrel toroid magnet with approximate octagonal symmetry. The end-cap systems form four large wheels, located before and after the end-cap toroid magnets at positions of $|z|\approx 7.4~\mbox{m},\ 10.8~\mbox{m},\ 14~\mbox{m},$ and $21.5~\mbox{m}$. 
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_muons_sketch}}
+	\caption{3D model of the ATLAS muon spectrometer. The four different types of detector (MDTs, CSCs, RPCs, and TGCs) and the toroid magnets are shown.}
+	\label{fig:ATLAS-muon-spectrometer-layout}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ $R$-$z$ view of the muon spectrometer barrel. The barrel contains three layers, each with eight large and eight small chambers.] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_MS_layout_rz}}
+	}
+	\subfloat[ $R$-$\phi$ view of the muon spectrometer. The MDTs are shown in green and cyan, the CSCs in yellow, the TGCs in magenta, and the RPCs in white.] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_MS_layout_rphi}}
+	}
+	\caption{Layout of the chambers of the muon spectrometer.}
+	\label{fig:ATLAS-muon-spectrometer-schematic}
+\end{figure}
 
 
 
-\subsection{Trigger System}
+Four different technologies are used for precision measurements and triggering, depending on the location in the detector. Monitored drift tubes (MDTs) perform the precision measurements over most of the volume with $|\eta|<2.7$. Cathode strip chambers (CSCs) replace the MDTs in the innermost wheel for $2.0<|\eta|<2.7$, to handle the high particle flux. Triggering is performed by resistive plate chambers (RPCs) in the barrel ($|\eta|<1.05$) and thin gap chambers (TGCs) in the end-caps. The trigger chambers also supplement the MDT position measurements with the hit coordinate in the non-bending plane. 
+
+\subsubsection{Monitored Drift Tubes}
+The muon spectrometer contains 1088 MDT chambers, covering a total area of $\sim 5500 \mbox{m}^2$. The majority of the MDT chambers are rectangular in the barrel and trapezoidal in the end-caps, and are laid out to optimize the solid angle coverage under the constraints of the magnet coils and other structures in the vicinity of the toroid magnet. Each chamber contains several drift tubes, as shown in figure~\ref{fig:ATLAS-MS-MDT-chamber}: the innermost chambers are divided into two groups of tube layers, called \emph{multilayers}, each with four layers of tubes, while the remaining chambers have two groups of three layers of tubes. 
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_MDT_chamber}}
+	\caption{The mechanical structure of a MDT chamber. Two multilayers, each consisting of three or four rows of drift tubes, are separated by aluminum spaceers. Four optical alignment rays continuously monitor the geometry of the chamber.}
+	\label{fig:ATLAS-MS-MDT-chamber}
+\end{figure}
 
 
+The aluminum drift tubes have a radius of $29.97 \mm$, with a $50 \micron$-diameter tungsten-rhenium wire forming the anode along the axis of the tube. A cross section of a tube is shown in figure~\ref{fig:ATLAS-MS-MDT-xsec}. The operating voltage is $3080 \mbox{V}$, creating a radial electric field which allows for determination of the track position independent of the angle between the track and the tube. The tubes are filled with a mixture of argon and CO$_2$ (93:7) with a high pressure of 3~bar to reduce the impact of diffusion on the resolution. The gas mixture has good aging properties, but suffers from a long drift time, up to $700 \ns$ from the wall to the wire, and exhibits a nonlinear space-drift time relation which degrades the spatial resolution at high counting rates due to positive ions distorting the electric field. 
+
+\begin{figure}
+	\centering
+	\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_MDT_tube_cross_section}}
+	\caption{Cross section of a drift tube, showing the cathode tube, the anode wire, and an illustration of a muon ionizing the gas as it traverses the tube.}
+	\label{fig:ATLAS-MS-MDT-xsec}
+\end{figure}
+
+The average resolution of the drift tubes is $80 \micron$, and the combined resolution of a chamber is $35 \micron$. To achieve this precision, the position of the drift tubes and wires must be known to less than $30 \micron$. Four optical alignment rays inside each MDT chamber continuously monitor the geometry of the chamber with a precision of a few microns, shown in figure~\ref{ATLAS-MS-MDT-chamber}. An inter-chamber optical alignment network monitors the relative positions of chambers relative to their neighbors with a precision of approximately $20 \micron$. The optical alignment is supplemented with track-based alignment algorithms to align the chambers with poor or absent connection to the optical network, the end-caps with respect to the barrel, and the muon spectrometer with respect to the inner detector.
+
+
+
+
+\subsubsection{Cathode Strip Chambers}
+The rate limit for the safe operation of the MDTs is about 150~Hz/\cm$^2$, which is exceeded for $|\eta|>2$ in the first layer of the end-cap at $|z|\approx 7~\mbox{m}$. Accordingly, CSCs are used in this volume of the detector, which can operate up to rates of about 1~kHz/\cm$^2$. Eight large and eight small trapezoidal chambers give full coverage in $\phi$, as shown in figure~\ref{fig:ATLAS-MS-CSC-layout}.  
+
+The CSCs are multiwire proportional chambers, with parallel wires running in the radial direction and the two cathodes finely segmented in perpendicular directions to provide measurements in both the $\eta$ and $\phi$ directions. The perpendicular cathode segmentation provides position measurements in two dimension, aiding the resolution of nearby hits from more than one track. In the bending direction, the segmentation corresponds to a readout pitch of $5.31 \mm$ and $5.56 \mm$ for the large and small chambers, respectively.  The track coordinate is determined from a relative measurement of the charge induced on 3-5 adjacent strips at the peak of the charge distribution, shown schematically in figure~\ref{fig:ATLAS-MS-CSC-charge}. The resolution, dominated by electronic noise in the pre-amplifiers and by the spread of charge along the anode wire due inclined tracks, delta electrons, or a Lorentz force along the wire, is roughly $60 \micron$ per CSC plane. In the non-bending direction, a coarser segmentation leads to a resolution of $5 \mm$. 
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[] {\label{fig:ATLAS-MS-CSC-layout}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_CSC_geometry}}
+	}
+	\subfloat[] {\label{fig:ATLAS-MS-CSC-segmentation}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_CSC_readout_strips2}}
+	}
+	\caption{Left: Layout of the eight large and eight small CSC chambers. Right: Schematic view of the CSC anode wires and perpendicular cathode strips, showing the deposition of charge from a track on several adjacent strips.}
+	\label{fig:ATLAS-MS-CSC}
+\end{figure}
+
+
+\subsubsection{Resistive Plate Chambers}
+Muon triggering in the barrel ($|\eta|<1.05$) is performed by 544 RPCs, which exhibit good spatial and timing resolution and an adequate rate capability of $\sim1~\mbox{kHz}/\cm^2$. The RPCs form three layers, or \emph{stations}, with two on either side of the middle MDT layer and the third on the inner or outer side of the outer MDT layer, for the small and large sectors, respectively. Each station has two independent layers, each providing a measurement of $\eta$ and $\phi$, resulting in six possible measurements for muons passing through three stations. 
+
+An RPC unit consists of two sets of two parallel resistive plates ($2 \mm$-thick phenolic-melaminic plastic laminate) separated by $2 \mm$ by insulating spacers, shown in figure~\ref{fig:ATLAS-MS-RPC-schematic}. The interior is filled with a gas mixture of C$_2$H$_2$F$_4$/Iso-C$_4$H$_{10}$/SF$_6$ (94.7/5/0.3). With an electric field of $4.9~\mbox{kV}/\mm$, muons traversing the gas induce an avalanche towards the anode, which is read out via capacitive coupling to $25$-$35 \mm$-wide copper strips on the exterior face of the RPC. The RPCs achieve a spatial resolution of approximately $10 \mm$ in $z$ and $\phi$, a timing resolution of $1.5 \ns$, and a detection efficiency of $\sim 98\%$. 
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_RPC_structure}}
+	\caption{Cross section of an RPC, showing two units joined to form a single chamber. Each unit has two sets of two resistive plates (grey) separated by insulating spacers (green). The readout strips (magenta) are on the opposite side of the resistive plates from the gas gap. Outside the detecting elements, the volume of the RPC chamber is filled with paper honeycomb. The dimensions are given in millimeters.}
+	\label{fig:ATLAS-MS-RPC-schematic}.
+\end{figure}
+
+\subsubsection{Thin Gap Chambers}
+TGCs provide muon triggering in the end-caps, due to their good timing resolution and high rate capability. The TGCs also provide an azimuthal coordinate measurement, which complements the MDT measurement in the radial direction. Nine TGC disks are installed in total: a doublet mounted near the inner MDT end-cap layer, and a triplet and two doublets near the middle MDT end-cap layer. The disks are divided into two concentric annuli, one covering $1.05\leq |\eta| \leq 1.92$ and the other covering $1.92\leq|\eta|\leq2.4$. 
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ Cross sectional views of a TGC trilepton and a TGC doublet. The dimensions of the gas gaps are enlarged to show their structure.] {\label{fig:ATLAS-MS-TGC-triplet-doublet}
+		\resizebox{0.5\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_TGC_construction}}
+	}
+	\hfill
+	\subfloat[ Closeup view of the TGC structure, showing the anode wires, graphite cathodes, and copper readout strips..] {\label{fig:ATLAS-MS-TGC-structure}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_TGC_structure}}
+	}
+	\caption{The construction of the TGCs.}
+	\label{fig:ATLAS-MS-TGC}
+\end{figure}
+
+The TGCs are multiwire proportional chambers filled with a gas mixture of CO$_2$ and $n$-pentane. The cathode planes are $1.6 \mm$-thick FR4 (Flame Resistant 4) plates, with the interior faces coated with graphite and exterior faces cladded with copper. The triplet TGCs have three layers of wires and two layers of copper readout strips, while the doublet TGCs have two layers each of wires and strips, as shown in figure~\ref{fig:ATLAS-MS-TGC-triplet-doublet}. The radial coordinate is measured by the anode wire groups and the azimuthal coordinate by the radial cathode strips. The chambers are ``thin'' in that the wire to cathode distance, $1.4 \mm$, is shorter than the wire-to-wire distance of $1.8 \mm$, as shown in figure~\ref{fig:ATLAS-MS-TGC-structure}. The anode wires have a diameter of $50 \micron$ and are operated at a potential of $2.9~\mbox{kV}$. The small wire-to-wire distance and high electric field near the anode wires contribute to a good timing resolution of $4 \ns$. The spatial resolution, $2$-$6 \mm$ in $R$ and $3$-$7 \mm$ in $\phi$, is determined by the ganging of readouts: due to the direction of the magnetic field, achieving the required momentum resolution at fixed transverse momentum requires finer resolution at larger pseudorapidities. 
+
+
+\subsection{Trigger and Data Acquisition}
+During a typical data-taking run during 2012, the LHC beam contains 1377 bunches with a typical bunch spacing of $50 \us$, giving an event rate of $\sim 20~\mbox{MHz}$. In contrast, the ATLAS data acquisition system records events at roughly $400~\mbox{Hz}$. The filtering of events is performed by the three-level ATLAS triggering system. The first level, L1, is implemented in hardware, and reduces the event rate to less than $75~\mbox{kHz}$. The second level, L2, is implemented in software, and reduces the event rate to less than $3.5~\mbox{kHz}$ using regions of interest (RoIs) identified by the L1 trigger. The final level of the trigger, the Event Filter, is also implemented in software, and reduce the event rate to less than $400~\mbox{Hz}$ using the full event information. 
+
+The L1 trigger reduces the event rate from $20~\mbox{MHz}$ to $75~\mbox{kHz}$ using a limited subset of the event data. While the L1 trigger is processing an event, the full event data is stored in buffers on the detector. Due to the limited buffer size, the L1 latency must be less than $2.5 \us$, of which $1 \us$ is used by the cable propagation time. Therefore, the trigger is implemented in custom hardware processors. The block diagram for the trigger is shown in figure~\ref{fig:ATLAS-trigger-L1-block}. The inputs to the trigger include the RPC and TGC detectors in the muon spectrometer and all of the calorimeter system.  Two primary systems, the L1 Calorimeter Trigger and the L1 Muon Trigger, select events based on the presence of high-$\Et$ objects or significant total event activity. These include high-$\pt$ muons, electron and photons, jets, hadronically decaying tau leptons, large missing transverse energy, and large total transverse energy. 
+
+The L1 Calorimeter Trigger uses about 7,000 analogue trigger towers with a reduced granularity, $\Delta\eta\times\Delta\phi=0.1\times0.1$ for most of the detector. Two subsystems run in parallel: the cluster processor identifies electrons/photons and hadronically decay tau lepton candidates with $\Et$ above a programmable set of thresholds, while the jet/energy-sum processor identifies jets and calculates the total scalar transverse energy and $\Etmiss$ using $\Delta\eta\times\Delta\phi=0.2\times0.2$ blocks of calorimeter cells. Isolation cuts can be applied as well, limiting the energy allowed in the towers surrounding the object of interest and, in the case of electrons/photons, in the hadronic towers behind the electromagnetic towers. 
+
+The L1 Muon Trigger searches for a coincidence of hits in consecutive muon trigger stations within a \emph{road}, roughly corresponding to the path of a muon from the interaction point through the detector. The $\pt$ threshold is encoded in the width of the road, with a narrower road corresponding to a higher $\pt$ threshold. For low-$\pt$ muons in the RPCs, the algorithm begins with hits in the second RPC doublet, called the \emph{pivot plane}. The trigger requires a hit in the first RPC doublet, within the road defined by the interaction point and the hit in the pivot plane. The high-$\pt$ algorithm is similar, requiring a hit along the road in the third RPC doublet as well as the first two.In the end-caps, the pivot plane is established by the outermost layer of TGCs, with the road corresponding to the path of an infinite-momentum muon originating from the interaction point. To reject backgrounds from random coincidences, stricter requirements are imposed on the number of coincident hits in the TGC doublets and triplets.
+
+The muon and calorimeter triggers pass their decisions along with the corresponding data to the Central Trigger Processor (CTP). The CTP communicates the total trigger decision to the front ends on the detector, including special triggers such as random triggers or the minimum bias trigger based on scintillator counters. In the event of a passed trigger, the event data is passed to the L2 trigger. The CTP also manages the \emph{luminosity blocks}, an index representing the time at which an event was recorded with coarse ($\sim1$ minutes) granularity. A luminosity block is the shortest time interval for which the integrated luminosity can be determined such that the total uncertainty is dominated by systematic effects, rather than limited statistics. In the event of a detector failure, this index allows the rejection of a minimal set of affected events. 
+
+The L2 trigger reduces the event rate from a maximum of $75~\mbox{kHz}$ from the L1 trigger to less than $3.5~\mbox{kHz}$. The trigger is implemented in software, and uses only the subset of the event data within the RoIs identified by the L1 trigger, typially $1$-$2\%$ of the total. After a successful L1 trigger, the data corresponding to the RoIs, stored in the detector-specific front end electronics, are accumulated in the RoI builder via 1574 readout links. The RoI builder combines the 1574 event fragments into a single data structure, which is passed to the L2 processing farm. At each step of a given trigger algorithm targeting particular signatures, only the relevant RoIs are analyzed. If no signatures remain valid, the event is rejected. Hence the full RoI information is transferred only for events which pass the L2 selection criteria. The typical L2 latency is about $40 \ms$.
+
+Finally, the event filter reduces the event rate to the final $\sim400~\mbox{Hz}$ read out from the detector to disk. Also implemented in software, it runs the same algorithms as used in the offline event reconstruction using the full event information. Based on the objects used for triggering, the triggered events are categorized into one or more \emph{data streams}. The data streams and other data computed by the event filter are appended to the event data, which are then transferred to CERN’s central data-recording facility for storage. An example of the event filter rates from the various streams during a single data-taking run is shown in figure~\ref{fig:ATLAS-trigger-EF-rates-singlerun}. The monthly average rates of each stream during 2012 are shown in figure~\ref{fig:ATLAS-trigger-EF-rates-2012}.
+
+\begin{table}[htbp]
+	\centering
+	\subfloat[ Event filter rates for a single data-taking run.] {\label{fig:ATLAS-trigger-EF-rates-singlerun}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_trigger_streamrates_singlerun.eps}}
+	}
+	\hfill
+	\subfloat[ Average monthly event filter rates during 2012.] {\label{fig:ATLAS-trigger-EF-rates-2012}
+		\resizebox{0.55\textwidth}{!}{\includegraphics{figures/ch3-experiment/ATLAS_trigger_streamrates_2012}}
+	}
+	\caption{The rates of recording events from the event filter for different data streams.}
+	\label{fig:ATLAS-trigger-EF-rates}
+\end{table}
 
 
 \printbibliography

@@ -12,6 +12,14 @@
 \usepackage{subfig}
 \usepackage{multirow}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 % Double spacing, if you want it.
 % \def\dsp{\def\baselinestretch{2.0}\large\normalsize}
@@ -27,6 +35,16 @@
 
 \hyphenation{mar-gin-al-ia}
 
+\renewcommand{\bibsection}{%
+\part*{\bibname}
+\bibmark
+\ifnobibintoc\else
+\phantomsection
+\addcontentsline{toc}{part}{\bibname}
+\fi
+\prebibhook}
+
+\nobibintoc
 
 \begin{document}
 
