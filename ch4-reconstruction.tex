@@ -1,20 +1,23 @@
 \chapter{Dataset and Event Reconstruction}\label{ch:dataset-reconstruction}
-The ATLAS Run I data were recorded from 2011 to 2012, with a center-of-mass collision energy of $\sqrt{s}=7 \TeV$ in 2011 and $\sqrt{s}=8 \TeV$ during 2012. Integrated luminosities of $\int L dt=5.46 \ifb$, and $22.8 \ifb$ were delivered by the LHC in the two years, of which $5.08 \ifb$ and $21.3 \ifb$ were recorded by the ATLAS detector. The recorded luminosity accounts for the DAQ inefficiency, as well as the \emph{warm start} period after the declaration of stable beams, during which the tracking detectors are ramped to high voltage and the pixel detector preamplifiers are turned on.After masking data recorded while one or more detector subsystems were not functioning properly, $4.57 \ifb$ and $20.3 \ifb$ of data are considered ready for physics analyses. The volume of delivered, recorded, and physics-ready data are shown as a function of time in figure~\ref{fig:reco-luminosity-runI}. 
-
-During Run I, the LHC was operated with a bunch spacing of $50 \ns$. The increases in the data-taking rate generally correspond to an increase in the number of simultaneous $pp$ interactions per bunch crossing, or \emph{pileup}, denoted $\mu$. The distribution of pileup values for 2011 and 2012 data are shown in figure~\ref{fig:reco-luminosity-pileup}. 
-
 \begin{figure}[htbp]
 	\centering
+	\hfill
 	\subfloat[] {\label{fig:reco-luminosity-runI}
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch4-reconstruction/intlumivstime2011-2012DQ}}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch4-reconstruction/intlumivstime2011-2012DQ.eps}}
 	}
 	\hfill
 	\subfloat[] {\label{fig:reco-luminosity-pileup}
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/ch4-reconstruction/mu_2011_2012-dec.eps}}
 	}
+	\hfill
 	\caption{Left: The cumulative delivered, recorded, and physics-ready integrated luminosity versus time in 2011-2011. Right: Distribution of the number of interactions per bunch crossing in events recorded in 2011-2012.}
 	
 \end{figure}
+
+The ATLAS Run I data were recorded from 2011 to 2012, with a center-of-mass collision energy of $\sqrt{s}=7 \TeV$ in 2011 and $\sqrt{s}=8 \TeV$ during 2012. Integrated luminosities of $\int L dt=5.46 \ifb$, and $22.8 \ifb$ were delivered by the LHC in the two years, of which $5.08 \ifb$ and $21.3 \ifb$ were recorded by the ATLAS detector. The recorded luminosity accounts for the DAQ inefficiency, as well as the \emph{warm start} period after the declaration of stable beams, during which the tracking detectors are ramped to high voltage and the pixel detector preamplifiers are turned on. After masking data recorded while one or more detector subsystems were not functioning properly, $4.57 \ifb$ and $20.3 \ifb$ of data are considered ready for physics analyses. The volume of delivered, recorded, and physics-ready data are shown as a function of time in figure~\ref{fig:reco-luminosity-runI}. 
+
+During Run I, the LHC was operated with a bunch spacing of $50 \ns$. The increases in the data-taking rate generally correspond to an increase in the number of simultaneous $pp$ interactions per bunch crossing, or \emph{pileup}, denoted $\mu$. The distribution of pileup values for 2011 and 2012 data are shown in figure~\ref{fig:reco-luminosity-pileup}. 
+
 
 \section{Luminosity Measurement}\label{sec:luminosity-measurement}
 The instantaneous luminosity at a $pp$ collider is given by:
@@ -29,16 +32,16 @@ where $R_{\mathrm{inel}}$ is the rate of inelastic $pp$ collisions, and $\sigma_
 	\mathcal{L} = \frac{\mu f_r n_b}{\sigma_{\mathrm{inel}}}.
 \end{equation}
 
-The instantaneous luminosity is measured by ATLAS using several detectors and algorithms, which in general measure the interaction rate per crossing with some efficiency $\epsilon$: $\mu_{\mathrm{vis}} = \epsilon \mu < \mu$. Defining the \emph{visible cross section} to be $\sigma_{\mathrm{vis}}\equiv \epsilon \sigma_{\mathrm{vis}}$, the instantaneous luminosity as measured by a particular detector is:
+The instantaneous luminosity is measured by ATLAS using several detectors and algorithms, which have some efficiency $\epsilon$ to detect a $pp$ interaction, and measure the \emph{visible} number of interactions per bunch crossing, $\mu_{\mathrm{vis}} = \epsilon \mu$. Defining the visible cross section to be $\sigma_{\mathrm{vis}}\equiv \epsilon \sigma_{\mathrm{vis}}$, the instantaneous luminosity as measured by a particular detector is:
 
 \begin{equation}\label{eqn:reco-luminosity-detected}
 	\mathcal{L} = \frac{\mu_{\mathrm{vis}} f_r n_b}{\sigma_{\mathrm{vis}}}.
 \end{equation}
 
-The visible cross section is essentially a calibration constant for a particular detector, which is determined during dedicated calibration runs where the luminosity is determined directly from the geometry of the beams. 
+The visible cross section is a calibration constant for a particular detector, which is determined during dedicated calibration runs in which the luminosity is determined directly from the geometry of the beams. The calibration procedure is described in section~\ref{sec:reco-luminosity-calibration}. 
 
 \subsection{Luminosity Detectors}\label{sec:reco-luminosity-detectors}
-ATLAS performs many redundant luminosity measurements using several detectors. The detectors fall into two categories. \emph{Event counting} detectors have a binary response, returning a 0 or 1 depending on whether a bunch crossing satisfies a set of criteria defined to detect an inelastic $pp$ collision. Such detectors essentially measure the first two bins of the Poisson-distributed number of interactions per bunch crossing, from which the mean $\mu$ be derived. \emph{Hit counting} detectors, on the other hand, count some quantity proportional to the number of interactions in a given bunch crossing, such as the number of particles identified by a particular detector subsystem. A hit counting measurement typically yields more information about an event at the cost of additional systematic uncertainties.
+ATLAS performs many redundant luminosity measurements using several detectors. The detectors fall into two categories. \emph{Event counting} detectors have a binary response, returning a 0 or 1 depending on whether a bunch crossing satisfies a set of criteria defined to detect an inelastic $pp$ collision. Such detectors essentially measure $p(0;\,\mu)$, the probability that an event falls in the first bin of a Poisson distribution, from which the mean $\mu$ be calculated. \emph{Hit counting} detectors, on the other hand, count some quantity proportional to the number of interactions in a given bunch crossing, such as the number of particles identified by a particular detector subsystem. A hit counting measurement typically yields more information about an event at the cost of additional systematic uncertainties.
 
 Ideally, a luminosity detector exhibits the following features: 
 
@@ -47,7 +50,7 @@ Ideally, a luminosity detector exhibits the following features:
 	\item The efficiency of the detector should also be constant over long timescales.
 	\item The response of the detector and the readout should be very fast. As the LHC bunches are not identical, with different numbers of protons and emittances, it is useful to measure luminosity for each colliding bunch pair, as often as once every $25 \ns$. The colliding bunch pairs are labeled by the bunch crossing identification number, or BCID; consecutive BCIDs are separated by $25 \ns$. 
 	\item The efficiency should be high enough to yield sufficient statistics. The data are used in increments as shorts at $20~$s, so the statistics collected over this time scale scale should be high enough that the total uncertainty is dominated by systematic effects. On the other hand, for event counting detectors, the efficiency should not be so high that the detector is saturated. The determination of the mean of a Poisson distribution from the first two bins requires that the first two bins both have adequate statistics. 
-	\item The backgrounds to a detector must be understood. Detectors can be sensitive to a wide range of phenomena aside from $pp$ collisions, which should not be counted as luminosity. These include \textcolor{red}{(afterglow, beam-gas interactions, ...)}. 
+	\item The backgrounds should be low and understandable. Detectors can be sensitive to a wide range of phenomena aside from $pp$ collisions, which should not be counted as luminosity. For example, some detectors observe a phenomenon called afterglow, characterized by a small amount of activity in the BCIDs immediately following a collision and likely due to photons from nuclear de-excitations in the detector material. The background can be estimated using the observation that the level of afterglow background is proportional to the luminosity in the colliding BCIDs, and decays away with several time constants. Collisions between a beam and residual gas in the beam pipe, called beam-gas interactions, can also contribute a low level of background, and can be estimated by observing non-colliding bunches passing through the interaction region.
 \end{itemize}
 
 The central value of the luminosity measurement is determined by the \emph{beam conditions monitor} (BCM), which fulfills most of these desired criteria. The BCM consists of eight diamond-based particle detectors, four on each side of the interaction point at $|z|=184 \cm$ and $|\eta|=4.2$. The detectors are have a physical cross section of approximately $1 \cm^2$, and are arranged in a cross pattern, with two readouts corresponding to the vertical and horizontal pairs. The design goal of the BCM is to monitor backgrounds and to trigger a beam dump if beam losses towards the inner detector become too high; accordingly, the detector has a very fast readout, and can provide a bunch-by-bunch luminosity measurement with a time resolution of $\sim 0.7 \ns$. The luminosity is measured using event counting, and can be measured using any combination of the readouts. The configurations used require hits in either the vertical pair (BCMV) or the horizontal pair (BCMH), and either coincident hits on both sides of the interaction point (AND) or a single hit on either side (OR). The small size of the readouts leads to an efficiency of approximately 7\% in the OR configuration, which allows for sufficient statistics without saturating the detector. 
@@ -113,7 +116,7 @@ where $\mu_{\mathrm{vis}}^{\mathrm{MAX}}$ is the visible interaction rate per bu
 
 As an example, the 2011 $pp$ calibration is derived from two pairs of scans in the $x$- and $y$-directions, performed during the same LHC fill on 15 May 2011. The beams had 14 colliding bunch pairs, $\sim0.8\times 10^11$ protons per bunch, $\beta^*=1.5~\mbox{m}$, and a crossing angle of $\alpha=240~\mu\mbox{rad}$. The resulting transverse beam size is approximately $\sigma_{x}\approx\sigma_{y}\approx 40 \micron$, and the average number of interactions per cross with head-on collisions is $\mu\approx 2.3$. The scan was performed in 25 equal steps over a displacement range of $\delta=\pm 233 \micron$.
 
-An example scan curve for the BCMV\_OR algorithm is shown in figure~\ref{fig:reco-vdm-curve}. The vdM scan curve is fitted with a Gaussian plus a constant, which is used as $R_{x,y}(\delta)$ to calculate $\Sigma_{x,y}$ in equation~\ref{eqn:reco-luminosity-CapSigma}. $\mu_{\mathrm{vis}}^{\mathrm{MAX}}$ is determined from the peak of the fitted function. The measured $\sigma_{\mathrm{vis}}$ values for both scans and all 14 colliding bunch pairs are shown in figure~\ref{fig:reco-vdm-sigmavis-bcm-2011}. The luminosity-weighted mean $\sigma_{\mathrm{vis}}$ is taken as the central value, while the scatter of the 28 measurements, which is not consistent with statistical variation, is taken as a systematic uncertainty on the reproducibility of the measurement. 
+An example scan curve showing $\mu_{\mathrm{vis}}^{\mathrm{sp}}\equiv \mu_{\mathrm{vis}}/(n_1n_2)$ as a function of transverse beam separation for the BCMV\_OR algorithm is shown in figure~\ref{fig:reco-vdm-curve}. The vdM scan curve is fitted with a Gaussian plus a constant, which is used as $R_{x,y}(\delta)$ to calculate $\Sigma_{x,y}$ in equation~\ref{eqn:reco-luminosity-CapSigma}. $\mu_{\mathrm{vis}}^{\mathrm{MAX}}$ is determined from the peak of the fitted function. The measured $\sigma_{\mathrm{vis}}$ values for both scans and all 14 colliding bunch pairs are shown in figure~\ref{fig:reco-vdm-sigmavis-bcm-2011}. The luminosity-weighted mean $\sigma_{\mathrm{vis}}$ is taken as the central value, while the scatter of the 28 measurements, which is not consistent with statistical variation, is taken as a systematic uncertainty on the reproducibility of the measurement. 
 
 The visible cross sections for several algorithms using during 2011 are shown in table~\ref{table:reco-luminosity-sigmavis-summary}, along with the efficiency assuming a total inelastic cross section of $\sigma_{\mathrm{inel}}= 71.34~\mbox{mb}$~\cite{TheATLASCollaboration:2014jo}.
 
@@ -184,6 +187,7 @@ Uncertainties on the luminosity measurement over the 2011 data-taking period tot
 
 \begin{figure}
 	\centering
+	\hfill
 	\subfloat[] {\label{fig:reco-luminosity-comparisons-long-term-stability}
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch4-reconstruction/luminosity_long_term_stability}}
 	}
@@ -191,6 +195,7 @@ Uncertainties on the luminosity measurement over the 2011 data-taking period tot
 	\subfloat[] {\label{fig:reco-luminosity-comparisons-pileup}
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/ch4-reconstruction/luminosity_pileup_muscan}}
 	}
+	\hfill
 	\caption{Left:  Comparison of luminosities measured by different algorithms as a function of time in 2011. Right:  Comparison of luminosities measured by different algorithms as a function of the average number of interactions per bunch cross, $\mu$, as measured by BCM\_VOR. The data were taken during a single run by separating the beams in the transverse direction, similar to a van der Meer scan.}
 	\label{fig:reco-luminosity-comparisons}
 \end{figure}
@@ -353,7 +358,7 @@ An example scan curve from the May 2011 vdM scan is shown in figure~\ref{fig:rec
 		\resizebox{3in}{!}{\includegraphics{figures/ch4-reconstruction/c_musp_y_BCID81_NTrkCut5}}
 	}\\
 	\caption{$\mu_{\textrm{vis}}^{(sp)}$ vs. beam separation, with single gaussian plus constant fits, and pulls.}
-	\label{fig:musp}
+	\label{fig:reco-luminosity-vertex-vdm}
 \end{figure}
 
 \ 
@@ -378,7 +383,7 @@ The September 2011 pileup scan is used to derive systematic uncertainties due to
 	\centering
 	\resizebox{6in}{!}{\includegraphics{figures/ch4-reconstruction/c_muscan}}
 	\caption{Percent difference between luminosities measured by vertex counting and BCM\_VOR. The central values are taken to be the average between BCIDs 200 and 999.}
-	\label{fig:mu-scan-final}
+	\label{fig:reco-luminosity-vertexing-muscan}
 \end{figure}
 
 \ 
@@ -402,31 +407,48 @@ A comparison of luminosity measurements from BCM, LUCID, and vertex counting is 
 Events are reconstructed using a wide variety of algorithms designed to identify the products of collisions at the center of the detector. The algorithms transform the raw data read out from the detector -- hits in the inner detector silicon layers and TRT straws, energy deposits in calorimeter cells, and hits in the muon stations -- into a list of physics objects and their energies or momenta. This section describes the techniques used to identify the objects used in the analyses described in chapters~\ref{ch:model-independent} and \ref{ch:resonance}. 
 
 
-\subsection{Electrons and Photons}\label{sec:event-reconstruction-electrons}
-The reconstruction of electrons and photons begins with an energy deposit in the LAr calorimeter. 
+\subsection{Electrons}\label{sec:event-reconstruction-electrons}
+The signature of an electron is an energy deposit in the electromagnetic LAr calorimeter and a track reconstructed by the inner detector pointing at the calorimeter energy cluster.  The electron reconstruction algorithm is seeded by clusters of energy in the calorimeter, with $\Et>2.5 \GeV$ in a window of size $\Delta\eta\times\Delta\phi=0.075\times0.025$. Clusters are classified as photons, not used in the analyses described here, if they have no associated tracks, or if they have one or more tracks consistent with a photon conversion. Clusters matched to a single, well-reconstructed track are classified as electrons. The clusters in the barrel and endcaps are then rebuilt from an area corresponding to $3\times7$ and $5\times$ cells in the second calorimeter layer, respectively. Finally, the cluster energy is determined using a simulation-based calibration scheme. 
 
-The signature of an electron is an energy deposit in the electromagnetic LAr calorimeter and an associated track reconstructed by the inner detector pointing at the calorimeter energy cluster. The energy measurement is taken from the calorimeter, while the direction is taken from the track.
+The electron's trajectory is determined from the inner detector track. The default track reconstruction, which models a helical trajectory with scattering, does not account for the ``highly non-gaussian probability density function of the electron energy loss'' due to bremsstrahlung\cite{Cornelissen:2007vba,TheATLASCollaboration:2012vr}. To improve the modeling of electron trajectories, electron tracks are refit with a Gaussian sum filter (GSF) algorithm. 
 
-The analyses described in this dissertation apply a set of cuts on the properties of reconstructed electrons to discriminate real electrons from backgrounds, such as misidentified jets. The variables used are:
-\begin{itemize}
-	\item Good quality track
-	\item High threshold TRT hits
-	\item Match between track and calorimeter cluster
-	\item Hadronic leakage
-	\item ... Anything else you forgot. Shower shape.
-\end{itemize}
+The electron's energy measurement is taken from the calorimeter. The resolution of the energy measurement is parametrized as:
 
-Several working points are defined, giving different levels of efficiency and background rejection. The analyses here use the tightest working point for the signal electrons, and the looser working points for background estimation (see reducible section).
+\begin{equation}
+	\frac{\sigma(E)}{E} = \frac{a}{\sqrt{e}} \oplus \frac{b}{E} \oplus c,
+\end{equation}
 
-The signature of a photon is similar, based on an energy deposit in the electromagnetic calorimeter. The algorithm identifies both photons which directly shower in the calorimeter, resulting in an energy deposit with no associated track,  and photons which convert in the material in front of the calorimeter, leaving an energy deposit with two tracks pointing at the energy deposit.
+where $a$, $b$, and $c$ are the sampling, noise, and constant terms, respectively, and generally vary with $\eta$. The design value of the sampling term is $a\approx 9-10\%$ in the central region, and worsens at higher pseudorapidities due to the increased material in front of the calorimeters. The noise term, due to electronics noise and pileup effects, is approximately $b = 350 \times \cosh\eta \MeV$. The constant term dominates the resolution at high energies, with a design value of $c=0.7\%$. 
 
+Various properties of reconstructed electrons are used discriminate real electrons from backgrounds, such as misidentified jets. Three sets of cuts are defined with increasing levels of background rejection, called loose, medium, and tight; the analyses described here use the tight set of cuts to define the signal electrons. The loose set of cuts impose requirements on the shower shape in the first and second calorimeter layers, the quality of the track, the fraction of energy in hadronic calorimeter cells behind the LAr cells, and the spatial match of the track and the calorimeter cluster. The medium set of cuts consist of more stringent versions of the loose cuts, and additionally require a small track impact parameter with respect to the primary vertex, a minimum number of high-threshold TRT hits associated with the track, and a hit in the innermost pixel layer. The tight set of cuts again consist of more stringent versions of the medium cuts, with an additional cut on the ratio of the cluster energy to the track momentum ($E/p$) and a veto of candidates associated to a photon conversion vertex. 
 
+\subsubsection{Efficiency}
+
+\subsubsection{Energy Scale and Resolution}
 
 \subsection{Muons}\label{sec:event-reconstruction-muons}
+Muons are identified by matching tracks in the muon spectrometer to tracks in the inner detector. The requirements differ based on the instrumentation available in the vicinity of the muon candidate. The analyses described here use \emph{combined} muons, consisting of tracks reconstructed independently in the inner detector and the muon spectrometer. The muon momentum is determined from a statistical combination of the two track's parameters and their corresponding covariance matrices. Combined muons have the highest purity, but suffer from a loss of acceptance near $\eta\sim 0$, where the muon spectrometer has gaps to accommodate services for the inner detector and calorimeters, and $1.1<\eta<1.3$, where some trajectories only pass through one muon station due to incomplete installation. The remaining categories are \emph{standalone} muons, consisting of a track ony in the muon spectrometer; \emph{segment-tagged} muons, consisting of an inner detector track and one or more track segments in the MDT or CSC chambers; and \emph{calorimeter-tagged} muons, consisting of an inner detector track matched to a calorimeter energy deposit consistent with the passage of a muon. These categories recover efficiency in regions of the detector with less instrumentation at the cost of lower muon purity, and are not used in the analyses described here. 
+
+For all categories of muons, the inner detector track is required to have at least 1 pixel hit, at least 5 SCT hits, at most 2 pixel or SCT holes, and at least 9 TRT hits for $0.1<|\eta|<1.9$. Energy losses in the calorimeter due to ionization, bremsstrahlung, and electron pair production must also be taken into account. 
+
+\subsubsection{Efficiency}
+
+\subsubsection{Energy Scale and Resolution}
+
 
 \subsection{Tau Leptons}\label{sec:event-reconstruction-taus}
 
+\subsubsection{Efficiency}
+
+\subsubsection{Energy Scale and Resolution}
+
+
+
 \subsection{Jets}\label{sec:event-reconstruction-jets}
+
+%\subsubsection{Efficiency}
+
+\subsubsection{Energy Scale and Resolution}
 
 \subsubsection{$B$-tagging}\label{sec:event-reconstruction-bjets}
 
