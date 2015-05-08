@@ -505,7 +505,7 @@ The muon momenta in simulation are scaled and smeared to match the momentum scal
 where Det=ID or MS, the $\Delta r_m^{\mathrm{Det}}(\eta,\phi)$ parametrize the momentum resolution smearing, the $s_n^{\mathrm{Det}}(\eta,\phi)$ parametrize the scale corrections, and the $g_m$ are normally-distributed random variable with mean 0 and width 1\footnote{Note that this equation does not apply to cases where the resolution is data is better than that in simulation. In these cases, the resolution difference is included in the positive ID and MS variations, and the effect of the positive variation on the physical observables is symmetrized about the nominal value.}. The constant scale correction term, $s_0^{\mathrm{MS}}$, accounts for the difference between data and simulation in the energy lost by muons before reaching the muon spectrometer. $s_0^{\mathrm{ID}}$ is set to zero due to the negligible energy loss before the inner detector. The linear terms, $s_1^{\mathrm{ID,MS}}$, models discrepancies between data and simulation in the magnetic field integral and the radial dimension of the detector. The resolution corrections $\Delta r_m^{\mathrm{Det}}$ represent deviations from the resolution in data, which is parametrized empirically as:
 
 \begin{equation}
-	\frac{\sigma(\pt)}{\pt} = \frac{r_0}{\pt} \oplus r_1 \plus r2\cdot\pt,
+	\frac{\sigma(\pt)}{\pt} = \frac{r_0}{\pt} \oplus r_1 \oplus r2\cdot\pt,
 \end{equation}
 
 where the $r_0$ term describes energy lost by muons as they traverse the material of the detector, the $r_1$ term describes multiple scattering, magnetic field inhomogeneities, and local radial displacements, and the $r_2$ term describes intrinsic resolution effects due to the spatial resolution of the hit measurements and residual misalignment. 
@@ -520,7 +520,8 @@ The corrections are derived from $J/\Psi\rightarrow\mu\mu$, $\Upsilon\rightarrow
 
 
 \subsection{Tau Leptons}\label{sec:event-reconstruction-taus}
-The signature of tau leptons is significantly more complex than electrons and muons due to the fact that they decay to a diverse set of final states. 
+The signature of tau leptons is significantly more complex than electrons and muons due to the fact that they decay to a diverse set of final states. Tau leptons have a proper decay length of $87 \um$, and therefore typically decay before reaching the active layers of the detector. The leading decay modes are shown in table~\ref{table:reco-tau-decays}. $35.2\%$ of tau leptons decay to an electron or muon plus two neutrinos. The remaining $64.8\%$ decay to hadrons plus a neutrino. The hadronic decay modes contain one charged pion in $72\%$ of the decays, and three charged pions in $22\%$ of the decays; the majority of the remainder contain one or more charged kaons. The hadronic decay modes also frequently contain neutral pions, with $78\%$ containing at least one neutral pion. 
+
 
 
 \subsubsection{Efficiency}
