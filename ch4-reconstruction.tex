@@ -495,7 +495,7 @@ The efficiencies are measured using tag-and-probe techniques similar to those de
 \end{figure}
 
 
-\subsubsection{Energy Scale and Resolution}
+\subsubsection{Energy Scale and Resolution}\label{sec:reco-muon-energymomentum}
 The muon momenta in simulation are scaled and smeared to match the momentum scale and resolution in data. The corrections are derived in bins of $\eta$ and $\phi$, with boundaries chosen to minimize the variation of the correction in each bin, and are applied separately to the transverse momenta measured by the inner detector (ID) and the muon spectrometer (MS). Specifically, the correction is implemented as:
 
 \begin{equation}
@@ -520,22 +520,63 @@ The corrections are derived from $J/\Psi\rightarrow\mu\mu$, $\Upsilon\rightarrow
 
 
 \subsection{Tau Leptons}\label{sec:event-reconstruction-taus}
-The signature of tau leptons is significantly more complex than electrons and muons due to the fact that they decay to a diverse set of final states. Tau leptons have a proper decay length of $87 \um$, and therefore typically decay before reaching the active layers of the detector. The leading decay modes are shown in table~\ref{table:reco-tau-decays}. $35.2\%$ of tau leptons decay to an electron or muon plus two neutrinos. The remaining $64.8\%$ decay to hadrons plus a neutrino. The hadronic decay modes contain one charged pion in $72\%$ of the decays, and three charged pions in $22\%$ of the decays; the majority of the remainder contain one or more charged kaons. The hadronic decay modes also frequently contain neutral pions, with $78\%$ containing at least one neutral pion. 
+The signature of tau leptons is significantly more complex than electrons and muons due to the fact that they decay to a diverse set of final states. Tau leptons have a proper decay length of $87 \um$, and therefore typically decay before reaching the active layers of the detector. The leading decay modes are shown in table~\ref{table:reco-tau-decays}. $35.2\%$ of tau leptons decay to an electron or muon plus two neutrinos. The remaining $64.8\%$ decay to hadrons plus a neutrino. The hadronic decay modes contain one charged pion in $72\%$ of the decays, and three charged pions in $22\%$ of the decays; the majority of the remainder contain one or more kaons. The hadronic decay modes also frequently contain neutral pions, with $78\%$ containing at least one neutral pion. 
+
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{}
+		\hline
+		Decay & Branching Fraction \\
+		\hline
+		$e^- \overline{\nu}_e \nu_{\tau}$ & $17.83 \pm 0.04$ \\
+		\hline
+		$\mu^- \overline{\nu}_{\mu} \nu_{\tau}$ & $17.41 \pm 0.04$ \\
+		\hline
+		$\pi^- \nu_{\tau}$ & $(10.83 ±0.06$ \\
+		\hline
+		$\pi^- \pi^0 \nu_{\tau}$ & $25.52 ±0.09$ \\
+		\hline
+		$\pi^- \pi^0\pi^0\nu_{\tau}}$ & $ 9.30 ±0.11$ \\
+		\hline
+		$\pi^-\pi^+\pi^-\nu_{\tau}$ & $9.31 ±0.06$ \\
+		\hline
+		$\pi^-\pi^+\pi^-\pi^0\nu_{\tau}$ & $4.62 ±0.06$ \\
+		\hline
+	\end{tabular}
+	\caption{Leading branching fractions of the tau lepton to final states with leptons or pions. Most of the remaining decays are to final states with kaons. From~\cite{pdg-tau}.}
+	\label{fig:reco-tau-decays}
+\end{table}
+
+In this dissertation, no effort is made to identify or reconstruct leptonic tau decays, regarding them only as electrons or muons plus missing transverse energy (see section~\ref{sec:reco-met}). Hadronic tau decays are identified using their visible decay products, namely the neutral and charged hadrons, which are collectively called $\tau_{\mathrm{had-vis}}$. The signature consists of a narrow jet with one or three tracks, called one-prong or three-prong decays, respectively. Up to two $\pi^0\rightarrow\gamma\gamma$ decays are also included. The reconstruction and identification proceeds as follows~\cite{TheATLASCollaboration:2014tga}:
+
+\begin{itemize}
+	\item Jets reconstructed using the anti-$k_t$ algorithm with a distance parameter of $R=0.4$, built from TopoClusters calibrated with a local hadronic calibration. Jets with $\pt>10 \GeV$ and $|\eta|<2.5$ are used as seeds for tau lepton candidates.
+	\item For each jet seed, the tau vertex is chosen to be the primary vertex with the greatest $\sum \pt$ of tracks in the region $\Delta R <0.2$ of the jet seed. This vertex defines the $\tau_{\mathrm{had-vis}}$ direction, i.e. is used to determine the $\eta$ and $\phi$ of the tau candidate. 
+	\item $\pi^0$ candidates, consisting of a pair clusters within $\Delta R<0.2$ of the tau candidate, are identified using a BDT-based algorithm. Up to two $\pi^0$s are considered.
+	\item A multivariate algorithm based on boosted decision trees (BDTs) is used to discriminate hadronic tau decays from the backgrounds, primarily due to jets with low track multiplicity. The BDTs use many input variables describing the energy cluster, the spatial arrangement and energy of the tracks, and the neutral pions. Separate BDTs are trained for one-prong and three-prong tau decays, using simulated $Z\rightarrow\tau\tau$, $W\rightarrow \tau\nu$, and $Z'\rightarrow\tau\tau$ decays for signal and collision data samples for the background. Three working points with different identification efficiencies are defined, called loose, medium, and tight. The performance of the identification algorithms is shown in figure~\ref{fig:reco-tau-efficiency}. 
+	\item An additional BDT-based algorithm rejects one-prong tau candidates consistent with an electron. The most powerful discriminating variables are the ratio of high- to low-threshold TRT hits on the track and the ratio of energies deposited in the electromagnetic and hadronic calorimeters.
+\end{itemize}
+
+\begin{figure}
+	\centering
+	Figure 5 from tau paper.
+	\label{fig:reco-tau-efficiency}
+\end{figure}
+
+
+\subsubsection{Efficiency}\label{sec:reco-tau-efficiency}
+
+\subsubsection{Energy Scale and Resolution}\label{sec:reco-tau-energymomentum}
 
 
 
-\subsubsection{Efficiency}
-
-\subsubsection{Energy Scale and Resolution}
-
-
-
-\subsection{Jets}\label{sec:event-reconstruction-jets}
+\subsection{Jets}\label{sec:reco-jets}
 
 %\subsubsection{Efficiency}
 
 \subsubsection{Energy Scale and Resolution}
 
-\subsubsection{$B$-tagging}\label{sec:event-reconstruction-bjets}
+\subsubsection{$B$-tagging}\label{sec:reco-bjets}
 
-\subsection{Invisible Particles}\label{sec:event-reconstruction-met}
+\subsection{Invisible Particles}\label{sec:reco-met}
