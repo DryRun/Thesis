@@ -173,12 +173,82 @@ Finally, data-driven corrections and systematic uncertainties on the tau energy 
 
 
 \section{Jets}\label{sec:reco-jets}
+Jets play an important complementary role to leptons in the analyses described in the following chapters. The new physics scenarios considered often produce jets in addition to the three required leptons. If the new particles are colored, as in strongly produced supersymmetry, then high-$\pt$ jets can be produced in cascade decays; alternatively, if the new particles decay via the weak interaction, then the decays will often contain hadronically decaying weak bosons. From the background point of view, due to the colored initial state in $pp$ collisions, jets are produced copiously at the LHC. Hence despite the stringent lepton identification cuts, jets misidentified as leptons or containing semileptonic decays can consitute a significant source of backgrounds to trilepton final states.
 
+The reconstruction of jets in the calorimeter, shown in figure~\ref{fig:reco-jet-reconstruction-flowchart}, is based on topological clusters of energy. Clusters are formed by grouping together calorimeter cells based on their signal-to-noise ratio, $S/N$, where the $N$ includes electronic noise and contributions from pileup interactions. Cells with $S/N>4$ form the cluster seeds, which are then expanded to include all connected cells with $S/N>2$. Finally, cells along the perimeter with $S/N>0$ are added to the cluster. The cluster energies are then calibrated according to two complementary scales, leading to two classes of jets: the electromagnetic (EM) scale assumes that the cell energy is due to an electromagnetic shower, while the local cell signal weighting (LCW) method classifies energy deposits as electromagnetic or hadronic in origin. 
 
-%\subsection{Efficiency}
+Jet finding algorithms then group the calibrated clusters into collections of jets. The algorithm used in this dissertation is the anti-$k_{\mathrm{t}}$ algorithm~\cite{Cacciari:2011ma} with a distance parameter of $R=0.4$, implemented in \textsc{FastJet}~\cite{Cacciari:2012br}. A distance measure between objects, $d_{i,j}$, is defined as
+
+\begin{align}
+	d_{i,j} &= \mathrm{min}(k_{\mathrm{t}, i}^{2p}, k_{\mathrm{t}, j}^{2p}) \frac{\Delta_{ij}^2}{R^2}, \\
+	d_{i,B} &= k_{\mathrm{t},i}^{2p}
+\end{align}
+
+where $k_{\mathrm{t,i}}$ is the transverse momentum of object $i$, $\Delta_{i,j}=\sqrt{(y_i-y_j)^2+(\phi_i-\phi_j)^2}$ is the distance in rapidity ($y_{i,j}$) and azimuthal angle ($\phi_{i,j}$), and $p=-1$. $d_{i,B}$ denotes the distance between objects and the beam. The algorithm combines objects sequentially by considering the smallest distance in the event. If the smallest distance is a $d_{i,j}$, then objects $i$ and $j$ are combined. If the smallest distance is a $d_{i,B}$, then object $i$ is classified as a jet and removed from the object list. The algorithm continues until there are no objects left. 
+
+Loose quality cuts are applied to reject events with jets due to non-collision sources, such beam-gas collisions between protons in one beam and the residual gas in the beam pipe, beam-halo events due to collisions with upstream collimators, muons from cosmic rays, and calorimeter noise. The cuts have an efficiency of above 99.8\% for retaining real jets. 
+
 
 \subsection{Energy Scale and Resolution}
+The jet energy is calibrated in several steps, as shown in figure~\ref{fig:reco-jet-calibration-flowchart}. First, pileup and origin corrections are applied. Energy contributions from pileup interactions in the same or nearby bunch crossings are subtracted based on simulation, using the number of reconstructed vertices in the event, the expected average number of interactions per crossing, the jet area, and the median $\pt$ density of jets in the event. The geometry of the jet is corrected to point from the primary event vertex, rather than the nominal center of the ATLAS detector. 
+
+The energy and pseudorapidity of the jet are initially calibrated based on the relationship between jets reconstructed from calorimeter clusters and jets reconstructed from truth particles in simulation. Then, in situ corrections are applied to the calibrated jets to correct for effects not described by the initial simulation-based calibration. The corrections are based on balancing the transverse momenta of jets against other well-calibrated objects. Jets in the central region, with detector rapidity $|\eta_{\mathrm{det}}|<1.2$, are calibrated against photons and leptonically decaying $Z$ bosons. Jets with high transverse momentum, $\pt>210 \GeV$, are also calibrated using multijet events, balancing the high-$\pt$ jet against several low-$\pt$ jets. Jets with $1.2<|\eta_{\mathrm{det}}|<2.8$ are calibrated against central jets with $|\eta_{\mathrm{det}}|<0.8$; due to a lack of statistics with which to derive the calibration, more forward jets, with $\pm2.8<\eta_{\mathrm{det}}<4.5$, are assigned the same calibration as jets with $\eta_{\mathrm{det}}=\pm2.8$. The in situ calibrations shift the jet energy in data down by about $2\%$ for $\pt<100 \GeV$, and decreases with increasing $\pt$. 
+
+A large number of systematic uncertainties are assigned to the in situ calibration procedure, related to the modeling of the detector and physics processes in simulation and to the in situ methods themselves. The uncertainties are summarized in figure~\ref{fig:reco-jes-uncertainty}. Additionally, systematic uncertainties related to the pileup correction, high-$\pt$ jets, and differences simulation settings are assigned where appropriate.
+
+\begin{figure}[htbp]
+	\centering
+	Figure 64 from jet paper
+	\label{fig:reco-jes-uncertainty}
+\end{figure}
+
+\subsection{Pileup Suppression}
+Jets due to pileup interactions can be suppressed using the track information, at the cost of introducing some $\mu$-dependent jet reconstruction inefficiency. For a given jet and primary vertex, the \emph{jet vertex fraction} (JVF) is defined as the ratio of the $\sum \pt$ of tracks associated with the jet and matched to the primary vertex to the $\sum\pt$ of all tracks associated to the jet, shown schematically in figure~\ref{fig:jvf-cartoon}. Specifically, letting $\mathcal{T}$ be the set of tracks associated to the jet, the JVF is defined as:
+
+\begin{equation}\label{eqn:jvf}
+	\mathrm{JVF}=\frac{\sum_{i\in\mathcal{T}} p_{\mathrm{T},i} \Theta_V(i)} {\sum_{i\in\mathrm{jet}} p_{\mathrm{T},i} },
+\end{equation}
+
+where $\Theta_V(i)=1$ if the track $i$ is matched to the primary vertex and $0$ otherwise. If $\mathcal{T}$ is empty, then $JVF\equiv -1$. In this dissertation, the primary vertex is chosen to have the highest $\sum \pt^2$ of tracks, and $JVF>0.5$ is required for jets with $20 \GeV<\pt<50 \GeV$. 
+
 
 \subsection{$B$-tagging}\label{sec:reco-bjets}
+The model-independent trilepton analysis (chapter~\ref{ch:model-independent}) also makes use of the tagging of jets due to $b$ quarks. Jets containing $b$ quarks have several features which distinguish them from jets due to light quarks or gluons. $B$ hadrons have proper decay lengths of approximate $0.5 \mm$, long enough to be observed in the form of tracks or vertices reconstructed away from the primary interaction point. They also have large masses compared to other hadrons, leading to wider jets with more particles. 
+
+The algorithm used to tag $b$-jets is an artificial neural network called the \emph{MV1} algorithm~\cite{MV1}. The neural network uses three simpler likelihood-based algorithms as inputs~\cite{TheATLASCollaboration:2009ut,TheATLASCollaboration:2011wh}: 
+
+\begin{itemize}
+	\item \textbf{IP3D}: Uses the transverse and longitudinal impact parameters of the tracks associated with a jet.
+	\item \textbf{SV1}: Attempts to reconstruct a secondary vertex from the tracks associated with a jet. The most sensitive variable is the decay length significance between the secondary vertex and the primary event vertex. Additionally, the algorithm uses the invariant mass of tracks associated with the secondary vertex, the ratio of the energy of tracks assigned to the vertex to the energy of all tracks within the jet, and the number of two-track vertex candidates within the jet. 
+	\item \textbf{JetFitter}: Constructs a line connecting the primary vertex with one or more points associated with $b$- or $c$-hadron decays using a Kalman filter. The algorithm makes use of variables similar to the SV1 algorithm, along with the flight length significance between decays. Note that the algorithm does not require secondary vertices, allowing for the identification of decays with only one track. 
+\end{itemize}
+
+The MV1 algorithm is trained on simulated data, using $b$-jets as signal and light quark jets as background, and returns a tag weight for each jet. The tag weight is used to establish working points with a given signal efficiency and background rejection power, as shown in figure~\ref{fig:reco-b-tagging-efficiency-rejection}. This dissertation uses the working point with $70\%$ signal efficiency. The performance of the algorithm as a function of transverse momentum is shown in figure~\ref{fig:reco-b-tagging-efficiency-pt}.
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[] {\label{fig:reco-b-tagging-efficiency-rejection}
+		figure 1
+	}
+	\hfill
+	\subfloat[] {\label{fig:reco-b-tagging-efficiency-pt}
+		figure 2a
+	}
+	\caption{Performance of the MV1 $b$-tagging algorithm. The inclusive signal efficiency versus background rejection is shown at left. The signal and background efficiencies at the 70\% working point are shown as a function of $\pt$ at right.}
+	\label{fig:reco-b-tagging-efficiency}
+\end{figure}
+
 
 \section{Invisible Particles}\label{sec:reco-met}
+Neutrinos interact only via the weak interaction, and hence escape the detector without interacting with any of the detector components. The same is true for any new stable, neutral, and colorless particles, such as the lightest supersymmetric particle in $R$ parity-conserving scenarios or sterile neutrinos. The presence of such particles can only be inferred through the overall imbalance of the transverse momentum of the other visible collision products, $\metvec$\footnote{The longitudinal momentum imbalance, $E_{z}^{\mathrm{miss}}$, is not useful in $pp$ collisions due to the unknown longitudinal momentum of the initial colliding partons.}. 
+
+The missing transverse momentum is defined as the negative vector sum of the visible objects in the event~\cite{TheATLASCollaboration:2012jy,TheATLASCollaboration:2013ua}. The energies are mostly determined from calorimeter measurements, except for muons. To avoid using calorimeter energy deposits multiple times, the algorithm assigns energy to deposits to a single object according to a strict order: electrons are identified first, followed by photons, hadronically decaying tau leptons, jets, and muons. Depending on the analysis requirements, the energy of a given physics object can be determined using the full reconstruction algorithm, or the energy deposits can be calibrated to the EM or LCW scales. Finally, topological clusters and tracks not assigned to physics objects are included in $\metvec$ calculation as the so-called soft term. The missing transverse energy is given by:
+
+\begin{equation}\label{eqn:reco-met}
+	E_{x(y)}^{\mathrm{miss}} = -\left(E_{x(y)}^{e} + E_{x(y)}^{\gamma} + E_{x(y)}^{\tau} + E_{x(y)}^{\mathrm{jets}} + E_{x(y)}^{\mu} + E_{x(y)}^{\mathrm{soft}}\right),
+\end{equation}
+
+where each term on the right represents the total momentum of the reconstructed objects in the $x$ or $y$ directions.
+
+The measured $\metvec$ receives contributions from sources besides invisible particles, including calorimeter noise, particles falling in insensitive regions of the detector, energy mismeasurements, and pileup interactions. These effects are mitigable to varying degrees. Particles falling outside the detector acceptance contribute irreducibly to the $\metvec$ resolution. For physics objects like electrons or jets, the noise and pileup contributions are suppressed by the reconstruction algorithms and identification cuts. To mitigate the noise and pileup contributions to the soft term, the cells are grouped into topological clusters. Rejecting events where the $\metvec$ is parallel or antiparallel to the physics objects can mitigate the impact of energy mismeasurements. 
+
