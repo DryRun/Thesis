@@ -252,3 +252,73 @@ where each term on the right represents the total momentum of the reconstructed 
 
 The measured $\metvec$ receives contributions from sources besides invisible particles, including calorimeter noise, particles falling in insensitive regions of the detector, energy mismeasurements, and pileup interactions. These effects are mitigable to varying degrees. Particles falling outside the detector acceptance contribute irreducibly to the $\metvec$ resolution. For physics objects like electrons or jets, the noise and pileup contributions are suppressed by the reconstruction algorithms and identification cuts. To mitigate the noise and pileup contributions to the soft term, the cells are grouped into topological clusters. Rejecting events where the $\metvec$ is parallel or antiparallel to the physics objects can mitigate the impact of energy mismeasurements. 
 
+
+
+
+\section{Object Selection}\label{sec:model-independent-object-definitions}
+The analyses described in this dissertation search for energetic Standard Model particles produced the decays of new heavy particles. The Standard Model particles are typically produced promptly at the location of the $pp$ interaction, and are well-separated from other objects in the event. These properties can be used to suppress background from  
+
+After reconstruction, additional cuts are made on the leptons, jets, and $\metvec$ used in the analyses. The cuts 
+
+\subsubsection{Leptons}\label{sec:model-independent-lepton-definitions}
+
+The analysis requires at least three reconstructed electrons, muons, or hadronically decaying tau leptons, as described in section~\ref{sec:object-reconstruction}. A summary of the lepton selections is shown in table~\ref{table:lepton-selections}. Leptons are required to satisfy the following requirements:
+
+\begin{itemize}
+
+	\item \underline{\textbf{Transverse momentum}}: Electrons and muons must have $\pt>15 \GeV$, while hadronically decaying tau leptons must have $\pt>20 \GeV$. The transverse momentum cut is driven by the availability of triggers with which to perform the data-driven reducible background estimate, described in section~\label{sec:fake-factors}. 
+
+	\item \underline{\textbf{Geometrical acceptance}}: Electrons are required to have $|\eta|<2.47$, excluding the transition region $1.37<|\eta|<1.52$ between the barrel and end-cap calorimeters. Muons and tau leptons are required to have $|\eta|<2.5$.
+
+	\item \underline{\textbf{Particle identification}}: To suppress the reducible backgrounds, the leptons must satisfy strict requirements related to particle identification, as described in section~\ref{sec:object-reconstruction}. Electrons candidates must satisfy the tight++ set of identification cuts. Electrons are neglected if they fall in a region affected by the presence of a dead front end board in the first or second sampling layer, a dead high voltage supply, or a masked cell in the core. Muons are required to be \emph{combined}, with associated hits in the inner detector and muon spectrometer. Specifically, 
+	\begin{itemize}
+	  \item A B-layer hit (if expected).
+	  \item $\geq1$ pixel hit and $\geq5$ SCT hits, including any dead sensors along the trajectory.
+	  \item $<3$ total holes in the pixel and SCT. 
+	  \item \textcolor{red}{Needs more explanation} If $0.1 < |\eta| < 1.9$, require $n_{\mathrm{TRT}}^{\mathrm{hits}}+n_{\mathrm{TRT}}^{\mathrm{outliers}} > 5$ and $n_{\mathrm{TRT}}^{\mathrm{outliers}} < 0.9 \times (n_{\mathrm{TRT}}^{\mathrm{hits}}+n_{\mathrm{TRT}}^{\mathrm{outliers}})$,
+	 % \item Else if $|\eta| < 0.1$ or $|\eta| > 1.9$ and $n_{\mathrm{TRT}}^{\mathrm{hits}}+n_{\mathrm{TRT}}^{\mathrm{outliers}} > 5$, then require $n_{\mathrm{TRT}}^{\mathrm{outliers}} < 0.9 \times (n_{\mathrm{TRT}}^{\mathrm{hits}}+n_{\mathrm{TRT}}^{\mathrm{outliers}})$.
+	\end{itemize}
+
+	Finally, tau leptons must satisfy the \texttt{ BDT-tight} selection criteria.
+
+	\item \underline{\textbf{Impact parameter}}: The inner detector track associated with electrons and muons must be consistent with originating from the event primary vertex. The transverse impact parameter significance, defined as the transverse impact parameter $d_0$ divided by its uncertainty $\sigma_{d_0}$, is required to satisfy $\frac{d_0}{\sigma_{d_0}}<3$. Similarly, the longitudinal impact parameter $z_0$ is required to satisfy $z_0\sin\theta < 0.5~\mm$. These requirements suppress leptons from semileptonic heavy flavor decays. 
+
+	\item \underline{\textbf{Isolation}}: To further reduce the impact of non-prompt and misidentified leptons, the leptons are required to be isolated from other activity in the event. The cuts on electrons and muons are similar, and limit the amount of nearby activity as measured by inner detector tracks and calorimeter energy deposits:
+
+	\begin{itemize}
+		\item For both electrons and muons, a cut is applied on \verb.ptcone30., the sum of transverse momenta of tracks associated to the same primary vertex as the lepton within a cone of $\Delta R<0.3$. 
+		\item For muons, a cut is applied on \verb.Etcone30., the scalar sum of transverse energies of calorimeter cells within $\Delta R<3.0$ of the muon track. 
+		\item For electrons, a cut is applied on \verb.TopoEtcone30., the sum of topological calorimeter clusters within a cone of $\Delta R < 3.0$. The use of topological clusters reduces the impact of pileup and out-of-cone leakage. 
+	\end{itemize}
+
+	All isolation variables are required to be less than $10\%$ of the lepton transverse momentum for leptons with $\pt<100~\mbox{GeV}$, and less than $10~\mbox{GeV}+0.01\times \pt$ for leptons with $\pt\geq 100~\mbox{GeV}$. 
+\end{itemize}
+
+\begin{table}[h]
+	\footnotesize
+		\begin{tabular}{ccc}
+			Cut & Electrons & Muons \\
+			\hline
+			Object ID & Tight++ & Combined Tight \\
+			Leading (trigger) $\ET/\pt$ & $\ET>26~\mbox{GeV}$ & $\pt>26~\mbox{GeV}$ \\
+			Subleading $\ET/\pt$ & $\ET>15~\mbox{GeV}$ & $\pt>15~\mbox{GeV}$ \\
+			Trigger Acceptance & $(|\eta|<2.47)\ \&\&\ !(1.37<|\eta|<1.52)$ & $|\eta|<2.4$ \\
+			Acceptance & $(|\eta|<2.47)\ \&\&\ !(1.37<|\eta|<1.52)$ & $|\eta|<2.5$ \\
+			Calo. Isolation & \verb.TopoEtcone30. $<\left\{\begin{array}{ccl} 0.1\times \ET & : & \ET < 100~\mbox{GeV} \\ 10~\mbox{GeV}+0.01\times \ET & : & \ET>100~\mbox{GeV} \end{array}\right.$ & \verb.Etcone30. $<\left\{\begin{array}{ccl} 0.1\times \pt & : & \pt < 100~\mbox{GeV} \\ 10~\mbox{GeV}+0.01\times \pt & : & \pt>100~\mbox{GeV} \end{array}\right.$ \\
+			Track Isolation & \verb.ptcone30. $<\left\{\begin{array}{ccl} 0.1\times \ET & : & \ET < 100~\mbox{GeV} \\ 10~\mbox{GeV}+0.01\times \ET & : & \ET>100~\mbox{GeV} \end{array}\right.$ & \verb.ptcone30. $<\left\{\begin{array}{ccl} 0.1\times \pt & : & \pt < 100~\mbox{GeV} \\ 10~\mbox{GeV}+0.01\times \pt & : & \pt>100~\mbox{GeV} \end{array}\right.$ \\
+			Track $d_0$ & $\frac{d_0}{\sigma_{d_0}}<3$  \\
+			Track $z_0$ & $z_0\sin\theta<0.5~\mbox{mm}$  \\
+		\end{tabular}
+	\caption{Detailed list of lepton selections.}
+	\label{table:lepton-selections}
+\end{table}
+
+\subsubsection{Jets and Missing Transverse Energy}\label{sec:model-independent-jets-met}
+
+Jets are reconstructed from topological clusters using the \antikt\ jet algorithm~\cite{Cacciari:2008gp} with a distance parameter of $R = 0.4$ and full four-momentum recombination and are calibrated with a local cluster weighting (LCW) algorithm ({AntiKt4LCTopoJets})~\cite{ATLAS-CONF-2010-053}. The LCW algorithm determines if a topological cluster in the calorimeter is of hadronic or electromagnetic origin, and applies the appropriate energy correction. The jet response also depends on pileup conditions; this is accounted for using the jet area subtraction method provided by the JetEtMiss group~\cite{JetEtmissRecommendations2012}.
+
+Jets are required to have $\pt>30~\mbox{GeV}$, in order to limit the presence of pileup jets. For the geometrical acceptance, jets must lie in the range $|\eta|<4.5$, so that the jet falls within instrumented regions of the detector. Pileup jets are additionally suppressed with a cut on the jet vertex fraction: the $\sum \pt$ of tracks within the jet cone and associated with the selected primary vertex must be at least $50\%$ of the $\sum \pt$ of all tracks within the jet cone~\cite{jvf}. 
+
+Jets consistent with originating from the decay of a $b$-hadron are identified using the MV1 algorithm~\cite{MV1}, with an efficiency of $80\%$. 
+
+The missing transverse momentum, $\Etmiss$, is calculated using the \texttt{ MET\_Egamma10NoTau\_RefFinal} algorithm. Calorimeter cells associated with electrons or photons with $\pt>10 \GeV$ are calibrated specifically to that object; cells associated with tau leptons are not calibrated as tau leptons due to the change in the energy calibration for the objects used in the data-driven reducible background estimate~\ref{sec:fake-factors}. 
