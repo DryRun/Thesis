@@ -1,0 +1,426 @@
+\chapter{Physics at the Energy Frontier}\label{ch:theory}
+% "modern parlance" kind of sucks. Maybe say, in the words of a recent major funding report?
+Today's particle physics is roughly divided into three disciplines, the frontiers of energy, intensity, and cosmology. The three genres are classifications of experimental techniques:  the energy frontier uses particle accelerators to produce new particles in high-energy collisions; the intensity frontier investigates rare processes using intense particle beams; and the cosmic frontier analyzes the contents of the universe, such as the distribution of matter or the cosmic microwave background, to determine the physics responsible for the evolution of the universe from the Big Bang to today. All three frontiers contribute vital discoveries which form the foundation of our understanding of fundamental physics. 
+
+The Large Hadron Collider, or LHC, is the current flagship experiment of the energy frontier, capable of producing proton-proton collisions with a center-of-mass energy of $\sqrt{s}=14~\mbox{TeV}$. Accounting for the composite nature of the proton, these collisions give access to phenomena with characteristic energies approximately up to the TeV scale, which couple in some fashion to quarks or gluons. The program of study divides into two categories: confirmation and measurement of the Standard Model, and searches for new phenomena beyond the Standard Model. The former category consists of observation and measurement of the particles and interactions of the Standard Model, especially concerning the top quark and the physics of electroweak symmetry breaking. The latter comprises a diverse array of searches for new particles hypothesized to address deficiencies of the Standard Model. This chapter describes the theories underlying the LHC's exploration of physics at the TeV scale. Emphasis is placed on theories predicting the production of several charged leptons, which are the subject of the analyses described in chapters~\ref{ch:model-independent} and \ref{ch:trilepton-resonance-search}. 
+
+
+
+\section{The Standard Model}
+\subsection{Introduction and Historical Development}
+The Standard Model of particle physics is a theoretical framework describing the dynamics and interactions of the known elementary particles under the electromagnetic, weak, and strong forces. The theory is a gauge theory describing a wide range of phenomena in the language of Quantum Field Theory. Particles are described as excitations of quantum fields, whose properties are defined by their representations under the Lorentz group and the gauge groups associated with the electroweak and strong forces. Each quantum field associated a particle carries a spin quantum number, $s=\frac{n}{2}$ for $n\in \mathbb{Z}_{\geq0}$, which indexes its representation under the Lorentz group. Matter particles, or \emph{fermions}, are associated with fields with $s=\frac12$. \emph{Bosons} have $s=0$ (scalar bosons) or $s=1$ (vector bosons). 
+
+
+Historically and phenomenologically, the Standard Model consists of two distinct components: the electroweak sector, describing the electromagnetic and weak forces, and the strong sector, describing the behavior of quarks under the strong force. The electroweak sector's development began in the 1930s with quantum electrodynamics (QED), the subject of the Nobel Prize-winning work of Tomonaga, Schwinger, and Feynman~\cite{QED}, among others. QED successfully predicted a number of very precisely measured quantities, including the $g-2$ of the electron~\cite{g-2} and the Lamb shift in hydrogen~\cite{bethe-lamb}. This simple gauge theory, based around the $U(1)$ gauge group, was extended to include a description of the weak force over the next twenty years, which successfully predicted the massive $W^{\pm}$ and $Z^0$ bosons discovered at CERN in 1983~\cite{WZ-discovery}. A key ingredient of the electroweak theory was the introduction of spontaneous symmetry breaking, the mechanism by which the $W^{\pm}$ and $Z$ bosons could acquire nonzero mass without abandoning the underlying symmetry of the theory. As proposed in 1964, independently by Higgs~\cite{higgs}, Brout and Englert~\cite{brout englert}, and Guralnik, Hagen and Kibble~\cite{ghk}, the symmetry breaking occurred in an extra sector of the theory containing a single quantum field $phi$, which interacted with the electroweak force and had a quartic potential energy expression. Assuming a positive quartic coefficient and a negative quadratic coefficient, the ground state of the theory would have a nonzero value of $\phi$, breaking electroweak symmetry. Aside from endowing the $W^{\pm}$ and $Z$ bosons with mass, the extra quantum field also contributed a massive scalar particle to the theory, now known as the \emph{Higgs boson}, $H$. Famously, the early phenomenological investigations of the Higgs pointed out that the particle would be extremely difficult to detect:
+
+\begin{displayquote}
+	We apologize to the experimentalists for having no idea what is the mass of the Higgs boson, unlike the case with charm, and for not being sure of its couplings to other particles, except that they are probably all very small. For these reasons we do not want to encourage big experimental searches for the Higgs boson, but we do feel that people performing experiments vulnerable to the Higgs boson should know how it may turn up~\cite{gaillardnanoellis1975}.
+\end{displayquote}
+
+
+Indeed, a generation of experiments passed before the Higgs boson was discovered, 48 years later by the ATLAS and CMS experiments at the LHC~\cite{atlashiggs, cmshiggs}. 
+
+The strong sector began as a study of the patterns of hadrons observed in cosmic ray and accelerator experiments. The light hadrons were observed to fall into a two-dimension octuplet pattern in isospin and strangeness space (???), a symmetry dubbed ``the eightfold way'' by Murray Gell-Mann. In 1963, Gell-Mann and George Zweig independently suggested an origin for this symmetry in hadronic substructure, namely that the hadrons were composite particles formed from three more fundamental particles, now called the up, down, and strange quarks. This model was quickly disrupted by the observation of the spin-$\frac32$ $\Delta^{+++}$ particle (WHAT ORDER DID THIS HAPPEN IN?), which was composed of three up quarks in the same spin state and therefore would violate Dirac statistics. Han and Nambu, and, independently, Greenburg, proposed an extra quantum number under which the quarks were charged, called \emph{color} and taking on the three discrete values of red, green, and blue. This proposal led to the development of the $SU(3)$ gauge theory now known as quantum chromodynamics, which successfully explains the confinement of quarks into the observed spectrum of hadrons. 
+
+
+\subsection{Gauge Theory}
+
+%Force particles, or \emph{vector bosons}, have spin $s=1$, and obey Bose-Einstein statistics. These consist of twelve gauge bosons associated to the twelve generators of $G_{\mathrm{SM}}$. Matter particles, or \emph{fermions}, have $s=\frac12$, and obey Dirac statistics~\cite{spin-statistics}. The fermions of the Standard Model consist of quarks and leptons. Quarks are charged under the whole gauge group, experiencing both the strong force, which confines them into hadrons, and the electroweak force, responsible for radioactive decays and electromagnetic interactions. Leptons and neutrinos, on the other hand, are charged only under $SU(2)_L\times U(1)_Y$, and experience only the electroweak force. Finally, the Standard Model contains a single scalar boson with $s=0$, called the Higgs boson.
+
+A \emph{gauge theory} is a quantum field theory in which the Lagrangian is invariant under \emph{local transformations} under a gauge group $G$. To give a simple example, consider a single massless fermion field $\psi(x)$. By itself, the dynamics of $\psi$ can be derived from the simple Lagrangian,
+
+\begin{equation}
+	\mathcal{L} = i\overline{\psi}(x) \slashed{\partial} \psi(x),
+\end{equation}
+where $\slashed{\partial}\equiv \gamma^{\mu}\partial_{\mu}$ and $\gamma^{\mu}$ are the $\gamma$-matrices associated with the Lorentz group. We then require that the Lagrangian be invariant under local transformations under the action of $G$:
+ \begin{align*}
+ 	\psi(x) &\rightarrow V(x) \psi(x), \\
+ 	V(x) &= e^{i\alpha(x)^a t^a} \\
+ \end{align*}
+ where $t^a$ are the generators of the Lie algebra of $G$, and $\alpha(x)_a$ are arbitrary continuous functions. The kinetic term in the Lagrangian, $i\overline{\psi}(x)\gamma^{\mu}\partial_{\mu}\psi(x)$, can be made invariant by promoting the simple derivate $\partial_{\mu}$ to a \emph{covariant derivative}, $D_{\mu}$, defined as:
+
+\begin{equation}\label{eqn:covariant-derivative-qcd}
+	D_{\mu} = \partial_{\mu} - i g t^a A^a_{\mu},
+\end{equation}
+
+where $g$ is a coupling constant associated with the gauge interaction, $t_a$ are the generators of the Lie algebra of $G$, and $A^a_{\mu}(x)$ are vector fields associated with the gauge bosons of $G$, which transform under the action of $G$ as:
+
+\begin{equation}
+	A^a_{\mu}(x)t_a \rightarrow V(x) \left(A^a_{\mu}(x)t^a + \frac{i}{g} \partial_{\mu}\right) V^{\dagger}(x) \\
+\end{equation}
+
+For infinitesimal $\alpha(x)^a$, the transformations can be expressed more simply as:
+\begin{align}
+	\psi(x)&\rightarrow (1 + i\alpha^a t^a + \mathcal{O}(\alpha^2))\psi(x) \\
+	A^a_{\mu} &\rightarrow A_{\mu}^a + \frac{1}{g}\partial_{\mu}\alpha^a(x) + f^{abc}A^b_{\mu}\alpha^c + \mathcal{O}(\alpha^2),
+\end{align}
+where $f^{abc}$ are the structure constants of $G$, defined by
+\begin{equation}
+	[t^a,\ t^b] = if^{abc}t^c.
+\end{equation}
+
+Note that the structure constants are zero for Abelian gauge groups, such as $G=U(1)$. The Lagrangian for the gauge theory, including gauge-invariant terms involving $A^a_{\mu}(x)$ itself, is:
+
+\begin{equation}
+	\mathcal{L} = \overline{\psi}(x) (i\slashed{D}) \psi(x) - \frac{1}{2} (F^a_{\mu\nu})^2,
+\end{equation}
+
+where $F_{\mu\nu}^a=\partial_{\mu}A^a_{\nu}(x) - \partial_{\nu} A^a_{\mu}(x) + g f^{abc}A_{\mu}^b A_{\nu}^c$ is the field strength tensor of $A^a_{\mu}(x)$. 
+
+The interactions of the fields $\psi(x)$ and $A^a_{\mu}(x)$ are manifest in the Lagrangian. In this example, the interaction of $\psi$ with $A^a$ is described by the interaction term
+\begin{equation}
+	\mathcal{L}_{\mathrm{int}} = \overline{\psi} \gamma^{\mu}A^a_{\mu}t^a \psi.
+\end{equation}
+
+For non-Abelian gauge groups with nonzero structure constants $f^{abc}$, the square of the field strength tensor also yields cubic and quartic self-interaction terms amongst the $A^a_{\mu}(x)$.
+
+
+
+\subsection{Construction of the Standard Model}
+The Standard Model is a gauge theory with gauge group $G_{\mathrm{SM}}=SU(3)_c\otimes SU(2)_L \otimes U(1)_Y$, roughly corresponding to the strong, weak, and electromagnetic forces, respectively. The theory contains a fermion field for every known matter particle, with various transformation properties under the three Standard Model gauge groups, as summarized in table~\ref{table:standard-model-particles}. The fermions are organized into three generations, each containing an up-type quark, a down-type quark, a lepton, and a neutrino. The generations are identical except for the particles' masses, which are shown in table~\ref{table:fermion-masses}. The bosonic content of the Standard Model consists of a spin-1 boson for each generator of $SU(3)_c\times SU(2)_L \times U(1)_Y$, yielding eight gluons for $SU(3)_c$ and four electroweak gauge bosons for $SU(2)_L\times U(1)_Y$, plus the spin-0 Higgs boson. 
+
+% Consider doing TJ's strategy of describing the basic principles of constructing the SM, a la Iliopolous. 
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{cccccc}
+		 & $Q_L=\left(\begin{array}{c} u_L \\ d_L \end{array}\right)$ & $u_R$ & $d_R$ & $E_L=\left(\begin{array}{c} \nu_L \\ e_L \end{array}\right) $ & $e_R$ \\
+		$SU(3)_c$ & $\mathbf{3}$ &  $\mathbf{3}$ & $\mathbf{3}$ & $\mathbf{1}$ & $\mathbf{1}$ \\
+		$SU(2)_L$ & $\mathbf{2}$ & $\mathbf{1}$ & $\mathbf{1}$ & $\mathbf{2}$ & $\mathbf{1}$ \\
+		$U(1)_Y$ & $\frac16$ & $\frac23$ & $-\frac13$ & $-\frac12$ & $-1$ \\
+	\end{tabular}
+	\caption{Matter particles (fermions) of the Standard Model, their representations under $SU(3)_c$ and $SU(2)_L$, and their charges under $U(1)_Y$.}
+	\label{table:standard-model-particles}
+\end{table}
+
+\begin{table}
+	Fermion masses
+\end{table}
+
+
+\subsection{Strong Sector}
+% Introductory paragraph: Quarks are charged under SU(3), giving three colors of quark times six quark flavors. The strong force confines five of the six into color-neutral hadrons. Write down some examples... like, the strange mesons, for example. 
+
+% Important point 1: confinement. Write down the running of the coupling, and show that it diverges (or at least appears to). Renders perturbation theory ineffective. 
+
+% Important point 2: asymptotic freedom. The flip side of the gauge coupling running is that the coupling decreases with energy, so the theory is perturbative at high energies. 
+
+% Long lifetimes: Quarkonia with low bound state energies have to decay via off-diagonal CKM matrix elements, so charm and bottom mesons often have long lifetimes.
+
+% Very short lifetime: the top quark decays too fast to hadronize. 
+The strong sector of the Standard Model is a non-abelian $SU(3)_c$ gauge theory, describing the interactions of quarks under the strong force. The theory, called \emph{quantum chromodynamics} (QCD), contains the six observed quarks, called the up, down, charm, strange, top, and bottom quarks, as well as eight massless force carriers called gluons. 
+
+QCD describes drastically different phenomena at high and low energies. In the high energy limit, the strength of the interaction goes to zero, and quarks and gluons behave as nearly free particles. At low energies, the strength of the interaction diverges, confining quarks into \emph{hadrons}, bound states that are neutral under the strong force. The behavior emerges from the running of the strong coupling constant, $\alpha_s = \frac{g_s}{4\pi}$, with the energy scale of the interaction, $Q$, as calculated under the renormalization group flow. To one-loop order in $\alpha_s$, the running is given by:
+
+\begin{equation}
+\alpha_s(Q) = \frac{\alpha_s(M)}{1 + (b_0 \alpha_s/2\pi)\log(Q/M)},
+\end{equation}
+
+where $b_0=11-\frac{2}{3}n_f$ for $n_f$ fermion fields. With $n_f=6$, corresponding to the six quark flavors, $\frac{d\alpha_s{Q}}{dQ}<0$; hence the coupling decreases with $Q$. On the other hand, as $Q$ decreases, $\alpha_s(Q)$ increases, diverging at
+\begin{equation}
+Q=M\exp\left(\frac{8\pi^2}{b_0g^2}\right) \equiv \Lambda.
+\end{equation}
+
+Note that the exact nature of the divergence remains an open question; this simple expression results from a one-loop calculation, which becomes unreliable once $\alpha_s$ becomes large. Nonetheless, $\Lambda$ indicates the momentum scale at which the strong interaction becomes strong and confines quarks into hadrons, and has been measured to be $\Lambda \approx 200~\mbox{MeV}$. 
+
+\subsection{Confinement: Hadrons and Jets}
+
+\subsection{Parton Distribution Functions} 
+
+
+\subsection{Electroweak Sector}
+The electroweak sector is a unified description of electromagnetism and weak decays as a gauge theory with gauge group $SU(2)_L\times U(1)_Y$. The theory models a number of phenomena, including:
+\begin{itemize}
+	\item The weak decays of heavy quarks and leptons.
+	\item The nonzero masses of the weak gauge bosons and fermions.
+	\item Flavor violation in weak decays involving charged currents.
+	\item Violation of $C$- and $CP$-symmetry observed in certain decay processes~\cite{Cviolation, cronin, na31, CP-bmesons}.
+\end{itemize}
+
+The underlying theory of the electroweak sector is rather more complicated than the strong sector. $C$ violation is manifest in the construction of the theory: the gauge couplings are \emph{chiral}, with the left- and right-handed components of fermions belonging to different representations of $SU(2)$. Such a symmetry forbids mass terms for the fermions and gauge bosons, in clear conflict with observations. To accommodate fermion and gauge boson masses without abandoning the symmetry, a scalar Higgs field is added with a quartic potential arranged such that the ground state spontaneously breaks the $SU(2)_L$ symmetry. The resulting theory contains a large number of free parameters: two gauge couplings $g$ and $g'$, two constants in the quartic Higgs potential, and X coupling terms between the fermions and the Higgs field.
+
+The Lagrangian can be broken into two pieces, $\mathcal{L} = \mathcal{L}_{\mathrm{sym}} + \mathcal{L}_{\mathrm{Higgs}}$, where the first piece contains terms with only gauge bosons and fermion fields and conserves $SU(2)_L$ symmetry, and the second piece contains terms with Higgs fields and spontaneously breaks $SU(2)_L$ symmetry. 
+
+In the this and the following sections, $W^{a\mu}$ represents the three $SU(2)_L$ gauge fields, $B^{\mu}$ the $U(1)_Y$ gauge field, and $\phi$ the Higgs scalar field, which is a complex $SU(2)_L$ doublet. Assigning the left-handed components of fermions to the doublet $SU(2)_L$ representation and the right-handed components to the singlet presentation, the Standard Model quarks are denoted by $Q_L^i\equiv \left(\begin{array}{c} u^i_L \\ d^i_L \end{array}\right)$, $u_R^i$, and $d_R^i$, where $i=1,2,3$ indicates the generation. Similarly, the leptons are denoted by $E_L^i\equiv \left(\begin{array}{c} \nu_L^i \\ e_L^i \end{array}\right)$ and $e_R^i$; there is no corresponding right-handed neutrino in the theory. 
+
+\subsection{Weak Interactions of Fermions}
+The Lagrangian describing the fermions and gauge bosons is:
+
+\begin{equation}\label{eqn:electroweak-lagrangian}
+	\mathcal{L}_{\mathrm{sym}} =  -\frac{1}{4} \sum_{i=1}^3  \overline{E}_L (i\slashed{D}) E_L + \overline{e}_R(i\slashed{D})e_R + \overline{Q}_L(i\slashed{d})Q_L + \overline{u}_R(i\slashed{D})u_R+\overline{d}_R(i\slashed{D})d_R,
+\end{equation}
+
+where, similarly to equation~\ref{eqn:covariant-derivative-qcd}, the covariant derivative $D_{\mu}$ is given by:
+
+\begin{equation}\label{eqn:covariant-derivative-ew}
+	D_{\mu} = \partial_{\mu} - i g \tau^a W^{a\mu} - i g' Y B^{\mu}.
+\end{equation}
+
+$\tau^a$ are operators corresponding to the action of a given generator of the $SU(2)_L$ Lie algebra, and $Y$ is an operator corresponding to the action of the generator of $U(1)_Y$, which simply returns the hypercharge. For the left-handed doublets in the fundamental representation of $SU(2)_L$, $\tau^a$ can be taken to be the Pauli matrices, $\tau^a=\frac12 \sigma^a$. For right-handed singlets in the trivial representation of $SU(2)_L$, $\tau^a$ are zero, implying that the right-handed fermions do not interact with the $W^{a\mu}$. 
+
+
+
+\subsection{The Higgs mechanism}
+% CITE NAMBU AND HIGGS ET AL
+We first demonstrate the spontaneous breaking of $SU(2)_L$ by the Higgs mechanism. The terms of the Lagrangian involving the Higgs field are:
+\begin{equation}\label{eqn:higg-lagrangian}
+	\begin{multlined}
+		\mathcal{L}_{\mathrm{Higgs}} = |D_{\mu}\phi|^2 - V(\phi^{\dagger}\phi),
+	\end{multlined}
+\end{equation}
+
+with the Higgs potential energy term given by:
+\begin{equation}\label{eqn:higgs-potential}
+	V(\phi^{\dagger}\phi) = \frac12 \mu^2 \phi^{\dagger}\phi + \frac14 \lambda (\phi^{\dagger}\phi)^2.
+\end{equation}
+
+
+The quartic potential induces electroweak symmetry breaking if the quadratic coefficient is negative, i.e. $\mu^2<0$. The potential is then minimized for a nonzero value of $\phi$. Using the $SU(2)_L$ symmetry, we can take vacuum expectation value of $\phi$ to be:
+
+\begin{equation}
+	\langle \phi \rangle = \frac{1}{\sqrt{2}} \left(\begin{array}{c} 0 \\ v \end{array}\right).
+\end{equation}
+ 
+Solving for $v$,
+
+\begin{align}
+	0 &= \frac{dV}{dv}\\
+	&= -\frac12\mu^2 v + \frac14\lambda v^3 \\
+	v &= \frac{2mu^2}{\lambda}.
+\end{align}
+
+Expanding the Higgs field about its expectation value, $\phi$ can be written:
+
+\begin{equation}
+	\phi = U \frac{1}{\sqrt{2}} \left(\begin{array}{c} 0 \\ v+h \end{array}\right),
+\end{equation}
+
+where $U$ is a local $SU(2)$ gauge transformation that can be set to $\mathbf{1}$ by choice of gauge. 
+
+The masses and interactions of various particles arise from simple algebra, expanding the Higgs field about $\langle \phi \rangle$ and identifying the relevant physical states.
+
+\ 
+
+\underline{\textbf{Gauge Bosons}}
+
+The mass terms for the gauge bosons arise from the covariant derivative terms in equation~\ref{eqn:higg-lagrangian}. Expanding the covariant derivates, the relevant mass terms are:
+
+\begin{equation}
+	\Delta\mathcal{L}_{\mathrm{Higgs}} \ni \frac{1}{8} v^2 \left( g^2 (W^1_{\mu}W^{1\mu} + W^2_{\mu}W^{2\mu}) + (g'B_{\mu} - gW^3_{\mu})^2 \right).
+\end{equation}
+
+The physical states are the gauge- and mass-eigenstates,
+\begin{align}
+	W^{\pm}_{\mu} &= \frac{W^1 \mp iW^2}{\sqrt{2}} \\
+	Z^0_{\mu} &= -\sin\theta_W B_{\mu} + \cos\theta_W W_{\mu}^3 \\
+	A_{\mu} &= \cos\theta_W B_{\mu} + \sin\theta_W W_{\mu}^3,
+\end{align}
+
+where $\tan\theta_W = \frac{g'}{g}$. The corresponding masses are:
+\begin{align}
+	m_{W^{\pm}} &= \frac{gv}{2} \\
+	m_{Z^0} &= \frac{gv}{2\cos\theta_W} \\
+	m_{A} &= 0.
+\end{align}
+
+The theory thus predicts a nontrivial relationship between the masses of the gauge bosons, $m_{W^{\pm}}$ and $m_{Z^0}$, and the gauge coupling constants $g$ and $g'$.
+
+\textcolor{red}{TALK ABOUT THE COUPLINGS TO QUARKS AND LEPTONS.}
+
+\ 
+\underline{\textbf{Fermion Masses and Flavor Non-Conservation}}
+
+The fermion masses arise from the Yukawa coupling terms between the fermions and the Higgs field,
+\begin{equation}\label{eqn:lagrangian-yukawa-couplings}
+	-\Delta \mathcal{L} = - \left(\lambda_d^{ij} \overline{Q}_L^i \cdot \phi d_R^j - \lambda_u^{ij} \epsilon^{ab}\overline{Q}^i_{La} u_R^j + \mathrm{h.c.}\right) - \left(\lambda_l^{ij} \overline{E}^i_L \cdot \phi e_R^j + \mathrm{h.c.}\right).
+\end{equation}
+ 
+ The $\lambda_{u,d,l}^{ij}$ are complex matrices of coupling constants. These are, in general, not symmetric or Hermitian, and to identify the physical mass eigenstates, the matrices must be diagonalized. The Yukawa matrices can be decomposed using the singular value decomposition as:
+
+\begin{align}
+	\lambda_u &= U_u D_u W_u^{\dagger},\ \lambda_d = U_d D_d W_d^{\dagger},\ \lambda_l &= U_l D_l W_l^{\dagger},
+\end{align}
+ 
+where $U_{u,d,l}$ and $W_{u,d,l}$ are unitary matrices, and $D_{u,d,l}$ are diagonal, non-negative matrices. Making a change of variables,
+
+\begin{align}\label{eqn:yukawa-diagonalization}
+	u_L^i\rightarrow U_{u}^{ij}u_L^j&,\ d_L^i\rightarrow U_d^{ij}d_L^j, \\
+	u_R^i\rightarrow W_{u}^{ij}u_R^j&,\ d_R^i\rightarrow W_d^{ij}d_R^j, \\
+	e_L^i\rightarrow U_l^{ij}e_L^j&,\ \nu_L^i\rightarrow U_l^{ij}\nu_L^j, \\
+	e_R^i\rightarrow W_l^{ij}e_R^j&,
+\end{align}
+
+the off-diagonal Yukawa couplings vanish as intended, while the kinetic terms remain invariant. The masses of the fermions are:
+
+\begin{equation}
+	m_u^i = \frac{1}{\sqrt{2}} D_u^{ii}v,\ m_d^i = \frac{1}{\sqrt{2}} D_d^{ii}v,\ m_l^i = \frac{1}{\sqrt{2}} D_l^{ii}v,\ m_{\nu}^i = 0.
+\end{equation}
+
+The diagonalization procedure alters one other term in the Lagrangian: the couplings of the quarks to the $W^{\pm}$ bosons. The quark-$W^{\pm}$ couplings can be written in terms of the current $J^{\mu\pm}=\sum_{i} \frac1{\sqrt{2}}\left(\overline{u}_L^i\gamma^{\mu}d_L^i\right)$ as:
+
+\begin{equation}
+	\Delta\mathcal{L} = g (W^+_{\mu}J^{\mu+}_W + W^{-}_{\mu}J^{\mu -}_{W})
+\end{equation}
+
+Under the transformation in equation~\ref{eqn:yukawa-diagonalizaiton}, $J^{\mu\pm}\rightarrow \sum_{ij}\frac{1}{\sqrt{2}} \overline{u}_L^i \gamma^{\mu} V^{ij} d_L^j$, where $V^{ij}$ is a $3\times 3$ unitary matrix known as the \emph{Cabibbo-Kobayashi-Maskawa} (CKM) matrix, $V = U_{u}^{\dagger} U_d$. $V$ implying that weak decays mix the three generations of quarks; quark flavor is not conserved in weak decays, as is readily observed in hadron decays, e.g. $K^{\pm}\rightarrow \pi^{\pm}+\pi^0$. Further, $V$ contains one nontrivial complex phase, allowing for $CP$ violation in weak decays. 
+
+Note that the lepton sector does not contain an analogous mixing matrix for weak decays, due to the presence of only a single Yukawa matrix $\lambda^{ij}_l$. Hence lepton flavor and $CP$ are conserved in leptonic weak decays.
+
+\underline{\textbf{Higgs Boson}}
+TALK ABOUT THE HIGGS BOSON, WHAT HAPPENS TO THE OTHER THREE DEGREES OF FREEDOM, AND THE HIGGS COUPLINGS TO EVERYTHING ELSE.
+
+
+
+
+\section{Beyond the Standard Model}\label{sec:beyond-the-standard-model}
+Though quite successful as a description of most observed phenomena in particle physics, the Standard Model is deficient in several ways. Several key observations, initially from astrophysics and cosmology, indicate that the theory is incomplete; additionally, the theory has a few unsatisfying constructional aspects which, while not technically inconsistent, suggest that there remains underlying physics to be discovered. Many theories have been proposed to solve these issues, and confronting these theories is a major goal of the ATLAS experiment. This section describes the motivations for physics beyond the Standard Model (BSM), and lists several of the leading BSM theories which can be confronted at the LHC.
+
+\subsection{Unexplained Phenomena}\label{sec:bsm-unexplained-phenomena}
+
+Phenomena not described by the Standard Model include the following:
+
+\begin{itemize}
+	\item \textbf{Neutrino mass}: Due to the lack of right-handed neutrinos and left-handed antineutrinos, neutrinos are massless in the Standard Model. However, observation of neutrino flavor oscillations indicate that at least two of the three neutrinos have nonzero mass. The phenomenon of oscillation was first observed by the Homestake solar electron neutrino detector~\cite{Cleveland:1998nv}, in the form of a deficit of electron neutrinos detected from the sun. Later experiments observed oscillation among other types of neutrinos and antineutrinos, from a variety of sources including the sun, nuclear reactors, cosmic rays interacting with the atmosphere, and particle accelerators~\cite{pdg}. The data imply that the three neutrino mass eigenstates have different masses, with differences given by:
+	\begin{align}\label{eqn:neutrino-mass-differences}
+		|\Delta m_{21}^2| \cong 7.5\times 10^{-5}~\mbox{eV}^2 \\
+		|\Delta m_{31}^2| \cong 2.5\times 10^{-3}~\mbox{eV}^2.
+	\end{align}
+	These relations hold only if at least two of the neutrino masses are nonzero. On the other hand, $\beta$-decay experiments and cosmological observations indicate an upper bound on the neutrino mass scale of order $m_{v_i} \lesssim \mathcal{O}(0.1-1)$~\cite{Troitzk, CMB/WMAP, Planck}.
+
+	\item \textbf{Dark matter}: Astrophysical observations suggest the existence of a large amount of non-Standard Model matter which interacts only gravitationally with baryonic matter. The earliest tension with known physics comes from galactic rotation curves, the distribution of rotational velocities of stars about the galactic center as a function of radius~\cite{1980ApJ_238_471R}. The rotational velocities $v(r)$ can be compared with the expectation from the observed matter distribution, $\tilde{v}(r)=\sqrt{\frac{M(r)}{r}}$, where $M(r)$ is the observed mass at radius less than $r$. As shown in figure~\ref{fig:rotation-curves}, at large distances from the galactic center, the observed rotation curve behaves like $v(r)\sim$constant, while the expected rotation curves behaves like $v(r)\sim \frac{1}{\sqrt{r}}$. 
+
+	At present, the leading explanation for the discrepancy is the presence of a large amount of gravitationally interacting, non-luminous matter in galaxies, known as \emph{dark matter}. The hypothesis is supported by cosmological observations: measurements of anisotropies in the cosmic microwave background (CMB) are sensitive to the relative amounts of baryonic matter (which interacts with photons), dark matter (which does not), and dark energy. A recent combination of CMB measurements gives the following values:
+	\begin{align}
+		\Sigma_{c}h^2 &= 0.1198 \pm 0.0026, \\
+		\Sigma_{b}h^2 &= 0.02207 \pm 0.00027, \\
+		\Sigma_{\Lambda} &= 0.685^{+0.017}_{-0.016}, \\
+	\end{align}
+	where $\Sigma_{c}$ and $\Sigma_{b}$ are the density parameters for cold dark matter and baryonic matter, respectively, $h$ is the Hubble constant, and $\Sigma_{\Lambda}$ is the cosmological constant. 
+
+	Many candidates have been proposed as the constituents of dark matter, such as primordial black holes, sterile neutrinos, axions, and weakly interacting dark particles (WIMPs). WIMPs are a particularly interesting candidate for LHC phenomenology: in the so-called ``freeze-out'' model of dark matter evolution, $\Sigma_c$ is fixed when dark matter falls out of thermal equilibrium with conventional matter. $\Sigma_c~0.1$ is achieved with $m_{\chi}\sim \mathcal{O}(100~\mbox{GeV})$ and couplings of order $g_X\sim\mathcal{O}(0.1-1)$; such a particle could be produced and detected at the LHC. 
+
+	\item \textbf{Matter-Antimatter Asymmetry}: The observable universe is made up of matter and photons, with very little antimatter. Astrophysical observations measure the ratio of baryons (minus antibaryons) to photons,
+	\begin{equation}\label{eqn:baryon-photon-ratio}
+		\eta \equiv \frac{n_B - n_{\overline{B}}}{n_{\gamma}}, 
+	\end{equation}
+	to be in the range $5.7 \leq \eta\times10^{10} \leq 6.7$ ($95\%$ CL)~\cite{pdg-bbn}. However, assuming symmetrical initial conditions and conservation of baryon number, the Big Bang would produce baryons and antibaryons in equal number\footnote{Asymmetric initial conditions are also not capable of producing a relic asymmetry due to inflation, which would dilute any initial asymmetry~\cite{cline}.}. Due to inefficient annihilation after freeze-out, the present abundances would be $\frac{n_B}{n_{\gamma}} = \frac{n_{\overline{B}}}{n_{\gamma}} \approx 10^{-20}$~\cite{cline}. The generation of a large baryon-antibaryon asymmetry is known as the \emph{baryogenesis} problem.
+
+	Three conditions are necessary for baryogenesis, known as the Sakharov conditions~\cite{sakharov}: baryon number violation, $C$- and $CP$-symmetry violation, and interactions out of thermal equilibrium (i.e. the interaction rate must be slower than the expansion rate of the universe). In principle, the Standard Model possibly satisfies all three conditions: baryon number is violated by electroweak sphaelerons~\cite{thooft}, $C$ and $CP$ violation is observed in hadron oscillations and decays~\cite{Kindirect, Kdirect,B,D}, and thermal equilibrium may be lost if the electroweak phase transition is sufficiently first-order~\cite{???}. However, baryogenesis of sufficient magnitude has not been demonstrated, in particular due to insufficient $CP$-violation. 
+
+\end{itemize}
+
+\subsection{Theoretical Deficiencies}\label{sec:bsm-theoretical-deficiencies}
+Theoretical deficiencies of the Standard Model include the following:
+
+\begin{itemize}
+	\item \textbf{Hierarchy problem}: The hierarchy problem refers to the large discrepancy in strength between the electrweak forces and gravity. Specifically, due to the diagrams shown in figure~\ref{fig:higgs-mass-feynman-diagrams}, the quadratic Higgs parameter $\mu$ receives quantum corrections proportional to $\Lambda^2$, where $\Lambda$ is the ultraviolet cutoff of the theory:
+	\begin{equation}
+		\Delta\mu^2 = f;aiefz.
+	\end{equation}
+	The value of this parameter is known from measurements of the electroweak boson masses (???),
+	\begin{equation}
+		\mu^2 = \mu_0^2 + \sum_i \frac{g^2 Y_i^2}{16\pi^2}\Lambda^2 = \lambda v^2 \sim 10^4\mbox{GeV}^2. 
+	\end{equation}
+	If the Standard Model is valid up to the Planck scale, $\Lambda\sim \mathcal{O}(10^19\mbox{GeV})$, then the bare mass parameter, $\mu_0^2$, and the quantum corrections, $\Delta \mu^2$, must cancel to some 34 orders of magnitude, an unsavory coincidence referred to as \emph{fine tuning}. Turning the problem on its head, if nature is not finely tuned, then the ultraviolet cutoff should be not too far above the electroweak scale, $\Lambda \lesssim 10~\mbox{TeV}$~\cite{pinner}. The physics responsible for such a cutoff scale could be accessible at the LHC. 
+
+	\item \textbf{Free parameters}: The Standard Model contains 19 free parameters. In terms of measurable quantities, these are the 6 quark masses $m_{q_i}$, 3 lepton masses $m_{l_i}$, 3 CKM mixing angles $\theta_{ij}$ and 1 CKM phase $\delta$, 3 gauge couplings $g_i$, the QCD vacuum angle $\theta_{\mathrm{QCD}}$, the Higgs field vacuum expectation value $v$, and the Higgs mass, $m_h$. These parameters are measured; their values are not predicted by the theory. It remains unknown why the Yukawa couplings range over six orders of magnitude, for example, nor why the fermions fall into three generations. 
+
+	\item \textbf{Strong $CP$ problem}: The strong sector of the Standard Model potentially contains a $CP$-violating term, 
+	\begin{equation}
+		\mathcal{L}_{\Theta}=\overline{\Theta} \frac{\alpha_s}{8\pi}G^{\mu \nu a} \tilde{G}^{a}_{\mu\nu},
+	\end{equation}
+	where $-\pi\leq\overline{\Theta}\leq\pi$ is the effective $\Theta$ parameter after diagonalizing the quark mass matrix, $G^{a}_{\mu\nu}=\partial_{\mu}\mathcal{A}_{\mu}^{a}-\partial_{\nu}\mathcal{A}_{\mu}^{a} - g_s f^{abc}\mathcal{A}_{\mu}^{b} \mathcal{A}_{\nu}^{c}$ is the gluon field strength tensor, and $\tilde{G}^a_{\mu\nu}=\epsilon_{\mu\nu\alpha\beta}G^{\alpha\beta a}$ is its dual~\cite{pdg-axions}. However, this term is severely constrained by measurements of the neutron dipole moment~\cite{PhysRevLett.97.131801}, with a limit of $|\overline{\Theta}|\lesssim 10^{-10}$. 
+
+	\item \textbf{Gauge Unification}: The origin of the Standard Model gauge group, $G_{SM}=SU(3)_c\times SU(2)_L \times U(1)_Y$, is not understood. Remarkably, the Standard Model fermion content can be described as a $\mathbf{5}^{*}\oplus 10$ representation of $SU(5)$, the smallest simple group containing $G_{SM}$, with all of the Standard Model quantum numbers correctly predicted. Unfortunately, simply augmenting the gauge group to $SU(5)$ leads to an unacceptable rate of proton decay, but deriving $G_{SM}$ from a larger, ``unified'' gauge group remains a topic of active investigation.  
+\end{itemize}
+
+\subsection{Theories of BSM Physics}\label{sec:bsm-theories}
+This section describes some of the theories that have been proposed to solve the issues raised in section~\ref{sec:bsm-unexplained-phenomena}and \ref{sec:bsm-theoretical-deficiencies}, focusing on those which the LHC is capable of testing. Particular emphasis is placed on theories producing several charged leptons. 
+
+\subsubsection{Supersymmetry}
+The hierarchy problem described in section X motivates the consideration of additional symmetries. Consider again the form of the quadratic divergence:
+
+Xxx
+
+The divergence could be avoided, and the theory rendered technically natural, by introducing scalar partners to the fermions to counteract the divergence, due to the relative  (-) sign between scalar and fermion loops:
+
+Diagram and equations
+
+Scalar partners with masses on the TeV scale alleviate the naturalness problem, and could be detected at the LHC.
+
+The forms that such a symmetry could take are quite restricted. In 1967, Coleman and Mandula demonstrated that, under a small set of physically assumptions, the symmetry algebra of the $S$-matrix must be isomorphic to a direct product of the Poincar\'{e} group and an internal symmetry group (i.e. whose generators commute with those of the Poincar\'{e} group). This \emph{no-go} theorem appeared to establish that it is impossible to ``[combine] space-time and internal symmetries in any but a trivial way.'' However, a loophole was found in 1975, formalized in the theorem of Haag, Lopuszanski, and Sohnius: the Poincar\'{e} group can be extended nontrivially in the context of graded Lie algebras, allowing the symmetry generators to be commuting or anticommuting~\cite{Haag1975257}. These so-called ``supersymmetries'', first proposed in by Wess and Zumino~\cite{Wess197439}, transform bosons to fermions and vice-versa, and combine nontrivially with the Poincar\'{e} group in that the anticommutator of two supersymmetry generators is a spacetime translation. 
+
+By itself, supersymmetry predicts a partner for every Standard Model particle with identical mass and quantum numbers, except that the spin differs by 1/2\footnote{The exact implementation can be derived from the superpotential, where the fields $f(x^{\mu})$ are promoted to super fields $F(x^{\mu}, \theta, \overline{\theta})$, where $\theta$ and $\overline{theta}$ are anticommuting parameters. The integration in the action is augmented from $d^4x$ to $d^4x d\theta d\overline{\theta}$; the familiar action in normal spacetime is regained by performing the partial integral over the anticommuting variables; see~\cite{wess-bagger} for more details.}. The symmetry is assumed to be spontaneouslybroken at some high mass scale, giving additional mass to the superpartners, to account for the fact that superpartners are not observed. The minimal implementation, called the \emph{minimal supersymmetric Standard Model} (MSSM), contains X free parameters (Y to account for the additional degrees of freedom in the Lagrangian, and Z to account for SUSY breaking), although simplifying assumptions are almost always used to reduce this large parameter space to manageable size.
+
+Supersymmetry solves a number of the shortcomings of the standard model described in section (reference). First, as mentioned above, it provides a boson-fermion symmetry to cancel the quadratic divergence in the Higgs mass. Second, the superpartners are typically assigned an extra quantum number, R-parity, under with the SM particles are neutral, in order to stabilize the proton; this extra symmetry has the consequence of making the lightest superpartner stable, providing a dark matter candidate. Third, the supersymmetry breaking sector contains numerous CP-violating parameters, which could provide the necessary CP violation to explain the matter-antimatter asymmetry in the universe. Finally, the superpartners modify the running of the three gauge couplings such that they approach similar values in the UV, supporting the notion of gauge unification.
+
+\emph{Multilepton Production}
+Describe ways to produce many leptons in SUSY.
+
+\subsubsection{Extra Generations of Matter}
+
+Alternatively, one can consider addressing only the dominant divergence due to the top quark loop. The divergence can be canceled by vector-like partners of the top quark.
+
+Motivations for extra matter in general.  In particular, vector-like leptons. Existing limits, especially on chiral fermions.
+
+
+
+\subsubsection{Neutrino Seesaw}
+Due to the lack of right-handed neutrinos in the Standard Model, neutrinos are exactly massless. At tree level, a mass term like $m_{\nu} \overline{\nu}_L \nu_L^c$ would violate $SU(2)_L$ gauge invariance. An effective mass term arising perturbatively, e.g. $\frac{Y_{ij}}{v}\phi\phi L_i L_j$, would be a good candidate to explain the small size of neutrino masses due to suppression from the mass scale $v$, but turns out to be forbidden as well due to the accidental conservation of lepton number, $L$, and also baryon minus lepton number, $B-L$~\cite{RevModPhys.75.345}. 
+
+A leading candidate to explain the small but nonzero neutrino masses is the \emph{neutrino seesaw mechanism}~\cite{gellmann, ramond, yanagida, RevModPhys.75.345}. Heavy, sterile neutrinos, $N_i$, are added to the Standard Model, with both a Majorana mass and Yukawa interactions with the Standard Model neutrinos:
+\begin{equation}
+	\mathcal{L}_N = \frac12 M_{N_{ij}} \overline{N^c_i} N_j + Y_{ij}^{\nu} \overline{L_{L_i}} \tilde{\phi} N_{j} + \mathrm{h.c.}
+\end{equation}
+The resulting mass matrix takes the form:
+\begin{equation}
+	M_{\nu} = \left(\begin{array}{cc} 0 & Y^{\nu} \frac{v}{\sqrt{2}} \\ (Y^{\nu})^T \frac{v}{\sqrt{2}} & M_N \end{array}\right)
+\end{equation}
+in the basis $\left(\begin{array}{c} \nu_{L_i} \\ N_j \end{array} \right)$. If $M_N \gg v$, then diagonalizing the mass matrix gives three eigenstates will light masses, $m_{\nu_{L_i}} \sim  \frac{Yv^2}{M_N}$. With $v=246~\mbox{GeV}$, a light neutrino mass of $m_{\nu}=0.1~\mbox{eV}$ gives a heavy neutrino mass of:
+\begin{equation}
+	M_N \sim Y \times 10^{15}~\mbox{GeV}.
+\end{equation}
+
+Hence Yukawa couplings of order 1 predict heavy, sterile neutrinos around the GUT scale, while smaller couplings predict a proportionally smaller mass scale. New mass scales accessible at the LHC can be achieved with more complicated models, such as the inverse seesaw model~\cite{inverse seesaw}, which introduce more mass scales and high powers of the suppression factors.
+
+At tree level, there are three possible implementations of the seesaw mechanism: 
+\begin{itemize}
+	\item \textbf{Type I}: The simplest realization of the seesaw mechanism, at least two sterile neutrinos $N_i$ are introduced as described above. This scenario is not likely to be testable at the LHC, due to the combination of small Yukawa couplings and large sterile neutriono masses required for $\mathcal{O}(0.1~\mbox{eV})$ neutrino masses. 
+
+	\item \textbf{Type II}: The seesaw mechanism is generated by an $SU(2)_L$ triplet of scalars, $\Delta$, with hypercharge $Y=2$. This allows the construction of the following Yukawa term:
+	\begin{equation}
+		-\mathcal{L} = Y^{\Delta}_{ij} L_{L_i}^T C \sigma_2 \Delta L_{L_j} + \mathrm{h.c.},
+	\end{equation}
+	where $i$ ranges over the three lepton flavors.  Assuming diagonal Yukawa couplings for simplicity, the neutral component of the triplet, $\Delta^0$, acquires a vacuum expectation value,
+	\begin{equation}
+		v_{\Delta} = \frac{\mu v^2}{\sqrt{2} m_{\Delta}^2},
+	\end{equation}
+	where $m_{\Delta}$ is the mass term for $\Delta$, $\mu\sim m_{\Delta}$ is a coefficient of the cubic Higgs-$\Delta$ interaction with mass dimension 1, and $v$ is the Standard Model Higgs vacuum expectation value. The light neutrinos acquire mass:
+	\begin{equation}
+		m_{\nu_{L_i}} \sim Y^{\Delta}_{i} v_{\Delta}=Y^{\Delta}_{i} \frac{\mu v^2}{\sqrt{2} m_{\Delta}^2}.
+	\end{equation}
+
+	The triplet of scalars can potentially be produced via gauge interactions at the LHC, if their masses are below the TeV scale. The new particle content consists of $\Delta^0$, $\Delta^{\pm}$, and $\Delta^{\pm\pm}$. In particular, the decay $\Delta^{\pm\pm}\rightarrow l^{\pm}_i l^{\pm}_j$ gives a unique same-sign dilepton signature which is rarely produced in Standard Model processes; additionally, pair production of scalars can give three or more leptons in the final state.
+
+	\item \textbf{Type III}: The seesaw mechanism is generated by at least two $SU(2)_L$ triplets of fermions with hypercharge $Y=0$,
+	\begin{equation}
+		\Sigma = \Sigma^a \sigma^a = \left(\begin{array}{cc} \Sigma^0/\sqrt{2} & \Sigma^+ \\ \Sigma^- & -\Sigma^0/\sqrt{2} \end{array}\right). 
+	\end{equation}
+	The Lagrangian is:
+	\begin{equation}
+		\mathcal{L}_{\Sigma} = Tr[i\overline{\Sigma}\slashed{D}\Sigma] - \frac12 Tr[\overline{\Sigma}M_{\Sigma}\Sigma^c+\overline{\Sigma^c}M_{\Sigma}^{*}\Sigma] - \tilde{\phi}^{\dagger}\overline{\Sigma}\sqrt{2}Y_{\Sigma}L - \overline{L}\sqrt{s}Y_{\Sigma}^{\dagger}\Sigma \tilde{\phi},
+	\end{equation}
+	where $L=(\nu,l)^T$, $\phi=(\phi^+, \phi^0)^T$, $\tilde{\phi}=i\sigma_2\phi^{*}$, and $\Sigma^c=C\overline{\Sigma}^T$. Summation over lepton flavor is implicit. The neutral fermion $\Sigma^0$ generates the seesaw mechanism in much the same way as in the type I implementation, giving neutrino masses:
+	\begin{equation}
+		m_{\nu} = -v^2 Y_{\Sigma}^T \cdot M_{\Sigma}^{-1} \cdot Y_{\Sigma}
+	\end{equation}
+	
+	The heavy fermion triplet is also potentially producable at the LHC via gauge interactions. The specific phenomenology considered for the analysis described in section~\ref{ch:trilepton-resonance-search} is described below in section~\ref{sec:heavy-lepton-phenomenology}. 
+\end{itemize}
+
+
+
+
+
+
+\printbibliography
