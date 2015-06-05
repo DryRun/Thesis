@@ -138,7 +138,7 @@
     \fi
   \fi
   % subfigure option needed if subfig(ure) is also used
-  \RequirePackage[subfigure]{tocloft}
+  %\RequirePackage[subfigure]{tocloft}
 
   % Remove dots in table of contents
   \renewcommand{\cftdot}{}
@@ -205,8 +205,8 @@
 % Some more tweaks should be made to the appearance,
 % see/include bibtex/bst/atlas-biblatex.sty
 \ifAPKG@biblatex
-  \RequirePackage[backend=\APKG@backend,
-    style=numeric-comp,sorting=none,block=ragged,firstinits=true]{biblatex}
+  %\RequirePackage[backend=\APKG@backend,style=numeric-comp,sorting=none,block=ragged,firstinits=true]{biblatex}
+  \RequirePackage[backend=biber,refsection=chapter,style=numeric-comp,sorting=none,block=ragged,firstinits=true]{biblatex}
 \fi
 
 \endinput
