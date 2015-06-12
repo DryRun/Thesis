@@ -1,74 +1,94 @@
 \chapter{Background Estimation}\label{ch:backgrounds}
-The relevant Standard Model processes contributing to multilepton final states are diboson production ($WZ$, $ZZ$), production of a top quark pair in association with an weak gauge boson ($t\overline{t}+V$), and triboson production ($VVV^{(*)}$, where $V=W$ or $Z$). These backgrounds, called \emph{prompt} backgrounds, are estimated using Monte Carlo (MC) simulation. Significant backgrounds also arise from processes where at least one reconstructed lepton is due to the semileptonic decay of a hadron, the misidentification of a jet, or the asymmetric conversion of a photon in the detector; such backgrounds are called \emph{reducible} backgrounds. These backgrounds are estimated using either MC simulation or a data-driven technique called the \emph{fake factor} method. 
+The relevant Standard Model processes contributing to multilepton final states are diboson production ($WZ$, $ZZ$), production of a top quark pair in association with an weak gauge boson ($t\overline{t}+V$), and triboson production ($VVV^{(*)}$, where $V=W$ or $Z$). Examples tree-level Feynman diagrams of these processes are shown in figure~\ref{fig:multilepton-feynman-diagrams}. These backgrounds, called \emph{prompt} backgrounds, are estimated using Monte Carlo (MC) simulation, as described in section~\ref{sec:prompt-backgrounds}. Significant backgrounds also arise from processes where at least one reconstructed lepton is due to the semileptonic decay of a hadron, the misidentification of a jet, or the asymmetric conversion of a photon in the detector; such backgrounds are called \emph{reducible} backgrounds. These backgrounds are estimated using either MC simulation or a data-driven technique called the \emph{fake factor} method, which is described in section~\ref{sec:fake-factor-method}. 
 
-\textcolor{red}{Put some Feynman diagrams here.}
+\begin{figure}[p]
+	\centering
+	\subfloat[$WZ$] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/fd/diboson_tchannel}}
+	}
+	\subfloat[$WZ$] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/fd/diboson_schannel}}
+	} \\
+	\subfloat[$t\bar{t}+W$] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/fd/ttW}}
+	}
+	\subfloat[$t\bar{t}+Z$] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/fd/ttV_gg_schannelg}}
+	} \\
+	\subfloat[$VVV^{*}$] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/fd/VVV_qq}}
+	}
+	\subfloat[$VVV^{*}$] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/fd/VVV_TGC}}
+	} \\
+	\caption{Example tree-level Feynman diagrams of Standard Model processes leading to trilepton final states.}
+	\label{fig:multilepton-feynman-diagrams}
+\end{figure}
 
-\section{Prompt Backgrounds}\label{sec:model-independent-prompt-backgrounds}
-The prompt backgrounds are estimated using Monte Carlo simulation. The hard-scattering processes are modeled by dedicated event generators, possibly including the emission of additional partons. Additional QCD radiation is modeled using a parton shower. The detector response to the simulated events is simulated with the ATLAS simulation framework~\cite{atlas-simulation-framework} using the \geant toolkit~\cite{geant}. Additional $pp$ collisions in the same or nearby bunch crossings (pileup) are included by overlaying simulated minimum-bias interactions from \pythia on the hard scattering event. Simulated events are assigned weights to reproduce the observed pileup distributions in data, and also to account for small differences in the trigger, reconstruction, and identification efficiencies between simulation and data. 
 
-The generators used to simulated the prompt backgrounds are shown in table~\ref{table:model-independent-mc-generators}. A more detailed list including cross sections is shown in table~\ref{table:appendix-model-independent-mc-generators}. 
+\section{Prompt Backgrounds}\label{sec:prompt-backgrounds}
+The prompt backgrounds are estimated using Monte Carlo simulation. The hard-scattering processes are modeled by dedicated event generators, possibly including the emission of additional partons. Additional QCD radiation is modeled using a parton shower. The detector response to the simulated events is simulated with the ATLAS simulation framework~\cite{atlas-simulation-framework} using the \geant toolkit~\cite{geant}. Pileup is included by overlaying simulated minimum-bias interactions from \pythia on the hard scattering event. Simulated events are assigned weights to reproduce the observed pileup distributions in data, and also to account for small differences in the trigger, reconstruction, and identification efficiencies between simulation and data. 
+
+The details of the modeling of each sample are described below. The generator, parton shower, PDF set, underlying event tune, and accuracy of theoretical cross section for samples are summarized in table~\ref{table:mc-generators}.
 
 \begin{itemize}
 	\item \sherpa\ is used to model $WW$, $WZ$, and $ZZ$ production. Both bosons in the events decay leptonically. Up to three jets are included in the matrix element. An important feature of \sherpa is that it accurately models the $W+\gamma^{*}$ and $Z+\gamma^{*}$ contributions down to very low $\gamma^{*}$ masses; for electron decays, a cut of $m(ee)>100 \MeV$ is applied, while for muon and tau decays, \sherpa naturally cuts off the divergence. To increase the statistics in the phase space relevant for this analysis, the $WZ$ samples requires at least two leptons have $\pt>5 \GeV$. Finally, the $WZ$ sample also treats the $b$ and $c$ quarks as massive, which improves the modeling of heavy flavor jets at the cost of increased computation time. 
-
-	\item \sherpa is also used to model $Z+\gamma$ production, where the photon converts asymmetrically in the detector and is reconstructed as an electron. \textcolor{red}{Likelihood-based weighting procedure.}
-
-	\item $\ttbarV$ production is modeled with \madgraph, with \pythia version \textcolor{red}{X} for the parton shower. 
-
-	\item $WWW^{(*)}$, $ZWW^{(*)}$, and $ZZZ^{(*)}$ are modeled using \madgraph, with \pythia version X for the parton shower. Their contributions to all the signal regions are negligible.
-
-	\item \textcolor{red}{Augment this list based on the trilepton resonance paper.}
+	\item \sherpa is also used to model $Z+\gamma$ production, where the photon converts asymmetrically in the detector and is reconstructed as an electron. The events are reweighted to account for observed mismodeling in the conversion rate, described in section~\ref{sec:conversion-reweighting}.
+	\item $\ttbarV$ production is modeled with \madgraph, with \pythia for the parton shower.
+	\item $WWW^{(*)}$, $ZWW^{(*)}$, and $ZZZ^{(*)}$ are modeled using \madgraph, with \pythia for the parton shower. Their contributions to all the signal regions are negligible.
 \end{itemize}
 
-
-\section{Reducible Backgrounds}\label{sec:model-independent-reducible-backgrounds}
-The reducible backgrounds encompass a variety of processes in which a reconstructed lepton arises due to something away from the ``hard scatter'' in the event. The backgrounds are estimated using simulation or a data-driven technique depending on the source. The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated from Monte Carlo, with scale factors applied to account for an observed overestimation in the photon-to-electron conversion rate (see section~\ref{sec:photon-conversions}). Other reducible contributions, such as $W/Z+$jets or $t\overline{t}$ where a jet fakes an electron or decays semileptonically, are estimated using the fake factor method as implemented in the $8~\mbox{TeV}$ model-independent multilepton analysis~\cite{DeViveiros:1670929}. 
-
-\subsection{Photon Conversions}\label{sec:photon-conversions}
-The trilepton background due to $Z+\gamma$, where the photon converts asymmetrically in material and is reconstructed as an electron, is estimated with simulation, using the \sherpa~sample (section~\ref{sec:samples}).
-
-The rate of photons being reconstructed as electrons is observed to be overestimated in Monte Carlo, especially for denominator electrons. The net effect of this mismodeling is a \emph{deficit} in the background prediction, due to its larger effect on the subtraction of prompt contamination than on the prompt background estimation itself. Scale factors are derived to account for the mismodeling of the conversion rate. 
-
-The principle of the method is the same as that used to estimate the electron ``charge flip'' mismeasurement rate. Charge flips and conversions occur through similar processes: charge flips occur through ``trident'' processes in which an electron emits a photon, which then converts asymmetrically and is reconstructed as an electron of the wrong charge. The method uses a $Z$-enriched region to estimate the conversion rate in bins of $\pt$ and $|\eta|$; for more details, see~\cite{DeViveiros:1670929}. The scale factors are shown in table~\ref{table:conversion-sfs}; the scale factor is applied to each $Z+\gamma$ event based on the classification of the reconstructed lepton closest to the truth photon (within $\Delta R<0.2$). A $30\%$ systematic uncertainty is assigned on the scale factors, mostly due to variations in the scale factors obtained from different Monte Carlo generators. 
-
-\begin{table}[tbp]
+\begin{table}
   \centering
-  \begin{tabular}{l r r r}
-					 &$|\eta|<2.2$     &$2.2<|\eta|<2.37$     &$2.37<|\eta|<2.47$\\
-	\hline
-	Numerators       &1.02             &0.95                  &0.95\\
-	Denominators     &0.82             &0.66                  &0.40\\
+  \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    Process & Generator & Parton shower and hadr. & PDF set & UE tune & Cross section \\
+    \hline
+    $WZ$ & \sherpa 1.4.3 & \sherpa & CT10 & \sherpa 	&	NLO\\
+    $ZZ$ & \sherpa 1.4.5 & \sherpa & CT10 & \sherpa 	&	NLO\\
+    $\ttbar+W/Z$ & \madgraph\ 5.1.3.33  & \pythia\ 6.426   & {CTEQ6L1} & AUET2B 	&	NLO\\
+    $VVV^{(*)}$ & \madgraph\ 5.1.3.33 & \pythia\ 6.426 & {CTEQ6L1}  & AUET2B 	& 	LO	\\
+    $Z+\gamma$ & \sherpa  & \sherpa & CT10 & \sherpa 	&	LO 	\\
+    \hline
   \end{tabular}
-  \caption{Data-to-MC scale factors for photon conversions.}
-  \label{table:conversion-sfs}
+  \caption{Summary of the \textcolor{black}{primary} background MC samples used in this analysis. The generator, parton shower and hadronization, PDF, underlying event tune, and the order of the cross section calculation are shown for each sample.}
+  \label{table:mc-generators}
 \end{table}
 
 
+\section{Reducible Backgrounds}\label{sec:reducible-backgrounds}
+The reducible backgrounds encompass a variety of processes in which a reconstructed lepton arises due to something away from the ``hard scatter'' interaction. The backgrounds are estimated using simulation or a data-driven technique, depending on the source. The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated from Monte Carlo, with scale factors applied to account for an observed overestimation in the photon-to-electron conversion rate (see section~\ref{sec:photon-conversions}). Other reducible contributions, such as $W/Z+$jets or $t\overline{t}$ where a jet fakes an electron or decays semileptonically, are estimated using the fake factor method as implemented in the $8~\mbox{TeV}$ model-independent multilepton analysis~\cite{DeViveiros:1670929}. 
 
-\subsection{Fake Factor Method}\label{sec:model-independent-fake-factor-method}
-The fake factor method estimates the reducible backgrounds in each signal region by characterizing the fake or non-prompt leptons in terms of quantities sensitive to the fake process, such as isolation, impact parameter, or particle identification cuts. By relaxing the cuts on these quantities, we can collect a control sample of signal-like events with fake or non-prompt leptons; then, using the distributions of these quantities in a second control sample, we can extrapolate the first control sample to the signal region. The success of the method depends largely on how closely the second control sample resembles the signal region. 
 
-In more detail, the objects (electrons or muons) satisfying the nominal selection critera are called \emph{numerator} ($N$) objects. The complementary set of objects that satisfy most of the nominal selection criteria, but fail certain other criteria sensitive to relevant reducible process, are called \emph{denominator} ($D$) objects. The ratio $N/D$ defines the \emph{fake factor} ($f$). 
+\subsection{Fake Factor Method}\label{sec:fake-factor-method}
+The fake factor method estimates the reducible backgrounds in each signal region by characterizing the fake or non-prompt leptons in terms of quantities sensitive to the fake process, such as isolation, impact parameter, or particle identification cuts. Two orthogonal sets of leptons are defined: \emph{numerator} leptons ($N$) satisfy the nominal signal lepton selection criteria, while \emph{denominator} leptons ($D$) satisfy most of the nominal selection criteria, except with inverted requirements on quantities sensitive to the fake process. The reducible background is estimated in a data-driven way from a control region consisting of events with a mix of numerator and denominator leptons, together with a parametrization of the relationship between numerators and denominators. 
 
-In events with three or more leptons, any subset of the leptons could be real or fake. A priori, we expect that the reducible background will be composed primarily of events with two real leptons forming the $Z$ candidate plus a fake bachelor lepton, due to the $Z$ mass constraint on the $Z$ leptons. Such an event is labeled $\RRF$, indicating the ``truth'' classification of the three leptons as either real ($R$) or fake ($F$) (the ordering of the letters corresponds to some canonical order of the leptons, such as positive $Z$ lepton, negative $Z$ lepton, bachelor lepton). On the other hand, if an event contained, say, $W\rightarrow l\nu$ plus two fake leptons, the event would be labeled $\RFF$ or $\FRF$. 
+The relationship between numerator and denominator objects is called the \emph{fake factor}, $f$, defined as the ratio of the number of fake leptons satisfying the numerator criteria to those satisfying the denominator criteria. The fake factor is measured in a control region enriched in fake leptons. The success of the method depends largely on the extrapolation of the $f$ from the measurement control region to the signal regions. To capture the dependence on the event kinematics, $f$ can be measured as a function of various lepton or event variables; in this dissertation, the fake factors are all measured in bins of lepton $\pt$ and $\eta$. 
 
-At detector level, the quantity actually measured in a signal region contains three numerator objects, which we label $\NNN$. Any of these numerators could be real or fake, so the sample can be decomposed as:
+Once $f$ has been measured, the reducible background is determined as follows. In signal events with three or more leptons, any subset of the leptons could be real or fake. For example, an event might contain two real leptons from a Drell-Yan process plus a fake third lepton. Such an event is labeled $\RRF$, indicating the ``truth'' classification of the three leptons as either real ($R$) or fake ($F$) (the ordering of the letters corresponds to some canonical order of the leptons, such as $\pt$ ordering). On the other hand, if an event contained, say, $W\rightarrow l\nu$ plus two fake leptons, the event would be labeled $\RFF$ (or $\FRF$ or $\FFR$). 
+
+The quantity we desire to determine is the number of events containing three real leptons, $n_{\RRR}$. The quantity actually measured in a signal region is the number of events containing three numerator objects, $n_{\NNN}$. Any of these numerators could be real or fake, so the sample can be decomposed as:
 
 \begin{align}
-	\NNN & = \RRR + \RRF + \RFR + \RFF +\\
-	&  \hspace{0.5in} + \FRR + \FRF + \FFR + \FFF
+	n_{\NNN} & = n_{\RRR} + n_{\RRF} + n_{\RFR} + n_{\RFF} +\\
+	&  \hspace{0.5in} + n_{\FRR} + n_{\FRF} + n_{\FFR} + n_{\FFF}
 \end{align}
 
-The reducible background prediction is $\NNN-\RRR$, the number of signal events where at least one lepton is fake. To estimate the other terms, we use events with one or more \emph{denominator} leptons, and assume $F=fD$. Using this relation, we have:
+The reducible background prediction is $n_{\NNN}-n_{\RRR}$, the number of signal events where at least one lepton is fake. To determine the other terms, we use events with one or more denominator leptons. For example, consider $\DNN$ events, where the first lepton is a denominator and the remaining leptons are numerators. Assuming that the denominator lepton is always a fake lepton, the number of $\DNN$ events, each weighted by the fake factor $f$ corresponding to the denominator lepton (represented schematically by $n_{\DNN}f_{1}$), equals the number of $\NNN$ events where the first lepton is fake:
 
 \begin{align}
-	\DNN f_{1} &= \FRR + \FRF + \FFR + \FFF \\
-	\NDN f_{2} &= \RFR + \RFF + \FFR + \FFF \\
-	\NND f_{3} &= \RRF + \RFF + \FRF + \FFF \\
-	\DDN f_{1}f_{2} &= \FFR + \FFF \\
-	\DND f_{1}f_{3} &= \FRF + \FFF \\
-	\NDD f_{2}f_{3} &= \RFF + \FFF \\
-	\DDD f_{1}f_{2}f_{3} &= \FFF
+	n_{\DNN} f_{1} &= n_{\FRR} + n_{\FRF} + n_{\FFR} + n_{\FFF}.
+\end{align}
+
+Similarly, the remaining permutations of numerators and denominators yield:
+
+\begin{align}
+	n_{\NDN} f_{2} &= n_{\RFR} + n_{\RFF} + n_{\FFR} + n_{\FFF} \\
+	n_{\NND} f_{3} &= n_{\RRF} + n_{\RFF} + n_{\FRF} + n_{\FFF} \\
+	n_{\DDN} f_{1}f_{2} &= n_{\FFR} + n_{\FFF} \\
+	n_{\DND} f_{1}f_{3} &= n_{\FRF} + n_{\FFF} \\
+	n_{\NDD} f_{2}f_{3} &= n_{\RFF} + n_{\FFF} \\
+	n_{\DDD} f_{1}f_{2}f_{3} &= n_{\FFF}
 \end{align}
 
 These equations contain eight equations and eight unknowns, so the system can be solved for the reducible background prediction:
@@ -78,10 +98,12 @@ These equations contain eight equations and eight unknowns, so the system can be
 		 & \hspace{0.5in} + \DDD f_{1}f_{2}f_{3}
 \end{align}
 
+Note that throughout this method, we have assumed that the leptons used for the measurement of $f$ and the denominator leptons in trilepton events are always fake leptons. In practice, real leptons contaminate both of these samples, and is accounted for using simulation, where the lepton can be classified as real or fake using the truth record of the event.
+
 We now discuss the measurement of the fake factors $f$, separately for electrons, muons, and tau leptons.
 
 \subsection{Electron Fake Factors}\label{sec:electron-fake-factors}
-The background estimation for fake electrons targets the reducible contribution from two sources: semileptonic heavy flavor decays and misidentified light hadrons. The electron denominator objects are defined by inverting either the IsEM electron identification criteria~\footnote{The parameter space between medium++ and loose++, rather than tight++ and medium++, is beneficial for two reasons. First, for the model-independent trilepton analysis~\cite{DeViveiros:1670929}, electrons between medium++ and loose++ were used to define a validation region to test the fake factor method. Second, requiring the electrons to fail medium++ reduces the prompt contamination, which is nonetheless still quite large.} or the track impact parameter cut (exclusive OR), as shown in table~\ref{table:electron-denominator-definition}; the electron must pass all the remaining cuts listed in table~\ref{table:lepton-selections}. Additionally, an inefficiency is observed for loose offline electrons with respect to the loose electron triggers. This is due to the lack of Gaussian sum filter (GSF) tracking~\cite{ATLAS-CONF-2012-047} at the trigger level. The inefficiency is mitigated by imposing the \verb.tight++. requirement on the $\Delta\eta$ and $\Delta\phi$ between the electron track and associated calorimeter cluster, with the goal of cutting out electrons with large amounts of bremsstrahlung, whose tracks are not reconstructed by the non-GSF algorithm in the trigger. 
+The background estimation for fake electrons targets the reducible contribution from two sources: semileptonic heavy flavor decays and misidentified light hadrons. The electron denominator objects are defined by inverting either the IsEM electron identification criteria~\footnote{The parameter space between medium++ and loose++, rather than tight++ and medium++, is used for two reasons. First, for the model-independent trilepton analysis~\cite{DeViveiros:1670929}, electrons between medium++ and loose++ were used to define a validation region to test the fake factor method. Second, requiring the electrons to fail medium++ reduces the prompt contamination, which is nonetheless still quite large.} or the track impact parameter cut (exclusive OR), as shown in table~\ref{table:electron-denominator-definition}; the electron must pass all the remaining cuts listed in table~\ref{table:lepton-selections}. Additionally, an inefficiency is observed for loose offline electrons with respect to the loose electron triggers. This is due to the lack of Gaussian sum filter (GSF) tracking~\cite{ATLAS-CONF-2012-047} at the trigger level. The inefficiency is mitigated by imposing the \verb.tight++. requirement on the $\Delta\eta$ and $\Delta\phi$ between the electron track and associated calorimeter cluster, with the goal of cutting out electrons with large amounts of bremsstrahlung, whose tracks are not reconstructed by the non-GSF algorithm in the trigger. 
 
 
 \begin{table}[h]
@@ -345,7 +367,7 @@ The uncertainty on the background prediction is the combination of two component
 	\label{fig:prompt-subtractions}
 \end{figure}
 
-\subsection{Tau Lepton Fakes}\label{sec:model-independent-ff-tau}
+\subsection{Tau Lepton Fakes}\label{sec:ff-tau}
 The detector signature of hadronically decaying tau leptons, consisting of a jet with one or more associated tracks, is not as distinctive as the signature of electrons and muons. Differentiating between jet, which are copiously produced in proton-proton collisions, and hadronically decaying tau leptons is difficult, and accordingly the reducible backgrounds in the 2L$+\tau_{\mathrm{had}}$ categories tend to be much larger than those in the 3L categories. 
 
 \textcolor{red}{Lots of work to do here, to avoid copying and pasting PO's work!}
@@ -389,7 +411,7 @@ in the event.  The former two target dependencies associated with the jet shower
 function of kinematics and detector homogeinity.  The latter is taken to account for the
 heavy-flavour component.
 
-\subsection{Fake Factor Measurement}\label{sec:model-independent-ff-tau-measurement}
+\subsection{Fake Factor Measurement}\label{sec:ff-tau-measurement}
 
 It is also important to measure the fake-factors in a sample which is expected to have a
 similar flavour composition as the signal regions used (the majority of trilepton events
@@ -444,7 +466,7 @@ denominator tau candidates, along with the prompt contribution which must be sub
 when calculating the fake-factors. Figure~\ref{fig:taufakefactors} shows the obtained
 fake-factors.
 
-\subsection{Systematic Uncertainties}\label{sec:model-independent-ff-tau-systematics}
+\subsection{Systematic Uncertainties}\label{sec:ff-tau-systematics}
 
 Various studies have been carried out to estimate the systematic uncertainties associated
 with the tau fake estimates.  The main considered sources of uncertainties are the following:
@@ -541,9 +563,9 @@ the prompt subtraction is most significant.
 
 % This is what you previously had in the resonance chapter. Probably redundant, but it does have fine details about the MC samples.
 %\section{Background Estimation}
-%The backgrounds to the trilepton resonance search are similar to those for the model-independent search described in section~\ref{sec:model-independent-background-estimation}. In the \fourl signal regions, $ZZ$ production is dominant. In the $\threeljj$ and $\threelo$ signal regions, $WZ$ production is dominant, with smaller contributions from $ZZ$ where one lepton is not selected, $\ttbarV$, and reducible backgrounds. 
+%The backgrounds to the trilepton resonance search are similar to those for the model-independent search described in section~\ref{sec:background-estimation}. In the \fourl signal regions, $ZZ$ production is dominant. In the $\threeljj$ and $\threelo$ signal regions, $WZ$ production is dominant, with smaller contributions from $ZZ$ where one lepton is not selected, $\ttbarV$, and reducible backgrounds. 
 %
-%The prompt backgrounds are estimated using Monte Carlo simulation. The samples are detailed below in section~\ref{sec:resonance-background-MC-samples}. The reducible $Z+\gamma$ backgrounds are also estimated using simulation. The remaining reducible backgrounds are estimated using the same fake factor method as described in section~\ref{sec:model-independent-fake-factor-method}. 
+%The prompt backgrounds are estimated using Monte Carlo simulation. The samples are detailed below in section~\ref{sec:resonance-background-MC-samples}. The reducible $Z+\gamma$ backgrounds are also estimated using simulation. The remaining reducible backgrounds are estimated using the same fake factor method as described in section~\ref{sec:fake-factor-method}. 
 %
 %\subsection{Background Monte Carlo Samples}\label{sec:resonance-background-MC-samples}
 %
