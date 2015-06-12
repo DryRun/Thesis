@@ -1,0 +1,19 @@
+\appendix
+
+\section{Photon Conversion Reweighting}\label{sec:conversion-reweighting}
+Backgrounds due to $Z+\gamma$, where the $Z$ boson decays leptonically and the photon converts asymmetrically in the detector and is reconstructed as a single electron, are estimated with \sherpa. The rate of photons being reconstructed as electrons is observed to be overestimated in Monte Carlo, especially for denominator electrons. The net effect of this mismodeling is a \emph{deficit} in the background prediction, due to its larger effect on the subtraction of prompt contamination than on the prompt background estimation itself. Scale factors are derived to account for the mismodeling of the conversion rate. 
+
+The principle of the method is the same as that used to estimate the electron ``charge flip'' mismeasurement rate. Charge flips and conversions occur through similar processes: charge flips occur through ``trident'' processes in which an electron emits a photon, which then converts asymmetrically and is reconstructed as an electron of the wrong charge. The method uses a $Z$-enriched region to estimate the conversion rate in bins of $\pt$ and $|\eta|$; for more details, see~\cite{DeViveiros:1670929}. The scale factors are shown in table~\ref{table:conversion-sfs}; the scale factor is applied to each $Z+\gamma$ event based on the classification of the reconstructed lepton closest to the truth photon (within $\Delta R<0.2$). A $30\%$ systematic uncertainty is assigned on the scale factors, mostly due to variations in the scale factors obtained from different Monte Carlo generators. 
+
+\begin{table}[tbp]
+  \centering
+  \begin{tabular}{l r r r}
+					 &$|\eta|<2.2$     &$2.2<|\eta|<2.37$     &$2.37<|\eta|<2.47$\\
+	\hline
+	Numerators       &1.02             &0.95                  &0.95\\
+	Denominators     &0.82             &0.66                  &0.40\\
+  \end{tabular}
+  \caption{Data-to-MC scale factors for photon conversions.}
+  \label{table:conversion-sfs}
+\end{table}
+
