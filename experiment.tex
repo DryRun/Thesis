@@ -188,32 +188,6 @@ ATLAS relies on four powerful superconducting magnets to bend the trajectories o
 		\hline
 		 & Field range in the bore & T & $0.9$-$2.0$ & $0.2$-$2.5$ & $0.2$-$3.5$ \\
 		\hline
-		\textbf{Conductor} & Overall size & mm$^2$ & $30\times 4.25$ & $57\times12$ & $41\times 12$ \\
-		\hline
-		 & Ratio Al:Cu:NbTi & & $15.6:0.9:1$ & $28:1.3:1$ & $19:1.3:1$ \\
-		\hline
-		 & Number of strands (NbTi) & & $12$ & $38$-$40$ & $40$ \\
-		\hline
-		 & Strand diameter (NbTi) & mm & $1.22$ & $1.3$ & $1.3$ \\
-		\hline
-		 & Critical current (at $5~\mbox{T}$ and $4.2~\mbox{K}$) & kA & $20.4$ & $58$ & $60$ \\
-		\hline
-		 & Operating/critical current ratio at $4.5~\mbox{K}$ & \% & $20$ & $30$ & $30$ \\
-		\hline
-		 & Residual resistivity ratio (RRR) for Al & & $>500$ & $>800$ & $>800$ \\
-		\hline
-		 & Temperature margin & K & $2.7$ & $1.9$ & $1.9$ \\
-		\hline
-		 & Number of units $\times$ length & m & $4\times 2290$ & $8\times 4 \times 1730$ & $2\times8\times2\times800$ \\
-		\hline
-		 & Total length (produced) & km & $10$ & $56$ & $2\times13$ \\
-		\hline
-		\textbf{Heat load} & At $4.5~\mbox{K}$ & W & $130$ & $990$ & $330$ \\
-		\hline
-		 & At $60$-$80~\mbox{K}$ & kW & $0.5$ & $7.4$ & $1.7$ \\
-		\hline
-		 & Liquid helium mass flow & g/s & $7$ & $410$ & $280$ \\
-		\hline
 	\end{tabular}
 	\caption{Main parameters of the ATLAS magnet system~\cite{TheATLASCollaboration:2008fg}.}
 	\label{table:ATLAS-magnet-parameters}
@@ -231,17 +205,22 @@ The longitudinal and radial magnetic field components are shown for different $R
 \begin{figure}[htbp]
 	\centering
 	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_solenoid_2}}
-	\caption{The central solenoid in the factory after completion of the coil winding~\cite{ }.}
+	\caption{The central solenoid in the factory after completion of the coil winding~\cite{atlas-photos}.}
 	\label{fig:solenoid}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_solenoid_Bfield}}
-	\caption{The solenoid magnetic field in the radial ($B_r$) and longitudinal ($B_z$) directions, shown as a function of $z$ for $\phi=20\pi/16$ at different values of $R$. The field determined from a fit of the field model to measurements using an array of Hall probes~\cite{Aleksa:2008br}.}
-	\label{fig:ATLAS-solenoid-Bfield}
+	\subfloat[] {\label{fig:ATLAS-solenoid-Bfield}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_solenoid_Bfield}}
+	}
+	\hfill
+	\subfloat[] {\label{fig:ATLAS-toroid-Bintegral}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_toroid_Bintegral}}
+	}
+	\caption{Left: the solenoid magnetic field in the radial ($B_r$) and longitudinal ($B_z$) directions, shown as a function of $z$ for $\phi=20\pi/16$ at different values of $R$. The field determined from a fit of the field model to measurements using an array of Hall probes~\cite{Aleksa:2008br}. Right: The predicted toroid magnetic field integral as a function of $|\eta|$. The integral is taken over a straight line through the interaction point, from the innermost to the outermost muon detector (section~\ref{sec:ATLAS-muon-spectrometer}).}
+	\label{fig:ATLAS-magnets-Bfield}
 \end{figure}
-
 
 
 \subsubsection{Toroid}\label{sec:ATLAS-magnets-toroid}
@@ -263,12 +242,6 @@ The field integral of the toroid is shown as a function of $\eta$ in figure~\ref
 	\label{fig:ATLAS-toroids}
 \end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_toroid_Bintegral}}
-	\caption{The predicted toroid magnetic field integral as a function of $|\eta|$. The integral is taken over a straight line through the interaction point, from the innermost to the outermost muon detector (section~\ref{sec:ATLAS-muon-spectrometer}).}
-	\label{fig:ATLAS-toroid-Bintegral}
-\end{figure}
 
 
 
@@ -342,7 +315,7 @@ In the barrel, the pixels have an intrinsic accuracy of $\SI{10}{\micro\meter}$ 
 	\centering
 	\begin{tabular}{|l|c|c|c|c|}
 		\hline
-		\textbf{Barrel} & \textbf{Radius (mm)} & \textbf{Modules} & \textbf{Pixels} \\
+		\textbf{Barrel} & \textbf{Radius (mm)} & \textbf{Staves} & \textbf{Modules} & \textbf{Pixels} \\
 		\hline
 		Layer-0 & $50.5$ & $22$ & $286$ & $13.2\times 10^6$ \\
 		Layer-1 & $88.5$ & $38$ & $494$ & $22.8\times 10^6$ \\
@@ -354,7 +327,7 @@ In the barrel, the pixels have an intrinsic accuracy of $\SI{10}{\micro\meter}$ 
 		Disk 2 & $495$ & $8$ & $48$ & $2.2\times 10^6$ \\
 		Disk 3 & $495$ & $8$ & $48$ & $2.2\times 10^6$ \\
 		\hline
-		\textbf{Barrel and both end-caps} & & $1744$ & $80.4\times 10^6$ \\
+		\textbf{Barrel and both end-caps} & & & $1744$ & $80.4\times 10^6$ \\
 		\hline
 	\end{tabular}
 	\caption{Parameters of the pixel detector, from~\cite{TheATLASCollaboration:2008fg}.}
@@ -363,7 +336,7 @@ In the barrel, the pixels have an intrinsic accuracy of $\SI{10}{\micro\meter}$ 
 
 \subsubsection{SCT}\label{sec:ATLAS-id-sct}
 
-The SCT consists of 15912 sensors using single-sided, $p$-in-$n$ type silicon strips. The use of single-sided strips lowers both the cost and the number of readout channels of the detector, which covers significantly more area than the pixel detector ($\SI{61.1}{\meter\tothe{2}}$ versus $\SI{2.3}{\meter\tothe{2}}$). In the barrel, the strips have a pitch of $\SI{80}{\micro\meter}$ and a length of $\SI{12}{\centi\meter}$. In the endcaps, the sensors are trapezoidal with radially arranged strips, with a mean strip pitch of $\SI{80}{\micro\meter}$ and a length of $\SI{12}{\centi\meter}$. Each sensor has 768 active strips. Like the pixel sensors, the operating voltage will be $\sim$\SI{150}{\volt} initially, and will increase to \SIrange[range-phrase=-]{250}{350}{\volt} after several years of irradiation, depending on the location of the sensor. 
+The SCT consists of 15912 sensors using single-sided, $p$-in-$n$ type silicon strips. The use of single-sided strips lowers both the cost and the number of readout channels of the detector, which covers significantly more area than the pixel detector ($\SI{61.1}{\meter\tothe{2}}$ versus $\SI{2.3}{\meter\tothe{2}}$). In the barrel, the strips have a pitch of $\SI{80}{\micro\meter}$ and a length of $\SI{12}{\centi\meter}$. In the endcaps, the sensors are trapezoidal with radially arranged strips, with a mean strip pitch of $\SI{80}{\micro\meter}$ and a length of $\SI{12}{\centi\meter}$. Each sensor has 768 active strips. Like the pixel sensors, the operating voltage is initially $\sim$\SI{150}{\volt}, but will require an increase to \SIrange[range-phrase=-]{250}{350}{\volt} after several years of irradiation, depending on the location of the sensor. 
 
 The SCT modules are shown in figure~\ref{fig:ATLAS-SCT-modules}.The 2112 barrel modules contain four sensors, while the 1976 end-cap modules contain two sensors. In both cases, the sensors are glued to a $\SI{380}{\micro\meter}$-thick thermal pyrolitic graphite (TPG) base-board. The sensors are assembled in two layers with a rotation of $\pm\SI{20}{\milli\radian}$ about the center of the sensors. The stereo angle between the two sensors allows for a measurement of the position along the length of the sensors. 
 
@@ -388,13 +361,33 @@ The intrinsic accuracy of the SCT sensors is $\SI{17}{\micro\meter}$ along the s
 	\label{fig:ATLAS-SCT-layout}
 \end{table}
 
+\begin{figure}[htbp]
+	\centering
+	\subfloat[] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_SCT_module_barrel}}
+	}
+	\hfill
+	\subfloat[] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_SCT_module_endcap}}
+	}
+	\caption{Diagrams of the SCT barrel (left) and end-cap (right) modules.}
+	\label{fig:ATLAS-SCT-modules}
+\end{figure}
+
+
 \subsubsection{TRT}\label{sec:ATLAS-id-trt}
 
 The TRT detector elements are polyimide drift (straw) tubes. The straws are arranged such that charged particles with $\pt > \SI{500}{\mega\electronvolt}$ and $|\eta|<2.0$ traverse at least 36 straws, except in the barrel/end-cap transition region where particles traverse as few as 22 straws. The straws are interleaved with polypropylene fibers in the barrel and polypropylene foils in the end-caps to provide transition radiation; electrons with $\pt>\SI{2.0}{\giga\electronvolt}$ typically leave $7$-$10$ high-threshold hits. The intrinsic resolution of the straws is $\SI{130}{\micro\meter}$ in the transverse direction.
 
-The straws measure $\SI{4}{\milli\meter}$ in diameter and $\SI{144}{\centi\meter}$ ($\SI{37}{\centi\meter}$) in length in the barrel (end-caps). The straw walls consist of two $\SI{35}{\micro\meter}$ films bonded back-to-back. The base film material is a $\SI{25}{\micro\meter}$ thick layer of polyamide, which is coated on the exterior side with a $\SI{0.2}{\micro\meter}$ thick layer of Al and a \SIrange[range-phrase=-]{5}{6}{\micro\meter} thick protective layer of graphite-polyamide. The other side of the film is coated with a \SIrange[range-phrase=-]{5}{6}{\micro\meter} thick layer of polyurethane, which is used to heat-seal the two film layers together. The anodes of the detectors are tungsten wires running down the axis of the tubes, with $\SI{31}{\micro\meter}$ diameter and plated with \SIrange[range-phrase=-]{0.5}{0.7}{\micro\meter} of gold. The wires are supported at the end of the straw by an end plug, where they connect to the front-end electronics. At the middle of the straw, the wires are supported by a plastic insert, and are also split electrically by a fused glass capillary to reduce occupancy. The active length of each half of the wire is $\SI{71.2}{\centi\meter}$, with a $\SI{2}{\centi\meter}$ inefficient length at the middle. The signal attenuation length is $\sim$\SI{4}{\meter}, and the signal propagation time is $\sim$\SI[per-mode=fraction]{4}{\nano\second\per\meter}. The straws are filled with a mixture of 70\% Xe, 27\% CO$_2$, and $3\%$ O$_2$. With a cathode voltage of $\SI{-1530}{\volt}$, the gain in the straws is $2.5\times 10^4$.
+The straws measure $\SI{4}{\milli\meter}$ in diameter and $\SI{144}{\centi\meter}$ ($\SI{37}{\centi\meter}$) in length in the barrel (end-caps). The straw walls consist of two $\SI{35}{\micro\meter}$ aluminum-coated polyamide films bonded back-to-back.
+%The base film material is a $\SI{25}{\micro\meter}$ thick layer of polyamide, which is coated on the exterior side with a $\SI{0.2}{\micro\meter}$ thick layer of Al and a \SIrange[range-phrase=-]{5}{6}{\micro\meter} thick protective layer of graphite-polyamide. The other side of the film is coated with a \SIrange[range-phrase=-]{5}{6}{\micro\meter} thick layer of polyurethane, which is used to heat-seal the two film layers together. 
+The anodes of the detectors are gold-plated tungsten wires running down the axis of the tubes, with $\SI{31}{\micro\meter}$ diameter.
+% and plated with \SIrange[range-phrase=-]{0.5}{0.7}{\micro\meter} of gold. 
+The wires are supported at the end of the straw by an end plug, where they connect to the front-end electronics. At the middle of the straw, the wires are supported by a plastic insert, and are also split electrically by a fused glass capillary to reduce occupancy. The active length of each half of the wire is $\SI{71.2}{\centi\meter}$, with a $\SI{2}{\centi\meter}$ inefficient section at the middle. 
+%The signal attenuation length is $\sim$\SI{4}{\meter}, and the signal propagation time is $\sim$\SI[per-mode=fraction]{4}{\nano\second\per\meter}. 
+The straws are filled with a mixture of 70\% Xe, 27\% CO$_2$, and $3\%$ O$_2$. With a cathode voltage of $\SI{-1530}{\volt}$, the gain in the straws is $2.5\times 10^4$.
 
-The layout of the straws in the barrel and end-caps is summarized in table~\ref{table:ATLAS-TRT-layout}. In the barrel, the straws are arranged into three layers of modules as shown in figure~\ref{fig:barrel-modules}, with different dimensions and straw counts depending on the layer. The straws are interleaved with transition radiation material, polypropylene fibers measuring $\SI{19}{\micro\meter}$ in diameter. The module shell is made from $\SI{400}{\micro\meter}$ thick carbon fiber, and serve not only as a support structure, but also as a gas manifold for CO$_2$, which prevents high-voltage discharges, flushes any Xe leaking from the straws, and conducts heat away from the straws.  
+The layout of the straws in the barrel and end-caps is summarized in table~\ref{table:ATLAS-TRT-layout}. In the barrel, the straws are arranged into three layers of modules as shown in figure~\ref{fig:ATLAS-TRT-barrel-modules}, with different dimensions and straw counts depending on the layer. The straws are interleaved with transition radiation material, polypropylene fibers measuring $\SI{19}{\micro\meter}$ in diameter. The module shell is made from $\SI{400}{\micro\meter}$ thick carbon fiber, and serve not only as a support structure, but also as a gas manifold for CO$_2$, which prevents high-voltage discharges, flushes any Xe leaking from the straws, and conducts heat away from the straws.  
 
 The endcaps consist of 160 layers of 768 straws, arranged radially into 20 wheels with 8 layers each. The inner 12 wheels (type-A) are spaced $\SI{8}{\milli\meter}$ in $z$, while the outer 8 wheels (type-B) are spaced by $\SI{15}{\milli\meter}$. Each successive layer in a wheel is separated by a $\SI{15}{\micro\meter}$ thick polypropylene radiator foil, and is rotated by $3/8$ of the azimuthal straw spacing to optimize the uniformity of the number of straw crossed.
 
@@ -419,6 +412,14 @@ The endcaps consist of 160 layers of 768 straws, arranged radially into 20 wheel
 	\caption{Layout and straw counts of the TRT barrel modules and end-cap wheels. The totals for the barrel and end-caps, shown in bold, include services and electronics.}	
 	\label{table:ATLAS-TRT-layout}
 \end{table}
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_TRT_barrel_phistack}}
+	\caption{Layout of the TRT barrel modules in the $R$-$\phi$ plane.}
+	\label{fig:ATLAS-TRT-barrel-modules}
+\end{figure}
+
 
 
 \subsection{Calorimetry}\label{sec:ATLAS-calorimeters}
@@ -460,7 +461,7 @@ The calorimeter system occupies the volume directly exterior to the solenoid mag
 
 \subsubsection{Electromagnetic Calorimeter}\label{sec:ATLAS-calorimeters-ecal}
 
-The electromagnetic calorimeter consists of two half-barrels ($0<\eta<\pm1.475$) and two end-caps ($1.375<|\eta|<3.2$), all of which use LAr as the active material and steel-clad lead plates as the absorber. The lead plates are arranged in an accordion geometry to provide a uniform, gapless coverage in $\phi$, shown for a barrel module in figure~\ref{fig:ATLAS-LAr-module}. The plates are interleaved with electrodes built from copper etchings on polymide, consisting of three conducting layers. The outer conductive layers of the electrodes distribute the $\SI{2000}{\volt}$ high voltage over the electrode surface, which drifts the charges induced by ionization in the LAr towards the electrodes with a drift time of $\SI{450}{\nano\second}$. The inner layer of the electrode, separated from the outer layers by isolating foils, collects the signals via capacitive coupling.
+The electromagnetic calorimeter consists of two half-barrels ($0<|\eta|<1.475$) and two end-caps ($1.375<|\eta|<3.2$), all of which use LAr as the active material and steel-clad lead plates as the absorber. The lead plates are arranged in an accordion geometry to provide a uniform, gapless coverage in $\phi$, shown for a barrel module in figure~\ref{fig:ATLAS-LAr-module}. The plates are interleaved with electrodes built from copper etchings on polymide, consisting of three conducting layers. The outer conductive layers of the electrodes distribute the $\SI{2000}{\volt}$ high voltage over the electrode surface, which drifts the charges induced by ionization in the LAr towards the electrodes with a drift time of $\SI{450}{\nano\second}$. The inner layer of the electrode, separated from the outer layers by isolating foils, collects the signals via capacitive coupling.
 
 \begin{figure}[htbp]
 	\centering
@@ -475,17 +476,21 @@ The electromagnetic calorimeter consists of two half-barrels ($0<\eta<\pm1.475$)
 \end{figure}
 
 
-The two half-barrels occupy the region $\SI{2.8}{\meter}<R<\SI{4}{\meter}$ and $\SI{0}{\meter}<z<\pm\SI{3.2}{\meter}$. Each has 1024 lead plates with a thickness of $\SI{1.53}{\milli\meter}$ for $|\eta|<0.8$ and $\SI{1.13}{\milli\meter}$ for $|\eta|>0.8$. The barrels are divided into 16 modules, each covering an azimuthal angle of $\Delta \phi = 22.5^{\circ}$. Each module has three layers in depth to provide a rough measurement of the longitudinal profile of the electromagnetic showers. The segmentation of each layer in $\Delta\eta\times\Delta\phi$ is shown in table~\ref{table:ATLAS-LAr-segmentation}. The fine segmentation of the front layer aids particle identification, and, in combination with the middle layer, allows for a measurement of photon trajectories. A LAr half barrel is shown in figure~\ref{fig:LAr-barrel}, prior to installation.
+The two half-barrels occupy the region $\SI{2.8}{\meter}<R<\SI{4}{\meter}$ and $\SI{0}{\meter}<z<\pm\SI{3.2}{\meter}$. Each has 1024 lead plates with a thickness of $\SI{1.53}{\milli\meter}$ for $|\eta|<0.8$ and $\SI{1.13}{\milli\meter}$ for $|\eta|>0.8$. The barrels are divided into 16 modules, each covering an azimuthal angle of $\Delta \phi = 22.5^{\circ}$. Each module has three layers in depth to provide a rough measurement of the longitudinal profile of the electromagnetic showers. The segmentation of each layer in $\Delta\eta\times\Delta\phi$ is shown in table~\ref{table:ATLAS-LAr-segmentation}. The fine segmentation of the front layer aids particle identification, and, in combination with the middle layer, allows for a measurement of photon trajectories. 
+%A LAr half barrel is shown in figure~\ref{fig:LAr-barrel}, prior to installation.
 
-\begin{figure}[htbp]
-	\centering
-	\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_LAr_barrel}}
-	\caption{Photograph of a LAr calorimeter half-barrel, prior to installation.}
-	\label{fig:LAr-barrel}
-\end{figure}
+%\begin{figure}[htbp]
+%	\centering
+%	\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_LAr_barrel}}
+%	\caption{Photograph of a LAr calorimeter half-barrel, prior to installation.}
+%	\label{fig:LAr-barrel}
+%\end{figure}
 
 
-The end-caps, one on either side of the interaction region, measure $\SI{63}{\centi\meter}$ in thickness with inner and outer radii of $\SI{33}{\centi\meter}$ and $\SI{209.8}{\centi\meter}$, respectively. Each end-cap contains two co-axial sub-wheels, divided by a $\SI{3}{\milli\meter}$ gap at $|\eta|=2.5$. The inner and outer wheels contain 256 and 768 lead absorbers, respectively, with the same accordion geometry as used in the barrel. In the region $1.5<|\eta|<2.5$, the outer wheel of the end-caps presents three layers in the longitudinal direction, with fine $\eta$ segmentation in the front layer. For $|\eta|<1.5$ in the outer wheel and the entire inner wheel ($2.5<|\eta|<3.2$), there are two longitudinal layers and coarser transverse granularity.
+The end-caps, one on either side of the interaction region, measure $\SI{63}{\centi\meter}$ in thickness with inner and outer radii of $\SI{33}{\centi\meter}$ and $\SI{209.8}{\centi\meter}$, respectively. 
+%Each end-cap contains two co-axial sub-wheels, divided by a $\SI{3}{\milli\meter}$ gap at $|\eta|=2.5$.
+%The inner and outer wheels contain 256 and 768 lead absorbers, respectively, 
+Each end-cap consists of 1024 lead absorbers with the same accordion geometry as used in the barrel. In the region $1.5<|\eta|<2.5$, the end-caps present three layers in the longitudinal direction, with fine $\eta$ segmentation in the front layer; elsewhere, there are two longitudinal layers with coarser transverse granularity.
 
 The total amount of material before and in the electromagnetic calorimeters is shown in figure~\ref{fig:ATLAS-calorimeters-X0} in terms of radiation lengths, $X_0$. The beam pipe, inner detector, solenoid, cryostats, and other services and support structures present a significant amount of material in between the interaction point and the calorimeters. To provide a measurement of the energy loss due to particles interacting before the calorimeters, a presampler is installed in front of the first LAr layer. The presampler is a liquid argon layer $\SI{11}{\milli\meter}$ in depth, divided into 64 azimuthal sectors (32 in each half-barrel) of dimension $\Delta\eta\times\Delta\phi=1.52\times0.2$. Each sector contains eight modules, the central seven of which span $\Delta\eta=0.2$, and the outermost of which measures $\Delta\eta=0.12$.  The modules contain interleaved cathodes and anodes with \SIrange[range-phrase=-]{1.9}{2.0}{\milli\meter} spacing. Like the three LAr calorimeter layers, the anodes contain three conducting layers, the outer two of which supply the $\SI{2000}{\volt}$ operating voltage, and the innermost of which performs the signal readout via capacitive coupling.
 
@@ -531,7 +536,7 @@ In total, the electromagnetic calorimeter has 101,760 readout channels for the b
 
 
 \subsubsection{Tile Calorimeter}\label{sec:ATLAS-calorimeters-tile}
-The tile calorimeter performs hadronic calorimetry in the region $|\eta|<1.7$, occupying the radial range $\SI{2.28}{\meter}<R<\SI{4.25}{\meter}$. Divided into a $\SI{5.8}{\meter}$-long central barrel and two $\SI{2.6}{\meter}$-long extended barrels on either side, the tile calorimeter uses steel as the absorber and scintillating tiles as the active material. The total depth is approximately $7.4\lambda$. 
+The tile calorimeter performs hadronic calorimetry in the region $|\eta|<1.7$, occupying the radial range $\SI{2.28}{\meter}<R<\SI{4.25}{\meter}$. Divided into a $\SI{5.8}{\meter}$-long central barrel and two $\SI{2.6}{\meter}$-long extended barrels on either side, it uses steel as the absorber and scintillating tiles as the active material. The total depth is approximately $7.4\lambda$. 
 
 Each of the three calorimeter sections is divided azimuthally into 64 modules, each spanning $\Delta\phi=5.625$. A module is shown schematically in figure~\ref{fig:ATLAS-calorimeters-tile-module}. The outer edge of a module is a steel girder which houses the tile calorimeter readout electronics and also provides flux return for the solenoidal magnetic field. The body of the module is a self-supporting structure built from steel absorber plates, with $\SI{4}{\milli\meter}$-thick spacer plates glued in staggered fashion to $\SI{5}{\milli\meter}$-thick master plates. The staggered spacing creates the gaps into which the scintillating tiles are inserted, with a steel-to-scintillator volume ratio of approximately $4.7:1$. 
 
@@ -544,6 +549,7 @@ At the tile edges, the light is collected by wavelength-shifting fibers, which t
 	\subfloat[ Schematic view of a tile calorimeter module, showing assembly of the steel absorber, the inserted scintillator tiles, and the readout of lighting through wavelength-shifting fibers to the photomultiplier tubes.] {\label{fig:ATLAS-calorimeters-tile-module}
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_TILE_module}}
 	}
+	\hfill
 	\subfloat[ Layout of the tile calorimeter cells, defined by the grouping of the readout fibers connecting the scintillating tiles to the photomultiplier tubes.] {\label{fig:ATLAS-calorimeters-tile-cell-layout}
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_TILE_cell_layout}}
 	}
@@ -569,7 +575,7 @@ The gaps contain 3 electrodes spaced by $\SI{1.8}{\milli\meter}$, the outer two 
 \subsubsection{Forward Calorimeter}\label{sec:ATLAS-calorimeters-fcal}
 The forward calorimeter (FCal) performs both electromagnetic and hadronic calorimetry in the very forward region, $3.2<|\eta|<4.9$, and also shields the muon system from high particle fluxes. On each side, the FCal is divided into three layers measuring $\SI{45}{\centi\meter}$ in depth, an electromagnetic layer (FCal1) and two hadronic layers (FCal2 and FCal 3). All three layers use LAr as the active medium, with very thin gaps due to avoid ion buildup due to the high particle flux. FCal1 uses copper absorbers to optimize the resolution and heat removal. FCal2 and FCal3 use tungsten absorbers, which provides good containment and reduces the lateral spread of hadronic showers. Finally, a passive brass plug behind FCal3 provides shielding for the muon system. The layout of the three layers and shielding plug is shown in figure~\ref{fig:ATLAS-calorimeters-fcal-layout}. 
 
-FCal1 consists of stacked copper plates with $\SI{0.27}{\milli\meter}$ LAr gaps. The electrodes occupy 12,260 holes drilled through the copper plates, and consist of a copper rod coaxial with a copper tube, as shown in figure~\ref{fig:ATLAS-calorimeters-fcal1-electrodes}. FCal2 and FCal3 consist of two $\SI{2.35}{\centi\meter}$-thick copper end-plates spanned by an array electrodes similar to those in FCal1, except with tungsten rods, as shown in figure~\ref{fig:ATLAS-calorimeter-fcal23-electrodes}. The arrays contains 10,200 and 8,224 electrodes in FCal2 and FCal3, respectively. In total, the three layers, FCal1, FCal2, and FCal3, contain 1008, 500, and 254 readout channels, respectively, and constitute 27.6, 91.3, and 89.2 radiation lengths and 2.66, 3.68, and 60 interaction lengths. 
+FCal1 consists of stacked copper plates with $\SI{0.27}{\milli\meter}$ LAr gaps. The electrodes occupy 12,260 holes drilled through the copper plates, and consist of a copper rod coaxial with a copper tube, as shown in figure~\ref{fig:ATLAS-calorimeter-fcal1-electrodes}. FCal2 and FCal3 consist of two $\SI{2.35}{\centi\meter}$-thick copper end-plates spanned by an array electrodes similar to those in FCal1, except with tungsten rods, as shown in figure~\ref{fig:ATLAS-calorimeter-fcal23-electrodes}. The arrays contains 10,200 and 8,224 electrodes in FCal2 and FCal3, respectively. In total, the three layers, FCal1, FCal2, and FCal3, contain 1008, 500, and 254 readout channels, respectively, and constitute 208.1 radiation lengths and 66.3 interaction lengths. 
 
 \begin{figure}
 	\centering
@@ -587,7 +593,7 @@ FCal1 consists of stacked copper plates with $\SI{0.27}{\milli\meter}$ LAr gaps.
 	\subfloat[] {\label{fig:ATLAS-calorimeter-fcal23-electrodes}
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_FCal23_electrodes}}
 	}
-	\caption{Left: the electrode structure of FCal1, showing the matrix of copper tubes and rods. The Moli{\`'e}re radius, $R_{\mathrm{M}}$, is shown for reference. Right: the absorber matrix in FCal2 and FCal, made from tungsten rods and copper tubes.}
+	\caption{Left: the electrode structure of FCal1, showing the matrix of copper tubes and rods. The Moli{\`e}re radius, $R_{\mathrm{M}}$, is shown for reference. Right: the absorber matrix in FCal2 and FCal, made from tungsten rods and copper tubes.}
 	\label{fig:ATLAS-calorimeter-fcal-electrodes}
 \end{figure}
 
@@ -631,7 +637,11 @@ The muon spectrometer contains 1088 MDT chambers, covering a total area of $\sim
 \end{figure}
 
 
-The aluminum drift tubes have a radius of $\SI{29.97}{\milli\meter}$, with a $\SI{50}{\micro\meter}$-diameter tungsten-rhenium wire forming the anode along the axis of the tube. A cross section of a tube is shown in figure~\ref{fig:ATLAS-MS-MDT-xsec}. The operating voltage is $\SI{3080}{\volt}$, creating a radial electric field which allows for determination of the track position independent of the angle between the track and the tube. The tubes are filled with a mixture of argon and CO$_2$ (93:7) with a high pressure of 3~bar to reduce the impact of diffusion on the resolution. The gas mixture has good aging properties, but suffers from a long drift time, up to $\SI{700}{\nano\second}$ from the wall to the wire, and exhibits a nonlinear space-drift time relation which degrades the spatial resolution at high counting rates due to positive ions distorting the electric field. 
+The aluminum drift tubes have a radius of $\SI{29.97}{\milli\meter}$, with a $\SI{50}{\micro\meter}$-diameter tungsten-rhenium wire forming the anode along the axis of the tube. A cross section of a tube is shown in figure~\ref{fig:ATLAS-MS-MDT-xsec}. The tubes are filled with a mixture of argon and CO$_2$ (93:7) with a high pressure of $\SI{3}{\bar}$, and are operated with a voltage of $\SI{3080}{\volt}$. The average resolution of a single drift tube is $\SI{80}{\micro\meter}$, and the combined resolution of a chamber is $\SI{35}{\micro\meter}$. To achieve this precision, the position of the drift tubes and wires must be known to less than $\SI{30}{\micro\meter}$. Four optical alignment rays inside each MDT chamber continuously monitor the geometry of the chamber with a precision of a few microns, shown in figure~\ref{fig:ATLAS-MS-MDT-chamber}. An inter-chamber optical alignment network monitors the relative positions of chambers relative to their neighbors with a precision of approximately $\SI{20}{\micro\meter}$. The optical alignment is supplemented with track-based alignment algorithms to align the chambers with poor or absent connection to the optical network, the end-caps with respect to the barrel, and the muon spectrometer with respect to the inner detector.
+
+
+
+%The operating voltage is $\SI{3080}{\volt}$, creating a radial electric field which allows for determination of the track position independent of the angle between the track and the tube. The tubes are filled with a mixture of argon and CO$_2$ (93:7) with a high pressure of 3~bar to reduce the impact of diffusion on the resolution. The gas mixture has good aging properties, but suffers from a long drift time, up to $\SI{700}{\nano\second}$ from the wall to the wire, and exhibits a nonlinear space-drift time relation which degrades the spatial resolution at high counting rates due to positive ions distorting the electric field. 
 
 \begin{figure}[htbp]
 	\centering
@@ -640,7 +650,6 @@ The aluminum drift tubes have a radius of $\SI{29.97}{\milli\meter}$, with a $\S
 	\label{fig:ATLAS-MS-MDT-xsec}
 \end{figure}
 
-The average resolution of the drift tubes is $\SI{80}{\micro\meter}$, and the combined resolution of a chamber is $\SI{35}{\micro\meter}$. To achieve this precision, the position of the drift tubes and wires must be known to less than $\SI{30}{\micro\meter}$. Four optical alignment rays inside each MDT chamber continuously monitor the geometry of the chamber with a precision of a few microns, shown in figure~\ref{fig:ATLAS-MS-MDT-chamber}. An inter-chamber optical alignment network monitors the relative positions of chambers relative to their neighbors with a precision of approximately $\SI{20}{\micro\meter}$. The optical alignment is supplemented with track-based alignment algorithms to align the chambers with poor or absent connection to the optical network, the end-caps with respect to the barrel, and the muon spectrometer with respect to the inner detector.
 
 
 
@@ -648,7 +657,7 @@ The average resolution of the drift tubes is $\SI{80}{\micro\meter}$, and the co
 \subsubsection{Cathode Strip Chambers}
 The rate limit for the safe operation of the MDTs is about \SI[per-mode=symbol]{150}{\hertz\per\centi\meter\tothe{2}}, which is exceeded for $|\eta|>2$ in the first layer of the end-cap at $|z|\approx \SI{7}{\meter}$. Accordingly, CSCs are used in this volume of the detector, which can operate up to rates of about \SI[per-mode=symbol]{1}{\kilo\hertz\per\centi\meter\tothe{2}}. Eight large and eight small trapezoidal chambers give full coverage in $\phi$, as shown in figure~\ref{fig:ATLAS-MS-CSC-layout}.  
 
-The CSCs are multiwire proportional chambers, with parallel wires running in the radial direction and the two cathodes finely segmented in perpendicular directions to provide measurements in both the $\eta$ and $\phi$ directions. The perpendicular cathode segmentation provides position measurements in two dimension, aiding the resolution of nearby hits from more than one track. In the bending direction, the segmentation corresponds to a readout pitch of $\SI{5.31}{\milli\meter}$ and $\SI{5.56}{\milli\meter}$ for the large and small chambers, respectively.  The track coordinate is determined from a relative measurement of the charge induced on 3-5 adjacent strips at the peak of the charge distribution, shown schematically in figure~\ref{fig:ATLAS-MS-CSC-charge}. The resolution, dominated by electronic noise in the pre-amplifiers and by the spread of charge along the anode wire due inclined tracks, delta electrons, or a Lorentz force along the wire, is roughly $\SI{60}{\micro\meter}$ per CSC plane. In the non-bending direction, a coarser segmentation leads to a resolution of $\SI{5}{\milli\meter}$. 
+The CSCs are multiwire proportional chambers, with parallel wires running in the radial direction and the two cathodes finely segmented in perpendicular directions to provide measurements in both the $\eta$ and $\phi$ directions. The perpendicular cathode segmentation provides position measurements in two dimensions, which helps distinguish hits from nearby particles. In the bending direction, the segmentation corresponds to a readout pitch of $\SI{5.31}{\milli\meter}$ and $\SI{5.56}{\milli\meter}$ for the large and small chambers, respectively.  The track coordinate is determined from a relative measurement of the charge induced on 3-5 adjacent strips at the peak of the charge distribution, shown schematically in figure~\ref{fig:ATLAS-MS-CSC-charge}. The resolution, dominated by electronic noise in the pre-amplifiers and by the spread of charge along the anode wire due inclined tracks, delta electrons, or a Lorentz force along the wire, is roughly $\SI{60}{\micro\meter}$ per CSC plane. In the non-bending direction, a coarser segmentation leads to a resolution of $\SI{5}{\milli\meter}$. 
 
 \begin{figure}[htbp]
 	\centering
@@ -701,7 +710,7 @@ The L1 trigger reduces the event rate from $\SI{20}{\mega\hertz}$ to $\SI{75}{\k
 
 \begin{figure}[htbp]
 	\centering
-	\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_trigger_L1_block}}
+	\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_trigger_L1_block2}}
 	\caption{Block diagram of the L1 trigger system.}
 	\label{fig:ATLAS-trigger-L1-block}
 \end{figure}
