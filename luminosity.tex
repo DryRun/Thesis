@@ -83,32 +83,33 @@ where $f_r$ is the revolution frequency, $n_{1,2}$ are the number of particles i
 	K=\sqrt{(\vec{v}_1-\vec{v}_2)^2 - \frac{(\vec{v}_1\times\vec{v}_2)^2}{c^2}},
 \end{equation}
 
-which, in the limit $|\vec{v}_{1,2}|\rightarrow c$, reduces to $2c\cos\alpha$, where $\alpha$ is the crossing angle between the beams. For simplicity, the crossing angle is assumed to be zero, and the bunch densities are assumed to be functions of $x$, $y$, and $z\pm ct$, i.e. that the transverse bunch profiles are constant over the duration of the collision
-\footnote{Specifically, the \emph{hourglass effect} is neglected. The collisions occur in a drift space, where the beams are typically focused, or squeezed, onto the interaction point. The transverse size of the beam in direction $i$ as a function of $z$ is given by $\sigma_{i}^2(z)=\epsilon_{i} \beta^*_{i} \left(1+\frac{(z-z_{i}^w)^2}{{\beta^*_{i}}^2}\right)$, where $\epsilon_{i}$ is the transverse emittance, $z_i^w$ is location of the optical waist, and $\beta^*_i$ is the betatron function at $z=z_i^w$. The effect is significant when $\beta^*_i\lesssim \sigma_z$; during the vdM scans, $\sigma_z\approx \SI{50}{\milli\meter}$, while $\beta^*=\SI{1.5}{\meter}$-$\SI{11}{\meter}$, and hence the hourglass effect is neglected.}. The luminosity can then be expressed as:
+which, in the limit $|\vec{v}_{1,2}|\rightarrow c$, reduces to $2c\cos\alpha$, where $\alpha$ is the crossing angle between the beams. To simplify the current discussion, the crossing angle is assumed to be zero, and the bunch densities are assumed to be functions of $x$, $y$, and $z\pm ct$, i.e. that the transverse bunch profiles are constant over the duration of the collision\footnote{Specifically, the \emph{hourglass effect} is neglected. The collisions occur in a drift space, where the beams are typically focused, or squeezed, onto the interaction point. The transverse size of the beam in direction $i$ as a function of $z$ is given by $\sigma_{i}^2(z)=\epsilon_{i} \beta^*_{i} \left(1+\frac{(z-z_{i}^w)^2}{{\beta^*_{i}}^2}\right)$, where $\epsilon_{i}$ is the transverse emittance, $z_i^w$ is location of the optical waist, and $\beta^*_i$ is the betatron function at $z=z_i^w$. The effect is significant when $\beta^*_i\lesssim \sigma_z$; during the vdM scans, $\sigma_z\approx \SI{50}{\milli\meter}$, while $\beta^*=\SI{1.5}{\meter}$-$\SI{11}{\meter}$, and hence the hourglass effect is neglected.}. The luminosity can then be expressed as:
 
 \begin{equation}
 	\mathcal{L}=f_r n_1 n_2 \int \hat{\rho}_1(x,\,y)\hat{\rho}_2(x,\,y) dx\,dy,
 \end{equation}
 
-where $\hat{\rho}_{1,2}(x,\,y)$ are the transverse particle densities, normalized to unity. Under the further assumption that the transverse particle densities factorize in the horizontal and vertical directions, $\hat{\rho}(x,\,y)=\rho_x(x)\rho_y(y)$, the luminosity can be written as:
+where $\hat{\rho}_{1,2}(x,\,y)$ are the transverse particle densities, normalized to unity. Under the further assumption that the transverse particle densities factorize in the horizontal and vertical directions, $\hat{\rho}(x,\,y)=\hat{\rho}_x(x)\hat{\rho}_y(y)$, where $\hat{\rho}_x(x)$ and $\hat{\rho}_y(y)$ are also normalized to unity, the luminosity can be written as:
 
 \begin{equation}
-	\mathcal{L} = f_r n_1 n_2 \Omega_x(\rho_{x1},\,\rho_{x2}) \Omega_y(\rho_{y1},\,\rho_{y2}),
+	\mathcal{L} = f_r n_1 n_2 \Omega_x(\hat{\rho}_{x1},\,\hat{\rho}_{x2}) \Omega_y(\hat{\rho}_{y1},\,\hat{\rho}_{y2}),
 \end{equation}
 
-where $\Omega_x(\rho_{x1},\,\rho_{x2})=\int \rho_{x1}(x) \rho_{x2}(x) dx$, and similarly for the $y$ direction. As first proposed by van der Meer~\cite{vdm}, the $\Omega_{x,y}$ parameters can be determined by measuring the interaction rate $R$ as a function of transverse beam displacement $\delta$,
+where $\Omega_x(\hat{\rho}_{x1},\,\hat{\rho}_{x2})=\int \hat{\rho}_{x1}(x) \hat{\rho}_{x2}(x) dx$, and similarly for the $y$ direction. As first proposed by van der Meer~\cite{vdm}, the $\Omega_{x,y}$ parameters can be determined by measuring the interaction rate as a function of transverse beam displacement, $R_{x,y}(\delta)$. Without loss of generality, assume that beam 2 is displaced by $\delta$ in the $x$ direction, while beam 1 is held fixed. Then, $R_{x}(\delta) = k \int \rho_{x1}(x) \rho_{x2}(x-\delta)\, dx$ for some constant $k$, and 
 
-\begin{equation}
-	\Omega_x (\rho_{x1},\,\rho_{x2}) = \frac{R_x(0)}{\int R_x(\delta) d\delta}.
-\end{equation}
+\begin{align}
+	\frac{R_x(0)}{\int R_x(\delta) d\delta} &= \frac{k\int \rho_{x1}(x) \rho_{x2}(x)\, dx}{k\int\int \rho_{x1}(x)\rho_{x2}(x-\delta) \, dx\, d\delta} \\
+	&= \int \rho_{x1}(x)\rho_{x2}(x)\, dx \\
+	&= \Omega_x (\hat{\rho}_{x1},\,\hat{\rho}_{x2})
+\end{align}
 
-For convenience, define $\Sigma_{x,y}$ to be the characteristic widths of $R_{x,y}(\delta$, given by:
+For convenience, define $\Sigma_{x,y}$ to be the characteristic widths of $R_{x,y}(\delta)$, given by:
 
 \begin{equation}\label{eqn:reco-luminosity-CapSigma}
 	\Sigma_{x,y}=\frac{1}{\sqrt{2\pi}} \frac{\int R_{x,y}(\delta)\,d\delta}{R_{x,y}(0)}.
 \end{equation}
 
-For Gaussian beams, $\Sigma_{x,y}$ correspond to the standard deviation of $R_{x,y}(\delta)$. Finally, the luminosity is given by
+For Gaussian beams, $\Sigma_{x,y}$ correspond to the Gaussian width of $R_{x,y}(\delta)$. Finally, the luminosity is given by
 
 \begin{equation}
 	\mathcal{L} = \frac{f_r n_1 n_2}{2\pi \Sigma_x \Sigma_y}.
@@ -122,11 +123,21 @@ Equating this with the luminosity defined in equation~\ref{eqn:reco-luminosity-d
 
 where $\mu_{\mathrm{vis}}^{\mathrm{MAX}}$ is the visible interaction rate per bunch crossing at the maximum of the scan curve, $R(\delta)$. The numbers of particles per bunch, $n_{1,2}$, are measured by the LHC Bunch Current Normalization Working Group using bunch current transformers (BCTs)~\cite{BCNWG}. 
 
-As an example, the 2011 $pp$ calibration is derived from two pairs of scans in the $x$- and $y$-directions, performed during the same LHC fill on 15 May 2011. The beams had 14 colliding bunch pairs, $\sim0.8\times 10^11$ protons per bunch, $\beta^*=\SI{1.5}{\meter}$, and a crossing angle of $\alpha=\SI{240}{\micro\radian}$. The resulting transverse beam size is approximately $\sigma_{x}\approx\sigma_{y}\approx \SI{40}{\micro\meter}$, and the average number of interactions per cross with head-on collisions is $\mu\approx 2.3$. The scan was performed in 25 equal steps over a displacement range of $\delta=\pm 233 \micron$.
+\subsection{2011 Luminosity Calibration}
+
+As an example, the 2011 $pp$ calibration is derived from two pairs of scans in the $x$- and $y$-directions, performed during the same LHC fill on 15 May 2011. The beams had 14 colliding bunch pairs, $\sim0.8\times 10^11$ protons per bunch, $\beta^*=\SI{1.5}{\meter}$, and a crossing angle of $\alpha=\SI{240}{\micro\radian}$. The resulting transverse beam size was approximately $\sigma_{x}\approx\sigma_{y}\approx \SI{40}{\micro\meter}$, and the peak average number of interactions per cross with head-on collisions was $\mu\approx 2.3$. The scan was performed in 25 equal steps over a displacement range of $\delta=\pm 233 \micron$.
 
 An example scan curve showing $\mu_{\mathrm{vis}}^{\mathrm{sp}}\equiv \mu_{\mathrm{vis}}/(n_1n_2)$ as a function of transverse beam separation for the BCMV\_OR algorithm is shown in figure~\ref{fig:reco-vdm-curve}. The vdM scan curve is fitted with a Gaussian plus a constant, which is used as $R_{x,y}(\delta)$ to calculate $\Sigma_{x,y}$ in equation~\ref{eqn:reco-luminosity-CapSigma}. $\mu_{\mathrm{vis}}^{\mathrm{MAX}}$ is determined from the peak of the fitted function. The measured $\sigma_{\mathrm{vis}}$ values for both scans and all 14 colliding bunch pairs are shown in figure~\ref{fig:reco-vdm-sigmavis-bcm-2011}. The luminosity-weighted mean $\sigma_{\mathrm{vis}}$ is taken as the central value, while the scatter of the 28 measurements, which is not consistent with statistical variation, is taken as a systematic uncertainty on the reproducibility of the measurement. 
 
-The visible cross sections for several algorithms using during 2011 are shown in table~\ref{table:reco-luminosity-sigmavis-summary}, along with the efficiency assuming a total inelastic cross section of $\sigma_{\mathrm{inel}}= 71.34~\mbox{mb}$~\cite{TheATLASCollaboration:2014jo}.
+The visible cross sections for several algorithms using during 2011 are shown in table~\ref{table:reco-luminosity-sigmavis-summary}, along with the efficiency assuming a total inelastic cross section of $\sigma_{\mathrm{inel}}= \SI{71.34\pm0.9}{\milli\barn}$~\cite{TheATLASCollaboration:2014jo}.
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/luminosity/VDM_BCMVOR_example}}
+	\caption{An example of a scan curve from the van der Meer scans on 15 May 2011, showing the specific visible interaction rate $\mu_{\mathrm{vis}}^{\mathrm{sp}}\equiv \mu_{\mathrm{vis}}/(n_1n_2)$ versus transverse beam separation in the $x$ direction for a single scan and BCID. The data are fitted with Gaussian plus constant. The bottom plot shows the residual deviation of the data from the fit, divided by the uncertainty on the data.}
+	\label{fig:reco-vdm-curve}
+\end{figure}
+
 
 \begin{table}[htbp]
 	\centering
@@ -146,8 +157,8 @@ The visible cross sections for several algorithms using during 2011 are shown in
 		\hline
 		LUCID\_AND					&	$13.7\pm0.2$	&	$0.192$ \\
 		\hline
-		Vertexing ($\geq5$ tracks)	&	$39.1\pm0.6$	&	$0.548$ \\
-		\hline
+		%Vertexing ($\geq5$ tracks)	&	$39.1\pm0.6$	&	$0.548$ \\
+		%\hline
 	\end{tabular}
 	\caption{Visible cross sections for $pp$ luminosity measurement algorithms used in 2011. The efficiency of detecting a $pp$ collision is also shown for $\sigma_{\mathrm{inel}}=\SI{71.34}{\milli\barn}$.}
 	\label{table:reco-luminosity-sigmavis-summary}
@@ -213,19 +224,19 @@ Uncertainties on the luminosity measurement over the 2011 data-taking period tot
 \section{Vertex-Based Luminosity Measurement}
 
 \subsection{Vertex Counting Method}
-Primary vertices are points consistent with being the origin of a set of tracks reconstructed by the inner detector, nominally due to inelastic $pp$ interactions. The reconstruction of tracks and vertices is described in section~\ref{sec:event-reconstruciton-track-vertex}. Vertex counting is an appealing luminosity measurement technique for a number of reasons. The backgrounds are very low, and can be controlled by requiring a minimum number of tracks per vertex, chosen to be at least five tracks in this analysis. Further, the vertex reconstruction efficiency is expected to be stable throughout the data-taking period. However, the technique has two significant drawbacks. First, the data is collected through the standard ATLAS data acquisition system, limiting the rate during normal physics runs to $\mathcal{O}(\SI{100}{\hertz})$. Depending on the trigger used, a correction for the trigger deadtime may also be necessary. Second, the efficiency of the vertex reconstruction algorithm is significantly nonlinear with pileup, with the efficiency decreasing by $\sim30\%$ between pileup values of $\mu=1$ and $\mu=30$. 
+Primary vertices are points consistent with being the origin of a set of tracks reconstructed by the inner detector, nominally due to inelastic $pp$ interactions. The reconstruction of tracks and vertices is described in section~\ref{sec:event-reconstruciton-track-vertex}. Vertex counting is an appealing luminosity measurement technique for a number of reasons. The backgrounds are very low, and can be controlled by requiring a minimum number of tracks per vertex, chosen to be five tracks in this analysis. Further, the vertex reconstruction efficiency is expected to be stable throughout the data-taking period. However, the technique has two significant drawbacks. First, the data is collected through the standard ATLAS data acquisition system, limiting the event rate during normal physics runs to $\mathcal{O}(\SI{100}{\hertz})$. Depending on the trigger used, a correction for the trigger deadtime may also be necessary. Second, the efficiency of the vertex reconstruction algorithm is significantly nonlinear with pileup, with the efficiency decreasing by $\sim30\%$ between pileup values of $\mu=1$ and $\mu=30$. 
 
-The nonlinear efficiency with respect to pileup is due to three phenomena:
+\subsubsection{Pileup Effects}
+
+The change in the vertex reconstruction efficiency due to pileup is due to three phenomena:
 
 \begin{itemize}
-	\item Vertex masking: a $pp$ interaction fails to be reconstructed as a vertex because some or all of its tracks are used by an earlier vertex in the iterative algorithm. 
-	\item Fake vertices: a vertex passes the cut on the minimum number of tracks due to acquiring tracks from another nearby $pp$ interaction.
-	\item Split vertices: a single interaction is reconstructed as two separate vertices.
+	\item Vertex masking: a $pp$ interaction fails to be reconstructed as a vertex because some or all of its tracks are used by an earlier vertex in the iterative algorithm. This is the dominant pileup effect, which causes a large drop in the reconstruction efficiency at high pileup.
+	\item Fake vertices: a vertex passes the cut on the minimum number of tracks due to acquiring tracks from another nearby $pp$ interaction. This is a subdominant but significant effect, which causes a small increase in the reconstruction efficiency at high pileup.
+	\item Split vertices: a single interaction is reconstructed as two separate vertices. This is a significant effect when considering vertices with two or more tracks, but is negligible for vertices with at least five tracks.
 \end{itemize}
 
-Split vertices are a significant effect when considering all vertices with at least two tracks, but is negligible for vertices with at least five tracks. Fake vertices are a subdominant but significant effect. A correction is derived using truth matching in minimum bias Monte Carlo simulation. The simulation sample was generated using \pythia~8, with tune A2M~\cite{pythia}. For a given cut on the minimum number of tracks per vertex, $m$, a reconstructed vertex is labelled as fake if less than $m$ of its tracks are matched to charged particles originating from the same generated $pp$ interaction.
-
-The average number of reconstructed vertices labelled as fake by Monte Carlo truth matching is shown as a function of pileup in figure~\ref{fig:fake-fractions}. The fake fractions show a significant dependence on $\mu$ and on the minimum number of tracks per vertex.
+Corrections are derived for vertex masking and fake vertices. The fake vertex correction is derived using truth matching in minimum bias Monte Carlo simulation. The simulation sample was generated using \pythia~8, with tune A2M~\cite{pythia}. For a given cut on the minimum number of tracks per vertex, $m$, a reconstructed vertex is labelled as fake if less than $m$ of its tracks are matched to charged particles originating from the same generated $pp$ interaction. The average number of reconstructed vertices labelled as fake by Monte Carlo truth matching is shown as a function of pileup in figure~\ref{fig:fake-fractions}. The fake fractions show a significant dependence on $\mu$ and on the minimum number of tracks per vertex.
 
 \begin{figure}[h]
 	\centering
@@ -255,9 +266,7 @@ The average number of reconstructed vertices labelled as fake by Monte Carlo tru
 \end{figure}
 
 
-Vertex masking is the dominant effect, causing the large drop in efficiency. Fake vertices are a smaller but significant effect, causing a small increase in the efficiency. Split vertices are a negligible effect once the vertices are required to have at least five tracks. 
-
-A correction procedure is derived for vertex masking using the distribution of longitudinal distances, $\Delta z$, between pairs of vertices in the same event. In the absence of masking, if the interaction region has a Gaussian longitudinal profile with width $\sigma_z$, then the $\Delta z$ distribution would be a Gaussian with width $\sigma_z\times\sqrt{2}$. Masking manifests as an absence of reconstructed pairs near $\Delta z=0$, as shown in figure~\ref{fig:reco-luminosity-deltaz}. 
+A correction is derived for vertex masking using the distribution of longitudinal distances, $\Delta z$, between pairs of vertices in the same event. In the absence of masking, if the interaction region has a Gaussian longitudinal profile with width $\sigma_z$, then the $\Delta z$ distribution would be a Gaussian with width $\sigma_z\times\sqrt{2}$. Masking manifests as an absence of reconstructed pairs near $\Delta z=0$, as shown in figure~\ref{fig:reco-luminosity-deltaz}. 
 
 \begin{figure}[h]
 	\centering
@@ -267,7 +276,7 @@ A correction procedure is derived for vertex masking using the distribution of l
 \end{figure}
 
 
-A correction is derived in a data-driven way as follows. 
+The correction is derived in a data-driven way as follows. 
 \begin{enumerate}
 	\item In a data sample with exactly two interactions per event, the number of masked pairs is equal to the number of masked vertices. Using data taken at low pileup values and selecting events with exactly two reconstructed vertices, we calculate the 2-vertex masking probability $p_{\textrm{mask}}(\Delta z)$, i.e. the probability that only one of two vertices separated by $\Delta z$ is reconstructed. This function is assumed to be a universal property of the vertexing algorithm, independent of $\mu$. 
 	
@@ -359,7 +368,7 @@ Due to the low event rate available during physics runs, vertex counting was use
 
 \subsubsection{Van der Meer Scan}
 
-An example scan curve from the May 2011 vdM scan is shown in figure~\ref{fig:reco-luminosity-vertex-vdm}. The trigger used to collect the data requires hits in the minimum bias trigger scintillators (MBTS), and selects 3 of the 14 colliding bunch pairs. The peak interaction rate during the scan is $\mu\sim1.97$. The data are corrected for vertex masking and fakes, with the correction factor reaching up to 3\% at the peak of the scan curves. Following the protocol described in section~\ref{sec:reco-luminosity-calibration}, the visible cross section is determined to be $\SI{38.6\pm 0.14}{\milli\barn}$, where the uncertainty reflects the RMS spread between the three bunch crossings and the two scans.
+An example scan curve from the May 2011 vdM scan is shown in figure~\ref{fig:reco-luminosity-vertex-vdm}. The trigger used to collect the data required hits in the minimum bias trigger scintillators (MBTS), and selected 3 of the 14 colliding bunch pairs. The peak interaction rate during the scan was $\mu\sim1.97$. The data are corrected for vertex masking and fakes, with the correction factor reaching up to 3\% at the peak of the scan curves. Following the protocol described in section~\ref{sec:reco-luminosity-calibration}, the visible cross section is determined to be $\SI{38.5\pm 0.12}{\milli\barn}$, where the uncertainty reflects the RMS spread between the three bunch crossings and the two scans.
 
 \begin{figure}[p]
 	\centering
@@ -377,7 +386,7 @@ An example scan curve from the May 2011 vdM scan is shown in figure~\ref{fig:rec
 
 \subsubsection{Pileup Scan}
 
-The September 2011 pileup scan is used to derive systematic uncertainties due to the nonlinear response of algorithms with respect to the number of interactions per bunch crossing. The scan was performed at the end of a physics run, displacing the beams in the transverse direction to obtain a sample of data at different pileup values with otherwise identical conditions. The data was triggered by a random trigger selecting events from two bunch crossings, BCIDs 200 and 999. The data are corrected for vertex masking and fakes, with the correction reaching up to 10\% as shown in figure~\ref{reco-luminosity-vertexing-muscan-corrections} with respect to BCM\_VOR. A comparison of the luminosity measurements between vertex counting and BCM\_VOR, shown in figure~\ref{fig:reco-luminosity-vertexing-muscan}, exhibits a slope of about 0.1\% per unit of $\mu$.
+The September 2011 pileup scan is used to derive systematic uncertainties due to the nonlinear response of algorithms with respect to the number of interactions per bunch crossing. The scan was performed at the end of a physics run, displacing the beams in the transverse direction to obtain a sample of data at over a pileup range of $0.02\lesssim \mu \lesssim 10$ with otherwise identical conditions. The data was triggered by a random trigger selecting events from two bunch crossings, BCIDs 200 and 999. The data are corrected for vertex masking and fakes, with the correction reaching up to 10\% as shown in figure~\ref{reco-luminosity-vertexing-muscan-corrections} with respect to BCM\_VOR. A comparison of the luminosity measurements between vertex counting and BCM\_VOR, shown in figure~\ref{fig:reco-luminosity-vertexing-muscan}, exhibits a slope of about 0.1\% per unit of $\mu$.
 
 \begin{figure}[h]
 	\centering
