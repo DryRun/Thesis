@@ -1,7 +1,7 @@
 \chapter{Luminosity Measurement}\label{ch:luminosity}
 \section{Run I Luminosity}
 
-The ATLAS Run I data were recorded from 2011 to 2012, with a center-of-mass collision energy of $\sqrt{s}=\SI{7}{\tera\electronvolt}$ in 2011 and $\sqrt{s}=\SI{8}{\tera\electronvolt}$ during 2012. Integrated luminosities of $L=\int \mathcal{L} dt=\SI{5.46}{\femto\barn\tothe{-1}}$, and $\SI{22.8}{\femto\barn\tothe{-1}}$ were delivered by the LHC in the two years, of which $\SI{5.08}{\femto\barn\tothe{-1}}$ and $\SI{21.3}{\femto\barn\tothe{-1}}$ were recorded by the ATLAS detector. The recorded luminosity accounts for the data acquisition inefficiency, as well as the \emph{warm start} period, an interval of several minutes after the LHC has of stable beams during which the tracking detectors are ramped to high voltage and the pixel detector preamplifiers are turned on. After masking data recorded while one or more detector subsystems were not functioning properly, $\SI{4.57}{\femto\barn\tothe{-1}}$ and $\SI{20.3}{\femto\barn\tothe{-1}}$ of data are considered ready for physics analyses. The volume of delivered, recorded, and physics-ready data are shown as a function of time in figure~\ref{fig:reco-luminosity-runI}. 
+The ATLAS Run I data were recorded from 2011 to 2012, with a center-of-mass collision energy of $\sqrt{s}=\SI{7}{\tera\electronvolt}$ in 2011 and $\sqrt{s}=\SI{8}{\tera\electronvolt}$ during 2012. Integrated luminosities of $L=\int \mathcal{L}\, dt=\SI{5.46}{\femto\barn\tothe{-1}}$, and $\SI{22.8}{\femto\barn\tothe{-1}}$ were delivered by the LHC in the two years, of which $\SI{5.08}{\femto\barn\tothe{-1}}$ and $\SI{21.3}{\femto\barn\tothe{-1}}$ were recorded by the ATLAS detector. The recorded luminosity accounts for the data acquisition inefficiency, as well as the \emph{warm start} period, an interval of several minutes after the LHC has of stable beams during which the tracking detectors are ramped to high voltage and the pixel detector preamplifiers are turned on. After masking data recorded while one or more detector subsystems were not functioning properly, $\SI{4.57}{\femto\barn\tothe{-1}}$ and $\SI{20.3}{\femto\barn\tothe{-1}}$ of data are considered ready for physics analyses. The volume of delivered, recorded, and physics-ready data are shown as a function of time in figure~\ref{fig:reco-luminosity-runI}. 
 
 During Run I, the LHC was typically operated with 1368 bunches with a bunch spacing of $\SI{50}{\nano\second}$. The peak instantaneous luminosity reached values as high as $\mathcal{L}\sim\SI[per-mode=symbol]{8e33}{\centi\meter\tothe{-2}\second\tothe{-1}}$, corresponding to a peak average pileup value of $\mu\sim37$. The distribution of pileup values in 2011 and 2012 data are shown in figure~\ref{fig:reco-luminosity-pileup}. 
 
@@ -9,11 +9,11 @@ During Run I, the LHC was typically operated with 1368 bunches with a bunch spac
 	\centering
 	\hfill
 	\subfloat[] {\label{fig:reco-luminosity-runI}
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/reconstruction/intlumivstime2011-2012DQ.eps}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/intlumivstime2011-2012DQ.eps}}
 	}
 	\hfill
 	\subfloat[] {\label{fig:reco-luminosity-pileup}
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/reconstruction/mu_2011_2012-dec.eps}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/mu_2011_2012-dec.eps}}
 	}
 	\hfill
 	\caption{Left: The cumulative delivered, recorded, and physics-ready integrated luminosity versus time in 2011-2011. Right: Distribution of the number of interactions per bunch crossing in events recorded in 2011-2012.}
@@ -56,7 +56,7 @@ Ideally, a luminosity detector exhibits the following features:
 
 	\item The response of the detector and the readout should fast enough to provide a bunch-by-bunch luminosity measurement. As the LHC bunches are not identical, with different numbers of protons and emittances, it is useful to measure luminosity for each colliding bunch pair, as often as once every $\SI{25}{\nano\second}$. The colliding bunch pairs are labeled by the bunch crossing identification number, or BCID; consecutive BCIDs are separated by $\SI{25}{\nano\second}$. 
 
-	\item The efficiency should be high enough to yield sufficient statistics. The data are used in increments as shorts as $\SI{20}{\second}$, so the statistics collected over this time scale scale should be high enough that the total uncertainty is dominated by systematic effects. On the other hand, for event counting detectors, the efficiency should not be so high that the detector is saturated. The determination of the mean of a Poisson distribution from the first two bins requires that the first two bins both have adequate statistics. 
+	\item The efficiency should be high enough to yield sufficient statistics. The data are used in increments as shorts as $\SI{20}{\second}$, so the statistics collected over this time scale scale should be high enough that the total uncertainty is dominated by systematic effects. On the other hand, for event counting detectors, the efficiency should not be so high that the detector is saturated; the uncertainty on $\mu$ is large if $p(0;\mu)$ is too close to 0 or 1. 
 
 	\item The backgrounds should be low and understandable. Detectors can be sensitive to a wide range of phenomena aside from $pp$ collisions, which should not be counted as luminosity. For example, some detectors observe a phenomenon called \emph{afterglow}, a small amount of activity in the BCIDs immediately following a collision likely due to photons from nuclear deexcitations in the detector material. The afterglow background is proportional to the luminosity in the colliding BCIDs, and decays away with several time constants. Collisions between a beam and residual gas in the beam pipe, called \emph{beam-gas interactions}, can also contribute a low level of background, and is estimated by observing non-colliding bunches passing through the interaction region.
 
@@ -68,8 +68,7 @@ The LUCID detector provides a supplementary, bunch-by-bunch, event counting-base
 
 Several detector subsystems nominally designed for physics object reconstruction are also used for hit counting-based luminosity measurements. Algorithms using the tile calorimeter and the forward calorimeters (see section~\ref{sec:ATLAS-calorimeters}) determine the luminosity from detector currents proportional to the total particle flux in small regions of the calorimeters. The tile calorimeter algorithm monitors the PMT currents corresponding to a few selected cells near $|\eta|=1.25$, where the highest sensitivity to changes in the luminosity is observed. Similarly, the forward calorimeter algorithm monitors the currents in the high voltage lines. In both cases, the detector response is too slow to provide a bunch-by-bunch measurement, and the current response is not sensitive to the low instantaneous luminosities during the dedicated calibration runs, requiring the calibration to be set using a relative comparison with LUCID. On the other hand, the detectors exhibit good linearity of response with pileup, and good short-term stability. 
 
-Finally, algorithms using the inner detector measure the luminosity by counting reconstructed tracks and vertices\footnote{Pixel cluster counting, used by the CMS experiment, was also considered, but was not commissioned due to the difficulty of the background subtraction.}. The vertex counting algorithm is expected to have good long-term stability and very low backgrounds. A primary drawback is that the data must be read out through the standard ATLAS data acquisition system, and hence the rate is limited to a few hundred Hz, sufficient only for a bunch-integrated measurement performed over several luminosity blocks. Further, the efficiency drops significantly with pileup, up to $\sim30\%$ at pileup values of $\mu=30$. Therefore, the vertex counting algorithm is useful primarily for luminosity measurements during runs with low pileup. 
-
+Finally, algorithms using the inner detector measure the luminosity by counting reconstructed tracks and vertices\footnote{Pixel cluster counting, used by the CMS experiment, was also considered, but was not commissioned due to the difficulty of the background subtraction.}. The use of these higher-level objects confers certain benefits, such as low background rates and good long-term stability, at the cost of increased computational requirements, which limit the data rate to $\mathcal{O}(\SI{100}{\hertz})$. Further, pileup effects can be significant; in particular, the efficiency of the vertex counting algorithm varies by as much as $30\%$ up to pileup values of $\mu=30$, limiting its utility to data with low pileup. 
 
 \section{Luminosity Calibration: van der Meer Scans}\label{sec:reco-luminosity-calibration}
 The visible cross sections for the detectors and algorithms described in section~\ref{sec:reco-luminosity-detectors} are calibrated during dedicated runs called van der Meer (vdM) scans. The calibration procedure uses the definition of luminosity in terms of the beam parameters, given for a single colliding bunch by:
@@ -192,6 +191,8 @@ Uncertainties on the luminosity measurement over the 2011 data-taking period tot
 		Total & 1.8\% & \\
 		\hline
 	\end{tabular}
+	\caption{Systematic uncertainties on the integrated luminosity measured in 2011 using the BCM\_VOR algorithm. The uncertainties are separated into uncertainties on the visible cross section (1.5\%) and measurement uncertainties over the year (0.9\%).}
+	\label{table:reco-luminosity-uncertainties}
 \end{table}
 
 \begin{figure}
@@ -211,14 +212,8 @@ Uncertainties on the luminosity measurement over the 2011 data-taking period tot
 
 \section{Vertex-Based Luminosity Measurement}
 
-\subsection{Track and Vertex Reconstruction}
-
-Vertices are points consistent with being the origin of a set of tracks reconstructed by the inner detector. The tracks, nominally due to charged particles traversing the inner detector, are reconstructed by a series of algorithms based on hits in inner detector~\cite{TheATLASCollaboration:2010vk}. The algorithm begins by constructing three-dimensional space points associated with the hits in the pixel and SCT layers. Track seeds are formed from sets of three space points in the first four layers of the inner detector (three pixel layers and the innermost SCT layer), constrained to be consistent with a track originating from the interaction region. The track seeds are extended through the remaining SCT layers using a combinatorial Kalman filter. After screening the track candidates to reduce random coincidences and ambiguities from very close tracks, the tracks are extended through the TRT. Finally, the track is refitted using all of the associated hits. 
-
-The vertex reconstruction algorithm reconstructs vertices one by one, alternately finding a vertex seed and then fitting the corresponding tracks. The tracks are required to have $\pt>\SI{400}{\mega\electronvolt}$, no missing hits where expected (\emph{holes}) in the pixel layers, and at most two holes in the SCT layers. The seed finding identifies the global maximum in the distribution of $z$ coordinates of the tracks. The vertex position is then determined by an adaptive vertex fitting algorithm~\cite{Fruhwirth:2007hz}, a $\chi^2$-based fit which suppresses the contribution from outlier tracks. In most cases, the position of the interaction region is also used as a constraint in the fit; however, for the luminosity measurement using vertices, the constraint is not applied to avoid biases due to changes in the size of the interaction region. Tracks whose impact parameter is inconsistent by more than $7\sigma$ with the vertex position are then reused to seed a new vertex, until no further seeds can be found. 
-
 \subsection{Vertex Counting Method}
-Vertex counting is an appealing luminosity measurement technique for a number of reasons. The backgrounds are very low, and can be controlled by requiring a minimum number of tracks per vertex, chosen to be at least five tracks in this analysis. Further, the vertex reconstruction efficiency is expected to be stable throughout the data-taking period. However, the technique has two significant drawbacks. First, the data is collected through the standard ATLAS data acquisition system, limiting the rate during normal physics runs to $\mathcal{O}(\SI{100}{\hertz})$. Depending on the trigger used, a correction for the trigger deadtime may also be necessary. Second, the efficiency of the vertex reconstruction algorithm is significantly nonlinear with pileup, with the efficiency decreasing by $\sim20\%$ between pileup values of $\mu=1$ and $\mu=30$. 
+Primary vertices are points consistent with being the origin of a set of tracks reconstructed by the inner detector, nominally due to inelastic $pp$ interactions. The reconstruction of tracks and vertices is described in section~\ref{sec:event-reconstruciton-track-vertex}. Vertex counting is an appealing luminosity measurement technique for a number of reasons. The backgrounds are very low, and can be controlled by requiring a minimum number of tracks per vertex, chosen to be at least five tracks in this analysis. Further, the vertex reconstruction efficiency is expected to be stable throughout the data-taking period. However, the technique has two significant drawbacks. First, the data is collected through the standard ATLAS data acquisition system, limiting the rate during normal physics runs to $\mathcal{O}(\SI{100}{\hertz})$. Depending on the trigger used, a correction for the trigger deadtime may also be necessary. Second, the efficiency of the vertex reconstruction algorithm is significantly nonlinear with pileup, with the efficiency decreasing by $\sim30\%$ between pileup values of $\mu=1$ and $\mu=30$. 
 
 The nonlinear efficiency with respect to pileup is due to three phenomena:
 
@@ -263,6 +258,14 @@ The average number of reconstructed vertices labelled as fake by Monte Carlo tru
 Vertex masking is the dominant effect, causing the large drop in efficiency. Fake vertices are a smaller but significant effect, causing a small increase in the efficiency. Split vertices are a negligible effect once the vertices are required to have at least five tracks. 
 
 A correction procedure is derived for vertex masking using the distribution of longitudinal distances, $\Delta z$, between pairs of vertices in the same event. In the absence of masking, if the interaction region has a Gaussian longitudinal profile with width $\sigma_z$, then the $\Delta z$ distribution would be a Gaussian with width $\sigma_z\times\sqrt{2}$. Masking manifests as an absence of reconstructed pairs near $\Delta z=0$, as shown in figure~\ref{fig:reco-luminosity-deltaz}. 
+
+\begin{figure}[h]
+	\centering
+	\resizebox{4in}{!}{\includegraphics{figures/luminosity/dz_example}}
+	\caption{$\Delta z$ distribution between pairs of vertices in the same event, with data from the May Van der Meer scan (ATLAS run 182013).}
+	\label{fig:reco-luminosity-deltaz}
+\end{figure}
+
 
 A correction is derived in a data-driven way as follows. 
 \begin{enumerate}
@@ -354,7 +357,7 @@ Due to the low event rate available during physics runs, vertex counting was use
 
 \ 
 
-\textbf{Van der Meer Scan}
+\subsubsection{Van der Meer Scan}
 
 An example scan curve from the May 2011 vdM scan is shown in figure~\ref{fig:reco-luminosity-vertex-vdm}. The trigger used to collect the data requires hits in the minimum bias trigger scintillators (MBTS), and selects 3 of the 14 colliding bunch pairs. The peak interaction rate during the scan is $\mu\sim1.97$. The data are corrected for vertex masking and fakes, with the correction factor reaching up to 3\% at the peak of the scan curves. Following the protocol described in section~\ref{sec:reco-luminosity-calibration}, the visible cross section is determined to be $\SI{38.6\pm 0.14}{\milli\barn}$, where the uncertainty reflects the RMS spread between the three bunch crossings and the two scans.
 
@@ -372,7 +375,7 @@ An example scan curve from the May 2011 vdM scan is shown in figure~\ref{fig:rec
 
 \ 
 
-\textbf{Pileup Scan}
+\subsubsection{Pileup Scan}
 
 The September 2011 pileup scan is used to derive systematic uncertainties due to the nonlinear response of algorithms with respect to the number of interactions per bunch crossing. The scan was performed at the end of a physics run, displacing the beams in the transverse direction to obtain a sample of data at different pileup values with otherwise identical conditions. The data was triggered by a random trigger selecting events from two bunch crossings, BCIDs 200 and 999. The data are corrected for vertex masking and fakes, with the correction reaching up to 10\% as shown in figure~\ref{reco-luminosity-vertexing-muscan-corrections} with respect to BCM\_VOR. A comparison of the luminosity measurements between vertex counting and BCM\_VOR, shown in figure~\ref{fig:reco-luminosity-vertexing-muscan}, exhibits a slope of about 0.1\% per unit of $\mu$.
 
@@ -397,7 +400,7 @@ The September 2011 pileup scan is used to derive systematic uncertainties due to
 
 \ 
 
-\textbf{ALFA Run}
+\subsubsection{ALFA Run}
 
 Finally, vertex counting provides a reliable luminosity measurement for the 2011 ALFA run, a special run used for a measurement of the total $pp$ cross section. The beams contain a single colliding bunch pair with $\beta^{*}=\SI{90}{\meter}$ and $\mu\sim0.03$, in order to measure the scattering angle of elastic $pp$ collisions. A special luminosity analysis is performed to address the very low instantaneous luminosity of $\mathcal{L}\sim\SI[per-mode=symbol]{5e27}{\centi\meter\tothe{-2}\second\tothe{-1}}$, about six orders of magnitude lower than a typical physics fill. The calorimeter methods are unusable due to a lack of sensitivity. For BCM and LUCID, the backgrounds at low instantaneous luminosity have a different composition: afterglow is negligible with a single colliding bunch, but beam-gas interactions can be significant, resulting in an extra 0.2\% systematic uncertainty. The low-pileup conditions are ideal for vertex counting, eliminating the need to perform pileup corrections. The cut on the minimum number of tracks per vertex suppresses the beam-gas backgrounds. The data were recorded by a random trigger at approximately 1~kHz. 
 

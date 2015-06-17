@@ -2,6 +2,12 @@
 
 Once recorded, the events are reconstructed using a wide variety of algorithms designed to identify the products of collisions at the center of the detector. The algorithms transform the raw data read out from the detector -- hits in the inner detector silicon layers and TRT straws, energy deposits in calorimeter cells, and hits in the muon stations -- into a list of physics objects and their energies or momenta. This section describes the techniques used to identify the objects used in the analyses described in chapters~\ref{ch:model-independent-trilepton-search} and \ref{ch:trilepton-resonance-search}. 
 
+\section{Track and Vertex Reconstruction}\label{sec:event-reconstruciton-track-vertex}
+Tracks, nominally due to charged particles traversing the inner detector, are reconstructed using a series of algorithms based on hits in inner detector~\cite{TheATLASCollaboration:2010vk}. The algorithm begins by constructing three-dimensional space points associated with the hits in the pixel and SCT layers. Track seeds are formed from sets of three space points in the first four layers of the inner detector (three pixel layers and the innermost SCT layer), constrained to be consistent with a track originating from the interaction region. The track seeds are extended through the remaining SCT layers using a combinatorial Kalman filter. After screening the track candidates to reduce random coincidences and ambiguities from very close tracks, the tracks are extended through the TRT. Finally, the track is refitted using all of the associated hits. 
+
+Vertices are points consistent with being the origin of a set of tracks. Primary vertices are vertices nominally due to $pp$ collisions, while secondary vertices arise from other processes like hadron decays or photon conversions. The primary vertex reconstruction algorithm reconstructs vertices one by one, alternately finding a vertex seed and then fitting the corresponding tracks. The tracks are required to have $\pt>\SI{400}{\mega\electronvolt}$, no missing hits where expected (\emph{holes}) in the pixel layers, and at most two holes in the SCT layers. The seed finding identifies the global maximum in the distribution of $z$ coordinates of the tracks. The vertex position is then determined by an adaptive vertex fitting algorithm~\cite{Fruhwirth:2007hz}, a $\chi^2$-based fit which suppresses the contribution from outlier tracks. Tracks whose impact parameter is inconsistent by more than $7\sigma$ with the vertex position are then reused to seed a new vertex, until no further seeds can be found. 
+
+For most applications, the vertex reconstruction is performed twice. After reconstructing an initial set of primary vertices, the position and size of the interaction region, or \emph{beamspot}, is determined from a fit to the spatial distribution of vertices. The vertices are then reconstructed a second time using the beamspot as a constraint for seed finding and track fitting\footnote{For the luminosity measurement using vertices, the beamspot constraint is not applied in order to avoid biases due to changes in the size of the interaction region}.
 
 \section{Electrons}\label{sec:event-reconstruction-electrons}
 The signature of an electron is an energy deposit in the electromagnetic LAr calorimeter and a track reconstructed by the inner detector pointing at the calorimeter energy cluster.  The electron reconstruction algorithm begins by searching for clusters of energy in the calorimeter, based on a grid of $N_{\eta}\times N_{\phi}=200\times256$ towers of size $\Delta\eta\times\Delta\phi = 0.025\times0.025$. The tower energy is the sum of the cell energies in all longitudinal layers within the tower. Energy deposits with $\Et>2.5 \GeV$ within a $3\times 5$ window of towers form the seeds for both electrons and photons.
@@ -18,7 +24,7 @@ For tracks with at least four silicon hits, the track and the cluster must also 
 \subsection{Identification}
 Further requirements can be imposed on electron candidates to suppress backgrounds from sources like misidentified hadronic jets, photon conversions, and electrons from hadron decays. Three increasingly stringent sets of cuts are defined, called loose, medium, and tight\footnote{An alternative method of identification using a likelihood-based multivariate method has been developed, but is not used in this dissertation}. The analyses described in chapters~\ref{ch:model-independent} and \ref{ch:resonance} use the tight cuts to select signal electrons, and the medium and loose cuts to derive data-driven background estimates. The loose set of cuts impose requirements on the shower shape in the first and second calorimeter layers, the quality of the track, the fraction of energy in hadronic calorimeter cells behind the LAr cells, and the spatial match of the track and the calorimeter cluster. The medium set of cuts consist of more stringent versions of the loose cuts, and additionally require a small track impact parameter with respect to the primary vertex, a minimum number of high-threshold TRT hits associated with the track, and a hit in the innermost pixel layer. The tight set of cuts again consist of more stringent versions of the medium cuts, with an additional cut on the ratio of the cluster energy to the track momentum ($E/p$) and a veto of candidates associated to a photon conversion vertex. 
 
-\textcolor{red}{Consider putting a table in instead of a block of text.}
+%\textcolor{red}{Consider putting a table in instead of a block of text.}
 
 \subsection{Efficiency Measurements}\label{sec:reco-electron-efficiency}
 The efficiency to detect an electron can be factorized into several components. The efficiency to detect a cluster in the electromagnetic calorimeter is very high, above $99\%$ for electrons with $\Et=15 \GeV$ and $99.9\%$ for $\Et=45 \GeV$. The reconstruction efficiency, covering the matching of a good-quality track to the cluster, and the identification efficiencies, covering the identification cuts with respect to reconstructed electrons, are measured using tag-and-probe techniques targeting $Z\rightarrow ee$ and $J/\Psi\rightarrow ee$ events~\cite{TheATLASCollaboration:2014vz}. One electron, the tag, is required to satisfy strict selection criteria, while the second electron, the probe, is used for efficiency measurements. The combined reconstruction and identification efficiencies are shown in figure~\ref{fig:electron-id-efficiencies}. The reconstruction efficiency makes up $1-5\%$ of the efficiency loss for electrons with $\Et<20 \GeV$, and less than $1\%$ for electrons with $\Et>80 \GeV$. The efficiencies are computed for both data and simulation, and the ratio between the two is used to correct the efficiency in simulation.
@@ -156,13 +162,23 @@ In this dissertation, no effort is made to identify or reconstruct leptonic tau 
 
 \begin{figure}
 	\centering
-	Figures 5 and 11a from tau paper.
+	\subfloat[] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/reconstruction/tau_5a}}
+	}
+	\hfill
+	\subfloat[] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/reconstruction/tau_5b}}
+	} \\
+	\subfloat[] {
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/reconstruction/tau_11a}}
+	}
+	\caption{Top: inverse background efficiency (rejection power) versus signal efficiency for the BDT-bsed offline tau identification. Low $\pt$ taus ($\SI{20}{\giga\electronvolt}<\pt<\SI{40}{\giga\electronvolt}$) are shown at left, and high $\pt$ taus ($\pt>\SI{40}{\giga\electronvolt}$) are shown at right. The background consists of simulated multijet events, while the signal consists of simulated $Z$, $W$, and $Z'$ events decaying to tau leptons. Bottom: Correction factors applied to simulation to equalize the efficiency to that measured in data, as measured in $Z$ tag-and-probe data.}
 	\label{fig:reco-tau-efficiency}
 \end{figure}
 
 \begin{figure}
 	\centering
-	Figure 9
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/tau_9}}
 	\caption{Electron rejection power versus 1-track $\tau_{\mathrm{had}}$ efficiency for the electron rejection BDT. }
 	\label{fig:reco-tau-electron-rejection-efficiency}
 \end{figure}
