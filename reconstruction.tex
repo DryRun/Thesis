@@ -9,12 +9,12 @@ The primary ``inside-out'' algorithm begins by constructing three-dimensional sp
 
 A complementary ``outside-in'' algorithm identifies tracks with fewer or zero silicon hits, which can arise from hadron decays or photon conversions in the silicon layers, or from track seeds removed during the ambiguity resolution. The algorithm starts from TRT segments, and adds silicon hits proceeding inwards. 
 
-Vertices are points consistent with being the origin of a set of tracks. Primary vertices are vertices nominally due to $pp$ collisions, while secondary vertices arise from other processes like hadron decays or photon conversions. The primary vertex reconstruction algorithm reconstructs vertices one by one, alternately finding a vertex seed and then fitting the corresponding tracks~\cite{TheATLASCollaboration:2010wy,TheATLASCollaboration:2012tja}. For most applications, the tracks are required to have $\pt>\SI{400}{\mega\electronvolt}$, no missing hits where expected (\emph{holes}) in the pixel layers, and at most two holes in the SCT layers; . The seed finding identifies the global maximum in the distribution of $z$ coordinates of the tracks. The vertex position is then determined by an adaptive vertex fitting algorithm~\cite{Waltenberger:2007hz}, a $\chi^2$-based fit which suppresses the contribution from outlier tracks. Tracks whose impact parameter is inconsistent by more than $7\sigma$ with the vertex position are then reused to seed a new vertex, until no further seeds can be found. 
+Vertices are points consistent with being the origin of a set of tracks. Primary vertices are vertices nominally due to $pp$ collisions, while secondary vertices arise from other processes like hadron decays or photon conversions. The primary vertex reconstruction algorithm reconstructs vertices one by one, alternately finding a vertex seed and then fitting the corresponding tracks~\cite{TheATLASCollaboration:2010wy,TheATLASCollaboration:2012tja}. For most applications, the tracks are required to have $\pt>\SI{400}{\mega\electronvolt}$, no missing hits along the track in the pixel layers\footnote{Excluding missing hits due to an inactive detector element.} (\emph{holes}), and at most two holes in the SCT layers. The seed finding identifies the global maximum in the distribution of $z$ coordinates of the tracks. The vertex position is then determined by an adaptive vertex fitting algorithm~\cite{Waltenberger:2007hz}, a $\chi^2$-based fit which suppresses the contribution from outlier tracks. Tracks whose impact parameter is inconsistent by more than $7\sigma$ with the vertex position are then reused to seed a new vertex, until no further seeds can be found. 
 
-For most applications, the vertex reconstruction is performed twice. After reconstructing an initial set of primary vertices, the position and size of the interaction region, or \emph{beamspot}, is determined from a fit to the spatial distribution of vertices. The vertices are then reconstructed a second time using the beamspot as a constraint for seed finding and track fitting\footnote{For the luminosity measurement using vertices, the beamspot constraint is not applied in order to avoid biases due to changes in the size of the interaction region}.
+For most applications, the vertex reconstruction is performed twice. After reconstructing an initial set of primary vertices, the position and size of the interaction region, or \emph{beam spot}, is determined from a fit to the spatial distribution of vertices. The vertices are then reconstructed a second time using the beam spot as a constraint for seed finding and track fitting\footnote{For the luminosity measurement using vertices, the beam spot constraint is not applied in order to avoid biases due to changes in the size of the interaction region}.
 
 \section{Electrons}\label{sec:event-reconstruction-electrons}
-The signature of an electron is an energy deposit in the electromagnetic LAr calorimeter and a track pointing at the energy deposit. The electron reconstruction algorithm begins by searching for clusters of energy in the calorimeter, based on a grid of $N_{\eta}\times N_{\phi}=200\times256$ towers of size $\Delta\eta\times\Delta\phi = 0.025\times0.025$. The tower energy is the sum of the cell energies in all longitudinal layers within the tower. Energy deposits with $\Et>2.5 \GeV$ within a $3\times 5$ window of towers form the seeds for both electrons and photons.
+The signature of an electron is an energy deposit in the electromagnetic LAr calorimeter and a track pointing at the energy deposit~\cite{TheATLASCollaboration:2014fu,TheATLASCollaboration:2014vz}. The electron reconstruction algorithm begins by searching for clusters of energy in the calorimeter, based on a grid of $N_{\eta}\times N_{\phi}=200\times256$ towers of size $\Delta\eta\times\Delta\phi = 0.025\times0.025$. The tower energy is the sum of the cell energies in all longitudinal layers within the tower. Energy deposits with $\Et>2.5 \GeV$ within a $3\times 5$ window of towers form the seeds for both electrons and photons.
 
 After passing loose shower shape requirements, the electron reconstruction algorithm searches for a track within a cone of radius $\Delta R=0.3$ around the cluster barycenter. Two hypotheses are used for track pattern recognition and fitting: the standard pion hypothesis and an electron hypothesis that allows for larger energy losses due to bremsstrahlung. The cluster and track are required to satisfy one of the following two criteria:
 
@@ -31,7 +31,7 @@ Further requirements can be imposed on electron candidates to suppress backgroun
 %\textcolor{red}{Consider putting a table in instead of a block of text.}
 
 \subsection{Efficiency Measurements}\label{sec:reco-electron-efficiency}
-The efficiency to detect an electron can be factorized into several components. The efficiency to detect a cluster in the electromagnetic calorimeter is very high, above $99\%$ for electrons with $\Et=15 \GeV$ and $99.9\%$ for $\Et=45 \GeV$. The reconstruction efficiency, covering the matching of a good-quality track to the cluster, and the identification efficiencies, covering the identification cuts with respect to reconstructed electrons, are measured using tag-and-probe techniques targeting $Z\rightarrow ee$ and $J/\Psi\rightarrow ee$ events~\cite{TheATLASCollaboration:2014vz}. One electron, the tag, is required to satisfy strict selection criteria, while the second electron, the probe, is used for efficiency measurements. The combined reconstruction and identification efficiencies are shown in figure~\ref{fig:electron-id-efficiencies}. The reconstruction efficiency makes up $1-5\%$ of the total efficiency loss for electrons with $\Et<20 \GeV$, and less than $1\%$ for electrons with $\Et>80 \GeV$. The efficiencies are computed for both data and simulation, and the ratio between the two is used to correct the efficiency in simulation.
+The efficiency to detect an electron can be factorized into several components. The efficiency to detect a cluster in the electromagnetic calorimeter is very high, above $99\%$ for electrons with $\Et=15 \GeV$ and $99.9\%$ for $\Et=45 \GeV$. The reconstruction efficiency, covering the matching of a good-quality track to the cluster, and the identification efficiencies, covering the identification cuts with respect to reconstructed electrons, are measured using tag-and-probe techniques targeting $Z\rightarrow ee$ and $J/\Psi\rightarrow ee$ events~\cite{TheATLASCollaboration:2014vz}. One electron, the tag, is required to satisfy strict selection criteria, while the second electron, the probe, is used for efficiency measurements. The combined reconstruction and identification efficiencies are shown in figure~\ref{fig:electron-id-efficiencies}. The reconstruction efficiency makes up $1\%$-$5\%$ of the total efficiency loss for electrons with $\Et<20 \GeV$, and less than $1\%$ for electrons with $\Et>80 \GeV$. The efficiencies are computed for both data and simulation, and the ratio between the two is used to correct the efficiency in simulation.
 
 \begin{figure}[htbp]
 	\centering
@@ -70,30 +70,36 @@ where the $\alpha_i$ quantify the energy scale difference in bins of pseudorapid
 	\left(\frac{\sigma_E}{E}\right)^{\mathrm{data}} = \left(\frac{\sigma_E}{E}\right)^{\mathrm{simulation}} \oplus c_i,
 \end{equation}
 
-where $i$ again denotes bins in pseudorapidity. Histograms of the $Z\rightarrow ee$ invariant mass distribution in simulation are then produced for a range of $\alpha_i$ and $c_i$ values, and the optimal values are determined using a $\chi^2$ minimization with respect to data. The results are shown in figures~\ref{fig:reco-el-EES} and \ref{fig:reco-el-EER}. 
+where $i$ again denotes bins in pseudorapidity. Histograms of the $Z\rightarrow ee$ invariant mass distribution in simulation are then produced for a range of $\alpha_i$ and $c_i$ values, and the optimal values are determined using a $\chi^2$ minimization with respect to data. The energy scale corrections are found to be $\alpha_i\sim -1\%$ in the barrel, $\sim1\%$-$2\%$ in the barrel/end-cap transition region, and up to $\sim-4\%$ in the end-caps. The resolution corrections are symmetrized about $\eta=0$, with values of $c_i\approx 0.8\%$ in the barrel, $\sim3.3\%$ in the barrel/end-cap transition region, and $\sim0.5\%$-$2.5\%$ in the end-caps. The energy resolution is shown as a function of $\ET$ in figure~\ref{fig:reco-el-EER}.
 
 \begin{figure}[htbp]
 	\centering
-
-	\caption{Electron energy scale}
-	\label{fig:reco-el-EES}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-
-	\caption{Electron energy resolution}
+	\subfloat[ $|\eta|=0.2$] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/el_fig_35a}}
+	}
+	\hfill
+	\subfloat[ $|\eta|=1.0$] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/el_figaux_07a}}
+	} \\
+	\subfloat[ $|\eta|=1.7$] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/el_figaux_07c}}
+	}
+	\hfill
+	\subfloat[ $|\eta|=2.1$] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/el_figaux_07e}}
+	}
+	\caption{Electron energy resolution as a function of $\ET$ for various values of $|\eta|$. The shaded band shows the uncertainty on the resolution~\cite{TheATLASCollaboration:2014gf}.}
 	\label{fig:reco-el-EER}
 \end{figure}
 
 
-Sources of systematic uncertainty on the energy scale include the intrinsic accuracy of the $Z\rightarrow ee$ method, determined from closure tests where known scale variations are injected into simulation, calorimeter gain and pedestal dependence, data-simulation differences in the calibration of the calorimeter layers, and the modeling of material in front of and within the calorimeter. The total uncertainty ranges from $0.03$-$0.22$\% for $\Et=40 \GeV$ and $0.27$-$2.25$\% for $\Et = 200 \GeV$, with larger uncertainties in the pseudorapidity range $1.37<|\eta|<1.82$ corresponding to the transition region between the barrel and the end-cap. 
+Sources of systematic uncertainty on the energy scale include the intrinsic accuracy of the $Z\rightarrow ee$ method, determined from closure tests where known scale variations are injected into simulation, calorimeter gain and pedestal dependence, data-simulation differences in the calibration of the calorimeter layers, and the modeling of material in front of and within the calorimeter. The total uncertainty ranges from $0.03\%$-$0.22$\% for $\Et=40 \GeV$ and $0.27\%$-$2.25$\% for $\Et = 200 \GeV$, with larger uncertainties in the pseudorapidity range $1.37<|\eta|<1.82$ corresponding to the transition region between the barrel and the end-cap. 
 
-The systematic uncertainty on the energy resolution less than $10\%$ for electrons with $\Et<50 \GeV$, and asymptotically approaches $\sim 40\%$ for high $\Et$. At low energies, the pileup contribution to the noise term, $b$, dominates the uncertainty; at higher energy, uncertainty is due to a mix of the sampling term, $a$, the pileup contribution to $b$, the modeling of material, and the intrinsic accuracy of the $Z\rightarrow ee$ method.
+The systematic uncertainty on the energy resolution is less than $10\%$ for electrons with $\Et<50 \GeV$, and asymptotically approaches $\sim 40\%$ for high $\Et$. At low energies, the pileup contribution to the noise term, $b$, dominates the uncertainty; at higher energy, uncertainty is due to a mix of the sampling term, $a$, the pileup contribution to $b$, the modeling of material, and the intrinsic accuracy of the $Z\rightarrow ee$ method.
 
 
 \section{Muons}\label{sec:event-reconstruction-muons}
-Muons are identified by matching tracks in the muon spectrometer to tracks in the inner detector. The requirements differ based on the instrumentation available in the vicinity of the muon candidate. The analyses described here use \emph{combined} muons, consisting of matched tracks reconstructed independently in the inner detector and the muon spectrometer. The muon momentum is determined from a statistical combination of the two track's parameters and their corresponding covariance matrices. Combined muons have the highest purity, but suffer from a loss of acceptance near $\eta\sim 0$, where the muon spectrometer has gaps to accommodate services for the inner detector and calorimeters, and $1.1<\eta<1.3$, where some trajectories only pass through one muon station due to incomplete installation. The remaining categories are \emph{standalone} (SA) muons, consisting of a track ony in the muon spectrometer; \emph{segment-tagged} (ST) muons, consisting of an inner detector track and one or more track segments in the MDT or CSC chambers; and \emph{calorimeter-tagged} (CaloTag) muons, consisting of an inner detector track matched to a calorimeter energy deposit consistent with the passage of a muon. These categories recover efficiency in regions of the detector with less instrumentation at the cost of lower muon purity, and are not used in this dissertation. 
+Muons are identified by matching tracks in the muon spectrometer to tracks in the inner detector. The requirements differ based on the instrumentation available in the vicinity of the muon candidate. The analyses described here use \emph{combined} (CB) muons, consisting of matched tracks reconstructed independently in the inner detector and the muon spectrometer. The muon momentum is determined from a statistical combination of the two track's parameters and their corresponding covariance matrices. Combined muons have the highest purity, but suffer from a loss of acceptance near $\eta\sim 0$, where the muon spectrometer has gaps to accommodate services for the inner detector and calorimeters, and $1.1<\eta<1.3$, where some trajectories only pass through one muon station due to incomplete installation. The remaining categories are \emph{standalone} (SA) muons, consisting of a track ony in the muon spectrometer; \emph{segment-tagged} (ST) muons, consisting of an inner detector track and one or more track segments in the MDT or CSC chambers; and \emph{calorimeter-tagged} (CaloTag) muons, consisting of an inner detector track matched to a calorimeter energy deposit consistent with the passage of a muon. These categories recover efficiency in regions of the detector with less instrumentation at the cost of lower muon purity, and are not used in this dissertation. 
 
 For all categories of muons, the inner detector track is required to have at least 1 pixel hit, at least 5 SCT hits, at most 2 pixel or SCT holes, and at least 9 TRT hits for $0.1<|\eta|<1.9$. Energy losses in the calorimeter due to ionization, bremsstrahlung, and electron pair production must also be taken into account. 
 
@@ -110,8 +116,14 @@ The efficiencies are measured using tag-and-probe techniques similar to those de
 
 \begin{figure}[htbp]
 	\centering
-	Figure 3 from muon paper, and 5a
-	\caption{Top: Muon reconstruction efficiencies as a function of $\eta$ for muons with $\pt>10 \GeV$. The uncertainty bars on the points indicate statistical uncertainties. Bottom: The ratio between the measured and simulated efficiencies, with the combination of statistical and systematic uncertainties indicated by the uncertainty bars.}
+	\subfloat[] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/mu_fig_03}}
+	}
+	\hfill
+	\subfloat[] {
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/mu_fig_05a}}
+	}
+	\caption{Muon reconstruction efficiencies as a function of $\eta$ for muons with $\pt>10 \GeV$ (left), and as a function of $\pt$ for muons with $0.1<|\eta|<2.5$ (right). The uncertainty bars on the points indicate statistical uncertainties. The bottom plots show the ratio between the measured and simulated efficiencies, with the combination of statistical and systematic uncertainties indicated by the uncertainty bars.}
 	\label{fig:reco-muon-efficiency}
 \end{figure}
 
@@ -131,13 +143,31 @@ where Det=ID or MS, the $\Delta r_m^{\mathrm{Det}}(\eta,\phi)$ parametrize the m
 
 where the $r_0$ term describes energy lost by muons as they traverse the material of the detector, the $r_1$ term describes multiple scattering, magnetic field inhomogeneities, and local radial displacements, and the $r_2$ term describes intrinsic resolution effects due to the spatial resolution of the hit measurements and residual misalignment. 
 
-The corrections are derived from $J/\Psi\rightarrow\mu\mu$, $\Upsilon\rightarrow\mu\mu$, and $Z\rightarrow\mu\mu$ events using a template maximum likelihood fit, similar to that described in section~\ref{sec:reco-electron-energymomentum}. The effect of the corrections on the invariant mass distribution of $Z\rightarrow\mu\mu$ events is shown in figure~\ref{fig:reco-muon-momentum-corrections}, along with the total systematic uncertainty. \textcolor{red}{Consider showing the muon momentum resolution, figure 14.}
+The corrections are derived from $J/\Psi\rightarrow\mu\mu$, $\Upsilon\rightarrow\mu\mu$, and $Z\rightarrow\mu\mu$ events using a template maximum likelihood fit, similar to that described in section~\ref{sec:reco-electron-energymomentum}. The effect of the corrections on the invariant mass distribution of $Z\rightarrow\mu\mu$ events is shown in figure~\ref{fig:reco-muon-momentum-corrections}, along with the total systematic uncertainty. The muon resolution as measured in $Z$, $\Upsilon$, and $J/\Psi$ events is shown in figure~\ref{fig:reco-muon-resolution}.
 
-\begin{figure}
-	Figure 10c
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/mu_fig_10c}}
+	\caption{Dimuon invariant mass distribution of $Z\rightarrow\mu\mu$ events, using CB muons. The top panel shows the invariant mass distribution for data (black points), expected $Z\rightarrow\mu\mu$ signal from simulation (green), and expected background from simulation (yellow). The simulated background and signal have the muon momentum corrections applied, and their sum is normalized to the data. The dashed histogram shows the background plus signal without muon momentum corrections.}
 	\label{fig:reco-muon-momentum-corrections}
 \end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\subfloat[ $|\eta|<1$] {
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/mu_fig_14a}}
+	}
+	\hfill
+	\subfloat[ $1<|\eta|<2$] {
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/mu_fig_14b}}
+	}
+	\hfill
+	\subfloat[ $|\eta|>2$] {
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/mu_fig_14c}}
+	}
+	\caption{Dimuon invariant mass resolution for combined muons measured from $J/\Psi\rightarrow\mu\mu$, $\Upsilon\rightarrow\mu\mu$, and $Z\rightarrow\mu\mu$ events, as a function of the average $\pt$ in three pseudorapidity regions. Both muons are required to be in the same pseudorapidity region. The $J/\Psi$ and $\Upsilon$ data are plotted as a function of $\bar{\pt}=\frac{p_{\mathrm{T}1}+p_{\mathrm{T}2}}{2}$, while $Z$ data are plotted as a function of $\pt^*=m_{Z}\sqrt{\frac{\sin\theta_1\sin\theta_2}{2(1-\cos\alpha_{12})}}$, where $\theta_{1,2}$ are the polar angles of the two muons and $\alpha_{12}$ is the angle between the two muons, which removes the correlation between $m_{\mu\mu}$ and $\bar{\pt}$.  The lower panels show the ratio between data and the corrected MC, with bands representing the uncertainty on the MC corrections for the three calibration samples.}
+	\label{fig:reco-muon-resolution}
+\end{figure}
 
 
 \section{$\tau$ Leptons}\label{sec:event-reconstruction-taus}
@@ -165,7 +195,7 @@ The signature of $\tau$ leptons is significantly more complex than electrons and
 		$\pi^-\pi^+\pi^-\pi^0\nu_{\tau}$ & $4.62 \pm 0.06$ \\
 		\hline
 	\end{tabular}
-	\caption{Leading branching fractions of the $\tau$ lepton to final states with leptons or pions. Most of the remaining decays are to final states with kaons. From~\cite{pdg-tau}.}
+	\caption{Leading branching fractions of the $\tau$ lepton to final states with leptons or pions. Most of the remaining decays are to final states with kaons. From~\cite{pdg}.}
 	\label{table:reco-tau-decays}
 \end{table}
 
@@ -182,14 +212,14 @@ In this dissertation, no effort is made to identify or reconstruct leptonic $\ta
 \begin{figure}
 	\centering
 	\subfloat[] {
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/reconstruction/tau_5a}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/tau_5a}}
 	}
 	\hfill
 	\subfloat[] {
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/reconstruction/tau_5b}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/tau_5b}}
 	} \\
 	\subfloat[] {
-		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/reconstruction/tau_11a}}
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/tau_11a}}
 	}
 	\caption{Top: inverse background efficiency (rejection power) versus signal efficiency for the BDT-bsed offline $\tau$ identification. Low $\pt$ $\tau$s ($\SI{20}{\giga\electronvolt}<\pt<\SI{40}{\giga\electronvolt}$) are shown at left, and high $\pt$ $\tau$s ($\pt>\SI{40}{\giga\electronvolt}$) are shown at right. The background consists of simulated multijet events, while the signal consists of simulated $Z$, $W$, and $Z'$ events decaying to $\tau$ leptons. Bottom: Correction factors applied to simulation to equalize the efficiency to that measured in data, as measured in $Z$ tag-and-probe data.}
 	\label{fig:reco-tau-efficiency}
@@ -204,6 +234,14 @@ In this dissertation, no effort is made to identify or reconstruct leptonic $\ta
 
 \subsection{Energy Scale and Resolution}\label{sec:reco-tau-energymomentum}
 The hadronic $\tau$ reconstruction and identification are based on calorimeter cells calibrated at the local hadronic scale. Several corrections are applied to correct the energy to a $\tau$-specific energy scale (TES). First, corrections are derived using simulated $Z\rightarrow\tau\tau$, $W\rightarrow\tau\nu$, and $Z'\rightarrow\tau\tau$ events, generated with \pythia8. These corrections are determined as a function of the reconstructed $\tau_{\mathrm{had-vis}}$ energy and pseudorapidity based on the medium identification working point. A small pseudorapidity correction, reaching up to $|\Delta\eta|=0.01$, corrects a bias due to underestimated cluster energies in poorly-instrumented regions of the calorimeter. To account for pileup, $90$-$420 \MeV$ per additional reconstructed vertex is subtracted from the reconstructed $\tau_{\mathrm{had-vis}}$ energy, depending on $\eta$. The simulated $\tau_{\mathrm{had-vis}}$ energy resolution after these corrections is shown in figure~\ref{fig:reco-tau-energy-resolution}, and ranges between about $20\%$ at very low energy to about $5\%$ above a few hundred GeV.
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/tau_fig_16a}}
+	\caption{Energy resolution for hadronically decaying $\tau$ leptons with one associated track in various pseudorapidity regions. The resolution is the standard deviation of a Gaussian fit to the distribution of $\frac{E_{\mathrm{reco}}-E_{\mathrm{true-vis}}}{E_{\mathrm{true-vis}}}$ in bins of $E_{\mathrm{true-vis}}$ and $|\eta_{\mathrm{true-vis}}|$.}
+	\label{fig:reco-tau-energy-resolution}
+\end{figure}
+
 
 Finally, data-driven corrections and systematic uncertainties on the $\tau$ energy scale are derived using a \emph{deconvolution} method~\cite{ref-49-from-tau-paper}. The method combines the systematic uncertainties on the single-particle response of the calorimeters based on the well-known branching fractions of hadronically decaying $\tau$s. A TES correction of about $1\%$ is determined. Including additional systematic uncertainties covering the detector modeling, pileup, non-closure of the calibration method, and the hadronic shower model, the total TES uncertainty is $2-3\%$ for one-prong decays and $2-4\%$ for three-prong decays.
 
@@ -253,12 +291,14 @@ A large number of systematic uncertainties are assigned to the in situ calibrati
 	\subfloat[ $\eta=0.5$] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/jet_64a}}
 	}
+	\hfill
 	\subfloat[ $\eta=2.0$] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/jet_64b}}
 	} \\
 	\subfloat[ $\pt^{\mathrm{jet}}=\SI{25}{\giga\electronvolt}$] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/jet_64c}}
 	}
+	\hfill
 	\subfloat[ $\pt^{\mathrm{jet}}=\SI{300}{\giga\electronvolt}$] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/jet_64d}}
 	} \\
@@ -294,16 +334,16 @@ The algorithm used to tag $b$-jets is an artificial neural network called the MV
 	\item \textbf{JetFitter}: Constructs a line connecting the primary vertex with one or more points associated with $b$- or $c$-hadron decays using a Kalman filter. The algorithm makes use of variables similar to the SV1 algorithm, along with the flight length significance between decays. Note that the algorithm does not require secondary vertices, allowing for the identification of decays with only one track. 
 \end{itemize}
 
-The MV1 algorithm is trained on simulated data, using $b$-jets as signal and light quark jets as background, and returns a tag weight for each jet. The tag weight is used to establish working points with a given signal efficiency and background rejection power, as shown in figure~\ref{fig:reco-b-tagging-efficiency-rejection}. This dissertation uses the working point with $70\%$ signal efficiency. The performance of the algorithm as a function of transverse momentum is shown in figure~\ref{fig:reco-b-tagging-efficiency-pt}.
+The MV1 algorithm is trained on simulated data, using $b$-jets as signal and light quark jets as background, and returns a tag weight for each jet. The tag weight is used to establish working points with a given signal efficiency and background rejection power, as shown in figure~\ref{fig:reco-b-tagging-efficiency-rejection}. The model-independent triplepton analysis uses the working point with $80\%$ signal efficiency. The performance of the algorithm as a function of transverse momentum is shown in figure~\ref{fig:reco-b-tagging-efficiency-pt}.
 
 \begin{figure}[htbp]
 	\centering
 	\subfloat[] {\label{fig:reco-b-tagging-efficiency-rejection}
-		figure 1
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/btag_fig_01}}
 	}
 	\hfill
 	\subfloat[] {\label{fig:reco-b-tagging-efficiency-pt}
-		figure 2a
+		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/btag_fig_02a}}
 	}
 	\caption{Performance of the MV1 $b$-tagging algorithm. The inclusive signal efficiency versus background rejection is shown at left. The signal and background efficiencies at the 70\% working point are shown as a function of $\pt$ at right.}
 	\label{fig:reco-b-tagging-efficiency}
@@ -322,8 +362,6 @@ The missing transverse momentum is defined as the negative vector sum of the vis
 where each term on the right represents the total momentum of the reconstructed objects in the $x$ or $y$ directions.
 
 The measured $\metvec$ receives contributions from sources besides invisible particles, including calorimeter noise, particles falling in insensitive regions of the detector, energy mismeasurements, and pileup interactions. These effects are mitigable to varying degrees. Particles falling outside the detector acceptance contribute irreducibly to the $\metvec$ resolution. For physics objects like electrons or jets, the noise and pileup contributions are suppressed by the reconstruction algorithms and identification cuts. To mitigate the noise and pileup contributions to the soft term, the cells are grouped into topological clusters. Rejecting events where the $\metvec$ is parallel or antiparallel to the physics objects can mitigate the impact of energy mismeasurements. 
-
-
 
 
 \section{Object Selection}\label{sec:model-independent-object-definitions}
