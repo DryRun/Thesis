@@ -337,35 +337,6 @@ The sources of systematic uncertainty considered are listed below, and the fract
 \end{figure}
 
 
-\section{Application of Fake Factors}\label{sec:fake-factor-application}
-Figure~\ref{fig:prompt-subtractions} shows the fake factor-weighted reducible events in the signal regions, as given by equation~\ref{eq:fake-factor-master-formula}. The estimated prompt subtractions due to $Z+\gamma$, $WZ$, $ZZ$, $t\overline{t}+V$, and $VVV^{(*)}$ events (i.e. the contributions to events with denominator objects due these irreducible background sources, rather than the intended sources of reducible background) are shown in the colored histograms. The reducible background prediction is the difference between the data points and the prompt subtraction histograms. In cases where a bin is negative after applying the prompt subtraction, the contents of that bin are set to zero, and the histogram is scaled to preserve the overall normalization. 
-%For the 4L, $Z+e$ signal region, the overall normalization is negative and consistent with zero, so the background is neglected in this region. 
-
-The uncertainty on the background prediction is the combination of two components: the systematic uncertainties on the electron and muon fake factors, and the statistical uncertainties due to finite events with denominator objects. As described in section~\ref{sec:systematic-uncertainties}, the fake factor uncertainties constitute their own component, while the statistical uncertainties are contained in the ``Monte Carlo statistics'' component. 
-
-\begin{figure}[h]
-	\centering
-	\subfloat[ Inclusive SR, $Z+e$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_InclusiveNoM3L}}
-	}
-	\subfloat[ Inclusive SR, $Z+\mu$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_InclusiveNoM3L}}
-	} \\
-	\subfloat[ 4L SR, $Z+e$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_FourLNoM3L}}
-	}
-	\subfloat[ 4L SR, $Z+\mu$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_FourLNoM3L}}
-	} \\
-	\subfloat[ 3L+dijet SR, $Z+e$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_ThreeLDijetNoM3L}}
-	}
-	\subfloat[ 3L+dijet SR, $Z+\mu$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_ThreeLDijetNoM3L}}
-	} \\
-	\caption{Fake factor-weighted data events and prompt subtractions. The reducible background prediction is the difference between the data points and the prompt subtraction colored histograms.}
-	\label{fig:prompt-subtractions}
-\end{figure}
 
 \subsection{Tau Lepton Fakes}\label{sec:ff-tau}
 The detector signature of hadronically decaying tau leptons, consisting of a jet with one or more associated tracks, is not as distinctive as the signature of electrons and muons. Differentiating between jet, which are copiously produced in proton-proton collisions, and hadronically decaying tau leptons is difficult, and accordingly the reducible backgrounds in the 2L$+\tau_{\mathrm{had}}$ categories tend to be much larger than those in the 3L categories. 
@@ -595,3 +566,33 @@ the prompt subtraction is most significant.
 %The dominant backgrounds due to Standard Model $WZ$ ($ZZ$) production are modelled using the \sherpa~\cite{sherpa} MC generator version 1.4.3 (1.4.5), using the internal showering algorithm~\cite{Hoeche:2009rj,Gleisberg:2008fv,Schumann:2007mg}a nd  the CT10~\cite{ct10} PDF set. The samples are normalized using cross sections calculated at next-to-leading-order (NLO) in QCD with \vbfnlo-2.6.2~\cite{vbfnlo}.  The generation includes up to three additional parton emissions in the matrix element. Samples of simulated events based on the NLO generator \powheg~\cite{powheg} are used to derive systematic uncertainties on the shapes of distributions predicted by \sherpa. The diboson samples are showered with \pythia~8, and use the CT10 PDF set and AU2 underlying event tune.
 %
 %Drell--Yan production in association with a photon that converts in the detector, denoted $Z+\gamma$, is modelled using \sherpa~1.4.1, also using the CT10 PDF set and including up to three additional parton emissions in the matrix element. Production of top-quark pairs in association with a $W$ or $Z$ boson ($\ttbarV$) and triboson production ($VVV^{(*)}$) are modelled using \madgraph~5.1.3.33, with \pythia~6.426 for the parton shower and hadronization, AUET2B underlying event tune~\cite{AUET2B}, and the CTEQ6L1 PDF set. The $\ttbarV$ processes are normalized to the corresponding NLO cross sections~\cite{Campbell:2012dh,Lazopoulos:2008de}, while the $Z+\gamma$ and $VVV^{(*)}$ processes are normalized to their LO cross sections from the respective generator.
+
+\section{Application of Fake Factors}\label{sec:fake-factor-application}
+Figure~\ref{fig:prompt-subtractions} shows the fake factor-weighted reducible events in the signal regions, as given by equation~\ref{eq:fake-factor-master-formula}. The estimated prompt subtractions due to $Z+\gamma$, $WZ$, $ZZ$, $t\overline{t}+V$, and $VVV^{(*)}$ events (i.e. the contributions to events with denominator objects due these irreducible background sources, rather than the intended sources of reducible background) are shown in the colored histograms. The reducible background prediction is the difference between the data points and the prompt subtraction histograms. In cases where a bin is negative after applying the prompt subtraction, the contents of that bin are set to zero, and the histogram is scaled to preserve the overall normalization. 
+%For the 4L, $Z+e$ signal region, the overall normalization is negative and consistent with zero, so the background is neglected in this region. 
+
+The uncertainty on the background prediction is the combination of two components: the systematic uncertainties on the electron and muon fake factors, and the statistical uncertainties due to finite events with denominator objects. As described in section~\ref{sec:systematic-uncertainties}, the fake factor uncertainties constitute their own component, while the statistical uncertainties are contained in the ``Monte Carlo statistics'' component. 
+
+\begin{figure}[h]
+	\centering
+	\subfloat[ Inclusive SR, $Z+e$] {
+		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_InclusiveNoM3L}}
+	}
+	\subfloat[ Inclusive SR, $Z+\mu$] {
+		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_InclusiveNoM3L}}
+	} \\
+	\subfloat[ 4L SR, $Z+e$] {
+		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_FourLNoM3L}}
+	}
+	\subfloat[ 4L SR, $Z+\mu$] {
+		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_FourLNoM3L}}
+	} \\
+	\subfloat[ 3L+dijet SR, $Z+e$] {
+		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_ThreeLDijetNoM3L}}
+	}
+	\subfloat[ 3L+dijet SR, $Z+\mu$] {
+		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_ThreeLDijetNoM3L}}
+	} \\
+	\caption{Fake factor-weighted data events and prompt subtractions. The reducible background prediction is the difference between the data points and the prompt subtraction colored histograms.}
+	\label{fig:prompt-subtractions}
+\end{figure}
