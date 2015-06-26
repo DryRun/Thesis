@@ -306,7 +306,7 @@ A large number of systematic uncertainties are assigned to the in situ calibrati
 	\label{fig:reco-jes-uncertainty}
 \end{figure}
 
-\subsection{Pileup Suppression}
+\subsection{Pileup Suppression}\label{sec:reco-jets-jvf}
 Jets due to pileup interactions can be suppressed using the track information, at the cost of introducing some pileup-dependent jet reconstruction inefficiency. For a given jet and primary vertex, the \emph{jet vertex fraction} (JVF) is defined as the ratio of the $\sum \pt$ of tracks associated with the jet and matched to the primary vertex to the $\sum\pt$ of all tracks associated to the jet, shown schematically in figure~\ref{fig:jvf-cartoon}. Specifically, letting $\mathcal{T}$ be the set of tracks associated to the jet, the JVF is defined as:
 
 \begin{equation}\label{eqn:jvf}
@@ -441,7 +441,7 @@ The events used in this dissertation are required to have at least three reconst
 
 %Jets are reconstructed from topological clusters using the \antikt\ jet algorithm with a distance parameter of $R = 0.4$, and are calibrated with a local cluster weighting (LCW) algorithm ({AntiKt4LCTopoJets})~\cite{Cacciari:2008gp,TheATLASCollaboration:2011ks,TheATLASCollaboration:2015ds}\cite{ATLAS-CONF-2010-053}. The LCW algorithm determines if a topological cluster in the calorimeter is of hadronic or electromagnetic origin, and applies the appropriate energy correction. The jet response also depends on pileup conditions; this is accounted for using the jet area subtraction method provided by the JetEtMiss group~\cite{JetEtmissRecommendations2012}.
 
-Jets are required to have $\pt>30~\mbox{GeV}$, in order to limit the presence of pileup jets. For the geometrical acceptance, jets must lie in the range $|\eta|<4.5$, so that the jet falls within instrumented regions of the detector. Pileup jets are additionally suppressed with a cut on the jet vertex fraction: the $\sum \pt$ of tracks within the jet cone and associated with the selected primary vertex must be at least $50\%$ of the $\sum \pt$ of all tracks within the jet cone~\cite{TheATLASCollaboration:2013vb}. 
+Jets are required to have $\pt>30~\mbox{GeV}$, in order to limit the presence of pileup jets. For the geometrical acceptance, jets must lie in the range $|\eta|<4.5$, so that the jet falls within instrumented regions of the detector. Pileup jets are additionally suppressed with a cut on the JVF (section~\ref{sec:reco-jets-jvf}): for jets with $\pt<\SI{50}{\giga\electronvolt}$, the JVF must be at least 0.5. 
 
 Jets consistent with originating from the decay of a $b$-hadron are identified using the MV1 algorithm~\cite{TheATLASCollaboration:2014vj}, with an efficiency of $80\%$. 
 
