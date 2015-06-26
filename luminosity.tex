@@ -1,7 +1,7 @@
 \chapter{Luminosity Measurement}\label{ch:luminosity}
 \section{Run I Luminosity}
 
-The ATLAS Run I data were recorded from 2011 to 2012, with a center-of-mass collision energy of $\sqrt{s}=\SI{7}{\tera\electronvolt}$ in 2011 and $\sqrt{s}=\SI{8}{\tera\electronvolt}$ during 2012. Integrated luminosities of $L=\int \mathcal{L}\, dt=\SI{5.46}{\femto\barn\tothe{-1}}$, and $\SI{22.8}{\femto\barn\tothe{-1}}$ were delivered by the LHC in the two years, of which $\SI{5.08}{\femto\barn\tothe{-1}}$ and $\SI{21.3}{\femto\barn\tothe{-1}}$ were recorded by the ATLAS detector. The recorded luminosity accounts for the data acquisition inefficiency, as well as the \emph{warm start} period, an interval of several minutes after the LHC has of stable beams during which the tracking detectors are ramped to high voltage and the pixel detector preamplifiers are turned on. After masking data recorded while one or more detector subsystems were not functioning properly, $\SI{4.57}{\femto\barn\tothe{-1}}$ and $\SI{20.3}{\femto\barn\tothe{-1}}$ of data are considered ready for physics analyses. The volume of delivered, recorded, and physics-ready data are shown as a function of time in figure~\ref{fig:reco-luminosity-runI}. 
+The ATLAS Run I data were recorded from 2011 to 2012, with a center-of-mass collision energy of $\sqrt{s}=\SI{7}{\tera\electronvolt}$ in 2011 and $\sqrt{s}=\SI{8}{\tera\electronvolt}$ during 2012. Integrated luminosities of $L=\int \mathcal{L}\, dt=\SI{5.46}{\femto\barn\tothe{-1}}$, and $\SI{22.8}{\femto\barn\tothe{-1}}$ were delivered by the LHC in the two years, of which $\SI{5.08}{\femto\barn\tothe{-1}}$ and $\SI{21.3}{\femto\barn\tothe{-1}}$ were recorded by the ATLAS detector. The recorded luminosity accounts for the data acquisition inefficiency, as well as the warm start period, an interval of several minutes after the LHC has of stable beams during which the tracking detectors are ramped to high voltage and the pixel detector preamplifiers are turned on. After masking data recorded while one or more detector subsystems were not functioning properly, $\SI{4.57}{\femto\barn\tothe{-1}}$ and $\SI{20.3}{\femto\barn\tothe{-1}}$ of data are considered ready for physics analyses. The volume of delivered, recorded, and physics-ready data are shown as a function of time in figure~\ref{fig:reco-luminosity-runI}. 
 
 During Run I, the LHC was typically operated with 1368 bunches with a bunch spacing of $\SI{50}{\nano\second}$. The peak instantaneous luminosity reached values as high as $\mathcal{L}\sim\SI[per-mode=symbol]{8e33}{\centi\meter\tothe{-2}\second\tothe{-1}}$, corresponding to a peak average pileup value of $\mu\sim37$. The distribution of pileup values in 2011 and 2012 data are shown in figure~\ref{fig:reco-luminosity-pileup}. 
 
@@ -74,19 +74,19 @@ Finally, algorithms using the inner detector measure the luminosity by counting 
 The visible cross sections for the detectors and algorithms described in section~\ref{sec:reco-luminosity-detectors} are calibrated during dedicated runs called van der Meer (vdM) scans~\cite{vanderMeer:1968ud}. The calibration procedure uses the definition of luminosity in terms of the beam parameters, given for a single colliding bunch by:
 
 \begin{equation}\label{eqn:luminosity-geometrical}
-	\mathcal{L} = f_r n_1 n_2 K \int \rho_1(x,y,z,t) \rho_2(x,y,z,t) dx\,dy\,dz\,dt,
+	\mathcal{L} = f_r n_1 n_2 K \int \rho_1(x,y,z,t) \rho_2(x,y,z,t)\, dx\,dy\,dz\,dt,
 \end{equation}
 
-where $f_r$ is the revolution frequency, $n_{1,2}$ are the number of particles in the colliding bunches, and $\rho_{1,2}(x,y,z,t)$ are the time- and position-dependent particle density distribution, normalized so that $\int \rho_{1,2}(x,y,z,t)dx\,dy\,dz = 1$. $K$ is a kinematic factor,
+where $f_r$ is the revolution frequency, $n_{1,2}$ are the number of particles in the colliding bunches, and $\rho_{1,2}(x,y,z,t)$ are the time- and position-dependent particle density distribution, normalized so that $\int \rho_{1,2}(x,y,z,t)\,dx\,dy\,dz = 1$. $K$ is a kinematic factor,
 
 \begin{equation}
 	K=\sqrt{(\vec{v}_1-\vec{v}_2)^2 - \frac{(\vec{v}_1\times\vec{v}_2)^2}{c^2}},
 \end{equation}
 
-which, in the limit $|\vec{v}_{1,2}|\rightarrow c$, reduces to $2c\cos\alpha$, where $\alpha$ is the crossing angle between the beams. To simplify the current discussion, the crossing angle is assumed to be zero, and the bunch densities are assumed to be functions of $x$, $y$, and $z\pm ct$, i.e. that the transverse bunch profiles are constant over the duration of the collision\footnote{Specifically, the \emph{hourglass effect} is neglected. The collisions occur in a drift space, where the beams are typically focused, or squeezed, onto the interaction point. The transverse size of the beam in direction $i$ as a function of $z$ is given by $\sigma_{i}^2(z)=\epsilon_{i} \beta^*_{i} \left(1+\frac{(z-z_{i}^w)^2}{{\beta^*_{i}}^2}\right)$, where $\epsilon_{i}$ is the transverse emittance, $z_i^w$ is location of the optical waist, and $\beta^*_i$ is the betatron function at $z=z_i^w$. The effect is significant when $\beta^*_i\lesssim \sigma_z$; during the vdM scans, $\sigma_z\approx \SI{50}{\milli\meter}$, while $\beta^*=\SI{1.5}{\meter}$-$\SI{11}{\meter}$, and hence the hourglass effect is neglected.}. The luminosity can then be expressed as:
+which, in the limit $|\vec{v}_{1,2}|\rightarrow c$, reduces to $2c\cos\alpha$, where $\alpha$ is the crossing angle between the beams. To simplify the current discussion, the crossing angle is assumed to be zero, and the bunch densities are assumed to be functions of $x$, $y$, and $z\pm ct$, i.e. that the transverse bunch profiles are constant over the duration of the collision\footnote{In particular, the \emph{hourglass effect} is neglected. The collisions occur in a drift space, where the beams are focused, or squeezed, onto the interaction point. The transverse size of the beam in direction $i$ as a function of $z$ is given by $\sigma_{i}^2(z)=\epsilon_{i} \beta^*_{i} \left(1+\frac{(z-z_{i}^w)^2}{{\beta^*_{i}}^2}\right)$, where $\epsilon_{i}$ is the transverse emittance, $z_i^w$ is location of the optical waist, and $\beta^*_i$ is the betatron function at $z=z_i^w$. The effect is significant when $\beta^*_i\lesssim \sigma_z$; during the vdM scans, $\sigma_z\approx \SI{50}{\milli\meter}$, while $\beta^*=\SI{1.5}{\meter}$-$\SI{11}{\meter}$, and hence the hourglass effect is neglected.}. The luminosity can then be expressed as:
 
 \begin{equation}
-	\mathcal{L}=f_r n_1 n_2 \int \hat{\rho}_1(x,\,y)\hat{\rho}_2(x,\,y) dx\,dy,
+	\mathcal{L}=f_r n_1 n_2 \int \hat{\rho}_1(x,\,y)\hat{\rho}_2(x,\,y)\, dx\,dy,
 \end{equation}
 
 where $\hat{\rho}_{1,2}(x,\,y)$ are the transverse particle densities, normalized to unity. Under the further assumption that the transverse particle densities factorize in the horizontal and vertical directions, $\hat{\rho}(x,\,y)=\hat{\rho}_x(x)\hat{\rho}_y(y)$, where $\hat{\rho}_x(x)$ and $\hat{\rho}_y(y)$ are also normalized to unity, the luminosity can be written as:
@@ -95,7 +95,7 @@ where $\hat{\rho}_{1,2}(x,\,y)$ are the transverse particle densities, normalize
 	\mathcal{L} = f_r n_1 n_2 \Omega_x(\hat{\rho}_{x1},\,\hat{\rho}_{x2}) \Omega_y(\hat{\rho}_{y1},\,\hat{\rho}_{y2}),
 \end{equation}
 
-where $\Omega_x(\hat{\rho}_{x1},\,\hat{\rho}_{x2})=\int \hat{\rho}_{x1}(x) \hat{\rho}_{x2}(x) dx$, and similarly for the $y$ direction. As first proposed by van der Meer~\cite{vdm}, the $\Omega_{x,y}$ parameters can be determined by measuring the interaction rate as a function of transverse beam displacement, $R_{x,y}(\delta)$. Without loss of generality, assume that beam 2 is displaced by $\delta$ in the $x$ direction, while beam 1 is held fixed. Then, $R_{x}(\delta) = k \int \rho_{x1}(x) \rho_{x2}(x-\delta)\, dx$ for some constant $k$, and 
+where $\Omega_x(\hat{\rho}_{x1},\,\hat{\rho}_{x2})=\int \hat{\rho}_{x1}(x) \hat{\rho}_{x2}(x) dx$, and similarly for the $y$ direction. As first proposed by van der Meer, the $\Omega_{x,y}$ parameters can be determined by measuring the interaction rate as a function of transverse beam displacement, $R_{x,y}(\delta)$. Without loss of generality, assume that beam 2 is displaced by $\delta$ in the $x$ direction, while beam 1 is held fixed. Then, $R_{x}(\delta) = k \int \rho_{x1}(x) \rho_{x2}(x-\delta)\, dx$ for some constant $k$, and 
 
 \begin{align}
 	\frac{R_x(0)}{\int R_x(\delta) d\delta} &= \frac{k\int \rho_{x1}(x) \rho_{x2}(x)\, dx}{k\int\int \rho_{x1}(x)\rho_{x2}(x-\delta) \, dx\, d\delta} \\
@@ -121,7 +121,7 @@ Equating this with the luminosity defined in equation~\ref{eqn:reco-luminosity-d
 	\sigma_{\mathrm{vis}} = \mu_{\mathrm{vis}}^{\mathrm{MAX}} \frac{2\pi \Sigma_x \Sigma_y}{n_1 n_2},
 \end{equation}
 
-where $\mu_{\mathrm{vis}}^{\mathrm{MAX}}$ is the visible interaction rate per bunch crossing at the maximum of the scan curve, $R(\delta)$. The numbers of particles per bunch, $n_{1,2}$, are measured by the LHC Bunch Current Normalization Working Group using bunch current transformers (BCTs)~\cite{BCNWG}. 
+where $\mu_{\mathrm{vis}}^{\mathrm{MAX}}$ is the visible interaction rate per bunch crossing at the maximum of the scan curve, $R(\delta)$. The numbers of particles per bunch, $n_{1,2}$, are measured by the LHC Bunch Current Normalization Working Group using bunch current transformers (BCTs)~\cite{Barschel:1425904,Anders:1427726,Alici:1427728}. 
 
 \subsection{2011 Luminosity Calibration}
 
@@ -136,6 +136,13 @@ The visible cross sections for several algorithms using during 2011 are shown in
 	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/luminosity/VDM_BCMVOR_example}}
 	\caption{An example of a scan curve from the van der Meer scans on 15 May 2011, showing the specific visible interaction rate $\mu_{\mathrm{vis}}^{\mathrm{sp}}\equiv \mu_{\mathrm{vis}}/(n_1n_2)$ versus transverse beam separation in the $x$ direction for a single scan and BCID. The data are fitted with Gaussian plus constant. The bottom plot shows the residual deviation of the data from the fit, divided by the uncertainty on the data.}
 	\label{fig:reco-vdm-curve}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/luminosity/VDM_sigmavis_BCMVOR}}
+	\caption{Measured $\sigma_{\mathrm{vis}}$ values from the vdM scans performed in May 2011. The error bars represent statistical uncertainties only. The vertical dashed lines indicate the weighted average over BCIDs from the two sets of scans. The yellow band shows a variation of $\pm0.9\%$ from the total weighted average, equal to the systematic uncertainty due to the observed BCID-to-BCID and scan-to-scan variations.}
+	\label{fig:reco-vdm-sigmavis-bcm-2011}
 \end{figure}
 
 
@@ -160,7 +167,7 @@ The visible cross sections for several algorithms using during 2011 are shown in
 		%Vertexing ($\geq5$ tracks)	&	$39.1\pm0.6$	&	$0.548$ \\
 		%\hline
 	\end{tabular}
-	\caption{Visible cross sections for $pp$ luminosity measurement algorithms used in 2011. The efficiency of detecting a $pp$ collision is also shown for $\sigma_{\mathrm{inel}}=\SI{71.34}{\milli\barn}$.}
+	\caption{Visible cross sections for $pp$ luminosity measurement algorithms used in 2011. The corresponding efficiency of detecting an inelastic $pp$ collision is also shown for $\sigma_{\mathrm{inel}}=\SI{71.34}{\milli\barn}$.}
 	\label{table:reco-luminosity-sigmavis-summary}
 \end{table}
 
@@ -179,7 +186,7 @@ Uncertainties on the luminosity measurement over the 2011 data-taking period tot
 		\hline
 		Source & Uncertainty & \\
 		\hline
-		Bunch population product ($n_1n_2$) & {$0.5\%$} & \multirow{13}{*}{$\left.\begin{array}{c}\ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \end{array}\right\}$ \begin{tabular}{c}vdM Calibration subtotal=$1.5\%$ \\ {Uncertainties from a single}\\ {measurement of $\sigma_{\textrm{vis}}$} \end{tabular}}\\
+		Bunch population product ($n_1n_2$) & {$0.5\%$} & \multirow{13}{*}{$\left.\begin{array}{c}\ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \end{array}\right\}$ \begin{tabular}{c}vdM calibration subtotal=$1.5\%$ \\ {Uncertainties from a single}\\ {measurement of $\sigma_{\textrm{vis}}$} \end{tabular}}\\
 		Beam centering & $0.10\%$ & \\
 		Beam position jitter & $0.30\%$ & \\
 		{Emittance growth/non-reproducibility} & \multirow{2}{*}{{$\oplus$}\begin{tabular}{c}{$0.67\%$} \\ {$0.55\%$} \end{tabular}} & \\
@@ -231,9 +238,9 @@ Primary vertices are points consistent with being the origin of a set of tracks 
 % - Data must be corrected for trigger deadtime. In runs with pLBs, this is more complicated, and is hacked from the trigger monitoring histograms.
 % - Then, pileup corrections. 
 
-The data for the inner detector-based luminosity measurements are collected through the standard ATLAS data acquisition system. Events are collected with either a random trigger or a trigger requiring hits in the minimum bias trigger scintillators (MBTS), two discs of scintillators mounted on the inner surfaces of the LAr end-cap cryostats ($2.12<|\eta|<3.85$). The random trigger records a fraction of all bunch crossings in a specific set of BCIDs, enabling an unbiased measurement of $\mu_{\mathrm{vis}}$ at the cost of lower statistics. The statistics collected worsen at low pileup values, where a large fraction of the triggered events do not contain a collision; hence, the random trigger is used mostly at high pileup. The MBTS trigger requires hits MBTS, usually at least two. The trigger inefficiency, prescale, and deadtime must be taken into account. For vertices with at least five tracks, the inefficiency is negligible. Both triggers can select a specific set of BCIDs, which is essential for special runs where a bunch-by-bunch measurement is necessary, e.g. the van der Meer scans (see section~\ref{sec:vertex-vdM}). 
+The data for the inner detector-based luminosity measurements are collected through the standard ATLAS data acquisition system. Events are collected with either a random trigger or a trigger requiring hits in the minimum bias trigger scintillators (MBTS), two discs of scintillators mounted on the inner surfaces of the LAr end-cap cryostats ($2.12<|\eta|<3.85$). The random trigger records a fraction of all bunch crossings in a specific set of BCIDs, enabling an unbiased measurement of $\mu_{\mathrm{vis}}$ at the cost of lower statistics. The statistics collected worsen at low pileup values, where a large fraction of the triggered events do not contain a collision; hence, the random trigger is used mostly at high pileup. The MBTS trigger requires hits MBTS, usually at least two. The trigger inefficiency, prescale, and deadtime must be taken into account. For vertices with at least five tracks, the inefficiency is negligible. Both triggers can select a specific set of BCIDs, which is essential for special runs where a bunch-by-bunch measurement is necessary, e.g. the vdM scans. 
 
-Vertices are reconstructed with two settings: the default reconstruction settings based on tracks with $\pt>\SI{400}{\mega\electronvolt}$, and tighter settings (VtxLumi) based on tracks with $\pt>\SI{900}{\mega\electronvolt}$ with stricter requirements on the track quality. The tighter settings were introduced in 2012 to reduce the computational requirements associated with collecting $\mathcal{O}(\SI{100}{\hertz})$ of inner detector data over the entire year. The studies described below are based on the 2011 data, where the vertex-based luminosity measurement is only performed on special runs, and use the default reconstruction settings.
+Vertices are reconstructed with two settings: the default reconstruction settings based on tracks with $\pt>\SI{400}{\mega\electronvolt}$, and tighter settings (``VtxLumi'') based on tracks with $\pt>\SI{900}{\mega\electronvolt}$ with stricter requirements on the track quality. The tighter settings were introduced in 2012 to reduce the computational requirements associated with collecting $\mathcal{O}(\SI{100}{\hertz})$ of inner detector data over the entire year. The studies described below are based on the 2011 data, where the vertex-based luminosity measurement is only performed on special runs, and use the default reconstruction settings.
 
 The single-bunch instantaneous luminosity is calculated as follows. For the random trigger, the visible interaction rate is $\mu_{\mathrm{vis}}=\frac{N_{\mathrm{vtx}}}{N_{\mathrm{evt}}}$, where $N_{\mathrm{vtx}}$ is the number of vertices recorded in $N_{\mathrm{evt}}$ triggered events. For the MBTS trigger, $\mu_{\mathrm{vis}}=\frac{N_{\mathrm{vtx}}}{f_r t}$, where $N_{\mathrm{vtx}}$ is the number of vertices recorded after correcting for the prescale and deadtime, $f_r=\SI{11245.5}{\hertz}$ is the LHC revolution frequency, and $t$ is the duration of the measurement. $\mu_{\mathrm{vis}}$ is then corrected for pileup effects, described below in section~\ref{sec:luminosity-vertex-pileup}, and finally the luminosity is given by equation~\ref{eqn:reco-luminosity-detected}.
 
@@ -247,7 +254,7 @@ The vertex reconstruction efficiency is strongly affected by three pileup-relate
 	\item Split vertices: a single interaction is reconstructed as two separate vertices. This is a significant effect when considering vertices with two or more tracks, but is negligible for vertices with at least five tracks.
 \end{itemize}
 
-Corrections are derived for vertex masking and fake vertices. The fake vertex correction is derived using truth matching in minimum bias Monte Carlo simulation. The simulation sample was generated using \pythia~8, with tune A2M~\cite{pythia}. For a given cut on the minimum number of tracks per vertex, $m$, a reconstructed vertex is labelled as fake if less than $m$ of its tracks are matched to charged particles originating from the same generated $pp$ interaction. The average number of reconstructed vertices labelled as fake by Monte Carlo truth matching is shown as a function of pileup in figure~\ref{fig:fake-fractions}. The fake fractions show a significant dependence on $\mu$ and on the minimum number of tracks per vertex.
+Corrections are derived for vertex masking and fake vertices. The fake vertex correction is derived using truth matching in minimum bias Monte Carlo simulation. The simulation sample was generated using \pythia~8, with tune A2M~\cite{pythia8,AUET2}. For a given cut on the minimum number of tracks per vertex, $m$, a reconstructed vertex is labelled as fake if less than $m$ of its tracks are matched to charged particles originating from the same generated $pp$ interaction. The average number of reconstructed vertices labelled as fake by Monte Carlo truth matching is shown as a function of pileup in figure~\ref{fig:fake-fractions}. The fake fractions show a significant dependence on $\mu$ and on the minimum number of tracks per vertex.
 
 \begin{figure}[h]
 	\centering

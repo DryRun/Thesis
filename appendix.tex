@@ -1,6 +1,8 @@
-\appendix
+\chapter{Appendix}
 
-\section{Photon Conversion Reweighting}\label{sec:conversion-reweighting}
+\section{Electron Fake Factors}
+
+\subsection{Photon Conversion Reweighting}\label{sec:conversion-reweighting}
 Backgrounds due to $Z+\gamma$, where the $Z$ boson decays leptonically and the photon converts asymmetrically in the detector and is reconstructed as a single electron, are estimated with \sherpa. The rate of photons being reconstructed as electrons is observed to be overestimated in Monte Carlo, especially for denominator electrons. The net effect of this mismodeling is a \emph{deficit} in the background prediction, due to its larger effect on the subtraction of prompt contamination than on the prompt background estimation itself. Scale factors are derived to account for the mismodeling of the conversion rate. 
 
 The principle of the method is the same as that used to estimate the electron ``charge flip'' mismeasurement rate. Charge flips and conversions occur through similar processes: charge flips occur through ``trident'' processes in which an electron emits a photon, which then converts asymmetrically and is reconstructed as an electron of the wrong charge. The method uses a $Z$-enriched region to estimate the conversion rate in bins of $\pt$ and $|\eta|$; for more details, see~\cite{DeViveiros:1670929}. The scale factors are shown in table~\ref{table:conversion-sfs}; the scale factor is applied to each $Z+\gamma$ event based on the classification of the reconstructed lepton closest to the truth photon (within $\Delta R<0.2$). A $30\%$ systematic uncertainty is assigned on the scale factors, mostly due to variations in the scale factors obtained from different Monte Carlo generators. 
@@ -17,3 +19,76 @@ The principle of the method is the same as that used to estimate the electron ``
   \label{table:conversion-sfs}
 \end{table}
 
+\subsubsection{Systematic From Heavy Flavor Fraction}\label{sec:appendix-el-ff-hflf-syst}
+As described above in section~\ref{sec:electron-fake-factors}, the electron fake factors address fake electrons from two sources, semileptonic heavy flavor decays and misidentified light hadrons. Based on Monte Carlo studies, the truth fake factors for the two sources are numerically quite different, with heavy flavor fake factors generally several times larger than the light flavor counterpart. Since the combined fake factor is a weighted average of the truth heavy and light flavor fake factors, the fake factors may be measured inaccurately if there is a difference in the heavy flavor fraction between the control region and the signal regions. 
+
+  The size of this effect is estimated using the \mcatnlo\  $t\overline{t}$ sample. Two quantities are extracted from the Monte Carlo: $(a)$ the truth fake factors for fake electrons arising from heavy or light flavor jets, $f_{H,L}$, and $(b)$ the $d_0$ significance distributions for heavy and light flavor fakes. The truth fake factors are taken to be universal parameters, in particular independent of the composition of sample, and are shown in figure~\ref{fig:el-ff-ttbar}. 
+
+  \begin{figure}[h]
+    \centering
+    \subfloat[Light Flavor] {
+      \resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_ff_lf_pt.pdf}}
+    }
+    \subfloat[Heavy Flavor] {
+      \resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_ff_hf_pt.pdf}}
+    }
+    \caption{MC fake factors for fakes from heavy and light flavor jets, from \mcatnlo\  $t\overline{t}$ Monte Carlo.}
+    \label{fig:el-ff-ttbar}
+  \end{figure}
+  
+
+  The fake factors in the control and signal regions can be expressed in terms of the truth heavy/light fake factors, $f_{H,L}$, and the fraction of denominators from heavy flavor, $\rho^{HF}$, by separating the numerators into heavy and light flavor truth origin:
+  \begin{align}
+      f_c &= \frac{N_N^{HF} + N_N^{LF}}{N_D}\\
+          &= \frac{f_H \rho_c^{HF} N_D + f_L (1-\rho_c^{HF}) N_D}{N_D} = f_H \rho_c^{HF} + f_L (1-\rho_c^{HF})\\
+      f_s &= \frac{f_H \rho_s^{HF} N_D + f_L (1-\rho_s^{HF}) N_D}{N_D} = f_H \rho_s^{HF} + f_L (1-\rho_s^{HF}).
+  \end{align}
+
+  The bias in fake factor is then given by the difference,
+
+  \begin{align}\label{eq:hflf-bias}
+    f_c - f_s &= (f_H - f_L) \times (\rho_c^{HF} - \rho_s^{HF})
+  \end{align}
+
+  The heavy flavor fraction in the denominator region are extracted using the truth $d_0$ significance distributions of heavy and light flavor fakes. In particular, in the MC sample, let $\rho_{HF}^{\textrm{high}}$ be the fraction of truth heavy flavor denominator objects that satisfy $\frac{d_0}{\sigma_{d_0}} > 3$, and similarly for light flavor. Then, in the data samples, the number of denominator objects with high $d_0$ significance is:
+    \begin{align}
+      N_{D, c}^{\textrm{high}} &= N_{D,c} \left( \rho_{c}^{HF} \rho_{HF}^{\textrm{high}} +  \rho_{c}^{LF} \rho_{LF}^{\textrm{high}} \right)\\ 
+      \rho_{D,c}^{\textrm{high}}&= \left( \rho_{c}^{HF} \rho_{HF}^{\textrm{high}} +  (1-\rho_{c}^{HF}) \rho_{LF}^{\textrm{high}} \right)
+    \end{align}
+    Solving for $\rho_c^{HF}$,
+    \begin{align}
+      \rho_c^{HF} &= \frac{\rho_{D,c}^{\textrm{high}} - \rho_{LF}^{\textrm{high}}}{\rho_{HF}^{\textrm{high}} - \rho_{LF}^{\textrm{high}}}
+    \end{align}
+    The truth high-$d_0$ significance fractions for truth heavy and light flavor denominator objects are taken from the $t\overline{t}$ MC to be $\rho_{LF}^{\textrm{high}}=0.696$ and $\rho_{HF}^{\textrm{high}}=0.015$. 
+
+  With these quantities, equation~\ref{eq:hflf-bias} gives the shift in fake factor value between the control and signal regions. The heavy flavor fractions extracted from the control and some signal regions are shown in table~\ref{t:el-ff-heavy-flavor-fractions}. Figure~\ref{fig:el-ff-syst-hflf} shows the percent variation in fake factor for a number of signal regions as a function of transverse momentum. The maximum deviation of $20\%$ is taken as a flat systematic uncertainty on the fake factors. 
+
+  \begin{table}
+    \centering
+    \begin{tabular}{cc}
+      Region & Heavy Flavor Fraction \\
+      \hline
+      Control        &  $ 0.031 \pm  0.006$ \\
+      onZ / $e\mu$ / All      &  $-0.001 \pm  0.001$ \\
+      onZ / $e\mu$ / Weak     &  $-0.003 \pm  0.001$ \\
+      onZ / $e\mu$ / Strong   &  $ 0.021 \pm  0.007$ \\
+      onZ / $e\mu$ / High MET  &  $-0.008 \pm  0.011$ \\
+      onZ / $e\mu$ / Low MET   &  $-0.001 \pm  0.001$ \\
+      offZ / $e\mu$ / All     &  $-0.004 \pm  0.003$ \\
+      offZ / $e\mu$ / Weak    &  $-0.019 \pm  0.025$ \\
+      offZ / $e\mu$ / Strong  &  $ 0.039 \pm  0.019$ \\
+      offZ / $e\mu$ / High MET &  $ 0.003 \pm  0.003$ \\
+      offZ / $e\mu$ / Low MET  &  $-0.006 \pm  0.003$ \\
+      offZ / $e\mu$ / High $\mtw$ &  $ 0.026 \pm  0.020$ \\
+    \end{tabular}
+    \caption{Denominator object heavy flavor fractions in the control and signal regions, extracted using the fraction of events with $3<\frac{d_0}{\sigma_{d_0}}<10$.}
+    \label{t:el-ff-heavy-flavor-fractions}
+  \end{table}
+
+
+  \begin{figure}
+    \centering
+    \resizebox{4in}{!}{\includegraphics{figures/backgrounds/c_HFLF_systematic.pdf}}
+    \caption{Percent deviation in fake factor between the control and signal regions due to variable heavy flavor fractions.}
+    \label{fig:el-ff-syst-hflf}
+  \end{figure}
