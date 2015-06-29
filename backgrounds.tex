@@ -58,7 +58,7 @@ The details of the modeling of each sample are described below. The generator, p
 
 
 \section{Reducible Backgrounds}\label{sec:reducible-backgrounds}
-The reducible backgrounds encompass a variety of processes in which a reconstructed lepton arises due to something away from the ``hard scatter'' interaction. The backgrounds are estimated using simulation or a data-driven technique, depending on the source. The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated from Monte Carlo, with scale factors applied to account for an observed overestimation in the photon-to-electron conversion rate (see section~\ref{sec:photon-conversions}). Other reducible contributions, such as $W/Z+$jets or $t\overline{t}$ where a jet fakes an electron or decays semileptonically, are estimated in a data-driven manner using the \emph{fake factor} method. 
+The reducible backgrounds encompass a variety of processes in which a reconstructed lepton arises due to something away from the ``hard scatter'' interaction. The backgrounds are estimated using simulation or a data-driven technique, depending on the source. The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated from Monte Carlo, with scale factors applied to account for an observed overestimation in the photon-to-electron conversion rate (see section~\ref{sec:conversion-reweighting}). Other reducible contributions, such as $W/Z+$jets or $t\overline{t}$ where a jet fakes an electron or decays semileptonically, are estimated in a data-driven manner using the \emph{fake factor} method. 
 
 
 \subsection{Fake Factor Method}\label{sec:fake-factor-method}
@@ -204,12 +204,12 @@ To help clarify the origin of the structure in $\eta$ observed at low $\pt$, the
 The following sources of systematic uncertainty are considered:
 \begin{itemize}
   \item \textbf{Prompt subtraction}: The presence of real, prompt leptons from Standard Model processes in the sample used to measure the fake factors is accounted for using Monte Carlo simulation. Uncertainties on the simulated samples include luminosity; cross section uncertainties; and reconstruction, trigger, and identification efficiency scale factors. These lead to a maximum uncertainty of about $20\%$ where the prompt subtraction is largest. 
-  \item \textbf{Trigger efficiency correction}: As mentioned previously, an inefficiency is observed in the loose electron triggers for offline \verb.loose++. electrons. This is due to the lack of GSF tracking in the trigger. For the fake factor derivation, this affects electrons in the range $15~\mbox{GeV}<\pt<24~\mbox{GeV}$, where photon triggers are not available. Imposing the \verb.tight++. cut on the track-cluster matching (the $\Delta \eta$ and $\Delta \phi$ between the electron track and calorimeter cluster) mitigates most, but not all, of the inefficiency, by cutting out electrons with large amounts of bremsstrahlung whose track are not reconstructed in the trigger. Based on a comparison of loose electron and photon triggers in the range $24~\mbox{GeV}<\pt<85~\mbox{GeV}$, a correction of about $8\%$ is applied to loose electron-triggererd events, and the same value is taken as systematic uncertainty.
+  \item \textbf{Trigger efficiency correction}: As mentioned previously, an inefficiency is observed in the loose electron triggers for offline \verb.loose++. electrons. This is due to the lack of GSF tracking in the trigger. For the fake factor derivation, this affects electrons in the range $15~\mbox{GeV}<\pt<24~\mbox{GeV}$, where photon triggers are not available. Imposing the \verb.tight++. cut on the track-cluster matching (the $\Delta \eta$ and $\Delta \phi$ between the electron track and calorimeter cluster) mitigates most, but not all, of the inefficiency, by cutting out electrons with large amounts of bremsstrahlung whose track are not reconstructed in the trigger. Based on a comparison of loose electron and photon triggers in the range $24~\mbox{GeV}<\pt<85~\mbox{GeV}$, a correction of about $8\%$ is applied to loose electron-triggered events, and the same value is taken as systematic uncertainty.
   \item \textbf{Extrapolation to signal region}: Two systematic uncertainties are assigned to account for bias due to the extrapolation of fake factors from the control region to the signal region. First, the cuts on $m_{\mathrm{T}}$ and $\Etmiss$ are varied from $<40~\mbox{GeV}$ to $<25~\mbox{GeV}$ and $<55~\mbox{GeV}$. A $\pt$-dependent systematic uncertainty of up to $15\%$ is assigned. Second, Monte Carlo-based truth studies indicate that the fake factor values are quite different for heavy- and light-flavor jets, so a difference in heavy flavor fraction between the control and signal regions will bias the fake factors. The effect of this is estimated using a $t\overline{t}$ Monte Carlo sample, and a flat systematic uncertainty of $20\%$ is assigned. See appendix~\ref{sec:appendix-el-ff-hflf-syst} for more information.
 \end{itemize}
 The systematic and total uncertainties on the fake factors are shown as a function of $\pt$ in figure~\ref{fig:electron-fake-factor-uncertainties}.
 
-\begin{figure}[h] 
+\begin{figure}[htbp] 
   \centering
   \subfloat[Linear scale] {
 	\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_FinalFF_systematics_linearx_biggerlabels}}
@@ -221,10 +221,9 @@ The systematic and total uncertainties on the fake factors are shown as a functi
   \label{fig:electron-fake-factor-uncertainties}
 \end{figure}
 
-\clearpage
 
 \subsection{Muon Fake Factors}\label{sec:muon-fake-factors}
-The muon fake factor method follows that used in the 2011 ATLAS same-sign dilepton search~\cite{TheATLASCollaboration:2012df}. The method targets non-prompt muons from semileptonic heavy flavor decays, punch-through, and decays-in-flight of long-lived mesons by inverting the isolation requirements. Specifically, the denominator muons are defined as follows:
+The muon fake factor method is similar to that used in the ATLAS same-sign dilepton search on the \SI{7}{\tera\electronvolt} dataset~\cite{TheATLASCollaboration:2012df}. The method targets non-prompt muons from semileptonic heavy flavor decays, punch-through, and decays-in-flight of long-lived mesons by inverting the isolation requirements. Specifically, the denominator muons are defined as follows:
 \begin{itemize}
   \item Pass all numerator muon requirements in table~\ref{table:electron-muon-selections}, except the requirements on \verb.Etcone30., \verb.ptcone30., and $\frac{d_0}{\sigma_{d_0}}$. 
   \item Loosen impact parameter cut:
@@ -300,7 +299,7 @@ where $\langle f \rangle$ is the total average fake factor. The measured fake fa
 \begin{figure}
 \centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/all_1D_pt}
 %\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/MuFake_ff_vseta}
-\caption{\label{fig:MuFake_ff_1D}Muon fake factors as a function of $\pt$. Two sets of fake factors are plotted, with and without the ``dR'' requirement. The vertical dashed line at 40 GeV indicates the point at which the fake factors switch from the ``dR'' points, where the denominators are required to be separated from nearby jets, to the lower, non-''dR'' points where the jet-isolation requirement is dropped to improve the statistics.}
+\caption{\label{fig:MuFake_ff_1D}Muon fake factors as a function of $\pt$. Two sets of fake factors are plotted, with and without the ``dR'' requirement. The vertical dashed line at 40 GeV indicates the point at which the fake factors switch from the ``dR'' points, where the denominators are required to be separated from nearby jets, to the lower, non-``dR'' points where the jet-isolation requirement is dropped to improve the statistics.}
 \end{figure}
 
 \begin{figure}
@@ -339,179 +338,89 @@ The sources of systematic uncertainty considered are listed below, and the fract
 
 
 \subsection{Tau Lepton Fakes}\label{sec:ff-tau}
-The detector signature of hadronically decaying tau leptons, consisting of a jet with one or more associated tracks, is not as distinctive as the signature of electrons and muons. Differentiating between jet, which are copiously produced in proton-proton collisions, and hadronically decaying tau leptons is difficult, and accordingly the reducible backgrounds in the 2L$+\tau_{\mathrm{had}}$ categories tend to be much larger than those in the 3L categories. 
+The detector signature of hadronically decaying tau leptons, consisting of a jet with one or more associated tracks, is not as distinctive as the signature of electrons and muons. Differentiating between jet, which are copiously produced in proton-proton collisions, and hadronically decaying tau leptons is difficult, and accordingly the reducible backgrounds in events containing a hadronically decaying tau lepton is much larger. 
 
-\textcolor{red}{Lots of work to do here, to avoid copying and pasting PO's work!}
+The tau identification algorithm (section~\ref{sec:event-reconstruction-taus}) employs a multivariate discriminant based on calorimeter shower shapes and tracking information. The fake rate is strongly dependent on the jet fragmentation, in particular whether the parton initiating the jet is a gluon, light quark, or heavy quark. In constructing the denominator definition, a tighter efficiency working point reduces the dependence on the initial parton, thereby improving the extrapolation of the fake factors to the signal regions; on the other hand, the working point must be loose enough to collect sufficient statistics. The denominator definition requires tau candidates to have a \texttt{BDTScore} which fails the \texttt{BDT-Medium} selection threshold, but exceeds $0.9$ times the $\pt$-dependent $\texttt{BDT-Loose}$ threshold. In simulation, this definition is seen to be relatively insensitive to the type of parton initiating the jet. The fake factors are measured two-dimensionally in bins of $\pt$ and $|\eta|$, and a correction is applied as a function of the highest MV1 $b$-tag weight of all jets in the event. 
 
-As taus can decay hadronically, their detector signature is not as distinctive as the one
-associated with electrons and muons.  Therefore, jets, which are produced in abundance in
-proton-proton collisions, are the main source of tau fakes, leading to large expected
-fake-rates.  As the tau identification algorithms use multi-variate discriminants based on
-calorimeter shower shapes and tracking information, the fake efficiency is strongly
-dependent on the jet fragmentation. This in turn introduces a dependency of the fake-rates
-on the parton initiating the jet (gluon, light-quark or heavy-quark).
 
-Consequently, the fake-factors are less sensitive to the jet flavour if a tighter
-efficiency working point is chosen for the denominator (as some shower shape requirements
-are already applied).  However, it is important to still choose a working point that is
-loose enough so that the denominator statistics are sufficiently large. A study of the
-flavour-dependency of the fake-factors was performed in simulation samples.  For each jet
-faking a $\tau$, the largest $p_{T}$ truth-particle present inside of the $\tau$
-reconstruction cone was taken as an estimator of the parton initiating the jet.
-Different denominator selections were chosen as a function of the existing loose
-identification working point.  Denominators failing the \texttt{BDT-Medium} selection while
-having a \texttt{BDTScore} larger than 0.7, 0.8, 0.9 or 1.0 $\times$ \texttt{BDTScore$_{Loose}$}
-were all studied (where \texttt{BDTScore$_{Loose}$} is the $p_{T}$ dependent cut on the \texttt{  BDTScore} used by the $\tau$ identification algorithm).  Illustratively, each sequential
-cut tightening denominator score reduces the statistics by a factor of roughly 2.  In the
-end, the minimal threshold of 0.9 $\times$ \texttt{BDTScore$_{Loose}$} was chosen as it
-offered a greatly reduced sensitivity to the flavour of the initiating parton in the jet,
-while still offering large enough statistics for the sample. Further tightening of the cut
-provided little improvement in flavour dependence. Using a $p_{T}$-dependent denominator
-requirement ensures that the prompt efficiency is the same for all denominator taus, while
-lowring the fake-factor dependent on $p_{T}$.
+\subsubsection{Fake Factor Measurement}\label{sec:ff-tau-measurement}
+The tau lepton fake factors are measured using a tag-and-probe method in a sample targeting $W$+jets events. Events are required to have a muon satisfying the numerator criteria (tag) plus a hadronic tau candidate (probe). To avoid biasing the fake factors, no other requirements are imposed to reject the prompt contamination (for example, requiring the muon and $\tauhadvis$ to have the same sign biases the sample towards gluon-initiated jets). The prompt contamination, dominantly from $Z+$jets and $t\bar{t}$ production, is subtracted using simulation. 
 
-%A consequence of this choice of denominator is that the \met\ is incorrectly
-%calibrated in events with denominator taus.  This is corrected in the analysis by
-%modifying the \verb.RefJet. and \verb.RefTau. terms of \verb.MET_RefFinal. to use the tau
-%energy instead of the jet energy.
+The muon-$\tauhadvis$ invariant mass and $\tauhadvis$ $\pt$ spectra for numerators and denominators are shown in figure~\ref{fig:taufakeprompt}, along with the prompt contribution estimated from simulation. Figure~\ref{fig:taufakefactors} shows the resulting fake factors.
 
-The fake-factors are nominally parameterized as a function of the $p_{T}$ and $|\eta|$ of the
-tau candidate, binned in 2 dimensions to preserve correlations. An additional scaling
-correction is applied as a function of the highest \texttt{MV1} $b$-tagging weight of any jet
-in the event.  The former two target dependencies associated with the jet shower shapes as a
-function of kinematics and detector homogeinity.  The latter is taken to account for the
-heavy-flavour component.
 
-\subsection{Fake Factor Measurement}\label{sec:ff-tau-measurement}
-
-It is also important to measure the fake-factors in a sample which is expected to have a
-similar flavour composition as the signal regions used (the majority of trilepton events
-with a fake tau are expected to come from electroweak production with an associated jet
-faking the tau, for example $Z$ + jets events).  This is particularly important as no
-observable can be used to directly and accurately classify each fake taus as potentially
-gluon- or quark-initiated.
- 
-While the tau fake-factors were measured in the past from a $\gamma + $ jets sample, the
-approach chosen for this iteration of the analysis is different.  
-%Due to the increased
-%pile-up conditions of the 2012 run, the purity of the photon sample is greatly
-%compromised, leading to a larger contribution from multijet events, which then introduces
-%a larger contribution from gluon-initiated jets, biasing the fake-factors.  
-%Furthermore,
-The low $p_{T}$ photon triggers were heavily prescaled during the 2012 run, limiting the
-statistics available to measure fake-factors at low $p_{T}$ values.  Instead, a $W$ + jets
-sample is used due to its high statistics and similar final-state kinematics.  A leading
-numerator muon is required to be reconstructed as a tag (along with the associated trigger
-requirement), and the fake-factors are then measured from the probe tau candidates.  No
-other requirements are made on the events.  Alternatively, selection requirements could be
-made to reject the main source of $\tau_{\mathrm{had}}$ prompts ($Z\rightarrow
-\tau_{\mu}\tau_{\mathrm{had}}$), but such requirements can potentially introduce a bias on
-the fake-factors (for example, introducing a same-sign requirement is expected to
-drastically reduce the quark-initiated jet contribution).  Instead, the contribution from
-prompt $\tau_{\mathrm{had}}$ is subtracted directly from Monte Carlo simulations.  The two
-non-negligible contributions come from $Z$ + jets and $t\bar{t}$ events.
-
-\begin{figure}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_NumM}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_NumPt}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_DenM}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_DenPt}
-\caption{\label{fig:taufakeprompt} Invariant mass of the muon and tau pair (left) and
-  $p_{T}$ of the tau candidate (right), for the numerator (top) and denominator selections
-  (down).  The prompt contribution estimated from MC simulations is shown along with the
-  measured data.}
+\begin{figure}[htbp]
+	\centering
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_NumM}}
+	}
+	\hfill
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_NumPt}}
+	} \\
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_DenM}}
+	}
+	\hfill
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_DenPt}}
+	}
+\caption{\label{fig:taufakeprompt} Invariant mass of the muon and $\tauhadvis$ pair (left) and
+  $\pt$ of the tau candidate (right). The top plots show the distributions for numerator $\tauhadvis$ candidates, while the bottom plots show the distributions for denominator $\tauhadvis$ candidates. The filled histograms show the prompt contamination estimated from simulation.}
 \end{figure}
 
-\begin{figure}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_FFPt}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_FFEta}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_FFMV1}
-\caption{\label{fig:taufakefactors} Fake-factors binned in $p_{T}$ and $|\eta|$ (left) and
-  their associated statistical uncertainty (right). The extra scaling as a function of MV1
-  weight is also shown (bottom).  These fake-factors were derived in $W$ + jets
-  events. The prompt contribution has been subtracted using MC predictions.}
+\begin{figure}[htbp]
+	\centering
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_FFPt}}
+	}
+	\hfill
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_FFEta}}
+	} \\
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_FFMV1}}
+	}
+\caption{\label{fig:taufakefactors} Tau fake factors binned in $\pt$ and $|\eta|$ (left), and the corresponding statistical uncertainty (right). The correction for the maximum MV1 $b$-tag weight of all jets in the event is also shown (bottom). The fake factors are derived from $W$+jets events.}
 \end{figure}
 
-Figure~\ref{fig:taufakeprompt} shows sample data distributions for the numerator and
-denominator tau candidates, along with the prompt contribution which must be subtracted
-when calculating the fake-factors. Figure~\ref{fig:taufakefactors} shows the obtained
-fake-factors.
 
-\subsection{Systematic Uncertainties}\label{sec:ff-tau-systematics}
-
-Various studies have been carried out to estimate the systematic uncertainties associated
-with the tau fake estimates.  The main considered sources of uncertainties are the following:
+\subsubsection{Systematic Uncertainties}\label{sec:ff-tau-systematics}
+The following sources of systematics uncertainties on the tau fake factors are considered:
 
 \begin{itemize}
-\item Uncertainties on the MC prompt estimates
-\item Uncertainties associated with the binning choice
+\item Uncertainties on the simulation-based estimates of the prompt contamination.
+\item Uncertainties associated with the binning choice.
 %\item Dependency of the fake-factors of the $W$ + jets selection
-\item Flavour dependence of the fake-factors (gluon, light-quarks, heavy-quarks)
+\item Dependence of the fake factors on the flavor of the initiating parton.
 \end{itemize}
 
-For the prompt estimates, the normalization of the MC samples have been fluctuated by
-their associated uncertainties (as listed in~\ref{s:syst}).  This results in variations
-between 5\% and 17\%, being the largest in the 30-40 GeV $p_{T}$ range (where the prompt
-subtraction is the largest due to the $Z$ sample kinematics).
+The uncertainty due to the prompt contamination estimatation is derived by fluctuating the normalizations of the Monte Carlo samples by their theoretical uncertainties. The resulting variations in the fake factors are between $5\%$-$17\%$, and  are largest for $\SI{30}{\giga\electronvolt}\lesssim \pt \lesssim \SI{40}{\giga\electronvolt}$, where the contribution from $Z\rightarrow \tau_{\mu}\tau_{\mathrm{had}}$ is greatest. 
 
-To estimate the effect of the binning on the fake estimates, a closure test is used.  The
-fake-factors are re-applied to the same sample they were derived from.  The results of
-this test are shown in figure~\ref{fig:tauclosure}.  Excellent agreement is seen, and a
-systematic of 5\% is attributed to this effect.
+To estimate the effect of the binning, the fake factors are reapplied to the same sample they were derived from. The results are shown in figure~\ref{fig:tauclosure}. An uncertainty of $5\%$ is assigned.
 
-\begin{figure}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_ClosurePt}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_ClosureEta}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_ClosureMass}
+Finally, to estimate the effect of differences in flavor composition between the measurement sample and the signal regions, the fake factors are applied to a $t\overline{t}$ validation region. In simulation, this validation region is observed to have a substantially different flavor composition from the $W$+jets measurement sample. A systematic uncertainty of $25\%$ covers the observed differences between the fake background estimate and the data. 
+
+In total, the systematic uncertainties are in the range 25\%-30\%, and are largest around $\SI{30}{\giga\electronvolt}\lesssim \pt \lesssim \SI{40}{\giga\electronvolt}$. 
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_ClosurePt}}
+	}
+	\hfill
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_ClosureEta}}
+	} \\
+	\subfloat[] {
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_ClosureMass}}
+	}
 %\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_NJetsDep}
-\caption{\label{fig:tauclosure} Distributions of the $\tau$ p$_{T}$ (left), $\tau$ $\eta$
-  (right), and invariant mass of the two leptons in the event (bottom).}
+\caption{\label{fig:tauclosure} Results of the closure test, comparing the data to the fake factor-based background estimate in a $t\bar{t}$ validation region. The $\tauhadvis$ $\pt$ (left), $|\eta|$ (right), and the dilepton invariant mass (bottom) are shown.}
 \end{figure}
 
-%The uncertainty associated with the assumption that the fake-factors are entirely
-%uncorrelated in ($p_{T}$, $\eta$) is evaluated by comparing the fake-factors obtained
-%using a 2-D matrix in ($p_{T}$, $\eta$) and the product of the two 1-D fake-factors.  The
-%RMS of the distribution is used to estimate the order of this effect, and is approximately
-%15\%.
 
-Finally, to estimate the sensitivity of the fake-factors to the flavour composition of the
-sample used to derive them, the $t\bar{t}$ validation region described in~\ref{s:CR_Top}
-is used. This sample was found in MC studies to have a largely different flavour
-composition than the nominal $W$ + jets sample, and can therefore be used to put a
-conservative systematic on this effect.  A flat variation of 25\% is found to bracket this
-effect conservatively across all observables.
 
-As a cross-check, the same effect can be probed less directly by tuning the requirements
-of the $W$ + jets sample. The selection requirements applied to the $W$ + jets sample will
-directly affect the kinematics and flavour composition of the sample, and lead to
-differences in the derived fake-factors. While there is no direct way to measure how
-different the compositions are between the $W$ + jets control sample and the signal
-regions, it is possible to approximate how sensitive the fake-factors are to such changes.
-Some selection requirements aimed at rejecting $Z$ + jets events are applied to derive
-different sets of fake-factors, inspired by~\cite{zttnote,tauidnote}.  The following
-requirements are applied separately:
-
-\begin{itemize}
-\item $\cos{\Delta\phi(\mu, \met)} + \cos{\Delta\phi(\tau, \met)} <$ -0.15
-\item $m_{T}^{\mu} >$ 70 GeV
-\item $m_{Z}^{vis.} <$ 42 GeV or $m_{Z}^{vis.} >$ 82 GeV
-\item $p_{T}^{\mu} >$ 35 GeV
-\end{itemize}
-
-\begin{figure}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_PromptsDep}
-\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_CutsDep}
-%\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/TauFakes_NJetsDep}
-\caption{\label{fig:fakesys} Dependency of the fake-factors on the prompt normalization
-  (left) and the $W$ event requirements based on the cuts to reject $Z$ events (right).}
-\end{figure}
-
-The resulting sets of fake-factors are shown in figure~\ref{fig:fakesys}.  The variations
-are no larger than 12\%, and are therefore bracketed by the 25\% estimate from the
-$t\bar{t}$ sample.
-
-In the end, the systematics are found to vary between 25\% and 30\%, being largest where
-the prompt subtraction is most significant.
 
 
 % Alternatively,
@@ -567,32 +476,32 @@ the prompt subtraction is most significant.
 %
 %Drell--Yan production in association with a photon that converts in the detector, denoted $Z+\gamma$, is modelled using \sherpa~1.4.1, also using the CT10 PDF set and including up to three additional parton emissions in the matrix element. Production of top-quark pairs in association with a $W$ or $Z$ boson ($\ttbarV$) and triboson production ($VVV^{(*)}$) are modelled using \madgraph~5.1.3.33, with \pythia~6.426 for the parton shower and hadronization, AUET2B underlying event tune~\cite{AUET2B}, and the CTEQ6L1 PDF set. The $\ttbarV$ processes are normalized to the corresponding NLO cross sections~\cite{Campbell:2012dh,Lazopoulos:2008de}, while the $Z+\gamma$ and $VVV^{(*)}$ processes are normalized to their LO cross sections from the respective generator.
 
-\section{Application of Fake Factors}\label{sec:fake-factor-application}
-Figure~\ref{fig:prompt-subtractions} shows the fake factor-weighted reducible events in the signal regions, as given by equation~\ref{eq:fake-factor-master-formula}. The estimated prompt subtractions due to $Z+\gamma$, $WZ$, $ZZ$, $t\overline{t}+V$, and $VVV^{(*)}$ events (i.e. the contributions to events with denominator objects due these irreducible background sources, rather than the intended sources of reducible background) are shown in the colored histograms. The reducible background prediction is the difference between the data points and the prompt subtraction histograms. In cases where a bin is negative after applying the prompt subtraction, the contents of that bin are set to zero, and the histogram is scaled to preserve the overall normalization. 
-%For the 4L, $Z+e$ signal region, the overall normalization is negative and consistent with zero, so the background is neglected in this region. 
-
-The uncertainty on the background prediction is the combination of two components: the systematic uncertainties on the electron and muon fake factors, and the statistical uncertainties due to finite events with denominator objects. As described in section~\ref{sec:systematic-uncertainties}, the fake factor uncertainties constitute their own component, while the statistical uncertainties are contained in the ``Monte Carlo statistics'' component. 
-
-\begin{figure}[h]
-	\centering
-	\subfloat[ Inclusive SR, $Z+e$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_InclusiveNoM3L}}
-	}
-	\subfloat[ Inclusive SR, $Z+\mu$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_InclusiveNoM3L}}
-	} \\
-	\subfloat[ 4L SR, $Z+e$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_FourLNoM3L}}
-	}
-	\subfloat[ 4L SR, $Z+\mu$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_FourLNoM3L}}
-	} \\
-	\subfloat[ 3L+dijet SR, $Z+e$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_ThreeLDijetNoM3L}}
-	}
-	\subfloat[ 3L+dijet SR, $Z+\mu$] {
-		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_ThreeLDijetNoM3L}}
-	} \\
-	\caption{Fake factor-weighted data events and prompt subtractions. The reducible background prediction is the difference between the data points and the prompt subtraction colored histograms.}
-	\label{fig:prompt-subtractions}
-\end{figure}
+%\section{Application of Fake Factors}\label{sec:fake-factor-application}
+%Figure~\ref{fig:prompt-subtractions} shows the fake factor-weighted reducible events in the signal regions, as given by equation~\ref{eq:fake-factor-master-formula}. The estimated prompt subtractions due to $Z+\gamma$, $WZ$, $ZZ$, $t\overline{t}+V$, and $VVV^{(*)}$ events (i.e. the contributions to events with denominator objects due these irreducible background sources, rather than the intended sources of reducible background) are shown in the colored histograms. The reducible background prediction is the difference between the data points and the prompt subtraction histograms. In cases where a bin is negative after applying the prompt subtraction, the contents of that bin are set to zero, and the histogram is scaled to preserve the overall normalization. 
+%%For the 4L, $Z+e$ signal region, the overall normalization is negative and consistent with zero, so the background is neglected in this region. 
+%
+%The uncertainty on the background prediction is the combination of two components: the systematic uncertainties on the electron and muon fake factors, and the statistical uncertainties due to finite events with denominator objects. As described in section~\ref{sec:systematic-uncertainties}, the fake factor uncertainties constitute their own component, while the statistical uncertainties are contained in the ``Monte Carlo statistics'' component. 
+%
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[ Inclusive SR, $Z+e$] {
+%		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_InclusiveNoM3L}}
+%	}
+%	\subfloat[ Inclusive SR, $Z+\mu$] {
+%		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_InclusiveNoM3L}}
+%	} \\
+%	\subfloat[ 4L SR, $Z+e$] {
+%		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_FourLNoM3L}}
+%	}
+%	\subfloat[ 4L SR, $Z+\mu$] {
+%		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_FourLNoM3L}}
+%	} \\
+%	\subfloat[ 3L+dijet SR, $Z+e$] {
+%		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Ze_ThreeLDijetNoM3L}}
+%	}
+%	\subfloat[ 3L+dijet SR, $Z+\mu$] {
+%		\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_output_reducible_DeltaM_Zmu_ThreeLDijetNoM3L}}
+%	} \\
+%	\caption{Fake factor-weighted data events and prompt subtractions. The reducible background prediction is the difference between the data points and the prompt subtraction colored histograms.}
+%	\label{fig:prompt-subtractions}
+%\end{figure}
