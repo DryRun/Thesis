@@ -1,8 +1,8 @@
 \chapter{Model Independent Trilepton Search}\label{ch:model-independent-trilepton-search}
 
-Events containing three or more leptons are useful probes of phenomena beyond the Standard Model. On one hand, the expected Standard Model backgrounds are typically small; depending on the kinematic requirements on the three leptons, such events arise dominantly from diboson production ($WZ$, $ZZ$), or from event where one or more leptons arises from misidentified or semileptonically decaying jets. On the other hand, the production of three or more leptons is predicted by many models of phenomena beyond the Standard Model, as described in section~\ref{sec:beyond-the-standard-model}. This dissertation presents two such searches: a model-independent search for non-resonant production of three or more leptons in many signal regions, and a signature-driven search for resonance trilepton production in the context of heavy leptons. 
+Events containing three or more leptons are useful probes of phenomena beyond the Standard Model. The production of three or more leptons is predicted by many models of phenomena beyond the Standard Model, as described in section~\ref{sec:beyond-the-standard-model}. The expected Standard Model backgrounds are typically small; depending on the flavor and charge of the three leptons, such events primarily arise from diboson production ($WZ$, $ZZ$), or from single boson ($W$, $Z/\gamma^{*}$) or $t\bar{t}$ production along with one or more leptons from misidentified or semileptonically decaying jets.  This dissertation presents two such searches: a model-independent search for nonresonant production of three or more leptons in many signal regions, and a signature-driven search for resonance trilepton production in the context of heavy leptons. 
 
-This chapter presents a search for physics beyond the Standard Model using events containing three or more leptons. The search uses $20.3~\ifb$ of $pp$ collision data taken at $\sqrt{s}=8~\mbox{TeV}$ with the ATLAS detector. Many signal regions are defined based on the properties of the leptons, jets, and overall momentum imbalance of the event, with the goal of being broadly sensitive to the non-resonant production of trilepton final states by phenomena beyond the Standard Model. 
+This chapter presents a search for physics beyond the Standard Model using events containing three or more leptons. The search uses $20.3~\ifb$ of $pp$ collision data taken at $\sqrt{s}=8~\mbox{TeV}$ with the ATLAS detector. Many signal regions are defined based on the properties of the leptons, jets, and overall momentum imbalance of the event, with the goal of being broadly sensitive to the nonresonant production of trilepton final states by phenomena beyond the Standard Model. 
 
 \section{Event Selection}\label{sec:model-independent-event-selection}
 
@@ -15,7 +15,7 @@ Collisions events for this analysis are triggered using the unprescaled single-e
 	\item \texttt{ EF\_e24vhi\_medium1}: One electron with $\pt>24 \GeV$. The electron must satisfy cuts similar to the medium++ identification criteria at the trigger level, an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.1$, and cuts on the leakage into the hadronic calorimeter.
 	\item \texttt{ EF\_e60\_medium1}: One electron with $\pt>60 \GeV$. The electron must also satisfy the medium identification cuts, but the isolation and leakage requirements are removed.
 	\item \texttt{ EF\_mu24i\_tight}: One muon with $\pt>24 \GeV$, satisfying an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.12$.
-	\item \texttt{ EF\_mu36\_tight}: One muon with $\pt>36 \GeV$, with the isolation requirement removed.
+	\item \texttt{ EF\_mu36\_tight}: One muon with $\pt>36 \GeV$, with no isolation requirement.
 \end{itemize}
 
 The higher-threshold triggers without isolation requirements recover efficiency at higher $\pt$. Triggered events are required to have an offline lepton matched to the trigger object within $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2} < 0.1$. To avoid trigger turn-on effects near the $\pt$ threshold, the offline lepton must have $\pt>26 \GeV$. Additionally, trigger-matched muon must have $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
@@ -27,15 +27,15 @@ After successful triggering and overlap removal, events are required to have at 
 
 
 \section{Analysis Strategy}\label{sec:model-independent-analysis-strategy}
-The analysis defines a large number of non-exclusive signal regions, designed to target new physics models and to compartmentalize the expected backgrounds. First, the events are divided into $3\times 2$ categories as follows. First, the events are divided into three categories based on the properties of any opposite-sign, same-flavor (OSSF) lepton pairs in the event:
+The analysis defines a large number of nonexclusive signal regions, designed to target new physics models and to compartmentalize the expected backgrounds. First, the events are divided into $3\times 2$ categories as follows. First, the events are divided into three categories based on the properties of any opposite-sign, same-flavor (OSSF) lepton pairs in the event:
 
 \begin{itemize}
-	\item \textbf{on-$Z$} events, containing an opposite-sign, same-flavor lepton pair consistent with the decay of a $Z$ boson, with invariant mass within $20 \GeV$ of $m_Z$;
-	\item \textbf{off-$Z$, OSSF} events, containing an opposite-sign, same-flavor pair but vetoing on-$Z$ events; and
+	\item \textbf{on-$Z$}: events containing an opposite-sign, same-flavor lepton pair consistent with the decay of a $Z$ boson, with invariant mass within $20 \GeV$ of $m_Z$;
+	\item \textbf{off-$Z$, OSSF}:  events containing an opposite-sign, same-flavor pair but vetoing on-$Z$ events; and
 	\item \textbf{off-$Z$, mixed} events, containing no opposite-sign, same-flavor pairs.
 \end{itemize}
 
-The on-$Z$ category also includes events containing three leptons (two of which form a same-flavor, opposite-sign pair) with invariant mass within $20 \GeV$ of $m_Z$, to include events where, for example, a photon from final state radiation converts and is reconstructed as a prompt electron.
+The on-$Z$ category also includes events containing three leptons (two of which form a same-flavor, opposite-sign pair) with invariant mass within $20 \GeV$ of $m_Z$, to include events containing a $Z$ boson where a photon from final state radiation converts and is reconstructed as a prompt electron.
 
 Next, the events are further divided into two categories based on the number of electron or muon candidates in the event:
 
@@ -56,7 +56,7 @@ After dividing the events into these six exclusive categories, many signal regio
 	\begin{equation}
 		\mtw = \sqrt{2 \vec{p}_{\mathrm{T}}^{\ell}|\ptmiss|(1-\cos(\Delta\phi))},
 	\end{equation}
-	where $\Delta phi$ is the azimuthal angle between the transverse momentum of the lepton, $\vec{p}_{\mathrm{T}}^{\ell}$, and the missing transverse momentum, $\ptmiss$. 
+	where $\Delta \phi$ is the azimuthal angle between the transverse momentum of the lepton, $\vec{p}_{\mathrm{T}}^{\ell}$, and the missing transverse momentum, $\ptmiss$. 
 	\item $N_{b-\mathrm{tags}}$, the number of $b$-tagged jets. New physics scenarios related to the hierarchy problem (section~\ref{sec:bsm}) often couple preferentially to the third generation, due to the dominant effect of the top quark in the running of the Higgs mass. 
 \end{itemize}
 
@@ -100,31 +100,7 @@ Systematic uncertainties are assigned to the signal and background predictions t
 \begin{itemize}
 	\item Uncertainties on the reducible background estimates from the data-driven estimation method, as described in section~\ref{sec:fake-factor-method}. The uncertainties ranges between $20\%$ to $30\%$ for the electron fake factors, $25\%$ to $50\%$ for the muon fake factors, and $25\%$ to $30\%$ for the tau lepton fake factors.
 
-	\item The signal and background samples must be normalized to the integrated luminosity of the data. The weight assigned to each event is:
-	\begin{equation}
-		w = \frac{\mathcal{L} \sigma_{\mathrm{process}}}{N_{\mathrm{sim}}},
-	\end{equation}
-	where $\mathcal{L}$ is the integrated luminosity of the data, $\sigma_{\mathrm{process}}$ is the cross section of the simulated process, and $N_{\mathrm{sim}}$ is the number of simulated events. The integrated luminosity carries an uncertainty of $2.8\%$, as described in section~\ref{sec:luminosity-measurement}. The cross sections are taken from calculations with uncertainties due to various sources, including the fixed order of the calculation, the choice of renormalization and factorization scales, and the PDFs. The uncertainties are shown in table~\ref{table:model-independent-cross-section-uncertainties}. 
-
-\begin{table}
-  \begin{center}
-    \begin{tabular}{c r c}
-      \hline
-      Sample     &Uncertainty &Reference\\
-      \hline
-      $Z$+jets   &10\% \\
-      $\ttbar+V$ &22\% &\cite{ttV} \\
-      $ZZ$       &4.3\% &App.~\ref{app:vbfnlo} \\
-      $WZ$       &7.6\% &App.~\ref{app:vbfnlo}\\
-      $\ttbar$   &10\% &\cite{TopXS} \\
-      single-$t$ &10\% &\cite{atlas_topmc}\\
-      \hline
-    \end{tabular}
-    \caption{Systematic uncertainties used for the MC samples that contribute to the background estimates.}
-    \label{tab:modle-independent-cross-section-uncertainties}
-  \end{center}
-\end{table}
-
+	\item The simulated signal and background samples are normalized to the integrated luminosity of the data. The uncertainties on the normalizations are described in section~\ref{sec:prompt-background-uncertainties}. For the dominant $WZ$ and $ZZ$ backgrounds, the normalization uncertainties are $7.6\%$ and $4.3\%$, respectively.
 
 	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron and muon scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$-$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$-$2.2\%$~\cite{TauUncertainties}.
 
