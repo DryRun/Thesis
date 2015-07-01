@@ -23,7 +23,7 @@ The higher-threshold triggers without isolation requirements recover efficiency 
 %Monte Carlo events are selected using the trigger simulation. The discrepancies between the trigger performance in data and Monte Carlo are usually smaller than 2\%~\cite{Ancu:1501709}. 
 
 \subsection{Trilepton Event Selection}\label{sec:model-independent-trilepton-event-selection}
-After successful triggering and overlap removal, events are required to have at least three selected leptons, of which at most one is a hadronically decaying tau lepton. The primary event vertex, chosen as the reconstructed vertex with the highest $\sum \pt^2$ of tracks, must have at least three tracks. Finally, events are rejected if they contain ``bad jets'' not associated to real energy deposits in the calorimeters due to $pp$ collisions, i.e. from electronics problems or cosmic rays~\cite{jet-cleaning}.
+After successful triggering and overlap removal, events are required to have at least three selected leptons, of which at most one is a hadronically decaying tau lepton. The primary event vertex, chosen as the reconstructed vertex with the highest $\sum \pt^2$ of tracks, must have at least three tracks. Finally, events are rejected if they contain ``bad jets'' not associated to real energy deposits in the calorimeters due to $pp$ collisions, i.e. from electronics problems or cosmic rays~\cite{TheATLASCollaboration:2015ds}.
 
 
 \section{Analysis Strategy}\label{sec:model-independent-analysis-strategy}
@@ -102,9 +102,9 @@ Systematic uncertainties are assigned to the signal and background predictions t
 
 	\item The simulated signal and background samples are normalized to the integrated luminosity of the data. The uncertainties on the normalizations are described in section~\ref{sec:prompt-background-uncertainties}. For the dominant $WZ$ and $ZZ$ backgrounds, the normalization uncertainties are $7.6\%$ and $4.3\%$, respectively.
 
-	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron and muon scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$-$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$-$2.2\%$~\cite{TauUncertainties}.
+	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron (section~\ref{sec:sec:reco-electron-efficiency}) and muon (section~\ref{sec:reco-muon-efficiency}) scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$-$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$-$2.2\%$ (section~\ref{sec:event-reconstruction-taus}).
 
-	\item The lepton energy scales carry uncertainty which has a small effect on the signal regions due to leptons or events near $\Et$ or $\pt$ thresholds. The uncertainties are also provided by the combined performance groups.
+	\item The lepton energy scales carry uncertainty which has a small effect on the signal regions due to leptons or events near $\Et$ or $\pt$ thresholds, as described in sections~\ref{sec:reco-electron-energymomentum}, \ref{sec:reco-muon-energymomentum}, and \ref{sec:reco-tau-energymomentum}.
 
 	\item  The jet energies are scaled and smeared according to recommendations from the \texttt{JetEtMiss} combined performance group~\cite{JES,JER}. The uncertainty affects the $\Htjets$ and $\meff$ distributions, and also the lepton-jet overlap removal procedure.
 
