@@ -102,25 +102,23 @@ Systematic uncertainties are assigned to the signal and background predictions t
 
 	\item The simulated signal and background samples are normalized to the integrated luminosity of the data. The uncertainties on the normalizations are described in section~\ref{sec:prompt-background-uncertainties}. For the dominant $WZ$ and $ZZ$ backgrounds, the normalization uncertainties are $7.6\%$ and $4.3\%$, respectively.
 
-	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron (section~\ref{sec:sec:reco-electron-efficiency}) and muon (section~\ref{sec:reco-muon-efficiency}) scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$-$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$-$2.2\%$ (section~\ref{sec:event-reconstruction-taus}).
+	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron (section~\ref{sec:reco-electron-efficiency}) and muon (section~\ref{sec:reco-muon-efficiency}) scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$-$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$-$2.2\%$ (section~\ref{sec:event-reconstruction-taus}).
 
 	\item The lepton energy scales carry uncertainty which has a small effect on the signal regions due to leptons or events near $\Et$ or $\pt$ thresholds, as described in sections~\ref{sec:reco-electron-energymomentum}, \ref{sec:reco-muon-energymomentum}, and \ref{sec:reco-tau-energymomentum}.
 
-	\item  The jet energies are scaled and smeared according to recommendations from the \texttt{JetEtMiss} combined performance group~\cite{JES,JER}. The uncertainty affects the $\Htjets$ and $\meff$ distributions, and also the lepton-jet overlap removal procedure.
+	\item  The jet energies are scaled and smeared according to recommendations from the \texttt{JetEtMiss} combined performance group (section~\ref{sec:reco-jets-energy-scale-resolution}). The uncertainty affects the $\Htjets$ and $\meff$ distributions, and also the lepton-jet overlap removal procedure.
 
-	\item The lepton and jet energy uncertainties are also propagated to the missing transverse energy, $\Etmiss$, using the \texttt{MissingETUtility} package~\cite{METUtility}. 
+	\item The lepton and jet energy uncertainties are also propagated to the missing transverse energy, $\Etmiss$. 
 
-	\item The efficiencies of the $b$-tagging algorithm carry uncertainties which are parameterized based on matching the identified $b$-jets to truth $b$-jets, as recommended by the \texttt{flavor tagging} combined performance group.
+	\item The efficiencies of the $b$-tagging algorithm carry uncertainties which are parameterized based on matching the identified $b$-jets to truth $b$-jets.
 
 	\item Finally, the Monte Carlo samples carry statistical uncertainty due to simulating a finite number of events. 
 \end{itemize}
 
 The dominant sources of uncertainty depend on the signal region, but are generally due to Monte Carlo statistical uncertainties, the fake factor uncertainites, and theoretical cross section uncertainties. 
 
-
-
 \section{Background Validation}\label{sec:model-independent-validation-regions}
-The background estimates are verified in several dedicated validation regions, which are orthogonal to the signal regions. Events containing two leptons are used to test the selection of prompt leptons and their corresponding scale factors and energy corrections. The reducible backgrounds are tested in $t\overline{t}$ validation regions, where the events are required to have two same-sign leptons to target semileptonic decays where one lepton arises from a reducible process. Finally, the fake factor procedure is validation in events with modified lepton selections, where the signal leptons are ``between'' the numerator and denominator definitions used in the nominal reducible background estimate.
+The background estimates are verified in several dedicated validation regions, which are orthogonal to the signal regions. Events containing two leptons are used to test the selection of prompt leptons and their corresponding scale factors and energy corrections. The reducible backgrounds are tested in $t\overline{t}$ validation regions, where the events are required to have two same-sign leptons to target semileptonic decays where one lepton arises from a reducible process. Finally, the fake factor method is validated in events with modified, intermediate lepton selections, where the signal leptons are between the numerator and denominator definitions used in the nominal reducible background estimate.
 
 \subsection{Dilepton Validation Regions}\label{sec:model-independent-validation-regions-dilepton}
 Three dilepton validation regions target the three flavors of leptons: $ee$, $\mu\mu$, and $\mu\tau_{\mathrm{had}}$. The $ee$ and $\mu\mu$ regions require an opposite-sign lepton pair of the appropriate flavor. The invariant mass distributions of the dilepton system in these regions are shown in figure~\ref{fig:model-independent-VR-dilepton}. Some disagreement is observed in the $ee$ invariant mass distribution; this discrepancy is covered by the electron energy scale systematic uncertainties. 
@@ -133,7 +131,7 @@ Three dilepton validation regions target the three flavors of leptons: $ee$, $\m
     \includegraphics[width=.48\columnwidth]{figures/modelindependent/DYOSmm_cut_3f_AllLeptonMass}
   }
   \caption{Dilepton invariant mass distributions for the $ee$ (left) and $\mu\mu$ (right) validation regions.}
-  \label{fig:dilepton_masses}
+  \label{fig:model-independent-VR-dilepton}
 \end{figure}
 
 The $ee$ and $\mu\mu$ validation regions are also used to generate scale factors to account for efficiency
@@ -143,17 +141,19 @@ differences between simulation and data when applying cuts on lepton isolation o
   \subfloat[Electron \pt\ Scale Factors]{
     \includegraphics[width=.48\columnwidth]{figures/modelindependent/c_e_pt_allSF}
   }
+  \hfill
   \subfloat[Electron $|\eta|$ Scale Factors]{
     \includegraphics[width=.48\columnwidth]{figures/modelindependent/c_e_eta_allSF}
-  }
+  } \\
   \subfloat[Muon \pt\ Scale Factors]{
     \includegraphics[width=.48\columnwidth]{figures/modelindependent/c_m_pt_allSF}
   }
+  \hfill
   \subfloat[Muon $|\eta|$ Scale Factors]{
     \includegraphics[width=.48\columnwidth]{figures/modelindependent/c_m_eta_allSF}
   }
   \caption{Scale factors for electrons and muons as functions of \pt\ (left) and $|\eta|$ (right).}
-  \label{fig:lepton_SFs}
+  \label{fig:model-independent-lepton-SFs}
 \end{figure}
 
 The $\mu\tau_{\mathrm{had}}$ region applies addition cuts to reduce the large contribution from fake tau leptons in $W$+jets events:
@@ -171,10 +171,12 @@ The $\pt$ and $\eta$ distributions of the $\mu$ and $\tau_{\mathrm{had}}$ are sh
 \begin{figure}[htbp]
 	\subfloat[Leading Lepton \pt]
 		{\includegraphics[width=.48\columnwidth]{figures/modelindependent/OSZ_LeadingPt}}
+  \hfill
 	\subfloat[Leading Lepton $|\eta|$]
-		{\includegraphics[width=.48\columnwidth]{figures/modelindependent/OSZ_LeadingEta}}
+		{\includegraphics[width=.48\columnwidth]{figures/modelindependent/OSZ_LeadingEta}} \\
 	\subfloat[Subleading Lepton \pt]
 		{\includegraphics[width=.48\columnwidth]{figures/modelindependent/OSZ_SubleadPt}}
+  \hfill
 	\subfloat[Subleading Lepton $|\eta|$]
 		{\includegraphics[width=.48\columnwidth]{figures/modelindependent/OSZ_SubleadEta}}
 	\caption{$\pt$ and $\eta$ distribution of the muon and the hadronically decaying tau lepton in the $\mu\tau_{\mathrm{had}}$ validation region.}
@@ -183,16 +185,19 @@ The $\pt$ and $\eta$ distributions of the $\mu$ and $\tau_{\mathrm{had}}$ are sh
 
 
 \subsection{$t\overline{t}$ Validation Regions}\label{sec:model-independent-validation-regions-ttbar}
-In signal regions that veto $Z$ bosons and require large $\Htjets$ or $\Etmiss$, a large reducible background component is expected from $t\overline{t}$ events, where both $W$ bosons decay leptonically and a third lepton arises from a misidentified jet or semileptonic heavy flavor decay. This process is tested in the $t\overline{t}$ validation regions, which require at least one $b$-tagged jet with $\pt>30 \GeV$, exactly two electrons or muons with the same charge, and $\Ht<500 \GeV$. The requirement that the leptons have the same sign vetoes dilepton $t\overline{t}$ events with two prompt leptons from $W$ decays, while the $\Ht$ requirement reduces the potential contamination from new BSM phenomena. Note that events containing hadronically decaying tau leptons are used to derive a systematic uncertainty on the tau fake factors due to the flavor composition of the events (section~\ref{sec:model-independent-ff-tau-systematics}), and so are not used as a validation region. 
+In signal regions that veto $Z$ bosons and require large $\Htjets$ or $\Etmiss$, a large reducible background component is expected from $t\overline{t}$ events, where both $W$ bosons decay leptonically and a third lepton arises from a misidentified jet or semileptonic heavy flavor decay. This process is tested in the $t\overline{t}$ validation regions, which require at least one $b$-tagged jet with $\pt>30 \GeV$, exactly two electrons or muons with the same charge, and $\Ht<500 \GeV$. The requirement that the leptons have the same sign vetoes dilepton $t\overline{t}$ events with two prompt leptons from $W$ decays, while the $\Ht$ requirement reduces the potential contamination from new BSM phenomena. Note that events containing hadronically decaying tau leptons are used to derive a systematic uncertainty on the tau fake factors due to the flavor composition of the events (section~\ref{sec:ff-tau-systematics}), and so are not used as a validation region. 
 
 The $\pt$ and $\eta$ distributions of the leading and subleading leptons are shown in figure~\ref{fig:model-independent-VR-ttbar}.
 
 \begin{figure}[tbp]
   \subfloat[Leading Lepton \pt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/semileptop_emu_mue_LeadPt}}
-  \subfloat[Leading Lepton $|\eta|$]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/semileptop_emu_mue_LeadEta}}
+  \hfill
+  \subfloat[Leading Lepton $|\eta|$]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/semileptop_emu_mue_LeadEta}} \\
   \subfloat[Subleading Lepton \pt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/semileptop_emu_mue_SubleadPt}}
-  \subfloat[Subleading Lepton $|\eta|$]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/semileptop_emu_mue_SubleadEta}}
+  \hfill
+  \subfloat[Subleading Lepton $|\eta|$]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/semileptop_emu_mue_SubleadEta}} \\
   \subfloat[\meff]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/semileptop_emu_mue_ST}}
+  \hfill
   \subfloat[\met]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/semileptop_emu_mue_MET}}
   \caption{\ttbar\ validation regions for all flavor ($e, \mu$) combinations.}
   \label{fig:model-independent-VR-ttbar}
@@ -213,10 +218,13 @@ The first two regions, targeting reducible electrons and muons, require an OSSF 
 
 \begin{figure}[tbp]\centering
   \subfloat[Event Composition]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zmm_offZe_intelec_Simple3LEventClassification}}
-  \subfloat[Electron \pt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zmm_offZe_intelec_OffZPt}}
+  \hfill
+  \subfloat[Electron \pt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zmm_offZe_intelec_OffZPt}} \\
   \subfloat[Electron $\eta$]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zmm_offZe_intelec_OffZEta}}
-  \subfloat[Electron \mt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zmm_offZe_intelec_OffZMT}}
+  \hfill
+  \subfloat[Electron \mt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zmm_offZe_intelec_OffZMT}} \\
   \subfloat[\meff]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zmm_offZe_intelec_ST}}
+  \hfill
   \subfloat[\met]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zmm_offZe_intelec_MET}}
   \caption{Expected backgrounds in the intermediate-electron validation region, using the
     nominal background estimation techniques.}
@@ -225,11 +233,13 @@ The first two regions, targeting reducible electrons and muons, require an OSSF 
 
 \begin{figure}[tbp]\centering
   \subfloat[Event Composition]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zee_offZmu_intmuon_Simple3LEventClassification}}
-  \subfloat[Muon \pt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zee_offZmu_intmuon_OffZPt}}
+  \hfill
+  \subfloat[Muon \pt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zee_offZmu_intmuon_OffZPt}} \\
   \subfloat[Muon $\eta$]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zee_offZmu_intmuon_OffZEta}}
-  \subfloat[Muon
-    \mt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zee_offZmu_intmuon_OffZMT}}
+  \hfill
+  \subfloat[Muon \mt]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zee_offZmu_intmuon_OffZMT}} \\
   \subfloat[\meff]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zee_offZmu_intmuon_ST}}
+  \hfill
   \subfloat[\met]{\includegraphics[width=.48\columnwidth]{figures/modelindependent/Z_emu_Zee_offZmu_intmuon_MET}}
   \caption{Expected backgrounds in the intermediate-muon validation region, using the
     nominal background estimation techniques.}
@@ -240,13 +250,14 @@ The events containing an intermediate $\tau_{\mathrm{had}}$ are much more abunda
 
 \begin{figure}[tbp]\centering
   \subfloat[Intermediate $\tau_{\mathrm{had}}$ $p_{T}$, on-$Z$]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_onZ_DY_TauPt}}
-  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, on-$Z$]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_onZ_DY_TauEta}}
+  \hfill
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, on-$Z$]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_onZ_DY_TauEta}} \\
   \subfloat[Intermediate $\tau_{\mathrm{had}}$ $p_{T}$, off-$Z$/OSSF]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_offZ_OSSF_DY_TauPt}}
-  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, off-$Z$/OSSF]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_offZ_OSSF_DY_TauEta}}
+  \hfill
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, off-$Z$/OSSF]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_offZ_OSSF_DY_TauEta}} \\
   \subfloat[Intermediate $\tau_{\mathrm{had}}$ $p_{T}$, off-$Z$/mixed]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_offZ_mixed_DY_TauPt}}
-  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, off-$Z$/mixed]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_offZ_mixed_DY_TauEta}}
-  \subfloat[Intermediate tau $m_{T}$]
-
+  \hfill
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, off-$Z$/mixed]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_offZ_mixed_DY_TauEta}} \\
   \caption{$\pt$ and $\eta$ distributions of the intermediate $\tau_{\mathrm{had}}$ in the on-$Z$, off-$Z$/OSSF, and off-$Z$/mixed intermediate validation regions. }
   \label{fig:model-independent-VR-intermediate-tau}
 \end{figure}
