@@ -346,7 +346,7 @@ The deviations between the observed and expected in all 138 signal regions are s
 
 
 \section{Interpretations and Model Testing}
-The 95\% CL upper limits on trilepton event production from new physics derived in section~\ref{sec:model-independent-results} provide a useful tool with which to confront models of new physics producing trilepton final states. In order to compare the predictions of a model, i.e. a set of simulated events at \textcolor{red}{particle level} from an event generator, per-lepton fiducial efficiencies are provided to quantify approximately the efficiency of reconstructing and selecting fiducial leptons at truth level. The definition of fiducial truth leptons is as follows: 
+The 95\% CL upper limits on trilepton event production from new physics derived in section~\ref{sec:model-independent-results} provide a useful tool with which to confront models of new physics producing trilepton final states. In order to compare the predictions of a model, i.e. a set of simulated events at \textcolor{red}{particle level} from an event generator, per-lepton fiducial efficiencies are provided to quantify approximately the efficiency of triggering, reconstructing and selecting fiducial leptons at truth level. The definition of fiducial truth leptons is as follows: 
 
 \begin{itemize}
 	\item \underline{\textbf{Transverse momentum}}: Electrons and muons are required to have $\pt>10 \GeV$, while tau leptons are required to have $\pt>15 \GeV$.
@@ -355,7 +355,64 @@ The 95\% CL upper limits on trilepton event production from new physics derived 
 	\item \underline{\textbf{Origin and Decay}}: Leptons must originate from the hard scattering interaction (as opposed to the interaction with the detector as simulated by \geant), and not arise from the decay of a hadron. Electrons and muons are also required to be stable; tau leptons are required to decay hadronically. 
 \end{itemize}
 
-The efficiencies are derived from a sample of simulated $WZ$ events. 
+The per-lepton fiducial efficiencies are measured in a sample of simulated $WZ$ events. The efficiencies are determined separately for electrons, muons, hadronically decaying taus, electrons from tau decays, and muons from tau decays. Fiducial leptons are matched to reconstructed leptons satisfying the selection criteria (section~\ref{sec:model-independent-lepton-definitions}), within a cone of  $\Delta R=0.1$ for electrons and muons and $\Delta R=0.2$ for hadronically decaying taus and electrons and muons from $\tau$ decays. The efficiency, $\epsilon_{\ell}$, is the ratio of the number of matched reconstructed leptons to the number of fiducial leptons within the geometrical acceptance. For electrons, hadronically decaying taus, and electrons from tau decays, the efficiency is measured separately in bins of $\pt$ and $|\eta|$, with the efficiency of a given lepton taken to be $\epsilon_{\ell}(\pt,\,\eta) \equiv \epsilon_{\ell}(\pt)\cdot\epsilon_{\ell}(|\eta|) / \langle \epsilon_{\ell} \rangle$, where $\langle \epsilon_{\ell} \rangle$ is the average efficiency of the inclusive sample. For muons, the efficiency is measured in bins of $\pt$ for $|\eta|<0.1$ and $|\eta|>0.1$. 
 
+The efficiencies are shown in tables~\ref{table:model-independent-fideff-pt} and \ref{table:model-independent-fideff-eta}. 
+
+%============================= LATEX TABLE PT ELE AND TAU ==========================
+\begin{table*}[tbp]
+\begin{center}
+\resizebox{\textwidth}{!}{%
+ \begin{tabular}{cccccccc} 
+
+ \hline 
+ \hline 
+\multicolumn{1}{c}{\pt} & Prompt $e$       &\multicolumn{2}{c}{Prompt $\mu$}    & $\tau\rightarrow e$  & \multicolumn{2}{c}{$\tau\rightarrow\mu$} & $\tauhad$       \\
+$[$\GeV$]$              &                  & $|\eta| > 0.1$ &$|\eta| < 0.1$     &                      &$|\eta| > 0.1$  &$|\eta| < 0.1$     &            \\ 
+\hline
+10--15                & 0.045$\pm$0.001  & 0.021$\pm$0.001& 0.003$\pm$0.002  & 0.027$\pm$0.002       & 0.013$\pm$0.001& 0.005$\pm$0.003   & -              \\ 
+15--20                & 0.484$\pm$0.003  & 0.704$\pm$0.003& 0.37$\pm$0.01    & 0.384$\pm$0.005       & 0.539$\pm$0.005& 0.29$\pm$0.02     & 0.071$\pm$0.003\\ 
+20--25                & 0.571$\pm$0.003  & 0.808$\pm$0.002& 0.42$\pm$0.01    & 0.47$\pm$0.01         & 0.62$\pm$0.01  & 0.35$\pm$0.03     & 0.25$\pm$0.01\\ 
+25--30                & 0.628$\pm$0.002  & 0.855$\pm$0.002& 0.45$\pm$0.01    & 0.52$\pm$0.01         & 0.68$\pm$0.01  & 0.39$\pm$0.03     & 0.31$\pm$0.01\\ 
+30--40                & 0.681$\pm$0.002  & 0.896$\pm$0.001& 0.50$\pm$0.01    & 0.57$\pm$0.01         & 0.71$\pm$0.01  & 0.42$\pm$0.03     & 0.31$\pm$0.01\\ 
+40--50                & 0.713$\pm$0.002  & 0.920$\pm$0.001& 0.52$\pm$0.01    & 0.60$\pm$0.01         & 0.75$\pm$0.01  & 0.42$\pm$0.04     & 0.31$\pm$0.01\\ 
+50--60                & 0.746$\pm$0.002  & 0.932$\pm$0.001& 0.52$\pm$0.01    & 0.64$\pm$0.01         & 0.76$\pm$0.01  & 0.42$\pm$0.03     & 0.31$\pm$0.01\\ 
+60--80                & 0.767$\pm$0.002  & 0.940$\pm$0.001& 0.52$\pm$0.01    & 0.67$\pm$0.01         & 0.78$\pm$0.01  & 0.42$\pm$0.03     & 0.32$\pm$0.01\\ 
+ 80--100              & 0.800$\pm$0.003  & 0.940$\pm$0.002& 0.52$\pm$0.01    & 0.68$\pm$0.02         & 0.79$\pm$0.02  & 0.42$\pm$0.04     & 0.32$\pm$0.02\\ 
+100--200              & 0.820$\pm$0.003  & 0.940$\pm$0.002& 0.52$\pm$0.01    & 0.70$\pm$0.03         & 0.81$\pm$0.02  & 0.42$\pm$0.05     & 0.32$\pm$0.02\\ 
+200--400              & 0.83$\pm$0.01    & 0.94$\pm$0.01  & 0.52$\pm$0.05    & 0.72$\pm$0.08         & 0.91$\pm$0.06  &                   & 0.29$\pm$0.05\\ 
+400--600              & 0.83$\pm$0.04    & 0.93$\pm$0.02  & 0.50$\pm$0.20    \\
+$\ge 600$             & 0.83$\pm$0.05    & 0.92$\pm$0.08  &                  \\
+ \hline \hline 
+ \end{tabular} 
+}
+\caption{The fiducial efficiency for electrons, muons, and taus in different $\pt$ ranges ($\epsfid(\pt)$).  For electrons and muons from tau decays, the $\pt$ is that of the electron or muon, not the tau.  The uncertainties shown reflect the statistical uncertainties of the simulated samples only. }
+ \label{table:model-independent-fideff-pt} 
+ \end{center} 
+ \end{table*} 
+%====================================================================
+
+%============================= LATEX TABLE ETA ELE AND TAU ==========================
+\begin{table}[tbp]
+\begin{center}
+  {\small
+ \begin{tabular}{cccc} 
+ \hline \hline 
+$|\eta|$ & Prompt $e$& $\tau\rightarrow e$& $\tauhad$ \\ \hline 
+0.0--0.1 & 0.640$\pm$0.003& 0.37$\pm$0.01&   0.24$\pm$0.01\\ 
+0.1--0.5 & 0.699$\pm$0.001& 0.41$\pm$0.01&   0.31$\pm$0.01\\ 
+0.5--1.0 & 0.702$\pm$0.001& 0.41$\pm$0.01&   0.28$\pm$0.01\\ 
+1.0--1.5 & 0.660$\pm$0.002& 0.37$\pm$0.01&   0.21$\pm$0.01\\ 
+1.5--2.0 & 0.605$\pm$0.002& 0.36$\pm$0.01&   0.25$\pm$0.01\\ 
+2.0--2.5 & 0.602$\pm$0.002& 0.38$\pm$0.01&   0.25$\pm$0.01\\ 
+ \hline \hline 
+ \end{tabular} 
+}
+\caption{The fiducial efficiency for electrons and taus in different $\eta$ ranges ($\epsfid(\eta)$).  For electrons from tau decays, the $\eta$ is that of the electron, not the tau.  The uncertainties shown reflect the statistical uncertainties of the simulated samples only.}
+
+ \label{table:model-independent-fideff-eta} 
+ \end{center} 
+ \end{table}
+%====================================================================
 
 \printbibliography
