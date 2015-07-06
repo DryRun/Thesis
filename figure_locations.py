@@ -82,6 +82,6 @@ def CopyFigures(figures_list):
 		os.system(command)
 
 if __name__ == "__main__":
-	#FindFigures(sorted(model_independent_figures.keys()))
-	CopyFigures(model_independent_figures)
+	FindFigures(sorted(model_independent_figures.keys()))
+	#CopyFigures(model_independent_figures)
 
