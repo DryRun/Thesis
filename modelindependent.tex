@@ -345,7 +345,7 @@ The deviations between the observed and expected in all 138 signal regions are s
 
 
 
-\section{Interpretations and Model Testing}
+\section{Model Testing}
 The 95\% CL upper limits on trilepton event production from new physics derived in section~\ref{sec:model-independent-results} provide a useful tool with which to confront models of new physics producing trilepton final states. In order to compare the predictions of a model, i.e. a set of simulated events at \textcolor{red}{particle level} from an event generator, per-lepton fiducial efficiencies are provided to quantify approximately the efficiency of triggering, reconstructing and selecting fiducial leptons at truth level. The definition of fiducial truth leptons is as follows: 
 
 \begin{itemize}
@@ -357,10 +357,10 @@ The 95\% CL upper limits on trilepton event production from new physics derived 
 
 The per-lepton fiducial efficiencies are measured in a sample of simulated $WZ$ events. The efficiencies are determined separately for electrons, muons, hadronically decaying taus, electrons from tau decays, and muons from tau decays. Fiducial leptons are matched to reconstructed leptons satisfying the selection criteria (section~\ref{sec:model-independent-lepton-definitions}), within a cone of  $\Delta R=0.1$ for electrons and muons and $\Delta R=0.2$ for hadronically decaying taus and electrons and muons from $\tau$ decays. The efficiency, $\epsilon_{\ell}$, is the ratio of the number of matched reconstructed leptons to the number of fiducial leptons within the geometrical acceptance. For electrons, hadronically decaying taus, and electrons from tau decays, the efficiency is measured separately in bins of $\pt$ and $|\eta|$, with the efficiency of a given lepton taken to be $\epsilon_{\ell}(\pt,\,\eta) \equiv \epsilon_{\ell}(\pt)\cdot\epsilon_{\ell}(|\eta|) / \langle \epsilon_{\ell} \rangle$, where $\langle \epsilon_{\ell} \rangle$ is the average efficiency of the inclusive sample. For muons, the efficiency is measured in bins of $\pt$ for $|\eta|<0.1$ and $|\eta|>0.1$. 
 
-The efficiencies are shown in tables~\ref{table:model-independent-fideff-pt} and \ref{table:model-independent-fideff-eta}. 
+The efficiencies are shown in tables~\ref{table:model-independent-fideff-pt} and \ref{table:model-independent-fideff-eta}. Given a model of new physics, they can be used to compute the number of events expected in each of the signal regions; for example, an event with three leptons $\ell_1$, $\ell_2$, and $\ell_3$ has an efficiency $\epsilon=\epsilon_{\ell_1}\epsilon_{\ell_2}\epsilon_{\ell_3}$ to be reconstructed and selected. 
 
 %============================= LATEX TABLE PT ELE AND TAU ==========================
-\begin{table*}[tbp]
+\begin{table}[htbp]
 \begin{center}
 \resizebox{\textwidth}{!}{%
  \begin{tabular}{cccccccc} 
@@ -389,11 +389,11 @@ $\ge 600$             & 0.83$\pm$0.05    & 0.92$\pm$0.08  &                  \\
 \caption{The fiducial efficiency for electrons, muons, and taus in different $\pt$ ranges ($\epsfid(\pt)$).  For electrons and muons from tau decays, the $\pt$ is that of the electron or muon, not the tau.  The uncertainties shown reflect the statistical uncertainties of the simulated samples only. }
  \label{table:model-independent-fideff-pt} 
  \end{center} 
- \end{table*} 
+ \end{table} 
 %====================================================================
 
 %============================= LATEX TABLE ETA ELE AND TAU ==========================
-\begin{table}[tbp]
+\begin{table}[htbp]
 \begin{center}
   {\small
  \begin{tabular}{cccc} 
@@ -414,5 +414,8 @@ $|\eta|$ & Prompt $e$& $\tau\rightarrow e$& $\tauhad$ \\ \hline
  \end{center} 
  \end{table}
 %====================================================================
+
+\subsection{Type II Seesaw Model}
+As an example of confronting a model of new physics with the model-independent limits on non-Standard Model trilepton production, consider the type~II seesaw model (section~\ref{sec:type-ii-seesaw}). The model augments the Standard Model particle content with SU(2)$_L$ triplets of scalars with hypercharge $Y=2$, giving three particles with charge 0, 1, and 2. The neutral component of the triplet plays the role of the heavy neutrino in the reciprocating seesaw mechanism. The doubly charged component, denoted here by $H{\pm\pm}$, leads to the distinctive signatures of events containing same-sign dileptons, three leptons, and four leptons. Previous searc
 
 \printbibliography
