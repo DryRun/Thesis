@@ -1,12 +1,12 @@
 \chapter{Model Independent Trilepton Search}\label{ch:model-independent-trilepton-search}
 
-Events containing three or more leptons are useful probes of phenomena beyond the Standard Model. The production of three or more leptons is predicted by many models of phenomena beyond the Standard Model, as described in section~\ref{sec:beyond-the-standard-model}. The expected Standard Model backgrounds are typically small; depending on the flavor and charge of the three leptons, such events primarily arise from diboson production ($WZ$, $ZZ$), or from single boson ($W$, $Z/\gamma^{*}$) or $t\bar{t}$ production along with one or more leptons from misidentified or semileptonically decaying jets.  This dissertation presents two such searches: a model-independent search for nonresonant production of three or more leptons in many signal regions, and a signature-driven search for resonance trilepton production in the context of heavy leptons. 
+Events containing three or more leptons are useful probes of phenomena beyond the Standard Model. The production of three or more leptons is predicted by many models of phenomena beyond the Standard Model, as described in section~\ref{sec:bsm}. The expected Standard Model backgrounds are typically small; depending on the flavor and charge of the three leptons, such events primarily arise from diboson production ($WZ$, $ZZ$), or from single boson ($W$, $Z/\gamma^{*}$) or $t\bar{t}$ production along with one or more leptons from misidentified or semileptonically decaying jets.  This dissertation presents two such searches: a model-independent search for nonresonant production of three or more leptons in many signal regions, and a signature-driven search for resonance trilepton production in the context of heavy leptons. 
 
-This chapter presents a search for physics beyond the Standard Model using events containing three or more leptons~\cite{Aad:2014hja}. The search uses $20.3~\ifb$ of $pp$ collision data taken at $\sqrt{s}=8~\mbox{TeV}$ with the ATLAS detector. Many signal regions are defined based on the properties of the leptons, jets, and overall momentum imbalance of the event, with the goal of being broadly sensitive to the nonresonant production of trilepton final states by phenomena beyond the Standard Model. The results are first presented in a model-independent fashion, establishing upper limits on the production of events with three or more charged leptons from non-Standard Model sources. The limits are then confronted against a few example models of new physics, such as doubly charged Higgs bosons. 
+This chapter presents a search for physics beyond the Standard Model using events containing three or more leptons~\cite{Aad:2014hja}. The search uses $20.3~\ifb$ of $pp$ collision data taken at $\sqrt{s}=8~\mbox{TeV}$ with the ATLAS detector. Many signal regions are defined based on the properties of the leptons, jets, and overall momentum imbalance of the event, with the goal of being broadly sensitive to the nonresonant production of trilepton final states by phenomena beyond the Standard Model. The results are first presented in a model-independent fashion, establishing upper limits on the production of events with three or more charged leptons from non-Standard Model sources. The limits are then confronted against a model predicting new doubly charged scalar particles. 
 
 \section{Event Selection}\label{sec:model-independent-event-selection}
 
-This section describes the selection of events containing at least three leptons in both $pp$ collision data and in the Monte Carlo simulation samples. 
+This section describes the selection of events containing at least three leptons in the $pp$ collision data and Monte Carlo simulation samples. 
 
 \subsection{Triggering}
 Collisions events for this analysis are triggered using the unprescaled single-electron or single-muon triggers with the lowest transverse momentum thresholds. At least one of the following triggers must have fired:
@@ -18,7 +18,7 @@ Collisions events for this analysis are triggered using the unprescaled single-e
 	\item \texttt{ EF\_mu36\_tight}: One muon with $\pt>36 \GeV$, with no isolation requirement.
 \end{itemize}
 
-The higher-threshold triggers without isolation requirements recover efficiency at higher $\pt$. Triggered events are required to have an offline lepton matched to the trigger object within $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2} < 0.1$. To avoid trigger turn-on effects near the $\pt$ threshold, the offline lepton must have $\pt>26 \GeV$. Additionally, trigger-matched muon must have $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
+The triggers with higher tranverse momentum thresholds remove the isolation requirements in order to improve the efficiency at higher $\pt$. Triggered events are required to have an offline lepton matched to the trigger object within $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2} < 0.1$. To avoid trigger turn-on effects near the $\pt$ threshold, the offline lepton must have $\pt>26 \GeV$. Additionally, trigger-matched muon must have $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
 
 %Monte Carlo events are selected using the trigger simulation. The discrepancies between the trigger performance in data and Monte Carlo are usually smaller than 2\%~\cite{Ancu:1501709}. 
 
@@ -27,21 +27,21 @@ After successful triggering and overlap removal, events are required to have at 
 
 
 \section{Analysis Strategy}\label{sec:model-independent-analysis-strategy}
-The analysis defines a large number of nonexclusive signal regions, designed to target new physics models and to compartmentalize the expected backgrounds. First, the events are divided into $3\times 2$ categories as follows. First, the events are divided into three categories based on the properties of any opposite-sign, same-flavor (OSSF) lepton pairs in the event:
+The analysis defines a large number of nonexclusive signal regions, designed to target new physics models and to compartmentalize the expected backgrounds. First, the events are divided into six categories as follows. First, the events are divided into three categories based on the properties of any opposite-sign, same-flavor (OSSF) lepton pairs in the event:
 
 \begin{itemize}
-	\item \textbf{on-$Z$}: events containing an opposite-sign, same-flavor lepton pair consistent with the decay of a $Z$ boson, with invariant mass within $20 \GeV$ of $m_Z$;
-	\item \textbf{off-$Z$, OSSF}:  events containing an opposite-sign, same-flavor pair but vetoing on-$Z$ events; and
-	\item \textbf{off-$Z$, mixed} events, containing no opposite-sign, same-flavor pairs.
+	\item \textbf{on-$Z$}: events containing an OSSF lepton pair consistent with the decay of a $Z$ boson, with invariant mass within $20 \GeV$ of $m_Z$;
+	\item \textbf{off-$Z$, OSSF}:  events containing an OSSF pair that do not fall in the on-$Z$ category; and
+	\item \textbf{off-$Z$, mixed}: events containing no OSSF pairs.
 \end{itemize}
 
-The on-$Z$ category also includes events containing three leptons (two of which form a same-flavor, opposite-sign pair) with invariant mass within $20 \GeV$ of $m_Z$, to include events containing a $Z$ boson where a photon from final state radiation converts and is reconstructed as a prompt electron.
+The on-$Z$ category also includes events containing three leptons (two of which form an OSSF pair) with invariant mass within $20 \GeV$ of $m_Z$, to include events containing a $Z$ boson where a photon from final state radiation converts and is reconstructed as a prompt electron.
 
 Next, the events are further divided into two categories based on the number of electron or muon candidates in the event:
 
 \begin{itemize}
-	\item \textbf{3L} events, containing at least three electrons or muons, and
-	\item \textbf{2L+$\tau_{\mathrm{had}}$} events, containing exactly two electrons or muons and a hadronically decaying tau lepton.
+	\item \textbf{3L}: events containing at least three electrons or muons, and
+	\item \textbf{2L$+\tau_{\mathrm{had}}$}: events containing exactly two electrons or muons and a hadronically decaying tau lepton.
 \end{itemize}
 
 After dividing the events into these six exclusive categories, many signal regions are defined based on the lower bound in various kinematic variables. An ordering is imposed on the leptons for the sake of disambiguation: in the 3L category, the leptons are ordered by $\pt$, while in the 2L category, the electrons or muons are ordered by $\pt$, and the $\tau_{\mathrm{had}}$ is the third lepton.  The variables used to define the signal regions are:
@@ -49,14 +49,14 @@ After dividing the events into these six exclusive categories, many signal regio
 \begin{itemize}
 	\item $\htlep$: the scalar sum of the transverse momenta of the leading three leptons. Events containing new particles with masses significantly greater than $m_W$ or $m_Z$ will typically have larger $\htlep$ than the Standard Model backgrounds.
 	\item Minimum $\pt^{\ell}$: the $\pt$ of the softest of the leading three leptons. As with $\htlep$, the $\pt$ of leptons produced in the decays of heavy particles will tend to be larger than those from the expected Standard Model backgrounds.
-	\item $\Htjets$: the scalar sum of the transverse momenta of all selected jets in the event. This variable is sensitive to the strong production of new physics where several leptons are produced in the decays of heavy particles, such as the gluino pair production described in section~\ref{sec:gluino-trileptons}. Conversely, the Standard Model $WZ$ and $ZZ$ backgrounds are weakly produced, and have softer $\Htjets$ distributions.
+	\item $\Htjets$: the scalar sum of the transverse momenta of all selected jets in the event. This variable is sensitive to the strong production of new physics where leptons are produced in the decays of heavy colored particles, such as squarks. Conversely, the Standard Model $WZ$ and $ZZ$ backgrounds are weakly produced, and have softer $\Htjets$ distributions.
 	\item $\Etmiss$: the magnitude of the missing transverse momentum in the event. In models of new physics, leptons are often produced with neutrinos in leptonic $W$ decays, or with new invisible particles, such as the stable neutralinos in many models of $R$-parity conserving SUSY. Requiring large $\Etmiss$ also suppress backgrounds due to $Z+$jets, where the jet decays semileptonically or is misidentified as a lepton. 
 	\item $\meff$: the scalar sum of $\Htjets$, $\Etmiss$, and the $\pt$ of all identified leptons in the event. As with $\htlep$ by itself, multilepton production due to the decays of heavy particles will typically have a harder $\meff$ distribution than the Standard Model backgrounds.
 	\item $\mtw$: for events in the on-$Z$ categories, the transverse mass of the missing transverse momentum, $\ptmiss$, and the highest-$\pt$ lepton not associated with a $Z$ boson candidate, defined as:
 	\begin{equation}
-		\mtw = \sqrt{2 \vec{p}_{\mathrm{T}}^{\ell}|\ptmiss|(1-\cos(\Delta\phi))},
+		\mtw = \sqrt{2 |\vec{p}_{\mathrm{T}}^{\,\ell}||\ptmiss|(1-\cos(\Delta\phi))},
 	\end{equation}
-	where $\Delta \phi$ is the azimuthal angle between the transverse momentum of the lepton, $\vec{p}_{\mathrm{T}}^{\ell}$, and the missing transverse momentum, $\ptmiss$. 
+	where $\Delta \phi$ is the azimuthal angle between the transverse momentum of the lepton, $\vec{p}_{\mathrm{T}}^{\,\ell}$, and the missing transverse momentum, $\ptmiss$. 
 	\item $N_{b-\mathrm{tags}}$, the number of $b$-tagged jets. New physics scenarios related to the hierarchy problem (section~\ref{sec:bsm}) often couple preferentially to the third generation, due to the dominant effect of the top quark in the running of the Higgs mass. 
 \end{itemize}
 
@@ -418,9 +418,9 @@ $|\eta|$ & Prompt $e$& $\tau\rightarrow e$& $\tauhad$ \\ \hline
 \subsection{Example: Doubly Charged Scalar Particles}
 An an example of confronting models of new physics with the model-independent limits in section~\ref{sec:model-independent-results}, limits are established on a model of predicting doubly charged scalar particles within the context of left-right symmetry~\cite{Pati:1974yy,Mohapatra:1974hk,Senjanovic:1975rk,Rizzo:1981xx}. The model contains several scalar particles of charge 0, $\pm1$, and $\pm2$, the neutral component of which generates neutrino mass via the type~II seesaw mechanism (section~\ref{sec:type-ii-seesaw}). Only pair production of the doubly charged particles, $H^{\pm\pm}_{L,R}$, is considered here, where $L$ denotes coupling to SU(2)$_L$ or SU(2)$_R$. The phenomenology of the particles is similar, differing in their couplings to left- and right-handed fermions and in their pair production cross sections due to different gauge couplings. 
 
-The $H^{\pm\pm}_{L,R}$ decay to two charged leptons, and in general do not conserve lepton flavor. In scenarios where the $H^{\pm\pm}_{L,R}$ decay to electrons or muons, the strongest limits are derived from same-sign dilepton signatures. An ATLAS search at $\sqrt{s}=\SI{8}{\tera\electronvolt}$ excluded $H^{\pm\pm}_L$ masses below $\SIrange{465}{550}{\giga\electronvolt}$ and $H^{\pm\pm}_R$ masses below $\SIrange{370}{435}{\giga\electronvolt}$, depending on the flavor of the lepton pair ($e^{\pm}e^{\pm}$, $e^{\pm}\mu^{\pm}$, or $\mu^{\pm}\mu^{\pm}$)~\cite{TheATLASCollaboration:2015gu}. If the $H^{\pm\pm}_{L,R}$ decay to $e^{\pm}\tau^{\pm}$ or $\mu^{\pm}\tau^{\pm}$, however, then competitive limits can be established using model-independent trilepton limits. 
+The $H^{\pm\pm}_{L,R}$ decay to two charged leptons, and in general do not conserve lepton flavor. In scenarios where the $H^{\pm\pm}_{L,R}$ decay to electrons or muons, the strongest limits are derived from same-sign dilepton signatures. An ATLAS search at $\sqrt{s}=\SI{8}{\tera\electronvolt}$ excluded $H^{\pm\pm}_L$ masses below $\SIrange[range-phrase=-]{465}{550}{\giga\electronvolt}$ and $H^{\pm\pm}_R$ masses below $\SIrange[range-phrase=-]{370}{435}{\giga\electronvolt}$, depending on the flavor of the lepton pair ($e^{\pm}e^{\pm}$, $e^{\pm}\mu^{\pm}$, or $\mu^{\pm}\mu^{\pm}$)~\cite{TheATLASCollaboration:2015gu}. If the $H^{\pm\pm}_{L,R}$ decay to $e^{\pm}\tau^{\pm}$ or $\mu^{\pm}\tau^{\pm}$, however, then competitive limits can be established using model-independent trilepton limits. 
 
-The model is confronted against the model-independent limits in the off-$Z$, OSSF categories, using the $\Htlep$ signal regions and combining the $\geq3e/\mu$ and $2e/\mu+\tauhad$ categories. Events are simulated using \pythia8\ using the MSTW2008 leading order PDF set, with mass hypotheses in $\SI{50}{\giga\electronvolt}$ increments between $\SIrange{50}{600}{\giga\electronvolt}$, plus an additional point at a mass of $\SI{1}{\tera\electronvolt}$. The $\Htlep>\SI{200}{\giga\electronvolt}$ signal regions are used for $H^{\pm\pm}$ mass hypotheses below $\SI{200}{\giga\electronvolt}$, while the $\Htlep>\SI{500}{\giga\electronvolt}$ signal regions are used for larger mass hypotheses. The resulting observed and expected limits are shown in figure~\ref{fig:model-independent-dch-limits}. For left-handed doubly charged particles, masses below $\SI{400}{\giga\electronvolt}$ ($\SI{400}{\giga\electronvolt}$) are excluded for 100\% branching fraction to $e^{\pm}\tau^{\pm}$ ($\mu^{\pm}\tau^{\pm}$), compared to expected limits of $\SI{350\pm50}{\giga\electronvolt}$ ($\SI{370\pm20}{\giga\electronvolt}$). 
+The model is confronted against the model-independent limits in the off-$Z$, OSSF categories, using the $\Htlep$ signal regions and combining the \textbf{3L} and \textbf{2L$+\tau_{\mathrm{had}}$} categories. Events are simulated using \pythia8\ using the MSTW2008 leading order PDF set, with mass hypotheses in $\SI{50}{\giga\electronvolt}$ increments between $\SIrange[range-phrase=-]{50}{600}{\giga\electronvolt}$, plus an additional point at a mass of $\SI{1}{\tera\electronvolt}$. The $\Htlep>\SI{200}{\giga\electronvolt}$ signal regions are used for $H^{\pm\pm}$ mass hypotheses below $\SI{200}{\giga\electronvolt}$, while the $\Htlep>\SI{500}{\giga\electronvolt}$ signal regions are used for larger mass hypotheses. The resulting observed and expected limits are shown in figure~\ref{fig:model-independent-dch-limits}. For left-handed doubly charged particles, masses below $\SI{400}{\giga\electronvolt}$ ($\SI{400}{\giga\electronvolt}$) are excluded for 100\% branching fraction to $e^{\pm}\tau^{\pm}$ ($\mu^{\pm}\tau^{\pm}$), compared to expected limits of $350\pm\SI{50}{\giga\electronvolt}$ ($370\pm\SI{20}{\giga\electronvolt}$). 
 
 \begin{figure}[htbp]
   \centering
