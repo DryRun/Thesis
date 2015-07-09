@@ -52,6 +52,9 @@ model_independent_figures["figures/modelindependent/inttau_onZ_DY_TauEta.eps"]  
 model_independent_figures["figures/modelindependent/inttau_onZ_DY_TauPt.pdf"]         = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/TauCR/onZ/DY_TauPt.pdf"
 model_independent_figures["figures/modelindependent/inttau_onZ_DY_TauPt.eps"]         = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/TauCR/onZ/DY_TauPt.eps"
 
+model_independent_figures["figures/modelindependent/DCH_L_emutau_3_HTLepComb_combined.eps"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/DCH_L_emutau_3_HTLepComb_combined.eps"
+model_independent_figures["figures/modelindependent/DCH_L_emutau_4_HTLepComb_combined.eps"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/DCH_L_emutau_4_HTLepComb_combined.eps"
+
 def FindFigures(figure_list):
 	possible_paths = []
 	possible_paths.append("/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/")

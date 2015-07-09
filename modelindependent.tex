@@ -346,7 +346,7 @@ The deviations between the observed and expected in all 138 signal regions are s
 
 
 \section{Model Testing}\label{sec:model-independent-model-testing}
-The 95\% CL upper limits on trilepton event production from new physics derived in section~\ref{sec:model-independent-results} provide a useful tool with which to confront models of new physics producing trilepton final states. In order to compare the predictions of a model, i.e. a set of simulated events at \textcolor{red}{particle level} from an event generator, per-lepton fiducial efficiencies are provided to quantify approximately the efficiency of triggering, reconstructing and selecting fiducial leptons at truth level. The definition of fiducial truth leptons is as follows: 
+The 95\% CL upper limits on trilepton event production from new physics derived in section~\ref{sec:model-independent-results} provide a useful tool with which to confront models of new physics producing trilepton final states. To facilitate the comparison of the model-independent limits with the predictions of a model (i.e. a set of simulated events from an event generator), per-lepton fiducial efficiencies are provided to quantify approximately the efficiency of triggering, reconstructing and selecting fiducial leptons at truth level. The definition of fiducial truth leptons is as follows: 
 
 \begin{itemize}
 	\item \underline{\textbf{Transverse momentum}}: Electrons and muons are required to have $\pt>10 \GeV$, while tau leptons are required to have $\pt>15 \GeV$.
@@ -355,7 +355,7 @@ The 95\% CL upper limits on trilepton event production from new physics derived 
 	\item \underline{\textbf{Origin and Decay}}: Leptons must originate from the hard scattering interaction (as opposed to the interaction with the detector as simulated by \geant), and not arise from the decay of a hadron. Electrons and muons are also required to be stable; tau leptons are required to decay hadronically. 
 \end{itemize}
 
-The per-lepton fiducial efficiencies are measured in a sample of simulated $WZ$ events. The efficiencies are determined separately for electrons, muons, hadronically decaying taus, electrons from tau decays, and muons from tau decays. Fiducial leptons are matched to reconstructed leptons satisfying the selection criteria (section~\ref{sec:model-independent-lepton-definitions}), within a cone of  $\Delta R=0.1$ for electrons and muons and $\Delta R=0.2$ for hadronically decaying taus and electrons and muons from $\tau$ decays. The efficiency, $\epsilon_{\ell}$, is the ratio of the number of matched reconstructed leptons to the number of fiducial leptons within the geometrical acceptance. For electrons, hadronically decaying taus, and electrons from tau decays, the efficiency is measured separately in bins of $\pt$ and $|\eta|$, with the efficiency of a given lepton taken to be $\epsilon_{\ell}(\pt,\,\eta) \equiv \epsilon_{\ell}(\pt)\cdot\epsilon_{\ell}(|\eta|) / \langle \epsilon_{\ell} \rangle$, where $\langle \epsilon_{\ell} \rangle$ is the average efficiency of the inclusive sample. For muons, the efficiency is measured in bins of $\pt$ for $|\eta|<0.1$ and $|\eta|>0.1$. 
+The per-lepton fiducial efficiencies are measured in a sample of simulated $WZ$ events. The efficiencies are determined separately for electrons, muons, hadronically decaying taus, electrons from tau decays, and muons from tau decays. Fiducial leptons are matched to reconstructed leptons satisfying the selection criteria (section~\ref{sec:model-independent-lepton-definitions}), within a cone of $\Delta R=0.1$ for electrons and muons and $\Delta R=0.2$ for hadronically decaying taus and electrons and muons from $\tau$ decays. The efficiency, $\epsilon_{\ell}$, is the ratio of the number of matched reconstructed leptons to the number of fiducial leptons within the geometrical acceptance. For electrons, hadronically decaying taus, and electrons from tau decays, the efficiency is measured separately in bins of $\pt$ and $|\eta|$, with the efficiency of a given lepton taken to be $\epsilon_{\ell}(\pt,\,\eta) \equiv \epsilon_{\ell}(\pt)\cdot\epsilon_{\ell}(|\eta|) / \langle \epsilon_{\ell} \rangle$, where $\langle \epsilon_{\ell} \rangle$ is the average efficiency of the inclusive sample. For muons, the efficiency is measured in bins of $\pt$ for $|\eta|<0.1$ and $|\eta|>0.1$. 
 
 The efficiencies are shown in tables~\ref{table:model-independent-fideff-pt} and \ref{table:model-independent-fideff-eta}. Given a model of new physics, they can be used to compute the number of events expected in each of the signal regions; for example, an event with three leptons $\ell_1$, $\ell_2$, and $\ell_3$ has an efficiency $\epsilon=\epsilon_{\ell_1}\epsilon_{\ell_2}\epsilon_{\ell_3}$ to be reconstructed and selected. 
 
@@ -415,10 +415,27 @@ $|\eta|$ & Prompt $e$& $\tau\rightarrow e$& $\tauhad$ \\ \hline
  \end{table}
 %====================================================================
 
-\subsection{Type II Seesaw Model}
-An an example of using the model-independent limits in section~\ref{sec:model-independent-results} to confront models of new physics, consider a model of pair-produced doubly charged Higgs bosons, $H^{\pm\pm}$. Such particles are predicted in left-right symmetric models~\cite{}
+\subsection{Example: Doubly Charged Scalar Particles}
+An an example of confronting models of new physics with the model-independent limits in section~\ref{sec:model-independent-results}, limits are established on a model of predicting doubly charged scalar particles within the context of left-right symmetry~\cite{Pati:1974yy,Mohapatra:1974hk,Senjanovic:1975rk,Rizzo:1981xx}. The model contains several scalar particles of charge 0, $\pm1$, and $\pm2$, the neutral component of which generates neutrino mass via the type~II seesaw mechanism (section~\ref{sec:type-ii-seesaw}). Only pair production of the doubly charged particles, $H^{\pm\pm}_{L,R}$, is considered here, where $L$ denotes coupling to SU(2)$_L$ or SU(2)$_R$. The phenomenology of the particles is similar, differing in their couplings to left- and right-handed fermions and in their pair production cross sections due to different gauge couplings. 
 
-As an example of confronting a model of new physics with the model-independent limits on non-Standard Model trilepton production, consider the type~II seesaw model (section~\ref{sec:type-ii-seesaw}). The model augments the Standard Model particle content with SU(2)$_L$ triplets of scalars with hypercharge $Y=2$, giving three particles with charge 0, 1, and 2. The neutral component of the triplet plays the role of the heavy neutrino in the reciprocating seesaw mechanism. Pair production of the doubly charged component, denoted here by $H{\pm\pm}$, as well as associa leads to the distinctive signatures of events containing same-sign dileptons, three leptons, and four leptons. 
+The $H^{\pm\pm}_{L,R}$ decay to two charged leptons, and in general do not conserve lepton flavor. In scenarios where the $H^{\pm\pm}_{L,R}$ decay to electrons or muons, the strongest limits are derived from same-sign dilepton signatures. An ATLAS search at $\sqrt{s}=\SI{8}{\tera\electronvolt}$ excluded $H^{\pm\pm}_L$ masses below $\SIrange{465}{550}{\giga\electronvolt}$ and $H^{\pm\pm}_R$ masses below $\SIrange{370}{435}{\giga\electronvolt}$, depending on the flavor of the lepton pair ($e^{\pm}e^{\pm}$, $e^{\pm}\mu^{\pm}$, or $\mu^{\pm}\mu^{\pm}$)~\cite{TheATLASCollaboration:2015gu}. If the $H^{\pm\pm}_{L,R}$ decay to $e^{\pm}\tau^{\pm}$ or $\mu^{\pm}\tau^{\pm}$, however, then competitive limits can be established using model-independent trilepton limits. 
+
+The model is confronted against the model-independent limits in the off-$Z$, OSSF categories, using the $\Htlep$ signal regions and combining the $\geq3e/\mu$ and $2e/\mu+\tauhad$ categories. Events are simulated using \pythia8\ using the MSTW2008 leading order PDF set, with mass hypotheses in $\SI{50}{\giga\electronvolt}$ increments between $\SIrange{50}{600}{\giga\electronvolt}$, plus an additional point at a mass of $\SI{1}{\tera\electronvolt}$. The $\Htlep>\SI{200}{\giga\electronvolt}$ signal regions are used for $H^{\pm\pm}$ mass hypotheses below $\SI{200}{\giga\electronvolt}$, while the $\Htlep>\SI{500}{\giga\electronvolt}$ signal regions are used for larger mass hypotheses. The resulting observed and expected limits are shown in figure~\ref{fig:model-independent-dch-limits}. For left-handed doubly charged particles, masses below $\SI{400}{\giga\electronvolt}$ ($\SI{400}{\giga\electronvolt}$) are excluded for 100\% branching fraction to $e^{\pm}\tau^{\pm}$ ($\mu^{\pm}\tau^{\pm}$), compared to expected limits of $\SI{350\pm50}{\giga\electronvolt}$ ($\SI{370\pm20}{\giga\electronvolt}$). 
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[ $H^{\pm\pm}\rightarrow e^{\pm}\tau^{\pm}$] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/modelindependent/DCH_L_emutau_3_HTLepComb_combined.eps}}
+  }
+  \hfill
+  \subfloat[ $H^{\pm\pm}\rightarrow \mu^{\pm}\tau^{\pm}$] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/modelindependent/DCH_L_emutau_4_HTLepComb_combined.eps}}
+  }
+  \caption{Observed and expected 95\% CL limits on the cross section times branching ratio for $H^{\pm\pm}$ decaying to $e^{\pm}\tau^{\pm}$ (left) and $\mu^{\pm}\tau^{\pm}$ (right). The solid and dashed red lines show the expected cross section times branching ratio for left- and right-handed $H^{\pm\pm}$, respectively.}
+  \label{fig:model-independent-dch-limits}
+\end{figure}
+
+
 
 
 
