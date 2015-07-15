@@ -55,12 +55,47 @@ model_independent_figures["figures/modelindependent/inttau_onZ_DY_TauPt.eps"]   
 model_independent_figures["figures/modelindependent/DCH_L_emutau_3_HTLepComb_combined.eps"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/DCH_L_emutau_3_HTLepComb_combined.eps"
 model_independent_figures["figures/modelindependent/DCH_L_emutau_4_HTLepComb_combined.eps"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/DCH_L_emutau_4_HTLepComb_combined.eps"
 
+resonance_figures = {}
+resonance_figures["figures/resonance/c_output_ETMiss_Ze_ElseNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/ElseNoM3L/c_output_ETMiss_Ze_ElseNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_ETMiss_Ze_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/FourLNoM3L/c_output_ETMiss_Ze_FourLNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_ETMiss_Ze_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/InclusiveNoM3L/c_output_ETMiss_Ze_InclusiveNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_ETMiss_Ze_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/ThreeLDijetNoM3L/c_output_ETMiss_Ze_ThreeLDijetNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_ETMiss_Zmu_ElseNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ElseNoM3L/c_output_ETMiss_Zmu_ElseNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_ETMiss_Zmu_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/FourLNoM3L/c_output_ETMiss_Zmu_FourLNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_ETMiss_Zmu_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/InclusiveNoM3L/c_output_ETMiss_Zmu_InclusiveNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_ETMiss_Zmu_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ThreeLDijetNoM3L/c_output_ETMiss_Zmu_ThreeLDijetNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_dR_Ze_ElseNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/ElseNoM3L/c_output_dR_Ze_ElseNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_dR_Ze_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/FourLNoM3L/c_output_dR_Ze_FourLNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_dR_Ze_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/InclusiveNoM3L/c_output_dR_Ze_InclusiveNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_dR_Ze_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/ThreeLDijetNoM3L/c_output_dR_Ze_ThreeLDijetNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_dR_Zmu_ElseNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ElseNoM3L/c_output_dR_Zmu_ElseNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_dR_Zmu_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/FourLNoM3L/c_output_dR_Zmu_FourLNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_dR_Zmu_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/InclusiveNoM3L/c_output_dR_Zmu_InclusiveNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_dR_Zmu_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ThreeLDijetNoM3L/c_output_dR_Zmu_ThreeLDijetNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_m3l_Ze_ElseNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/ElseNoM3L/c_output_m3l_Ze_ElseNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_m3l_Ze_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/FourLNoM3L/c_output_m3l_Ze_FourLNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_m3l_Ze_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/InclusiveNoM3L/c_output_m3l_Ze_InclusiveNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_m3l_Ze_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/ThreeLDijetNoM3L/c_output_m3l_Ze_ThreeLDijetNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_m3l_Zmu_ElseNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ElseNoM3L/c_output_m3l_Zmu_ElseNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_m3l_Zmu_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/FourLNoM3L/c_output_m3l_Zmu_FourLNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_m3l_Zmu_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/InclusiveNoM3L/c_output_m3l_Zmu_InclusiveNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_m3l_Zmu_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ThreeLDijetNoM3L/c_output_m3l_Zmu_ThreeLDijetNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_mTW_Ze_ElseNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/ElseNoM3L/c_output_mTW_Ze_ElseNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_mTW_Ze_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/FourLNoM3L/c_output_mTW_Ze_FourLNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_mTW_Ze_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/InclusiveNoM3L/c_output_mTW_Ze_InclusiveNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_mTW_Ze_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Ze/ThreeLDijetNoM3L/c_output_mTW_Ze_ThreeLDijetNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_mTW_Zmu_ElseNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ElseNoM3L/c_output_mTW_Zmu_ElseNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_mTW_Zmu_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/FourLNoM3L/c_output_mTW_Zmu_FourLNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_mTW_Zmu_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/InclusiveNoM3L/c_output_mTW_Zmu_InclusiveNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_mTW_Zmu_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ThreeLDijetNoM3L/c_output_mTW_Zmu_ThreeLDijetNoM3L_300GeV.pdf"
+
 def FindFigures(figure_list):
 	possible_paths = []
 	possible_paths.append("/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/")
-	possible_paths.append("/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/figures/")
+	#possible_paths.append("/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/figures/")
 	possible_paths.append("/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/paper/figures")
-	possible_paths.append("/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures")
+	#possible_paths.append("/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures")
+	possible_paths.append("/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel")
 
 	for thesis_figure_path in figure_list:
 		matches = []
@@ -85,6 +120,6 @@ def CopyFigures(figures_list):
 		os.system(command)
 
 if __name__ == "__main__":
-	FindFigures(sorted(model_independent_figures.keys()))
-	#CopyFigures(model_independent_figures)
+	#FindFigures(sorted(resonance_figures.keys()))
+	CopyFigures(resonance_figures)
 

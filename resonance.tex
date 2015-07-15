@@ -8,12 +8,12 @@ The chapter is organized as follows. Section~\ref{sec:resonance-signal-models} d
 \section{Signal Models}\label{sec:resonance-signal-models}
 The search is motivated by two models of phenomena beyond the Standard Model: the type~III neutrino seesaw model~\cite{Biggio:1368793} and extra generations of vector-like leptons~\cite{Martin:2009it}, discussed earlier in sections~\ref{sec:theory-type-III-seesaw} and \ref{sec:theory-vector-like-leptons}. Both models propose heavy, charged, and colorless fermions which are made unstable by mixing with Standard Model leptons. The type~III seesaw model also includes a neutral heavy lepton, $\lzero$, with the same mass as the $\lpm$. 
 
-The new particles are pair produced via gauge interactions, $q\overline{q}\rightarrow \lpm\lmp$ or $q\overline{q}'\rightarrow \lpm\lzero$, as shown in figure~\ref{fig:resonance-feynman-diagrams}. The production cross sections depend on how the new particles couple to $\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$: the type~III seesaw fermions transform in the adjoint representation of $\mathrm{SU}(2)_L$ and have zero hypercharge, $(\mathbf{3},\ 0)$, while the heavy lepton in the generic vector-like lepton model inherits its gauge couplings from its $\mathrm{SU}(5)$ multiplet, $(1,\ -1)$.  The different gauge couplings, plus the various production modes, lead to significant differences in production rates. The production cross sections of the two models are shown in figure~\ref{fig:resonance-production-cross-sections}.
+The new particles are pair produced via gauge interactions, $q\overline{q}\rightarrow \lpm\lmp$ or $q\overline{q}'\rightarrow \lpm\lzero$, as shown in figure~\ref{fig:heavy-lepton-feynman-diagrams}. The production cross sections depend on how the new particles couple to $\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$: the type~III seesaw fermions transform in the adjoint representation of $\mathrm{SU}(2)_L$ and have zero hypercharge, $(\mathbf{3},\ 0)$, while the heavy lepton in the generic vector-like lepton model inherits its gauge couplings from its $\mathrm{SU}(5)$ multiplet, $(1,\ -1)$.  The different gauge couplings, plus the various production modes, lead to significant differences in production rates. The production cross sections of the two models are shown in figure~\ref{fig:resonance-production-cross-sections}.
 
 \begin{figure}[htbp]
   \centering
   \subfloat[ Pair production of charged heavy leptons.] {
-    \resizebox{0.45\textwidth}{!}{\includegraphics{figures/resonance/fd_cc2.eps}}
+    \resizebox{0.51\textwidth}{!}{\includegraphics{figures/resonance/fd_cc2.eps}}
     \label{fig:heavy-lepton-feynman-diagrams-cc}
   }
   \subfloat[ Production of a charged and a neutral heavy lepton.] {
@@ -38,54 +38,60 @@ The new particles are pair produced via gauge interactions, $q\overline{q}\right
 \end{figure}
 
 
-The heavy leptons are made unstable by introducing mixing terms with the Standard Model leptons. For example, consider a single extra generation of fermions transforming in the adjoint representation of $\mathrm{SU}(2)_L$, as in the type~III seesaw model: $\Sigma\equiv \left(\begin{array}{cc} \lzero/\sqrt{2} & \Sigma^+ \\ \Sigma^- & -\lzero/\sqrt{2}\end{array}\right)$~\cite{Abada:2008ea,Biggio:2011ja}. The Lagrangian contains Yukawa terms mixing the heavy leptons with Standard Model leptons:
+The heavy leptons are made unstable by introducing mixing terms with the Standard Model leptons. For example, consider a single extra generation of fermions transforming in the adjoint representation of $\mathrm{SU}(2)_L$, as in the type~III seesaw model:
+
 \begin{equation}
-  -\mathcal{L} \ni \sum_{l=e,\mu,\tau} \sqrt{2}\phi^0 \overline{\Psi} Y_{\lpm l} l_L + \mathrm{h.c.},
-\end{equation}
-where $\Psi\equiv \Sigma^{+c}_R + \Sigma^-_R$ is a Dirac spinor representating the four charged degrees of freedom, $\phi\equiv(\phi^+,\phi^0)^T\equiv (\phi^+,(v+H+i\eta)/\sqrt{2})^T$ is the Higgs doublet, $Y_{\lpm l}$ are Yukawa couplings, and $l_L$ is a Standard Model lepton. After electroweak symmetry breaking, the mass matrices take the form
-\begin{equation}
--\mathcal{L} \ni \sum_{l=e,\mu,\tau} \left(\begin{array}{cc}\overline{l}_R & \overline{\Psi}_R \end{array} \right) \left(\begin{array}{cc} m_l & 0 \\ Y_{\lpm l}v & M_{\lpm} \end{array}\right) \left(\begin{array}{c} l_L \\ \Psi_L \end{array}\right)  + \left(\begin{array}{cc}\overline{l}_L & \overline{\Psi}_L\end{array}\right) \left(\begin{array}{cc} m_l & Y_{\lpm l}^{\dagger}v \\ 0 & M_{\lpm} \end{array}\right) \left(\begin{array}{c} l_R \\ \Psi_r \end{array}\right).
+	\Sigma\equiv \left(\begin{array}{cc} \lzero/\sqrt{2} & \lplus \\ \lminus & -\lzero/\sqrt{2}\end{array}\right).
 \end{equation}
 
-Diagonalizing the mass matrices leads to off-diagonal terms in the gauge interactions, with couplings proportional to the mixing parameters $V_{\alpha\Sigma}=\frac{v}{\sqrt{2}} M_{\lpm}^{-1} Y_{\alpha\Sigma}$. These couplings enable the decay of the heavy leptons to a boson ($W$, $Z$, or $h$) plus a Standard Model lepton or neutrino, with partial widths given by:
+The Lagrangian contains Yukawa terms mixing the heavy leptons with Standard Model leptons, $\ell=e,\,\mu,\,\tau$:
+\begin{equation}
+  -\mathcal{L} \ni \sum_{\ell=e,\,\mu,\,\tau} \sqrt{2}\phi^0 \overline{\Psi} Y_{L \ell} \psi_{\ell} + \mathrm{h.c.},
+\end{equation}
+where $\Psi\equiv {\lplus_R}^c + \lminus_R$ is a Dirac spinor representating the four charged degrees of freedom, $\psi_{\ell}$ are Dirac spinors corresponding to the Standard Model leptons, $\phi\equiv(\phi^+,\phi^0)^T\equiv (\phi^+,(v+H+i\eta)/\sqrt{2})^T$ is the Higgs doublet, and $Y_{L \ell}$ are Yukawa couplings. After electroweak symmetry breaking, the mass matrices take the form
+\begin{equation}
+-\mathcal{L} \ni \sum_{\ell=e,\mu,\tau} \left(\begin{array}{cc}\overline{\psi}_{\ell,R} & \overline{\Psi}_R \end{array} \right) \left(\begin{array}{cc} m_l & 0 \\ Y_{L \ell}v & M_{\lpm} \end{array}\right) \left(\begin{array}{c} \psi_{\ell,L} \\ \Psi_L \end{array}\right)  + \left(\begin{array}{cc}\overline{\psi}_{\ell,L} & \overline{\Psi}_L\end{array}\right) \left(\begin{array}{cc} m_l & Y_{L \ell}^{\dagger}v \\ 0 & M_{\lpm} \end{array}\right) \left(\begin{array}{c} \psi_{\ell,R} \\ \Psi_r \end{array}\right).
+\end{equation}
+
+Diagonalizing the mass matrices leads to off-diagonal terms in the gauge interactions, with couplings proportional to the mixing parameters $V_{L\ell}=\frac{v}{\sqrt{2}} M_{\lpm}^{-1} Y_{L \ell}$. These couplings enable the decay of the heavy leptons to a boson ($W$, $Z$, or $h$) plus a Standard Model lepton or neutrino, with partial widths given by:
 
 %
 \begin{align}
 \label{eq:Gammatr0W}
-\Gamma(\lzero \to l_\alpha^- W^+) &=  \Gamma(\lzero \to l_\alpha^+ W^-) =
-\frac{g^2}{64 \pi} |V_{\alpha\Sigma}|^2
+\Gamma(\lzero \to \ell^- W^+) &=  \Gamma(\lzero \to \ell^+ W^-) =
+\frac{g^2}{64 \pi} |V_{L\ell}|^2
 \frac{M_{\lpm}^3}{M_W^2} \left( 1- \frac{M_W^2}{M_{\lpm}^2} \right)^2 
 \left( 1 + 2 \frac{M_W^2}{M_{\lpm}^2} \right) , 
 \\[0.1cm]
 \label{eq:Gammatr0Z}
-\sum_l\Gamma(\lzero \to \nu_l Z) &=  \frac{g^2}{64 \pi c_W^2} 
-\sum_\alpha |V_{\alpha\Sigma}|^2
+\sum_{\ell}\Gamma(\lzero \to \nu_{\ell} Z) &=  \frac{g^2}{64 \pi c_W^2} 
+\sum_\ell |V_{L\ell}|^2
 \frac{M_{\lpm}^3}{M_Z^2} \left( 1- \frac{M_Z^2}{M_{\lpm}^2} \right)^2 
 \left( 1 + 2 \frac{M_Z^2}{M_{\lpm}^2}\right),
 \\[0.2cm]
 \label{eq:Gammatr0h}
-\sum_l\Gamma(\lzero \to \nu_l H) &=  \frac{g^2}{64 \pi} 
-\sum_\alpha |V_{\alpha\Sigma}|^2
+\sum_{\ell}\Gamma(\lzero \to \nu_{\ell} H) &=  \frac{g^2}{64 \pi} 
+\sum_\ell |V_{L\ell}|^2
 \frac{M_{\lpm}^3}{M_W^2} \left( 1- \frac{M_H^2}{M_{\lpm}^2} \right)^2 ,
 \\[0.2cm]
 \label{eq:Gammatr+W}
-\sum_l\Gamma(\Sigma^+ \to \nu_l W^+) &= 
-\frac{g^2}{32 \pi} \sum_\alpha |V_{\alpha\Sigma}|^2
+\sum_{\ell}\Gamma(\lplus \to \nu_{\ell} W^+) &= 
+\frac{g^2}{32 \pi} \sum_\ell |V_{L\ell}|^2
 \frac{M_{\lpm}^3}{M_W^2} \left( 1- \frac{M_W^2}{M_{\lpm}^2} \right)^2 
 \left( 1 + 2 \frac{M_W^2}{M_{\lpm}^2} \right) ,
 \\[0.2cm]
 \label{eq:Gammatr+Z}
-\Gamma(\Sigma^+ \to l_\alpha^+ Z) &= 
-\frac{g^2}{64 \pi c_W^2} |V_{\alpha\Sigma}|^2
+\Gamma(\lplus \to \ell^+ Z) &= 
+\frac{g^2}{64 \pi c_W^2} |V_{L\ell}|^2
 \frac{M_{\lpm}^3}{M_Z^2} \left( 1- \frac{M_Z^2}{M_{\lpm}^2} \right)^2 
 \left( 1 + 2 \frac{M_Z^2}{M_{\lpm}^2}\right),
 \\[0.2cm]
 \label{eq:Gammatr+h}
-\Gamma(\Sigma^+ \to l_\alpha^+ H) &= \frac{g^2}{64 \pi} |V_{\alpha\Sigma}|^2
+\Gamma(\lplus \to \ell^+ H) &= \frac{g^2}{64 \pi} |V_{L\ell}|^2
 \frac{M_{\lpm}^3}{M_W^2} \left( 1- \frac{M_H^2}{M_{\lpm}^2} \right)^2 .
 \end{align}
 
-where $\alpha$ and $l$ run over Standard Model lepton and neutrino generations. The branching fractions of the charged and neutrino heavy leptons are shown as function of $m_{\lpm}$ in figure~\ref{fig:resonance-branching-ratios}. Note that these branching fractions are common to all the models considered in this analysis (aside from the possibility of only having a charged heavy lepton).
+The branching fractions of the charged and neutrino heavy leptons are shown as function of $m_{\lpm}$ in figure~\ref{fig:resonance-branching-ratios}. Note that these branching fractions are common to all the models considered in this analysis (aside from the possibility of only having a charged heavy lepton).
 
 
 \begin{figure}[h]
@@ -96,83 +102,83 @@ where $\alpha$ and $l$ run over Standard Model lepton and neutrino generations. 
   \subfloat[ Neutral heavy fermion] {
     \resizebox{0.45\textwidth}{!}{\includegraphics{figures/resonance/c_br_neutral}}
   }
-  \caption{Branching ratios of a heavy lepton decaying via mixing with Standard Model leptons~\cite{Biggio:2011ja}.}
+  \caption{Branching ratios of a heavy lepton decaying via mixing with Standard Model leptons.}
   \label{fig:resonance-branching-ratios}
 \end{figure}
 
-Constraints on the mixing parameters $V_i$ can be derived from precision measurements of the $Z$ width, and constraints on products of the mixing parameters from flavor violation experiments like $\mu\rightarrow e\gamma$~\cite{Abada:2008ea,Abada:2007ux,delAguila:2008pw,Altmannshofer:2013zba}:
+Constraints on the mixing parameters $V_{L\ell}$ can be derived from precision measurements of the $Z$ width, and constraints on products of the mixing parameters from flavor violation experiments like $\mu\rightarrow e\gamma$~\cite{Abada:2008hr,Abada:2007kn,delAguila:2008cv,Altmannshofer:2014ej}:
 
 \begin{align}
-|V_{e L}| & <5.5\times10^{-2}\\
-|V_{\mu L}| & <6.3\times10^{-2}\\
-|V_{\tau L}| & <6.3\times10^{-2}\\
-|V_{e L}V_{\mu L}| & <1.7\times10^{-7}\\
-|V_{e L}V_{\tau L}| & <4.2\times10^{-4}\\
-|V_{\mu L}V_{\tau L}| & <4.9\times10^{-4}
+|V_{L e}| & <5.5\times10^{-2}\\
+|V_{L \mu}| & <6.3\times10^{-2}\\
+|V_{L \tau}| & <6.3\times10^{-2}\\
+|V_{L e}V_{L\mu}| & <1.7\times10^{-7}\\
+|V_{L e}V_{L\tau}| & <4.2\times10^{-4}\\
+|V_{L \mu}V_{L\tau}| & <4.9\times10^{-4}.
 \end{align}
 
 \subsection{Signal Monte Carlo Samples}\label{sec:resonance-signal-mc-samples}
 
-Signal events are generated using Monte Carlo simulation, at eleven mass hypotheses in the range $100 \GeV \leq m_{\lpm} \leq 400 \GeV$ for the vector-like leptons model and ten mass hypothesis in the range $100 \GeV \leq m_{\lpm,\lzero}\leq 500 \GeV$ for the type~III seesaw model. The samples are summarized in table~\ref{table:resonance-signal-samples}. The events are generated with \madgraph~4.5.2 and 5.2.2.1~\cite{madgraph}, for the vector-like leptons and type~III seesaw models, respectively, using the CTEQ6L1\cite{ct6l1} parton distribution functions (PDF) and the AU2 underlying event tune~\cite{AU2}. Showering is performed with \pythia\ 8~\cite{Sjostrand:2007gs}. Decays of the heavy leptons in the vector-like leptons model are performed using \bridge~\cite{bridge}, while decays in the type~III seesaw samples are performed by \madgraph. The cross sections for both samples are calculated at leading order (LO) in QCD, and are shown in table~\ref{table:resonance-signal-samples}. 
+Signal events are generated using Monte Carlo simulation, with eleven mass hypotheses in the range $100 \GeV \leq m_{\lpm} \leq 400 \GeV$ for the vector-like leptons model and ten mass hypothesis in the range $100 \GeV \leq m_{\lpm,\lzero}\leq 500 \GeV$ for the type~III seesaw model. The samples are summarized in table~\ref{table:resonance-signal-samples}. The events are generated with \madgraph~4.5.2 and 5.2.2.1~\cite{madgraph}, for the vector-like leptons and type~III seesaw models, respectively, using the CTEQ6L1~\cite{ct6l1} PDF set and the AU2 underlying event tune~\cite{AU2}. Showering is performed with \pythia\ 8~\cite{Sjostrand:2008bk}. Decays of the heavy leptons in the vector-like leptons model are performed using \bridge~\cite{bridge}, while decays in the type~III seesaw samples are performed by \madgraph. The cross sections for both samples are calculated at leading order (LO) in QCD, and are shown in table~\ref{table:resonance-signal-samples}. 
 
-For the type~III seesaw model, the charged and neutral heavy leptons are generated with identical masses. The simulated decay modes are listed in table~\ref{table:resonance-seesaw-sample-decays}. The mixing parameters are chosen to be $V_e=0.055$, $V_{\mu}=0.063$, and $V_{\tau}=0$, yielding a mix of $ee$, $e\mu$, and $\mu\mu$ decays. For the vector-like leptons model, one heavy lepton is required to decay via $L^{\pm}\rightarrow Z(\ell\ell)\ell$, where $\ell=e,\mu,\tau$. The two heavy leptons are constrained to decay to the same flavor of Standard Model lepton, which is chosen with equal probability to be an electron, muon, or tau. For both models, the events are divided and reweighted to correspond to electron-only or muon-only mixing scenarios. 
+For the type~III seesaw model, the charged and neutral heavy leptons are generated with identical masses. The simulated decay modes are listed in table~\ref{table:resonance-seesaw-sample-decays}. The mixing parameters are chosen to be $V_{L e}=0.055$, $V_{L\mu}=0.063$, and $V_{L\tau}=0$, yielding a mix of $ee$, $e\mu$, and $\mu\mu$ decays. For the vector-like leptons model, one heavy lepton is required to decay via $L^{\pm}\rightarrow Z(\ell\ell)\ell$, where $\ell=e,\mu,\tau$. The two heavy leptons are constrained to decay to the same flavor of Standard Model lepton, which is chosen with equal probability to be an electron, muon, or tau. For both models, the events are divided and reweighted to correspond to electron-only or muon-only mixing scenarios. 
 
-The type~III seesaw samples were simulated with no intrinsic width for the $Z$ bosons. As a result, the signal peaks are slightly narrower than would be expected if the $Z$ width were correctly included. As described below in section~\ref{sec:resonance-signal-model}, the limit setting is performed by fitting the $\deltam$ distributions with analytical functions. In order to incorporate the $Z$ width into the signal peaks, the peak width parameters of the vector-like lepton peaks are used for the type~III seesaw model. 
+The type~III seesaw samples were simulated with no intrinsic width for the $Z$ bosons. As a result, the signal peaks are slightly narrower than would be expected if the $Z$ width were correctly included. As described below in section~\ref{sec:resonance-signal-model}, the limit setting is performed by fitting the trilepton mass distributions with analytical functions. In order to incorporate the missing $Z$ width into the signal peaks, the peak width parameters determined from the vector-like lepton samples are used for the type~III seesaw model. 
 
 
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{
-		\begin{tabular}{|l||c|c|c|c|r|}
+		\begin{tabular}{|l||c|c|c|r|}
 			\hline
-			Mass [GeV] & Dataset ID  & Cross Section [pb] & Filter Efficiency & Number of Events \\
+			Mass [GeV]  & Cross Section [pb] & Filter Efficiency & Number of Events \\
 			\hline
-			\multicolumn{5}{c}{Type III Seesaw} \\
+			\multicolumn{5}{|c|}{Type III Seesaw} \\
 			\hline
-			100	&	191030	 	&	1.273		&	0.1018	&	100,000 \\
+			100	&	1.273		&	0.1018	&	100,000 \\
 			\hline
-			120	&	191031	 	&	2.138		&	0.1628	&	100,000 \\
+			120	&	2.138		&	0.1628	&	100,000 \\
 			\hline
-			160	&	191032	 	&	0.853		&	0.1808	&	100,000 \\
+			160	&	0.853		&	0.1808	&	100,000 \\
 			\hline
-			200	&	191033	 	&	0.346		&	0.2012	&	100,000 \\
+			200	&	0.346		&	0.2012	&	100,000 \\
 			\hline
-			250	&	191034	 	&	0.135		&	0.2096	&	100,000 \\
+			250	&	0.135		&	0.2096	&	100,000 \\
 			\hline
-			300	&	191035	 	&	0.0604		&	0.2178	&	50,000 	\\
+			300	&	0.0604		&	0.2178	&	50,000 	\\
 			\hline
-			350	&	191036	 	&	0.02969		&	0.2337	&	50,000 	\\
+			350	&	0.02969		&	0.2337	&	50,000 	\\
 			\hline
-			400	&	191037	 	&	0.01566		&	0.2409	&	50,000 	\\
+			400	&	0.01566		&	0.2409	&	50,000 	\\
 			\hline
-			450	&	191038	 	&	0.008733	&	0.2456	&	50,000 	\\
+			450	&	0.008733	&	0.2456	&	50,000 	\\
 			\hline
-			500	&	191039	 	&	0.00504		&	0.2493	&	50,000 	\\
+			500	&	0.00504		&	0.2493	&	50,000 	\\
 			\hline
 			\hline
-			\multicolumn{5}{c}{Vector-Like Leptons} \\
+			\multicolumn{5}{|c|}{Vector-Like Leptons} \\
 			\hline
-			100	&	180579	&	0.378 	&	0.0233	& 100,000 \\
+			100	&	0.378 	&	0.0233	& 100,000 \\
 			\hline
-			110	&	180580	&	0.264 	&	0.0412	& 100,000 \\
+			110	&	0.264 	&	0.0412	& 100,000 \\
 			\hline
-			120	&	180581	&	0.193 	&	0.0498	& 100,000 \\
+			120	&	0.193 	&	0.0498	& 100,000 \\
 			\hline
-			130	&	180582	&	0.142 	&	0.0548	& 100,000 \\
+			130	&	0.142 	&	0.0548	& 100,000 \\
 			\hline
-			140	&	180583	&	0.106 	&	0.0569	& 100,000 \\
+			140	&	0.106 	&	0.0569	& 100,000 \\
 			\hline
-			160	&	180584	&	0.0645 	&	0.0579	& 100,000 \\
+			160	&	0.0645 	&	0.0579	& 100,000 \\
 			\hline
-			180	&	180585	&	0.0407 	&	0.0575	& 100,000 \\
+			180	&	0.0407 	&	0.0575	& 100,000 \\
 			\hline
-			200	&	180586	&	0.0265 	&	0.0567	& 100,000 \\
+			200	&	0.0265 	&	0.0567	& 100,000 \\
 			\hline
-			250	&	180587	&	0.0104 	&	0.0548	& 100,000 \\
+			250	&	0.0104 	&	0.0548	& 100,000 \\
 			\hline
-			300	&	180588	&	0.00457	&	0.0536	& 100,000 \\
+			300	&	0.00457	&	0.0536	& 100,000 \\
 			\hline
-			400	&	180589	&	0.00115	&	0.0520	& 100,000 \\
+			400	&	0.00115	&	0.0520	& 100,000 \\
 			\hline
 		\end{tabular}
 	}
@@ -185,19 +191,19 @@ The type~III seesaw samples were simulated with no intrinsic width for the $Z$ b
 	\begin{tabular}{c|ll}
 		Production Mode & Decay 1 & Decay 2 \\
 		\hline
-		$pp \rightarrow \lzero\Sigma^{+}$	&	$\lzero \rightarrow l^{+} W^{-}$	&	$\Sigma^{+} \rightarrow l^{+} Z$ \\
-		$pp \rightarrow \lzero\Sigma^{+}$	&	$\lzero \rightarrow l^{-} W^{+}$	&	$\Sigma^{+} \rightarrow l^{+} Z$ \\
-		$pp \rightarrow \lzero\Sigma^{+}$	&	$\lzero \rightarrow \nu_{l} Z$		&	$\Sigma^{+} \rightarrow l^{+} Z$ \\
-		$pp \rightarrow \lzero\Sigma^{+}$	&	$\lzero \rightarrow \nu_{l} H$		&	$\Sigma^{+} \rightarrow l^{+} Z$ \\
-		$pp \rightarrow \lzero\Sigma^{-}$	&	$\lzero \rightarrow l^{-} W^{+}$	&	$\Sigma^{-} \rightarrow l^{-} Z$ \\
-		$pp \rightarrow \lzero\Sigma^{-}$	&	$\lzero \rightarrow l^{+} W^{-}$	&	$\Sigma^{-} \rightarrow l^{-} Z$ \\
-		$pp \rightarrow \lzero\Sigma^{-}$	&	$\lzero \rightarrow \nu_{l} Z$		&	$\Sigma^{-} \rightarrow l^{-} Z$ \\
-		$pp \rightarrow \lzero\Sigma^{-}$	&	$\lzero \rightarrow \nu_{l} H$		&	$\Sigma^{-} \rightarrow l^{-} Z$ \\
-		$pp \rightarrow \Sigma^{-}\Sigma^{+}$	&	$\Sigma^{-} \rightarrow l^{-} Z$		&	$\Sigma^{+} \rightarrow l^{+} Z$ \\
-		$pp \rightarrow \Sigma^{-}\Sigma^{+}$	&	$\Sigma^{-} \rightarrow \nu_{l} W^{-}$	&	$\Sigma^{+} \rightarrow l^{+} Z$ \\
-		$pp \rightarrow \Sigma^{-}\Sigma^{+}$	&	$\Sigma^{-} \rightarrow l^{-} H$		&	$\Sigma^{+} \rightarrow l^{+} Z$ \\
-		$pp \rightarrow \Sigma^{-}\Sigma^{+}$	&	$\Sigma^{-} \rightarrow l^{-} Z$		&	$\Sigma^{+} \rightarrow \nu_{l} W^{+}$ \\
-		$pp \rightarrow \Sigma^{-}\Sigma^{+}$	&	$\Sigma^{-} \rightarrow l^{-} Z$		&	$\Sigma^{+} \rightarrow l^{+} H$ \\
+		$pp \rightarrow \lzero\lplus$	&	$\lzero \rightarrow \ell^{+} W^{-}$	&	$\lplus \rightarrow \ell^{+} Z$ \\
+		$pp \rightarrow \lzero\lplus$	&	$\lzero \rightarrow \ell^{-} W^{+}$	&	$\lplus \rightarrow \ell^{+} Z$ \\
+		$pp \rightarrow \lzero\lplus$	&	$\lzero \rightarrow \nu_{\ell} Z$		&	$\lplus \rightarrow \ell^{+} Z$ \\
+		$pp \rightarrow \lzero\lplus$	&	$\lzero \rightarrow \nu_{\ell} H$		&	$\lplus \rightarrow \ell^{+} Z$ \\
+		$pp \rightarrow \lzero\lminus$	&	$\lzero \rightarrow \ell^{-} W^{+}$	&	$\lminus \rightarrow \ell^{-} Z$ \\
+		$pp \rightarrow \lzero\lminus$	&	$\lzero \rightarrow \ell^{+} W^{-}$	&	$\lminus \rightarrow \ell^{-} Z$ \\
+		$pp \rightarrow \lzero\lminus$	&	$\lzero \rightarrow \nu_{\ell} Z$		&	$\lminus \rightarrow \ell^{-} Z$ \\
+		$pp \rightarrow \lzero\lminus$	&	$\lzero \rightarrow \nu_{\ell} H$		&	$\lminus \rightarrow \ell^{-} Z$ \\
+		$pp \rightarrow \lminus\lplus$	&	$\lminus \rightarrow \ell^{-} Z$		&	$\lplus \rightarrow \ell^{+} Z$ \\
+		$pp \rightarrow \lminus\lplus$	&	$\lminus \rightarrow \nu_{l} W^{-}$	&	$\lplus \rightarrow \ell^{+} Z$ \\
+		$pp \rightarrow \lminus\lplus$	&	$\lminus \rightarrow \ell^{-} H$		&	$\lplus \rightarrow \ell^{+} Z$ \\
+		$pp \rightarrow \lminus\lplus$	&	$\lminus \rightarrow \ell^{-} Z$		&	$\lplus \rightarrow \nu_{l} W^{+}$ \\
+		$pp \rightarrow \lminus\lplus$	&	$\lminus \rightarrow \ell^{-} Z$		&	$\lplus \rightarrow \ell^{+} H$ \\
 	\end{tabular}
 	\caption{Decays simulated for the type~III seesaw signal samples.}
 	\label{table:resonance-seesaw-sample-decays}
@@ -210,43 +216,30 @@ The type~III seesaw samples were simulated with no intrinsic width for the $Z$ b
 The event selection is very similar to that used in the model-independent analysis, described in section~\ref{sec:model-independent-event-selection}. In particular, the same definitions are used for leptons and jets, in order to make use of the same fake factor method to estimate the reducible backgrounds. Events containing a heavy lepton candidate are selected as follows.
 
 \begin{itemize}
-	\item Events are triggered using the lowest-threshold unprescaled single-electron and single-muon triggers, \texttt{EF\_e24vhi\_medium1}, \texttt{EF\_e60\_medium1}, \texttt{EF\_mu24i\_tight}, and \texttt{EF\_mu36\_tight}.
+	\item Events are triggered using the lowest-threshold unprescaled single-electron and single-muon triggers, \texttt{EF\_e24vhi\_medium1}, \texttt{EF\_e60\_medium1}, \texttt{EF\_mu24i\_tight}, and \texttt{EF\_mu36\_tight} (section~\ref{sec:model-independent-event-selection-triggering}).
 	\item The primary event vertex must have at least three tracks with $\pt>400~\mbox{MeV}$.
-	\item Events are required to have at least three electrons or muons ($eee$, $ee\mu$, $\mu\mu e$, $\mu\mu\mu$) satisfying the lepton cuts (table~\ref{table:lepton-selections}). 
-	\item Events must have one $Z$ candidate, consisting of a same-flavor, opposite-sign pair of leptons with $|m_{l^+l^-}-m_{Z}|<10~\mbox{GeV}$. The $Z$ mass is taken to be $m_Z=91.1876~\mbox{GeV}$~\cite{PhysRevD.86.010001}. 
-	\item Four-lepton events with two leptonic $Z$ candidates are rejected to suppresses background from $ZZ$ events. The efficiency loss for signal events is low, in part due to the additional factor of the leptonic branching ratio of the $Z$; see tables~\ref{table:fiducial-efficiencies-Ze} and \ref{table:fiducial-efficiencies-Zmu}. 
+	\item Events are required to have at least three electrons or muons ($eee$, $ee\mu$, $\mu\mu e$, $\mu\mu\mu$) satisfying the lepton selection criteria (table~\ref{table:electron-muon-selections}). 
+	\item Events must have one $Z$ candidate, consisting of a same-flavor, opposite-sign pair of leptons with $|m_{l^+l^-}-m_{Z}|<10~\mbox{GeV}$. The $Z$ mass is taken to be $m_Z=91.1876~\mbox{GeV}$~\cite{pdg}. 
+	\item Four-lepton events with two leptonic $Z$ candidates with $|m_{\ell\ell}-m_Z|<\SI{10}{\giga\electronvolt}$ are rejected to suppress the Standard Model $ZZ$ background. The efficiency loss for signal events is low; see tables~\ref{table:fiducial-efficiencies-Ze} and \ref{table:fiducial-efficiencies-Zmu}. 
 	\item If an event contains more than three leptons, a unique trilepton candidate in each event is chosen as follows:
 	\begin{itemize}
-		\item Choose the same-flavor, opposite-sign (SFOS) pair with invariant mass closest to $m_{Z}$.
+		\item Choose the same-flavor, opposite-sign pair with invariant mass closest to $m_{Z}$.
 		\item Choose the third (``off-$Z$'') lepton to be the closest in $\Delta R$ to the reconstructed $Z$ four-momentum.
 	\end{itemize}
-	\item For low heavy lepton mass hypotheses, $m_{\lpm}\lesssim 200~\mbox{GeV}$, the $Z$ and the third lepton will tend to be collimated. The expected background and signal $\Delta R$ distributions for selected trilepton candidate are shown in figure~\ref{fig:resonance-inclusive-dR}. Imposing a cut on the $\Delta R(Z,\ l_3)$ of the trilepton candidates improves the signal significance, and also provides a useful control region defined by inverting the cut.
+	\item For low heavy lepton mass hypotheses, $m_{\lpm}\lesssim 200~\mbox{GeV}$, the $Z$ and the third lepton will tend to be collimated. The expected background and signal $\Delta R$ distributions for selected trilepton candidate are shown in figure~\ref{fig:resonance-inclusive-dR}. Imposing a cut on the $\Delta R(Z,\,\ell_3)$ of the trilepton candidates improves the signal significance, and also provides a useful control region defined by inverting the cut. The value of the cut is chosen by comparing the expected sensitivities of the analysis with different cuts values, described in appendix~\ref{sec:appendix-resonance-dr-optimization}. A flat cut of $\Delta R(Z,\,\ell_3)<3.0$ is used, independent of the heavy lepton mass hypothesis. 
 
 	\begin{figure}[h]
 		\centering
-		\resizebox{0.6\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Ze_InclusiveNoM3LDeltaR_300GeV_log}}
-		\caption{Expected $\Delta R(Z,\ l_3)$ distributions for background and signal in the inclusive signal region.}
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Ze_InclusiveNoM3LDeltaR_300GeV_log_blind_hide_ratio_force_draw_signal}}
+		\caption{Expected $\Delta R(Z,\,\ell_3)$ distributions for background and signal in the inclusive signal region.}
 		\label{fig:resonance-inclusive-dR}
 	\end{figure}
   
-	The cut on $\Delta R(Z,\ l_3)$ is chosen by running the cut-and-count based limit setting, described in section~\ref{sec:limit-method-mass-windows}, with different values of the $\Delta R$ cut. For cut values of $\Delta R < 2.0,\ 2.25,\ 2.5,\ 2.75,\ 3.0,\ 3.14,\ 3.5,$ and $4.0$, the expected exclusions were determined using \texttt{mclimits}, based on the expected signal and background yields in narrow mass windows around the signal mass hypotheses. For simplicity, the same $\Delta R(Z,\ l_3)$ cut is applied to all categories; no significant gain is observed by optimizing each category individually. The expected exclusions for different $\Delta R(Z,\ l_3)$ cuts are shown in figure~\ref{fig:dR-optimization}. Smaller values of the cut ($\Delta R(Z,\ l_3)\lesssim 2.0$) perform similarly to more stringent cuts at low signal mass hypotheses, but decline at higher mass hypotheses. Cuts above $\Delta R(Z,\ l_3)\lesssim 3.0$ perform approximately equally. Based on these studies, and also to use the inverse of this cut to define a control region, a cut value of $\Delta R(Z,\ l_3)<3.0$ is chosen. 
-
-	\begin{figure}[h]
-		\subfloat[Vector-Like Leptons] {
-			\resizebox{0.45\textwidth}{!}{\includegraphics{figures/resonance/{c_limits_dRVariation_VLL_Combined_BRe1.0_BRmu0.0}.pdf}}
-		}
-		\subfloat[Seesaw] {
-			\resizebox{0.45\textwidth}{!}{\includegraphics{figures/resonance/{c_limits_dRVariation_Seesaw_Combined_BRe1.0_BRmu0.0}.pdf}}
-		}
-		\caption{Expected upper limits on cross section times branching ratio to final states with least one trilepton resonant decay for different cuts on $\Delta R(Z,\ l_3)$.}
-		\label{fig:dR-optimization}
-	\end{figure}
-
 	\item The variable of interested used to apply the trilepton mass constraint is $\Delta m \equiv m_{3\ell}-m_{\ell^+\ell^-}$, where the invariant mass of the two leptons associated with a $Z$ boson decay is subtracted by the trilepton mass. This method reduces the impact of the lepton energy or momentum resolutions on the width of the resonance peak, at the cost of introducing some width due to the intrinsic width of the $Z$, $\Gamma_Z=2.4952\pm0.0023 \GeV$~\cite{pdg}. Over most of the mass range, this variable reduces the width of the signal peaks, as shown in figure~\ref{fig:deltam-m3l-comparison}. 
 
 	\begin{figure}[htbp]
 		\textcolor{red}{m3l deltam comparison plot or table}
-		\caption{Comparison of the full-width, half-maximum of the signal peaks between the $\deltam$ and $m_{3l}$ variables.}
+		\caption{Comparison of the full-width, half-maximum of the signal peaks between the $\deltam$ and $m_{3\ell}$ variables.}
 		\label{fig:deltam-m3l-comparison}
 	\end{figure}
 	  
@@ -254,14 +247,14 @@ The event selection is very similar to that used in the model-independent analys
 
 After identifying the trilepton candidates, six mutually exclusive signal regions are defined. First, to target the flavor structure of the heavy lepton mixing, events are divided into two flavor channels, $Z+e$ and $Z+\mu$, depending on the flavor the off-$Z$ lepton. Second, as the heavy leptons are pair produced, signal events will contain additional activity due to the decay of the second heavy lepton. Events are divided into three exclusive categories based on other activity in the event:
   \begin{itemize}
-  	\item \textbf{\fourl}: Event contains a fourth lepton, either an electron or a muon, passing the normal lepton criteria. 
-  	\item \textbf{\threeljj}: Event contains exactly three leptons, and a dijet with $60.385~\mbox{GeV}<m_{jj}<150.9~\mbox{GeV}$. 
-  	\item \textbf{\threelo}: All other events, i.e. events with three leptons and no jet pair satisying the invariant mass requirement. 
+  	\item \textbf{\fourl}: events containing a fourth lepton, either an electron or a muon, passing the normal lepton criteria. 
+  	\item \textbf{\threeljj}: events containing exactly three leptons and a dijet with $60.385~\mbox{GeV}<m_{jj}<150.9~\mbox{GeV}$. 
+  	\item \textbf{\threelo}: all other events, i.e. events with three leptons and no jet pair satisying the invariant mass requirement. 
   \end{itemize}
 
- The division into the three signal regions targeting the opposite side decay is motivated in figure~\ref{fig:opposite-side-br}, which shows the fraction of events with various activity from the decay of the other heavy lepton. The additional activity includes extra leptons and neutrinos, and jets from $W/Z/h$ decays. The requirement of either a fourth lepton or a hadronically decaying boson is very efficient on signal: if the second heavy fermion is charged, then every decay satisfies this requirement, while if the second heavy fermion is neutral, then every decay except for $\Sigma^0\rightarrow Z\nu\rightarrow \nu\nu\nu$ and decays to Higgs bosons satisfies this requirement. Categorization targeting neutrinos is less effective at separating signal from the large $WZ$ background (see figures~\ref{fig:SR-mTW-1}-\ref{fig:SR-ETMiss-2}). 
+ The choice of these three categories is motivated in figure~\ref{fig:opposite-side-br}, which shows the fraction of events with various activity from the decay of the other heavy lepton. The additional activity includes extra leptons and neutrinos, and jets from $W/Z/h$ decays. Assuming that the mixing with tau leptons is zero ($V_{\tau L}=0$), the requirements of a fourth lepton or a hadronically decaying boson are very efficient on signal. If the second heavy fermion is charged, then the only decay mode that fails both requirements is $\lpm\rightarrow W^{\pm}(\tau^{\pm}\nu)\nu$. If the second heavy fermion is neutral, then only the $\lzero\rightarrow Z(\nu\nu)\nu$ and a small fraction of $\lzero \rightarrow H\nu$ decays fail both requirements. Categorization targeting neutrinos is less effective at separating signal from the large $WZ$ background (see figures~\ref{fig:SR-mTW-1}-\ref{fig:SR-ETMiss-2}). 
 
-In some cases, it is useful to consider the events without dividing into these three categories, but rather only the flavor of the off-$Z$ lepton. This is referred to as the ``Inclusive'' signal region below.
+In some cases, it is useful to consider the events without dividing into these three categories, distinguishing events only by the flavor of the off-$Z$ lepton. This is referred to as the ``Inclusive'' signal region below.
 
 \begin{figure}
 	\subfloat[ $\lpm$] {
@@ -270,22 +263,22 @@ In some cases, it is useful to consider the events without dividing into these t
 	\subfloat[ $\lzero$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_oppositesideactivity_neutral.pdf}}
 	}
-	\caption{Fraction of events with various activity on the opposite side of the event, for $\lpm\Sigma^{\mp}$ events at left, and $\lpm\Sigma^0$ events at right. The left plot, showing the opposite side activity for a $\lpm\Sigma^{\mp}$ final state, is identical for the seesaw and vector-like lepton model.
+	\caption{Fraction of events with various activity on the opposite side of the event, for $\lpm\lmp$ events at left, and $\lpm\lzero$ events at right. The left plot, showing the opposite side activity for a $\lpm\lmp$ final state, is identical for the seesaw and vector-like lepton model.
 	}
 	\label{fig:opposite-side-br}
 \end{figure}
 
 \subsection{Performance on Fiducial Signal Events}\label{sec:fiducial-cutflow}
-The performance of the cuts and heavy lepton candidate selection is shown in tables~\ref{table:fiducial-efficiencies-Ze} and \ref{table:fiducial-efficiencies-Zmu} in terms of efficiency on fiducial events. The final efficiency for each signal region is shown as a function of signal mass $m_{\Sigma}$ in figure~\ref{fig:fiducial-efficiencies-vs-mass}. The study is performed separately for the $Z+e$ and $Z+\mu$ flavor channels. The fiducial selection requires the event to have three truth-level leptons satisfying $\pt>15~\mbox{GeV}$ and $|\eta|<2.5$, of which two form a $Z$ candidate with $|m_{l^+l^-}-m_Z|<10~\mbox{GeV}$, the third lepton is of the correct flavor, and the trilepton mass satisfies $|m_{3l}-m_{\lpm}|<5~\mbox{GeV}$.
+The performance of the cuts and heavy lepton candidate selection is shown in tables~\ref{table:fiducial-efficiencies-Ze} and \ref{table:fiducial-efficiencies-Zmu} in terms of efficiency on fiducial events. The fiducial selection requires the event to have three truth-level leptons satisfying $\pt>15~\mbox{GeV}$ and $|\eta|<2.5$, of which two form a $Z$ candidate with $|m_{\ell^+ \ell^-}-m_Z|<10~\mbox{GeV}$, the third lepton is of the correct flavor, and the trilepton mass satisfies $|m_{3\ell}-m_{\lpm}|<5~\mbox{GeV}$. The final efficiency to reconstruct and select fiducial events for each signal region is shown as a function of signal mass $m_{\lpm}$ in figure~\ref{fig:fiducial-efficiencies-vs-mass}.
 
-Note that cut imposing a flavor requirement on the reconstructed off-$Z$ lepton has a different efficiency between the vector-like lepton sample and the seeaw sample. This is a consequence of the initial flavor content of the samples: the vector-like lepton samples are divided into two samples with with 100\% branching fraction to either bachelor electron or bachelor muon, while the seesaw samples is a single mixed sample containing both electron and muon decays. 
+Note that cut imposing a flavor requirement on the reconstructed off-$Z$ lepton has a different efficiency between the vector-like lepton sample and the seesaw sample. This is a consequence of the initial flavor content of the samples: the vector-like lepton samples are divided into two samples with with 100\% branching fraction to either bachelor electron or bachelor muon, while the seesaw samples is a single mixed sample containing both electron and muon decays. 
 
 
 \begin{table}[ht]
 	\resizebox{\textwidth}{!}{
 	\begin{tabular}{|c|c|c|c|c|c||c|c|c|}
 		\hline
-		Process  & Preselection  & Bachelor $e$  & $|m_{l^{+}l^{-}} - m_{Z}|<10~\mbox{GeV}$  & !$2Z$  & $\Delta R < 3.0$  & $4l$ & $3l+jj$ & Else \\
+		Process  & Preselection  & Bachelor $e$  & $|m_{\ell^{+}\ell^{-}} - m_{Z}|<10~\mbox{GeV}$  & !$2Z$  & $\Delta R < 3.0$  & $\fourl$ & $\threeljj$ & $\threelo$ \\
 		\hline
 		VLL, $100$~GeV		&	$0.348 \pm 0.008$	&	$0.318 \pm 0.008$	&	$0.306 \pm 0.008$	&	$0.303 \pm 0.008$	&	$0.298 \pm 0.008$	&	$0.054 \pm 0.004$ &	$0.096 \pm 0.005$	&	$0.147 \pm 0.006$	\\
 		\hline
@@ -331,7 +324,7 @@ Note that cut imposing a flavor requirement on the reconstructed off-$Z$ lepton 
 		\hline
 	\end{tabular}
 	}
-	\caption{Cut efficiencies for fiducial events at various stages in the cutflow for the $Z+e$ signal regions. Only statistical uncertainties due to finite Monte Carlo statistics are shown. The preselection cut requires three selected leptons, with one same-flavor opposite-sign pair, as well as the general event selection cuts listed above.}
+	\caption{Fraction of fiducial events remaining at various stages in the cutflow for the $Z+e$ signal regions. Only statistical uncertainties due to finite Monte Carlo statistics are shown. The preselection cut requires three selected leptons, with one same-flavor opposite-sign pair, as well as the general event selection cuts listed above.}
 	\label{table:fiducial-efficiencies-Ze}
 \end{table}
 
@@ -385,7 +378,7 @@ Note that cut imposing a flavor requirement on the reconstructed off-$Z$ lepton 
 		\hline
 	\end{tabular}
 	}
-	\caption{Cut efficiencies for fiducial events at various stages in the cutflow for the $Z+\mu$ signal regions. Only statistical uncertainties due to finite Monte Carlo statistics are shown. The preselection cut requires three selected leptons, with one same-flavor opposite-sign pair, as well as the general event selection cuts listed above.}
+	\caption{Fraction of fiducial events remaining at various stages in the cutflow for the $Z+\mu$ signal regions. Only statistical uncertainties due to finite Monte Carlo statistics are shown. The preselection cut requires three selected leptons, with one same-flavor opposite-sign pair, as well as the general event selection cuts listed above.}
 	\label{table:fiducial-efficiencies-Zmu}
 \end{table}
 
@@ -403,36 +396,36 @@ Note that cut imposing a flavor requirement on the reconstructed off-$Z$ lepton 
 	\subfloat[ $Z+\mu$, vector-like leptons] {
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/resonance/c_eff_fid_Zmu_VLL}}
 	}
-	\caption{Efficiencies of cuts defining each signal region on fiducial $Z(ll)l$ events at each simulated mass point. For the $Z+e$ signal regions, the branching fraction is set to be $BR(\Sigma\rightarrow X+e/\nu_{e})=100\%$; similarly, for the $Z+\mu$ signal regions, the branching fraction is set to be $BR(\Sigma\rightarrow X+\mu/\nu_{\mu})=100\%$.}
+	\caption{Efficiencies of cuts defining each signal region on fiducial $Z(ll)l$ events at each simulated mass point. For the $Z+e$ signal regions, the branching fraction is set to be $BR(\lpm\rightarrow X+e/\nu_{e})=100\%$; similarly, for the $Z+\mu$ signal regions, the branching fraction is set to be $BR(\lpm\rightarrow X+\mu/\nu_{\mu})=100\%$.}
 	\label{fig:fiducial-efficiencies-vs-mass}
 \end{figure}
 
 
-
+\clearpage
 
 \section{Systematic Uncertainties}\label{sec:resonance-systematic-uncertainties}
 The signal predictions and background estimates are assigned systematic uncertainties from several sources. In approximate order of significance, these are:
 
 \begin{itemize}
-	\item \textbf{Diboson shape uncertainty}: A systematic uncertainty is assigned to the modeling of the diboson backgrounds by comparing \sherpa~to \powheg. \sherpa~is used as a central value, with uncertainty given by the symmetric difference between \sherpa~and \powheg. As described below in section~\ref{sec:fit-method}, the shapes for the 4L and Rest signal regions are taken from the inclusive signal region, so the corresponding uncertainties are derived only from the inclusive and 3L+dijet signal regions. The comparison for the $WZ$ background is shown in figure~\ref{fig:systematic-WZ-shape}. The implementation of this uncertainty in the fit-based limit section is discussed in more detail in section~\ref{sec:fit-limits-systematic-uncertainties}; briefly, the uncertainty is included as a gaussian-distributed nuisance parameter interpolating between the two fits estimated from the two generators.
+	\item \textbf{Diboson shape uncertainty}: A systematic uncertainty is assigned to the modeling of the diboson backgrounds by comparing \sherpa\ to \powheg. \sherpa\ is used as a central value, with uncertainty given by the symmetric difference between \sherpa\ and \powheg. As described below in section~\ref{sec:resonance-background-model}, the shapes for the $\fourl$ and $\threelo$ signal regions are taken from the inclusive signal region, so the corresponding uncertainties are derived only from the inclusive and $\threeljj$ signal regions. The comparison for the $WZ$ background is shown in figure~\ref{fig:systematic-WZ-shape}. The implementation of this uncertainty in the fit-based limit section is discussed in more detail in section~\ref{sec:fit-limits-systematic-uncertainties}; briefly, the uncertainty is included as a gaussian-distributed nuisance parameter interpolating between the two fits estimated from the two generators.
 
-	In the case of the $ZZ$ background, this procedure is complicated by the fact that the \powheg~sample is filtered to remove events with same-flavor, opposite-sign lepton pairs with $m_{l^+l^-}<4~\mbox{GeV}$ (mll4). In order to compare the samples in a common phase space, the mll4 filter is emulated on the \sherpa~sample by rejected events that contain a same-flavor, opposite-sign pair of truth leptons with status==3, with $m_{l^+l^-}<4~\mbox{GeV}$. \sherpa, ~\sherpa~with mll4 filter, and \powheg~are compared in figure~\ref{fig:ZZ-mll4}. The events from the \powheg~sample are weighted using the ratio of \sherpa~to \sherpa+mll4. The final comparison of background shapes is shown in figure~\ref{fig:systematic-ZZ-shape}.
+	In the case of the $ZZ$ background, this procedure is complicated by the fact that the \powheg\ sample is filtered to remove events with same-flavor, opposite-sign lepton pairs with $m_{l^+l^-}<4~\mbox{GeV}$ (\texttt{mll4}). In order to compare the samples in a common phase space, the \texttt{mll4} filter is emulated on the \sherpa\ sample by rejecting events that contain a same-flavor, opposite-sign pair of truth leptons with $m_{l^+l^-}<4~\mbox{GeV}$. \sherpa, \sherpa\ with \texttt{mll4} filter, and \powheg\ are compared in figure~\ref{fig:ZZ-mll4}. The events from the \powheg\ sample are weighted using the ratio of \sherpa\ to \sherpa+\texttt{mll4}. The final comparison of background shapes is shown in figure~\ref{fig:systematic-ZZ-shape}.
 
 	\begin{figure}[h]
 		\centering
 		\subfloat[ Inclusive SR, $Z+e$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_WZShape_Ze_InclusiveNoM3L_WZ.pdf}}
 		}
-		\subfloat[ ThreeLDijet SR, $Z+e$] {
+		\subfloat[ $\threeljj$ SR, $Z+e$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_WZShape_Ze_ThreeLDijetNoM3L_WZ.pdf}}
 		} \\
 		\subfloat[ Inclusive SR, $Z+\mu$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_WZShape_Zmu_InclusiveNoM3L_WZ.pdf}}
 		}
-		\subfloat[ ThreeLDijet SR, $Z+\mu$] {
+		\subfloat[ $\threeljj$ SR, $Z+\mu$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_WZShape_Zmu_ThreeLDijetNoM3L_WZ.pdf}}
 		}
-		\caption{Comparison of the $\deltam$ distributions between \powheg~and \sherpa~for the $WZ$ backgrounds. The 4L signal region is omitted due to the negligible number of $WZ$ events with four leptons.}
+		\caption{Comparison of the $\deltam$ distributions between \powheg\ and \sherpa\ for the $WZ$ backgrounds. The 4L signal region is omitted due to the negligible number of $WZ$ events with four leptons.}
 		\label{fig:systematic-WZ-shape}
 	\end{figure}
 
@@ -441,16 +434,16 @@ The signal predictions and background estimates are assigned systematic uncertai
 		\subfloat[ Inclusive SR, $Z+e$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_ZZShape_DeltaM_Ze_InclusiveNoM3L}}
 		}
-		\subfloat[ ThreeLDijet SR, $Z+e$] {
+		\subfloat[ $\threeljj$ SR, $Z+e$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_ZZShape_DeltaM_Ze_ThreeLDijetNoM3L}}
 		} \\
 		\subfloat[ Inclusive SR, $Z+\mu$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_ZZShape_DeltaM_Zmu_InclusiveNoM3L}}
 		}
-		\subfloat[ ThreeLDijet SR, $Z+\mu$] {
+		\subfloat[ $\threeljj$ SR, $Z+\mu$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_ZZShape_DeltaM_Zmu_ThreeLDijetNoM3L}}
 		}
-		\caption{Comparison of \sherpa, \sherpa~with mll4 filter, and \powheg.}
+		\caption{Comparison of \sherpa, \sherpa\ with mll4 filter, and \powheg.}
 		\label{fig:ZZ-mll4}
 	\end{figure}
 	
@@ -460,26 +453,26 @@ The signal predictions and background estimates are assigned systematic uncertai
 		\subfloat[ Inclusive SR, $Z+e$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_ZZShapeSyst_Ze_InclusiveNoM3L.pdf}}
 		}
-		\subfloat[ ThreeLDijet SR, $Z+e$] {
+		\subfloat[ $\threeljj$ SR, $Z+e$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_ZZShapeSyst_Ze_ThreeLDijetNoM3L.pdf}}
 		} \\
 		\subfloat[ Inclusive SR, $Z+\mu$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_ZZShapeSyst_Zmu_InclusiveNoM3L.pdf}}
 		}
-		\subfloat[ ThreeLDijet SR, $Z+\mu$] {
+		\subfloat[ $\threeljj$ SR, $Z+\mu$] {
 			\resizebox{2.5in}{!}{\includegraphics{figures/resonance/c_systematics_ZZShapeSyst_Zmu_ThreeLDijetNoM3L.pdf}}
 		}
-		\caption{Comparison of the $\deltam$ distributions between \powheg~and \sherpa~for the $ZZ$ backgrounds. The \powheg~events are weighted to account for the mll4 filter.}
+		\caption{Comparison of the $\deltam$ distributions between \powheg\ and \sherpa\ for the $ZZ$ backgrounds. The \powheg\ events are weighted to account for the mll4 filter.}
 		\label{fig:systematic-ZZ-shape}
 	\end{figure}
 	
 
-	\item \textbf{Monte Carlo statistics and Fit Parameter Uncertainties}: as described below in section~\ref{sec:fit-method}, the limit setting is performed using fits with analytical functions to the Monte Carlo background predictions. Hence the uncertainty due to the finite statistics of the background samples is in represented in the uncertainties on the fit parameters, returned by the fitting code. This uncertainty is discussed in more detail in section~\ref{sec:fit-limits-systematic-uncertainties}.
+	\item \textbf{Monte Carlo statistics and Fit Parameter Uncertainties}: as described below in section~\ref{sec:resonance-fit-method}, the limit setting is performed using fits with analytical functions to the Monte Carlo background predictions. The uncertainty due to the finite statistics of the background samples is in represented in the uncertainties on the fit parameters. This uncertainty is discussed in more detail in section~\ref{sec:fit-limits-systematic-uncertainties}.
 
 
-	\item \textbf{Monte Carlo sample normalizations}: The Monte Carlo samples used for the irreducible background prediction are normalized to the measured luminosity of the data using theoretical cross sections. The uncertainty on the luminosity is $2.8\%$~\cite{luminosity}. The uncertainties on the cross sections for $WZ$, $ZZ$, and $t\overline{t}+V$ are listed in table~\ref{table:mc-cross-section-uncertainties}. The $WZ$ and $ZZ$ uncertainties are taken from \cite{DeViveiros:1670929}, and are based off a comparison of \sherpa with \vbfnlo. A cross section uncertainty is not assigned to the $Z+\gamma$ backgrounds; instead, as described next, a large uncertainty is assigned due to applying scale factors to correct the simulated rate of photon conversions. Similarly, an uncertainty is not assigned for the $VVV^{(*)}$ cross section, due to its small contribution to the signal regions. 
+	\item \textbf{Monte Carlo sample normalizations}: The Monte Carlo samples used for the irreducible background prediction are normalized to the measured luminosity of the data using theoretical cross sections. The uncertainty on the luminosity is $2.8\%$~\cite{luminosity}. The uncertainties on the cross sections for $WZ$, $ZZ$, and $t\overline{t}+V$ are listed in table~\ref{table:mc-cross-section-uncertainties}. \textcolor{red}{The $WZ$ and $ZZ$ uncertainties are taken from a comparison of \sherpa\ with the NLO generator \vbfnlo.} A cross section uncertainty is not assigned to the $Z+\gamma$ backgrounds; instead, as described next, a large uncertainty is assigned due to applying scale factors to correct the simulated rate of photon conversions. Similarly, an uncertainty is not assigned for the $VVV^{(*)}$ cross section, due to its small contribution to the signal regions. 
 
-	In the fit-based limit setting procedure, the uncertainty is implemented as a constraint on the normalization of the corresponding sample: the normalizations of the dominant diboson samples are allowed to float within the quadrature sum of all the normalization uncertainties. The normalizations of the small $t\overline{t}+V$ and $VVV^{(*)}$ backgrounds are fixed due to their comparatively small magnitude, which the fit is unable to resolve. 
+	%In the fit-based limit setting procedure, the uncertainty is implemented as a constraint on the normalization of the corresponding sample: the normalizations of the dominant diboson samples are allowed to float within the quadrature sum of all the normalization uncertainties. The normalizations of the small $t\overline{t}+V$ and $VVV^{(*)}$ backgrounds are fixed due to their comparatively small magnitude, which the fit is unable to resolve. 
 
 	\begin{table}[h]
 		\centering
@@ -606,7 +599,7 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
     Total & $3.9$ & $5.6$ & $6.1$ & $5.3$ & $3.3$ & $4.0$ & $5.1$ & $4.3$ \\
     \hline
   \end{tabular}
-  \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\Sigma}=160 \GeV$, in terms of percent of the total signal normalization.}
+  \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\lpm}=160 \GeV$, in terms of percent of the total signal normalization.}
   \label{table:systematics-impact-summary-seesaw-160}
 \end{table}
 
@@ -628,7 +621,7 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
     Total & $4.5$ & $6.5$ & $6.2$ & $6.0$ & $3.8$ & $4.8$ & $5.3$ & $5.3$ \\
     \hline
   \end{tabular}
-  \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\Sigma}=300 \GeV$, in terms of percent of the total signal normalization.}
+  \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\lpm}=300 \GeV$, in terms of percent of the total signal normalization.}
   \label{table:systematics-impact-summary-seesaw-300}
 \end{table}
 
@@ -650,7 +643,7 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
     Total & $4.5$ & $6.4$ & $6.4$ & $6.4$ & $3.9$ & $5.4$ & $6.0$ & $6.1$ \\
     \hline
   \end{tabular}
-  \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\Sigma}=500 \GeV$, in terms of percent of the total signal normalization.}
+  \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\lpm}=500 \GeV$, in terms of percent of the total signal normalization.}
   \label{table:systematics-impact-summary-seesaw-500}
 \end{table}
 
@@ -658,7 +651,7 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
 \section{Background Validation}\label{sec:resonance-background-validation}
 For each flavor channel, four validation regions are defined to test the background predictions from the Monte Carlo simulation samples and the fake factor procedure. Each region starts from the set of events with three selected electrons or muons, two of which form an OSSF pair of leptons. 
 
-The \underline{\textbf{high $\Delta R$}} region contains events with large separation between the $Z$ candidate momentum and the off-$Z$ lepton momentum, $\Delta R(Z,\ \ell_3)>3$. Events are also required to have exactly three leptons, and to satify $\deltam<200 \GeV - m_Z$, to limit signal contamination from hypotheses with larger $m_{\lpm}$ where the $Z$ and the off-$Z$ lepton are less collimated. The region has a similar background composition to the signal regions with three leptons, and tests the $WZ$, $ZZ$, and reducible background predictions.
+The \underline{\textbf{high $\Delta R$}} region contains events with large separation between the $Z$ candidate momentum and the off-$Z$ lepton momentum, $\Delta R(Z,\,\ell_3)>3$. Events are also required to have exactly three leptons, and to satify $\deltam<200 \GeV - m_Z$, to limit signal contamination from hypotheses with larger $m_{\lpm}$ where the $Z$ and the off-$Z$ lepton are less collimated. The region has a similar background composition to the signal regions with three leptons, and tests the $WZ$, $ZZ$, and reducible background predictions.
 
 The \underline{\textbf{$ZZ$}} region contains events with two OSSF lepton pairs with invariant mass within $10 \GeV$ of $m_Z$. The region tests the $ZZ$ background prediction.
 
@@ -676,10 +669,10 @@ The definition of each validation region and the backgrounds tested are summariz
 		\hline
 		Control Region & Definition & Background Tested \\
 		\hline
-		\multirow{2}{*}{High $\Delta R$} & $\Delta R(Z,\ l_3)>3.0$ & $WZ$, $ZZ$, and reducible \\
+		\multirow{2}{*}{High $\Delta R$} & $\Delta R(Z,\,\ell_3)>3.0$ & $WZ$, $ZZ$, and reducible \\
 		 & $\deltam < 200~\mbox{GeV} - m_Z$ & \\
 		\hline
-		Off $Z$ & Reject events with $|m_{ll}-m_Z|<20~\mbox{GeV}$ & $Z+\gamma$ ($Z+e$ events) and $ZZ$ ($Z+\mu$ events) \\
+		Off $Z$ & Reject events with $|m_{ll}-m_Z|<20~\mbox{lGeV}$ & $Z+\gamma$ ($Z+e$ events) and $ZZ$ ($Z+\mu$ events) \\
 		\hline
 		Two $Z$ & Require 2 $Z$ candidates ($|m_{ll}-m_Z|<10~\mbox{GeV}$) & $ZZ$ \\
 		\hline
@@ -777,7 +770,7 @@ The numbers of signal and background candidate events in data are determined fro
 The $\deltam$ distributions for the type~III seesaw and vector-like leptons scenarios contain two distinct pieces: a peak associated with the correct identification of the three leptons due to the heavy lepton decay, and a broader component due to cases where the trilepton candidate does not originate from a heavy lepton decay. Accordingly, the distributions are modeled using the sum of two functions: a Voigtian for the peak and a Landau function for the combinatorial component.  The signal parametrization is given by the following expression: 
 
 \begin{align}\label{eqn:resonance-signal-parametrization}
-\mathcal{S}(m_\Sigma) &= f_V F_V(\deltam; \Gamma_V, m_V,  \sigma_V ) + (1-f_V)F_L(\deltam; \sigma_L, m_L), \\
+\mathcal{S}(m_\lpm) &= f_V F_V(\deltam; \Gamma_V, m_V,  \sigma_V ) + (1-f_V)F_L(\deltam; \sigma_L, m_L), \\
 %F_V(x; \Gamma_V, m_V, \sigma_V) &= \int_{-\infty}^{\infty} G(x'; \sigma_V) L(x-m_V-x'; \Gamma_V),\ \mbox{where } G(x;\sigma_V)=\frac{e^{-x^2/(2\sigma_V^2)}}{\sigma\sqrt{2\pi}}\ \mbox{and } L(x;\Gamma_V)=\frac{\Gamma_V}{\pi(x^2+\Gamma_v^2)}, \\
 %F_L(x; \\sigma_L,m_L) &= ?
 \end{align}
@@ -787,35 +780,35 @@ where $f_V$ denotes the fraction of events in the Voigtian; $\Gamma_V$, $m_V$ an
 \begin{minipage}[c]{\textwidth}
   \centering
  % \includegraphics[width=0.48\textwidth]{figures/Liv/Fit/sig120_Fit.pdf}
- \subfloat[ $m_{3l}$ ] {
+ \subfloat[ $m_{3\ell}$ ] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Fit_sig120_Fit.pdf}}
 	}
 	\subfloat[$\deltam$ ] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Seesaw_inclusive_sig120_Fit.pdf}}
 	}
-  \caption{$m_{3l}$ and $\deltam$ distributions for the 120 GeV signal mass point fitted the sum of a Voigtian and a Landau PDF. The fit is an unbinned maximum likelihood fit; the data is binned only for presentation.}
+  \caption{$m_{3\ell}$ and $\deltam$ distributions for the 120 GeV signal mass point fitted the sum of a Voigtian and a Landau PDF. The fit is an unbinned maximum likelihood fit; the data is binned only for presentation.}
   \label{fig:SigFit}
- \subfloat[$m_{3l}$ ] {
+ \subfloat[$m_{3\ell}$ ] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Fit_sig120_Pull.pdf}}
 	}
 	\subfloat[$\deltam$ ] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Seesaw_inclusive_sig120_Pull.pdf}}
 	}
-  \caption{Pulls of the simulated data with respect to the fit for $m_{3l}$ and $\deltam$ at the 120 GeV signal mass point. }
+  \caption{Pulls of the simulated data with respect to the fit for $m_{3\ell}$ and $\deltam$ at the 120 GeV signal mass point. }
   \label{fig:Pull}
- \subfloat[$m_{3l}$ ] {
+ \subfloat[$m_{3\ell}$ ] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Fit_sig120_Resid.pdf}}
 	}
 	\subfloat[$\deltam$ ] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Seesaw_inclusive_sig120_Resid.pdf}}
 	}
-  \caption{Residuals of the simulated data with respect to the fit for $m_{3l}$ and $\deltam$ at the 120 GeV signal mass point. }
+  \caption{Residuals of the simulated data with respect to the fit for $m_{3\ell}$ and $\deltam$ at the 120 GeV signal mass point. }
   \label{fig:Resid}
 \end{minipage}
 \label{fig:SigFit120}
 \end{figure} 
 
-The $\deltam$ distributions at each simulated mass point for both the type~III seesaw and the vector-like leptons models are fitted with the Voigtian plus Landau function, separately for each flavor channel and category. The fits for the $120 \GeV$ mass hypothesis of the type~III seesaw model are shown both for $\deltam$ and  $m_{3l}$, along with the corresponding pulls and residuals of the simulated data with respect to the fit, in figures~\ref{fig:SigFit}, \ref{fig:Pull}, and \ref{fig:Resid}. The same plots, but enlarged around the signal peak, are shown in figure~\ref{fig:fit-Sig_inclusive_zoom}. 
+The $\deltam$ distributions at each simulated mass point for both the type~III seesaw and the vector-like leptons models are fitted with the Voigtian plus Landau function, separately for each flavor channel and category. The fits for the $120 \GeV$ mass hypothesis of the type~III seesaw model are shown both for $\deltam$ and  $m_{3\ell}$, along with the corresponding pulls and residuals of the simulated data with respect to the fit, in figures~\ref{fig:SigFit}, \ref{fig:Pull}, and \ref{fig:Resid}. The same plots, but enlarged around the signal peak, are shown in figure~\ref{fig:fit-Sig_inclusive_zoom}. 
 
 Tables~\ref{table:ZeFitParamsSS}, \ref{table:ZeFitParamsSS}, \ref{table:ZeFitParamsVLL}, and \ref{table:ZeFitParamsVLL} show the fitted parameters for the inclusive signal regions for each of the two flavor channels and signal models. As mentioned in section~\ref{sec:resonance-signal-mc-samples}, the type~III seesaw samples were simulated without intrinsic $Z$ width, and hence the width parameters vector-like leptons are used instead. Plots showing the fits to the $\deltam$ distributions are shown in appendix~\ref{sec:appendix-resonance-fitplots}.
 
@@ -823,7 +816,7 @@ Signal hypotheses at intermediate mass points between the simulated values are o
 
 \clearpage
 
-\subsection{Background Fits}
+\subsection{Background Fits}\label{sec:resonance-background-model}
 The dominant diboson backgrounds are modeled using a Bukin function, a 5-parameter function designed to model asymmetric peaks:
 
 \begin{equation}

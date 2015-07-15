@@ -92,3 +92,188 @@ As described above in section~\ref{sec:electron-fake-factors}, the electron fake
     \caption{Percent deviation in fake factor between the control and signal regions due to variable heavy flavor fractions.}
     \label{fig:el-ff-syst-hflf}
   \end{figure}
+
+
+
+
+
+\section{Trilepton Resonance Search}\label{sec:appendix-resonance}
+
+\subsection{$\Delta R(Z,\ \ell_3)$ Cut Optimization}\label{sec:appendix-resonance-dr-optimization}
+
+The value of the cut on the separation between the $Z$ candidate and the third lepton, $\Delta R(Z,\ \ell_3)$, is chosen based on a study of the expected sensitivity of the analysis at different values of the cut. The expected sensitivity is determined using a simple cut-and-count framework using narrow mass windows, rather than the fit-based framework. The half-width of the mass windows is taken from a linear fit to the full-width half-maxima of the signal peaks as determined from the signal fits (section~\ref{sec:appendix-resonance-signal-fits}). The expected 95\% CL exclusion on the signal cross section is then determined from the number of signal and background events inside the mass window predicted from Monte Carlo simulation, using the $\mathrm{CL}_s$ method (section~\ref{sec:appendix-cls}) implemented in the \texttt{mclimits} framework~\cite{Junk:2007wq}. 
+
+The expected exclusions for cut values of $\Delta R < 2.0,\ 2.25,\ 2.5,\ 2.75,\ 3.0,\ 3.14,\ 3.5,$ and $4.0$ are shown in figure~\ref{fig:dR-optimization}. The same cut is applied to all signal categories, as no significant gain is observed by optimizing each cut individually. Smaller values of the cut ($\Delta R(Z,\ \ell_3)\lesssim 2.0$) perform similarly to more stringent cuts at low signal mass hypotheses, but perform worse at higher mass hypotheses. Cuts above $\Delta R(Z,\ \ell_3)\lesssim 3.0$ perform approximately equally. For simplicity, a flat cut value $\Delta R(Z,\ \ell_3)<3.0$ is chosen, independent of the mass hypothesis.
+
+
+  \begin{figure}[h]
+    \subfloat[Vector-Like Leptons] {
+      \resizebox{0.45\textwidth}{!}{\includegraphics{figures/resonance/{c_limits_dRVariation_VLL_Combined_BRe1.0_BRmu0.0}.pdf}}
+    }
+    \subfloat[Type III Seesaw] {
+      \resizebox{0.45\textwidth}{!}{\includegraphics{figures/resonance/{c_limits_dRVariation_Seesaw_Combined_BRe1.0_BRmu0.0}.pdf}}
+    }
+    \caption{Expected upper limits on the heavy lepton production cross section times branching ratio to final states with least one $Z(\ell\ell)+\ell$ decay for different cuts on the maximum value of $\Delta R(Z,\ \ell_3)$.}
+    \label{fig:dR-optimization}
+  \end{figure}
+
+
+\subsection{Signal Fit Details}\label{sec:appendix-resonance-signal-fits}
+
+
+\subsection{Additional Kinematic Distributions}\label{sec:appendix-resonance-SR-distributions}
+This section shows the $m_{3\ell}$, $\Delta R(Z,\ \ell_3)$, $\mtw$, and $\Etmiss$ distributions in each of the signal regions (the primary distributions are shown in section~\ref{sec:resonance-results}).
+
+\begin{figure}[h]
+  \centering
+  \subfloat[ $Z+e$, inclusive] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_m3l_Ze_InclusiveNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, inclusive] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_m3l_Zmu_InclusiveNoM3L_300GeV}}
+  } \\
+  \subfloat[ $Z+e$, $\fourl$ category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_m3l_Ze_FourLNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, $\fourl$ category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_m3l_Zmu_FourLNoM3L_300GeV}}
+  } \\
+  \caption{$m_{3\ell}$ distributions for $Z+e$ and $Z+\mu$ candidates, for the inclusive and $\fourl$ signal regions (linear scale).}
+  \label{fig:SR-m3l-1-linear}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \subfloat[ $Z+e$, dijet category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_m3l_Ze_ThreeLDijetNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, dijet category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_m3l_Zmu_ThreeLDijetNoM3L_300GeV}}
+  } \\
+  \subfloat[ $Z+e$, else category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_m3l_Ze_ElseNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, else category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_m3l_Zmu_ElseNoM3L_300GeV}}
+  }
+  \caption{$m_{3\ell}$ distributions for $Z+e$ and $Z+\mu$ candidates, for the $\threeljj$ and $\threelo$ signal regions (linear scale).}
+  \label{fig:SR-m3l-2-linear}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering
+  \subfloat[ $Z+e$, inclusive] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Ze_InclusiveNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, inclusive] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Zmu_InclusiveNoM3L_300GeV}}
+  } \\
+  \subfloat[ $Z+e$, $4L$ category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Ze_FourLNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, $4L$ category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Zmu_FourLNoM3L_300GeV}}
+  } \\
+  \caption{$\Delta R(Z,\ell_3)$ distributions for $Z+e$ and $Z+\mu$ candidates, for the inclusive and $\fourl$ signal regions (linear scale).}
+  \label{fig:SR-dR-1-linear}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \subfloat[ $Z+e$, dijet category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Ze_ThreeLDijetNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, dijet category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Zmu_ThreeLDijetNoM3L_300GeV}}
+  } \\
+  \subfloat[ $Z+e$, else category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Ze_ElseNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, else category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_dR_Zmu_ElseNoM3L_300GeV}}
+  }
+  \caption{$\Delta R(Z,\ell_3)$ distributions for $Z+e$ and $Z+\mu$ candidates, for the $\threeljj$ and $\threelo$ signal regions (linear scale).}
+  \label{fig:SR-dR-2-linear}
+\end{figure}
+
+
+\begin{figure}[htb]
+  \centering
+  \subfloat[ $Z+e$, inclusive] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_mTW_Ze_InclusiveNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, inclusive] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_mTW_Zmu_InclusiveNoM3L_300GeV}}
+  } \\
+  \subfloat[ $Z+e$, $4L$ category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_mTW_Ze_FourLNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, $4L$ category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_mTW_Zmu_FourLNoM3L_300GeV}}
+  } \\
+  \caption{Transverse mass of the missing energy and bachelor lepton ($\mtw$) for $Z+e$ and $Z+\mu$ candidates, for the inclusive and $\fourl$ signal regions.}
+  \label{fig:SR-mTW-1}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[htb]
+  \centering
+  \subfloat[ $Z+e$, dijet category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_mTW_Ze_ThreeLDijetNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, dijet category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_mTW_Zmu_ThreeLDijetNoM3L_300GeV}}
+  } \\
+  \subfloat[ $Z+e$, else category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_mTW_Ze_ElseNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, else category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_mTW_Zmu_ElseNoM3L_300GeV}}
+  }
+  \caption{Transverse mass of the missing energy and bachelor lepton ($\mtw$) for $Z+e$ and $Z+\mu$ candidates, for the $\threeljj$ and $\threelo$ signal regions.}
+  \label{fig:SR-mTW-2}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[htb]
+  \centering
+  \subfloat[ $Z+e$, inclusive] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_ETMiss_Ze_InclusiveNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, inclusive] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_ETMiss_Zmu_InclusiveNoM3L_300GeV}}
+  } \\
+  \subfloat[ $Z+e$, $4L$ category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_ETMiss_Ze_FourLNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, $4L$ category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_ETMiss_Zmu_FourLNoM3L_300GeV}}
+  } \\
+  \caption{Missing energy ($\Etmiss$) for $Z+e$ and $Z+\mu$ candidates, for the inclusive and $\fourl$ signal regions.}
+  \label{fig:SR-ETMiss-1}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[htb]
+  \centering
+  \subfloat[ $Z+e$, dijet category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_ETMiss_Ze_ThreeLDijetNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, dijet category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_ETMiss_Zmu_ThreeLDijetNoM3L_300GeV}}
+  } \\
+  \subfloat[ $Z+e$, else category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_ETMiss_Ze_ElseNoM3L_300GeV}}
+  }
+  \subfloat[ $Z+\mu$, else category] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_output_ETMiss_Zmu_ElseNoM3L_300GeV}}
+  }
+  \caption{Missing energy ($\Etmiss$) for $Z+e$ and $Z+\mu$ candidates, for the $\threeljj$ and $\threelo$ signal regions.}
+  \label{fig:SR-ETMiss-2}
+\end{figure}
+
+\clearpage
