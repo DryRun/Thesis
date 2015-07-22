@@ -119,72 +119,130 @@ Constraints on the mixing parameters $V_{L\ell}$ can be derived from precision m
 
 \subsection{Signal Monte Carlo Samples}\label{sec:resonance-signal-mc-samples}
 
-Signal events are generated using Monte Carlo simulation, with eleven mass hypotheses in the range $100 \GeV \leq m_{\lpm} \leq 400 \GeV$ for the vector-like leptons model and ten mass hypothesis in the range $100 \GeV \leq m_{\lpm,\lzero}\leq 500 \GeV$ for the type~III seesaw model. The samples are summarized in table~\ref{table:resonance-signal-samples}. The events are generated with \madgraph~4.5.2 and 5.2.2.1~\cite{madgraph}, for the vector-like leptons and type~III seesaw models, respectively, using the CTEQ6L1~\cite{ct6l1} PDF set and the AU2 underlying event tune~\cite{AU2}. Showering is performed with \pythia\ 8~\cite{Sjostrand:2008bk}. Decays of the heavy leptons in the vector-like leptons model are performed using \bridge~\cite{bridge}, while decays in the type~III seesaw samples are performed by \madgraph. The cross sections for both samples are calculated at leading order (LO) in QCD, and are shown in table~\ref{table:resonance-signal-samples}. 
+Signal events are generated using Monte Carlo simulation, with eleven mass hypotheses in the range $100 \GeV \leq m_{\lpm} \leq 400 \GeV$ for the vector-like leptons model and ten mass hypothesis in the range $100 \GeV \leq m_{\lpm,\lzero}\leq 500 \GeV$ for the type~III seesaw model. The samples are summarized in table~\ref{table:resonance-signal-samples}. The events are generated with \madgraph~4.5.2 and 5.2.2.1~\cite{madgraph}, for the vector-like leptons and type~III seesaw models, respectively, using the CTEQ6L1~\cite{ct6l1} PDF set and the AU2 underlying event tune~\cite{AU2}. Showering is performed with \pythia~8~\cite{Sjostrand:2008bk}. Decays of the heavy leptons in the vector-like leptons model are performed using \bridge~\cite{bridge}, while decays in the type~III seesaw samples are performed by \madgraph. The cross sections for both samples are calculated at leading order (LO) in QCD, and are shown in table~\ref{table:resonance-signal-samples}. 
 
-For the type~III seesaw model, the charged and neutral heavy leptons are generated with identical masses. The simulated decay modes are listed in table~\ref{table:resonance-seesaw-sample-decays}. The mixing parameters are chosen to be $V_{L e}=0.055$, $V_{L\mu}=0.063$, and $V_{L\tau}=0$, yielding a mix of $ee$, $e\mu$, and $\mu\mu$ decays. For the vector-like leptons model, one heavy lepton is required to decay via $L^{\pm}\rightarrow Z(\ell\ell)\ell$, where $\ell=e,\mu,\tau$. The two heavy leptons are constrained to decay to the same flavor of Standard Model lepton, which is chosen with equal probability to be an electron, muon, or tau. For both models, the events are divided and reweighted to correspond to electron-only or muon-only mixing scenarios. 
+For the type~III seesaw model, the charged and neutral heavy leptons are generated with identical masses. The simulated decay modes are listed in table~\ref{table:resonance-seesaw-sample-decays}. The mixing parameters are chosen to be $V_{L e}=0.055$, $V_{L\mu}=0.063$, and $V_{L\tau}=0$, yielding a mix of $ee$, $e\mu$, and $\mu\mu$ decays. For the vector-like leptons model, one heavy lepton is required to decay via $\lpm\rightarrow Z(\ell\ell)\ell$, where $\ell=e,\mu,\tau$. The two heavy leptons are constrained to decay to the same flavor of Standard Model lepton, which is chosen with equal probability to be an electron, muon, or tau. For both models, the events are reweighted to correspond to electron-only or muon-only mixing scenarios. 
 
 The type~III seesaw samples were simulated with no intrinsic width for the $Z$ bosons. As a result, the signal peaks are slightly narrower than would be expected if the $Z$ width were correctly included. As described below in section~\ref{sec:resonance-signal-model}, the limit setting is performed by fitting the trilepton mass distributions with analytical functions. In order to incorporate the missing $Z$ width into the signal peaks, the peak width parameters determined from the vector-like lepton samples are used for the type~III seesaw model. 
 
-
 \begin{table}[htbp]
 	\centering
-	\resizebox{\textwidth}{!}{
-		\begin{tabular}{|l||c|c|c|r|}
-			\hline
-			Mass [GeV]  & Cross Section [pb] & Filter Efficiency & Number of Events \\
-			\hline
-			\multicolumn{5}{|c|}{Type III Seesaw} \\
-			\hline
-			100	&	1.273		&	0.1018	&	100,000 \\
-			\hline
-			120	&	2.138		&	0.1628	&	100,000 \\
-			\hline
-			160	&	0.853		&	0.1808	&	100,000 \\
-			\hline
-			200	&	0.346		&	0.2012	&	100,000 \\
-			\hline
-			250	&	0.135		&	0.2096	&	100,000 \\
-			\hline
-			300	&	0.0604		&	0.2178	&	50,000 	\\
-			\hline
-			350	&	0.02969		&	0.2337	&	50,000 	\\
-			\hline
-			400	&	0.01566		&	0.2409	&	50,000 	\\
-			\hline
-			450	&	0.008733	&	0.2456	&	50,000 	\\
-			\hline
-			500	&	0.00504		&	0.2493	&	50,000 	\\
-			\hline
-			\hline
-			\multicolumn{5}{|c|}{Vector-Like Leptons} \\
-			\hline
-			100	&	0.378 	&	0.0233	& 100,000 \\
-			\hline
-			110	&	0.264 	&	0.0412	& 100,000 \\
-			\hline
-			120	&	0.193 	&	0.0498	& 100,000 \\
-			\hline
-			130	&	0.142 	&	0.0548	& 100,000 \\
-			\hline
-			140	&	0.106 	&	0.0569	& 100,000 \\
-			\hline
-			160	&	0.0645 	&	0.0579	& 100,000 \\
-			\hline
-			180	&	0.0407 	&	0.0575	& 100,000 \\
-			\hline
-			200	&	0.0265 	&	0.0567	& 100,000 \\
-			\hline
-			250	&	0.0104 	&	0.0548	& 100,000 \\
-			\hline
-			300	&	0.00457	&	0.0536	& 100,000 \\
-			\hline
-			400	&	0.00115	&	0.0520	& 100,000 \\
-			\hline
-		\end{tabular}
-	}
-	\caption{Summary of signal Monte Carlo samples. Ten mass points are simulated for the type~III seesaw model, and eleven for the vector-like leptons model.}
+	\scriptsize
+	\begin{tabular}{|c||c|c|}
+		\hline
+		Mass [GeV] & Cross Section [pb] & Equivalent $L$ [fb$^{-1}$] \\
+		\hline
+		\multicolumn{3}{|c|}{Type III Seesaw} \\
+		\hline
+		100	&	1.273	 &	$7.7\times10^2$ \\%771.6561	\\
+		\hline
+		120	&	2.138	 &	$2.9\times10^2$ \\%287.3015	\\
+		\hline
+		160	&	0.853	 &	$6.5\times10^2$ \\%648.4142	\\
+		\hline
+		200	&	0.346	 &	$1.4\times10^3$ \\%1436.4679	\\
+		\hline
+		250	&	0.135	 &	$3.5\times10^3$ \\%3534.0684	\\
+		\hline
+		300	&	0.0604	 &	$3.8\times10^3$ \\%3800.8015	\\
+		\hline
+		350	&	0.02969	 &	$7.2\times 10^3$ \\%7206.1134	\\
+		\hline
+		400	&	0.01566	 &	$1.3\times10^4$ \\%13253.8316	\\
+		\hline
+		450	&	0.008733 &	$2.3\times10^4$ \\%23311.9274	\\
+		\hline
+		450	&	0.00504	 &	$4.0\times10^4$ \\%39793.9628	\\
+		\hline
+		\multicolumn{3}{|c|}{Vector-Like Leptons} \\
+		\hline
+		100	& 0.378 	 	&	$1.1\times10^4$ \\%11354.0886 \\
+		\hline
+		110	& 0.264 	 	&	$9.2\times10^3$ \\%9193.8806 \\
+		\hline
+		120	& 0.193 	 	&	$1.0\times10^4$ \\%10404.3115 \\
+		\hline
+		130	& 0.142 	 	&	$1.3\times10^4$ \\%12850.8276 \\
+		\hline
+		140	& 0.106 	 	&	$1.7\times10^4$ \\%16579.8985 \\
+		\hline
+		160	& 0.0645  	&	$2.7\times10^4$ \\%26776.9879 \\
+		\hline
+		180	& 0.0407  	&	$4.3\times10^4$ \\%42730.4775 \\
+		\hline
+		200	& 0.0265  	&	$6.7\times10^4$ \\%66553.5257 \\
+		\hline
+		250	& 0.0104  	&	$1.8\times10^5$ \\%175463.2229 \\
+		\hline
+		300	& 0.00457 	&	$4.1\times10^5$ \\%408243.2477 \\
+		\hline
+		400	& 0.00115 	&	$1.7\times10^6$ \\%1672240.8027 \\
+		\hline
+	\end{tabular}
+	\caption{Masses $m_{\lpm}$, production cross sections, and equivalent luminosities of the signal Monte Carlo samples.}
 	\label{table:resonance-signal-samples}
 \end{table}
+
+
+%\begin{table}[htbp]
+%	\centering
+%	\resizebox{0.9\textwidth}{!}{
+%		\begin{tabular}{|c||c|c|c|}
+%			\hline
+%			Mass [GeV]  & Cross Section [pb] & Filter Efficiency & Number of Events \\
+%			\hline
+%			\multicolumn{4}{|c|}{Type III Seesaw} \\
+%			\hline
+%			100	&	1.273		&	0.1018	&	100,000 \\
+%			\hline
+%			120	&	2.138		&	0.1628	&	100,000 \\
+%			\hline
+%			160	&	0.853		&	0.1808	&	100,000 \\
+%			\hline
+%			200	&	0.346		&	0.2012	&	100,000 \\
+%			\hline
+%			250	&	0.135		&	0.2096	&	100,000 \\
+%			\hline
+%			300	&	0.0604		&	0.2178	&	50,000 	\\
+%			\hline
+%			350	&	0.02969		&	0.2337	&	50,000 	\\
+%			\hline
+%			400	&	0.01566		&	0.2409	&	50,000 	\\
+%			\hline
+%			450	&	0.008733	&	0.2456	&	50,000 	\\
+%			\hline
+%			500	&	0.00504		&	0.2493	&	50,000 	\\
+%			\hline
+%			\hline
+%			\multicolumn{4}{|c|}{Vector-Like Leptons} \\
+%			\hline
+%			100	&	0.378 	&	0.0233	& 100,000 \\
+%			\hline
+%			110	&	0.264 	&	0.0412	& 100,000 \\
+%			\hline
+%			120	&	0.193 	&	0.0498	& 100,000 \\
+%			\hline
+%			130	&	0.142 	&	0.0548	& 100,000 \\
+%			\hline
+%			140	&	0.106 	&	0.0569	& 100,000 \\
+%			\hline
+%			160	&	0.0645 	&	0.0579	& 100,000 \\
+%			\hline
+%			180	&	0.0407 	&	0.0575	& 100,000 \\
+%			\hline
+%			200	&	0.0265 	&	0.0567	& 100,000 \\
+%			\hline
+%			250	&	0.0104 	&	0.0548	& 100,000 \\
+%			\hline
+%			300	&	0.00457	&	0.0536	& 100,000 \\
+%			\hline
+%			400	&	0.00115	&	0.0520	& 100,000 \\
+%			\hline
+%		\end{tabular}
+%	}
+%	\caption{Summary of signal Monte Carlo samples. Ten mass points are simulated for the type~III seesaw model, and eleven for the vector-like leptons model.}
+%	\label{table:resonance-signal-samples}
+%\end{table}
 
 \begin{table}
 	\centering
@@ -235,13 +293,13 @@ The event selection is very similar to that used in the model-independent analys
 		\label{fig:resonance-inclusive-dR}
 	\end{figure}
   
-	\item The variable of interested used to apply the trilepton mass constraint is $\Delta m \equiv m_{3\ell}-m_{\ell^+\ell^-}$, where the invariant mass of the two leptons associated with a $Z$ boson decay is subtracted by the trilepton mass. This method reduces the impact of the lepton energy or momentum resolutions on the width of the resonance peak, at the cost of introducing some width due to the intrinsic width of the $Z$, $\Gamma_Z=2.4952\pm0.0023 \GeV$~\cite{pdg}. Over most of the mass range, this variable reduces the width of the signal peaks, as shown in figure~\ref{fig:deltam-m3l-comparison}. 
+	\item The variable of interested used to apply the trilepton mass constraint is $\Delta m \equiv m_{3\ell}-m_{\ell^+\ell^-}$, where the invariant mass of the two leptons associated with a $Z$ boson decay is subtracted by the trilepton mass. This method reduces the impact of the lepton energy or momentum resolutions on the width of the resonance peak, at the cost of introducing some width due to the intrinsic width of the $Z$, $\Gamma_Z=2.4952\pm0.0023 \GeV$~\cite{pdg}. Over most of the mass range, this variable reduces the width of the signal peaks, as shown in table~\ref{table:deltam-m3l-comparison}. 
 
-	\begin{figure}[htbp]
-		\textcolor{red}{m3l deltam comparison plot or table}
+	\begin{table}[htbp]
+
 		\caption{Comparison of the full-width, half-maximum of the signal peaks between the $\deltam$ and $m_{3\ell}$ variables.}
-		\label{fig:deltam-m3l-comparison}
-	\end{figure}
+		\label{table:deltam-m3l-comparison}
+	\end{table}
 	  
 \end{itemize}
 
@@ -407,9 +465,11 @@ Note that cut imposing a flavor requirement on the reconstructed off-$Z$ lepton 
 The signal predictions and background estimates are assigned systematic uncertainties from several sources. In approximate order of significance, these are:
 
 \begin{itemize}
-	\item \textbf{Diboson shape uncertainty}: A systematic uncertainty is assigned to the modeling of $\deltam$ spectra of the diboson backgrounds by comparing \sherpa\ to \powheg. \sherpa\ is used as a central value, with uncertainty given by the symmetric difference between \sherpa\ and \powheg. As described below in section~\ref{sec:resonance-background-model}, the shapes for the $\fourl$ and $\threelo$ signal regions are taken from the inclusive signal region, so the corresponding uncertainties are derived only from the inclusive and $\threeljj$ signal regions. The comparison for the $WZ$ background is shown in figure~\ref{fig:systematic-WZ-shape}. The implementation of this uncertainty in the fit-based limit section is discussed in more detail in section~\ref{sec:fit-limits-systematic-uncertainties}; briefly, the uncertainty is included as a gaussian-distributed nuisance parameter interpolating between the two fits estimated from the two generators.
+	\item \textbf{Diboson shape uncertainty}: A systematic uncertainty is assigned to the modeling of the diboson $\deltam$ spectra by comparing \sherpa\ to \powheg. \sherpa\ is used as a central value, with uncertainty given by the symmetric difference between \sherpa\ and \powheg. As shown below in section~\ref{sec:resonance-background-model}, the shapes of the $\fourl$ and $\threelo$ signal regions are consistent with the inclusive signal region, so the shape uncertainty taken from the inclusive signal region. The comparison for the $WZ$ background is shown in figure~\ref{fig:systematic-WZ-shape}.
 
-	In the case of the $ZZ$ background, this procedure is complicated by the fact that the \powheg\ sample is filtered to remove events with same-flavor, opposite-sign lepton pairs with $m_{l^+l^-}<4~\mbox{GeV}$ (\texttt{mll4}). In order to compare the samples in a common phase space, the \texttt{mll4} filter is emulated on the \sherpa\ sample by rejecting events that contain a same-flavor, opposite-sign pair of truth leptons with $m_{l^+l^-}<4~\mbox{GeV}$. \sherpa, \sherpa\ with \texttt{mll4} filter, and \powheg\ are compared in figure~\ref{fig:ZZ-mll4}. The events from the \powheg\ sample are weighted using the ratio of \sherpa\ to \sherpa+\texttt{mll4}. The final comparison of background shapes is shown in figure~\ref{fig:systematic-ZZ-shape}.
+	%As described below in section~\ref{sec:resonance-background-model}, the shapes for the $\fourl$ and $\threelo$ signal regions are taken from the inclusive signal region, so the corresponding uncertainties are derived only from the inclusive and $\threeljj$ signal regions. The comparison for the $WZ$ background is shown in figure~\ref{fig:systematic-WZ-shape}. The implementation of this uncertainty in the fit-based limit section is discussed in more detail in section~\ref{sec:fit-limits-systematic-uncertainties}; briefly, the uncertainty is included as a gaussian-distributed nuisance parameter interpolating between the two fits estimated from the two generators.
+
+	In the case of the $ZZ$ background, the procedure is complicated by the fact that the \powheg\ sample is filtered to remove events with same-flavor, opposite-sign lepton pairs with $m_{l^+l^-}<4~\mbox{GeV}$ (\texttt{mll4}). In order to compare the samples in a common phase space, the \texttt{mll4} filter is emulated on the \sherpa\ sample by rejecting events that contain a same-flavor, opposite-sign pair of truth leptons with $m_{l^+l^-}<4~\mbox{GeV}$. \sherpa, \sherpa\ with \texttt{mll4} filter, and \powheg\ are compared in figure~\ref{fig:ZZ-mll4}. The events from the \powheg\ sample are weighted using the ratio of \sherpa\ to \sherpa with \texttt{mll4} filter. The final comparison of background shapes is shown in figure~\ref{fig:systematic-ZZ-shape}.
 
 	\begin{figure}[h]
 		\centering
@@ -467,50 +527,26 @@ The signal predictions and background estimates are assigned systematic uncertai
 	\end{figure}
 	
 
-	\item \textbf{Monte Carlo statistics and Fit Parameter Uncertainties}: as described below in section~\ref{sec:resonance-fit-method}, the limit setting is performed using fits with analytical functions to the Monte Carlo background predictions. The uncertainty due to the finite statistics of the background samples is in represented in the uncertainties on the fit parameters. This uncertainty is discussed in more detail in section~\ref{sec:fit-limits-systematic-uncertainties}.
+	\item \textbf{Monte Carlo statistics}: The Monte Carlo samples carry statistical uncertainty due to containing a finite number of events.
+	%as described below in section~\ref{sec:resonance-fit-method}, the limit setting is performed using fits with analytical functions to the Monte Carlo background predictions. The uncertainty due to the finite statistics of the background samples is in represented in the uncertainties on the fit parameters. This uncertainty is discussed in more detail in section~\ref{sec:fit-limits-systematic-uncertainties}.
 
 
-	\item \textbf{Monte Carlo sample normalizations}: The Monte Carlo samples used for the irreducible background prediction are normalized to the measured luminosity of the data using theoretical cross sections. The uncertainty on the luminosity is $2.8\%$~\cite{luminosity}. The uncertainties on the cross sections for $WZ$, $ZZ$, and $t\overline{t}+V$ are listed in table~\ref{table:mc-cross-section-uncertainties}. \textcolor{red}{The $WZ$ and $ZZ$ uncertainties are taken from a comparison of \sherpa\ with the NLO generator \vbfnlo.} A cross section uncertainty is not assigned to the $Z+\gamma$ backgrounds; instead, as described next, a large uncertainty is assigned due to applying scale factors to correct the simulated rate of photon conversions. Similarly, an uncertainty is not assigned for the $VVV^{(*)}$ cross section, due to its small contribution to the signal regions. 
+	\item \textbf{Monte Carlo sample normalizations}: As discussed in section~\ref{sec:model-independent-systematics}, the signal and background Monte Carlo samples are normalized to the measured luminosity of the data using theoretical cross sections. The uncertainty on the measured luminosity is 2.8\%, while the uncertainties on the $WZ$, $ZZ$, and $t\overline{t}+V$ backgrounds are $7.6\%$, $4.3\%$, and $22\%$, respectively. A cross section uncertainty is not assigned to the $Z+\gamma$ backgrounds; instead, as described next, a large uncertainty is assigned due to applying scale factors to correct the simulated rate of photon conversions. Similarly, an uncertainty is not assigned for the $VVV^{(*)}$ cross section, due to its small contribution to the signal regions. 
 
-	%In the fit-based limit setting procedure, the uncertainty is implemented as a constraint on the normalization of the corresponding sample: the normalizations of the dominant diboson samples are allowed to float within the quadrature sum of all the normalization uncertainties. The normalizations of the small $t\overline{t}+V$ and $VVV^{(*)}$ backgrounds are fixed due to their comparatively small magnitude, which the fit is unable to resolve. 
-
-	\begin{table}[h]
-		\centering
-		\begin{tabular}{ccc}
-			Process & Cross Section Uncertainty & Reference \\
-			\hline
-			$WZ$ & $7.6\%$ & \cite{DeViveiros:1670929}\\
-			$ZZ$ & $4.3\%$ & \cite{DeViveiros:1670929} \\
-			$t\overline{t}+V$ & $22\%$ & \cite{ttV} \\
-		\end{tabular}	
-		\caption{Cross sections and uncertainties for the Monte Carlo samples used for irreducible background estimation.}
-		\label{table:mc-cross-section-uncertainties}
-	\end{table}
-
-	\item \textbf{Charge flip scale factors}: The rate of trilepton events due to $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is observed to be overestimated in Monte Carlo. Scale factors are applied following the charge flip likelihood estimation method from the same-sign dilepton analysis~\cite{DeViveiros:1670929}, and an uncertainty of $30\%$ is assigned to this background sample.
+	\item \textbf{Charge flip scale factors}: The rate of trilepton events due to $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is observed to be overestimated in Monte Carlo. As detailed in section~\ref{sec:conversion-reweighting}, the events are reweighted to correct this overestimation, with a corresponding uncertainty of $30\%$.
 
 	\item \textbf{Fake factor method}: The systematic uncertainty on the fake factors is described in sections~\ref{sec:electron-fake-factors} and \ref{sec:muon-fake-factors}. They range from $20\%$-$30\%$ for electrons and $25\%$-$50\%$ for muons. 
 
-	\item \textbf{Luminosity}: The uncertainty on the integrated luminosity in 2012 is $2.8\%$. 
+	\item \textbf{Lepton scale factors}: Scale factors are applied to equalize the lepton trigger, reconstruction, and identification efficiencies between data and simulation (sections~\ref{sec:reco-electron-efficiency} and \ref{sec:reco-muon-efficiency}). The scale factors are typically close to unity, and the corresponding uncertainties range from $1\%$-$5\%$.
 
-	\item \textbf{Lepton scale factors}: Scale factors are applied to equalize the lepton trigger, reconstruction, and identification efficiencies between data and simulation. The corrections are implemented with official performance group tools: 
+	\item \textbf{Lepton energy and momentum corrections}: To improve agreement between data and simulation, the electron energy is scaled in data, and the electrom energy and muon momenta are smeared in Monte Carlo (see sections~\ref{sec:reco-electron-energymomentum} and \ref{sec:reco-muon-energymomentum}). The corrections carry small systematic uncertainties that primarily affect the analysis due to leptons migrating between passing and failing the selection, or lepton pairs moving in or out of the $Z$ mass window.
 
-	\texttt{MuonEfficiencyCorrections}~\cite{MuonEfficiencyScaleFactors} and 
-
-	\texttt{TElectronEfficiencyCorrectionTool}~\cite{ElectronEfficiencyScaleFactors}. 
-
-	Systematic uncertainties on the scale factors are applied according to the official recommendations. 
-
-	\item \textbf{Electron energy corrections}: To improve agreement in electron energy between data and simulation, the energy is scaled in data and smeared in Monte Carlo according to the recommendations at~\cite{ElectronEnergyCorrectionsGEO20,ElectronEnergyCorrectionsGEO21}. The corrections and corresponding systematic uncertainties are provided by the \texttt{ElectronPhotonFourMomentumCorrection} package. 
-
-	\item \textbf{Muon mommentum corrections}: The muon momenta are smeared in simulation according to the recommendations at~\cite{MuonMomentumCorrections}. The corrections are derived by ``comparing the reconstructed muon momentum in experimental and simulated data,'' using $J/\psi$ and $Z$ decays. 
-
-	\item \textbf{Jet energy scale and resolution}: Systematic uncertainties on the jet energy scale and resolution are applied following the recommendations from the Jet/ETMiss group~\cite{JetEtmissRecommendations2012}, and are taken from the package \texttt{JetUncertainties~00-08-07}. The jet energy uncertainties have a small impact on this analysis, only affecting the normalization in the 3L+dijet signal region when the dijet mass is pushed in or out of the window $m_{W}-20~\mbox{GeV}<m_{jj}<m_{h}+25~\mbox{GeV}$. 
+	\item \textbf{Jet energy scale and resolution}: Like the leptons, systematic uncertainties are assigned to the jet energy scale and resolution (see section~\ref{sec:reco-jets-energy-scale-resolution}). The jet energy uncertainties have a small impact on this analysis, only affecting the normalization of the $\threeljj$ signal regions when the dijet mass is pushed in or out of the window $m_{W}-20~\mbox{GeV}<m_{jj}<m_{H}+25~\mbox{GeV}$. 
 \end{itemize}
 
-Figures~\ref{fig:systematics-summary-Ze} and \ref{fig:systematics-summary-Zmu} show the fractional uncertainty due to each source of uncertainty in $20~\mbox{GeV}$ bins for each signal region, as well as the total systematic uncertainty and expected statistical uncertainty. Note that the uncertainties shown are bin-by-bin uncertainties on the Monte Carlo predictions, and do not necessarily correspond to the final uncertainty after fitting the background shapes; for example, after fitting, the Monte Carlo statistical uncertainties are contained in the uncertainties on the fit parameters. Further, the Monte Carlo statistical uncertainties are overrepresented, as they are also contained in the $WZ$/$ZZ$ shape uncertainties derived from the comparison of two statistically independent samples. Finally, due to the fact that the shapes for the 4L and 3L+dijet signal regions are taken from the inclusive signal region, the shape uncertainties derived in these categories are not used in the analysis.
+Figures~\ref{fig:systematics-summary-Ze} and \ref{fig:systematics-summary-Zmu} show the fractional uncertainty due to each source of uncertainty in $20~\mbox{GeV}$ bins for each signal region, as well as the total systematic uncertainty and expected statistical uncertainty. Note that the uncertainties shown are bin-by-bin uncertainties from the Monte Carlo and fake factor predictions, and do not directly reflect the final uncertainties incorporated in the fit-based limit setting; this is discussed in section~\ref{sec:resonance-fit-uncertainties}.  %Further, the Monte Carlo statistical uncertainties are overrepresented, as they are also contained in the $WZ$/$ZZ$ shape uncertainties derived from the comparison of two statistically independent samples. Finally, due to the fact that the shapes for the 4L and 3L+dijet signal regions are taken from the inclusive signal region, the shape uncertainties derived in these categories are not used in the analysis.
 
-The impact of each uncertainty in each signal region, in terms of fractional uncertainty on the total normalization, is shown for background in figure~\ref{table:systematics-summary}, and some example signal points in figures~\ref{table:systematics-impact-summary-seesaw-160}--\ref{table:systematics-impact-summary-seesaw-500}. The complete set of tables of signal systematics is in appendix~\ref{appx:signal-uncertainties}.
+The impact of each uncertainty in each signal region, in terms of fractional uncertainty on the total normalization, is shown for background in figure~\ref{table:systematics-summary}, and some example signal points in figures~\ref{table:systematics-impact-summary-seesaw-160}--\ref{table:systematics-impact-summary-seesaw-500}. %The complete set of tables of signal systematics is in appendix~\ref{appx:signal-uncertainties}.
 
 
 \begin{figure}[p]
@@ -518,13 +554,13 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
 	\subfloat[ Inclusive SR, $Z+e$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_systematics_DeltaM_Ze_InclusiveNoM3L_300GeV}}
 	}
-	\subfloat[ 4L SR, $Z+e$] {
+	\subfloat[ $\fourl$ SR, $Z+e$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_systematics_DeltaM_Ze_FourLNoM3L_300GeV}}
 	} \\
-	\subfloat[ 3L+dijet SR, $Z+e$] {
+	\subfloat[ $\threeljj$ SR, $Z+e$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_systematics_DeltaM_Ze_ThreeLDijetNoM3L_300GeV}}
 	}
-	\subfloat[ Rest SR, $Z+e$] {
+	\subfloat[ $\threelo$ SR, $Z+e$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_systematics_DeltaM_Ze_ElseNoM3L_300GeV}}
 	}
 	\caption{Systematics summary plots for each signal region in the $Z+e$ flavor channel. The contribution from each source of systematic uncertainty is shown in $20~\mbox{GeV}$ bins, along with the total systematic uncertainty and the expected statistical uncertainty. Note that these uncertainties reflect bin-by-bin uncertainties on the Monte Carlo predictions, and do not necessarily correspond to the final uncertainty after fitting the background shapes.}
@@ -533,16 +569,16 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
 
 \begin{figure}[p]
 	\centering
-	\subfloat[ Inclusive SR, $Z+e$] {
+	\subfloat[ Inclusive SR, $Z+\mu$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_systematics_DeltaM_Zmu_InclusiveNoM3L_300GeV}}
 	}
-	\subfloat[ 4L SR, $Z+e$] {
+	\subfloat[ $\fourl$ SR, $Z+\mu$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_systematics_DeltaM_Zmu_FourLNoM3L_300GeV}}
 	} \\
-	\subfloat[ 3L+dijet SR, $Z+e$] {
+	\subfloat[ $\threeljj$ SR, $Z+\mu$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_systematics_DeltaM_Zmu_ThreeLDijetNoM3L_300GeV}}
 	}
-	\subfloat[ Rest SR, $Z+e$] {
+	\subfloat[ $\threelo$ SR, $Z+\mu$] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_systematics_DeltaM_Zmu_ElseNoM3L_300GeV}}
 	}
 	\caption{Systematics summary plots for each signal region in the $Z+\mu$ flavor channel. The contribution from each source of systematic uncertainty is shown in $20~\mbox{GeV}$ bins, along with the total systematic uncertainty and the expected statistical uncertainty. Note that these uncertainties reflect bin-by-bin uncertainties on the Monte Carlo predictions, and do not necessarily correspond to the final uncertainty after fitting the background shapes.}
@@ -553,11 +589,12 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
 \begin{table}[htbp]
   \renewcommand{\arraystretch}{1.5}
   \centering
+  \resizebox{0.95\textwidth}{!}{
   \begin{tabular}{|c|c|c|c|c||c|c|c|c|}
     \hline
      & \multicolumn{4}{c||}{$Z+e$} & \multicolumn{4}{c|}{$Z+\mu$} \\
     \hline
-     &  Total & $4l$ SR & $3l+jj$ SR  & $3l$-only SR  & Total & $4l$ SR & $3l+jj$ SR  & $3l$-only SR  \\
+     &  Total & $\fourl$ SR & $\threeljj$ SR  & $\threelo$ SR  & Total & $\fourl$ SR & $\threeljj$ SR  & $\threelo$ SR  \\
     \hline
     $\sigma_{ZZ}$ & $0.9$  & $3.9$  & $0.9$  & $0.8$  & $0.7$  & $3.8$  & $0.4$  & $0.6$ \\
     $\sigma_{WZ}$ & $4.9$  & $0.1$  & $4.6$  & $5.1$  & $5.3$  & $-$  & $4.9$  & $5.6$  \\
@@ -577,17 +614,19 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
     % Total & $_{-7.21}^{+7.55}$  & $_{-5.29}^{+5.38}$  & $_{-7.79}^{+8.59}$  & $_{-7.47}^{+7.87}$  & $_{-6.06}^{+6.06}$  & $_{-4.83}^{+4.83}$  & $_{-6.65}^{+7.15}$  & $_{-6.26}^{+6.27}$  \\
     \hline
   \end{tabular}
+  }
   \caption{The impact of significant sources of uncertainty on the background prediction in each signal region, in terms of percent of the total background normalization.}
   \label{table:systematics-summary}
 \end{table}
 
 \begin{table}[htbp]
   \centering
+  \resizebox{0.95\textwidth}{!}{
   \begin{tabular}{|c|c|c|c|c||c|c|c|c|}
     \hline
      & \multicolumn{4}{|c||}{$Z+e$} & \multicolumn{4}{c|}{$Z+\mu$} \\
     \hline
-     &  Incl SR & $4l$ SR & $3l+jj$ SR  & $3l$-only SR  & Incl SR & $4l$ SR & $3l+jj$ SR  & $3l$-only SR  \\
+     &  Incl SR & $\fourl$ SR & $\threeljj$ SR  & $\threelo$ SR  & Incl SR & $\fourl$ SR & $\threeljj$ SR  & $\threelo$ SR  \\
     \hline
     Luminosity  & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ \\
     $l$ scale factors & $1.7$ & $1.7$ & $1.7$ & $1.6$ & $1.1$ & $1.1$ & $1.1$ & $1.0$ \\
@@ -599,17 +638,19 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
     Total & $3.9$ & $5.6$ & $6.1$ & $5.3$ & $3.3$ & $4.0$ & $5.1$ & $4.3$ \\
     \hline
   \end{tabular}
+  }
   \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\lpm}=160 \GeV$, in terms of percent of the total signal normalization.}
   \label{table:systematics-impact-summary-seesaw-160}
 \end{table}
 
 \begin{table}[htbp]
   \centering
+  \resizebox{0.95\textwidth}{!}{
   \begin{tabular}{|c|c|c|c|c||c|c|c|c|}
     \hline
      & \multicolumn{4}{|c||}{$Z+e$} & \multicolumn{4}{c|}{$Z+\mu$} \\
     \hline
-     &  Incl SR & $4l$ SR & $3l+jj$ SR  & $3l$-only SR  & Incl SR & $4l$ SR & $3l+jj$ SR  & $3l$-only SR  \\
+     &  Incl SR & $\fourl$ SR & $\threeljj$ SR  & $\threelo$ SR  & Incl SR & $\fourl$ SR & $\threeljj$ SR  & $\threelo$ SR  \\
     \hline
     Luminosity  & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ \\
     $l$ scale factors & $1.8$ & $1.7$ & $1.8$ & $1.9$ & $1.2$ & $1.2$ & $1.2$ & $1.2$ \\
@@ -621,17 +662,19 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
     Total & $4.5$ & $6.5$ & $6.2$ & $6.0$ & $3.8$ & $4.8$ & $5.3$ & $5.3$ \\
     \hline
   \end{tabular}
+  }
   \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\lpm}=300 \GeV$, in terms of percent of the total signal normalization.}
   \label{table:systematics-impact-summary-seesaw-300}
 \end{table}
 
 \begin{table}[htbp]
   \centering
+  \resizebox{0.95\textwidth}{!}{
   \begin{tabular}{|c|c|c|c|c||c|c|c|c|}
     \hline
      & \multicolumn{4}{|c||}{$Z+e$} & \multicolumn{4}{c|}{$Z+\mu$} \\
     \hline
-     &  Incl SR & $4l$ SR & $3l+jj$ SR  & $3l$-only SR  & Incl SR & $4l$ SR & $3l+jj$ SR  & $3l$-only SR  \\
+     &  Incl SR & $\fourl$ SR & $\threeljj$ SR  & $\threelo$ SR  & Incl SR & $\fourl$ SR & $\threeljj$ SR  & $\threelo$ SR  \\
     \hline
     Luminosity  & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ & $2.8$ \\
     $l$ scale factors & $1.8$ & $1.8$ & $1.8$ & $2.0$ & $1.3$ & $1.4$ & $1.3$ & $1.3$ \\
@@ -643,23 +686,25 @@ The impact of each uncertainty in each signal region, in terms of fractional unc
     Total & $4.5$ & $6.4$ & $6.4$ & $6.4$ & $3.9$ & $5.4$ & $6.0$ & $6.1$ \\
     \hline
   \end{tabular}
+  }
   \caption{The impact of different sources of systematic uncertainty on the signal prediction for the type~III seesaw model with $m_{\lpm}=500 \GeV$, in terms of percent of the total signal normalization.}
   \label{table:systematics-impact-summary-seesaw-500}
 \end{table}
 
+\clearpage
 
 \section{Background Validation}\label{sec:resonance-background-validation}
-For each flavor channel, four validation regions are defined to test the background predictions from the Monte Carlo simulation samples and the fake factor procedure. Each region starts from the set of events with three selected electrons or muons, two of which form an OSSF pair of leptons. 
+For each flavor channel, four validation regions are defined to test the background predictions from the Monte Carlo simulation samples and the fake factor procedure. Each region starts from the set of events with three selected electrons or muons, two of which form an opposite-sign, same-flavor (OSSF) pair of leptons. 
 
-The \underline{\textbf{high $\Delta R$}} region contains events with large separation between the $Z$ candidate momentum and the off-$Z$ lepton momentum, $\Delta R(Z,\,\ell_3)>3$. Events are also required to have exactly three leptons, and to satify $\deltam<200 \GeV - m_Z$, to limit signal contamination from hypotheses with larger $m_{\lpm}$ where the $Z$ and the off-$Z$ lepton are less collimated. The region has a similar background composition to the signal regions with three leptons, and tests the $WZ$, $ZZ$, and reducible background predictions.
+The \textbf{high} $\mathbf{\Delta R}$ region contains events with large separation between the $Z$ candidate momentum and the off-$Z$ lepton momentum, $\Delta R(Z,\,\ell_3)>3$. Events are also required to have exactly three leptons, and to satify $\deltam<200 \GeV - m_Z$, to limit signal contamination from hypotheses with larger $m_{\lpm}$ where the $Z$ and the off-$Z$ lepton are less collimated. The region has a similar background composition to the signal regions with three leptons, and tests the $WZ$, $ZZ$, and reducible background predictions.
 
-The \underline{\textbf{$ZZ$}} region contains events with two OSSF lepton pairs with invariant mass within $10 \GeV$ of $m_Z$. The region tests the $ZZ$ background prediction.
+The $\mathbf{ZZ}$ region contains events with two OSSF lepton pairs with invariant mass within $10 \GeV$ of $m_Z$. The region tests the $ZZ$ background prediction.
 
-The \underline{\textbf{off-$Z$}} region contains events with exactly three leptons, with an OSSF pair within $50 \GeV$ of $m_Z$, but no OSSF pairs with invariant mass within $20 \GeV$ of $m_Z$. As the event does not contain a $Z$ candidate, the trilepton selection is modified: the highest mass OSSF pair is selected, and the third lepton is chosen to be the remaining lepton. In the $Z+e$ flavor channel, this region tests the $Z+\gamma$ background prediction. In the $Z+\mu$ channel, the region is dominated by $ZZ$, where one lepton is not selected, and the other two leptons originate from an off-shell $Z^{*}/\gamma^{*}$. 
+The \textbf{off-}$\mathbf{Z}$ region contains events with exactly three leptons, with an OSSF pair within $50 \GeV$ of $m_Z$, but no OSSF pairs with invariant mass within $20 \GeV$ of $m_Z$. As the event does not contain a $Z$ candidate, the trilepton selection is modified: the highest mass OSSF pair is selected, and the third lepton is chosen to be the remaining lepton. In the $Z+e$ flavor channel, this region tests the $Z+\gamma$ background prediction. In the $Z+\mu$ channel, the region is dominated by $ZZ$, where one lepton is not selected, and the other two leptons originate from an off-shell $Z^{*}/\gamma^{*}$. 
 
-The \underline{\textbf{$WZ$}} region contains events with exactly three leptons, two of which form an OSSF pair within $10~\mbox{GeV}$ of $m_Z$, and the third of which satisfies $40~\mbox{GeV}<\mtw<90~\mbox{GeV}$. Additionally, the validation region requires $40~\mbox{GeV}<\Etmiss<100~\mbox{GeV}$ and zero jets, which suppresses signal contamination.
+The $\mathbf{WZ}$ region contains events with exactly three leptons, two of which form an OSSF pair within $10~\mbox{GeV}$ of $m_Z$, and the third of which satisfies $40~\mbox{GeV}<\mtw<90~\mbox{GeV}$. Additionally, the validation region requires $40~\mbox{GeV}<\Etmiss<100~\mbox{GeV}$ and zero jets, which suppresses signal contamination.
 
-The definition of each validation region and the backgrounds tested are summarized in table~\ref{table:resonance-validation-region-definitions}. The total number of observed and predicted events in each region is shown in table~\ref{table:resonance-validation-region-normalizations}, and the corresponding $\deltam$ distributions are shown in figure~\ref{fig:resonance-validation-regions}. Good agreement is seen in most validation regions, with the observed and predicted normalizations agreeing to better than $1.5\sigma$. A deficit of data with respect to the background prediction is seen in the off-$Z$, $Z+\mu$ validation region, corresponding to $2.3\sigma$. The region is dominated by contributions from $ZZ$, where only three leptons pass the selection requirements and no same-flavour, opposite-sign lepton pair is reconstructed with invariant mass within $20 \GeV$ of $m_Z$. 
+The definition of each validation region and the backgrounds tested are summarized in table~\ref{table:resonance-validation-region-definitions}. The total number of observed and predicted events in each region is shown in table~\ref{table:resonance-validation-region-normalizations}, and the corresponding $\deltam$ distributions are shown in figures~\ref{fig:resonance-VR-HighDeltaR}-\ref{fig:resonance-VR-WZ}. Good agreement is seen in most validation regions, with the observed and predicted normalizations agreeing to better than $1.5\sigma$. A deficit of data with respect to the background prediction is seen in the off-$Z$, $Z+\mu$ validation region, corresponding to $2.3\sigma$. The region is dominated by contributions from $ZZ$, where only three leptons pass the selection requirements and no same-flavour, opposite-sign lepton pair is reconstructed with invariant mass within $20 \GeV$ of $m_Z$. 
 
 
 \begin{table}[htbp]
@@ -687,30 +732,24 @@ The definition of each validation region and the backgrounds tested are summariz
 \end{table}
 
 \begin{table}[htbp]
-	\centering
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline
-		Flavor Channel & Control Region & Data & Background Prediction & $\frac{\mbox{Data}-\mbox{Bkgd}}{\sigma_{\mathrm{bkgd}}}$ \\
-		\hline
-		$Z+e$	&	High $\Delta R$	&	$239$	&	$239.16 	\pm 15.47^{(\mathrm{stat})} \pm 13.66^{(\mathrm{syst})}$ 	&	-0.01	\\
-		\hline
-		$Z+e$	&	OffZ		&	$360$	&	$348.81 	\pm 18.68^{(\mathrm{stat})} \pm 44.21^{(\mathrm{syst})}$ 	&	0.23	\\
-		\hline
-		$Z+e$	&	TwoZ		&	$39	$	&	$37.29 		\pm 6.11^{(\mathrm{stat})} \pm 2.14^{(\mathrm{syst})}$ 		&	0.26	\\
-		\hline
-		$Z+e$	&	WZ			&	$140$	&	$133.47 	\pm 11.56^{(\mathrm{stat})} \pm 10.29^{(\mathrm{syst})}$ 	&	0.42	\\
-		\hline
-		$Z+\mu$	&	High $\Delta R$	&	$302$	&	$301.00 	\pm 17.35^{(\mathrm{stat})} \pm 12.33^{(\mathrm{syst})}$ 	&	0.05	\\
-		\hline
-		$Z+\mu$	&	OffZ		&	$163$	&	$200.25 	\pm 14.16^{(\mathrm{stat})} \pm 7.77^{(\mathrm{syst})}$ 	&	-2.31	\\
-		\hline
-		$Z+\mu$	&	TwoZ		&	$74	$	&	$63.4 		\pm 7.97^{(\mathrm{stat})} \pm 3.43^{(\mathrm{syst})}$ 		&	1.22	\\
-		\hline
-		$Z+\mu$	&	WZ			&	$222$	&	$192.96 	\pm 13.90^{(\mathrm{stat})} \pm 14.42^{(\mathrm{syst})}$ 	&	1.45	\\
-		\hline
-	\end{tabular}
-	\caption{Summary of number of events observed and predicted for each control region.}
-	\label{table:resonance-validation-region-normalizations}
+  \centering
+  \begin{tabular}{|c|c|c| r@{\ $\pm$\ }l |c|}
+    \hline
+    Channel     & Validation Region             & Data          & \multicolumn{2}{c|}{Background Prediction} & $\frac{\mbox{Data}-\mbox{Bkgd}}{\sigma_{\mathrm{bkgd}}}$ \\
+    \hline
+    $Z+e$	&	High-$\Delta R$	        &	$239$	&~~~~~~~~~~$239$&$14$ 	&    \ \ 0.0	\\
+    $Z+e$	&	Off-$Z$		        &	$360$	&$349$&$44$ 	&	+0.2	\\
+    $Z+e$	&	$ZZ$		        &	$39$	&$37$&$2$       &	+0.3	\\
+    $Z+e$	&	$WZ$			&	$140$	&$133$&$10$ 	&	+0.4	\\
+    \hline
+    $Z+\mu$	&	High-$\Delta R$	        &	$302$	&$301$&$12$ 	&	+0.1	\\
+    $Z+\mu$	&	Off-$Z$		        &	$163$	&$200$&$8$ 	&	$-$2.3	\\
+    $Z+\mu$	&	$ZZ$		        &	$74$	&$63$&$3$ 	&	+1.2	\\
+    $Z+\mu$	&	$WZ$			&	$222$	&$193$&$14$ 	&	+1.5	\\
+    \hline
+  \end{tabular}
+  \caption{Summary of the number of events observed and predicted for each validation region. The uncertainty on the background prediction is the total systematic uncertainty. The difference between the observed and predicted number of events divided by the combined statistical and systematic uncertainty on the prediction is also shown.}
+  \label{table:resonance-validation-region-normalizations}
 \end{table}
 
 \begin{figure}[h]
@@ -764,7 +803,7 @@ The definition of each validation region and the backgrounds tested are summariz
 \clearpage
 
 \section{Signal and Background Fit Model}\label{sec:resonance-fit-method}
-The numbers of signal and background candidate events in data are determined from an unbinned maximum-likelihood fit of a combination of signal and background models to the $\deltam$ distributions in each signal region. The signal and background processes are modelled with analytical probability density functions (p.d.f.s). The parameters of the p.d.f.s are determined from fits to the $\deltam$ distributions predicted by simulation or the fake factor procedure. Then, in each flavor channel, the data is fitted with the combined signal and background model, performed simultaneously on the three categories. In each signal region, the normalization of the dominant background ($ZZ$ or $WZ$) is a free parameter in the fit. The normalizations of all other backgrounds are constrained to fluctuate according to Gaussian probability distributions with mean and width values equal to the estimates and the total uncertainties before fitting.The uncertainties on the p.d.f. parameters are incorporated as Gaussian-distributed nuisance parameters.
+The numbers of signal and background candidate events in data are determined from an unbinned maximum-likelihood fit of a combination of signal and background models to the $\deltam$ distributions in each signal region. The signal and background processes are modeled with analytical probability density functions (p.d.f.s). The parameters of the p.d.f.s are determined from fits to the $\deltam$ distributions predicted by simulation or the fake factor procedure. Then, in each flavor channel, the data is fitted with the combined signal and background model, performed simultaneously on the three categories. In each signal region, the normalization of the dominant background ($ZZ$ or $WZ$) is a free parameter in the fit. The normalizations of all other backgrounds are constrained to fluctuate according to Gaussian probability distributions with mean and width values equal to the estimates and the total uncertainties before fitting. The resulting uncertainties on the fit parameters are incorporated in the limit setting as Gaussian-distributed nuisance parameters. Similarly, the shape uncertainty between the $\deltam$ distributions predicted by \sherpa\ and \powheg\ is incorporated as a Gaussian-distributed nuisance parameter multiplying a template given by the difference between the two p.d.f.s.
 
 \subsection{Signal Modeling}\label{sec:resonance-signal-model}
 The $\deltam$ distributions for the type~III seesaw and vector-like leptons scenarios contain two distinct pieces: a peak associated with the correct identification of the three leptons due to the heavy lepton decay, and a broader component due to cases where the trilepton candidate does not originate from a heavy lepton decay. Accordingly, the distributions are modeled using the sum of two functions: a Voigtian for the peak and a Landau function for the combinatorial component.  The signal parametrization is given by the following expression: 
@@ -776,43 +815,16 @@ The $\deltam$ distributions for the type~III seesaw and vector-like leptons scen
 \end{align}
 where $f_V$ denotes the fraction of events in the Voigtian; $\Gamma_V$, $m_V$ and $\sigma_V$ are the width, mean and gaussian smearing term of the Voigtian; and $\sigma_L$ and $m_L$ are the width and mean of the Landau distribution.  
 
-\begin{figure}[H!]
-\begin{minipage}[c]{\textwidth}
-  \centering
- % \includegraphics[width=0.48\textwidth]{figures/Liv/Fit/sig120_Fit.pdf}
- \subfloat[ $m_{3\ell}$ ] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Fit_sig120_Fit.pdf}}
-	}
-	\subfloat[$\deltam$ ] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Seesaw_inclusive_sig120_Fit.pdf}}
-	}
-  \caption{$m_{3\ell}$ and $\deltam$ distributions for the 120 GeV signal mass point fitted the sum of a Voigtian and a Landau PDF. The fit is an unbinned maximum likelihood fit; the data is binned only for presentation.}
-  \label{fig:SigFit}
- \subfloat[$m_{3\ell}$ ] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Fit_sig120_Pull.pdf}}
-	}
-	\subfloat[$\deltam$ ] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Seesaw_inclusive_sig120_Pull.pdf}}
-	}
-  \caption{Pulls of the simulated data with respect to the fit for $m_{3\ell}$ and $\deltam$ at the 120 GeV signal mass point. }
-  \label{fig:Pull}
- \subfloat[$m_{3\ell}$ ] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Fit_sig120_Resid.pdf}}
-	}
-	\subfloat[$\deltam$ ] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/Seesaw_inclusive_sig120_Resid.pdf}}
-	}
-  \caption{Residuals of the simulated data with respect to the fit for $m_{3\ell}$ and $\deltam$ at the 120 GeV signal mass point. }
-  \label{fig:Resid}
-\end{minipage}
-\label{fig:SigFit120}
-\end{figure} 
+\begin{figure}[htb]
+  \subfloat[VLL, $Z+e$]{\includegraphics[width=0.48\columnwidth]{figures/resonance/sigVLL_Ze_InclusiveNoM3L_300_Fit}}
+  \subfloat[VLL, $Z+\mu$]{\includegraphics[width=0.48\columnwidth]{figures/resonance/sigVLL_Zmu_InclusiveNoM3L_300_Fit}}
+  \caption{Fit of a Landau and a Voigtian to the inclusive distribution of the \deltam\ at $300 \GeV$ for the vector-like leptons model for $Z+e$ final states (a) and $Z+\mu$ final states (b).}
+  \label{fig:resonance-signal-fit-example}
+\end{figure}
 
-The $\deltam$ distributions at each simulated mass point for both the type~III seesaw and the vector-like leptons models are fitted with the Voigtian plus Landau function, separately for each flavor channel and category. The fits for the $120 \GeV$ mass hypothesis of the type~III seesaw model are shown both for $\deltam$ and  $m_{3\ell}$, along with the corresponding pulls and residuals of the simulated data with respect to the fit, in figures~\ref{fig:SigFit}, \ref{fig:Pull}, and \ref{fig:Resid}. The same plots, but enlarged around the signal peak, are shown in figure~\ref{fig:fit-Sig_inclusive_zoom}. 
+The $\deltam$ distributions at each simulated mass point for both the type~III seesaw and the vector-like leptons models are fitted with $\mathcal{S}(m_\lpm)$, separately for each flavor channel and category. An example fit from the $\SI{300}{\giga\electronvolt}$ mass hypothesis of the vector-like leptons model is shown in figure~\ref{fig:resonance-signal-fit-example}. The full fit results from the inclusive categories are shown in tables~\ref{table:ZeFitParamsSS}-\ref{table:ZmuFitParamsVLL}. $f_V$ roughly corresponds to how often the correct three leptons from the resonant decay are reconstructed and selected, and ranges from $\sim60\%$ ($\sim70\%$) at $m_{\lpm}=\SI{120}{\giga\electronvolt}$ to $58\%$ ($55\%$) at $m_{\lpm}=\SI{400}{\giga\electronvolt}$ for the type~III seesaw (vector-like leptons) model. As mentioned in section~\ref{sec:resonance-signal-mc-samples}, the type~III seesaw samples were simulated without intrinsic $Z$ width, and hence the width parameters determined from the vector-like leptons samples are used instead. 
 
-Tables~\ref{table:ZeFitParamsSS}, \ref{table:ZeFitParamsSS}, \ref{table:ZeFitParamsVLL}, and \ref{table:ZeFitParamsVLL} show the fitted parameters for the inclusive signal regions for each of the two flavor channels and signal models. As mentioned in section~\ref{sec:resonance-signal-mc-samples}, the type~III seesaw samples were simulated without intrinsic $Z$ width, and hence the width parameters vector-like leptons are used instead. Plots showing the fits to the $\deltam$ distributions are shown in appendix~\ref{sec:appendix-resonance-fitplots}.
-
-Signal hypotheses at intermediate mass points between the simulated values are obtained by linearly interpolating the fit parameters determined at the nearest simulated points above and below. To validate the linear interpolation between the mass points, a closure test was performed comparing the fit parameters determined at a simulated mass point with the values obtained from a linear interpolation between the adjacent simulated points. The resulting fit for the $160 \GeV$ mass point is shown in Fig.~\ref{fig:sigclosure}. Further test and comparisons between the signal shapes of the two models are shown in appendix~\ref{appendix:signal-validation}.
+Signal hypotheses at intermediate mass points between the simulated values are obtained by linearly interpolating the fit parameters determined at the nearest simulated points above and below. To validate the linear interpolation between the mass points, a closure test was performed comparing the fit parameters determined at a simulated mass point with the values obtained from a linear interpolation between the adjacent simulated points. The resulting fit for the $160 \GeV$ mass point is shown in Fig.~\ref{fig:sigclosure}. 
 
 \clearpage
 
@@ -822,9 +834,9 @@ The dominant diboson backgrounds are modeled using a Bukin function, a 5-paramet
 \begin{equation}
 \mathcal{P}(x;x_p ,\sigma_p, \xi ,\rho)=A_p \exp \left [ \frac{\xi \sqrt{\xi^2+1} (x-x_1) \sqrt{2\log2}}{\sigma_p(\sqrt{\xi^2+1}-\xi)^2 \log (\sqrt{\xi^2+1}+\xi)}+ \rho( \frac{x-x_i}{p_p-x_i})^2 - \log2\right ] ,
 \end{equation}
-where $\rho = \rho_1$ and $x = x_i$ for $x < x_1$, and $\rho = \rho_2$ and $x_i = x_2$ for $x \leq x_2$. The function describes the diboson $\deltam$ distribution well, in particular successfully modeling the turn-on region at low values of $\deltam$. However, the fit parameters are strongly correlated, with some pairs exceeding $99\%$ correlation. To reduce the number of free parameters, two parameters, $\sigma_p$ and $\xi_p$, are constrained to be linear functions of $x_p$ using pseudoexperiments. 100 toy datasets are generated from the fitted Bukin function, and the Bukin function fit is repeated on each dataset. The scatter plots of $\sigma_p$ versus $x_p$ and $\xi_p$ versus $x_p$ are shown in figure~\ref{fig:resonance-bukin-reduction}, along with the linear least squares fits used to constrain $\sigma_p$ and $\xi_p$. 
+where $\rho = \rho_1$ and $x = x_i$ for $x < x_1$, and $\rho = \rho_2$ and $x_i = x_2$ for $x \leq x_2$. The function describes the diboson $\deltam$ distribution well, in particular successfully modeling the turn-on region at low values of $\deltam$. However, the fit parameters are strongly correlated, with some pairs exceeding $99\%$ correlation. To reduce the number of free parameters, two parameters, $\sigma_p$ and $\xi_p$, are constrained to be linear functions of $x_p$ using pseudoexperiments. 100 toy datasets are generated from the fitted 5-parameter Bukin function, and the Bukin function fit is repeated on each dataset. The scatter plots of $\sigma_p$ versus $x_p$ and $\xi_p$ versus $x_p$ are shown in figure~\ref{fig:resonance-bukin-reduction}, along with the linear least squares fits used to constrain $\sigma_p$ and $\xi_p$. 
 
-The results of the 3-parameter fits are shown with the decorrelated eigenvariations of the fit parameters in figures~\ref{fig:fit-results-Bukin3Par-WZ} and \ref{fig:fit-results-Bukin3Par-ZZ}. 
+%The results of the 3-parameter fits are shown with the decorrelated eigenvariations of the fit parameters in figures~\ref{fig:fit-results-Bukin3Par-WZ} and \ref{fig:fit-results-Bukin3Par-ZZ}. 
 
 \begin{figure}[htbp]
     \centering
@@ -851,63 +863,62 @@ The results of the 3-parameter fits are shown with the decorrelated eigenvariati
 \end{figure}
 
 
-\begin{figure}[htbp]
-	\centering
-	\subfloat[ Inclusive, $Z+e$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_InclusiveNoM3L_Ze_DeltaM_InclusiveNoM3L.pdf}}
-	}
-	\subfloat[ Inclusive, $Z+\mu$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_InclusiveNoM3L_Zmu_DeltaM_InclusiveNoM3L.pdf}}
-	} \\
-	\subfloat[ $\fourl$, $Z+e$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_FourLNoM3L_Ze_DeltaM_FourLNoM3L.pdf}}
-	}
-	\subfloat[ $\fourl$, $Z+\mu$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_FourLNoM3L_Zmu_DeltaM_FourLNoM3L.pdf}}
-	} \\
-	\subfloat[ $\threeljj$, $Z+e$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_ThreeLDijetNoM3L_Ze_DeltaM_ThreeLDijetNoM3L.pdf}}
-	}
-	\subfloat[ $\threeljj$, $Z+\mu$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_ThreeLDijetNoM3L_Zmu_DeltaM_ThreeLDijetNoM3L.pdf}}
-	} \\
-	\subfloat[ $\threelo$, $Z+e$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_ElseNoM3L_Ze_DeltaM_ElseNoM3L.pdf}}
-	}
-	\subfloat[ $\threelo$, $Z+\mu$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_ElseNoM3L_Zmu_DeltaM_ElseNoM3L.pdf}}
-	} \\
-	\caption{Restricted 3-parameter Bukin fits to the $ZZ$ $\deltam$ distributions in each signal region. The central value is shown in black, and the $1-\sigma$ eigenvariations of the fit parameters are shown in the colored dashed lines.}
-	\label{fig:fit-results-Bukin3Par-ZZ}
-\end{figure}
+%\begin{figure}[htbp]
+%	\centering
+%	\subfloat[ Inclusive, $Z+e$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_InclusiveNoM3L_Ze_DeltaM_InclusiveNoM3L.pdf}}
+%	}
+%	\subfloat[ Inclusive, $Z+\mu$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_InclusiveNoM3L_Zmu_DeltaM_InclusiveNoM3L.pdf}}
+%	} \\
+%	\subfloat[ $\fourl$, $Z+e$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_FourLNoM3L_Ze_DeltaM_FourLNoM3L.pdf}}
+%	}
+%	\subfloat[ $\fourl$, $Z+\mu$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_FourLNoM3L_Zmu_DeltaM_FourLNoM3L.pdf}}
+%	} \\
+%	\subfloat[ $\threeljj$, $Z+e$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_ThreeLDijetNoM3L_Ze_DeltaM_ThreeLDijetNoM3L.pdf}}
+%	}
+%	\subfloat[ $\threeljj$, $Z+\mu$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_ThreeLDijetNoM3L_Zmu_DeltaM_ThreeLDijetNoM3L.pdf}}
+%	} \\
+%	\subfloat[ $\threelo$, $Z+e$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_ElseNoM3L_Ze_DeltaM_ElseNoM3L.pdf}}
+%	}
+%	\subfloat[ $\threelo$, $Z+\mu$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_ZZ_Sherpa_Bukin3Par_ElseNoM3L_Zmu_DeltaM_ElseNoM3L.pdf}}
+%	} \\
+%	\caption{Restricted 3-parameter Bukin fits to the $ZZ$ $\deltam$ distributions in each signal region. The central value is shown in black, and the $1-\sigma$ eigenvariations of the fit parameters are shown in the colored dashed lines.}
+%	\label{fig:fit-results-Bukin3Par-ZZ}
+%\end{figure}
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\subfloat[ Inclusive, $Z+e$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_InclusiveNoM3L_Ze_DeltaM_InclusiveNoM3L.pdf}}
+%	}
+%	\subfloat[ Inclusive, $Z+\mu$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_InclusiveNoM3L_Zmu_DeltaM_InclusiveNoM3L.pdf}}
+%	} \\
+%	\subfloat[ $\threeljj$, $Z+e$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_ThreeLDijetNoM3L_Ze_DeltaM_ThreeLDijetNoM3L.pdf}}
+%	}
+%	\subfloat[ $\threeljj$, $Z+\mu$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_ThreeLDijetNoM3L_Zmu_DeltaM_ThreeLDijetNoM3L.pdf}}
+%	} \\
+%	\subfloat[ $\threelo$, $Z+e$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_ElseNoM3L_Ze_DeltaM_ElseNoM3L.pdf}}
+%	}
+%	\subfloat[ $\threelo$, $Z+\mu$] {
+%		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_ElseNoM3L_Zmu_DeltaM_ElseNoM3L.pdf}}
+%	} \\
+%	\caption{Restricted 3-parameter Bukin fits to the $WZ$ $\deltam$ distributions in each signal region. The central value is shown in black, and the $1-\sigma$ eigenvariations of the fit parameters are shown in the colored dashed lines.}
+%	\label{fig:fit-results-Bukin3Par-WZ}
+%\end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\subfloat[ Inclusive, $Z+e$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_InclusiveNoM3L_Ze_DeltaM_InclusiveNoM3L.pdf}}
-	}
-	\subfloat[ Inclusive, $Z+\mu$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_InclusiveNoM3L_Zmu_DeltaM_InclusiveNoM3L.pdf}}
-	} \\
-	\subfloat[ $\threeljj$, $Z+e$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_ThreeLDijetNoM3L_Ze_DeltaM_ThreeLDijetNoM3L.pdf}}
-	}
-	\subfloat[ $\threeljj$, $Z+\mu$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_ThreeLDijetNoM3L_Zmu_DeltaM_ThreeLDijetNoM3L.pdf}}
-	} \\
-	\subfloat[ $\threelo$, $Z+e$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_ElseNoM3L_Ze_DeltaM_ElseNoM3L.pdf}}
-	}
-	\subfloat[ $\threelo$, $Z+\mu$] {
-		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/c_FitVariations_WZ_Sherpa_Bukin3Par_ElseNoM3L_Zmu_DeltaM_ElseNoM3L.pdf}}
-	} \\
-	\caption{Restricted 3-parameter Bukin fits to the $WZ$ $\deltam$ distributions in each signal region. The central value is shown in black, and the $1-\sigma$ eigenvariations of the fit parameters are shown in the colored dashed lines.}
-	\label{fig:fit-results-Bukin3Par-WZ}
-\end{figure}
 
-
-
-The shapes of the diboson $\deltam$ distributions in the categorized signal regions are compared to the inclusive signal regions using Kolmogorov-Smirnov tests, shown in figures~\ref{fig:inclusive-KS-tests-ZZ} and \ref{fig:inclusive-KS-tests-WZ} and tables~\ref{table:inclusive-KS-tests-ZZ} and \ref{table:inclusive-KS-tests-WZ}. The shapes of the $\deltam$ distributions in the $\fourl$ and $\threelo$ signal regions are consistent with the inclusive regions; therefore, to take advantage of the larger statistics in the inclusive signal region, \textbf{the shape from the inclusive signal region is used to model the $\fourl$ and $\threelo$ signal regions}. The final fits are shown in figures~\ref{fig:WZ-DiBosonFit} and \ref{fig:ZZ-DiBosonFit}.
+The shapes of the diboson $\deltam$ distributions in the categorized signal regions are compared to the inclusive signal regions using unbinnned Kolmogorov-Smirnov tests, shown in figures~\ref{fig:inclusive-KS-tests-ZZ} and \ref{fig:inclusive-KS-tests-WZ} and tables~\ref{table:inclusive-KS-tests-ZZ} and \ref{table:inclusive-KS-tests-WZ}. The shapes of the $\deltam$ distributions in the $\fourl$ and $\threelo$ signal regions are consistent with the inclusive regions; therefore, to take advantage of the larger statistics in the inclusive signal region, the shape from the inclusive signal region is used to model the $\fourl$ and $\threelo$ signal regions. The fits for the inclusive and $\threeljj$ signal regions are shown in figures~\ref{fig:WZ-DiBosonFit} and \ref{fig:ZZ-DiBosonFit}.
  
 \begin{figure}[htbp]
 	\centering
@@ -945,7 +956,7 @@ The shapes of the diboson $\deltam$ distributions in the categorized signal regi
 		$\threeljj$, $Z+\mu$ & 0.130 & 0.098 \\
 		$\threelo$, $Z+\mu$ & 0.946 & 0.016
 	\end{tabular}
-	\caption{Results of KS tests comparing the $ZZ$ $\deltam$ shapes between the categorized signal regions and the inclusive signal regions.}
+	\caption{Results of Kolmogorov-Smirnov tests comparing the $ZZ$ $\deltam$ shapes between the categorized signal regions and the inclusive signal regions. The Kolmogorov-Smirnov probability and test statistic are shown.}
 	\label{table:inclusive-KS-tests-ZZ}
 \end{table}
 
@@ -978,7 +989,7 @@ The shapes of the diboson $\deltam$ distributions in the categorized signal regi
 		$\threeljj$, $Z+\mu$ & 0.0 & 0.152 \\
 		$\threelo$, $Z+\mu$ & 0.0349 & 0.012
 	\end{tabular}
-	\caption{Results of KS tests comparing the $WZ$ $\deltam$ shapes between the categorized signal regions and the inclusive signal regions.}
+	\caption{Results of Kolmogorov-Smirnov tests comparing the $WZ$ $\deltam$ shapes between the categorized signal regions and the inclusive signal regions. The Kolmogorov-Smirnov probability and test statistic are shown.}
 	\label{table:inclusive-KS-tests-WZ}
 \end{table}
 
@@ -990,7 +1001,7 @@ The shapes of the diboson $\deltam$ distributions in the categorized signal regi
 	\subfloat[ $WZ$, Dijet, $\deltam$] {
 			\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/fit_WZ_3Ljj_hS.pdf}}
          }
-	\caption{$\deltam$ distributions for $WZ$ and Bukin function fits for the inclusive and the $\threeljj$ signal regions. The separate fits for the $Z+e$ and $Z+\mu$ flavor channels can be found in Appendix~\ref{sec:appendix-fitplots}.}
+	\caption{$\deltam$ distributions from Monte Carlo and Bukin function fits for the $WZ$ background. The inclusive (left) and $\threeljj$ (right) signal regions are shown.}
 	\label{fig:WZ-DiBosonFit}
 \end{figure}
  
@@ -1003,7 +1014,7 @@ The shapes of the diboson $\deltam$ distributions in the categorized signal regi
 	\subfloat[ ZZ,Dijet,  $\deltam$] {
 			\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/fit_ZZ_3Ljj_hS.pdf}}
          }
-	\caption{Final $\deltam$ distributions for $ZZ$ and Bukin function fits for the inclusive and the $\threeljj$ signal regions. The separate flavour fits can be found in Appendix~\ref{sec:appendix-fitplots}.}
+	\caption{$\deltam$ distributions from Monte Carlo and Bukin function fits for the $ZZ$ background. The inclusive (left) and $\threeljj$ (right) signal regions are shown.}
 	\label{fig:ZZ-DiBosonFit}
 \end{figure}
 
@@ -1011,7 +1022,7 @@ The shapes of the diboson $\deltam$ distributions in the categorized signal regi
 
 The most important remaining backgrounds are due to reducible processes and $Z(ll)+\gamma$. The $Z(ll)+\gamma$ background is only significant in the $Z+e$ signal regions. Due to the limited statistics from the fake factor estimate, the individual categories are combined into a single inclusive distribution for electron and muons. The reducible backgrounds are fitted with Landau distributions, shown in figure~\ref{fig:reducible-landau-fits}. The individual regions are then normalized to the expectations from the individual categories~\footnote{In categories where the fake factor method predicts overall normalization that is negative but consistent with zero within statistical uncertainties, which can occur due to the prompt subtraction, the normalization is set to zero.}.
 
- The $Z(ll)+\gamma$ background is only significant in the $\threelo$, $Z+e$ signal region. This background is modeled with the sum of a Landau and a Gaussian, shown in figure~\ref{fig:eegamma}. The remaining small contributions from $\ttbarV$ and triboson processes are modeled together with a Landau function, shown in figure~\ref{fig:ttV}. 
+ The $Z(ll)+\gamma$ background is only significant in the $\threelo$, $Z+e$ signal region. This background is modeled with the sum of a Landau and a Gaussian, shown in figure~\ref{fig:resonance-fits-Zy}. The remaining small contributions from $\ttbarV$ and triboson processes are modeled together with a Landau function, shown in figure~\ref{fig:resonance-fits-ttV-VVV}. 
 
 
 \begin{figure}[htbp]
@@ -1029,19 +1040,16 @@ The most important remaining backgrounds are due to reducible processes and $Z(l
 
 \begin{figure}[htbp]
 \centering
-   \includegraphics[width=0.6\textwidth]{figures/resonance/fit_llgamma_Ze.pdf}
-  \caption{The $\deltam$ distribution for the $Z+\gamma$ background, fitted with the sum of a Landau and a Gaussian. This background is significant for final states with a bachelor electron.} 
-  \label{fig:eegamma}
+	\subfloat[ $Z+\gamma$] {\label{fig:resonance-fits-Zy}
+		\includegraphics[width=0.45\textwidth]{figures/resonance/fit_llgamma_Ze.pdf}
+	}
+	\hfill
+	\subfloat[ $\ttbarV$ and $VVV^{(*)}$] {\label{fig:resonance-fits-ttV-VVV}
+		\includegraphics[width=0.45\textwidth]{figures/resonance/fit_ttV_VVV.pdf}
+	}
+	\caption{$\deltam$ distributions for the $Z+\gamma$ (left) and $\ttbarV$ plus $VVV^{(*)}$ (right) backgrounds. For the $Z+\gamma$ background, the inclusive, $Z+e$ signal region is shown; the background is negligible in the $Z+\mu$ signal regions. For the $\ttbarV$ plus $VVV^{(*)}$ background, the combination of the $Z+e$ and $Z+\mu$ inclusive signal regions is shown.}
+  \label{fig:resonance-fits-Zy-ttV-VVV}
 \end{figure} 
-
-
-\begin{figure}[htbp]
-\centering
-   \includegraphics[width=0.6\textwidth]{figures/resonance/fit_ttV_VVV.pdf}
-  \caption{The $\deltam$ distribution for the combined  $t\overline{t}+V$, $VVV^{(*)}$  background, fitted with the sum of a Landau and a Gaussian. This background is significant for final states with a bachelor electron.} 
-  \label{fig:ttV}
-\end{figure} 
-
 
 \clearpage
 
@@ -1084,6 +1092,7 @@ The total number of observed events each signal region is shown in table~\ref{ta
 	%table-figures-decimal = 2
 	}
 	\footnotesize
+	\resizebox{0.98\textwidth}{!}{
 	\begin{tabular}{ | c ||
 	S[separate-uncertainty,table-figures-uncertainty=1] |
 	S[separate-uncertainty ,table-figures-uncertainty=1]|
@@ -1096,7 +1105,7 @@ The total number of observed events each signal region is shown in table~\ref{ta
 		\hline
 		&	\multicolumn{3}{c||}{$Z+e$}	&	\multicolumn{3}{c|}{$Z+\mu$}	\\
 		\hline
-		Process	&	{$4$l SR}	&	{$3l+jj$ SR}	&	{$3l$-only SR}	 &	{$4l$ SR}	&	{$3l+jj$ SR}	&	{$3l$-only SR}	\\
+		Process	&	{$4$l SR}	&	{$\threeljj$ SR}	&	{$\threelo$ SR}	 &	{$\fourl$ SR}	&	{$\threeljj$ SR}	&	{$\threelo$ SR}	\\
 		\hline
 		\hline
 		& \multicolumn{6}{c|}{Before combined background-only fit} \\
@@ -1133,11 +1142,11 @@ The total number of observed events each signal region is shown in table~\ref{ta
 		Data 	&	\multicolumn{1}{c|}{16}	&	\multicolumn{1}{c|}{64}	&	\multicolumn{1}{c||}{573}	&	\multicolumn{1}{c|}{25}	&	\multicolumn{1}{c|}{86}	&	\multicolumn{1}{c|}{651}	\\
 		\hline
 	\end{tabular} 
-
+	}
 	%		\hline
 	%			&\multicolumn{3}{c||}{$Z+e$}	&	\multicolumn{3}{c|}{$Z+\mu$}	\\
 	%		\hline
-	%		Process	&	$4l$ SR	&	$3l+jj$ SR	&	$3l$-only SR	&	$4l$ SR	&	$3l+jj$ SR	&	$3l$-only SR	\\
+	%		Process	&	$\fourl$ SR	&	$\threeljj$ SR	&	$\threelo$ SR	&	$\fourl$ SR	&	$\threeljj$ SR	&	$\threelo$ SR	\\
 	%		\hline
 	%    \hline
 	%     & \multicolumn{6}{c|}{Pre-Fit} \\
@@ -1196,11 +1205,24 @@ Good agreement is seen between the pre-fit and post-fit normalizations for the $
 
 
 \section{Interpretation}\label{sec:resonance-interpretation}
-The data are well described by the combined fit to the three categories in each flavour channel. The consistency of the data with the background-only hypothesis is evaluated by scanning the local $p_0$-value for the $\deltam$ distribution in $3 \GeV$ intervals for signal mass hypotheses in the range $100-400 \GeV$ for the vector-like leptons model, and $100-500 \GeV$ for the seesaw model, using the unbinned maximum-likelihood fit described in section~\ref{sec:resonance-fit-method} with the signal strength set to zero. The agreement is expressed in terms of the $p_0$-value, the probability that, assuming the background-only hypothesis is true, an experiment would yield at least as many events as observed in the current measurement. The $p_0$ values are calculated using the frequentist hypothesis test based on the profile likelihood ratio test statistic and approximated with asymptotic formulae~\cite{asimov}. The minimum $p_0$-value is $p_0=0.02$ at a mass of $183~\GeV$ for the $Z+e$ flavour channel, and $p_0=0.05$ at a mass of $109~\GeV$ for the $Z+\mu$ flavour channel.
+The data are well described by the combined fit to the three categories in each flavour channel. The consistency of the data with the background-only hypothesis is evaluated by scanning the local $p_0$-value for the $\deltam$ distribution in $3 \GeV$ intervals for signal mass hypotheses in the range $100-400 \GeV$ for the vector-like leptons model, and $100-500 \GeV$ for the seesaw model, using the unbinned maximum-likelihood fit described in section~\ref{sec:resonance-fit-method} with the signal strength set to zero. The agreement is expressed in terms of the $p_0$-value, the probability that, assuming the background-only hypothesis is true, an experiment would yield at least as many events as observed in the current measurement. The $p_0$ values are calculated using the frequentist hypothesis test based on the profile likelihood ratio test statistic and approximated with asymptotic formulae~\cite{asimov}. The results are shown in figure~\ref{fig:resonance-p0value-ss}. The minimum $p_0$-value is $p_0=0.02$ at a mass of $183~\GeV$ for the $Z+e$ flavour channel, and $p_0=0.05$ at a mass of $109~\GeV$ for the $Z+\mu$ flavour channel.
+
+\begin{figure}[htbp]
+	\centering	
+         \subfloat[ Type III Seesaw, $Z+e$] {\label{fig:p0value-ss-Ze}
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/p0Ze_plot.pdf}}
+	}
+	\subfloat[ Type III Seesaw, $Z+\mu$] {\label{fig:p0value-ss-Zmu}
+		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/resonance/p0Zmu_plot.pdf}}
+	} \\
+\caption{$p_0$-values for the background-only hypothesis as a function of the heavy lepton mass and the corresponding expected p-values for the vector-like lepton model (blue) and the type-III seesaw model. }
+\label{fig:resonance-p0value-ss}
+\end{figure}
+
 
 \subsection{Limits on Models}
 
-Since no significant excess above the background expectation is observed, the fit model is used to derive 95\% confidence level (CL) exclusion limits on the heavy lepton pair-production cross section, $\sigma$, using the $CL_s$ method~\cite{CLs}. The limits are shown for the vector-like leptons model in figure~\ref{fig:VLLLimit}, and for the type~III seesaw model in figure~\ref{fig:T3SSLimit}, evaluated in the same $3 \GeV$ intervals as the $p_0$-values.
+Since no significant excess above the background expectation is observed, the fit model is used to derive 95\% confidence level (CL) exclusion limits on the heavy lepton pair-production cross section, $\sigma$, using the $CL_s$ method~\cite{cls}. The limits are shown for the vector-like leptons model in figure~\ref{fig:VLLLimit}, and for the type~III seesaw model in figure~\ref{fig:T3SSLimit}, evaluated in the same $3 \GeV$ intervals as the $p_0$-values.
 The vector-like leptons model is excluded for electron-only mixing in the heavy lepton mass ranges $129$--$144 \GeV$ and $163$--$176 \GeV$, with an expected exclusion in the range $109$--$152 \GeV$. The corresponding observed (expected) exclusion for the muon-only mixing scenario is $114$--$153 \GeV$ and $160$--$168 \GeV$ ($105$--$167 \GeV $).
 The significantly higher production cross sections for the type~III seesaw model lead to an observed (expected) exclusion in the electron-only mixing scenario in the heavy lepton mass range $100$--$430 \GeV$  ($100$--$436 \GeV$). For the muon-only mixing scenario, the observed exclusion is in the ranges $100$--$401 \GeV$ and $419$--$468 \GeV$, while the expected exclusion is $100$--$419 \GeV$.
 

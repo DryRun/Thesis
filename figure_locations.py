@@ -3,6 +3,12 @@ import os
 
 
 # Partial list of original paths of figure
+luminosity_figures = {}
+luminosity_figures["figures/luminosity/c_dz_NTrk5_BCID81.pdf"]     = "/Users/dryu/Documents/Physics/ATLAS/Luminosity/Papers/VdMVertexAnalysis/trunk/note/figures/Masking/data_7TeV_17.2_default/c_dz_NTrk5_BCID81.pdf"
+luminosity_figures["figures/luminosity/c_pmask_dz_NTrk5_Data.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Luminosity/Papers/VdMVertexAnalysis/trunk/note/figures/Masking/data_7TeV_17.2_default/c_pmask_dz_NTrk5.pdf"
+luminosity_figures["figures/luminosity/c_dz_NTrk5_MC.pdf"]          = "/Users/dryu/Documents/Physics/ATLAS/Luminosity/Papers/VdMVertexAnalysis/trunk/note/figures/Masking/mc_7TeV_17.2_default_pythia8_pu_bs55/c_dz_NTrk5.pdf"
+luminosity_figures["figures/luminosity/c_pmask_dz_NTrk5_MC.pdf"]    = "/Users/dryu/Documents/Physics/ATLAS/Luminosity/Papers/VdMVertexAnalysis/trunk/note/figures/Masking/mc_7TeV_17.2_default_pythia8_pu_bs55/c_pmask_dz_NTrk5.pdf"
+ 
 model_independent_figures = {}
 model_independent_figures["figures/modelindependent/DYOSee_cut_3f_AllLeptonMass.pdf"]                          = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/DYOSee_cut_3f_AllLeptonMass.pdf"
 model_independent_figures["figures/modelindependent/DYOSmm_cut_3f_AllLeptonMass.pdf"]                          = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/ML2012InternalNote/figures/DYOSmm_cut_3f_AllLeptonMass.pdf"
@@ -88,6 +94,34 @@ resonance_figures["figures/resonance/c_output_mTW_Zmu_ElseNoM3L_300GeV.pdf"] = "
 resonance_figures["figures/resonance/c_output_mTW_Zmu_FourLNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/FourLNoM3L/c_output_mTW_Zmu_FourLNoM3L_300GeV.pdf"
 resonance_figures["figures/resonance/c_output_mTW_Zmu_InclusiveNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/InclusiveNoM3L/c_output_mTW_Zmu_InclusiveNoM3L_300GeV.pdf"
 resonance_figures["figures/resonance/c_output_mTW_Zmu_ThreeLDijetNoM3L_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/Jobset_MLv5.2Central/LimitSetting/figures_NoLabel/Control/Zmu/ThreeLDijetNoM3L/c_output_mTW_Zmu_ThreeLDijetNoM3L_300GeV.pdf"
+resonance_figures["figures/resonance/sigVLL_Ze_InclusiveNoM3L_300_Fit.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/sigVLL_Ze_InclusiveNoM3L_300_Fit.pdf"
+resonance_figures["figures/resonance/sigVLL_Zmu_InclusiveNoM3L_300_Fit.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/sigVLL_Zmu_InclusiveNoM3L_300_Fit.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Ze_HighDeltaR_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Ze_HighDeltaR_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Zmu_HighDeltaR_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Zmu_HighDeltaR_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Ze_TwoZ_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Ze_TwoZ_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Zmu_TwoZ_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Zmu_TwoZ_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Ze_OffZ_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Ze_OffZ_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Zmu_OffZ_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Zmu_OffZ_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Ze_WZ_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Ze_WZ_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Zmu_WZ_300GeV.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Zmu_WZ_300GeV.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Ze_FourLNoM3L_300GeV_hide_ratio.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Ze_FourLNoM3L_300GeV_hide_ratio.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Zmu_FourLNoM3L_300GeV_hide_ratio.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Zmu_FourLNoM3L_300GeV_hide_ratio.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Ze_ThreeLDijetNoM3L_300GeV_hide_ratio.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Ze_ThreeLDijetNoM3L_300GeV_hide_ratio.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Zmu_ThreeLDijetNoM3L_300GeV_hide_ratio.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Zmu_ThreeLDijetNoM3L_300GeV_hide_ratio.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Ze_ElseNoM3L_300GeV_log.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Ze_ElseNoM3L_300GeV_log.pdf"
+resonance_figures["figures/resonance/c_output_DeltaM_Zmu_ElseNoM3L_300GeV_log.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_output_DeltaM_Zmu_ElseNoM3L_300GeV_log.pdf"
+resonance_figures["figures/resonance/Fit_BGOnly_Ze_ErrorBand.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/Fit_BGOnly_Ze_ErrorBand.pdf"
+resonance_figures["figures/resonance/Fit_BGOnly_Zmu_ErrorBand.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/Fit_BGOnly_Zmu_ErrorBand.pdf"
+resonance_figures["figures/resonance/p0Ze_plot.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/p0Ze_plot.pdf"
+resonance_figures["figures/resonance/p0Zmu_plot.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/p0Zmu_plot.pdf"
+resonance_figures["figures/resonance/LimitVLL_Ze_NP.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/LimitVLL_Ze_NP.pdf"
+resonance_figures["figures/resonance/LimitVLL_Zmu_NP.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/LimitVLL_Zmu_NP.pdf"
+resonance_figures["figures/resonance/SeesawZe_ShapeInterpol_xsectot_plot.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/SeesawZe_ShapeInterpol_xsectot_plot.pdf"
+resonance_figures["figures/resonance/SeesawZmu_ShapeInterpol_xsectot_plot.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/SeesawZmu_ShapeInterpol_xsectot_plot.pdf"
+resonance_figures["figures/resonance/SeesawZe_N95_Inclusive.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/SeesawZe_N95_Inclusive.pdf"
+resonance_figures["figures/resonance/SeesawZmu_N95_Inclusive.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/SeesawZmu_N95_Inclusive.pdf"
+resonance_figures["figures/resonance/c_fid_eff_vs_mass_Ze_InclusiveNoM3L_Seesaw_minimal.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_fid_eff_vs_mass_Ze_InclusiveNoM3L_Seesaw_minimal.pdf"
+resonance_figures["figures/resonance/c_fid_eff_vs_mass_Zmu_InclusiveNoM3L_Seesaw_minimal.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_fid_eff_vs_mass_Zmu_InclusiveNoM3L_Seesaw_minimal.pdf"
 
 def FindFigures(figure_list):
 	possible_paths = []
@@ -116,8 +150,8 @@ def FindFigures(figure_list):
 def CopyFigures(figures_list):
 	for key, value in figures_list.iteritems():
 		command = "cp " + value + " " + key
-		#print command
-		os.system(command)
+		print command
+		#os.system(command)
 
 if __name__ == "__main__":
 	#FindFigures(sorted(resonance_figures.keys()))

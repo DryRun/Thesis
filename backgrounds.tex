@@ -56,38 +56,38 @@ The details of the modeling of each sample are described below. The generator, p
   \label{table:mc-generators}
 \end{table}
 
-\subsection{Systematic Uncertainties}\label{sec:prompt-background-uncertainties}
-Simulated Monte Carlo samples, whether signal or background, must be normalized to the integrated luminosity of the data. The weight assigned to each event is:
-
-\begin{equation}
-	w = \frac{\mathcal{L} \sigma_{\mathrm{process}}}{N_{\mathrm{sim}}},
-\end{equation}
-
-where $\mathcal{L}$ is the integrated luminosity of the data, $\sigma_{\mathrm{process}}$ is the cross section of the simulated process, and $N_{\mathrm{sim}}$ is the number of simulated events. The integrated luminosity carries an uncertainty of $2.8\%$, as described in section~\ref{sec:luminosity-measurement}. The cross sections are taken from calculations with uncertainties due to various sources, including the fixed order of the calculation, the choice of renormalization and factorization scales, and the PDFs. The uncertainties are shown in table~\ref{table:model-independent-cross-section-uncertainties}. 
-
-\begin{table}
-  \begin{center}
-    \begin{tabular}{c r c}
-      \hline
-      Sample     &Uncertainty &Reference\\
-      \hline
-      $Z$+jets   &10\% \\
-      $\ttbar+V$ &22\% &\cite{ttV} \\
-      $ZZ$       &4.3\% &App.~\ref{app:vbfnlo} \\
-      $WZ$       &7.6\% &App.~\ref{app:vbfnlo}\\
-      $\ttbar$   &10\% &\cite{TopXS} \\
-      single-$t$ &10\% &\cite{atlas_topmc}\\
-      \hline
-    \end{tabular}
-    \caption{Systematic uncertainties used for the MC samples that contribute to the background estimates.}
-    \label{table:model-independent-cross-section-uncertainties}
-  \end{center}
-\end{table}
+%\subsection{Systematic Uncertainties}\label{sec:prompt-background-uncertainties}
+%Simulated Monte Carlo samples, whether signal or background, must be normalized to the integrated luminosity of the data. The weight assigned to each event is:
+%
+%\begin{equation}
+%	w = \frac{\mathcal{L} \sigma_{\mathrm{process}}}{N_{\mathrm{sim}}},
+%\end{equation}
+%
+%where $\mathcal{L}$ is the integrated luminosity of the data, $\sigma_{\mathrm{process}}$ is the cross section of the simulated process, and $N_{\mathrm{sim}}$ is the number of simulated events. The integrated luminosity carries an uncertainty of $2.8\%$, as described in section~\ref{sec:luminosity-measurement}. The cross sections are taken from calculations with uncertainties due to various sources, including the fixed order of the calculation, the choice of renormalization and factorization scales, and the PDFs. The uncertainties are shown in table~\ref{table:model-independent-cross-section-uncertainties}. 
+%
+%\begin{table}
+%  \begin{center}
+%    \begin{tabular}{c r c}
+%      \hline
+%      Sample     &Uncertainty &Reference\\
+%      \hline
+%      $Z$+jets   &10\% \\
+%      $\ttbar+V$ &22\% &\cite{ttV} \\
+%      $ZZ$       &4.3\% &App.~\ref{app:vbfnlo} \\
+%      $WZ$       &7.6\% &App.~\ref{app:vbfnlo}\\
+%      $\ttbar$   &10\% &\cite{TopXS} \\
+%      Single-$t$ &10\% &\cite{atlas_topmc}\\
+%      \hline
+%    \end{tabular}
+%    \caption{Systematic uncertainties used for the MC samples that contribute to the background estimates.}
+%    \label{table:model-independent-cross-section-uncertainties}
+%  \end{center}
+%\end{table}
 
 
 
 \section{Reducible Backgrounds}\label{sec:reducible-backgrounds}
-The reducible backgrounds encompass a variety of processes in which a reconstructed lepton arises due to something away from the ``hard scatter'' interaction. The backgrounds are estimated using simulation or a data-driven technique, depending on the source. The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated from Monte Carlo, with scale factors applied to account for an observed overestimation in the photon-to-electron conversion rate (see section~\ref{sec:conversion-reweighting}). Other reducible contributions, such as $W/Z+$jets or $t\overline{t}$ where a jet fakes an electron or decays semileptonically, are estimated in a data-driven manner using the \emph{fake factor} method. 
+The reducible backgrounds encompass a variety of processes in which one or more reconstructed lepton arises due to a non-prompt process or a misidentification. Sources of such leptons include semileptonic hadron decays, misidentified jets, particles penetrating the calorimeter and leaving hits in the muon spectrometers, and asymmetric photon conversions in the detector. The backgrounds are estimated using simulation or a data-driven technique, depending on the source.  The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated from Monte Carlo, with scale factors applied to account for an observed overestimation in the photon-to-electron conversion rate (see section~\ref{sec:conversion-reweighting}). Other reducible contributions are estimated using a data-driven technique called the \emph{fake factor} method. 
 
 
 \subsection{Fake Factor Method}\label{sec:fake-factor-method}
@@ -133,7 +133,7 @@ Note that throughout this method, we have assumed that the leptons used for the 
 The remainder of this chapter presents the measurement of the fake factors $f$ for electrons, muons, and tau leptons. 
 
 \subsection{Electron Fake Factors}\label{sec:electron-fake-factors}
-The background estimation for fake electrons targets the reducible contribution from two sources: semileptonic heavy flavor decays and misidentified light hadrons. The electron denominator objects are defined by inverting either the IsEM electron identification criteria~\footnote{The parameter space between medium++ and loose++, rather than tight++ and medium++, is used for two reasons. First, for the model-independent trilepton analysis (chapter~\ref{ch:model-independent-trilepton-search}), electrons passing medium++ and failing loose++ are used to define a validation region to test the fake factor method. Second, requiring the electrons to fail medium++ reduces the prompt contamination in the denominator sample.} or the track impact parameter cut (exclusive OR), as shown in table~\ref{table:electron-denominator-definition}; the electron must pass all the remaining cuts listed in table~\ref{table:electron-muon-selections}. Additionally, an inefficiency is observed for loose offline electrons with respect to the loose electron triggers. This is due to the lack of Gaussian sum filter (GSF) tracking~\cite{TheATLASCollaboration:2012vr} at the trigger level. The inefficiency is mitigated by imposing the \verb.tight++. requirement on the $\Delta\eta$ and $\Delta\phi$ between the electron track and associated calorimeter cluster, with the goal of cutting out electrons with large amounts of bremsstrahlung, whose tracks are not reconstructed by the non-GSF algorithm in the trigger. 
+The background estimation for fake electrons targets the reducible contribution from two sources: semileptonic heavy flavor decays and misidentified light hadrons. The electron denominator objects are defined by inverting either the IsEM electron identification criteria~\footnote{The parameter space between \texttt{medium++} and \texttt{loose++}, rather than \texttt{tight++} and \texttt{medium++}, is used for two reasons. First, for the model-independent trilepton analysis (chapter~\ref{ch:model-independent-trilepton-search}), electrons passing \texttt{medium++} and failing \texttt{loose++} are used to define a validation region to test the fake factor method. Second, requiring the electrons to fail \texttt{medium++} reduces the prompt contamination in the denominator sample.} or the track impact parameter cut (exclusive OR), as shown in table~\ref{table:electron-denominator-definition}; the electron must pass all the remaining cuts listed in table~\ref{table:electron-muon-selections}. Additionally, an inefficiency is observed for loose offline electrons with respect to the loose electron triggers. This is due to the lack of Gaussian sum filter (GSF) tracking~\cite{TheATLASCollaboration:2012vr} at the trigger level. The inefficiency is mitigated by imposing the \texttt{tight++} requirement on the $\Delta\eta$ and $\Delta\phi$ between the electron track and associated calorimeter cluster, with the goal of cutting out electrons with large amounts of bremsstrahlung, whose tracks are not reconstructed by the non-GSF algorithm in the trigger. 
 
 
 \begin{table}[h]
@@ -141,7 +141,7 @@ The background estimation for fake electrons targets the reducible contribution 
   \begin{tabular}{ccc}
 	\hline
 	Criteria & Numerator & Denominator \\ \hline
-	IsEM ID & \verb.tight++. & !\verb.medium++. \&\& \verb.loose++.  \\
+	IsEM ID & \texttt{tight++} & !\texttt{medium++} \&\& \texttt{loose++}  \\
 	Impact Parameter Significance & $\frac{|d_0|}{\sigma_{d_0}} < 3$ & $3 < \frac{|d_0|}{\sigma_{d_0}} < 10$ \\
 	\hline
   \end{tabular}
@@ -233,7 +233,7 @@ To help clarify the origin of the structure in $\eta$ observed at low $\pt$, the
 The following sources of systematic uncertainty are considered:
 \begin{itemize}
   \item \textbf{Prompt subtraction}: The presence of real, prompt leptons from Standard Model processes in the sample used to measure the fake factors is accounted for using Monte Carlo simulation. Uncertainties on the simulated samples include luminosity; cross section uncertainties; and reconstruction, trigger, and identification efficiency scale factors. These lead to a maximum uncertainty of about $20\%$ where the prompt subtraction is largest. 
-  \item \textbf{Trigger efficiency correction}: As mentioned previously, an inefficiency is observed in the loose electron triggers for offline \verb.loose++. electrons. This is due to the lack of GSF tracking in the trigger. For the fake factor derivation, this affects electrons in the range $15~\mbox{GeV}<\pt<24~\mbox{GeV}$, where photon triggers are not available. Imposing the \verb.tight++. cut on the track-cluster matching (the $\Delta \eta$ and $\Delta \phi$ between the electron track and calorimeter cluster) mitigates most, but not all, of the inefficiency, by cutting out electrons with large amounts of bremsstrahlung whose track are not reconstructed in the trigger. Based on a comparison of loose electron and photon triggers in the range $24~\mbox{GeV}<\pt<85~\mbox{GeV}$, a correction of about $8\%$ is applied to loose electron-triggered events, and the same value is taken as systematic uncertainty.
+  \item \textbf{Trigger efficiency correction}: As mentioned previously, an inefficiency is observed in the loose electron triggers for offline \texttt{loose++} electrons. This is due to the lack of GSF tracking in the trigger. For the fake factor derivation, this affects electrons in the range $15~\mbox{GeV}<\pt<24~\mbox{GeV}$, where photon triggers are not available. Imposing the \texttt{tight++} cut on the track-cluster matching (the $\Delta \eta$ and $\Delta \phi$ between the electron track and calorimeter cluster) mitigates most, but not all, of the inefficiency, by cutting out electrons with large amounts of bremsstrahlung whose track are not reconstructed in the trigger. Based on a comparison of loose electron and photon triggers in the range $24~\mbox{GeV}<\pt<85~\mbox{GeV}$, a correction of about $8\%$ is applied to loose electron-triggered events, and the same value is taken as systematic uncertainty.
   \item \textbf{Extrapolation to signal region}: Two systematic uncertainties are assigned to account for bias due to the extrapolation of fake factors from the control region to the signal region. First, the cuts on $m_{\mathrm{T}}$ and $\Etmiss$ are varied from $<40~\mbox{GeV}$ to $<25~\mbox{GeV}$ and $<55~\mbox{GeV}$. A $\pt$-dependent systematic uncertainty of up to $15\%$ is assigned. Second, Monte Carlo-based truth studies indicate that the fake factor values are quite different for heavy- and light-flavor jets, so a difference in heavy flavor fraction between the control and signal regions will bias the fake factors. The effect of this is estimated using a $t\overline{t}$ Monte Carlo sample, and a flat systematic uncertainty of $20\%$ is assigned. See appendix~\ref{sec:appendix-el-ff-hflf-syst} for more information.
 \end{itemize}
 The systematic and total uncertainties on the fake factors are shown as a function of $\pt$ in figure~\ref{fig:electron-fake-factor-uncertainties}.

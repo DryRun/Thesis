@@ -1,4 +1,4 @@
-\chapter{Model Independent Trilepton Search}\label{ch:model-independent-trilepton-search}
+\chapter{Model-Independent Trilepton Search}\label{ch:model-independent-trilepton-search}
 
 Events containing three or more leptons are useful probes of phenomena beyond the Standard Model. The production of three or more leptons is predicted by many models of phenomena beyond the Standard Model, as described in section~\ref{sec:bsm}. The expected Standard Model backgrounds are typically small; depending on the flavor and charge of the three leptons, such events primarily arise from diboson production ($WZ$, $ZZ$), or from single boson ($W$, $Z/\gamma^{*}$) or $t\bar{t}$ production along with one or more leptons from misidentified or semileptonically decaying jets.  This dissertation presents two such searches: a model-independent search for nonresonant production of three or more leptons in many signal regions, and a signature-driven search for resonance trilepton production in the context of heavy leptons. 
 
@@ -12,7 +12,7 @@ This section describes the selection of events containing at least three leptons
 Collisions events for this analysis are triggered using the unprescaled single-electron or single-muon triggers with the lowest transverse momentum thresholds. At least one of the following triggers must have fired:
 
 \begin{itemize}
-	\item \texttt{ EF\_e24vhi\_medium1}: One electron with $\pt>24 \GeV$. The electron must satisfy cuts similar to the medium++ identification criteria at the trigger level, an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.1$, and cuts on the leakage into the hadronic calorimeter.
+	\item \texttt{ EF\_e24vhi\_medium1}: One electron with $\pt>24 \GeV$. The electron must satisfy cuts similar to the \texttt{medium++} identification criteria at the trigger level, an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.1$, and cuts on the leakage into the hadronic calorimeter.
 	\item \texttt{ EF\_e60\_medium1}: One electron with $\pt>60 \GeV$. The electron must also satisfy the medium identification cuts, but the isolation and leakage requirements are removed.
 	\item \texttt{ EF\_mu24i\_tight}: One muon with $\pt>24 \GeV$, satisfying an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.12$.
 	\item \texttt{ EF\_mu36\_tight}: One muon with $\pt>36 \GeV$, with no isolation requirement.
@@ -49,8 +49,8 @@ After dividing the events into these six exclusive categories, many signal regio
 \begin{itemize}
 	\item $\htlep$: the scalar sum of the transverse momenta of the leading three leptons. Events containing new particles with masses significantly greater than $m_W$ or $m_Z$ will typically have larger $\htlep$ than the Standard Model backgrounds.
 	\item Minimum $\pt^{\ell}$: the $\pt$ of the softest of the leading three leptons. As with $\htlep$, the $\pt$ of leptons produced in the decays of heavy particles will tend to be larger than those from the expected Standard Model backgrounds.
-	\item $\Htjets$: the scalar sum of the transverse momenta of all selected jets in the event. This variable is sensitive to the strong production of new physics where leptons are produced in the decays of heavy colored particles, such as squarks. Conversely, the Standard Model $WZ$ and $ZZ$ backgrounds are weakly produced, and have softer $\Htjets$ distributions.
-	\item $\Etmiss$: the magnitude of the missing transverse momentum in the event. In models of new physics, leptons are often produced with neutrinos in leptonic $W$ decays, or with new invisible particles, such as the stable neutralinos in many models of $R$-parity conserving SUSY. Requiring large $\Etmiss$ also suppress backgrounds due to $Z+$jets, where the jet decays semileptonically or is misidentified as a lepton. 
+	\item $\Htjets$: the scalar sum of the transverse momenta of all selected jets in the event. This variable is sensitive to the strongly produced new physics, where leptons are produced in the decays of heavy colored particles, such as squarks. Such events often contain hard jets in addition to the three leptons. Conversely, the Standard Model $WZ$ and $ZZ$ backgrounds are weakly produced, and have softer $\Htjets$ distributions.
+	\item $\Etmiss$: the magnitude of the missing transverse momentum in the event. In models of new physics, leptons can be produced in association with new invisible particles, such as stable neutralinos in $R$-parity conserving supersymmetry, or with neutrinos in leptonic $W$ decays. Requiring large $\Etmiss$ can distinguish such signals from the Standard Model backgrounds, where the $\Etmiss$ is primarily due to neutrinos from $W$ or $\tau$ decays. Requiring large $\Etmiss$ also suppresses backgrounds due to $Z+$jets, where the jet decays semileptonically or is misidentified as a lepton. 
 	\item $\meff$: the scalar sum of $\Htjets$, $\Etmiss$, and the $\pt$ of all identified leptons in the event. As with $\htlep$ by itself, multilepton production due to the decays of heavy particles will typically have a harder $\meff$ distribution than the Standard Model backgrounds.
 	\item $\mtw$: for events in the on-$Z$ categories, the transverse mass of the missing transverse momentum, $\ptmiss$, and the highest-$\pt$ lepton not associated with a $Z$ boson candidate, defined as:
 	\begin{equation}
@@ -100,7 +100,33 @@ Systematic uncertainties are assigned to the signal and background predictions t
 \begin{itemize}
 	\item Uncertainties on the reducible background estimates from the data-driven estimation method, as described in section~\ref{sec:fake-factor-method}. The uncertainties ranges between $20\%$ to $30\%$ for the electron fake factors, $25\%$ to $50\%$ for the muon fake factors, and $25\%$ to $30\%$ for the tau lepton fake factors.
 
-	\item The simulated signal and background samples are normalized to the integrated luminosity of the data. The uncertainties on the normalizations are described in section~\ref{sec:prompt-background-uncertainties}. For the dominant $WZ$ and $ZZ$ backgrounds, the normalization uncertainties are $7.6\%$ and $4.3\%$, respectively.
+  \item  Simulated Monte Carlo samples, whether signal or background, must be normalized to the integrated luminosity of the data. The weight assigned to each event is:
+  
+  \begin{equation}
+   w = \frac{\mathcal{L} \sigma_{\mathrm{process}}}{N_{\mathrm{sim}}},
+  \end{equation}
+  
+  where $\mathcal{L}$ is the integrated luminosity of the data, $\sigma_{\mathrm{process}}$ is the cross section of the simulated process, and $N_{\mathrm{sim}}$ is the number of simulated events. The integrated luminosity carries an uncertainty of $2.8\%$, as described in section~\ref{sec:luminosity-uncertainties}. The cross sections are taken from calculations with uncertainties due to various sources, including the fixed order of the calculation, the choice of renormalization and factorization scales, and the PDFs. For the dominant $WZ$ and $ZZ$ backgrounds, the predictions from \sherpa\ are compared to those from the next-to-leading-order generator \vbfnlo. The generators show good agreement, and the systematic uncertainty on the cross section is determined from \vbfnlo\ by varying the factorization and renormalization scales up and down by factors of two. The uncertainties are shown in table~\ref{table:model-independent-cross-section-uncertainties}. 
+
+  No systematic uncertainty is assigned to the normalization of the $Z+\gamma$ sample. Rather, a large uncertainty of 30\% is assigned due to the reweighting procedure described in section~\ref{sec:conversion-reweighting}. The $VVV^{(*)}$ sample is also not assigned an uncertainty due to its small contribution to the signal regions.
+  
+  \begin{table}
+    \begin{center}
+      \begin{tabular}{c c}
+        \hline
+        Sample     &Uncertainty\\
+        \hline
+        $\ttbar+V$ &30\%~\cite{Garzelli:2012gx,Campbell:2012en} \\
+        $ZZ$       &4.3\% \\
+        $WZ$       &7.6\%\\
+        \hline
+      \end{tabular}
+      \caption{Systematic uncertainties used for the MC samples that contribute to the background estimates.}
+      \label{table:model-independent-cross-section-uncertainties}
+    \end{center}
+  \end{table}
+
+  \item 
 
 	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron (section~\ref{sec:reco-electron-efficiency}) and muon (section~\ref{sec:reco-muon-efficiency}) scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$-$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$-$2.2\%$ (section~\ref{sec:event-reconstruction-taus}).
 
@@ -290,7 +316,7 @@ The events containing an intermediate $\tau_{\mathrm{had}}$ are much more abunda
 \begin{figure}[tbp]\centering
   \subfloat[Intermediate $\tau_{\mathrm{had}}$ $p_{T}$, on-$Z$]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_onZ_DY_TauPt.eps}}
   \hfill
-  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, on-$Z$]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_onZ_DY_TauEta}} .eps\\
+  \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, on-$Z$]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_onZ_DY_TauEta.eps}}\\
   \subfloat[Intermediate $\tau_{\mathrm{had}}$ $p_{T}$, off-$Z$/OSSF]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_offZ_OSSF_DY_TauPt.eps}}
   \hfill
   \subfloat[Intermediate $\tau_{\mathrm{had}}$ $\eta$, off-$Z$/OSSF]{\includegraphics[width=.44\columnwidth]{figures/modelindependent/inttau_offZ_OSSF_DY_TauEta.eps}} \\
