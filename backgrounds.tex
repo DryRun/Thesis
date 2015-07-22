@@ -1,5 +1,5 @@
 \chapter{Background Estimation}\label{ch:backgrounds}
-The relevant Standard Model processes contributing to multilepton final states are diboson production ($WZ$, $ZZ$), production of a top quark pair in association with an weak gauge boson ($t\overline{t}+V$), and triboson production ($VVV^{(*)}$, where $V=W$ or $Z$). Examples tree-level Feynman diagrams of these processes are shown in figure~\ref{fig:multilepton-feynman-diagrams}. These backgrounds, called \emph{prompt} backgrounds, are estimated using Monte Carlo (MC) simulation, as described in section~\ref{sec:prompt-backgrounds}. Significant backgrounds also arise from processes where at least one reconstructed lepton is due to the semileptonic decay of a hadron, the misidentification of a jet, or the asymmetric conversion of a photon in the detector; such backgrounds are called \emph{reducible} backgrounds. These backgrounds are estimated using either MC simulation or a data-driven technique called the \emph{fake factor} method, which is described in section~\ref{sec:fake-factor-method}. 
+The relevant Standard Model processes contributing to multilepton final states are diboson production ($WZ$, $ZZ$), production of a top quark pair in association with an weak gauge boson ($t\overline{t}+V$), and triboson production ($VVV^{(*)}$, where $V=W$ or $Z$). Examples tree-level Feynman diagrams of these processes are shown in figure~\ref{fig:multilepton-feynman-diagrams}. These backgrounds, called \emph{prompt} backgrounds, are estimated using Monte Carlo (MC) simulation, as described in section~\ref{sec:prompt-backgrounds}. Significant backgrounds also arise from processes where at least one reconstructed lepton is due to the semileptonic decay of a hadron, the misidentification of a jet, or the asymmetric conversion of a photon in the detector; such backgrounds are called \emph{reducible} backgrounds. These backgrounds are estimated using either MC simulation or a data-driven technique called the \emph{fake factor} method, and are described in section~\ref{sec:reducible-backgrounds}. 
 
 \begin{figure}[p]
 	\centering
@@ -32,8 +32,7 @@ The prompt backgrounds are estimated using Monte Carlo simulation. The hard-scat
 The details of the modeling of each sample are described below. The generator, parton shower, PDF set, underlying event tune, and accuracy of theoretical cross section for samples are summarized in table~\ref{table:mc-generators}.
 
 \begin{itemize}
-	\item \sherpa~\cite{sherpa} is used to model $WW$, $WZ$, and $ZZ$ production. Both bosons in the events decay leptonically. Up to three jets are included in the matrix element. An important feature of \sherpa\ is that it accurately models the $W+\gamma^{*}$ and $Z+\gamma^{*}$ contributions down to very low $\gamma^{*}$ masses; for electron decays, a cut of $m(ee)>100 \MeV$ is applied, while for muon and tau decays, \sherpa\ naturally cuts off the divergence. To increase the statistics in the phase space relevant for this analysis, the $WZ$ samples requires at least two leptons have $\pt>5 \GeV$. Finally, the $WZ$ sample also treats the $b$ and $c$ quarks as massive, which improves the modeling of heavy flavor jets at the cost of increased computation time. 
-	\item \sherpa\ is also used to model $Z+\gamma$ production, where the photon converts asymmetrically in the detector and is reconstructed as an electron. The events are reweighted to account for observed mismodeling in the conversion rate, described in section~\ref{sec:conversion-reweighting}.
+	\item \sherpa~\cite{sherpa} is used to model $WW$, $WZ$, and $ZZ$ production. Both bosons in the events decay leptonically. Up to three additional parton emissions are included in the matrix element. An important feature of \sherpa\ is that it accurately models the $W+\gamma^{*}$ and $Z+\gamma^{*}$ contributions down to very low $\gamma^{*}$ masses; for electron decays, a cut of $m(ee)>100 \MeV$ is applied, while for muon and tau decays, \sherpa\ naturally cuts off the divergence. To increase the statistics in the phase space relevant for this analysis, the $WZ$ samples requires at least two leptons to have $\pt>5 \GeV$. Finally, the $WZ$ sample also treats the $b$ and $c$ quarks as massive, which improves the modeling of heavy flavor jets at the cost of increased computation time. 
 	\item $\ttbarV$ production is modeled with \madgraph~\cite{madgraph}, with \pythia\ for the parton shower.
 	\item $WWW^{(*)}$, $ZWW^{(*)}$, and $ZZZ^{(*)}$ are modeled using \madgraph, with \pythia\ for the parton shower. Their contributions to all the signal regions are negligible.
 \end{itemize}
@@ -87,17 +86,17 @@ The details of the modeling of each sample are described below. The generator, p
 
 
 \section{Reducible Backgrounds}\label{sec:reducible-backgrounds}
-The reducible backgrounds encompass a variety of processes in which one or more reconstructed lepton arises due to a non-prompt process or a misidentification. Sources of such leptons include semileptonic hadron decays, misidentified jets, particles penetrating the calorimeter and leaving hits in the muon spectrometers, and asymmetric photon conversions in the detector. The backgrounds are estimated using simulation or a data-driven technique, depending on the source.  The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated from Monte Carlo, with scale factors applied to account for an observed overestimation in the photon-to-electron conversion rate (see section~\ref{sec:conversion-reweighting}). Other reducible contributions are estimated using a data-driven technique called the \emph{fake factor} method. 
+The reducible backgrounds encompass a variety of processes in which one or more reconstructed lepton arises due to a non-prompt process or a misidentification of a jet. Such leptons are referred to here as \emph{fake}\footnote{Note that real leptons from, e.g., semileptonic heavy flavor decays are included in the fake leptons.}. Sources of such leptons include semileptonic hadron decays, misidentified jets, particles penetrating the calorimeter and leaving hits in the muon spectrometers, and asymmetric photon conversions in the detector. The backgrounds are estimated using simulation or a data-driven technique, depending on the source.  The contribution from $Z+\gamma$, where the photon converts asymmetrically and is reconstructed as an electron, is estimated using \sherpa, as shown in table~\ref{table:mc-generators}. The events are reweighted to account for an observed mismodeling in the conversion rate, as described in section~\ref{sec:conversion-reweighting}. Other reducible contributions are estimated using a data-driven technique called the \emph{fake factor} method. 
 
 
 \subsection{Fake Factor Method}\label{sec:fake-factor-method}
-The fake factor method estimates the reducible backgrounds in each signal region by characterizing the fake or non-prompt leptons in terms of quantities sensitive to the fake process, such as isolation, impact parameter, or particle identification cuts. Two orthogonal sets of leptons are defined: \emph{numerator} leptons ($N$) satisfy the nominal signal lepton selection criteria, while \emph{denominator} leptons ($D$) satisfy most of the nominal selection criteria, except with inverted requirements on quantities sensitive to the fake process. The reducible background is estimated in a data-driven way from a control region consisting of events with a mix of numerator and denominator leptons, together with a parametrization of the relationship between numerators and denominators. 
+The fake factor method estimates the reducible backgrounds in each signal region by characterizing the fake leptons in terms of quantities sensitive to the non-prompt or fake process, such as isolation, impact parameter, or particle identification cuts. Two orthogonal sets of reconstructed leptons are defined: \emph{numerator} leptons ($N$) satisfy the nominal signal lepton selection criteria, while \emph{denominator} leptons ($D$) satisfy most of the nominal selection criteria, except with inverted requirements on quantities sensitive to the reducible process. The reducible background is estimated in a data-driven way from a control region consisting of events with a mix of numerator and denominator leptons, together with a parametrization of the relationship between numerators and denominators. 
 
 The relationship between numerator and denominator objects is called the \emph{fake factor}, $f$, defined as the ratio of the number of fake leptons satisfying the numerator criteria to those satisfying the denominator criteria. The fake factor is measured in a control region enriched in fake leptons. The success of the method depends largely on the extrapolation of the $f$ from the measurement control region to the signal regions. To capture the dependence on the event kinematics, $f$ can be measured as a function of various lepton or event variables; in this dissertation, the fake factors are all measured in bins of lepton $\pt$ and $\eta$. 
 
-Once $f$ has been measured, the reducible background is determined as follows. In signal events with three or more leptons, any subset of the leptons could be real or fake. For example, an event might contain two real leptons from a Drell-Yan process plus a fake third lepton. Such an event is labeled $\RRF$, indicating the ``truth'' classification of the three leptons as either real ($R$) or fake ($F$) (the ordering of the letters corresponds to some canonical order of the leptons, such as $\pt$ ordering). On the other hand, if an event contained, say, $W\rightarrow l\nu$ plus two fake leptons, the event would be labeled $\RFF$ (or $\FRF$ or $\FFR$). 
+Once $f$ has been measured, the reducible background is determined as follows. In signal events with three or more leptons, any subset of the leptons could be real or fake. For example, an event might contain two real leptons from a Drell-Yan process plus a non-prompt third lepton from a semileptonic heavy flavor decay. Label such an event $\RRF$, indicating the classification of the three leptons at truth level as either real ($R$) or fake ($F$). The ordering of the letters corresponds to some canonical ordering of the leptons, such as $\pt$ ordering. If an event contains one lepton from a $W$ decay plus two non-prompt or fake leptons, the event would be labeled $\RFF$ (or $\FRF$ or $\FFR$). 
 
-The quantity we desire to determine is the number of events containing three real leptons, $n_{\RRR}$. The quantity actually measured in a signal region is the number of events containing three numerator objects, $n_{\NNN}$. Any of these numerators could be real or fake, so the sample can be decomposed as:
+The quantity we desire to determine is the number of events containing three real leptons, $n_{\RRR}$. The quantity actually measured in a signal region is the number of events containing three numerator objects, $n_{\NNN}$. Any of these numerator objects could be real or fake, so the sample can be decomposed as:
 
 \begin{align}
 	n_{\NNN} & = n_{\RRR} + n_{\RRF} + n_{\RFR} + n_{\RFF} +\\
@@ -128,12 +127,14 @@ These equations contain eight equations and eight unknowns, so the system can be
 		 & \hspace{0.5in} + \DDD f_{1}f_{2}f_{3}
 \end{align}
 
-Note that throughout this method, we have assumed that the leptons used for the measurement of $f$ and the denominator leptons in trilepton events are always fake leptons. In practice, real leptons contaminate both of these samples, and is accounted for using simulation, where the lepton can be classified as real or fake using the truth record of the event.
+Note that throughout this method, we have assumed that the leptons used for the measurement of $f$ and the denominator leptons in trilepton events are always reducible leptons. In practice, real leptons contaminate both of these samples. The contribution from real denominator leptons is accounted for using simulation, where the lepton can be classified as real or fake using the truth record of the event.
 
 The remainder of this chapter presents the measurement of the fake factors $f$ for electrons, muons, and tau leptons. 
 
 \subsection{Electron Fake Factors}\label{sec:electron-fake-factors}
-The background estimation for fake electrons targets the reducible contribution from two sources: semileptonic heavy flavor decays and misidentified light hadrons. The electron denominator objects are defined by inverting either the IsEM electron identification criteria~\footnote{The parameter space between \texttt{medium++} and \texttt{loose++}, rather than \texttt{tight++} and \texttt{medium++}, is used for two reasons. First, for the model-independent trilepton analysis (chapter~\ref{ch:model-independent-trilepton-search}), electrons passing \texttt{medium++} and failing \texttt{loose++} are used to define a validation region to test the fake factor method. Second, requiring the electrons to fail \texttt{medium++} reduces the prompt contamination in the denominator sample.} or the track impact parameter cut (exclusive OR), as shown in table~\ref{table:electron-denominator-definition}; the electron must pass all the remaining cuts listed in table~\ref{table:electron-muon-selections}. Additionally, an inefficiency is observed for loose offline electrons with respect to the loose electron triggers. This is due to the lack of Gaussian sum filter (GSF) tracking~\cite{TheATLASCollaboration:2012vr} at the trigger level. The inefficiency is mitigated by imposing the \texttt{tight++} requirement on the $\Delta\eta$ and $\Delta\phi$ between the electron track and associated calorimeter cluster, with the goal of cutting out electrons with large amounts of bremsstrahlung, whose tracks are not reconstructed by the non-GSF algorithm in the trigger. 
+The background estimation for reducible electrons targets the reducible contribution from two sources: semileptonic heavy flavor decays and misidentified light hadrons. The electron denominator objects are required to pass all of the nominal signal electron requirements except for either failing the \texttt{medium++} requirements and passing the \texttt{loose++} requirements, or having a larger transverse impact parameter, $3<\frac{d_0}{\sigma_{d_0}}<10$, as shown in table~\ref{table:electron-denominator-definition}. The two inverted requirements are combined in an exclusive OR. The parameter space between \texttt{medium++} and \texttt{loose++}, rather than between \texttt{tight++} and \texttt{medium++}, is used for two reasons. First, for the model-independent trilepton analysis (chapter~\ref{ch:model-independent-trilepton-search}), electrons passing \texttt{medium++} and failing \texttt{loose++} are used to define a validation region to test the fake factor method. Second, requiring the electrons to fail \texttt{medium++} reduces the prompt contamination in the denominator sample.
+
+Besides passing all of the remaining cuts listed in table~\ref{table:electron-muon-selections}, denominator electrons with $\pt<\SI{24}{\giga\electronvolt}$ must pass an additional cut designed to mitigate an observed inefficiency for loose offline electrons with respect to the loose electron triggers used in the measurement of the fake factors. The inefficiency is likely due to the lack of Gaussian sum filter (GSF) tracking~\cite{TheATLASCollaboration:2012vr} at the trigger level. In order to remove electrons with large amounts of bremsstrahlung whose tracks may not be reconstructed by the non-GSF tracking algorithm in the trigger, denominator electrons are required to satisfy the \texttt{tight++} requirements on the matching between the track and the calorimeter cluster in $\Delta \eta$ and $\Delta \phi$. The cut is not applied to electrons with $\pt>\SI{24}{\giga\electronvolt}$, as photon triggers with no track requirement are used in this range. 
 
 
 \begin{table}[h]
@@ -149,29 +150,29 @@ The background estimation for fake electrons targets the reducible contribution 
   \label{table:electron-denominator-definition}
 \end{table}
 
-The fake factors are measured in a control sample of single-electron events, using the entire $20.3~\mbox{fb}^{-1}$ 2012 dataset. The triggers used to collect events are listed in table~\ref{table:electron-fake-factor-triggers}; photon triggers are used where available ($\pt>24~\mbox{GeV}$), and loose electron triggers are used otherwise ($15~\mbox{GeV}<\pt<24~\mbox{GeV}$). 
+The fake factors are measured in a control sample of single-electron events, using the entire $\SI{20.3}{\femto\barn\tothe{-1}}$ 2012 dataset. The triggers used to collect events are listed in table~\ref{table:electron-fake-factor-triggers}; photon triggers are used where available ($\pt>\SI{24}{\giga\electronvolt}$), and loose electron triggers are used otherwise ($\SI{15}{\giga\electronvolt}<\pt<\SI{24}{\giga\electronvolt}$). 
 
 \begin{table}[h]
   \centering
   \begin{tabular}{ccc}
   \hline
-	$p_T$ range (GeV) & Trigger & Average 2012 Prescale \\
+	$\pt$ range [GeV] & Trigger Name & Average 2012 Prescale \\
 	\hline
-	15-17 & EF\_e5\_loose0 & 56080.5\\
-	17-24 & EF\_e15vh\_loose0 & 1549.7\\
-	24-45 & EF\_g20\_loose & 4412.6\\
-	45-65 & EF\_g40\_loose & 348.3\\
-	65-85 & EF\_g60\_loose & 80.9\\
-	85-105 & EF\_g80\_loose & 28.5\\
-	105-125 & EF\_g100\_loose & 13.0\\
-	125-210 & EF\_g120\_loose & 1.0\\
-	$>$210 & EF\_g200\_etcut & 1.0\\ \hline
+	15--17 & 	\texttt{EF\_e5\_loose0}	& 56080.5\\
+	17--24 & 	\texttt{EF\_e15vh\_loose0} 	& 1549.7\\
+	24--45 & 	\texttt{EF\_g20\_loose}	& 4412.6\\
+	45--65 & 	\texttt{EF\_g40\_loose}	& 348.3\\
+	65--85 & 	\texttt{EF\_g60\_loose}	& 80.9\\
+	85--105 & 	\texttt{EF\_g80\_loose}	& 28.5\\
+	105--125 & 	\texttt{EF\_g100\_loose}	& 13.0\\
+	125--210 & 	\texttt{EF\_g120\_loose}	& 1.0\\
+	$>$210 & 	\texttt{EF\_g200\_etcut}	& 1.0\\ \hline
   \end{tabular}
-  \caption{Trigger used to collect electron numerator and denominator objects.}
+  \caption{Triggers used to collect electron numerator and denominator objects in various $\pt$ ranges, along with the average trigger prescale in 2012. Electron triggers are denoted by \texttt{EF\_e}, and photon triggers by \texttt{EF\_g}. The number indicates the $\Et$ cut in GeV. Triggers labeled \texttt{loose} or \texttt{loose0} impose shower shape requirements similar to the offline \texttt{loose++} electron identification criteria. The trigger labeled \texttt{etcut} only imposes the $\Et$ cut, with no shower shape requirement.}
   \label{table:electron-fake-factor-triggers}
 \end{table}
 
-Events are required to have $m_{\mathrm{T}}<40~\mbox{GeV}$ and $\Etmiss<40~\mbox{GeV}$ to suppress contamination from single-$W$ production, where $m_{\mathrm{T}}$ is the transverse mass of the electron and missing transverse energy in the event. The events are also required to have exactly one electron, numerator or denominator, in order to suppress prompt contamination from $Z\rightarrow ll$ events. The electrons are required to be trigger-matched to the trigger used to collect the event in the relevant $\pt$ range. The residual prompt contamination, comprised mostly of $W$ and $Z$ events with smaller contributions from Drell-Yan, $t\overline{t}$ and single-$t$, is subtracted using Monte Carlo. The numerator and denominator event yields, as well as the predicted prompt contamination, are shown in figure~\ref{fig:el-ff-data-prompt-subtractions}. The prompt contamination consists primarily of $W$ and $Z$ events. The relative size of the prompt contamination is quite large for numerator objects, reaching up to $\sim60\%$ for $\pt\sim 50~\mbox{GeV}$, despite the cuts intended to reduce the $W$ contribution. The fake factors are binned two-dimensionally in $\pt$ and $\eta$, shown in figure~\ref{fig:electron-fake-factor-values}. The $\pt$ dependence of the fake factors is shown in figure~\ref{fig:electron-fake-factors-1D-pt}, for the inclusive sample (left) and for various $|\eta|$ ranges (right).
+Events are required to have $m_{\mathrm{T}}<\SI{40}{\giga\electronvolt}$ and $\Etmiss<\SI{40}{\giga\electronvolt}$ to suppress contamination from single-$W$ production, where $m_{\mathrm{T}}$ is the transverse mass of the electron and missing transverse energy in the event. The events are also required to have exactly one electron, whether a numerator or a denominator, in order to suppress prompt contamination from $Z\rightarrow ll$ events. The electrons are required to be trigger-matched to the trigger used to collect the event in the relevant $\pt$ range. The residual prompt contamination, comprised mostly of $W$ and $Z$ events with smaller contributions from Drell-Yan, $t\overline{t}$ and single-$t$, is subtracted using Monte Carlo. The numerator and denominator event yields, as well as the predicted prompt contamination, are shown in figure~\ref{fig:el-ff-data-prompt-subtractions}. The prompt contamination consists primarily of $W$ and $Z$ events. The relative size of the prompt contamination is quite large for numerator objects, reaching up to $\sim60\%$ for $\pt\sim \SI{50}{\giga\electronvolt}$, despite the cuts intended to reduce the $W$ contribution. The fake factors are binned two-dimensionally in $\pt$ and $\eta$, shown in figure~\ref{fig:electron-fake-factor-values}. The $\pt$ dependence of the fake factors is shown in figure~\ref{fig:electron-fake-factors-1D-pt}, for the inclusive sample (left) and for various $|\eta|$ ranges (right).
 
 \begin{figure}
   \centering
@@ -216,16 +217,16 @@ Events are required to have $m_{\mathrm{T}}<40~\mbox{GeV}$ and $\Etmiss<40~\mbox
   \subfloat[Fake factors vs. $p_{\mathrm{T}}$ for different value of electron $|\eta|$] {
 	\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_FinalFF_1D_etaslices}}
   }
-  \caption{Electron fake factors projected in $p_{\mathrm{T}}$. The denominator requirements are different below and above $24~\GeV$, where the triggers switch from EF\_eXX to EF\_gXX; below, the additional requirements on $\Delta\eta_1$ and $\Delta\phi_2$ cause a large drop in the denominators, and a large increase in the fake factor values.}
+  \caption{Electron fake factors projected in $p_{\mathrm{T}}$. The denominator requirements are different below and above $24~\GeV$, where the triggers switch from electron triggers to photon triggers; below, the additional requirements on $\Delta\eta_1$ and $\Delta\phi_2$ cause a large drop in the denominators, and a large increase in the fake factor values.}
   \label{fig:electron-fake-factors-1D-pt}
 \end{figure}
 
-To help clarify the origin of the structure in $\eta$ observed at low $\pt$, the numerator and denominator counts are also shown versus $\eta$ for $\pt<24~\mbox{GeV}$ in figure~\ref{fig:electron-num-den-eta-lowpt}. The numerator counts are relative flat versus $\eta$ in the central region, and grow for $|\eta|\gtrsim 2$. Conversely, the denominators exhibit a significant increase near the barrel-endcap overlap region, and also for $|\eta|\gtrsim 2$. 
+To help clarify the origin of the structure in $\eta$ observed at low $\pt$, the numerator and denominator counts are also shown versus $\eta$ for $\pt<\SI{24}{\giga\electronvolt}$ in figure~\ref{fig:electron-num-den-eta-lowpt}. The numerator counts are relative flat versus $\eta$ in the central region, and grow for $|\eta|\gtrsim 2$. Conversely, the denominators exhibit a significant increase near the barrel-endcap overlap region, and also for $|\eta|\gtrsim 2$. 
 
 \begin{figure}[h]
   \centering
   \resizebox{5in}{!}{\includegraphics{figures/backgrounds/c_NumDen_lowPt_eta}}
-  \caption{Electron numerator and denominator object counts versus $\eta$ for $\pt<24~\mbox{GeV}$.}
+  \caption{Electron numerator and denominator object counts versus $\eta$ for $\pt<\SI{24}{\giga\electronvolt}$.}
   \label{fig:electron-num-den-eta-lowpt}
 \end{figure}
 
@@ -233,10 +234,11 @@ To help clarify the origin of the structure in $\eta$ observed at low $\pt$, the
 The following sources of systematic uncertainty are considered:
 \begin{itemize}
   \item \textbf{Prompt subtraction}: The presence of real, prompt leptons from Standard Model processes in the sample used to measure the fake factors is accounted for using Monte Carlo simulation. Uncertainties on the simulated samples include luminosity; cross section uncertainties; and reconstruction, trigger, and identification efficiency scale factors. These lead to a maximum uncertainty of about $20\%$ where the prompt subtraction is largest. 
-  \item \textbf{Trigger efficiency correction}: As mentioned previously, an inefficiency is observed in the loose electron triggers for offline \texttt{loose++} electrons. This is due to the lack of GSF tracking in the trigger. For the fake factor derivation, this affects electrons in the range $15~\mbox{GeV}<\pt<24~\mbox{GeV}$, where photon triggers are not available. Imposing the \texttt{tight++} cut on the track-cluster matching (the $\Delta \eta$ and $\Delta \phi$ between the electron track and calorimeter cluster) mitigates most, but not all, of the inefficiency, by cutting out electrons with large amounts of bremsstrahlung whose track are not reconstructed in the trigger. Based on a comparison of loose electron and photon triggers in the range $24~\mbox{GeV}<\pt<85~\mbox{GeV}$, a correction of about $8\%$ is applied to loose electron-triggered events, and the same value is taken as systematic uncertainty.
-  \item \textbf{Extrapolation to signal region}: Two systematic uncertainties are assigned to account for bias due to the extrapolation of fake factors from the control region to the signal region. First, the cuts on $m_{\mathrm{T}}$ and $\Etmiss$ are varied from $<40~\mbox{GeV}$ to $<25~\mbox{GeV}$ and $<55~\mbox{GeV}$. A $\pt$-dependent systematic uncertainty of up to $15\%$ is assigned. Second, Monte Carlo-based truth studies indicate that the fake factor values are quite different for heavy- and light-flavor jets, so a difference in heavy flavor fraction between the control and signal regions will bias the fake factors. The effect of this is estimated using a $t\overline{t}$ Monte Carlo sample, and a flat systematic uncertainty of $20\%$ is assigned. See appendix~\ref{sec:appendix-el-ff-hflf-syst} for more information.
+  \item \textbf{Trigger efficiency correction}: As mentioned previously, an inefficiency is observed in the loose electron triggers for offline \texttt{loose++} electrons. This is due to the lack of GSF tracking in the trigger. For the fake factor derivation, this affects electrons in the range $\SI{15}{\giga\electronvolt}<\pt<\SI{24}{\giga\electronvolt}$, where photon triggers are not available. Imposing the \texttt{tight++} cut on the track-cluster matching (the $\Delta \eta$ and $\Delta \phi$ between the electron track and calorimeter cluster) mitigates most, but not all, of the inefficiency, by cutting out electrons with large amounts of bremsstrahlung whose track are not reconstructed in the trigger. Based on a comparison of loose electron and photon triggers in the range $\SI{24}{\giga\electronvolt}<\pt<\SI{85}{\giga\electronvolt}$, a correction of about $8\%$ is applied to loose electron-triggered events, and the same value is taken as systematic uncertainty.
+  \item \textbf{Extrapolation to signal region}: Two systematic uncertainties are assigned to account for bias due to the extrapolation of fake factors from the control region to the signal region. First, the cuts on $m_{\mathrm{T}}$ and $\Etmiss$ are varied from $<\SI{40}{\giga\electronvolt}$ to $<\SI{25}{\giga\electronvolt}$ and $<\SI{55}{\giga\electronvolt}$. A $\pt$-dependent systematic uncertainty of up to $15\%$ is assigned. Second, Monte Carlo-based truth studies indicate that the fake factor values are quite different for heavy- and light-flavor jets, so a difference in heavy flavor fraction between the control and signal regions will bias the fake factors. The effect of this is estimated using a $t\overline{t}$ Monte Carlo sample, and a flat systematic uncertainty of $20\%$ is assigned. This study is described in section~\ref{sec:appendix-el-ff-hflf-syst}.
 \end{itemize}
-The systematic and total uncertainties on the fake factors are shown as a function of $\pt$ in figure~\ref{fig:electron-fake-factor-uncertainties}.
+
+The systematic and combined statistical and systematic uncertainties on the fake factors are shown as a function of $\pt$ in figure~\ref{fig:electron-fake-factor-uncertainties}.
 
 \begin{figure}[htbp] 
   \centering
@@ -246,7 +248,7 @@ The systematic and total uncertainties on the fake factors are shown as a functi
   \subfloat[Log scale] {
 	\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_FinalFF_systematics_logx_biggerlabels}}
   }
-  \caption{Electron fake factors vs. $\pt$ with systematic and total uncertainties. The statistical uncertainty includes both the data and prompt subtraction Monte Carlo statistics.}
+  \caption{Electron fake factors vs. $\pt$, with systematic and combined statistical and systematic uncertainties. The statistical uncertainty includes both the data and prompt subtraction Monte Carlo statistics.}
   \label{fig:electron-fake-factor-uncertainties}
 \end{figure}
 
@@ -255,25 +257,25 @@ The systematic and total uncertainties on the fake factors are shown as a functi
 The muon fake factor method is similar to that used in the ATLAS same-sign dilepton search on the \SI{7}{\tera\electronvolt} dataset~\cite{TheATLASCollaboration:2012df}. The method targets non-prompt muons from semileptonic heavy flavor decays, punch-through, and decays-in-flight of long-lived mesons by inverting the isolation requirements. Specifically, the denominator muons are defined as follows:
 \begin{itemize}
   \item Pass all numerator muon requirements in table~\ref{table:electron-muon-selections}, except the requirements on \verb.Etcone30., \verb.ptcone30., and $\frac{d_0}{\sigma_{d_0}}$. 
-  \item Loosen impact parameter cut:
+  \item Pass a looser impact parameter cut:
   \begin{equation}
 	|\frac{d_0}{\sigma_{d_0}}|<10
   \end{equation}
   \item Invert isolation:
   \begin{align}
-	\etcones{30},\ \ptcones{30} &> \left\{\begin{array}{ccc} 0.15 \pt & : & \pt<100~\mbox{GeV} \\ 15+0.01 \pt~\mbox{GeV} & : & \pt>100~\mbox{GeV} \end{array} \right. \\
+	\etcones{30},\ \ptcones{30} &> \left\{\begin{array}{ccc} 0.15 \pt & : & \pt<\SI{100}{\giga\electronvolt} \\ 15+0.01 \pt~\mbox{GeV} & : & \pt>\SI{100}{\giga\electronvolt} \end{array} \right. \\
 	\etcone{30} &< 2.0 \\
 	\ptcone{30} &< 2.0 \\
   \end{align}
-  \item If $\pt<40~\mbox{GeV}$, apply the same overlap requirement as the signal regions, removing the muon if $\Delta R (\mu,\ \mbox{jet})<0.3$. This overlap requirement is not applied for muons with $\pt>40~\mbox{GeV}$, which increases the statistical precision at the expense of additional systematic uncertainty. This is denoted by ``dR'' or ``non-dR'' below, for example in figure~\ref{fig:MuFake_ff_1D}.
+  \item If $\pt<\SI{40}{\giga\electronvolt}$, apply the same overlap requirement as the signal regions, removing the muon if $\Delta R (\mu,\ \mbox{jet})<0.3$. This overlap requirement is not applied for muons with $\pt>\SI{40}{\giga\electronvolt}$, which increases the statistical precision at the expense of additional systematic uncertainty. This is denoted by ``dR'' or ``non-dR'' below, for example in figure~\ref{fig:MuFake_ff_1D}.
 \end{itemize}
 
-The muon fake factors are measured in a same-sign dimuon sample, triggered by the \verb.EF_2mu13. trigger. The use of same-sign muons suppresses the prompt contamination from $Z/\gamma^{*}$ events. The measurement uses only muons with large track impact parameter significance, $|\frac{d_0}{\sigma_{d_0}}|>3$, to obtain a sample enriched in non-prompt muons (if both muons satisfy this requirement, then both are counted in the measurement). An extrapolation factor is derived from Monte Carlo to account for the fact that the signal region requires $|\frac{d_0}{\sigma_{d_0}}|<3$, as detailed below.
+The muon fake factors are measured in a same-sign dimuon sample. The trigger used to collect the events requires two muons with $\pt>\SI{13}{\giga\electronvolt}$. The use of same-sign muons suppresses the prompt contamination from $Z/\gamma^{*}$ events. The measurement uses only muons with large track impact parameter significance, $|\frac{d_0}{\sigma_{d_0}}|>3$, to obtain a sample enriched in non-prompt muons (if both muons satisfy this requirement, then both are counted in the measurement). An extrapolation factor is derived from Monte Carlo to account for the fact that the signal region requires $|\frac{d_0}{\sigma_{d_0}}|<3$, as detailed below.
 
-Two sets of fake factors are measured, depending on the jet activity in the event. In the following, jets are required to have $\pt>30~\mbox{GeV}$, and be separated from muons with $\Delta R(\mu,\ \mbox{jet})>0.3$. 
+Two sets of fake factors are measured, depending on the jet activity in the event. In the following, jets are required to have $\pt>\SI{30}{\giga\electronvolt}$, and be separated from muons with $\Delta R(\mu,\ \mbox{jet})>0.3$. 
 \begin{itemize}
   \item \textbf{Inclusive}: Applied to events with zero jets. The measurement uses the entire same-sign dimuon sample.
-  \item \textbf{Two-Jet}: Applied to events with one or more jet. The measurement uses same-sign dimuon events with at least two jets with $\pt>30~\mbox{GeV}$. 
+  \item \textbf{Two-Jet}: Applied to events with one or more jet. The measurement uses same-sign dimuon events with at least two jets with $\pt>\SI{30}{\giga\electronvolt}$. 
 \end{itemize}
 Fake muons from the two-jet sample are expected to come primarily from $W+\mbox{jets}$ and $t\overline{t}$ processes, while the inclusive sample also includes contributions from $b\overline{b}$. Figure~\ref{fig:MuFake_stacks} shows the $\pt$ distributions of numerator and denominator muons in the measurement sample along with the expected prompt
 contributions. 
@@ -328,7 +330,7 @@ where $\langle f \rangle$ is the total average fake factor. The measured fake fa
 \begin{figure}
 \centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/all_1D_pt}
 %\centering \includegraphics[width=0.48\textwidth]{figures/backgrounds/MuFake_ff_vseta}
-\caption{\label{fig:MuFake_ff_1D}Muon fake factors as a function of $\pt$. Two sets of fake factors are plotted, with and without the ``dR'' requirement. The vertical dashed line at 40 GeV indicates the point at which the fake factors switch from the ``dR'' points, where the denominators are required to be separated from nearby jets, to the lower, non-``dR'' points where the jet-isolation requirement is dropped to improve the statistics.}
+\caption{\label{fig:MuFake_ff_1D}Muon fake factors as a function of $\pt$. Two sets of fake factors are plotted, with and without the ``dR'' requirement. The vertical dashed line at $\SI{40}{\giga\electronvolt}$ indicates the point at which the fake factors switch from the ``dR'' points, where the denominators are required to be separated from nearby jets, to the lower, non-``dR'' points where the jet-isolation requirement is dropped to improve the statistics.}
 \end{figure}
 
 \begin{figure}
@@ -346,10 +348,10 @@ where $\langle f \rangle$ is the total average fake factor. The measured fake fa
 The sources of systematic uncertainty considered are listed below, and the fractional systematic uncertainty is shown in figure~\ref{fig:MuFake_syst}.
 
 \begin{itemize}
-  \item \textbf{Prompt subtraction}: The normalization of the simulated prompt subtraction samples is varied by $\pm10\%$, leading to a systematic uncertainty of $1$-$6\%$.
+  \item \textbf{Prompt subtraction}: The normalization of the simulated prompt subtraction samples is varied by $\pm10\%$, leading to a systematic uncertainty of $1\%$--$6\%$.
   \item \textbf{Topological dependence}: The difference between the inclusive and two-jet fake factors is taken as a systematic uncertainty. The uncertainty is symmetrized, using the full difference as both upward and downward uncertainty, and ranges from $3\%$ to $36\%$. 
   \item \textbf{Dependence on $d_0$ significance}: As mentioned previously, the extrapolation factor is derived in a number of different Monte Carlo samples. The largest deviation of $24\%$ is taken as a systematic uncertainty.
-  \item \textbf{Light flavor fraction}: As with the electron fake factors, the fake factor values are quite different for muons originating from light flavor (LF) sources ($\pi/K$ decay or punch-through) versus heavy flavor (HF) decays. The systematic uncertainty is described in detail in \cite{DeViveiros:1670929}; in brief, it uses the difference in momenta measured by the inner detector and muon spectrometer as a discriminant between HF and LF fakes, estimates the difference in HF/LF fraction between the control and signal regions, and finally uses HF and LF fake factors measured in Monte Carlo to estimate the effect of the discrepancy in HF/LF fraction. A systematic uncertainty of $2\%$ to $21\%$ is assigned. 
+  \item \textbf{Light flavor fraction}: As with the electron fake factors, the fake factor values are quite different for muons originating from light flavor (LF) sources ($\pi/K$ decay or punch-through) versus heavy flavor (HF) decays. The systematic uncertainty is derived using the difference in momenta measured by the inner detector and muon spectrometer as a discriminant between HF and LF fakes.  The difference in HF/LF fraction between the control and signal regions is estimated, and the HF and LF fake factors measured in Monte Carlo are used to estimate the effect of the discrepancy in HF/LF fraction. A systematic uncertainty of $2\%$ to $21\%$ is assigned. 
 \end{itemize}
 
 \begin{figure}
@@ -360,7 +362,7 @@ The sources of systematic uncertainty considered are listed below, and the fract
   \subfloat[ Two-jet FF] {
 	\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/MuFake_syst_2jet}}
   }
-  \caption{Systematic uncertainties on muon fake factor as a function of $p_{T}(\mu)$.  The left plot shows the uncertainties for the inclusive fake factor, while the right shows the uncertainty for the two-jet fake factor.}
+  \caption{Systematic uncertainties on muon fake factor as a function of $\pt(\mu)$.  The left plot shows the uncertainties for the inclusive fake factor, while the right shows the uncertainty for the two-jet fake factor.}
   \label{fig:MuFake_syst}
 \end{figure}
 
