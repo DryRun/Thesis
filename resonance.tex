@@ -296,10 +296,37 @@ The event selection is very similar to that used in the model-independent analys
 	\item The variable of interested used to apply the trilepton mass constraint is $\Delta m \equiv m_{3\ell}-m_{\ell^+\ell^-}$, where the invariant mass of the two leptons associated with a $Z$ boson decay is subtracted by the trilepton mass. This method reduces the impact of the lepton energy or momentum resolutions on the width of the resonance peak, at the cost of introducing some width due to the intrinsic width of the $Z$, $\Gamma_Z=2.4952\pm0.0023 \GeV$~\cite{pdg}. Over most of the mass range, this variable reduces the width of the signal peaks, as shown in table~\ref{table:deltam-m3l-comparison}. 
 
 	\begin{table}[htbp]
-
-		\caption{Comparison of the full-width, half-maximum of the signal peaks between the $\deltam$ and $m_{3\ell}$ variables.}
+		\centering
+		\begin{tabular}{|c||c|c||c|c|}
+				&	\multicolumn{2}{c}{$Z+e$} & \multicolumn{2}{c}{$Z+\mu$} \\
+			\hline
+			$m_{\lpm}$ [GeV] & FWHM ($m_{3\ell}$) [GeV] & FWHM ($\deltam$) [GeV] & FWHM ($m_{3\ell}$) [GeV] & FWHM ($\deltam$) [GeV] \\
+			100	&	6.57	&	5.99	&	4.73	&	6.82 \\
+			\hline
+			110	&	6.43	&	4.98	&	5.96	&	4.90 \\
+			\hline
+			120	&	5.58	&	5.89	&	5.29	&	5.21 \\
+			\hline
+			130	&	6.31	&	5.84	&	5.58	&	5.65 \\
+			\hline
+			140	&	6.62	&	6.44	&	6.30	&	6.25 \\
+			\hline
+			160	&	7.77	&	7.53	&	7.82	&	7.71 \\
+			\hline
+			180	&	8.77	&	8.22	&	9.06	&	8.67 \\
+			\hline
+			200	&	9.55	&	8.68	&	11.30	&	10.88 \\
+			\hline
+			250	&	11.62	&	10.23	&	498.70	&	14.81 \\
+			\hline
+			300	&	13.68	&	12.03	&	21.65	&	20.31 \\
+			\hline
+			400	&	17.73	&	15.56	&	33.68	&	31.78 \\
+			\hline
+		\end{tabular}
+		\caption{Comparison of the full-width, half-maxima of the signal peaks between the $\deltam$ and $m_{3\ell}$ variables. The signal peaks are modeled using a Voigtian function, a convolution of a Gaussian and a Lorentzian, fit to the Monte Carlo simulation. The fit is described in section~\ref{sec:resonance-signal-model}. The full-width, half-maximum of a Voigtian is given approximately by FWHM$\approx0.5346f_L + \sqrt{0.02166f_L^2 + f_G^2}$, where $f_L=2\gamma$ is the FWHM of the Lorentzian and $f_G=2\sigma\sqrt{2\log2}$ is the FWHM of the Gaussian.}
 		\label{table:deltam-m3l-comparison}
-	\end{table}
+\end{table}
 	  
 \end{itemize}
 
