@@ -27,12 +27,12 @@ Next, the reconstruction algorithm searches for a track within a cone of radius 
 For tracks with at least four silicon hits, the track and the cluster must also satisfy $|\Delta\eta|<0.05$. Finally, the cluster and track are rebuilt using algorithms optimized for measurement of the electron properties. The cluster is rebuilt sequentially in all four layers, using an area of $3\times7$ layer-2 cells in the barrel or $5\times5$ layer-2 cells in the end-caps. The tracks of electron candidates are refit using an optimized electron track filter based on the Gaussian Sum Filter (GSF) algorithm~\cite{TheATLASCollaboration:2012vr}. The GSF track and the cluster must satisfy tighter spatial matching criteria: $\Delta\phi<0.1$ in the direction of track bending, or $\Delta\phi<0.05$ in the opposite direction. GSF tracks with less than four silicon hits are required to satisfy even tighter criteria: $|\Delta\eta|<0.35$ or $0.2$ in the TRT barrel or end-cap, and $\Delta\phi<0.03$ in the direction of track bending or $\Delta\phi<0.02$ in the other direction. 
 
 \subsection{Identification}\label{sec:reco-electron-identification}
-Further requirements can be imposed on electron candidates to suppress backgrounds from sources like misidentified hadronic jets, photon conversions, and electrons from hadron decays. Three increasingly stringent sets of cuts are defined, called \texttt{loose++}, \texttt{medium++}, and \texttt{tight++}\footnote{An alternative method of identification using a likelihood-based multivariate method has been developed, but is not used in this dissertation.}. The analyses described in chapters~\ref{ch:model-independent-trilepton-search} and \ref{ch:trilepton-resonance-search} use the \texttt{tight++} cuts to select signal electrons. The \texttt{medium++} and \texttt{loose++} cuts to derive data-driven background estimates. The \texttt{loose++} set of cuts impose requirements on the shower shape in the first and second calorimeter layers, the quality of the track, the fraction of energy in hadronic calorimeter cells behind the LAr cells, and the spatial match of the track and the calorimeter cluster. The \texttt{medium++} set of cuts contains more stringent versions of the \texttt{loose++} cuts, and additionally require a small track impact parameter with respect to the primary vertex, a minimum number of high-threshold TRT hits associated with the track, and a hit in the innermost pixel layer. The \texttt{tight++} set of cuts again contain more stringent versions of the \texttt{medium++} cuts, with an additional cut on the ratio of the cluster energy to the track momentum ($E/p$) and a veto of candidates associated to a photon conversion vertex. 
+Further requirements can be imposed on electron candidates to suppress backgrounds from sources like misidentified hadronic jets, photon conversions, and electrons from hadron decays. Three increasingly stringent sets of cuts are defined, called \texttt{loose++}, \texttt{medium++}, and \texttt{tight++}\footnote{An alternative method of identification using a likelihood-based multivariate method has been developed, but is not used in this dissertation.}. The analyses described in chapters~\ref{ch:model-independent-trilepton-search} and \ref{ch:trilepton-resonance-search} use the \texttt{tight++} cuts to select signal electrons. The \texttt{medium++} and \texttt{loose++} cuts to derive data-driven background estimates. The \texttt{loose++} set of cuts impose requirements on the shower shape in the first and second calorimeter layers, the quality of the track, the fraction of energy in hadronic calorimeter cells behind the electromagnetic calorimeter cells, and the spatial match of the track and the calorimeter cluster. The \texttt{medium++} set of cuts contains more stringent versions of the \texttt{loose++} cuts, and additionally require a small track impact parameter with respect to the primary vertex, a minimum number of high-threshold TRT hits associated with the track, and a hit in the innermost pixel layer. The \texttt{tight++} set of cuts again contain more stringent versions of the \texttt{medium++} cuts, with an additional cut on the ratio of the cluster energy to the track momentum ($E/p$) and a veto of candidates associated to a photon conversion vertex. 
 
 %\textcolor{red}{Consider putting a table in instead of a block of text.}
 
 \subsection{Efficiency Measurements}\label{sec:reco-electron-efficiency}
-The efficiency to detect an electron can be factorized into several components: seed cluster detection, reconstruction, and identification~\cite{TheATLASCollaboration:2014vz}. The efficiency to detect a cluster in the electromagnetic calorimeter is very high, above $99\%$ for electrons with $\Et=\SI{15}{\giga\electronvolt}$ and $99.9\%$ for $\Et=\SI{45}{\giga\electronvolt}$. The reconstruction efficiency, covering the matching of a good-quality track to the cluster, and the identification efficiencies, covering the identification cuts with respect to reconstructed electrons, are measured using tag-and-probe techniques targeting $Z\rightarrow ee$ and $J/\Psi\rightarrow ee$ events. The combined reconstruction and identification efficiencies are shown in figure~\ref{fig:electron-id-efficiencies}. The reconstruction efficiency makes up $1\%$--$5\%$ of the total efficiency loss for electrons with $\Et<\SI{20}{\giga\electronvolt}$, and less than $1\%$ for electrons with $\Et>\SI{80}{\giga\electronvolt}$. The efficiencies are computed for both data and simulation, and the ratio between the two is used to correct the efficiency in simulation. The systematic uncertainty on the reconstruction efficiency is around 0.5\% (0.5\%--1.5\%) for electrons with $\pt>\SI{25}{\giga\electronvolt}$ ($\pt<\SI{25}{\giga\electronvolt}$), and 1\%--2\% (5\%--6\%) for the identification efficiency. 
+The efficiency to detect an electron can be factorized into several components: seed cluster detection, reconstruction, and identification~\cite{TheATLASCollaboration:2014vz}. The efficiency to detect a cluster in the electromagnetic calorimeter is very high, above $99\%$ for electrons with $\Et=\SI{15}{\giga\electronvolt}$ and $99.9\%$ for $\Et=\SI{45}{\giga\electronvolt}$. The reconstruction efficiency, covering the matching of a good-quality track to the cluster, and the identification efficiencies, covering the identification cuts with respect to reconstructed electrons, are measured using tag-and-probe techniques targeting $Z\rightarrow ee$ and $J/\Psi\rightarrow ee$ events. The combined reconstruction and identification efficiencies are shown in figure~\ref{fig:electron-id-efficiencies}. The reconstruction efficiency accounts for $1$--$5\%$ of the total efficiency loss for electrons with $\Et<\SI{20}{\giga\electronvolt}$, and less than $1\%$ for electrons with $\Et>\SI{80}{\giga\electronvolt}$. The efficiencies are computed for both data and simulation, and the ratio between the two is used to correct the efficiency in simulation. The systematic uncertainty on the reconstruction efficiency is around 0.5\% (0.5\%--1.5\%) for electrons with $\pt>\SI{25}{\giga\electronvolt}$ ($\pt<\SI{25}{\giga\electronvolt}$), and 1\%--2\% (5\%--6\%) for the identification efficiency. 
 
 
 \begin{figure}[htbp]
@@ -44,21 +44,15 @@ The efficiency to detect an electron can be factorized into several components: 
 	\subfloat[] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/reconstruction/el_eff_idplusreco_eta}}
 	}
-	\caption{The combined reconstruction and identification efficiencies with respect to electrons detected as a cluster in the electromagnetic calorimeter, shown as a function of $\Et$ (left) and $\eta$ (right). The error bars show the statistical uncertainty (inner) and the statistical plus systematic uncertainty (outer). The \emph{multilepton} identification cuts are optimized for low energy electrons in the $H\rightarrow ZZ^*\rightarrow 4\ell$ analysis, and are not used in this dissertation.}
+	\caption{The combined reconstruction and identification efficiencies with respect to electrons detected as a cluster in the electromagnetic calorimeter, shown as a function of $\Et$ (left) and $\eta$ (right)~\cite{TheATLASCollaboration:2014vz}. The error bars show the statistical uncertainty (inner) and the statistical plus systematic uncertainty (outer). The \emph{multilepton} identification cuts are optimized for low energy electrons in the $H\rightarrow ZZ^*\rightarrow 4\ell$ analysis, and are not used in this dissertation.}
 	\label{fig:electron-id-efficiencies}
 \end{figure}
 
 
 \subsection{Energy and Momentum Measurement}\label{sec:reco-electron-energymomentum}
-For electron candidates with at least four silicon hits, the energy of the electron is taken from the calorimeter measurement, while the trajectory is taken from the GSF track. Candidates with fewer silicon hits are not used in this dissertation. The energy resolution of the calorimeter is parametrized as:
+For electron candidates with at least four silicon hits, the energy of the electron is taken from the calorimeter measurement, while the trajectory is taken from the GSF track. Candidates with fewer than four silicon hits are not used in this dissertation.
 
-\begin{equation}
-	\frac{\sigma(E)}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c,
-\end{equation}
-
-where $a$, $b$, and $c$ are the sampling, noise, and constant terms, respectively, and generally vary with $\eta$. The design value of the sampling term is $9\mbox{--}10\%\,\mbox{GeV}^{1/2}$ in the central region, and worsens at higher pseudorapidities due to the increased material in front of the calorimeters. The noise term, due to electronics noise and pileup effects, is approximately $b = 350 \times \cosh\eta \MeV$. The constant term dominates the resolution at high energies, with a design value of $c=0.7\%$. 
-
-As the ATLAS calorimeters are non-compensating, the energy measurement is calibrated using a multivariate algorithm trained on single-electron Monte Carlo (MC) simulation to determine the most probable electron energy. The method takes into account differences between data and simulation in the energy scales of each longitudinal layer and other detector effects not modeled in simulation. 
+The energy measurement is calibrated using a multivariate algorithm trained on single-electron Monte Carlo (MC) simulation to determine the most probable electron energy. The method takes into account differences between data and simulation in the energy scales of each longitudinal layer and other detector effects not modeled in simulation. 
 
 After the initial simulation-based calibration, the electron energy scale and resolution are determined using $Z\rightarrow ee$ events. Corrections are applied to equalize the energy scale and resolution between data and simulation. The energy scales in data and simulation agree to within $\sim1\%$--$2\%$ in the barrel and $\sim4\%$ in the endcaps. The resolution corrections, parametrized as a Gaussian constant term, are aproximately $0.8\%$ in the barrel and $0.5\%$--$2.5\%$ in the end-caps. The systematic uncertainty on the energy scale ranges from $0.03\%$--$0.22$\% for $\Et=\SI{40}{\giga\electronvolt}$ and $0.27\%$--$2.25$\% for $\Et = \SI{200}{\giga\electronvolt}$, with larger uncertainties in the transition region between the barrel and the end-cap. The systematic uncertainty on the energy resolution is less than $10\%$ for electrons with $\Et<\SI{50}{\giga\electronvolt}$, and asymptotically approaches $\sim 40\%$ for high $\Et$.  The energy resolution is shown as a function of $\ET$ in figure~\ref{fig:reco-el-EER}.
 
@@ -83,7 +77,7 @@ After the initial simulation-based calibration, the electron energy scale and re
 \end{figure}
 
 \section{Muons}\label{sec:event-reconstruction-muons}
-Muons are identified by matching tracks in the muon spectrometer to tracks in the inner detector~\cite{TheATLASCollaboration:2014bm}. The requirements differ based on the instrumentation available in the vicinity of the muon candidate. The analyses described here use \emph{combined} (CB) muons, consisting of matched tracks reconstructed independently in the inner detector and the muon spectrometer. The muon momentum is determined from a statistical combination of the two track's parameters and their corresponding covariance matrices. Combined muons have the highest purity, but suffer from a loss of acceptance in the range $|\eta|<0.1$, where the muon spectrometer has gaps to accommodate services for the inner detector and calorimeters, and $1.1<\eta<1.3$, where some trajectories only pass through one muon station due to incomplete installation. The remaining categories are \emph{standalone} (SA) muons, consisting of a track ony in the muon spectrometer; \emph{segment-tagged} (ST) muons, consisting of an inner detector track and one or more track segments in the MDT or CSC chambers; and \emph{calorimeter-tagged} (CaloTag) muons, consisting of an inner detector track matched to a calorimeter energy deposit consistent with the passage of a muon. These categories can recover efficiency in regions of the detector with less instrumentation at the cost of lower muon purity. 
+Muons are reconstructed in several different ways, depending on the instrumentation available in the vicinity of the muon candidate~\cite{TheATLASCollaboration:2014bm}. The analyses described here use \emph{combined} (CB) muons, consisting of matched tracks reconstructed independently in the inner detector and the muon spectrometer (MS). The tracks in the MS are local track segments reconstructed within each MDT or CSC layer. The muon momentum is determined from a statistical combination of the two track's parameters and their corresponding covariance matrices. Combined muons have the highest purity, but suffer from a loss of acceptance in the range $|\eta|<0.1$, where the muon spectrometer has gaps to accommodate services for the inner detector and calorimeters, and $1.1<\eta<1.3$, where some trajectories only pass through one muon station due to incomplete installation. The remaining categories are \emph{standalone} (SA) muons, consisting of a track ony in the muon spectrometer; \emph{segment-tagged} (ST) muons, consisting of an inner detector track and one or more track segments in the MDT or CSC chambers; and \emph{calorimeter-tagged} (CaloTag) muons, consisting of an inner detector track matched to a calorimeter energy deposit consistent with the passage of a muon. These categories can recover efficiency in regions of the detector with less instrumentation at the cost of lower muon purity. 
 
 For all categories of muons, the inner detector track is required to have at least 1 pixel hit, at least 5 SCT hits, at most 2 pixel or SCT holes, and at least 9 TRT hits for $0.1<|\eta|<1.9$. Energy losses in the calorimeter due to ionization, bremsstrahlung, and electron pair production must also be taken into account. 
 
@@ -107,13 +101,13 @@ The efficiencies are measured using tag-and-probe techniques similar to those de
 	\subfloat[] {
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/reconstruction/mu_fig_05a}}
 	}
-	\caption{Muon reconstruction efficiencies as a function of $\eta$ for muons with $\pt>\SI{10}{\giga\electronvolt}$ (left), and as a function of $\pt$ for muons with $0.1<|\eta|<2.5$ (right). The uncertainty bars on the points indicate statistical uncertainties. The bottom plots show the ratio between the measured and simulated efficiencies, with the combination of statistical and systematic uncertainties indicated by the uncertainty bars.}
+	\caption{Muon reconstruction efficiencies as a function of $\eta$ for muons with $\pt>\SI{10}{\giga\electronvolt}$ (left), and as a function of $\pt$ for muons with $0.1<|\eta|<2.5$ (right)~\cite{TheATLASCollaboration:2014bm}. The uncertainty bars on the points indicate statistical uncertainties. The bottom plots show the ratio between the measured and simulated efficiencies, with the combination of statistical and systematic uncertainties indicated by the uncertainty bars.}
 	\label{fig:reco-muon-efficiency}
 \end{figure}
 
 
 \subsection{Energy Scale and Resolution}\label{sec:reco-muon-energymomentum}
-The muon momenta in simulation are scaled and smeared to match the momentum scale and resolution in data. The discrepancies can arise from several sources, such as the modeling of muon energy loss before reaching the muon spectrometer or the modeling of the detector and magnetic field. The corrections are derived from $J/\Psi\rightarrow\mu\mu$, $\Upsilon\rightarrow\mu\mu$, and $Z\rightarrow\mu\mu$ events using techniques similar to those described in section~\ref{sec:reco-electron-energymomentum}. The effect of the corrections on the invariant mass distribution of $Z\rightarrow\mu\mu$ events is shown in figure~\ref{fig:reco-muon-momentum-corrections}, along with the total systematic uncertainty. The muon resolution as measured in $Z$, $\Upsilon$, and $J/\Psi$ events is shown in figure~\ref{fig:reco-muon-resolution}.
+The muon momenta in simulation are scaled and smeared to match the momentum scale and resolution in data. The discrepancies arise from mismodeling in various parts of the simulation, such as the muon energy loss before reaching the MS, the detector and its alignment, or the magnetic field. The corrections are derived from $J/\Psi\rightarrow\mu\mu$, $\Upsilon\rightarrow\mu\mu$, and $Z\rightarrow\mu\mu$ events using techniques similar to those described in section~\ref{sec:reco-electron-energymomentum}. The effect of the corrections on the invariant mass distribution of $Z\rightarrow\mu\mu$ events is shown in figure~\ref{fig:reco-muon-momentum-corrections}, along with the total systematic uncertainty. The muon resolution as measured in $Z$, $\Upsilon$, and $J/\Psi$ events is shown in figure~\ref{fig:reco-muon-resolution}.
 
 \begin{figure}[htbp]
 	\centering
@@ -141,7 +135,7 @@ The muon momenta in simulation are scaled and smeared to match the momentum scal
 
 
 \section{$\tau$ Leptons}\label{sec:event-reconstruction-taus}
-The signature of $\tau$ leptons is significantly more complex than electrons and muons due to the fact that they decay to a diverse set of final states. Tau leptons have a proper decay length of $87 \micron$, and therefore typically decay before reaching the active layers of the detector. The leading decay modes are shown in table~\ref{table:reco-tau-decays}. The branching fractions to $e\overline{\nu}_e\nu_{\tau}$ or $\mu\overline{\nu}_{\mu}\nu_{\tau}$ are 17.83\% and 17.41\%, respectively. The remaining $64.8\%$ of decays are to hadrons plus a neutrino. The hadronic decay modes contain one charged pion in $72\%$ of the decays, and three charged pions in $22\%$ of the decays; the majority of the remainder contain one or more kaons. The hadronic decay modes also frequently contain neutral pions, with $78\%$ containing at least one neutral pion. 
+The signature of $\tau$ leptons is significantly more complex than electrons and muons due to the fact that they decay to a diverse set of final states. Tau leptons have a proper decay length of $87 \micron$, and therefore typically decay before reaching the active layers of the detector. The leading decay modes are shown in table~\ref{table:reco-tau-decays}. The branching fractions to $e\overline{\nu}_e\nu_{\tau}$ or $\mu\overline{\nu}_{\mu}\nu_{\tau}$ are 17.83\% and 17.41\%, respectively~\cite{pdg}. The remaining $64.8\%$ of decays are to hadrons plus a neutrino. The hadronic decay modes contain one charged pion in $72\%$ of the decays, and three charged pions in $22\%$ of the decays; the majority of the remainder contain one or more kaons. The hadronic decay modes also frequently contain neutral pions, with $78\%$ containing at least one neutral pion. 
 
 
 \begin{table}[htbp]
@@ -169,7 +163,7 @@ The signature of $\tau$ leptons is significantly more complex than electrons and
 	\label{table:reco-tau-decays}
 \end{table}
 
-In this dissertation, no effort is made to identify or reconstruct leptonic $\tau$ decays ($\tau_{\mathrm{lep}}$), regarding them only as electrons or muons plus missing transverse momentum (see section~\ref{sec:reco-met}). Hadronic $\tau$ decays ($\tau_{\mathrm{had}}$) are identified using their visible decay products, namely the neutral and charged hadrons, which are collectively called $\tau_{\mathrm{had-vis}}$. The signature consists of a narrow jet with one or three tracks, called one-prong or three-prong decays, respectively. Up to two $\pi^0\rightarrow\gamma\gamma$ decays are also included. The reconstruction and identification proceeds as follows~\cite{TheATLASCollaboration:2014tga}:
+In this dissertation, no effort is made to identify or reconstruct leptonic $\tau$ decays ($\tau_{\mathrm{lep}}$), regarding them only as electrons or muons plus missing transverse momentum (see section~\ref{sec:reco-met}). Hadronic $\tau$ decays ($\tau_{\mathrm{had}}$) are identified using their visible decay products, namely the neutral and charged hadrons, which are collectively called $\tau_{\mathrm{had-vis}}$. The signature consists of a narrow jet with one or three tracks, called one-prong or three-prong decays, respectively. Up to two $\pi^0\rightarrow\gamma\gamma$ decays are also included. The reconstruction and identification proceeds as follows~\cite{TheATLASCollaboration:2015be}:
 
 \begin{itemize}
 	\item Jets are reconstructed using the anti-$k_t$ algorithm with a distance parameter of $R=0.4$, built from TopoClusters calibrated with a local hadronic calibration. Jets with $\pt>\SI{10}{\giga\electronvolt}$ and $|\eta|<2.5$ are used as seeds for $\tau$ lepton candidates.
@@ -192,21 +186,21 @@ In this dissertation, no effort is made to identify or reconstruct leptonic $\ta
 	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/tau_5b}}
 	}
-	\caption{Inverse background efficiency (rejection power) versus signal efficiency for the BDT-based offline $\tau$ identification algorithm. (a) shows the efficiency for $\tau$ leptons with $\SI{20}{\giga\electronvolt}<\pt<\SI{40}{\giga\electronvolt}$, and (b) shows the efficiency for $\tau$ leptons with $\pt>\SI{40}{\giga\electronvolt}$. The three points on each curve correspond to the \texttt{BDT-tight}, \texttt{BDT-medium}, and \texttt{BDT-loose} working points, in order of increasing signal efficiency and decreasing background rejection power. The background consists of simulated multijet events, while the signal consists of simulated $Z$, $W$, and $Z'$ events decaying to $\tau$ leptons. }
+	\caption{Inverse background efficiency (rejection power) versus signal efficiency for the BDT-based offline $\tau$ identification algorithm~\cite{TheATLASCollaboration:2015be}. (a) shows the efficiency for $\tau$ leptons with $\SI{20}{\giga\electronvolt}<\pt<\SI{40}{\giga\electronvolt}$, and (b) shows the efficiency for $\tau$ leptons with $\pt>\SI{40}{\giga\electronvolt}$. The three points on each curve correspond to the \texttt{BDT-tight}, \texttt{BDT-medium}, and \texttt{BDT-loose} working points, in order of increasing signal efficiency and decreasing background rejection power. The background consists of simulated multijet events, while the signal consists of simulated $Z$, $W$, and $Z'$ events decaying to $\tau$ leptons. }
 	\label{fig:reco-tau-efficiency}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/tau_11a}}
-	\caption{Correction factors applied to simulation to equalize the efficiency to that measured in data, as measured in $Z$ tag-and-probe data. The error bars show the combined statistical and systematic uncertainty.}
+	\caption{Correction factors applied to simulation to equalize the efficiency to that measured in data, as measured in $Z$ tag-and-probe data~\cite{TheATLASCollaboration:2015be}. The error bars show the combined statistical and systematic uncertainty.}
 	\label{fig:reco-tau-efficiency-scale-factors}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/tau_9}}
-	\caption{Electron rejection power versus 1-track $\tau_{\mathrm{had}}$ efficiency for the electron rejection BDT. }
+	\caption{Electron rejection power versus 1-track $\tau_{\mathrm{had}}$ efficiency for the electron rejection BDT~\cite{TheATLASCollaboration:2015be}. }
 	\label{fig:reco-tau-electron-rejection-efficiency}
 \end{figure}
 
@@ -216,7 +210,7 @@ The hadronic $\tau$ reconstruction and identification are based on calorimeter c
 \begin{figure}[htbp]
 	\centering
 	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/tau_fig_16a}}
-	\caption{Energy resolution for hadronically decaying $\tau$ leptons with one associated track in various pseudorapidity regions. The resolution is the standard deviation of a Gaussian fit to the distribution of $\frac{E_{\mathrm{reco}}-E_{\mathrm{true-vis}}}{E_{\mathrm{true-vis}}}$ in bins of $E_{\mathrm{true-vis}}$ and $|\eta_{\mathrm{true-vis}}|$.}
+	\caption{Energy resolution for hadronically decaying $\tau$ leptons with one associated track in various pseudorapidity regions~\cite{TheATLASCollaboration:2015be}. The resolution is the standard deviation of a Gaussian fit to the distribution of $\frac{E_{\mathrm{reco}}-E_{\mathrm{true-vis}}}{E_{\mathrm{true-vis}}}$ in bins of $E_{\mathrm{true-vis}}$ and $|\eta_{\mathrm{true-vis}}|$.}
 	\label{fig:reco-tau-energy-resolution}
 \end{figure}
 
@@ -231,7 +225,7 @@ The reconstruction of jets in the calorimeter is based on topological clusters o
 \begin{figure}[htbp]
 	\centering
 	\resizebox{0.9\textwidth}{!}{\includegraphics{figures/reconstruction/jet_02}}
-	\caption{Overview of the jet reconstruction, showing the inputs to and outputs from the jet finding algorithms. The bottom two rows show the reconstruction of calorimeter jets, while the top two rows show jets built from truth particles in simulation and from tracks.}
+	\caption{Overview of the jet reconstruction, showing the inputs to and outputs from the jet finding algorithms~\cite{TheATLASCollaboration:2015ds}. The bottom two rows show the reconstruction of calorimeter jets, while the top two rows show jets built from truth particles in simulation and from tracks.}
 	\label{fig:reco-jet-reconstruction-flowchart}
 \end{figure}
 
@@ -257,7 +251,7 @@ The geometry of the jet is corrected to point from the primary event vertex, rat
 \begin{figure}[htbp]
 	\centering
 	\resizebox{0.8\textwidth}{!}{\includegraphics{figures/reconstruction/jet_03}}
-	\caption{Overview of the jet calibration scheme. }
+	\caption{Overview of the jet calibration scheme~\cite{TheATLASCollaboration:2015ds}. }
 	\label{fig:reco-jet-calibration-flowchart}
 \end{figure}
 
@@ -282,12 +276,12 @@ A large number of systematic uncertainties are assigned to the in situ calibrati
 	\subfloat[ $\pt^{\mathrm{jet}}=\SI{300}{\giga\electronvolt}$] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/reconstruction/jet_64d}}
 	} \\
-	\caption{Sample-dependent fractional jet energy scale (JES) systematic uncertainty as a function of $\pt^{\mathrm{jet}}$ (top) and $\eta$ (bottom), at fixed values of $\eta$ or $\pt^{\mathrm{jet}}$, respectively. The jets are reconstruction using the anti-$k_{\mathrm{T}}$ algorithm with a radius parameter of $R=0.4$ from clusters at the LCW scale, and are calibrated as described in the text. The shaded area shows the total systematic uncertainty, while the colored lines show the contribution of various indivudal sources of uncertainty.}
+	\caption{Sample-dependent fractional jet energy scale (JES) systematic uncertainty as a function of $\pt^{\mathrm{jet}}$ (top) and $\eta$ (bottom), at fixed values of $\eta$ or $\pt^{\mathrm{jet}}$, respectively~\cite{TheATLASCollaboration:2015ds}. The jets are reconstruction using the anti-$k_{\mathrm{T}}$ algorithm with a radius parameter of $R=0.4$ from clusters at the LCW scale, and are calibrated as described in the text. The shaded area shows the total systematic uncertainty, while the colored lines show the contribution of various indivudal sources of uncertainty.}
 	\label{fig:reco-jes-uncertainty}
 \end{figure}
 
 \subsection{Pileup Suppression}\label{sec:reco-jets-jvf}
-Jets due to pileup interactions can be suppressed using the track information, at the cost of introducing some pileup-dependence to the jet reconstruction inefficiency. For a given jet and primary vertex, the \emph{jet vertex fraction} (JVF) is defined as the ratio of the $\sum \pt$ of tracks associated with the jet and matched to the primary vertex to the $\sum\pt$ of all tracks associated to the jet, shown schematically in figure~\ref{fig:jvf-cartoon}. Specifically, letting $\mathcal{T}$ be the set of tracks associated to the jet, the JVF is defined as:
+Jets due to pileup interactions can be suppressed using the track information, at the cost of introducing some pileup-dependence to the jet reconstruction inefficiency~\cite{TheATLASCollaboration:2013vb}. For a given jet and primary vertex, the \emph{jet vertex fraction} (JVF) is defined as the ratio of the $\sum \pt$ of tracks associated with the jet and matched to the primary vertex to the $\sum\pt$ of all tracks associated to the jet, shown schematically in figure~\ref{fig:jvf-cartoon}. Specifically, letting $\mathcal{T}$ be the set of tracks associated to the jet, the JVF is defined as:
 
 \begin{equation}\label{eqn:jvf}
 	\mathrm{JVF}=\frac{\sum_{i\in\mathcal{T}} p_{\mathrm{T},i} \Theta_V(i)} {\sum_{i\in\mathrm{jet}} p_{\mathrm{T},i} },
@@ -298,7 +292,7 @@ where $\Theta_V(i)=1$ if the track $i$ is matched to the primary vertex and $0$ 
 \begin{figure}[htbp]
 	\centering
 	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/reconstruction/jvf_cartoon.png}}
-	\caption{Schematic representation of the jet vertex fractions in the case of two jets and two primary vertices. $f$ is the fraction of track $\pt$ in jet 1 due to tracks associated with vertex PV2.}
+	\caption{Schematic representation of the jet vertex fractions in the case of two jets and two primary vertices~\cite{TheATLASCollaboration:2013vb}. $f$ is the fraction of track $\pt$ in jet 1 due to tracks associated with vertex PV2.}
 	\label{fig:jvf-cartoon}
 \end{figure}
 
@@ -314,7 +308,7 @@ The algorithm used to tag $b$-jets is an artificial neural network called the MV
 	\item \textbf{JetFitter}: Constructs a line connecting the primary vertex with one or more points associated with $b$- or $c$-hadron decays using a Kalman filter. The algorithm makes use of variables similar to the SV1 algorithm, along with the flight length significance between decays. Note that the algorithm does not require secondary vertices, allowing for the identification of decays with only one track. 
 \end{itemize}
 
-The MV1 algorithm is trained on simulated data, using $b$-jets as signal and light quark jets as background, and returns a tag weight for each jet. The tag weight is used to establish working points with a given signal efficiency and background rejection power, as shown in figure~\ref{fig:reco-b-tagging-efficiency-rejection}. The model-independent triplepton analysis uses the working point with $80\%$ signal efficiency. The performance of the algorithm as a function of transverse momentum is shown in figure~\ref{fig:reco-b-tagging-efficiency-pt}.
+The MV1 algorithm is trained on simulated data, using $b$-jets as signal and light quark jets as background, and returns a tag weight for each jet. The tag weight is used to establish working points with a given signal efficiency and background rejection power, as shown in figure~\ref{fig:reco-b-tagging-efficiency-rejection}. The model-independent trilepton analysis uses the working point with $80\%$ signal efficiency, with a corresponding light-flavor rejection power of about 25. The performance of the algorithm as a function of transverse momentum is shown in figure~\ref{fig:reco-b-tagging-efficiency-pt}.
 
 \begin{figure}[htbp]
 	\centering
@@ -427,7 +421,7 @@ Jets are required to have $\pt>\SI{30}{\giga\electronvolt}$, in order to limit t
 
 Jets consistent with originating from the decay of a $b$-hadron are identified using the MV1 algorithm~\cite{TheATLASCollaboration:2014vj}, with an efficiency of $80\%$. 
 
-The missing transverse momentum, $\metvec$, is calculated using the \texttt{MET\_Egamma10NoTau\_RefFinal} algorithm. Calorimeter cells associated with electrons or photons with $\pt>\SI{10}{\giga\electronvolt}$ are calibrated specifically to the corresponding object. Cells associated with $\tau$ leptons are calibrated as jets, rather than as hadronically decaying $\tau$ leptons, due to the ambiguity between jets and $\tau$ leptons when using \texttt{BDT-loose} $\tau$ leptons in the data-driven reducible background estimate, described in section~\ref{sec:ff-tau}. 
+For the missing transverse momentum calculation, calorimeter cells associated with electrons or photons with $\pt>\SI{10}{\giga\electronvolt}$ are calibrated specifically to the corresponding object. Cells associated with $\tau$ leptons are calibrated as jets, rather than as hadronically decaying $\tau$ leptons, due to the ambiguity between jets and $\tau$ leptons when using \texttt{BDT-loose} $\tau$ leptons in the data-driven reducible background estimate, described in section~\ref{sec:ff-tau}. 
 
 
 

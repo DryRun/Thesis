@@ -1,6 +1,6 @@
 \chapter{Theoretical Motivation}\label{ch:theory}
 
-The LHC is capable of producing proton-proton collisions with a center-of-mass energy of up to $\sqrt{s}=14~\mbox{TeV}$. Accounting for the composite nature of the proton, these collisions give access to phenomena with characteristic energies approximately up to the TeV scale, which couple in some fashion to quarks or gluons. To date, the Standard Model (SM) of Particle Physics has accurately described most phenomena observed in collider experiments up to this energy scale. A small number of observations, however, as well as a few technical and aesthetic concerns, reveal deficiencies in the theory. Numerous theories have been propose to remedy the deficiencies, many of which make testable predictions for the LHC.
+The LHC is capable of producing proton-proton collisions with a center-of-mass energy of up to $\sqrt{s}=14~\mbox{TeV}$. Accounting for the composite nature of the proton, these collisions give access to phenomena with characteristic energies approximately up to the TeV scale, which couple in some fashion to quarks or gluons. To date, the Standard Model (SM) of Particle Physics has accurately described most phenomena observed in collider experiments up to this energy scale. A small number of observations, however, as well as a few technical and aesthetic concerns, reveal deficiencies in the theory. Numerous theories have been proposed to remedy the deficiencies, many of which make testable predictions for the LHC.
 
 This chapter describes the theories underlying the LHC's exploration of physics at the TeV scale. The Standard Model physics is described first, followed by its known shortcomings and their possible consequences at the LHC. Emphasis is placed on theories predicting the production of several charged leptons, which are the subject of the searches described in chapters~\ref{ch:model-independent-trilepton-search} and \ref{ch:trilepton-resonance-search}.
 
@@ -29,7 +29,7 @@ where $\slashed{\partial}\equiv \gamma^{\mu}\partial_{\mu}$ and $\gamma^{\mu}$ a
 	D_{\mu} = \partial_{\mu} - i g t^a A^a_{\mu},
 \end{equation}
 
-where $g$ is a coupling constant associated with the gauge interaction, $t_a$ are the generators of the Lie algebra of $G$, and $A^a_{\mu}(x)$ are vector fields associated with the gauge bosons of $G$, which transform under the action of $G$ as:
+where $g$ is a coupling constant associated with the gauge interaction and $A^a_{\mu}(x)$ are vector fields associated with the gauge bosons of $G$, which transform under the action of $G$ as:
 
 \begin{equation}\label{eqn:gauge-field-transformation}
 	A^a_{\mu}(x)t_a \rightarrow V(x) \left(A^a_{\mu}(x)t^a + \frac{i}{g} \partial_{\mu}\right) V^{\dagger}(x) \\
@@ -65,7 +65,7 @@ For non-Abelian gauge groups with nonzero structure constants $f^{abc}$, the squ
 \subsection{Particle Content}
 The Standard Model is a gauge theory with gauge group $G_{\mathrm{SM}}=SU(3)_c\otimes SU(2)_L \otimes U(1)_Y$, roughly corresponding to the strong, weak, and electromagnetic forces, respectively. The theory contains a fermion field for every observed matter particle. The fermions can be grouped into three generations, each containing an up-type quark with charge $\pm\frac23$, a down-type quark with charge $\pm\frac13$, a lepton with charge $\pm1$, and a neutrino with charge $0$. The generations are identical except for the particles' masses. The fermions and their transformation properties under the Standard Model gauge group are listed in table~\ref{table:standard-model-particles}. The quarks are charged under all three gauge groups, and thus interact via the strong, weak, and electromagnetic forces. The leptons, on the other hand, are only charged under $\mathrm{SU}(2)_L\otimes \mathrm{U}(1)_Y$, and hence interact via the weak and electromagnetic forces, but not the strong force. 
 
-The bosonic content of the Standard Model consists of a spin-1 boson for each generator of $\mathrm{SU}(3)_c\times SU(2)_L \times U(1)_Y$, yielding eight gluons for $\mathrm{SU}(3)_c$ and four electroweak gauge bosons for $\mathrm{SU}(2)_L\times U(1)_Y$, plus the spin-0 Higgs boson. 
+The bosonic content of the Standard Model consists of the spin-0 Higgs boson, plus a spin-1 boson for each generator of $\mathrm{SU}(3)_c\times SU(2)_L \times U(1)_Y$, yielding eight gluons for $\mathrm{SU}(3)_c$ and four electroweak gauge bosons for $\mathrm{SU}(2)_L\times U(1)_Y$. 
 
 % Consider doing TJ's strategy of describing the basic principles of constructing the SM, a la Iliopolous. 
 
@@ -77,7 +77,7 @@ The bosonic content of the Standard Model consists of a spin-1 boson for each ge
 		$\mathrm{SU}(2)_L$ & $\mathbf{2}$ & $\mathbf{1}$ & $\mathbf{1}$ & $\mathbf{2}$ & $\mathbf{1}$ \\
 		$\mathrm{U}(1)_Y$ & $\frac16$ & $\frac23$ & $-\frac13$ & $-\frac12$ & $-1$ \\
 	\end{tabular}
-	\caption{Matter particles (fermions) of the Standard Model, their representations under $\mathrm{SU}(3)_c$ and $\mathrm{SU}(2)_L$, and their charges under $\mathrm{U}(1)_Y$.}
+	\caption{Matter particles (fermions) in a single generation of the Standard Model, their representations under $\mathrm{SU}(3)_c$ and $\mathrm{SU}(2)_L$, and their charges under $\mathrm{U}(1)_Y$. The left- and right-handed fermions are distinguished by the subscripts $L$ and $R$.}
 	\label{table:standard-model-particles}
 \end{table}
 
@@ -121,13 +121,13 @@ The strong sector of the Standard Model is a non-abelian $\mathrm{SU}(3)_c$ gaug
 
 QCD describes drastically different phenomena at high and low energies. At low energies, the most tangible consequence of the strong interaction, perhaps, is that most of the matter in the universe is composed of protons and neutrons, not individual quarks. Indeed, free quarks have never observed in nature, except for the short-lived top quark; rather, quarks are always confined into hadrons, bound states of quarks that are neutral under the strong interaction. On the other hand, in the high energy limit, the strength of the interaction becomes small, and quarks and gluons behave as nearly free particles.
 
-This behavior, called \emph{asymptotic freedom}, was described in 1973 by Wilczek and Gross, and independently Politzer~\cite{Gross:1973id,Politzer:1973fx}. Under the renormalization group, the strong coupling constant, $\alpha_s = \frac{g_s}{4\pi}$, changes with the energy scale of the interaction, $Q$. To one-loop order in $\alpha_s$, the running is given by:
+This behavior, called \emph{asymptotic freedom}, was described in 1973 by Wilczek and Gross, and independently Politzer~\cite{Gross:1973id,Politzer:1973fx}. Under the renormalization group, the strong coupling constant, $\alpha_s = \frac{g_s}{4\pi}$, changes with the energy scale of the interaction, $Q$. To one-loop order in $\alpha_s$, the running of $\alpha_s$ is given by:
 
 \begin{equation}
 \alpha_s(Q) = \frac{\alpha_s(M)}{1 + (b_0 \alpha_s/2\pi)\log(Q/M)},
 \end{equation}
 
-where $b_0=11-\frac{2}{3}n_f$ for $n_f$ fermion fields. With $n_f=6$, corresponding to the six quark flavors, $\frac{d\alpha_s{Q}}{dQ}<0$; hence the coupling decreases with $Q$. On the other hand, as $Q$ decreases, $\alpha_s(Q)$ increases, diverging at
+where $b_0=11-\frac{2}{3}n_f$ for $n_f$ fermion fields, and $M$ is an arbitrary energy scale at which the strong coupling constant $\alpha_s(M)$ has been measured. With $n_f=6$, corresponding to the six quark flavors, $\frac{\mathrm{d}\alpha_s(Q)}{\mathrm{d}Q}<0$; hence the coupling decreases as $Q$ increases. At high energies, $Q\gtrsim \SI{1}{\giga\electronvolt}$, quarks interact weakly, and perturbative calculations are reliable. On the other hand, as $Q$ decreases, $\alpha_s(Q)$ increases. The one-loop expression diverges at
 \begin{equation}
 Q=M\exp\left(\frac{8\pi^2}{b_0g^2}\right) \equiv \Lambda_{\mathrm{QCD}}.
 \end{equation}
@@ -146,7 +146,7 @@ Over the short duration of the collision, the colliding parton can be assigned a
 	\sigma_{AB\rightarrow X} = \sum_{a\in A,\,b\in B}\int \mathrm{d}x_a\, \mathrm{d}x_b\, f_{a/A}(x_a,\,\mu_F^2) f_{b/B}(x_b,\,\mu_F^2) \hat{\sigma}_{ab\rightarrow X},
 \end{equation}
 
-where $a$ and $b$ represent partons within protons $A$ and $B$ with momentum fractions $x_a$ and $x_b$, respectively, and $\hat{\sigma}_{ab\rightarrow X}$ is the hard scattering cross section for those partons. The PDFs are determined from fits to existing data; the dependence on $x$ must be determined from the data, while the dependence on the factorization scale can be derived from the DGLAP equations~\cite{Gribov:1972ri,Dokshitzer:1977sg,Altarelli:1977zs}. An example is shown in figure~\ref{fig:theory-pdf-example}. Note that this calculation depends on the choice of unphysical scales, $\mu_F$ and also the scale of renormalization used in the calculation of $\hat{\sigma}$. Theoretical systematic uncertainties due to the choice of scales are assigned by varying these scales up and down, e.g. by factors of 2. 
+where $a$ and $b$ represent partons within protons $A$ and $B$ with momentum fractions $x_a$ and $x_b$, respectively, and $\hat{\sigma}_{ab\rightarrow X}$ is the hard scattering cross section for those partons. The PDFs are determined from fits to existing data; the dependence on $x$ must be determined from the data, while the dependence on the factorization scale can be derived from the DGLAP equations~\cite{Gribov:1972ri,Dokshitzer:1977sg,Altarelli:1977zs}. An example is shown in figure~\ref{fig:theory-pdf-example}. Note that this calculation depends on the choice of unphysical scales, $\mu_F$ and also the scale of renormalization used in the calculation of $\hat{\sigma}$, effectively due to the truncation of the calculation at finite order in the perturbative expansion. Theoretical systematic uncertainties are assigned by varying these scales up and down, e.g. by factors of 2. 
 
 \begin{figure}[htbp]
 	\centering
@@ -267,9 +267,9 @@ The fermion masses arise from the Yukawa coupling terms between the fermions and
  
  The $\lambda_{u,d,l}^{ij}$ are complex matrices of coupling constants. These are, in general, not symmetric or Hermitian, and to identify the physical mass eigenstates, the matrices must be diagonalized. The Yukawa matrices can be decomposed using the singular value decomposition as:
 
-\begin{align}
-	\lambda_u &= U_u D_u W_u^{\dagger},\ \lambda_d = U_d D_d W_d^{\dagger},\ \lambda_l &= U_l D_l W_l^{\dagger},
-\end{align}
+\begin{equation}
+	\lambda_u = U_u D_u W_u^{\dagger},\ \lambda_d = U_d D_d W_d^{\dagger},\ \lambda_l = U_l D_l W_l^{\dagger},
+\end{equation}
  
 where $U_{u,d,l}$ and $W_{u,d,l}$ are unitary matrices, and $D_{u,d,l}$ are diagonal, non-negative matrices. Making a change of variables,
 
@@ -297,13 +297,12 @@ The Lagrangian describing the interactions of fermions and gauge bosons is:
 where, similarly to equation~\ref{eqn:covariant-derivative-qcd}, the covariant derivative $D_{\mu}$ is given by:
 
 \begin{align}\label{eqn:covariant-derivative-ew}
-	D_{\mu} &= \partial_{\mu} - i g \tau^a W^{a\mu} - i g' Y B^{\mu},
+	D_{\mu} &= \partial_{\mu} - i g \tau^a W^{a\mu} - i g' Y B^{\mu}, \\
 	&= \partial_{\mu} - i \frac{g}{\sqrt{2}}\left(W_{\mu}^+ \tau^+ + W_{\mu}^- \tau^-\right) - i\frac{g}{\cos\theta_w} Z_{\mu}\left(\tau^3 - \sin^2\theta_w Q\right) - i e A_{\mu} Q.
 \end{align}
 
 In the first equation, $\tau^a$ are operators corresponding to the action of a given generator of the $\mathrm{SU}(2)_L$ Lie algebra, and $Y$ is an operator corresponding to the action of the generator of $\mathrm{U}(1)_Y$, which simply returns the hypercharge. The second equation is written in terms of the physical gauge boson fields, with $\tau^{\pm}=\left(\tau^1 \pm i \tau^2\right)$ and $Q=\tau^3+Y$. For the left-handed doublets in the fundamental representation of $\mathrm{SU}(2)_L$, $\tau^a$ can be taken to be the Pauli matrices, $\tau^a=\frac12 \sigma^a$. For right-handed singlets in the trivial representation of $\mathrm{SU}(2)_L$, $\tau^a$ are zero. In other words, the right-handed fermions do not interact with the $W^{a\mu}$. 
 
-In terms of the physical gauge bosons, $W^{\pm}$, $Z^0$, and $A$, 
 
 The fermion couplings to the gauge bosons are complicated by the fact that the mass eigenstates do not necessarily coincide with the gauge eigenstates, due to the off-diagonal Yukawa couplings in section~\ref{sec:standard-model-fermion-masses}. The diagonalization procedure alters the couplings of the quarks to the $W^{\pm}$ bosons. The quark-$W^{\pm}$ couplings can be written in terms of the current $J^{\mu\pm}=\sum_{i} \frac1{\sqrt{2}}\left(\overline{u}_L^i\gamma^{\mu}d_L^i\right)$ as:
 
@@ -311,12 +310,12 @@ The fermion couplings to the gauge bosons are complicated by the fact that the m
 	\Delta\mathcal{L} = g (W^+_{\mu}J^{\mu+}_W + W^{-}_{\mu}J^{\mu -}_{W})
 \end{equation}
 
-Under the transformation in equation~\ref{eqn:yukawa-diagonalizaiton}, $J^{\mu\pm}\rightarrow \sum_{ij}\frac{1}{\sqrt{2}} \overline{u}_L^i \gamma^{\mu} V^{ij} d_L^j$, where $V^{ij}$ is a $3\times 3$ unitary matrix known as the \emph{Cabibbo-Kobayashi-Maskawa} (CKM) matrix, $V = U_{u}^{\dagger} U_d$. $V$ implying that weak decays mix the three generations of quarks; quark flavor is not conserved in weak decays, as is readily observed in hadron decays, e.g. $K^{\pm}\rightarrow \pi^{\pm}+\pi^0$. Further, $V$ contains one nontrivial complex phase, allowing for $CP$ violation in weak decays. 
+Under the transformation in equation~\ref{eqn:yukawa-diagonalization}, $J^{\mu\pm}\rightarrow \sum_{ij}\frac{1}{\sqrt{2}} \overline{u}_L^i \gamma^{\mu} V^{ij} d_L^j$, where $V^{ij}$ is a $3\times 3$ unitary matrix known as the \emph{Cabibbo-Kobayashi-Maskawa} (CKM) matrix, $V = U_{u}^{\dagger} U_d$. The non-zero off-diagonal elements of $V$ imply that weak decays mix the three generations of quarks; quark flavor is not conserved in weak decays, as is readily observed in hadron decays, e.g. $K^{\pm}\rightarrow \pi^{\pm}+\pi^0$. Further, $V$ contains one nontrivial complex phase, allowing for $CP$ violation in weak decays. 
 
 Note that the lepton sector does not contain an analogous mixing matrix for weak decays, due to the presence of only a single Yukawa matrix $\lambda^{ij}_l$. Hence lepton flavor and $CP$ are conserved in leptonic weak decays.
 
 \subsubsection{Trilepton Production}
-In proton-proton collisions at the LHC, the production of three or more charged leptons proceeds through at least two electroweak gauge bosons, which can be real or virtual, or a Higgs boson. The branching fractions of $W^{\pm}$ and $Z^0$ bosons to leptons are shown in table~\ref{fig:theory-WZ-BR}. Leptons can be produced in several ways (neglecting leptons due to interactions with the detector for the moment):
+In proton-proton collisions at the LHC, the production of three or more charged leptons proceeds through at least two electroweak gauge bosons, which can be real or virtual, or a Higgs boson. The branching fractions of $W^{\pm}$ and $Z^0$ bosons to leptons are shown in table~\ref{table:theory-WZ-BR}. Leptons can be produced in several ways (neglecting leptons due to interactions with the detector for the moment):
 
 \begin{itemize}
 	\item Weak gauge bosons decaying directly to leptons: $W^{\pm}\rightarrow \ell^{\pm}\nu_{\ell}$ or $Z^0\rightarrow \ell^{\pm}\ell^{\mp}$.
@@ -350,7 +349,7 @@ Phenomena not described by the Standard Model include the following:
 		|\Delta m_{21}^2| &\cong 7.5\times 10^{-5}~\mbox{eV}^2 \\
 		|\Delta m_{31}^2| &\cong 2.5\times 10^{-3}~\mbox{eV}^2.
 	\end{align}
-	These relations hold only if at least two of the neutrino masses are nonzero. On the other hand, $\beta$-decay experiments and cosmological observations indicate an upper bound on the neutrino mass scale of order $m_{v_i} \lesssim \mathcal{O}(0.1-1)$~\cite{Aseev:2011ia, Abazajian:2011ck, Ade:2013zuv}.
+	These relations hold only if at least two of the neutrino masses are nonzero. On the other hand, $\beta$-decay experiments and cosmological observations indicate an upper bound on the neutrino mass scale of order $m_{v_i} \lesssim \mathcal{O}(0.1-\SI{1}{\electronvolt})$~\cite{Aseev:2011ia, Abazajian:2011ck, Ade:2013zuv}.
 
 	\item \textbf{Dark matter}: Astrophysical observations suggest the existence of a large amount of non-Standard Model matter which interacts only gravitationally with baryonic matter. The earliest tension with known physics comes from galactic rotation curves, the distribution of rotational velocities of stars about the galactic center as a function of radius~\cite{1980ApJ_238_471R}. The rotational velocities $v(r)$ can be compared with the expectation from the observed matter distribution, $\tilde{v}(r)=\sqrt{\frac{M(r)}{r}}$, where $M(r)$ is the observed mass at radius less than $r$. At large distances from the galactic center, the observed rotation curve behaves like $v(r)\sim$constant, while the expected rotation curves behaves like $v(r)\sim \frac{1}{\sqrt{r}}$. 
 
@@ -407,6 +406,8 @@ Theoretical deficiencies of the Standard Model include the following:
 		\mathcal{L}_{\Theta}=\theta_{\mathrm{QCD}} \frac{\alpha_s}{8\pi}G^{\mu \nu a} \tilde{G}^{a}_{\mu\nu},
 	\end{equation}
 	where $-\pi\leq\theta_{\mathrm{QCD}}\leq\pi$ is the effective $\Theta$ parameter after diagonalizing the quark mass matrix, $G^{a}_{\mu\nu}=\partial_{\mu}\mathcal{A}_{\mu}^{a}-\partial_{\nu}\mathcal{A}_{\mu}^{a} - g_s f^{abc}\mathcal{A}_{\mu}^{b} \mathcal{A}_{\nu}^{c}$ is the gluon field strength tensor, and $\tilde{G}^a_{\mu\nu}=\epsilon_{\mu\nu\alpha\beta}G^{\alpha\beta a}$ is its dual~\cite{pdg-axions}. However, this term is severely constrained by measurements of the neutron dipole moment~\cite{PhysRevLett.97.131801}, with a limit of $|\theta_{\mathrm{QCD}}|\lesssim 10^{-10}$. 
+
+	Axions are a leading candidate for the resolution of the strong $CP$ problem~\cite{Peccei:400569}. These are typically very weakly coupled, and would not be observable at the LHC.
 
 	\item \textbf{Free parameters}: The Standard Model contains 19 free parameters. In terms of measured quantities, these are the 6 quark masses $m_{q_i}$, 3 lepton masses $m_{l_i}$, 3 CKM mixing angles $\theta_{ij}$ and 1 CKM phase $\delta$, 3 gauge couplings $g_i$, the QCD vacuum angle $\theta_{\mathrm{QCD}}$, the Higgs field vacuum expectation value $v$, and the Higgs mass, $m_H$. These parameters are measured; their values are not predicted by the theory. It remains unknown why the Yukawa couplings range over six orders of magnitude, for example, nor why the fermions fall into three identical generations. 
 

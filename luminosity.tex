@@ -1,7 +1,7 @@
 \chapter{Luminosity Measurement}\label{ch:luminosity}
 \section{Run I Luminosity}
 
-The ATLAS Run I data were recorded from 2011 to 2012, with a center-of-mass collision energy of $\sqrt{s}=\SI{7}{\tera\electronvolt}$ in 2011 and $\sqrt{s}=\SI{8}{\tera\electronvolt}$ during 2012. Integrated luminosities of $L=\SI{5.46}{\femto\barn\tothe{-1}}$ and $\SI{22.8}{\femto\barn\tothe{-1}}$ were delivered by the LHC in the two years, of which $\SI{5.08}{\femto\barn\tothe{-1}}$ and $\SI{21.3}{\femto\barn\tothe{-1}}$ were recorded by the ATLAS detector. The recorded luminosity accounts for the data acquisition inefficiency, as well as the warm start period, an interval of several minutes after the LHC has declared stable beams during which the tracking detectors are ramped to high voltage and the pixel detector preamplifiers are turned on. After masking data recorded while one or more detector subsystems were not functioning properly, $\SI{4.57}{\femto\barn\tothe{-1}}$ and $\SI{20.3}{\femto\barn\tothe{-1}}$ of data are considered usable for physics analyses. The volume of delivered, recorded, and physics-ready data are shown as a function of time in figure~\ref{fig:luminosity-runI}. 
+The ATLAS Run I data were recorded from 2011 to 2012, with a center-of-mass collision energy of $\sqrt{s}=\SI{7}{\tera\electronvolt}$ in 2011 and $\sqrt{s}=\SI{8}{\tera\electronvolt}$ during 2012. Integrated luminosities of $L=\SI{5.46}{\femto\barn\tothe{-1}}$ and $\SI{22.8}{\femto\barn\tothe{-1}}$ were delivered by the LHC in the two years, of which $\SI{5.08}{\femto\barn\tothe{-1}}$ and $\SI{21.3}{\femto\barn\tothe{-1}}$ were recorded by the ATLAS detector. The recorded luminosity accounts for the data acquisition inefficiency, as well as the warm start period, an interval of several minutes after the LHC has declared stable beams during which the tracking detectors are ramped to high voltage and the pixel detector preamplifiers are turned on. After masking data recorded while one or more detector subsystems were not functioning properly, $\SI{4.57}{\femto\barn\tothe{-1}}$ and $\SI{20.3}{\femto\barn\tothe{-1}}$ of data are considered usable for physics analyses. The delivered, recorded, and physics-ready luminosity are shown as a function of time in figure~\ref{fig:luminosity-runI}. 
 
 The LHC was typically operated with 1042 and 1368 colliding bunches in 2011 and 2012, respectively, with a bunch spacing of $\SI{50}{\nano\second}$. The peak instantaneous luminosity reached values as high as $\mathcal{L}\sim\SI[per-mode=symbol]{8e33}{\centi\meter\tothe{-2}\second\tothe{-1}}$, corresponding to a peak average pileup value of $\mu\sim37$. The distribution of pileup values in 2011 and 2012 data are shown in figure~\ref{fig:luminosity-pileup}. 
 
@@ -24,7 +24,7 @@ The LHC was typically operated with 1042 and 1368 colliding bunches in 2011 and 
 % New section?
 
 \section{Measurement Overview}\label{sec:luminosity-overview}
-The instantaneous luminosity at a $pp$ collider is given by~\cite{Grafstrom:2015go,Aad:2013ucp}:
+In terms of observed interaction rates, rather than beam parameters as in equation~\ref{eqn:lumi}, the instantaneous luminosity at a $pp$ collider is given by~\cite{Grafstrom:2015go,Aad:2013ucp}:
 
 \begin{equation}
 	\mathcal{L} = \frac{R_{\mathrm{inel}}}{\sigma_{\mathrm{inel}}},
@@ -42,7 +42,7 @@ The instantaneous luminosity is measured by ATLAS using several detectors and al
 	\mathcal{L} = \frac{\mu_{\mathrm{vis}} f_r n_b}{\sigma_{\mathrm{vis}}}.
 \end{equation}
 
-The instantaneous luminosity is measured in intervals of approximately 60~seconds. The visible cross section is a calibration constant for a particular detector, which is determined during dedicated calibration runs in which the luminosity is determined directly from the physical dimensions of the beams. The calibration procedure is described in section~\ref{sec:luminosity-calibration}. 
+The luminosity is measured for each luminosity block, corresponding to time intervals of roughly $\SI{60}{\second}$ (section~\ref{sec:experiment-trigger-L1}). The visible cross section is a calibration constant for a particular detector, which is determined during dedicated calibration runs in which the luminosity is determined directly from the physical dimensions of the beams. The calibration procedure is described in section~\ref{sec:luminosity-calibration}. 
 
 \section{Luminosity Detectors}\label{sec:luminosity-detectors}
 ATLAS performs many redundant luminosity measurements using several detectors. The detectors fall into two categories. \emph{Event counting} detectors have a binary response, returning a 0 or 1 depending on whether a bunch crossing satisfies a set of criteria defined to detect an inelastic $pp$ collision. Such detectors essentially measure $p(0;\,\mu)$, the probability that an event falls in the zero bin of a Poisson distribution, from which the mean $\mu$ be calculated. \emph{Hit counting} detectors, on the other hand, count some quantity proportional to the number of interactions in a given bunch crossing, such as the number of particles identified by a particular detector subsystem. A hit counting measurement typically yields more information about an event at the cost of additional systematic uncertainties.
@@ -50,9 +50,9 @@ ATLAS performs many redundant luminosity measurements using several detectors. T
 Ideally, a luminosity detector exhibits the following features: 
 
 \begin{itemize}
-	\item The efficiency of the detector should be insensitive to pileup. The visible cross sections are typically measured at $\mu\approx \mathcal{O}(1)$, while a typical data-taking run has a peak average pileup of up to $\mu\sim40$; it is essential that the visible cross section be constant across this range of pileup values.
+	\item The efficiency of the detector should be insensitive to pileup, or the variation of the efficiency with respect to pileup should be well understood. The visible cross sections are typically measured at $\mu\approx \mathcal{O}(1)$, while a typical data-taking run has a peak average pileup of up to $\mu\sim40$; it is essential to understand the behavior of the visible cross section across this range of pileup values.
 
-	\item The efficiency of the detector should also be constant over long timescales.
+	\item The efficiency of the detector should be constant over long timescales.
 
 	\item The response of the detector and the readout should fast enough to provide a bunch-by-bunch luminosity measurement. As the LHC bunches are not identical, with different numbers of protons and emittances, it is useful to measure luminosity for each colliding bunch pair, as often as once every $\SI{25}{\nano\second}$. The colliding bunch pairs are labeled by the bunch crossing identification number, or BCID, ranging from 1 to 2808; consecutive BCIDs are separated by $\SI{25}{\nano\second}$.
 
@@ -252,19 +252,19 @@ The single-bunch instantaneous luminosity is calculated as follows. For the rand
 The vertex reconstruction efficiency is strongly affected by three pileup-related phenomena:
 
 \begin{itemize}
-	\item Vertex masking: a $pp$ interaction fails to be reconstructed as a vertex because some or all of its tracks are used by an earlier vertex in the iterative reconstruction algorithm. This is the dominant pileup effect, which causes a large drop in the reconstruction efficiency at high pileup.
+	\item Vertex masking: a $pp$ interaction fails to be reconstructed as a vertex because some or all of its tracks are used by an earlier vertex in the iterative reconstruction algorithm (see section~\ref{sec:event-reconstruction-track-vertex}. This is the dominant pileup effect, which causes a large drop in the reconstruction efficiency at high pileup.
 	\item Fake vertices: a vertex passes the cut on the minimum number of tracks due to acquiring tracks from another nearby $pp$ interaction. This is a subdominant but significant effect, which causes a small increase in the reconstruction efficiency at high pileup.
 	\item Split vertices: a single interaction is reconstructed as two separate vertices. This is a significant effect when considering vertices with two or more tracks, but is negligible for vertices with at least five tracks.
 \end{itemize}
 
 Corrections are derived for vertex masking and fake vertices. The fake vertex correction is derived using truth matching in minimum bias Monte Carlo simulation. The simulation sample was generated using \pythia~8, with tune A2M~\cite{pythia8,AUET2}. For a given cut on the minimum number of tracks per vertex, $n_{\mathrm{trk,min}}$, a reconstructed vertex is labelled as fake if less than $n_{\mathrm{trk,min}}$ of its tracks are matched to charged particles originating from the same generated $pp$ interaction. The average number of reconstructed vertices labelled as fake by Monte Carlo truth matching is shown as a function of pileup in figure~\ref{fig:fake-fractions}. The fake fractions show a significant dependence on $\mu$ and on the $n_{\mathrm{trk,min}}$.
 
-\begin{figure}[h]
-	\centering
-	\resizebox{5in}{!}{\includegraphics{figures/luminosity/c_truefakemu_NGenInt.pdf}}
-	\caption{Average number of reconstructed vertices without a matched truth interaction, as a function of number of generated interactions per event. The contribution is below 0.1\%.}
-	\label{fig:truefakes}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\resizebox{5in}{!}{\includegraphics{figures/luminosity/c_truefakemu_NGenInt.pdf}}
+%	\caption{Average number of reconstructed vertices without a matched truth interaction, as a function of number of generated interactions per event. The contribution is below 0.1\%.}
+%	\label{fig:truefakes}
+%\end{figure}
 
 \begin{figure}[h]
 	\centering

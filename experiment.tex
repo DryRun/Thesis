@@ -12,7 +12,7 @@ The Large Hadron Collider (LHC) is a particle accelerator designed to explore th
 
 The LHC project was approved in 1994 by the CERN Council, and construction proceeded over the ensuing 14 years~\cite{Evans:2010va}. The collider detectors were constructed in parallel, beginning with the excavation of two additional caverns at IP1 and IP5 for the ATLAS and CMS detectors (LHCb and ALICE occupied the existing caverns at IP2 and IP8, which previously housed the DELPHI and L3 LEP experiments). The first beam was circulated on 10 September 2008; however, on 19 September, the LHC sustained severe damage due to an incident stemming from a faulty joint between magnets\footnote{A postmortem analysis implicated a bad splice between the superconducting cables of adjacent magnets as the source of the incident, with a resistance about $10^3$ times above specification. The joint melted, and \SI{275}{\mega\joule} of energy in the magnets dissipated in electric arcs, which vaporized beam pipes and breached the cryogenic vessel containing the magnets. A large amount of liquid helium entered the vacuum vessel and heated rapidly, breaking several vacuum barriers of the cryostats with a force of up to 56 tons. Ultimately, 30 dipoles and 7 quadrupoles were damaged beyond repair, and another 9 dipoles and 7 quadrupoles required repairs; 9 magnet interconnections were destroyed; 26 magnets were pushed down the tunnel; \SI{276}{\mega\joule} of energy were dissipated in electrical faults and arcs; 6 tons of helium were lost; and \SI{2.8}{\kilo\meter} of both beam pipes were contaminated with fragments of insulation, with \SI{1}{\kilo\meter} also contaminated with soot from molten copper and insulation.~\cite{Rossi:2010el}}. Repairs took an extra year, and the energy of the beams was reduced to 3.5-\SI{4}{\tera\electronvolt} for the first data-taking run, to mitigate the risk of another possible faulty joint. 
 
-Proton-proton collisions at a center-of-mass energy of $\sqrt{s}=\SI{7}{\tera\electronvolt}$ commenced in early 2010. The LHC delivered an integrated luminosity of $\int \mathcal{L}\, dt=\SI{48.1}{\pico\barn\tothe{-1}}$ to the ATLAS detector in 2010, and $\int \mathcal{L}\, dt=\SI{5.46}{\femto\barn\tothe{-1}}$ in 2011. In 2012, the collision energy was increased to $\sqrt{s}=\SI{8}{\tera\electronvolt}$, and a dataset of $\int \mathcal{L}\, dt=\SI{22.8}{\femto\barn\tothe{-1}}$ was delivered. 
+Proton-proton collisions at a center-of-mass energy of $\sqrt{s}=\SI{7}{\tera\electronvolt}$ commenced in early 2010. The LHC delivered an integrated luminosity of $\int \mathcal{L}\, \mathrm{d}t=\SI{48.1}{\pico\barn\tothe{-1}}$ to the ATLAS detector in 2010, and $\int \mathcal{L}\, \mathrm{d}t=\SI{5.46}{\femto\barn\tothe{-1}}$ in 2011. In 2012, the collision energy was increased to $\sqrt{s}=\SI{8}{\tera\electronvolt}$, and a dataset of $\int \mathcal{L}\, \mathrm{d}t=\SI{22.8}{\femto\barn\tothe{-1}}$ was delivered. 
 
 \subsection{Accelerator Components}
 The primary devices used for acceleration are synchrotrons, circular accelerators comprised of magnets and radio frequency (RF) cavities~\cite{wiedemann2007particle}. The magnets are used to manipulate the particle beams: dipole magnets bend the beams in a circle and steer the beams down transfer lines between the accelerators, while quadrupole and higher moment magnets focus the beams. RF cavities are hollow metallic structures used for particle acceleration. The RF cavities are driven by klystrons, radio frequency amplifiers that act as power sources, at their resonant frequency, creating an oscillating electric field inside the structure. The frequency of the RF cavities is matched to the rotation frequency of the particle beams.
@@ -40,11 +40,11 @@ The RF oscillations cause the particle beam to bunch longitudinally into so-call
 \end{figure}
 
 
-The LHC itself is the last stage of a chain of lower-energy accelerators, shown in figure~\ref{fig:LHC-accelerator-complex}~\cite{Benedikt:2004wm}. The staged acceleration chain preserves the high-quality of the beam over many decades of energy. It consists of a linear accelerator and three synchrotrons which were used for previous generations of experiments at CERN. The reuse of the older accelerators is economical while still meeting the stringent performance requirements of the LHC, providing up to 2808 proton bunches with a very small transverse emittance and controllable longitudinal emittance. 
+The LHC itself is the last stage of a chain of lower-energy accelerators, shown in figure~\ref{fig:LHC-accelerator-complex}~\cite{Benedikt:2004wm}. The staged acceleration chain preserves the high-quality of the beam over many decades of energy. It consists of a linear accelerator and three synchrotrons which were used for previous generations of experiments at CERN. The reuse of the older accelerators is economical while still meeting the stringent performance requirements of the LHC, providing up to 2808 proton bunches with a very small transverse emittance, the area occupied by the beam in position-momentum phase space, and controllable longitudinal emittance. 
 
 Protons are produced from hydrogen gas using a duoplasmatron source, which strips electrons from protons in a high electric field. After passing through a $\SI{90}{\kilo\volt}$ pre-injector, a radio frequency quadrupole (RFQ) focuses and accelerates the protons to $\SI{750}{\kilo\volt}$. A linear accelerator (LINAC2) then accelerates the protons to $\SI{50}{\mega\electronvolt}$ using RF cavities. The protons then pass through an $\SI{80}{\meter}$-long transfer line into the the Proton Synchrotron Booster (PSB) and Proton Synchrotron (PS). 
 
-The PSB consists of four stacked circular synchrotrons, $\SI{157}{\meter}$ in circumference, and accelerates the protons to $\SI{1.4}{\giga\electronvolt}$. The use of four separate rings mitigates the space charge effects caused by the repulsion of protons within a bunch, which scale as $N_b/(\beta\gamma^2)$, where $N_b$ is the number of protons per bunch. The protons are then injected into single-ring PS, where the higher injection energy reduces the space charge effect. The RF cavities of the PS, operating at several frequencies, accelerate the beams to $\SI{26}{\giga\electronvolt}$, and also split the protons into the bunches eventually inject into the LHC. Nominally, this yields 72 bunches separated by \SI{25}{\nano\second}, but for Run I, \SI{50}{\nano\second} spacing was used instead. 
+The PSB consists of four stacked circular synchrotrons, $\SI{157}{\meter}$ in circumference, and accelerates the protons to $\SI{1.4}{\giga\electronvolt}$. The use of four separate rings mitigates the space charge effects caused by the repulsion of protons within a bunch, which scale as $N_b/(\beta\gamma^2)$, where $N_b$ is the number of protons per bunch. The protons are then injected into the single-ring PS, where the higher injection energy reduces the space charge effect. The RF cavities of the PS, operating at several frequencies, accelerate the beams to $\SI{26}{\giga\electronvolt}$, and also split the protons into the bunches eventually inject into the LHC. Nominally, this yields 72 bunches separated by \SI{25}{\nano\second}, but for Run I, \SI{50}{\nano\second} spacing was used instead. 
 
 The protons are extracted from the PS at intervals of \SI{3.6}{\second} and injected into the third synchrotron in the chain, the $\SI{7}{\kilo\meter}$-circumference Super Proton Synchrotron (SPS). Immediately prior to extraction, the bunches are rotated by increasing the RF voltage, reducing the longitudinal emittance in order to ease capture in the SPS RF buckets, which have a frequency of $\SI{200}{\mega\hertz}$.  Up to four PS batches are injected per SPS cycle, after which the particle are accelerated at an average of $\SI[per-mode=symbol]{78}{\giga\electronvolt\per\second}$ to the LHC injection energy of $\SI{450}{\giga\electronvolt}$. Flat-top is maintained for about one second, during which the injection is prepared:
 
@@ -57,7 +57,7 @@ The protons are extracted from the PS at intervals of \SI{3.6}{\second} and inje
 The SPS cycle takes 21.6 seconds, leading to a total LHC filling time of about nine minutes.
 
 \subsubsection{LHC Main Ring}
-The LHC main ring accelerates protons from the injection energy of $\SI{450}{\giga\electronvolt}$ to the collision energy, which ranged from $\SI{3.5}{\tera\electronvolt}$ to $\SI{4}{\tera\electronvolt}$ for proton-proton collisions during Run I~\cite{Bruning:2004ej}. The \SI{26.7}{\kilo\meter} ring consists of eight arcs and eight straight sections, shown in figure~\ref{fig:LHC-segments}. Each straight section is called an \emph{insertion region} (IR), and contain either collider experiments or important services. IRs 1, 2, 5, and 8 contain the ATLAS, LHCb, CMS, and ALICE experiments, respectively; IR 4 contains two independent $\SI{400}{\mega\hertz}$ RF systems, one for each of the counter-rotating beams; IR 6 contains the beam dump system; and IRs 3 and 7 contain collimation systems. The beams are contained in separate beam pipes except at the collision points.
+The LHC main ring accelerates protons from the injection energy of $\SI{450}{\giga\electronvolt}$ to the collision energy, which ranged from $\SI{3.5}{\tera\electronvolt}$ to $\SI{4}{\tera\electronvolt}$ for proton-proton collisions during Run I~\cite{Bruning:2004ej}. The \SI{26.7}{\kilo\meter} ring consists of eight arcs and eight straight sections, shown in figure~\ref{fig:LHC-segments}. Each straight section is called an \emph{insertion region} (IR), and contain either collider experiments or important services. IRs 1, 2, 5, and 8 contain the ATLAS, LHCb, CMS, and ALICE experiments, respectively; IR 4 contains two independent $\SI{400}{\mega\hertz}$ RF systems, one for each of the counter-rotating beams; IR 6 contains the beam dump system; and IRs 3 and 7 contain collimation systems. The beams are contained in separate beam pipes except near the collision points.
 
 \begin{figure}[htbp]
 	\centering
@@ -101,39 +101,61 @@ At the collision points, the two beams converge in a single pipe for approximate
 
 
 \subsection{Beam Parameters}
-From the experiments' point of view, there are two main parameters to optimize in order to maximize sensitivity to new physics: the collision energy, $\sqrt{s}$, and the integrated luminosity, $L=\int \mathcal{L}\, dt$. The collision energy is limited to $\sqrt{s}=\SI{14}{\tera\electronvolt}$ by the bending power of the dipole magnets, which have a nominal field strength of $\SI{8.33}{\tesla}$; however, due to the faulty splice design mentioned above, the energy was limited to $\sqrt{s}=7$--$\SI{8}{\tera\electronvolt}$ in Run I. 
+From the experiments' point of view, there are two main parameters to optimize in order to maximize sensitivity to new physics: the collision energy, $\sqrt{s}$, and the integrated luminosity, $L=\int \mathcal{L}\, \mathrm{d}t$. The collision energy is limited to $\sqrt{s}=\SI{14}{\tera\electronvolt}$ by the bending power of the dipole magnets, which have a nominal field strength of $\SI{8.33}{\tesla}$; however, due to the faulty splice design mentioned above, the energy was limited to $\sqrt{s}=7$--$\SI{8}{\tera\electronvolt}$ in Run I. 
 
-The optimization of the integrated luminosity is somewhat more complicated. The instantaneous luminosity of two colliding bunches is given by:
+The optimization of the integrated luminosity is somewhat more complicated. For simplicity, assume that the two beams have the same transverse dimensions. The instantaneous luminosity of two colliding bunches is given by,
 \begin{equation}\label{eqn:lumi}
-	\mathcal{L} = \frac{f_r N_1 N_2 \gamma_b}{4\pi \epsilon_n \beta_{*}} F(\alpha),
+	\mathcal{L} = \frac{f_r N_1 N_2}{4\pi \sigma_x\sigma_y} F(\alpha),
 \end{equation}
-where $f_r=\SI{11245.5}{\hertz}$ is the LHC revolution frequency, $N_{1,2}$ are the numbers of protons in the two beams, $\gamma_b$ is the relativistic gamma factor, $\epsilon_n$ is the normalized transverse emittance, $\beta_{*}$ is the beta function at the collision point, and $F(\alpha)$ is the reduction in luminosity due to a nonzero beam crossing half-angle of $\alpha$. The total instantaneous luminosity is given by the sum of all colliding bunch pairs. 
 
-% TO DO: beta* formula?
+where $f_r=\SI{11245.5}{\hertz}$ is the LHC revolution frequency; $N_{1,2}$ are the numbers of protons in the two beams; $\alpha$ is the cross angle between the beams; and $\sigma_{x,y}$ are the RMS widths of the beam. $F(\alpha)$ is the reduction in luminosity due to a nonzero beam crossing half-angle of $\alpha$, given by
 
-In general, a higher total integrated luminosity is desired. This depends on a number of factors:
+\begin{equation}\label{eqn:crossing-angle-lumi-reduction}
+	F(\alpha)=\frac{\cos\alpha}{\sqrt{1+\left(\tan\alpha \frac{\sigma_z}{\sigma^*}\right)^2}},
+\end{equation}
+
+where $\sigma_z$ is the RMS bunch length and $\sigma^{*}$ is the transverse beam width at the collision point in the plane of the crossing angle. The RMS widths are determined by two beam parameters: the transverse emittance $\epsilon_i$\footnote{this is sometimes quoted as the normalized transverse emittance, $\epsilon_n =\epsilon \gamma_b \beta_b$, where $\gamma_b$ and $\beta_b$ are the relativistic gamma and beta factors.}, defined as the area of the ellipse occupied by the beam in position-momentum space, and $\beta^*_i$, which characterizes the focusing of the beams by the quadrupole triplet magnets. Specifically, at a distance $z$ from the collision point, the widths are equal to
+
+\begin{equation}
+	\sigma_i^2(z)= \epsilon_i \beta^*_i\left(1+\frac{z^2}{{\beta_i^*}^2}\right).
+\end{equation}
+
+The total instantaneous luminosity is given by the sum of all colliding bunch pairs. In general, a higher total integrated luminosity is desired. This depends on a number of factors:
 
 \begin{itemize}
-	\item The instantaneous luminosity per bunch, $\mathcal{L}=\frac{f_r N_1 N_2}{4\pi\epsilon_n \beta_{*}}$. A higher $\mathcal{L}$ increases the number of simultaneous collisions per bunch crossing (\emph{pileup}), $\mu=L_b/\sigma_{\mathrm{inel}}$, which degrades the performance of the detectors. 
+	\item The instantaneous luminosity per bunch, $\mathcal{L}=\frac{f_r N_1 N_2}{4\pi\epsilon_n \beta_{*}}$. A higher $\mathcal{L}$ increases the number of simultaneous collisions per bunch crossing (\emph{pileup}), $\mu=\mathcal{L}/(f_r sigma_{\mathrm{inel}})$, where $\sigma_{\mathrm{inel}}$ is the total inelastic proton-proton cross section. A higher amount of pileup degrades the performance of the detectors. 
 	% Removed for now. According to Frank Zimmerman's slides, no beam-beam limit was found in MDs! 
 	% From the accelerator's point of view, the number of protons per bunch, $N_{1,2}$, and the transverse emittance are limited by non-linear beam-beam effects~\cite{Papotti:2014vb}. Typical values during 2012 were $N_{1,2}=1.65\times 10^{11}$ and $\epsilon_n=2.5~\micron$, giving pileup values at the start of a fill of around 30, with tails up to $\sim$40. 
 
-	\item The number of bunches in the LHC, $n_b$. During Run I, the LHC was filled with 1380 bunches with $\SI{50}{\nano\second}$ spacing between bunches, as opposed to the nominal 2808 bunches with $\SI{25}{\nano\second}$ spacing. The advantages of $\SI{50}{\nano\second}$ spacing include less days needed for electron-cloud scrubbing, smaller transverse emittances, and a smaller crossing angle~\cite{Papotti:2014vb}. The primary disadvantage is a higher pileup for the experiments. 
+	\item The crossing angle, $\alpha$. A nonzero crossing angle is required to prevent parasitic collisions between bunches away from the nominal collision point. For bunches spaced by $\SI{25}{\nano\second}$, there are 34 unwanted parasitic collision points inside the common beam pipe at each interaction region. The reduction in luminosity is given by equation~\ref{eqn:crossing-angle-lumi-reduction}; during normal 2012 running conditions, the crossing half-angle was $\alpha=\SI{145}{\micro\radian}$, and the luminosity reduction factor was about $18\%$. 
 
-	\item The crossing angle, $\alpha$. A nonzero crossing angle is required to prevent \emph{parasitic collisions} between bunches away from the nominal collision point. For bunches spaced by $\SI{25}{\nano\second}$, there are 34 unwanted parasitic collision points inside the common beam pipe at each interaction region. The reduction in luminosity is:
+	\item The number of bunches in the LHC, $n_b$. During Run I, the LHC was filled with 1380 bunches with $\SI{50}{\nano\second}$ spacing between bunches, as opposed to the nominal 2808 bunches with $\SI{25}{\nano\second}$ spacing. The advantages of $\SI{50}{\nano\second}$ spacing include smaller transverse emittances, a smaller cross angle needed to avoid parasitic collisions, and less buildup of electrons in the LHC vacuum (the so-called \emph{electron cloud} effect)~\cite{Papotti:2014vb}. The primary disadvantage is a higher pileup for the experiments. 
 
-	\begin{equation}
-		F(\alpha)=\frac{1}{\sqrt{1+\left(\frac{2\alpha \sigma_z}{2\sigma^*}\right)}},
-	\end{equation}
-	
-	where $\sigma_z$ is the RMS bunch length and $\sigma^{*}$ is the transverse beam width at the collision point. During normal 2012 running conditions, the crossing half-angle was $\alpha=\SI{145}{\micro\radian}$, and the luminosity reduction factor was about $18\%$. 
-
-	\item The fill schedule of the LHC. The instantaneous luminosity of the LHC decreases over time. The dominant loss of luminosity is due to the loss of protons from the collisions themselves, with a typical decay constant of $\tau_{\mathrm{nuclear},1/e}=\SI{29}{\hour}$. Including other sources of loss such as intra-bunch scattering, scattering from collisions with gas in the beam pipe, beam-beam effects, and RF noise, the typical luminosity lifetime is $\tau_L=\SI{14.9}{\hour}$. 
+	\item The fill schedule of the LHC. The instantaneous luminosity of the LHC decreases over time. The dominant source of the decrease is the loss of protons from the collisions themselves, with a typical decay constant of $\tau_{\mathrm{nuclear},1/e}=\SI{29}{\hour}$. Luminosity is also lost to emittance growth, caused by sources such as intra-bunch scattering, scattering from collisions with gas in the beam pipe, beam-beam effects, and RF noise. In total, the typical luminosity lifetime is $\tau_L=\SI{14.9}{\hour}$. 
 
 	The the fill schedule can be optimized to maximize the luminosity based on $\tau_L$ and the average turnaround time to refill the LHC after a beam dump, $T_{\mathrm{turnaround}}$. This can be quantified using the \emph{H{\"u}bner factor}, $\mathrm{HF}_{\mathrm{peak}}$, defined as the ratio of the delivered integrated luminosity to the hypothetical integrated luminosity with $\tau_L=\infty$ and $T_{\mathrm{turnaround}}=0$. In 2011, this was typically in the range $15\%$--$20\%$.
 \end{itemize}
 
-The delivered luminosity in 2011 and 2012 will be discussed later in chapter~\ref{ch:luminosity}.
+Typical values of the beam parameters in 2011 and 2012 are summarized in table~\ref{table:experiment-beam-parameters}. The delivered luminosity will be discussed in chapter~\ref{ch:luminosity}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lcc}
+		\hline
+		Parameter & Value in 2011 & Value in 2012 \\
+		\hline
+		Beam energy & $\SI{3.5}{\tera\electronvolt}$ & $\SI{4}{\tera\electronvolt}$ \\
+		$\beta^*$ & $\SI{1.0}{\meter}$ & $\SI{0.6}{\meter}$ \\
+		Initial $\epsilon_n$ & $\SI{2.6}{\milli\meter\milli\radian}$ & $\SI{2.5}{\milli\meter\milli\radian}$ \\
+		$N_{1,2}$ & $1.5\times 10^{11}$ & $1.6$--$1.7\times10^{11}$ \\
+		Peak luminosity & $\SI{3.6e33}{\centi\meter\tothe{-2}\second\tothe{-1}}$ & $\SI{7.7e33}{\centi\meter\tothe{-2}\second\tothe{-1}}$ \\
+		Maximum average pileup & $\approx 17$ & $\approx 40$ \\
+		Stored beam energy & $\approx\SI{115}{\mega\joule}$ & $\approx \SI{140}{\mega\joule}$ \\
+	\end{tabular}
+	\caption{Summary of typical beam parameters in 2011 and 2012~\cite{Lamont:2013ca}.}
+	\label{table:experiment-beam-parameters}
+\end{table}
+
 
 
 \section{The ATLAS Experiment}\label{sec:the-atlas-experiment}
@@ -147,7 +169,7 @@ This section describes the design of the magnets, inner detector, calorimeters, 
 The ATLAS detector uses a right-handed coordinate system, with $\hat{x}$ pointing from the interaction point towards the center of the LHC ring, $\hat{y}$ pointing up, and $\hat{z}$ pointing along the ring towards IR2. Due to the symmetry of the detector, cylindrical coordinates ($r,\theta,\phi$) are often used, with $r$ the transverse distance from the beam line, $\theta$ the polar angle from the beamline, and $\phi$ the azimuthal angle in the $x$-$y$ plane. The polar angle can also be expressed in term of the pseudorapidity, $\eta = -\log \tan \frac{\theta}{2}$, which is useful for describing the geometry of particles in part because differences in pseudorapidity, $\Delta\eta$, are invariant under longitudinal Lorentz boosts along $\hat{z}$. For massless particles, the pseudorapidity is equal to the rapidity, $y=\frac12 \log \frac{E+p_z}{E-p_z}$. 
 
 \subsection{Magnets}\label{sec:ATLAS-magnets}
-ATLAS relies on four powerful superconducting magnets to bend the trajectories of charged particles, allowing the tracking detectors to provide measurements of their momenta. The solenoid provides a $\SI{2}{\tesla}$ axial magnetic field in the volume of the inner detector, while the barrel and two endcap toroids provide a toroidal magnetic field ranging from $0.5$--$\SI{1}{\tesla}$ for the muon spectrometer. The geometry of the magnets is shown in figure~\ref{fig:ATLAS-magnets-sketch}. Key parameters for the magnet system are shown in table~\ref{table:ATLAS-magnet-parameters}.
+ATLAS relies on four powerful superconducting magnets to bend the trajectories of charged particles, allowing the tracking detectors to provide measurements of their momenta. The solenoid provides a $\SI{2}{\tesla}$ axial magnetic field in the volume of the inner detector, with particle trajectories bending in the $R$-$\phi$ plane. The barrel and two endcap toroids provide a toroidal magnetic field ranging from $0.5$--$\SI{1}{\tesla}$ for the muon spectrometer, with bending in the $R$-$z$ plane. The geometry of the magnets is shown in figure~\ref{fig:ATLAS-magnets-sketch}. Key parameters for the magnet system are shown in table~\ref{table:ATLAS-magnet-parameters}.
 
 \begin{figure}[htbp]
 	\centering
@@ -231,14 +253,14 @@ The field integral of the toroid is shown as a function of $\eta$ in figure~\ref
 
 \begin{figure}[htbp]
 	\centering
-	\subfloat[ Barrel toroid.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_toroid}}
 	}
 	\hfill
-	\subfloat[ End-cap toroid, inserted into the barrel toroid.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_toroid_endcap_inserted2}}
 	}
-	\caption{Images of the barrel and end-cap toroid magnets during installation.}
+	\caption{Images of the barrel (left) and end-cap toroid (right) magnets during installation.}
 	\label{fig:ATLAS-toroids}
 \end{figure}
 
@@ -247,32 +269,32 @@ The field integral of the toroid is shown as a function of $\eta$ in figure~\ref
 
 \subsection{Inner Detector}\label{sec:ATLAS-inner-detector}
 
-The inner detector performs tracking of charged particles traversing the $\SI{2}{\tesla}$ solenoidal magnetic field in the pseudorapidity range $|\eta|<2.5$. It also performs electron identification in the range $|\eta|<2.0$. It consists of three subdetectors occupying the volume closest to the interaction region, directly outside the beam pipe, as shown in figure~\ref{fig:ATLAS-ID}. Proceeding outwards from the interaction point, these are the pixel detector, the semiconductor tracker (SCT), and the transition radiation tracker (TRT). The pixel detector provides three track measurements with high spatial resolution using silicon pixels. The SCT provides an additional four measurements using silicon strips. Finally, for particles with $|\eta|<2.0$, the TRT provides an average of 36 measurements per track using gas-filled straw tubes, which aids the pattern recognition, improves the momentum resolution, and performs electron identification. Examples of trajectories of $\SI{10}{\giga\electronvolt}$ particles through the barrel and end-cap layers are shown in figure~\ref{fig:ATLAS-ID-tracks}.
+The inner detector performs tracking of charged particles traversing the $\SI{2}{\tesla}$ solenoidal magnetic field in the pseudorapidity range $|\eta|<2.5$. It also performs electron identification in the range $|\eta|<2.0$. It consists of three subdetectors occupying the volume closest to the interaction region, directly outside the beam pipe, as shown in figure~\ref{fig:ATLAS-ID}. Proceeding outwards from the interaction point, these are the pixel detector, the semiconductor tracker (SCT), and the transition radiation tracker (TRT). The pixel detector provides three track measurements with high spatial resolution using silicon pixels. The SCT provides an additional four measurements using silicon strips. Finally, for particles with $|\eta|<2.0$, the TRT provides an average of 36 measurements per track using gas-filled straw tubes, which aids the pattern recognition and improves the momentum resolution. The use of transition radiation also enables the TRT to perform electron identification. Examples of trajectories of $\SI{10}{\giga\electronvolt}$ particles through the barrel and end-cap layers are shown in figure~\ref{fig:ATLAS-ID-tracks}.
 
 \begin{figure}[htbp]
 	\centering
-	\subfloat[ 3D model of the inner detector, showing the arrangement of the pixel detector, SCT, and TRT in the barrel and end-caps.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_ID_sketch}}
 	}
 	\hfill
-	\subfloat[ Layout of the inner detector in the $R-z$ plane.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_ID_layout_rz}}
 	}
-	\caption{Layout of the ATLAS inner detector.}
+	\caption{Left: 3D model of the inner detector, showing the arrangement of the pixel detector, SCT, and TRT in the barrel and end-caps. Right: layout of the inner detector in the $R-z$ plane.}
 	\label{fig:ATLAS-ID}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\subfloat[ Trajectory of a $10 \GeV$ charged particle with $\eta=0.3$ traversing the barrel elements of the inner detector.] {
+	\subfloat[] {
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_ID_track_barrel}}
 	}
 	\hfill
-	\subfloat[ Trajectories of $10 \GeV$ charged particles with $\eta=1.4$ and $\eta=2.2$ traversing the barrel and end-cap elements of the inner detector.] {
+	\subfloat[] {
 		\vspace{-0.4in}
 		\resizebox{0.55\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_ID_track_endcap}}
 	}
-	\caption{Drawings of the inner detector sensors and structural elements traversed by $10 \GeV$ charged particles originating from the interaction point at various angles.}
+	\caption{Drawings of the inner detector sensors and structural elements traversed by $10 \GeV$ charged particles originating from the interaction point at various angles. Trajectories of particles traversing the barrel elements at $\eta=0.3$ (left) and both the barrel and end-cap elements at $\eta=1.4$ and $\eta=2.2$ (right) are shown.}
 	\label{fig:ATLAS-ID-tracks}
 \end{figure}
 
@@ -338,7 +360,7 @@ In the barrel, the pixels have an intrinsic accuracy of $\SI{10}{\micro\meter}$ 
 
 The SCT consists of 15912 sensors using single-sided, $p$-in-$n$ type silicon strips. The use of single-sided strips lowers both the cost and the number of readout channels of the detector, which covers significantly more area than the pixel detector ($\SI{61.1}{\meter\tothe{2}}$ versus $\SI{2.3}{\meter\tothe{2}}$). In the barrel, the strips have a pitch of $\SI{80}{\micro\meter}$ and a length of $\SI{12}{\centi\meter}$. In the endcaps, the sensors are trapezoidal with radially arranged strips, with a mean strip pitch of $\SI{80}{\micro\meter}$ and a length of $\SI{12}{\centi\meter}$. Each sensor has 768 active strips. Like the pixel sensors, the operating voltage is initially $\sim$\SI{150}{\volt}, but will require an increase to \SIrange[range-phrase=-]{250}{350}{\volt} after several years of irradiation, depending on the location of the sensor. 
 
-The SCT modules are shown in figure~\ref{fig:ATLAS-SCT-modules}.The 2112 barrel modules contain four sensors, while the 1976 end-cap modules contain two sensors. In both cases, the sensors are glued to a $\SI{380}{\micro\meter}$-thick thermal pyrolitic graphite (TPG) base-board. The sensors are assembled in two layers with a rotation of $\pm\SI{20}{\milli\radian}$ about the center of the sensors. The stereo angle between the two sensors allows for a measurement of the position along the length of the sensors. 
+SCT barrel and end-cap modules are shown in figure~\ref{fig:ATLAS-SCT-modules}. The 2112 barrel modules contain four sensors, while the 1976 end-cap modules contain two sensors. In both cases, the sensors are glued to a $\SI{380}{\micro\meter}$-thick thermal pyrolitic graphite (TPG) base-board. The sensors are assembled in two layers with a rotation of $\pm\SI{20}{\milli\radian}$ about the center of the sensors. The stereo angle between the two sensors allows for a measurement of the position along the length of the sensors. 
 
 % Arrangement into barrel layers and end-caps
 
@@ -377,7 +399,9 @@ The intrinsic accuracy of the SCT sensors is $\SI{17}{\micro\meter}$ along the s
 
 \subsubsection{TRT}\label{sec:ATLAS-id-trt}
 
-The TRT detector elements are polyimide drift (straw) tubes. The straws are arranged such that charged particles with $\pt > \SI{500}{\mega\electronvolt}$ and $|\eta|<2.0$ traverse at least 36 straws, except in the barrel/end-cap transition region where particles traverse as few as 22 straws. The straws are interleaved with polypropylene fibers in the barrel and polypropylene foils in the end-caps to provide transition radiation; electrons with $\pt>\SI{2.0}{\giga\electronvolt}$ typically leave $7$-$10$ high-threshold hits. The intrinsic resolution of the straws is $\SI{130}{\micro\meter}$ in the transverse direction.
+The TRT detector elements are polyimide drift (straw) tubes. A charged particle traversing a straw ionizes the gas along its trajectory, and the resulting electrons are drawn to the axial anode wire. The primary electrons induce an avalanche due to the high electric field in the straw, and the resulting signal is read out from the end of the straws. The straws are arranged such that charged particles with $\pt > \SI{500}{\mega\electronvolt}$ and $|\eta|<2.0$ traverse at least 36 straws, except in the barrel/end-cap transition region where particles traverse as few as 22 straws. The intrinsic resolution of the straws is $\SI{130}{\micro\meter}$ in the transverse direction, with no measurement provided in the $z$ direction.
+
+In addition to measuring particle trajectories, the TRT also uses transition radiation to distinguish electrons from charged hadrons. Charged particles crossing between materials with different dielectric constants emit transition radiation photons with probability proportional to $\gamma=\frac{E}{m}$. In the TRT, the transition radiation is produced by interleaving the straws with polypropylene fibers in the barrel and polypropylene foils in the end-caps to provide transition radiation. Consequently, particles can produce a stronger, ``high-threshold'' signal in the straw tubes, with much greater probability for electrons than hadrons.  Electrons typically leave $7$-$10$ high-threshold hits. 
 
 The straws measure $\SI{4}{\milli\meter}$ in diameter and $\SI{144}{\centi\meter}$ ($\SI{37}{\centi\meter}$) in length in the barrel (end-caps). The straw walls consist of two $\SI{35}{\micro\meter}$ aluminum-coated polyamide films bonded back-to-back.
 %The base film material is a $\SI{25}{\micro\meter}$ thick layer of polyamide, which is coated on the exterior side with a $\SI{0.2}{\micro\meter}$ thick layer of Al and a \SIrange[range-phrase=-]{5}{6}{\micro\meter} thick protective layer of graphite-polyamide. The other side of the film is coated with a \SIrange[range-phrase=-]{5}{6}{\micro\meter} thick layer of polyurethane, which is used to heat-seal the two film layers together. 
@@ -423,7 +447,9 @@ The endcaps consist of 160 layers of 768 straws, arranged radially into 20 wheel
 
 
 \subsection{Calorimetry}\label{sec:ATLAS-calorimeters}
-The calorimeter system occupies the volume directly exterior to the solenoid magnet, and measures the energy of electrons, photon, and hadrons up to a pseudorapidity of $|\eta|=4.9$. The arrangement of the calorimeters is shown in figure~\ref{fig:ATLAS-calorimeters}. The system consists of a number of independent sampling calorimeters. The electromagnetic calorimeter measures the energy of electrons and photons using lead and liquid argon (LAr) to measure the energy of electrons and photons. The hadronic calorimeter measures the energy of hadrons using steel and scintillator tiles in the barrel and copper and LAr in the end-caps. Finally, electromagnetic and hadronic calorimetry is performed in the forward region using copper-LAr and tungsten-LAr technology. Besides performing energy measurements, the calorimeters stop electrons, photons, and hadrons, providing shielding for the muon spectrometer. The total amount of material in front of and in the calorimeters is shown in terms of radiation lengths, $X_0$, and interaction lengths, $\lambda$, in figures~\ref{fig:ATLAS-calorimeters-X0} and \ref{fig:ATLAS-calorimeters-lambda0}.
+The calorimeter system occupies the volume directly exterior to the solenoid magnet, and measures the energy of electrons, photon, and hadrons up to a pseudorapidity of $|\eta|=4.9$. The system consists of a number of independent sampling calorimeters, shown in figure~\ref{fig:ATLAS-calorimeters}. Each calorimeter contains alternating layers of dense absorber material, which induces particle showers from incoming particles, and active material, which measures the energy of the secondary particles in the showers. The active layers typically measure only few percent of the initial particle's energy, so the energy measurement must be calibrated based on particles of known energy.
+
+The electromagnetic calorimeter measures the energy of electrons and photons using lead and liquid argon (LAr) to measure the energy of electrons and photons. The hadronic calorimeter measures the energy of hadrons using steel and scintillator tiles in the barrel and copper and LAr in the end-caps. Finally, electromagnetic and hadronic calorimetry is performed in the forward region using copper-LAr and tungsten-LAr technology. Besides performing energy measurements, the calorimeters stop electrons, photons, and hadrons, providing shielding for the muon spectrometer. The total amount of material in front of and in the calorimeters is shown in terms of radiation lengths, $X_0$, and interaction lengths, $\lambda$, in figures~\ref{fig:ATLAS-calorimeters-X0} and \ref{fig:ATLAS-calorimeters-lambda0}.
 
 \begin{figure}[htbp]
 	\centering
@@ -434,19 +460,19 @@ The calorimeter system occupies the volume directly exterior to the solenoid mag
 
 \begin{figure}
 	\centering
-	\subfloat[ Material before the calorimeters.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/x0_before_calo_csc03}}
 	}\hfill
-	\subfloat[ Material in the crack region between the barrel and end-cap cryostats.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/x0_crack_csc03}}
 	} \\
-	\subfloat[ Material in and before the barrel LAr calorimeter.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/x0_layers_barrel_csc03}}
 	}\hfill
-	\subfloat[ Material in and before the end-cap LAr calorimeters.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/x0_layers_endcap_csc03}}
 	}
-	\caption{Cumulative amounts of material versus $|\eta|$ in front of and within the LAr electromagnetic calorimeter, in terms of radiation lengths, $X_0$.}
+	\caption{Cumulative amounts of material versus $|\eta|$ in front of and within the LAr electromagnetic calorimeter, in terms of radiation lengths, $X_0$. (a) show the material before the calorimeters. (b) shows the material in the crack region between the barrel and end-cap cryostats. (c) shows the material in and before the barrel LAr calorimeter. (d) shows the material in and before the end-cap LAr calorimeters.}
 	\label{fig:ATLAS-calorimeters-X0}
 \end{figure}
 
@@ -460,25 +486,24 @@ The calorimeter system occupies the volume directly exterior to the solenoid mag
 
 
 \subsubsection{Electromagnetic Calorimeter}\label{sec:ATLAS-calorimeters-ecal}
-
 The electromagnetic calorimeter consists of two half-barrels ($0<\eta<\pm1.475$), two end-caps ($\pm1.375<\eta<\pm3.2$), and a presampler ($|\eta|<1.8$). The half-barrels and end-caps use LAr as the active material and steel-clad lead plates as the absorber. The lead plates are arranged in an accordion geometry to provide a uniform, gapless coverage in $\phi$, shown for a barrel module in figure~\ref{fig:ATLAS-LAr-module}. The plates are interleaved with electrodes built from copper etchings on polymide, consisting of three conducting layers. The outer conductive layers of the electrodes distribute the $\SI{2000}{\volt}$ high voltage over the electrode surface, which drifts the charges induced by ionization in the LAr towards the electrodes with a drift time of $\SI{450}{\nano\second}$. The inner layer of the electrode, separated from the outer layers by isolating foils, collects the signals via capacitive coupling. 
 
 \begin{figure}[htbp]
 	\centering
-	\subfloat[ A LAr barrel module.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_LAr_module}}
 	}
-	\subfloat[ Closeup image of the LAr accordion geometry.] {
+	\subfloat[] {
 		\resizebox{0.45\textwidth}{!}{\includegraphics{figures/experiment/ATLAS_LAr_zigzags}}
 	}
-	\caption{The LAr calorimeter uses an accordion geometry to provide uniform coverage in $\phi$. Steel-clad lead plates are interleaved with electrodes, consisting of three copper layers separated by polyamide sheets. The barrel module is divided into three layers in depth, with fine segmentation in $\eta$ in the layer closest the interaction point.}
+	\caption{The LAr calorimeter uses an accordion geometry to provide uniform coverage in $\phi$. Steel-clad lead plates are interleaved with electrodes, consisting of three copper layers separated by polyamide sheets. (a) shows a schematic drawing of a LAr barrel module, illustrating the accordion geometry and the three layers in depth, with fine segmentation in $\eta$ in the layer closest the interaction point. (b) shows a photograph of the accordion geometry.}
 	\label{fig:ATLAS-LAr-module}
 \end{figure}
 
 The two half-barrels occupy the region $\SI{2.8}{\meter}<R<\SI{4}{\meter}$ and $\SI{0}{\meter}<z<\pm\SI{3.2}{\meter}$, which covers up to $|\eta|<1.52$ depending on the layer. Each half-barrel has 1024 lead plates with a thickness of $\SI{1.53}{\milli\meter}$ for $|\eta|<0.8$ and $\SI{1.13}{\milli\meter}$ for $|\eta|>0.8$. The cells are divided into three layers, and have variable size in $\eta$ and $\phi$:
 
 \begin{itemize}
-	\item The first layer is finely segmented in $\eta$ to improve the spatial resolution; this improves the particle identification, helps resolve nearby particles (in particular photon pairs from $\pi^0$ decays), and, in combination with the second layer, allows for a measurement of particle trajectories. The majority of the cells measure $\Delta\eta\times\Delta\phi=0.025/8\times0.1$. Cells in the barrel-end-cap over lap region, $1.40<|\eta|<1.475$, have a coarser granularity of $\Delta\eta\times\Delta\phi=0.025\times0.025$.
+	\item The first layer is finely segmented in $\eta$ to improve the spatial resolution; this improves the particle identification, helps resolve nearby particles (in particular photon pairs from $\pi^0$ decays), and, in combination with the second layer, allows for a measurement of the polar angle of electromagnetic showers. The majority of the cells measure $\Delta\eta\times\Delta\phi=0.025/8\times0.1$. Cells in the barrel-end-cap over lap region, $1.40<|\eta|<1.475$, have a coarser granularity of $\Delta\eta\times\Delta\phi=0.025\times0.025$.
 
 	\item The second layer absorbs most of the energy of the electromagnetic showers. Most of the cells have size $\Delta\eta\times\Delta\phi=0.025\times0.025$, except for cells with $1.40<|\eta|<1.475$, which measure $\Delta\eta\times\Delta\phi=0.075\times0.025$.
 
@@ -501,10 +526,16 @@ The end-caps, one on either side of the interaction region, measure $\SI{63}{\ce
 %The inner and outer wheels contain 256 and 768 lead absorbers, respectively, 
 Each end-cap consists of 1024 lead absorbers with the same accordion geometry as used in the barrel. In the region $1.5<|\eta|<2.5$, the end-caps present three layers in the longitudinal direction, with fine $\eta$ segmentation in the front layer. At $|\eta|=1.5,$ the granularity of each layer is the same as in the barrel, becoming coarser in the first layer with increasing $|\eta|$. Elsewhere, there are two longitudinal layers with coarser transverse granularity.
 
-Finally, the presampler is an instrumented layer of LAr installed in front of the first layer calorimeter, with a thickness of $\SI{11}{\milli\meter}$ in the barrel ($|\eta|<1.5$) and $2\times \SI{2}{\milli\meter}$ in the end-caps ($1.5<|\eta|<1.8$). The presampler measures the energy lost due to interactions with material between the interaction region and the calorimeters (the beam pipe, inner detector, solenoid, cryostates, and other services and support structures). The total amount of material before and in the electromagnetic calorimeters is shown in figure~\ref{fig:ATLAS-calorimeters-X0} in terms of radiation lengths, $X_0$. The cells have a granularity of $\Delta\eta\times\Delta\phi=0.025\times0.1$. 
+Finally, the presampler is an instrumented layer of LAr installed in front of the first layer calorimeter, with a thickness of $\SI{11}{\milli\meter}$ in the barrel ($|\eta|<1.5$) and $2\times \SI{2}{\milli\meter}$ in the end-caps ($1.5<|\eta|<1.8$). The presampler is sensitive to energy lost due to interactions with material between the interaction region and the calorimeters (the beam pipe, inner detector, solenoid, cryostates, and other services and support structures). The total amount of material before and in the electromagnetic calorimeters is shown in figure~\ref{fig:ATLAS-calorimeters-X0} in terms of radiation lengths, $X_0$. The cells have a granularity of $\Delta\eta\times\Delta\phi=0.025\times0.1$. 
 
 % Conclusion
-In total, the electromagnetic calorimeter has 101,760 readout channels for the barrel, 62,208 channels for the end-caps, 7,808 channels for the barrel presampler, and 1,536 channels for the end-cap presamplers. 
+In total, the electromagnetic calorimeter has 101,760 readout channels for the barrel, 62,208 channels for the end-caps, 7,808 channels for the barrel presampler, and 1,536 channels for the end-cap presamplers. The energy resolution of the calorimeter is parametrized as:
+
+\begin{equation}\label{eqn:experiment-LAr-resolution}
+	\frac{\sigma(E)}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c,
+\end{equation}
+
+where $a$, $b$, and $c$ are the sampling, noise, and constant terms, respectively, and generally vary with $\eta$. The design value of the sampling term is $9\mbox{--}10\%\,\mbox{GeV}^{1/2}$ in the central region, and worsens at higher pseudorapidities due to the increased material in front of the calorimeters. The noise term, due to electronics noise and pileup effects, is approximately $b = 350 \times \cosh\eta \MeV$. The constant term dominates the resolution at high energies, with a design value of $c=0.7\%$. 
 
 
 %\begin{table}[htbp]
@@ -545,11 +576,11 @@ In total, the electromagnetic calorimeter has 101,760 readout channels for the b
 
 
 \subsubsection{Tile Calorimeter}\label{sec:ATLAS-calorimeters-tile}
-The tile calorimeter performs hadronic calorimetry in the region $|\eta|<1.7$, occupying the radial range $\SI{2.28}{\meter}<R<\SI{4.25}{\meter}$. Divided into a $\SI{5.8}{\meter}$-long central barrel and two $\SI{2.6}{\meter}$-long extended barrels on either side, it uses steel as the absorber and scintillating tiles as the active material. The total depth is approximately $7.4\lambda$. 
+The tile calorimeter measures the energy of hadrons in the region $|\eta|<1.7$, occupying the radial range $\SI{2.28}{\meter}<R<\SI{4.25}{\meter}$. Divided into a $\SI{5.8}{\meter}$-long central barrel and two $\SI{2.6}{\meter}$-long extended barrels on either side, it uses steel as the absorber and scintillating tiles as the active material. The total depth is approximately $7.4\lambda$. 
 
 Each of the three calorimeter sections is divided azimuthally into 64 modules, each spanning $\Delta\phi=5.625$. A module is shown schematically in figure~\ref{fig:ATLAS-calorimeters-tile-module}. The outer edge of a module is a steel girder which houses the tile calorimeter readout electronics and also provides flux return for the solenoidal magnetic field. The body of the module is a self-supporting structure built from steel absorber plates, with $\SI{4}{\milli\meter}$-thick spacer plates glued in staggered fashion to $\SI{5}{\milli\meter}$-thick master plates. The staggered spacing creates the gaps into which the scintillating tiles are inserted, with a steel-to-scintillator volume ratio of approximately $4.7:1$. 
 
-The scintillating tiles use polystyrene as the base material, in which ionizing particles induce the production of ultraviolet light. The polystyrene is doped with wavelength-shifting fluors, 1.5\% PTP and 0.044\% POPOP, which convert the scintillation light into the visible light. The tiles measure $\SI{3}{\milli\meter}$ thick, and vary between \SIrange[range-phrase=-]{97}{187}{\milli\meter} in radial length and \SIrange[range-phrase=-]{200}{400}{\milli\meter} in azimuthal length. A plastic sleeve envelops each tile, both for the protection of the tile during installation and also to improve the scintillation light collection efficiency due to a reflectivity of $\sim 95\%$. At the tile edges, wavelength-shifting fibers transmit the light to photomultiplier tubes housed in the girder. The grouping of the fibers determines the readout cell size, as shown in figure~\ref{fig:ATLAS-calorimeters-tile-cell-layout}; the cells measure $\Delta\eta\times\Delta\phi=0.1\times0.1$ in the transverse direction, and are segmented into three layers longitudinally corresponding to depths of approximately $1.5\lambda$, $4.1\lambda$, and $1.8\lambda$.
+The scintillating tiles use polystyrene as the base material, in which ionizing particles induce the production of ultraviolet light. The polystyrene is doped with wavelength-shifting fluors, 1.5\% PTP and 0.044\% POPOP, which convert the scintillation light into the visible light. The tiles measure $\SI{3}{\milli\meter}$ thick, and vary between $\SI{97}{\milli\meter}$ and $\SI{187}{\milli\meter}$ in radial length and $\SI{200}{\milli\meter}$ and $\SI{400}{\milli\meter}$ in azimuthal length. A plastic sleeve envelops each tile, both for the protection of the tile during installation and also to improve the scintillation light collection efficiency due to a reflectivity of $\sim 95\%$. At the tile edges, wavelength-shifting fibers transmit the light to photomultiplier tubes housed in the girder. The grouping of the fibers determines the readout cell size, as shown in figure~\ref{fig:ATLAS-calorimeters-tile-cell-layout}; the cells measure $\Delta\eta\times\Delta\phi=0.1\times0.1$ in the transverse direction, and are segmented into three layers longitudinally corresponding to depths of approximately $1.5\lambda$, $4.1\lambda$, and $1.8\lambda$.
 
 
 \begin{figure}[htbp]
@@ -568,7 +599,7 @@ The scintillating tiles use polystyrene as the base material, in which ionizing 
 
 
 \subsubsection{Hadronic End-Cap Calorimeters}\label{sec:ATLAS-calorimeters-HEC}
-Outside the tile calorimeter, two hadronic end-cap calorimeters (HEC) perform hadronic calorimetry in the pseudorapidity range $1.5<|\eta|<3.2$. The HECs use copper and LAr arranged into a flat plate geometry, as shown in figure~\ref{fig:ATLAS-calorimeters-HEC-layout}. Each HEC consists of two wheels (HEC1 and HEC2), which are further divided into two longitudinal segments.  The plates have an inner radius of $\SI{372}{\milli\meter}$ or $\SI{475}{\milli\meter}$ depending on $z$, and an outer radius of $\SI{2030}{\milli\meter}$. HEC1 contains 24 copper plates, each $\SI{24}{\milli\meter}$ thick and spaced by $\SI{8.5}{\milli\meter}$, plus a $\SI{12.5}{\milli\meter}$-thick front plate. HEC2 contains 16 copper plates measuring $\SI{50}{\milli\meter}$ in thickness, with a $\SI{25}{\milli\meter}$-thick front plate. The sampling fractions are thus $4.4\%$ for HEC1 and $2.2\%$ for HEC2. 
+Two hadronic end-cap calorimeters (HEC) perform hadronic calorimetry in the pseudorapidity range $1.5<|\eta|<3.2$. The HECs use copper and LAr arranged into a flat plate geometry, as shown in figure~\ref{fig:ATLAS-calorimeters-HEC-layout}. Each HEC consists of two wheels (HEC1 and HEC2), which are further divided into two longitudinal segments.  The plates have an inner radius of $\SI{372}{\milli\meter}$ or $\SI{475}{\milli\meter}$ depending on $z$, and an outer radius of $\SI{2030}{\milli\meter}$. HEC1 contains 24 copper plates, each $\SI{24}{\milli\meter}$ thick and spaced by $\SI{8.5}{\milli\meter}$, plus a $\SI{12.5}{\milli\meter}$-thick front plate. HEC2 contains 16 copper plates measuring $\SI{50}{\milli\meter}$ in thickness, with a $\SI{25}{\milli\meter}$-thick front plate. The sampling fractions are thus $4.4\%$ for HEC1 and $2.2\%$ for HEC2. 
 
 The gaps contain 3 electrodes spaced by $\SI{1.8}{\milli\meter}$, the outer two of which supply a nominal operating voltage of $\SI{1800}{\volt}$, and the middle of which performs the readout. The readout pads provide a transverse segmentation of $\Delta\eta\times\Delta\phi=0.1\times0.1$ for $|\eta|<2.5$, and $\Delta\eta\times\Delta\phi=0.2\times0.2$ for $2.5<|\eta|<3.2$. In total, 5,632 channels are read from the HEC. 
 
@@ -609,7 +640,7 @@ FCal1 consists of stacked copper plates with $\SI{0.27}{\milli\meter}$ LAr gaps.
 
 
 \subsection{Muon Spectrometer}\label{sec:ATLAS-muon-spectrometer}
-The muon spectrometer detects charged particles that penetrate the barrel and end-cap calorimeters. It forms the exterior of the ATLAS detector, occupying the volume of the barrel toroid with four large wheels on each side of the interaction point. Using a combination of several technologies, the muon spectrometer performs precision measurements of muon momenta in the region $|\eta|<2.7$, with a design resolution of 10\% for $\SI{1}{\tera\electronvolt}$ tracks, and also provides triggering on muons for $|\eta|<2.4$. 
+The muon spectrometer detects charged particles that penetrate the barrel or end-cap calorimeters. It forms the exterior of the ATLAS detector, occupying the volume of the barrel toroid with four large wheels on each side of the interaction point. Using a combination of several technologies, the muon spectrometer performs precision measurements of muon momenta in the region $|\eta|<2.7$, with a design resolution of 10\% for $\SI{1}{\tera\electronvolt}$ tracks, and also provides triggering on muons for $|\eta|<2.4$. 
 
 The structure of the muon spectrometer is shown in figures~\ref{fig:ATLAS-muon-spectrometer-layout} and \ref{fig:ATLAS-muon-spectrometer-schematic}. The barrel systems are arranged in three layers with radii of approximately $\SI{5}{\meter}$, $\SI{7.5}{\meter}$, and $\SI{10}{\meter}$, mounted inside and on the eight coils of the barrel toroid magnet with approximate octagonal symmetry. The end-cap systems form four large wheels, located before and after the end-cap toroid magnets at positions of $|z|\approx \SI{7.4}{\meter},\ \SI{10.8}{\meter},\ \SI{14}{\meter},$ and $\SI{21.5}{\meter}$. 
 
@@ -638,7 +669,7 @@ The structure of the muon spectrometer is shown in figures~\ref{fig:ATLAS-muon-s
 Four different technologies are used for precision measurements and triggering, depending on the location in the detector. Monitored drift tubes (MDTs) perform the precision measurements over most of the volume with $|\eta|<2.7$. Cathode strip chambers (CSCs) replace the MDTs in the innermost wheel for $2.0<|\eta|<2.7$, to handle the high particle flux. Triggering is performed by resistive plate chambers (RPCs) in the barrel ($|\eta|<1.05$) and thin gap chambers (TGCs) in the end-caps. The trigger chambers also supplement the MDT position measurements with the hit coordinate in the non-bending plane. 
 
 \subsubsection{Monitored Drift Tubes}
-The muon spectrometer contains 1088 MDT chambers, covering a total area of $\sim$\SI{550}{\meter\tothe{2}}. The majority of the MDT chambers are rectangular in the barrel and trapezoidal in the end-caps, and are laid out to optimize the solid angle coverage under the constraints of the magnet coils and other structures in the vicinity of the toroid magnet. Each chamber contains several layers of drift tubes, as shown in figure~\ref{fig:ATLAS-MS-MDT-chamber}. The innermost chambers are divided into two groups of tube layers, called \emph{multilayers}, each with four layers of tubes, while the remaining chambers have two groups of three layers of tubes. 
+Similarly to the TRT, the MDTs measure the trajectories of muons using gas-filled tubes with an axial anode wire. Muons traversing a tube ionize the gas, and the resulting electrons drift to the anode wire in an electric field. The tubes are arranged into 1088 MDT chambers, covering a total area of $\sim$\SI{550}{\meter\tothe{2}}. The majority of the MDT chambers are rectangular in the barrel and trapezoidal in the end-caps, and are laid out to optimize the solid angle coverage under the constraints of the magnet coils and other structures in the vicinity of the toroid magnet. Each chamber contains several layers of drift tubes, as shown in figure~\ref{fig:ATLAS-MS-MDT-chamber}. The innermost chambers are divided into two groups of tube layers, called \emph{multilayers}, each with four layers of tubes, while the remaining chambers have two groups of three layers of tubes. 
 
 \begin{figure}[htbp]
 	\centering
@@ -646,7 +677,6 @@ The muon spectrometer contains 1088 MDT chambers, covering a total area of $\sim
 	\caption{The mechanical structure of a MDT chamber. Two multilayers, each consisting of three or four rows of drift tubes, are separated by aluminum spaceers. Four optical alignment rays continuously monitor the geometry of the chamber.}
 	\label{fig:ATLAS-MS-MDT-chamber}
 \end{figure}
-
 
 The aluminum drift tubes have a radius of $\SI{29.97}{\milli\meter}$, with a $\SI{50}{\micro\meter}$-diameter tungsten-rhenium wire forming the anode along the axis of the tube. A cross section of a tube is shown in figure~\ref{fig:ATLAS-MS-MDT-xsec}. The tubes are filled with a mixture of argon and CO$_2$ (93:7) with a high pressure of $\SI{3}{\bar}$, and are operated with a voltage of $\SI{3080}{\volt}$. The average resolution of a single drift tube is $\SI{80}{\micro\meter}$, and the combined resolution of a chamber is $\SI{35}{\micro\meter}$. To achieve this precision, the position of the drift tubes and wires must be known to less than $\SI{30}{\micro\meter}$. Four optical alignment rays inside each MDT chamber continuously monitor the geometry of the chamber with a precision of a few microns, shown in figure~\ref{fig:ATLAS-MS-MDT-chamber}. An inter-chamber optical alignment network monitors the relative positions of chambers relative to their neighbors with a precision of approximately $\SI{20}{\micro\meter}$. The optical alignment is supplemented with track-based alignment algorithms to align the chambers with poor or absent connection to the optical network, the end-caps with respect to the barrel, and the muon spectrometer with respect to the inner detector.
 
@@ -664,7 +694,7 @@ The aluminum drift tubes have a radius of $\SI{29.97}{\milli\meter}$, with a $\S
 \subsubsection{Cathode Strip Chambers}
 The rate limit for the safe operation of the MDTs is about \SI[per-mode=symbol]{150}{\hertz\per\centi\meter\tothe{2}}, which is exceeded for $|\eta|>2$ in the first layer of the end-cap at $|z|\approx \SI{7}{\meter}$. Accordingly, CSCs are used in this volume of the detector, which can operate up to rates of about \SI[per-mode=symbol]{1}{\kilo\hertz\per\centi\meter\tothe{2}}. Eight large and eight small trapezoidal chambers give full coverage in $\phi$, as shown in figure~\ref{fig:ATLAS-MS-CSC-layout}.  
 
-The CSCs are multiwire proportional chambers, with parallel wires running in the radial direction and the two cathodes finely segmented in perpendicular directions to provide measurements in both the $\eta$ and $\phi$ directions. The perpendicular cathode segmentation provides position measurements in two dimensions, which helps distinguish hits from nearby particles. In the bending direction, the segmentation corresponds to a readout pitch of $\SI{5.31}{\milli\meter}$ and $\SI{5.56}{\milli\meter}$ for the large and small chambers, respectively.  The track coordinate is determined from a relative measurement of the charge induced on 3-5 adjacent strips at the peak of the charge distribution, shown schematically in figure~\ref{fig:ATLAS-MS-CSC-charge}. The resolution, dominated by electronic noise in the pre-amplifiers and by the spread of charge along the anode wire due inclined tracks, delta electrons, or a Lorentz force along the wire, is roughly $\SI{60}{\micro\meter}$ per CSC plane. In the non-bending direction, a coarser segmentation leads to a resolution of $\SI{5}{\milli\meter}$. 
+The CSCs are multiwire proportional chambers, with parallel wires running in the radial direction and the two cathodes finely segmented in perpendicular directions to provide measurements in both the $\eta$ and $\phi$ directions. The perpendicular cathode segmentation provides position measurements in two dimensions, which helps distinguish hits from nearby particles. In the bending direction, the segmentation corresponds to a readout pitch of $\SI{5.31}{\milli\meter}$ and $\SI{5.56}{\milli\meter}$ for the large and small chambers, respectively.  The track coordinate is determined from a relative measurement of the charge induced on 3-5 adjacent strips at the peak of the charge distribution. The resolution, dominated by electronic noise in the pre-amplifiers and by the spread of charge along the anode wire due inclined tracks, delta electrons, or a Lorentz force along the wire, is roughly $\SI{60}{\micro\meter}$ per CSC plane. In the non-bending direction, a coarser segmentation leads to a resolution of $\SI{5}{\milli\meter}$. 
 
 \begin{figure}[htbp]
 	\centering
@@ -711,7 +741,9 @@ The TGCs are multiwire proportional chambers filled with a gas mixture of CO$_2$
 
 
 \subsection{Trigger and Data Acquisition}
-During a typical data-taking run during 2012, the LHC beam contains 1377 bunches with a typical bunch spacing of $\SI{50}{\micro\second}$, giving an event rate of $\sim \SI{20}{\mega\hertz}$. In contrast, the ATLAS data acquisition system records events at roughly $\SI{400}{\hertz}$. The filtering of events is performed by the three-level ATLAS triggering system. The first level, L1, is implemented in hardware, and reduces the event rate to less than $\SI{75}{\kilo\hertz}$. The second level, L2, is implemented in software, and reduces the event rate to less than $\SI{3.5}{\kilo\hertz}$ using regions of interest (RoIs) identified by the L1 trigger. The final level of the trigger, the Event Filter, is also implemented in software, and reduce the event rate to less than $\SI{400}{\hertz}$ using the full event information. 
+During a typical data-taking run during 2012, the LHC beam contains 1377 bunches with a typical bunch spacing of $\SI{50}{\nano\second}$, giving an event rate of $\sim \SI{20}{\mega\hertz}$. In contrast, the ATLAS data acquisition system records events at roughly $\SI{400}{\hertz}$. The filtering of events is performed by the three-level ATLAS triggering system. The first level, L1, is implemented in hardware, and reduces the event rate to less than $\SI{75}{\kilo\hertz}$. The second level, L2, is implemented in software, and reduces the event rate to less than $\SI{3.5}{\kilo\hertz}$ using regions of interest (RoIs) identified by the L1 trigger. The final level of the trigger, the Event Filter, is also implemented in software, and reduce the event rate to less than $\SI{400}{\hertz}$ using the full event information. 
+
+\subsubsection{L1 Trigger}\label{sec:experiment-trigger-L1}
 
 The L1 trigger reduces the event rate from $\SI{20}{\mega\hertz}$ to $\SI{75}{\kilo\hertz}$ using a limited subset of the event data. While the L1 trigger is processing an event, the full event data is stored in buffers on the detector. Due to the limited buffer size, the L1 latency must be less than $\SI{2.5}{\micro\second}$, of which $\SI{1}{\micro\second}$ is used by the cable propagation time. Therefore, the trigger is implemented in custom hardware processors. The block diagram for the trigger is shown in figure~\ref{fig:ATLAS-trigger-L1-block}. The inputs to the trigger include the RPC and TGC detectors in the muon spectrometer and all of the calorimeter system.  Two primary systems, the L1 Calorimeter Trigger and the L1 Muon Trigger, select events based on the presence of high-$\Et$ objects or significant total event activity. These include high-$\pt$ muons, electron and photons, jets, hadronically decaying tau leptons, large missing transverse energy, and large total transverse energy. 
 
@@ -722,11 +754,13 @@ The L1 trigger reduces the event rate from $\SI{20}{\mega\hertz}$ to $\SI{75}{\k
 	\label{fig:ATLAS-trigger-L1-block}
 \end{figure}
 
-The L1 Calorimeter Trigger uses about 7,000 analogue trigger towers with a reduced granularity, $\Delta\eta\times\Delta\phi=0.1\times0.1$ for most of the detector. Two subsystems run in parallel: the cluster processor identifies electrons/photons and hadronically decay tau lepton candidates with $\Et$ above a programmable set of thresholds, while the jet/energy-sum processor identifies jets and calculates the total scalar transverse energy and $\Etmiss$ using $\Delta\eta\times\Delta\phi=0.2\times0.2$ blocks of calorimeter cells. Isolation cuts can be applied as well, limiting the energy allowed in the towers surrounding the object of interest and, in the case of electrons/photons, in the hadronic towers behind the electromagnetic towers. 
+The L1 Calorimeter Trigger uses about 7,000 analogue trigger towers with a reduced granularity, $\Delta\eta\times\Delta\phi=0.1\times0.1$ for most of the detector. Two subsystems run in parallel: the cluster processor identifies electrons/photons and hadronically decaying tau lepton candidates with $\Et$ above a programmable set of thresholds, while the jet/energy-sum processor identifies jets and calculates the total scalar transverse energy and $\Etmiss$ using $\Delta\eta\times\Delta\phi=0.2\times0.2$ blocks of calorimeter cells. Isolation cuts can be applied as well, limiting the energy allowed in the towers surrounding the object of interest and, in the case of electrons/photons, in the hadronic towers behind the electromagnetic towers. 
 
 The L1 Muon Trigger searches for a coincidence of hits in consecutive muon trigger stations within a \emph{road}, roughly corresponding to the path of a muon from the interaction point through the detector. The $\pt$ threshold is encoded in the width of the road, with a narrower road corresponding to a higher $\pt$ threshold. For low-$\pt$ muons in the RPCs, the algorithm begins with hits in the second RPC doublet, called the \emph{pivot plane}. The trigger requires a hit in the first RPC doublet, within the road defined by the interaction point and the hit in the pivot plane. The high-$\pt$ algorithm is similar, requiring a hit along the road in the third RPC doublet as well as the first two.In the end-caps, the pivot plane is established by the outermost layer of TGCs, with the road corresponding to the path of an infinite-momentum muon originating from the interaction point. To reject backgrounds from random coincidences, stricter requirements are imposed on the number of coincident hits in the TGC doublets and triplets.
 
 The muon and calorimeter triggers pass their decisions along with the corresponding data to the Central Trigger Processor (CTP). The CTP communicates the total trigger decision to the front ends on the detector, including special triggers such as random triggers or the minimum bias trigger based on scintillator counters. In the event of a passed trigger, the event data is passed to the L2 trigger. The CTP also manages the \emph{luminosity blocks}, an index representing the time at which an event was recorded with coarse ($\sim1$ minutes) granularity. A luminosity block is the shortest time interval for which the integrated luminosity can be determined such that the total uncertainty is dominated by systematic effects, rather than limited statistics. In the event of a detector failure, this index allows the rejection of a minimal set of affected events. 
+
+\section{High Level Trigger}\label{sec:experiment-trigger-HLT}
 
 The L2 trigger reduces the event rate from a maximum of $75~\mbox{kHz}$ from the L1 trigger to less than $\SI{3.5}{\kilo\hertz}$. The trigger is implemented in software, and uses only the subset of the event data within the RoIs identified by the L1 trigger, typially $1\%$-$2\%$ of the total. After a successful L1 trigger, the data corresponding to the RoIs, stored in the detector-specific front end electronics, are accumulated in the RoI builder via 1574 readout links. The RoI builder combines the 1574 event fragments into a single data structure, which is passed to the L2 processing farm. At each step of a given trigger algorithm targeting particular signatures, only the relevant RoIs are analyzed. If no signatures remain valid, the event is rejected. Hence the full RoI information is transferred only for events which pass the L2 selection criteria. The typical L2 latency is about $\SI{40}{\milli\second}$.
 
