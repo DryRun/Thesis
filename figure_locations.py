@@ -122,6 +122,14 @@ resonance_figures["figures/resonance/SeesawZe_N95_Inclusive.pdf"] = "/Users/dryu
 resonance_figures["figures/resonance/SeesawZmu_N95_Inclusive.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/SeesawZmu_N95_Inclusive.pdf"
 resonance_figures["figures/resonance/c_fid_eff_vs_mass_Ze_InclusiveNoM3L_Seesaw_minimal.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_fid_eff_vs_mass_Ze_InclusiveNoM3L_Seesaw_minimal.pdf"
 resonance_figures["figures/resonance/c_fid_eff_vs_mass_Zmu_InclusiveNoM3L_Seesaw_minimal.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Documents/TypeIIISeesaw8TeV/paper/figures/c_fid_eff_vs_mass_Zmu_InclusiveNoM3L_Seesaw_minimal.pdf"
+resonance_figures["figures/resonance/c_systematics_WZShape_Ze_InclusiveNoM3L_WZ.pdf"]     = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/SherpaPowhegDiboson/Reco/c_Ze_InclusiveNoM3L_WZ.pdf"
+resonance_figures["figures/resonance/c_systematics_WZShape_Ze_ThreeLDijetNoM3L_WZ.pdf"]   = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/SherpaPowhegDiboson/Reco/c_Ze_ThreeLDijetNoM3L_WZ.pdf"
+resonance_figures["figures/resonance/c_systematics_WZShape_Zmu_InclusiveNoM3L_WZ.pdf"]    = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/SherpaPowhegDiboson/Reco/c_Zmu_InclusiveNoM3L_WZ.pdf"
+resonance_figures["figures/resonance/c_systematics_WZShape_Zmu_ThreeLDijetNoM3L_WZ.pdf"]  = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/SherpaPowhegDiboson/Reco/c_Zmu_ThreeLDijetNoM3L_WZ.pdf"
+resonance_figures["figures/resonance/c_systematics_ZZShapeSyst_Ze_InclusiveNoM3L.pdf"]    = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/SherpaPowhegDiboson/Reco/c_ZZShapeSyst_Ze_InclusiveNoM3L.pdf"
+resonance_figures["figures/resonance/c_systematics_ZZShapeSyst_Ze_ThreeLDijetNoM3L.pdf"]  = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/SherpaPowhegDiboson/Reco/c_ZZShapeSyst_Ze_ThreeLDijetNoM3L.pdf"
+resonance_figures["figures/resonance/c_systematics_ZZShapeSyst_Zmu_InclusiveNoM3L.pdf"]   = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/SherpaPowhegDiboson/Reco/c_ZZShapeSyst_Zmu_InclusiveNoM3L.pdf"
+resonance_figures["figures/resonance/c_systematics_ZZShapeSyst_Zmu_ThreeLDijetNoM3L.pdf"] = "/Users/dryu/Documents/Physics/ATLAS/Multilepton/Data/VectorLeptons/AnaVLL/SherpaPowhegDiboson/Reco/c_ZZShapeSyst_Zmu_ThreeLDijetNoM3L.pdf"
 
 def FindFigures(figure_list):
 	possible_paths = []
@@ -154,6 +162,6 @@ def CopyFigures(figures_list):
 		#os.system(command)
 
 if __name__ == "__main__":
-	#FindFigures(sorted(resonance_figures.keys()))
-	CopyFigures(resonance_figures)
+	FindFigures(sorted(resonance_figures.keys()))
+	#CopyFigures(resonance_figures)
 
