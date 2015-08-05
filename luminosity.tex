@@ -257,7 +257,7 @@ The vertex reconstruction efficiency is strongly affected by three pileup-relate
 	\item Split vertices: a single interaction is reconstructed as two separate vertices. This is a significant effect when considering vertices with two or more tracks, but is negligible for vertices with at least five tracks.
 \end{itemize}
 
-Corrections are derived for vertex masking and fake vertices. The fake vertex correction is derived using truth matching in minimum bias Monte Carlo simulation. The simulation sample was generated using \pythia~8, with tune A2M~\cite{pythia8,AUET2}. For a given cut on the minimum number of tracks per vertex, $n_{\mathrm{trk,min}}$, a reconstructed vertex is labelled as fake if less than $n_{\mathrm{trk,min}}$ of its tracks are matched to charged particles originating from the same generated $pp$ interaction. The average number of reconstructed vertices labelled as fake by Monte Carlo truth matching is shown as a function of pileup in figure~\ref{fig:fake-fractions}. The fake fractions show a significant dependence on $\mu$ and on the $n_{\mathrm{trk,min}}$.
+Corrections are derived for vertex masking and fake vertices. The fake vertex correction is derived using truth matching in minimum bias Monte Carlo simulation. The simulation sample was generated using \pythia~8, with tune A2M~\cite{pythia8,AUET2}. For a given cut on the minimum number of tracks per vertex, $n_{\mathrm{trk,min}}$, a reconstructed vertex is labeled as fake if less than $n_{\mathrm{trk,min}}$ of its tracks are matched to charged particles originating from the same generated $pp$ interaction. The average number of reconstructed vertices labeled as fake by Monte Carlo truth matching is shown as a function of pileup in figure~\ref{fig:fake-fractions}. The fake fractions show a significant dependence on $\mu$ and on the $n_{\mathrm{trk,min}}$.
 
 %\begin{figure}[h]
 %	\centering
@@ -353,7 +353,7 @@ The correction is derived in a data-driven way as follows.
 	%\subfloat[$p_{\textrm{mask}}(\Delta z)$, NTrk10] {
 	%	\resizebox{3in}{!}{\includegraphics{figures/luminosity/c_pmask_dz_NTrk10}}
 	%}\\
-	\caption{Calibration of the masking correction method on simulation, using 8~TeV minimum bias Monte Carlo (pythia 8, tune A2M). Left: $\Delta z$ distributions and template fits using expected $\Delta z$ distributions in the range $30$~mm$\leq\Delta z\leq300$~mm. Right: pairwise vertex masking probability as a function of the longitudinal distance $\Delta z$ between the vertices.}
+	\caption{Calibration of the masking correction method on simulation, using 8~TeV minimum bias Monte Carlo (\pythia~8, tune A2M). Left: $\Delta z$ distributions and template fits using expected $\Delta z$ distributions in the range $30$~mm$\leq\Delta z\leq300$~mm. Right: pairwise vertex masking probability as a function of the longitudinal distance $\Delta z$ between the vertices.}
 	\label{fig:masking-correction-mc}
 \end{figure}
 
@@ -378,7 +378,7 @@ The correction is derived in a data-driven way as follows.
 		\langle N_{\textrm{rec}} \rangle &= \sum_{i=1}^{N_{\textrm{vis}}} p_i.
 	\end{align}
 	
-	\item Finally, a map is computed between the average number of reconstructible vertices, $\mu_{\textrm{vis}}$, and the average number of reconstructed vertices, $ \mu_{\textrm{rec}}(\mu_{\textrm{vis}})$, by convoluting $\mu_{\textrm{rec}}(N_{\textrm{vis}})$ with a Poisson distribution:
+	\item Finally, a map is computed between the average number of reconstructible vertices, $\mu_{\textrm{vis}}$, and the average number of reconstructed vertices, $ \mu_{\textrm{rec}}(\mu_{\textrm{vis}})$, by convolving $\mu_{\textrm{rec}}(N_{\textrm{vis}})$ with a Poisson distribution:
 	\begin{align}
 		\langle \mu_{\textrm{rec}} \rangle (\mu_{\textrm{vis}}) = \sum_{N_{\textrm{vis}}=0}^{\infty} P(N_{\textrm{vis}}; \mu_{\textrm{vis}}) \mu_{\textrm{rec}} (N_{\textrm{vis}}).
 	\end{align}
@@ -401,7 +401,7 @@ An example scan curve from the May 2011 vdM scan is shown in figure~\ref{fig:lum
 	\subfloat[$y$ scan, BCID 81] {
 		\resizebox{3in}{!}{\includegraphics{figures/luminosity/c_musp_y_BCID81_NTrkCut5}}
 	}\\
-	\caption{$\mu_{\textrm{vis}}^{(sp)}$ vs. beam separation, with single gaussian plus constant fits, and pulls.}
+	\caption{$\mu_{\textrm{vis}}^{(sp)}$ vs. beam separation, with single Gaussian plus constant fits, and pulls.}
 	\label{fig:luminosity-vertex-vdm}
 \end{figure}
 

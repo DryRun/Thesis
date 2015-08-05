@@ -18,7 +18,7 @@ Collisions events for this analysis are triggered using the unprescaled single-e
 	\item \texttt{ EF\_mu36\_tight}: One muon with $\pt>\SI{36}{\giga\electronvolt}$, with no isolation requirement.
 \end{itemize}
 
-The triggers with higher tranverse momentum thresholds remove the isolation requirements in order to improve the efficiency at higher $\pt$. Triggered events are required to have an offline lepton matched to the trigger object within $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2} < 0.1$. To avoid trigger turn-on effects near the $\pt$ threshold, the offline lepton must have $\pt>\SI{26}{\giga\electronvolt}$. Additionally, trigger-matched muons must have $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
+The triggers with higher transverse momentum thresholds remove the isolation requirements in order to improve the efficiency at higher $\pt$. Triggered events are required to have an offline lepton matched to the trigger object within $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2} < 0.1$. To avoid trigger turn-on effects near the $\pt$ threshold, the offline lepton must have $\pt>\SI{26}{\giga\electronvolt}$. Additionally, trigger-matched muons must have $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
 
 %Monte Carlo events are selected using the trigger simulation. The discrepancies between the trigger performance in data and Monte Carlo are usually smaller than 2\%~\cite{Ancu:1501709}. 
 
@@ -95,7 +95,7 @@ The signal regions are defined in table~\ref{table:model-independent-signal-regi
 
 
 \section{Systematic Uncertainties}\label{sec:model-independent-systematics}
-Systematic uncertainties are assigned to the signal and background predictions to account for possible modelling inaccuracies. The sources of uncertainty considered are:
+Systematic uncertainties are assigned to the signal and background predictions to account for possible modeling inaccuracies. The sources of uncertainty considered are:
 
 \begin{itemize}
 	\item Uncertainties on the reducible background estimates from the data-driven estimation method, as described in section~\ref{sec:fake-factor-method}. The uncertainties ranges between $20\%$ to $30\%$ for the electron fake factors, $25\%$ to $50\%$ for the muon fake factors, and $25\%$ to $30\%$ for the tau lepton fake factors.
@@ -108,7 +108,7 @@ Systematic uncertainties are assigned to the signal and background predictions t
   
   where $\mathcal{L}$ is the integrated luminosity of the data, $\sigma_{\mathrm{process}}$ is the cross section of the simulated process, and $N_{\mathrm{sim}}$ is the number of simulated events. The integrated luminosity carries an uncertainty of $2.8\%$, as described in section~\ref{sec:luminosity-uncertainties}. The cross sections are taken from calculations with uncertainties due to various sources, including the fixed order of the calculation, the choice of renormalization and factorization scales, and the PDFs. For the dominant $WZ$ and $ZZ$ backgrounds, the predictions from \sherpa\ are compared to those from the next-to-leading-order generator \vbfnlo. The generators show good agreement, and the systematic uncertainty on the cross section is determined from \vbfnlo\ by varying the factorization and renormalization scales up and down by factors of two. The uncertainties are shown in table~\ref{table:model-independent-cross-section-uncertainties}. 
 
-  No systematic uncertainty is assigned to the normalization of the $Z+\gamma$ sample. Rather, a large uncertainty of 30\% is assigned due to the reweighting procedure described in section~\ref{sec:conversion-reweighting}. The $VVV^{(*)}$ sample is also not assigned an uncertainty due to its small contribution to the signal regions.
+  No systematic uncertainty is assigned to the normalization of the $Z+\gamma$ sample. Rather, a large uncertainty of 30\% is assigned due to the reweighting procedure described in section~\ref{sec:backgrounds-zgamma}. The $VVV^{(*)}$ sample is also not assigned an uncertainty due to its small contribution to the signal regions.
   
   \begin{table}
     \begin{center}
@@ -139,7 +139,7 @@ Systematic uncertainties are assigned to the signal and background predictions t
 	\item Finally, the Monte Carlo samples carry statistical uncertainty due to simulating a finite number of events. 
 \end{itemize}
 
-The dominant sources of uncertainty depend on the signal region, but are generally due to Monte Carlo statistical uncertainties, the fake factor uncertainites, and theoretical cross section uncertainties. 
+The dominant sources of uncertainty depend on the signal region, but are generally due to Monte Carlo statistical uncertainties, the fake factor uncertainties, and theoretical cross section uncertainties. 
 
 \section{Background Validation}\label{sec:model-independent-validation-regions}
 The background estimates are verified in several dedicated validation regions, which are orthogonal to the signal regions. Events containing two leptons are used to test the selection of prompt leptons and their corresponding scale factors and energy corrections. The reducible backgrounds are tested in $t\overline{t}$ validation regions, where the events are required to have two same-sign leptons to target semileptonic decays where one lepton arises from a reducible process. Finally, the fake factor method is validated in events with modified, intermediate lepton selections, where the signal leptons are between the numerator and denominator definitions used in the nominal reducible background estimate.
@@ -161,7 +161,7 @@ Three dilepton validation regions target the three flavors of leptons: $ee$, $\m
 The $ee$ and $\mu\mu$ validation regions are also used to generate scale factors to account for efficiency
 differences between simulation and data when applying cuts on lepton isolation or impact parameter. The scale factors are computed from events with a dilepton pair with invariant mass within $\SI{10}{\giga\electronvolt}$ of $m_Z$, and are shown in figure~\ref{fig:model-independent-lepton-SFs}. The scale factors are mostly consistent with unity to within $0.5\%$, except for isolation requirements on the low-$\pt$ leptons, where the scale factors deviate from unity by up to $2\%$. 
 
-\begin{figure}[tbp]
+\begin{figure}[htbp]
   \subfloat[Electron \pt\ Scale Factors]{
     \includegraphics[width=.48\columnwidth]{figures/modelindependent/c_e_pt_allSF}
   }
@@ -333,7 +333,7 @@ The results of the search as organized as follows. For each category, the distri
 	\sigma_{95}^{\mathrm{vis}} = \frac{N_{95}}{\mathcal{L}},
 \end{equation}
 
-where $\mathcal{L}=20.3~\mbox{fb}^{-1}$ is the integrated luminosity of the data. The limits are calculated using the modified frequentist $CL_s$ prescription~\cite{cls} (see section~\ref{sec:statistical-methods} for more details). 
+where $\mathcal{L}=20.3~\mbox{fb}^{-1}$ is the integrated luminosity of the data. The limits are calculated using a modified frequentist $CL_s$ prescription~\cite{cls}. 
 
 The results for the $\htlep$ signal regions are shown here for demonstrative purposes. 
 %The full set of plots is available at~\cite{model-independent-webpage}. 
