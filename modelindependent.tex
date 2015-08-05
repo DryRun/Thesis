@@ -12,13 +12,13 @@ This section describes the selection of events containing at least three leptons
 Collisions events for this analysis are triggered using the unprescaled single-electron or single-muon triggers with the lowest transverse momentum thresholds. At least one of the following triggers must have fired:
 
 \begin{itemize}
-	\item \texttt{ EF\_e24vhi\_medium1}: One electron with $\pt>24 \GeV$. The electron must satisfy cuts similar to the \texttt{medium++} identification criteria at the trigger level, an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.1$, and cuts on the leakage into the hadronic calorimeter.
-	\item \texttt{ EF\_e60\_medium1}: One electron with $\pt>60 \GeV$. The electron must also satisfy the medium identification cuts, but the isolation and leakage requirements are removed.
-	\item \texttt{ EF\_mu24i\_tight}: One muon with $\pt>24 \GeV$, satisfying an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.12$.
-	\item \texttt{ EF\_mu36\_tight}: One muon with $\pt>36 \GeV$, with no isolation requirement.
+	\item \texttt{ EF\_e24vhi\_medium1}: One electron with $\pt>\SI{24}{\giga\electronvolt}$. The electron must satisfy cuts similar to the \texttt{medium++} identification criteria at the trigger level, an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.1$, and cuts on the leakage into the hadronic calorimeter.
+	\item \texttt{ EF\_e60\_medium1}: One electron with $\pt>\SI{60}{\giga\electronvolt}$. The electron must also satisfy the medium identification cuts, but the isolation and leakage requirements are removed.
+	\item \texttt{ EF\_mu24i\_tight}: One muon with $\pt>\SI{24}{\giga\electronvolt}$, satisfying an isolation requirement of $\frac{\pt^{\mathrm{cone}20}}{\pt}<0.12$.
+	\item \texttt{ EF\_mu36\_tight}: One muon with $\pt>\SI{36}{\giga\electronvolt}$, with no isolation requirement.
 \end{itemize}
 
-The triggers with higher tranverse momentum thresholds remove the isolation requirements in order to improve the efficiency at higher $\pt$. Triggered events are required to have an offline lepton matched to the trigger object within $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2} < 0.1$. To avoid trigger turn-on effects near the $\pt$ threshold, the offline lepton must have $\pt>26 \GeV$. Additionally, trigger-matched muons must have $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
+The triggers with higher tranverse momentum thresholds remove the isolation requirements in order to improve the efficiency at higher $\pt$. Triggered events are required to have an offline lepton matched to the trigger object within $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2} < 0.1$. To avoid trigger turn-on effects near the $\pt$ threshold, the offline lepton must have $\pt>\SI{26}{\giga\electronvolt}$. Additionally, trigger-matched muons must have $|\eta|<2.4$ to avoid uninstrumented regions of the detector.
 
 %Monte Carlo events are selected using the trigger simulation. The discrepancies between the trigger performance in data and Monte Carlo are usually smaller than 2\%~\cite{Ancu:1501709}. 
 
@@ -30,12 +30,12 @@ After successful triggering and overlap removal, events are required to have at 
 The analysis defines a large number of nonexclusive signal regions, designed to target new physics models and to compartmentalize the expected backgrounds. First, the events are divided into six categories as follows. First, the events are divided into three categories based on the properties of any opposite-sign, same-flavor (OSSF) lepton pairs in the event:
 
 \begin{itemize}
-	\item \textbf{on-$Z$}: events containing an OSSF lepton pair consistent with the decay of a $Z$ boson, with invariant mass within $20 \GeV$ of $m_Z$;
+	\item \textbf{on-$Z$}: events containing an OSSF lepton pair consistent with the decay of a $Z$ boson, with invariant mass within $\SI{20}{\giga\electronvolt}$ of $m_Z$;
 	\item \textbf{off-$Z$, OSSF}:  events containing an OSSF pair that do not fall in the on-$Z$ category; and
 	\item \textbf{off-$Z$, mixed}: events containing no OSSF pairs.
 \end{itemize}
 
-The on-$Z$ category also includes events containing three leptons (two of which form an OSSF pair) with invariant mass within $20 \GeV$ of $m_Z$, to include events containing a $Z$ boson where a photon from final state radiation converts and is reconstructed as a prompt electron.
+The on-$Z$ category also includes events containing three leptons (two of which form an OSSF pair) with invariant mass within $\SI{20}{\giga\electronvolt}$ of $m_Z$, to include events containing a $Z$ boson where a photon from final state radiation converts and is reconstructed as a prompt electron.
 
 Next, the events are further divided into two categories based on the number of electron or muon candidates in the event:
 
@@ -76,11 +76,11 @@ The signal regions are defined in table~\ref{table:model-independent-signal-regi
       \hline       
       \htlep       &$\Sigma\pt$ of leading three leptons &0&200&500&800     &\\
       Min. $\ptl$  &\pt\ of softest (third) lepton       &0&50&100&150      &\\
-      \met         &\multirow{2}{*}{Missing transverse momentum}       &0&100&200&300     &$\Ht < 150$ \GeV\\
-      \met         &                                     &0&100&200&300     &$\Ht \geq 150$ \GeV\\
+      \met         &\multirow{2}{*}{Missing transverse momentum}       &0&100&200&300     &$\Ht < \SI{150}{\giga\electronvolt}$\\
+      \met         &                                     &0&100&200&300     &$\Ht \geq \SI{150}{\giga\electronvolt}$\\
       \st          &\multirow{3}{*}{All transverse activity} &0&600&1000&1500   &\\
-      \st          &                                     &0&600&1200&       &$\met{}\geq100$ \GeV\\
-      \st          &                                     &0&600&1200&       &$\mtw{}\geq100$ \GeV, on-$Z$\\
+      \st          &                                     &0&600&1200&       &$\met{}\geq \SI{100}{\giga\electronvolt}$\\
+      \st          &                                     &0&600&1200&       &$\mtw{}\geq \SI{100}{\giga\electronvolt}$, on-$Z$\\
       \hline
       \hline
       Variable     &Meaning &\multicolumn{4}{c}{Lower Bounds}\\
@@ -126,7 +126,7 @@ Systematic uncertainties are assigned to the signal and background predictions t
     \end{center}
   \end{table}
 
-	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron (section~\ref{sec:reco-electron-efficiency}) and muon (section~\ref{sec:reco-muon-efficiency}) scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$-$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$-$2.2\%$ (section~\ref{sec:event-reconstruction-taus}).
+	\item Events are also weighted to account for differences between data and Monte Carlo simulation in the lepton trigger, reconstruction, and identification efficiencies. The scale factors and associated uncertainties are provided by the relevant ATLAS combined performance groups. The electron (section~\ref{sec:reco-electron-efficiency}) and muon (section~\ref{sec:reco-muon-efficiency}) scale factors are close to unity, with uncertainties in the range $1$-$5\%$. The scale factors for the tau lepton identification efficiency range from $94$--$96\%$ for the \texttt{BDTTight} working point, and carry uncertainties between $2.0$--$2.2\%$ (section~\ref{sec:event-reconstruction-taus}).
 
 	\item The lepton energy scales carry uncertainty which has a small effect on the signal regions due to leptons or events near $\Et$ or $\pt$ thresholds, as described in sections~\ref{sec:reco-electron-energymomentum}, \ref{sec:reco-muon-energymomentum}, and \ref{sec:reco-tau-energymomentum}.
 
@@ -159,7 +159,7 @@ Three dilepton validation regions target the three flavors of leptons: $ee$, $\m
 \end{figure}
 
 The $ee$ and $\mu\mu$ validation regions are also used to generate scale factors to account for efficiency
-differences between simulation and data when applying cuts on lepton isolation or impact parameter. The scale factors are computed from events with a dilepton pair with invariant mass within $10 \GeV$ of $m_Z$, and are shown in figure~\ref{fig:model-independent-lepton-SFs}. The scale factors are mostly consistent with unity to within $0.5\%$, except for isolation requirements on the low-$\pt$ leptons, where the scale factors deviate from unity by up to $2\%$. 
+differences between simulation and data when applying cuts on lepton isolation or impact parameter. The scale factors are computed from events with a dilepton pair with invariant mass within $\SI{10}{\giga\electronvolt}$ of $m_Z$, and are shown in figure~\ref{fig:model-independent-lepton-SFs}. The scale factors are mostly consistent with unity to within $0.5\%$, except for isolation requirements on the low-$\pt$ leptons, where the scale factors deviate from unity by up to $2\%$. 
 
 \begin{figure}[tbp]
   \subfloat[Electron \pt\ Scale Factors]{
@@ -185,9 +185,9 @@ The $\mu\tau_{\mathrm{had}}$ region applies addition cuts to reduce the large co
 \begin{itemize}
 	\item $\cos{\Delta\phi(\mu, \met)} + \cos{\Delta\phi(\tau, \met)} >$ -0.15,
 	\item $\Delta\phi(\mu, \tau_{had}) >$ 2.4,
-	\item $m_{\mathrm{T}}^{\mu} < 50 \GeV$,
-	\item $42< m_{Z}^{vis.} < 82 \GeV$, and
-	\item $\pt^{\mu} < 40 \GeV$.
+	\item $m_{\mathrm{T}}^{\mu} < \SI{50}{\giga\electronvolt}$,
+	\item $42< m_{Z}^{vis.} < \SI{82}{\giga\electronvolt}$, and
+	\item $\pt^{\mu} < \SI{40}{\giga\electronvolt}$.
 \end{itemize}
 
 % The figures are not nice in the INT note... if you use the paper figures, only the tau pT is available.
@@ -217,7 +217,7 @@ The $\pt$ distribution of the $\tauhadvis$ is shown in figure~\ref{fig:model-ind
 
 
 \subsection{$t\overline{t}$ Validation Regions}\label{sec:model-independent-validation-regions-ttbar}
-In signal regions that veto $Z$ bosons and require large $\Htjets$ or $\Etmiss$, a large reducible background component is expected from $t\overline{t}$ events, where both $W$ bosons decay leptonically and a third lepton arises from a misidentified jet or semileptonic heavy flavor decay. This process is tested in the $t\overline{t}$ validation regions, which require at least one $b$-tagged jet with $\pt>30 \GeV$, exactly two electrons or muons with the same charge, and $\Ht<500 \GeV$. The requirement that the leptons have the same sign vetoes dilepton $t\overline{t}$ events with two prompt leptons from $W$ decays, while the $\Ht$ requirement reduces the potential contamination from new BSM phenomena. Note that events containing hadronically decaying tau leptons are used to derive a systematic uncertainty on the tau fake factors due to the flavor composition of the events (section~\ref{sec:ff-tau-systematics}), and so are not used as a validation region. 
+In signal regions that veto $Z$ bosons and require large $\Htjets$ or $\Etmiss$, a large reducible background component is expected from $t\overline{t}$ events, where both $W$ bosons decay leptonically and a third lepton arises from a misidentified jet or semileptonic heavy flavor decay. This process is tested in the $t\overline{t}$ validation regions, which require at least one $b$-tagged jet with $\pt>\SI{30}{\giga\electronvolt}$, exactly two electrons or muons with the same charge, and $\Ht<\SI{500}{\giga\electronvolt}$. The requirement that the leptons have the same sign vetoes dilepton $t\overline{t}$ events with two prompt leptons from $W$ decays, while the $\Ht$ requirement reduces the potential contamination from new BSM phenomena. Note that events containing hadronically decaying tau leptons are used to derive a systematic uncertainty on the tau fake factors due to the flavor composition of the events (section~\ref{sec:ff-tau-systematics}), and so are not used as a validation region. 
 
 % Like before, the INT note figures are not acceptable. Use only the paper figure for now...
 %The $\pt$ and $\eta$ distributions of the leading and subleading leptons are shown in figure~\ref{fig:model-independent-VR-ttbar}.
@@ -327,43 +327,105 @@ The events containing an intermediate $\tau_{\mathrm{had}}$ are much more abunda
 
 
 \section{Results and Limits}\label{sec:model-independent-results}
-The results of the search as organized as follows. For each category, the distributions of the various kinematic variables ($\htlep$, $\htjets$, $\meff$, $\Etmiss$, $\mtw$, $N_{\mathrm{jets}}$, $N_{b-\mathrm{tags}}$, and the $\pt$ of the third lepton) are produced (where applicable). Then, in each of the 138 signal regions, the number of observed and expected events are compared, and, absent any significant deviations, $95\%$ confidence level (CL) upper limits are derived on the number of events from new physics, $N_{95}$, and the corresponding \emph{visible cross section}, $\sigma_{95}^{\mathrm{vis}}$, defined as
+The results of the search as organized as follows. For each category, the distributions of the various kinematic variables ($\htlep$, $\htjets$, $\meff$, $\Etmiss$, $\mtw$, $N_{\mathrm{jets}}$, $N_{b-\mathrm{tags}}$, and the $\pt$ of the third lepton) are produced, where applicable. Then, in each of the 138 signal regions, the number of observed and expected events are compared, and, absent any significant deviations, $95\%$ confidence level (CL) upper limits are derived on the number of events from new physics, $N_{95}$, and the corresponding \emph{visible cross section}, $\sigma_{95}^{\mathrm{vis}}$, defined as
 
 \begin{equation}
 	\sigma_{95}^{\mathrm{vis}} = \frac{N_{95}}{\mathcal{L}},
 \end{equation}
 
-where $\mathcal{L}=20.3~\mbox{fb}^{-1}$ is the integrated luminosity of the data.
+where $\mathcal{L}=20.3~\mbox{fb}^{-1}$ is the integrated luminosity of the data. The limits are calculated using the modified frequentist $CL_s$ prescription~\cite{cls} (see section~\ref{sec:statistical-methods} for more details). 
 
-The plots for the $\htlep$ signal regions are shown here for demonstrative purposes. The full set of plots is available at~\cite{model-independent-webpage}. The $\htlep$ distributions are shown in figure~\ref{fig:model-independent-htlep}. The observed and expected event counts in the three corresponding signal regions ($\htlep>200 \GeV$, $\htlep>500 \GeV$, and $\htlep>800 \GeV$) are shown in table~\ref{table:model-independent-htlep}. Finally, the upper limits on $\sigma_{95}^{\mathrm{vis}}$ are shown in figure~\ref{fig:model-independent-htlep-sigmavis}. 
+The results for the $\htlep$ signal regions are shown here for demonstrative purposes. 
+%The full set of plots is available at~\cite{model-independent-webpage}. 
+The $\htlep$ distributions are shown in figure~\ref{fig:model-independent-htlep}, along with the expected signal from an excited tau neutrino with mass $m(\nu^*_{\tau})=\SI{0.5}{\tera\electronvolt}$~\cite{excited-neutrino}, decaying to $Z\nu_{\tau}$ or $W^{\pm}\tau^{\mp}$. The observed and expected event counts in the three corresponding signal regions ($\htlep>\SI{200}{\giga\electronvolt}$, $\htlep>\SI{500}{\giga\electronvolt}$, and $\htlep>\SI{800}{\giga\electronvolt}$) are shown in table~\ref{table:model-independent-htlep}. 
 
-The deviations between the observed and expected in all 138 signal regions are shown in figure~\ref{fig:model-independent-summary-sigma}, in units of the total uncertainty on the background expectation. 
+Finally, the upper limits on $\sigma_{95}^{\mathrm{vis}}$ in each of the 138 signal regions are shown in figure~\ref{fig:model-independent-sigmavis}. The deviations between the observed and expected in all 138 signal regions are shown in figure~\ref{fig:model-independent-summary-sigma}, in units of the total uncertainty on the background expectation. The most significant excess corresponds to a $p$-value of 0.05, or a $1.7\sigma$ deviation, in the $\meff>\SI{1000}{\giga\electronvolt}$ signal region in the 2L$+\tau_{\mathrm{had}}$, on-$Z$ channel. 
 
 \begin{figure}[htbp]
 	\centering
-
-	\caption{$\htlep$ distributions in the six categories.}
+  \subfloat[] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/modelindependent/all_onZ_emu_tau_All_all_SumTrilepPt.eps}}
+  }
+  \hfill
+  \subfloat[] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/modelindependent/all_onZ_emu_All_all_SumTrilepPt.eps}}
+  } \\
+  \subfloat[] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/modelindependent/all_offZ_mixed_emu_tau_All_all_SumTrilepPt.eps}}
+  }
+  \hfill
+  \subfloat[] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/modelindependent/all_offZ_mixed_emu_All_all_SumTrilepPt.eps}}
+  } \\
+  \subfloat[] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/modelindependent/all_offZ_OSSF_emu_tau_All_all_SumTrilepPt.eps}}
+  }
+  \hfill
+  \subfloat[] {
+    \resizebox{0.48\textwidth}{!}{\includegraphics{figures/modelindependent/all_offZ_OSSF_emu_All_all_SumTrilepPt.eps}}
+  }
+	\caption{$\htlep$ distributions in the six categories: (a) $2e/\mu+\geq1\tauhad$, on-$Z$, (b) $\geq3e/\mu$, on-$Z$, (c) $2e/\mu+\geq1\tauhad$, off-$Z$, no-OSSF, (d) $3e/\mu$, off-$Z$, no-OSSF, (e) $2e/\mu+\geq1\tauhad$, off-$Z$, OSSF, and (f) $\geq3e/\mu$, off-$Z$, OSSF. The expected signal from an excited tau neutrino with mass $m(\nu^{*}_{\tau}=\SI{0.5}{\tera\electronvolt}$ is shown to illustrate the sensitivity of the different signal regions. The lower panel shows the ratio of the observed data to the background prediction.}
 	\label{fig:model-independent-htlep}
 \end{figure}
 
-\begin{table}[htbp]
-	\centering
-
-	\caption{Observed and expected event counts in the $\htlep$ signal regions, along with the inclusive counts for the entire category.}
-	\label{table:model-independent-htlep}
+\begin{table}[htbp]\footnotesize
+ \begin{center}
+  \begin{tabular}{r r@{\ $\pm$\ }r r@{\ $\pm$\ }r r@{\ $\pm$\ }r r@{\ $\pm$\ }r c}
+\hline
+$\Htlep \geq$ &\multicolumn{2}{c}{$t\bar{t}+V(V)$}   &\multicolumn{2}{c}{$VV(V)$}  &\multicolumn{2}{c}{Reducible}  &\multicolumn{2}{c}{Total} &Observed\\\hline
+\multicolumn{10}{c}{$\geq 3 e/\mu$, off-$Z$, no-OSSF} \\
+\hline
+       $\SI{200}{\giga\electronvolt}$ &2.0&0.6   &1.6&0.4  &2.1&1.1  &5.7&1.4 &6\\
+       $\SI{500}{\giga\electronvolt}$ &0.13&0.06   &0.09&0.03  &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.7}_{0}$}  &\multicolumn{1}{r@{\ $^+_-$\ }}{0.22}&{$^{0.70}_{0.22}$}  &1\\
+       $\SI{800}{\giga\electronvolt}$ &0.06&0.04   &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.03}_{0}$}   &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.7}_{0}$}  &\multicolumn{1}{r@{\ $^+_-$\ }}{0.06}&{$^{0.70}_{0.06}$}  &0\\
+\hline
+\multicolumn{10}{c}{$2 e/\mu + \geq 1 \tau$, off-$Z$, no-OSSF} \\
+\hline
+       $\SI{200}{\giga\electronvolt}$ &1.2&0.4   &2.3&0.5  &19&6   &22&6  &14\\
+       $\SI{500}{\giga\electronvolt}$ &0.01&0.01   &0.03&0.01  &\multicolumn{1}{r@{\ $^+_-$\ }}{0.32}&{$^{0.73}_{0.32}$}   &\multicolumn{1}{r@{\ $^+_-$\ }}{0.36}&{$^{0.73}_{0.36}$}  &0\\
+       $\SI{800}{\giga\electronvolt}$ &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.003}_{0}$}   &0.01&0.01  &\multicolumn{1}{r@{\ $^+_-$\ }}{0.11}&{$^{0.71}_{0.11}$}   &\multicolumn{1}{r@{\ $^+_-$\ }}{0.12}&{$^{0.71}_{0.12}$}  &0\\
+\hline
+\multicolumn{10}{c}{$\geq 3 e/\mu$, off-$Z$, OSSF} \\
+\hline
+       $\SI{200}{\giga\electronvolt}$ &7.5&2.3   &63&8   &9&4  &78&9  &56\\
+       $\SI{500}{\giga\electronvolt}$ &0.34&0.12   &3.3&0.5  &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.7}_{0}$}  &3.7&0.9 &1\\
+       $\SI{800}{\giga\electronvolt}$ &{0.01}&{0.01}   &0.54&0.12  &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.7}_{0}$}  &\multicolumn{1}{r@{\ $^+_-$\ }}{0.5}&{$^{0.7}_{0.5}$} &0\\
+\hline
+\multicolumn{10}{c}{$2 e/\mu + \geq 1 \tau$, off-$Z$, OSSF} \\
+\hline
+       $\SI{200}{\giga\electronvolt}$ &0.64&0.21   &4.4&0.6  &68&20  &73&20 &67\\
+       $\SI{500}{\giga\electronvolt}$ &0.06&0.03   &0.17&0.04  &1.1&0.9  &1.3&0.9 &0\\
+       $\SI{800}{\giga\electronvolt}$ &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.003}_{0}$}   &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.03}_{0}$}   &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.7}_{0}$}  &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.7}_{0}$} &0\\
+\hline
+\multicolumn{10}{c}{$\geq 3 e/\mu$, on-$Z$} \\
+\hline
+       $\SI{200}{\giga\electronvolt}$ &23&7  &410&50   &18&8   &450&50  &387\\
+       $\SI{500}{\giga\electronvolt}$ &0.82&0.25   &10.9&2.3   &\multicolumn{1}{r@{\ $^+_-$\ }}{0.6}&{$^{0.8}_{0.6}$}  &12.3&2.4  &12\\
+       $\SI{800}{\giga\electronvolt}$ &0.05&0.03   &0.92&0.23  &\multicolumn{1}{r@{\ $^+_-$\ }}{0.10}&{$^{0.70}_{0.10}$}   &1.1&0.7 &3\\
+\hline
+\multicolumn{10}{c}{$2 e/\mu + \geq 1 \tau$, on-$Z$} \\
+\hline
+       $\SI{200}{\giga\electronvolt}$ &1.1&0.4   &20.7&2.7   &160&50   &180&50  &148\\
+       $\SI{500}{\giga\electronvolt}$ &0.02&0.01   &0.82&0.23  &1.2&0.9  &2.0&1.0 &3\\
+       $\SI{800}{\giga\electronvolt}$ &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.003}_{0}$}   &0.04&0.02  &\multicolumn{1}{r@{\ $^+_-$\ }}{0}&{$^{0.71}_{0}$}   &\multicolumn{1}{r@{\ $^+_-$\ }}{0.04}&{$^{0.71}_{0.04}$}  &0\\
+\hline
+\end{tabular}
+   \caption{Expected and observed event yields for the $\htlep$~signal regions.}
+   \label{table:model-independent-htlep}
+\end{center}
 \end{table}
 
 \begin{figure}
 	\centering
-
-	\caption{95\% CL upper limits on the visible cross section of trilepton event production from new physics, $\sigma_{95}^{\mathrm{vis}}$, in each $\htlep$ signal region. }
-	\label{fig:model-independent-htlep-sigmavis}
+  \resizebox{0.95\textwidth}{!}{\includegraphics{figures/modelindependent/summary_limits.eps}}
+	\caption{95\% CL upper limits on the visible cross section of trilepton event production from new physics, $\sigma_{95}^{\mathrm{vis}}$, in each signal region. }
+	\label{fig:model-independent-sigmavis}
 \end{figure}
 
 \begin{figure}
 	\centering
-
-	\caption{Deviations between the observed event counts and the background expectations in each signal region, in units of the total uncertainty on the background prediction.}
+  \resizebox{0.95\textwidth}{!}{\includegraphics{figures/modelindependent/summary_limit_pulls.eps}}
+	\caption{Deviations between the observed event counts and the background expectations in each signal region divided by the total uncertainty on the background prediction.}
 	\label{fig:model-independent-summary-sigma}
 \end{figure}
 
@@ -373,9 +435,9 @@ The deviations between the observed and expected in all 138 signal regions are s
 The 95\% CL upper limits on trilepton event production from new physics derived in section~\ref{sec:model-independent-results} provide a useful tool with which to confront models of new physics producing trilepton final states. To facilitate the comparison of the model-independent limits with the predictions of a model (i.e. a set of simulated events from an event generator), per-lepton fiducial efficiencies are provided to quantify approximately the efficiency of triggering, reconstructing and selecting fiducial leptons at truth level. The definition of fiducial truth leptons is as follows: 
 
 \begin{itemize}
-	\item \underline{\textbf{Transverse momentum}}: Electrons and muons are required to have $\pt>10 \GeV$, while tau leptons are required to have $\pt>15 \GeV$.
+	\item \underline{\textbf{Transverse momentum}}: Electrons and muons are required to have $\pt>\SI{10}{\giga\electronvolt}$, while tau leptons are required to have $\pt>\SI{15}{\giga\electronvolt}$.
 	\item \underline{\textbf{Pseudorapidity}}: The same pseudorapidity cuts as the reconstructed signal leptons are applied. Electrons must have $|\eta|<2.47$, excluding the region $1.37<|\eta|<1.52$, and muons and tau leptons must have $|\eta|<2.5$.
-	\item \underline{\textbf{Isolation}}: For electrons and muons, the sum of the transverse momenta of all charged particles with $\pt>1 \GeV$ within a cone of radius $\Delta R=0.3$ of the lepton, denoted \texttt{truth\_ptcone30}, must satisfy \texttt{truth\_ptcone30}/$\pt<0.15$. Similarly, the \texttt{truth\_Etcone30}, defined as the sum of all stable, visible particles within a cone of radius $\Delta R=0.3$, is required to satisfy \texttt{truth\_Etcone30}$/\pt<0.15$.
+	\item \underline{\textbf{Isolation}}: For electrons and muons, the sum of the transverse momenta of all charged particles with $\pt>\SI{1}{\giga\electronvolt}$ within a cone of radius $\Delta R=0.3$ of the lepton, denoted \texttt{truth\_ptcone30}, must satisfy \texttt{truth\_ptcone30}/$\pt<0.15$. Similarly, the \texttt{truth\_Etcone30}, defined as the sum of all stable, visible particles within a cone of radius $\Delta R=0.3$, is required to satisfy \texttt{truth\_Etcone30}$/\pt<0.15$.
 	\item \underline{\textbf{Origin and Decay}}: Leptons must originate from the hard scattering interaction (as opposed to the interaction with the detector as simulated by \geant), and not arise from the decay of a hadron. Electrons and muons are also required to be stable; tau leptons are required to decay hadronically. 
 \end{itemize}
 

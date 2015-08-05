@@ -107,8 +107,10 @@
 
 % You can include the following line(s) if you want to shorten your
 % bibliography by not including url fields
-% \AtEveryBibitem{\clearfield{url}}
-% \AtEveryCitekey{\clearfield{url}}
+\AtEveryBibitem{\clearfield{url}}
+\AtEveryCitekey{\clearfield{url}}
+\AtEveryBibitem{\clearfield{isbn}}
+\AtEveryCitekey{\clearfield{isbn}}
 
 % Do not add "In:"
 \renewbibmacro{in:}{}
