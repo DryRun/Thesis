@@ -14,27 +14,22 @@ The Standard Model of particle physics is a theoretical framework describing the
 %Force particles, or \emph{vector bosons}, have spin $s=1$, and obey Bose-Einstein statistics. These consist of twelve gauge bosons associated to the twelve generators of $G_{\mathrm{SM}}$. Matter particles, or \emph{fermions}, have $s=\frac12$, and obey Dirac statistics~\cite{spin-statistics}. The fermions of the Standard Model consist of quarks and leptons. Quarks are charged under the whole gauge group, experiencing both the strong force, which confines them into hadrons, and the electroweak force, responsible for radioactive decays and electromagnetic interactions. Leptons and neutrinos, on the other hand, are charged only under $\mathrm{SU}(2)_L\times U(1)_Y$, and experience only the electroweak force. Finally, the Standard Model contains a single scalar boson with $s=0$, called the Higgs boson.
 
 A \emph{gauge theory} is a quantum field theory in which the Lagrangian is invariant under local transformations under a gauge group $G$~\cite{peskinschroeder}. To give a simple example, consider a single massless fermion field $\psi(x)$, with kinetic term,
-
 \begin{equation}
 	\mathcal{L} = i\overline{\psi}(x) \slashed{\partial} \psi(x),
 \end{equation}
 where $\slashed{\partial}\equiv \gamma^{\mu}\partial_{\mu}$ and $\gamma^{\mu}$ are the $\gamma$-matrices associated with the Lorentz group. To introduce a gauge group $G$, the Lagrangian is required to be invariant under local transformations under the action of $G$:
  \begin{align*}
  	\psi(x) &\rightarrow V(x) \psi(x), \\
- 	V(x) &= e^{i\alpha(x)^a t^a} \\
+ 	V(x) &= e^{i\alpha(x)^a t^a}
  \end{align*}
  where $t^a$ are the generators of the Lie algebra of $G$, and $\alpha(x)_a$ are arbitrary continuous functions. The kinetic term in the Lagrangian, $i\overline{\psi}(x)\gamma^{\mu}\partial_{\mu}\psi(x)$, can be made invariant by promoting the simple derivate $\partial_{\mu}$ to a \emph{covariant derivative}, $D_{\mu}$, defined as:
-
 \begin{equation}\label{eqn:covariant-derivative-qcd}
 	D_{\mu} = \partial_{\mu} - i g t^a A^a_{\mu},
 \end{equation}
-
 where $g$ is a coupling constant associated with the gauge interaction and $A^a_{\mu}(x)$ are vector fields associated with the gauge bosons of $G$, which transform under the action of $G$ as:
-
 \begin{equation}\label{eqn:gauge-field-transformation}
 	A^a_{\mu}(x)t_a \rightarrow V(x) \left(A^a_{\mu}(x)t^a + \frac{i}{g} \partial_{\mu}\right) V^{\dagger}(x) \\
 \end{equation}
-
 For infinitesimal $\alpha(x)^a$, the transformations can be expressed as:
 \begin{align}\label{eqn:gauge-field-transformation-infinitesimal}
 	\psi(x)&\rightarrow (1 + i\alpha^a t^a + \mathcal{O}(\alpha^2))\psi(x) \\
@@ -71,7 +66,7 @@ For non-abelian gauge groups with nonzero structure constants $f^{abc}$, the squ
 \subsection{Particle Content}
 The Standard Model is a gauge theory constructed to describe the known fundamental particles and their interactions. The gauge group is $G_{\mathrm{SM}}=\mathrm{SU}(3)_c\times \mathrm{SU}(2)_L \times \mathrm{U}(1)_Y$, roughly corresponding to the strong, weak, and electromagnetic forces, respectively\footnote{The fourth force, gravity, has yet to be incorporated successfully. Due to the strength of the interaction, many orders of magnitude weaker than the other three interactions, gravity has a negligible effect on high energy collisions.}. The theory contains a vector gauge boson for each generator of $G_{\mathrm{SM}}$, as described in section~\ref{sec:gauge-theory}: eight gluons ($g$) for $\mathrm{\mathrm{SU}}(3)_c$ and four electroweak gauge bosons ($W^{\pm}$, $Z^0$, and the photon, $\gamma$) for $\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$. 
 
-A fermion field is included for every observed matter particle: six quarks, three leptons, and three neutrinos. The fermions fall into a distinctive pattern: the particles can be grouped into three generations, which are identical except for the particles' masses. Each generation contains an up-type quark with electric charge $\pm\frac23$, a down-type quark with charge $\pm\frac13$, a lepton with charge $\pm1$, and a neutrino with charge $0$. The representations of the particles are shown in table~\ref{table:standard-model-fermions}. The quarks carry a quantum number called \emph{color} (e.g. red, green, and blue), which transforms under the fundamental representation of $\mathrm{SU}(3)_c$; the leptons and neutrinos, on the other hand, are assigned to the trivial representation. The left-handed components of all particles are grouped into doublets, transforming in the fundamental representation of $\mathrm{SU}(2)_L$, while the right-handed components are $\mathrm{SU}(2)_L$ singlets. Finally, each particle is assigned a \emph{hypercharge}, $Y$, describing the coupling to $\mathrm{U}(1)_Y$.
+A fermion field is included for every observed matter particle: six quarks, three leptons, and three neutrinos. The fermions can be grouped into three generations, which are identical except for the particles' masses. Each generation contains an up-type quark with electric charge $\pm\frac23$, a down-type quark with charge $\pm\frac13$, a lepton with charge $\pm1$, and a neutrino with charge $0$. The representations of the particles are shown in table~\ref{table:standard-model-fermions}. The quarks carry a quantum number called \emph{color} (e.g. red, green, and blue), which transforms under the fundamental representation of $\mathrm{SU}(3)_c$; the leptons and neutrinos, on the other hand, are assigned to the trivial representation. The left-handed components of all particles are grouped into doublets, transforming in the fundamental representation of $\mathrm{SU}(2)_L$, while the right-handed components are $\mathrm{SU}(2)_L$ singlets. Finally, each particle is assigned a \emph{hypercharge}, $Y$, describing the coupling to $\mathrm{U}(1)_Y$.
 
 Finally, the theory contains a single $\mathrm{SU}(2)_L$ doublet of complex scalar fields, $\phi$, which explains the nonzero masses of the fermions and the $W^{\pm}$ and $Z^0$ bosons via the Higgs mechanism, as described in section~\ref{sec:higgs-mechanism}. The Higgs mechanism predicts a single scalar boson, the Higgs boson, which interacts with the fermions and the $W^{\pm}$ and $Z^0$ bosons. 
 
@@ -99,9 +94,9 @@ The Standard Model particle content is summarized in table~\ref{table:standard-m
 		\hline
 		\multirow{6}{*}{\begin{turn}{90}{Quarks}\end{turn}} & Up ($u$) & $\SI{2.3}{\mega\electronvolt}$ & \multirow{6}{*}{$\frac12$} & $+\frac23$ \\
 		 & Down ($d$) & $\SI{4.8}{\mega\electronvolt}$ &  & $-\frac13$ \\
-		 & Charm ($c$) & $\SI{1.28}{\giga\electronvolt}$ &  & $+\frac23$ \\
+		 & Charm ($c$) & $\SI{1.275}{\giga\electronvolt}$ &  & $+\frac23$ \\
 		 & Strange ($s$) & $\SI{95}{\mega\electronvolt}$ &  & $-\frac13$ \\
-		 & Top ($t$) & $\SI{174}{\giga\electronvolt}$ &  & $+\frac23$ \\
+		 & Top ($t$) & $\SI{173.21}{\giga\electronvolt}$ &  & $+\frac23$ \\
 		 & Bottom ($b$) & $\SI{4.18}{\giga\electronvolt}$ &  & $-\frac13$ \\
 		\hline
 		\multirow{6}{*}{\begin{turn}{90}{Leptons}\end{turn}} & Electron ($e$) & $\SI{511}{\kilo\electronvolt}$ & \multirow{6}{*}{$\frac12$} & $-1$ \\
@@ -188,7 +183,15 @@ Over the short duration of the collision, the colliding parton can be assigned a
 	\sigma_{AB\rightarrow X} = \sum_{a\in A,\,b\in B}\int \mathrm{d}x_a\, \mathrm{d}x_b\, f_{a/A}(x_a,\,\mu_F^2) f_{b/B}(x_b,\,\mu_F^2) \hat{\sigma}_{ab\rightarrow X},
 \end{equation}
 
-where $a$ and $b$ represent partons within protons $A$ and $B$ with momentum fractions $x_a$ and $x_b$, respectively, and $\hat{\sigma}_{ab\rightarrow X}$ is the hard scattering cross section for those partons. Note that this calculation requires the choice of two unphysical scales, $\mu_F$ and the renormalization scale, $\mu_R$ used to compute $\hat{\sigma}_{ab\rightarrow X}$. In principle, the results should be independent of the choice of $\mu_F$ and $\mu_R$; however, the truncation of computations at finite order in $\alpha_s$ introduces some dependence on the choice of scales. Systematic uncertainties are assigned by varying $\mu_R$, e.g. up and down by factors of two. 
+where $a$ and $b$ represent partons within protons $A$ and $B$ with momentum fractions $x_a$ and $x_b$, respectively, and $\hat{\sigma}_{ab\rightarrow X}$ is the hard scattering cross section for those partons. The process is shown schematically in figure~\ref{fig:pp-collision}. Note that this calculation requires the choice of two unphysical scales, $\mu_F$ and the renormalization scale, $\mu_R$ used to compute $\hat{\sigma}_{ab\rightarrow X}$. In principle, the results should be independent of the choice of $\mu_F$ and $\mu_R$; however, the truncation of computations at finite order in $\alpha_s$ introduces some dependence on the choice of scales. Systematic uncertainties are assigned by varying $\mu_F$ and $\mu_R$ about their nominal values, e.g. up and down by factors of two. 
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.6\textwidth}{!}{\includegraphics{figures/fd/pp.eps}}
+	\caption{Schematic picture of a collision between two protons, labeled $A$ and $B$. Partons $a$ and $b$, which are gluons in this picture, participate in the hard scatter interaction, $gg\rightarrow q\overline{q}$. The beam remnants, the remainder of the two protons, do not participate in the hard scatter interaction, but can interact with the final state partons from the hard scatter interaction and with each other, forming the underlying event. The outgoing colored partons undergo fragmentation and hadronization to form jets, not shown here. }
+	\label{fig:pp-collision}
+\end{figure}
+
 
 The PDFs are determined from fits to existing data; the dependence on $x$ must be determined from the data, while the dependence on the factorization scale can be derived from the DGLAP equations~\cite{Gribov:1972ri,Dokshitzer:1977sg,Altarelli:1977zs}. Uncertainties on the PDFs take into account the experimental uncertainties on the input data, as well as various assumptions used in the PDF extraction, such as the value of $\alpha_s$ used in the fit. An example is shown in figure~\ref{fig:theory-pdf-example}. At high $x$, the PDFs are dominated by the three valence quarks ($uud$), while at low $x$, gluons and sea quarks (quark-antiquark pairs formed from the splitting of a gluon) are more prominent. At higher energy scales, the sea quark distributions are more flavor-symmetric, and the gluon and sea quark distributions are larger with respect to the valence quarks.
 
@@ -209,7 +212,7 @@ The PDFs are determined from fits to existing data; the dependence on $x$ must b
 \end{figure}
 
 \subsubsection{Jets}
-A typical proton-proton collision will typically produce several colored partons, from the hard scattering interaction itself or from QCD radiation from initial or final state partons. Free quarks are not observed in nature due to confinement, and hence the colored partons are not directly observed. Rather, the partons transform into a collection of color-neutral hadrons, which are observed as clusters of particles called \emph{jets}. Quarks and gluons emerging from the collision radiate additional gluons, while the gluons split into quark-antiquark pairs. The splittings, which are dominated by the emission of soft and collinear radiation, continue until the local momentum scales reach $\mathcal{O}(\SI{1}{\giga\electronvolt})$, at which point QCD becomes strongly interacting and confines the partons into hadrons. 
+A typical proton-proton collision will typically produce several colored partons, from the hard scattering interaction itself or from QCD radiation from initial or final state partons. Free quarks are not observed in nature due to confinement, and hence the colored partons are not directly observed. Rather, the partons transform into a collection of color-neutral hadrons, which are observed as clusters of particles called \emph{jets}. Quarks and gluons emerging from the collision radiate additional gluons, and the gluons split into quark-antiquark pairs (\emph{fragmentation}). The splittings, which are dominated by the emission of soft and collinear radiation, continue until the local momentum scales reach $\mathcal{O}(\SI{1}{\giga\electronvolt})$, at which point QCD becomes strongly interacting and confines the partons into hadrons (\emph{hadronization}). 
 
 The perturbative part of jet formation can be modeled using a \emph{parton shower} algorithm, which describes probabilistically the creation soft or collinear partons due to splittings~\cite{Buckley:2011ms}. Hadronization is a non-perturbative process, and hence cannot be computed from QCD. It is instead described by phenomenological models, such as the Lund string model~\cite{Andersson:1983ia} or the cluster model~\cite{Webber:1983if}, which incorporate many free parameters to tune to data. 
 
@@ -370,6 +373,38 @@ Under the transformation in equation~\ref{eqn:yukawa-diagonalization}, $J^{\mu\p
 
 The decays of $W^{\pm}$ and $Z^0$ bosons are shown in table~\ref{table:theory-WZ-BR}. Approximately $33\%$ of $W^{\pm}$ bosons decay to a lepton plus a neutrino. The branching fraction of the $Z^0$ boson to a lepton-antilepton pair is roughly $10\%$. In both cases, the decays are distributed nearly equally between the three lepton flavors. 
 
+\begin{table}[htbp]
+       \centering
+       \hfill
+       \subfloat[ $W$] {
+               \begin{tabular}{cc}
+                       \ \\
+                       Decay & Branching Fraction \\
+                       \hline
+                       $e\nu$  &       $10.71\pm 0.16\ [\%]$ \\
+                       $\mu\nu$        &       $10.63\pm 0.15\ [\%]$ \\
+                       $\tau\nu$       &       $11.38\pm 0.21\ [\%]$ \\
+                       Hadrons         &       $67.41\pm 0.27\ [\%]$ \\ 
+                       \ 
+               \end{tabular}
+       }
+       \hfill
+       \subfloat[ $Z$] {
+               \begin{tabular}{cc}
+                       Decay & Branching Fraction \\
+                       \hline
+                       $e^+e^-$                &       $3.363 \pm 0.004\ [\%]$ \\
+                       $\mu^+\mu^-$    &       $3.366 \pm 0.007\ [\%]$ \\
+                       $\tau^+\tau^-$  &       $3.370 \pm 0.008\ [\%]$ \\
+                       Invisible               &       $20.00 \pm 0.06\ [\%]$ \\
+                       Hadrons                 &       $69.91 \pm 0.06\ [\%]$ \\
+                       $4\ell$ ($\ell=e,\mu$)  &       $(3.20\pm0.28)\times10^{-6}$~\cite{TheATLASCollaboration:2014db} \\
+               \end{tabular}
+       }
+       \hfill
+       \caption{Branching fractions of $W^{\pm}$ and $Z^0$ bosons to leptons and other final states~\cite{pdg}.}
+       \label{table:theory-WZ-BR}
+\end{table}
 
 
 \section{Beyond the Standard Model}\label{sec:bsm}
