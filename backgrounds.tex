@@ -32,7 +32,7 @@ The prompt backgrounds are estimated using MC simulation. The hard-scattering pr
 The details of the modeling of each sample are described below. The generator, parton shower, PDF set, and underlying event tune for the samples are summarized in table~\ref{table:mc-generators}, and the cross sections, next-to-leading-order (NLO) $K$-factors, equivalent sample luminosities, and number of events are shown in table~\ref{table:mc-cross-sections}.
 
 \begin{itemize}
-	\item \sherpa~\cite{sherpa} is used to model $WW$, $WZ$, and $ZZ$ production. Both bosons in the events decay leptonically. Up to three additional parton emissions are included in the matrix element. An important feature of \sherpa\ is that it accurately models the $W+\gamma^{*}$ and $Z+\gamma^{*}$ contributions down to very low $\gamma^{*}$ masses; for electron decays, a cut of $m(ee)>100 \MeV$ is applied, while for muon and tau decays, \sherpa\ naturally cuts off the divergence. To increase the statistics in the phase space relevant for this analysis, the $WZ$ samples requires at least two leptons to have $\pt>5 \GeV$. Finally, the $WZ$ sample also treats the $b$ and $c$ quarks as massive, which improves the modeling of heavy flavor jets at the cost of increased computation time. 
+	\item \sherpa~\cite{sherpa} is used to model $WW$, $WZ$, and $ZZ$ production. Both bosons in the events decay leptonically. Up to three additional parton emissions are included in the matrix element. An important feature of \sherpa\ is that it accurately models the $W+\gamma^{*}$ and $Z+\gamma^{*}$ contributions down to very low $\gamma^{*}$ masses; for electron decays, a cut of $m(ee)>100 \MeV$ is applied, while for muon and $\tau$ decays, \sherpa\ naturally cuts off the divergence. To increase the statistics in the phase space relevant for this analysis, the $WZ$ samples requires at least two leptons to have $\pt>5 \GeV$. Finally, the $WZ$ sample also treats the $b$ and $c$ quarks as massive, which improves the modeling of heavy flavor jets at the cost of increased computation time. 
 	\item $\ttbarV$ production is modeled with \madgraph~\cite{madgraph}, with \pythia\ for the parton shower.
 	\item $WWW^{(*)}$, $ZWW^{(*)}$, and $ZZZ^{(*)}$ are modeled using \madgraph, with \pythia\ for the parton shower. Their contributions to all the signal regions are negligible.
 \end{itemize}
@@ -180,7 +180,7 @@ These equations contain eight equations and eight unknowns, so the system can be
 
 Note that throughout this method, we have assumed that the leptons used for the measurement of $f$ and the denominator leptons in trilepton events are always reducible leptons. In practice, real leptons contaminate both of these samples. The contribution from real denominator leptons is accounted for using simulation, where the lepton can be classified as real or fake using the truth record of the event.
 
-The remainder of this chapter presents the measurement of the fake factors $f$ for electrons, muons, and tau leptons. 
+The remainder of this chapter presents the measurement of the fake factors $f$ for electrons, muons, and $\tau$ leptons. 
 
 \subsection{Electron Fake Factors}\label{sec:electron-fake-factors}
 The background estimation for reducible electrons targets the reducible contribution from two sources: semileptonic heavy flavor decays and misidentified light hadrons. The electron denominator objects are required to pass all of the nominal signal electron requirements except for either failing the \texttt{medium++} requirements and passing the \texttt{loose++} requirements, or having a larger transverse impact parameter, $3<\frac{d_0}{\sigma_{d_0}}<10$, as shown in table~\ref{table:electron-denominator-definition}. The two inverted requirements are combined in an exclusive OR. The parameter space between \texttt{medium++} and \texttt{loose++}, rather than between \texttt{tight++} and \texttt{medium++}, is used for two reasons. First, for the model-independent trilepton analysis (chapter~\ref{ch:model-independent-trilepton-search}), electrons passing \texttt{medium++} and failing \texttt{loose++} are used to define a validation region to test the fake factor method. Second, requiring the electrons to fail \texttt{medium++} reduces the prompt contamination in the denominator sample.
@@ -309,7 +309,7 @@ The systematic and total uncertainties on the fake factors are shown as a functi
 \subsection{Muon Fake Factors}\label{sec:muon-fake-factors}
 The muon fake factor method is similar to that used in the ATLAS same-sign dilepton search on the \SI{7}{\tera\electronvolt} dataset~\cite{TheATLASCollaboration:2012df}. The method targets non-prompt muons from semileptonic heavy flavor decays, punch-through, and decays-in-flight of long-lived mesons by inverting the isolation requirements. Specifically, the denominator muons are defined as follows:
 \begin{itemize}
-  \item Pass all numerator muon requirements in table~\ref{table:electron-muon-selections}, except the requirements on \verb.Etcone30., \verb.ptcone30., and $\frac{d_0}{\sigma_{d_0}}$. 
+  \item Pass all numerator muon requirements in table~\ref{table:electron-muon-selections}, except the requirements on $\etcones{30}$, $\ptcones{30}$, and $\frac{d_0}{\sigma_{d_0}}$. 
   \item Pass a looser impact parameter cut:
   \begin{equation}
 	|\frac{d_0}{\sigma_{d_0}}|<10
@@ -422,13 +422,13 @@ The sources of systematic uncertainty considered are listed below, and the fract
 
 
 \subsection{Tau Lepton Fakes}\label{sec:ff-tau}
-The detector signature of hadronically decaying tau leptons, consisting of a jet with one or more associated tracks, is not as distinctive as the signature of electrons and muons. Differentiating between jets, which are copiously produced in proton-proton collisions, and hadronically decaying tau leptons is difficult, and accordingly the reducible backgrounds in events containing a hadronically decaying tau lepton is much larger. 
+The detector signature of hadronically decaying $\tau$ leptons, consisting of a jet with one or more associated tracks, is not as distinctive as the signature of electrons and muons. Differentiating between jets, which are copiously produced in proton-proton collisions, and hadronically decaying $\tau$ leptons is difficult, and accordingly the reducible backgrounds in events containing a hadronically decaying $\tau$ lepton is much larger. 
 
-The tau identification algorithm (section~\ref{sec:event-reconstruction-taus}) employs a multivariate discriminant based on calorimeter shower shapes and tracking information. The fake rate is strongly dependent on the jet fragmentation, in particular whether the parton initiating the jet is a gluon, light quark, or heavy quark. In constructing the denominator definition, a tighter efficiency working point reduces the dependence on the initial parton, thereby improving the extrapolation of the fake factors to the signal regions; on the other hand, the working point must be loose enough to collect sufficient statistics. The denominator definition requires tau candidates to have a \texttt{BDTScore} which fails the \texttt{BDT-Medium} selection threshold, but exceeds $0.9$ times the $\pt$-dependent $\texttt{BDT-Loose}$ threshold. In simulation, this definition is seen to be relatively insensitive to the type of parton initiating the jet. The fake factors are measured two-dimensionally in bins of $\pt$ and $|\eta|$, and a correction is applied as a function of the highest MV1 $b$-tag weight of all jets in the event. 
+The $\tau$ identification algorithm (section~\ref{sec:event-reconstruction-taus}) employs a multivariate discriminant based on calorimeter shower shapes and tracking information. The fake rate is strongly dependent on the jet fragmentation, in particular whether the parton initiating the jet is a gluon, light quark, or heavy quark. In constructing the denominator definition, a tighter efficiency working point reduces the dependence on the initial parton, thereby improving the extrapolation of the fake factors to the signal regions; on the other hand, the working point must be loose enough to collect sufficient statistics. The denominator definition requires $\tau$ candidates to have a \texttt{BDTScore} which fails the \texttt{BDT-Medium} selection threshold, but exceeds $0.9$ times the $\pt$-dependent $\texttt{BDT-Loose}$ threshold. In simulation, this definition is seen to be relatively insensitive to the type of parton initiating the jet. The fake factors are measured two-dimensionally in bins of $\pt$ and $|\eta|$, and a correction is applied as a function of the highest MV1 $b$-tag weight of all jets in the event. 
 
 
 \subsubsection{Fake Factor Measurement}\label{sec:ff-tau-measurement}
-The tau lepton fake factors are measured using a tag-and-probe method in a sample targeting $W$+jets events. Events are required to have a muon satisfying the numerator criteria (tag) plus a hadronically decaying tau candidate (probe). To avoid biasing the fake factors, no other requirements are imposed to reject the prompt contamination (for example, requiring the muon and $\tauhadvis$ to have the same sign biases the sample towards gluon-initiated jets). The prompt contamination, dominantly from $Z+$jets and $t\bar{t}$ production, is subtracted using simulation. 
+The $\tau$ lepton fake factors are measured using a tag-and-probe method in a sample targeting $W$+jets events. Events are required to have a muon satisfying the numerator criteria (tag) plus a hadronically decaying $\tau$ candidate (probe). To avoid biasing the fake factors, no other requirements are imposed to reject the prompt contamination (for example, requiring the muon and $\tauhadvis$ to have the same sign biases the sample towards gluon-initiated jets). The prompt contamination, dominantly from $Z+$jets and $t\bar{t}$ production, is subtracted using simulation. 
 
 The muon-$\tauhadvis$ invariant mass and $\tauhadvis$ $\pt$ spectra for numerators and denominators are shown in figure~\ref{fig:taufakeprompt}, along with the prompt contribution estimated from simulation. Figure~\ref{fig:taufakefactors} shows the resulting fake factors.
 
@@ -450,7 +450,7 @@ The muon-$\tauhadvis$ invariant mass and $\tauhadvis$ $\pt$ spectra for numerato
 		\resizebox{0.48\textwidth}{!}{\includegraphics{figures/backgrounds/TauFakes_DenPt}}
 	}
 \caption{\label{fig:taufakeprompt} Invariant mass of the muon and $\tauhadvis$ pair (left) and
-  $\pt$ of the tau candidate (right). The top plots show the distributions for numerator $\tauhadvis$ candidates, while the bottom plots show the distributions for denominator $\tauhadvis$ candidates. The filled histograms show the prompt contamination estimated from simulation.}
+  $\pt$ of the $\tau$ candidate (right). The top plots show the distributions for numerator $\tauhadvis$ candidates, while the bottom plots show the distributions for denominator $\tauhadvis$ candidates. The filled histograms show the prompt contamination estimated from simulation.}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -470,7 +470,7 @@ The muon-$\tauhadvis$ invariant mass and $\tauhadvis$ $\pt$ spectra for numerato
 
 
 \subsubsection{Systematic Uncertainties}\label{sec:ff-tau-systematics}
-The following sources of systematics uncertainties on the tau fake factors are considered:
+The following sources of systematics uncertainties on the $\tau$ fake factors are considered:
 
 \begin{itemize}
 \item Uncertainties on the simulation-based estimates of the prompt contamination.
