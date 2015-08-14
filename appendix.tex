@@ -269,8 +269,57 @@ This section shows the $m_{3\ell}$, $\Delta R(Z,\ \ell_3)$, $\mtw$, and $\Etmiss
 
 \clearpage
 
-%\chapter{Statistical Methods}\label{appx:statistics}
-%The analyses presented in chapters~\ref{ch:model-independent-trilepton-search} and \ref{ch:trilepton-resonance-search} both employ a modified frequentist approach to the statistical limit setting known as the $CL_s$ method~\cite{cls}. The method 
+\chapter{Statistical Methods}\label{appx:statistics}
+The analyses presented in chapters~\ref{ch:model-independent-trilepton-search} and \ref{ch:trilepton-resonance-search} both employ a modified frequentist approach to the statistical limit setting known as the $CL_s$ method~\cite{cls}. The goal of the method is to compare the data against the signal plus background hypothesis versus the background-ony hypothesis. In the case of searches, the signal plus background hypothesis is assumed to predict an excess of events above the background-only hypothesis. 
+
+The first step is to define a \emph{test statistic}, $\tilde{q}_{\mu}$, which distinguishes a background-like data sample from a signal plus background-like sample. Here $\mu$ is a parameter representing the signal strength; $\mu=1$ corresponds to the signal hypothesis ($S+B$), while $\mu=0$ corresponds to background only ($B$). The test statistic is based on the profile likelihood method. In the cased of binned data, i.e. a histogram with $N$ bins, the likelihood is given by,
+
+\begin{equation}\label{eqn:binned-likelihood}
+	\mathcal{L} = \left(\prod_{i=1}^N \frac{\mu s_i + b_i}{n_i!} e^{-(\mu s_i + b_i)}\right) \times \rho(\tilde{\theta}|\theta),
+\end{equation}
+
+where $s_i$ and $b_i$ are the expected number of signal and background events in bin $i$ and $n_i$ is the number of observed events in bin $i$. The systematic uncertainties are parametrized by a set of nuisance parameters, $\theta$, with nominal values $\tilde{\theta}$; the $\rho(\tilde{\theta}|\theta)$ are frequentist auxiliary measurement probability distribution functions (pdfs) of the nuisance parameters, which are taken to be Gaussian for most sources of uncertainty considered here. This formalism applies to the model-independent trilepton search, where the signal regions are effectively one-bin histograms. 
+
+In the case of unbinned data, $\{x_i\}_{i\in [1,k]}$, the likelihood is given by,
+
+\begin{equation}\label{eqn:unbinned-likelihood}
+	\mathcal{L}=\frac1k \left(\prod_{i=1}^{k} \left(\mu S f_s(x_i) + B f_b(x_i)\right) \times e^{-(\mu S + B)}\right) \times \rho(\tilde{\theta}|\theta),
+\end{equation}
+
+where $S$ and $B$ are the total expected number of signal and background events, and $f_s(x_i)$ and $f_b(x_i)$ are the signal and background pdfs for the data $x_i$. This formalism applied to the trilepton resonance search, where the signal and background are parametrized by analytical functions. 
+
+The test statistic is taken to be the negative log likelihood ratio,
+
+\begin{equation}\label{eqn:NLLR}
+  \tilde{q}_{\mu} = -2\log \left(\frac{\mathcal{L}(\mathrm{data}|\mu,\,\hat{\theta}_{\mu})}{\mathcal{L}(\mathrm{data}|\hat{\mu},\,\hat{\theta})}\right).
+\end{equation}
+
+Greater values correspond to more background-like observations, and lesser values correspond to more signal-like observations. Here, $\hat{\theta}_{\mu}$ is a conditional maximum likelihood estimator (MLE) of the nuisance parameters $\theta$ given the data for fixed $\mu$, and $\hat{\mu}$ and $\hat{theta}$ are global MLEs of the signal strength and nuisance parameters. The value of $\hat{\mu}$ is restricted to be in the range $[0,\,\mu]$; the lower bound enforces the expectation that the signal produces an excess, while the upper bound guarantees a one-sided confidence interval, ensuring that an upwards fluctuation beyond $\mu$ would not count against the signal plus background hypothesis. 
+
+To find the observed limit on $\mu$, pdfs are derived for $\tilde{q}_{\mu}$ under the $S+B$ and $B$ hypotheses ($f(\tilde{q}_{\mu}|\mu,\,\hat{\theta}_{\mu}^{\mathrm{obs}})$ and $f(\tilde{q}_{\mu}|0,\,\hat{\theta}_{0}^{\mathrm{obs}})$) using toy Monte Carlo pseudoexperiments
+%\footnote{An \emph{unconditional ensemble} is generated, i.e. the nuisance parameters are randomized about their nominal values, so that the distribution agrees with asymptotic expressions.}
+. The nuisance parameters are fixed to the maximum likelihood estimates, $\hat{\theta}_{\mu}^{\mathrm{obs}}$ and $\hat{\theta}_{0}^{\mathrm{obs}}$ for the $S+B$ and $B$ hypotheses, respectively. Example pdfs are shown in figure~\ref{fig:qmu-pdfs}. 
+
+Given an observed test statistic $\tilde{q}_{\mu}^{\mathrm{obs}}$, the pdfs are used to derive $p$-values for the $S+B$ and $B$ hypotheses:
+
+\begin{align}\label{eqn:p-values}
+	p_0 &= P(\tilde{q}_{\mu}\leq \tilde{q}_{\mu}^{\mathrm{obs}}|B)=  \int_{\tilde{q}_{\mu}^{\mathrm{obs}}}^{\infty} f(\tilde{q}_{\mu}|0)\,\mathrm{d\tilde{q}_{\mu}} \\
+	p_{\mu} &= P(\tilde{q}_{\mu}\geq \tilde{q}_{\mu}^{\mathrm{obs}}|S+B) = \int_{\tilde{q}_{\mu}^{\mathrm{obs}}}^{\infty} f(\tilde{q}_{\mu}|\mu)\,\mathrm{d\tilde{q}_{\mu}}. \\
+\end{align}
+
+The $p_0$ value gives the probability of obtaining a test statistic equal to or more signal-like than observed, assuming the background-only hypothesis. Similarly, the $p_{\mu}$ value gives the probability of obtaining a test statistic equal to or more background-like than observed, assuming the signal plus background hypothesis. 
+
+Finally, the $\cls$ method defines the criterion used to exclude a model. The $\cls$ value is constructed to avoid the problem of excluding models to which the experiment has little sensitivity; for example, a large downward fluctuation can result in the $p_{\mu}\equiv \clsb$ value excluding $\mu=0$, even if the experiment has no sensitivity to the signal. A model with signal strength $\mu$ is considered excluded at confidence level $1-\alpha$ if:
+
+\begin{equation}\label{eqn:cls}
+	\cls \equiv \frac{p_{\mu}}{1-p_0} < \alpha.
+\end{equation}
+
+Note that the $\cls$ value is not itself a $p$-value, but satisfies $\cls > p_{\mu}\equiv \clsb$, and hence is more conservative than $\clsb$. The 95\% confidence level observed exclusion is determined by solving for the $\mu$ value which yields $\cls=0.05$.
+
+
+
+
 
 \end{appendices}
 
