@@ -27,7 +27,7 @@ The relevant Standard Model processes contributing to multilepton final states a
 
 
 \section{Prompt Backgrounds}\label{sec:prompt-backgrounds}
-The prompt backgrounds are estimated using MC simulation. The hard-scattering processes are modeled by dedicated event generators, possibly including the emission of additional partons. Additional QCD radiation is modeled using a parton shower. The detector response to the simulated events is simulated with the ATLAS simulation framework~\cite{TheATLASCollaboration:2010et} using the \geant\ toolkit~\cite{Agostinelli:2002hh}. Pileup is included by overlaying simulated minimum-bias interactions from \pythia~\cite{pythia6} on the hard scattering event. Simulated events are assigned weights to reproduce the observed pileup distributions in data, and also to account for small differences in the trigger, reconstruction, and identification efficiencies between simulation and data. 
+The prompt backgrounds are estimated using MC simulation. The hard-scattering processes are modeled by dedicated event generators, possibly including the emission of additional partons. Additional QCD radiation is modeled using a parton shower. The detector response is simulated with the ATLAS simulation framework~\cite{TheATLASCollaboration:2010et} using the \geant\ toolkit~\cite{Agostinelli:2002hh}. Pileup is included by overlaying simulated minimum-bias interactions from \pythia~\cite{pythia6} on the hard scattering event. Simulated events are assigned weights to reproduce the observed pileup distributions in data, and also to account for small differences in the trigger, reconstruction, and identification efficiencies between simulation and data. 
 
 The details of the modeling of each sample are described below. The generator, parton shower, PDF set, and underlying event tune for the samples are summarized in table~\ref{table:mc-generators}, and the cross sections, next-to-leading-order (NLO) $K$-factors, equivalent sample luminosities, and number of events are shown in table~\ref{table:mc-cross-sections}.
 
@@ -296,10 +296,10 @@ The systematic and total uncertainties on the fake factors are shown as a functi
 \begin{figure}[htbp] 
   \centering
   \subfloat[Linear scale] {
-	\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_FinalFF_systematics_linearx_biggerlabels}}
+	\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_FinalFF_systematics_linearx_biggerlabels_cropped}}
   }
   \subfloat[Log scale] {
-	\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_FinalFF_systematics_logx_biggerlabels}}
+	\resizebox{3in}{!}{\includegraphics{figures/backgrounds/c_FinalFF_systematics_logx_biggerlabels_cropped}}
   }
   \caption{Electron fake factors vs. $\pt$, with systematic and total uncertainties. The statistical uncertainty includes both the data and prompt subtraction Monte Carlo statistics. The total uncertainty is the sum in quadrature of the statistical and systematic uncertainty.}
   \label{fig:electron-fake-factor-uncertainties}
