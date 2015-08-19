@@ -1,7 +1,7 @@
 \begin{appendices}
 
 \chapter{Author Contributions}
-The LHC and the ATLAS experiment are projects of tremendous scale. Much of this dissertation covers the combined effort of thousands of contributors over the past twenty years. My own work is concentrated in chapters~\ref{ch:luminosity}, \ref{ch:backgrounds}, \ref{ch:model-independent-trilepton-search}, and \ref{ch:trilepton-resonance-search}. I was initially involved in the luminosity measurement effort, with a focus on methods using vertices reconstructed using inner detector data. After using vertices at high $z$ to constrain the presence of satellite bunches, protons in the beams outside the nominal RF buckets, I developed a luminosity measurement method using vertex counting (section~\ref{sec:luminosity-vertex}). Much of this effort involved understanding the effect of pileup on the reconstruction efficiency. Vertex counting has proved useful for measuring the luminosity in low pileup scenarios, such as the van der Meer scans and the measurement of the total inelastic cross section with the ALFA detector. 
+The LHC and the ATLAS experiment are projects of tremendous scale, and much of this dissertation covers the combined effort of thousands of contributors over the past twenty years. My own work is concentrated in chapters~\ref{ch:luminosity}, \ref{ch:backgrounds}, \ref{ch:model-independent-trilepton-search}, and \ref{ch:trilepton-resonance-search}. I was initially involved in the luminosity measurement effort, with a focus on methods using vertices reconstructed using inner detector data. After using vertices at high $z$ to constrain the presence of satellite bunches, protons in the beams outside the nominal RF buckets, I developed a luminosity measurement method using vertex counting (section~\ref{sec:luminosity-vertex}). Much of this effort involved understanding the effect of pileup on the reconstruction efficiency. Vertex counting has proved useful for measuring the luminosity in low pileup scenarios, such as the van der Meer scans and the measurement of the total inelastic cross section with the ALFA detector. 
 
 The latter part of my dissertation work involved two searches for new phenomena using events with three or more charged leptons. The Standard Model backgrounds are sufficiently small that backgrounds from non-prompt sources, such as misidentified jets or semileptonic heavy flavor decays, can make significant contributions. I provided the data-driven estimate of the non-prompt electron backgrounds in the context of the model-independent trilepton search (section~\ref{sec:electron-fake-factors}). Starting from the model-independent search's framework, I then helped to develop the trilepton resonance search. I contributed to most aspects of the analysis, including the event selection, the signal and control region definitions, the non-prompt background estimation, the systematic uncertainties, and the parametrization of the background using the analytical fit functions.
 
@@ -278,7 +278,7 @@ The first step is to define a \emph{test statistic}, $\tilde{q}_{\mu}$, which di
 	\mathcal{L} = \left(\prod_{i=1}^N \frac{\mu s_i + b_i}{n_i!} e^{-(\mu s_i + b_i)}\right) \times \rho(\tilde{\theta}|\theta),
 \end{equation}
 
-where $s_i$ and $b_i$ are the expected number of signal and background events in bin $i$ and $n_i$ is the number of observed events in bin $i$. The systematic uncertainties are parametrized by a set of nuisance parameters, $\theta$, with nominal values $\tilde{\theta}$; the $\rho(\tilde{\theta}|\theta)$ are frequentist auxiliary measurement probability distribution functions (pdfs) of the nuisance parameters, which are taken to be Gaussian for most sources of uncertainty considered here. This formalism applies to the model-independent trilepton search, where the signal regions are effectively one-bin histograms. 
+where $s_i$ and $b_i$ are the expected number of signal and background events in bin $i$ and $n_i$ is the number of observed events in bin $i$. The systematic uncertainties are parametrized by a set of nuisance parameters, $\theta$, with nominal values $\tilde{\theta}$; the $\rho(\tilde{\theta}|\theta)$ are frequentist auxiliary measurement probability distribution functions (pdfs) of the nuisance parameters, which are taken to be Gaussian for most sources of uncertainty considered here. This likelihood is used for the model-independent trilepton search, where the data is binned into the various signal regions.
 
 In the case of unbinned data, $\{x_i\}_{i\in [1,k]}$, the likelihood is given by,
 
@@ -294,11 +294,26 @@ The test statistic is taken to be the negative log likelihood ratio,
   \tilde{q}_{\mu} = -2\log \left(\frac{\mathcal{L}(\mathrm{data}|\mu,\,\hat{\theta}_{\mu})}{\mathcal{L}(\mathrm{data}|\hat{\mu},\,\hat{\theta})}\right).
 \end{equation}
 
-Greater values correspond to more background-like observations, and lesser values correspond to more signal-like observations. Here, $\hat{\theta}_{\mu}$ is a conditional maximum likelihood estimator (MLE) of the nuisance parameters $\theta$ given the data for fixed $\mu$, and $\hat{\mu}$ and $\hat{theta}$ are global MLEs of the signal strength and nuisance parameters. The value of $\hat{\mu}$ is restricted to be in the range $[0,\,\mu]$; the lower bound enforces the expectation that the signal produces an excess, while the upper bound guarantees a one-sided confidence interval, ensuring that an upwards fluctuation beyond $\mu$ would not count against the signal plus background hypothesis. 
+Greater values correspond to more background-like observations, and lesser values correspond to more signal-like observations. Here, $\hat{\theta}_{\mu}$ is a conditional maximum likelihood estimator (MLE) of the nuisance parameters $\theta$ given the data for fixed $\mu$, and $\hat{\mu}$ and $\hat{\theta}$ are global MLEs of the signal strength and nuisance parameters. The value of $\hat{\mu}$ is restricted to be in the range $[0,\,\mu]$; the lower bound enforces the expectation that the signal produces an excess, while the upper bound guarantees a one-sided confidence interval, ensuring that an upwards fluctuation beyond $\mu$ would not count against the signal plus background hypothesis. 
 
 To find the observed limit on $\mu$, pdfs are derived for $\tilde{q}_{\mu}$ under the $S+B$ and $B$ hypotheses ($f(\tilde{q}_{\mu}|\mu,\,\hat{\theta}_{\mu}^{\mathrm{obs}})$ and $f(\tilde{q}_{\mu}|0,\,\hat{\theta}_{0}^{\mathrm{obs}})$) using toy Monte Carlo pseudoexperiments
 %\footnote{An \emph{unconditional ensemble} is generated, i.e. the nuisance parameters are randomized about their nominal values, so that the distribution agrees with asymptotic expressions.}
 . The nuisance parameters are fixed to the maximum likelihood estimates, $\hat{\theta}_{\mu}^{\mathrm{obs}}$ and $\hat{\theta}_{0}^{\mathrm{obs}}$ for the $S+B$ and $B$ hypotheses, respectively. Example pdfs are shown in figure~\ref{fig:qmu-pdfs}. 
+
+\begin{figure}[htbp]
+  \centering
+  \hfill
+  \subfloat[] {\label{fig:qmu-pdfs-good}
+    \resizebox{0.4\textwidth}{!}{\includegraphics{figures/appendix/CLs_example_good}}
+  }
+  \hfill
+  \subfloat[] {\label{fig:qmu-pdfs-bad}
+    \resizebox{0.39\textwidth}{!}{\includegraphics{figures/appendix/CLs_example_bad}}
+  }
+  \hfill
+  \caption{Two example of pdfs for $\tilde{q}_{\mu}$ for the $S+B$ and $B$ hypotheses~\cite{atlascls}. The left plot shows pdfs where the two hypotheses are well separated, while the right plot shows a case where the experiment has little sensitivity to the signal.}
+  \label{fig:qmu-pdfs}
+\end{figure}
 
 Given an observed test statistic $\tilde{q}_{\mu}^{\mathrm{obs}}$, the pdfs are used to derive $p$-values for the $S+B$ and $B$ hypotheses:
 
@@ -309,7 +324,7 @@ Given an observed test statistic $\tilde{q}_{\mu}^{\mathrm{obs}}$, the pdfs are 
 
 The $p_0$ value gives the probability of obtaining a test statistic equal to or more signal-like than observed, assuming the background-only hypothesis. Similarly, the $p_{\mu}$ value gives the probability of obtaining a test statistic equal to or more background-like than observed, assuming the signal plus background hypothesis. 
 
-Finally, the $\cls$ method defines the criterion used to exclude a model. The $\cls$ value is constructed to avoid the problem of excluding models to which the experiment has little sensitivity; for example, a large downward fluctuation can result in the $p_{\mu}\equiv \clsb$ value excluding $\mu=0$, even if the experiment has no sensitivity to the signal. A model with signal strength $\mu$ is considered excluded at confidence level $1-\alpha$ if:
+Finally, the $\cls$ method defines the criterion used to exclude a model~\cite{cls}. The $\cls$ value is constructed to avoid the problem of excluding models to which the experiment has little sensitivity, like that shown in figure~\ref{fig:qmu-pdfs-bad}; for example, a large downward fluctuation can result in the $p_{\mu}\equiv \clsb$ value excluding $\mu=0$, even if the experiment has no sensitivity to the signal. A model with signal strength $\mu$ is considered excluded at confidence level $1-\alpha$ if:
 
 \begin{equation}\label{eqn:cls}
 	\cls \equiv \frac{p_{\mu}}{1-p_0} < \alpha.
