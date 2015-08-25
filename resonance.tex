@@ -48,7 +48,7 @@ The Lagrangian contains Yukawa terms mixing the heavy leptons with Standard Mode
 \begin{equation}
   -\mathcal{L} \ni \sum_{\ell=e,\,\mu,\,\tau} \sqrt{2}\phi^0 \overline{\Psi} Y_{L \ell} \psi_{\ell} + \mathrm{h.c.},
 \end{equation}
-where $\Psi\equiv {\lplus_R}^c + \lminus_R$ is a Dirac spinor representating the four charged degrees of freedom, $\psi_{\ell}$ are Dirac spinors corresponding to the Standard Model leptons, $\phi\equiv(\phi^+,\phi^0)^T\equiv (\phi^+,(v+H+i\eta)/\sqrt{2})^T$ is the Higgs doublet, and $Y_{L \ell}$ are Yukawa couplings. After electroweak symmetry breaking, the mass matrices take the form
+where $\Psi\equiv {\lplus_R}^c + \lminus_R$ is a Dirac spinor representing the four charged degrees of freedom, $\psi_{\ell}$ are Dirac spinors corresponding to the Standard Model leptons, $\phi\equiv(\phi^+,\phi^0)^T\equiv (\phi^+,(v+H+i\eta)/\sqrt{2})^T$ is the Higgs doublet, and $Y_{L \ell}$ are Yukawa couplings. After electroweak symmetry breaking, the mass matrices take the form
 \begin{equation}
 -\mathcal{L} \ni \sum_{\ell=e,\mu,\tau} \left(\begin{array}{cc}\overline{\psi}_{\ell,R} & \overline{\Psi}_R \end{array} \right) \left(\begin{array}{cc} m_l & 0 \\ Y_{L \ell}v & M_{\lpm} \end{array}\right) \left(\begin{array}{c} \psi_{\ell,L} \\ \Psi_L \end{array}\right)  + \left(\begin{array}{cc}\overline{\psi}_{\ell,L} & \overline{\Psi}_L\end{array}\right) \left(\begin{array}{cc} m_l & Y_{L \ell}^{\dagger}v \\ 0 & M_{\lpm} \end{array}\right) \left(\begin{array}{c} \psi_{\ell,R} \\ \Psi_r \end{array}\right).
 \end{equation}
@@ -419,7 +419,7 @@ In all six signal regions, the backgrounds are dominated by diboson production, 
 		\hline
 	\end{tabular}
 	}
-	\caption{Percent of fiducial events remaining at various stages in the cutflow for the $Z+e$ signal regions.0 Only statistical uncertainties due to finite Monte Carlo statistics are shown.0 The preselection cut requires three selected leptons, with one OSSF pair, as well as the general event selection cuts listed above.}
+	\caption{Percent of fiducial events remaining at various stages in the cutflow for the $Z+e$ signal regions.0 Only statistical uncertainties due to finite Monte Carlo statistics are shown. The preselection cut requires three selected leptons, with one OSSF pair, as well as the general event selection cuts listed above.}
 	\label{table:fiducial-efficiencies-Ze}
 \end{table}
 
@@ -593,7 +593,7 @@ The signal predictions and background estimates are assigned systematic uncertai
 
 	\item \textbf{Lepton efficiencies}: To equalize the lepton trigger, reconstruction, and identification efficiencies between data and simulation, events in simulation are weighted by the ratio of efficiencies in data to simulation (see sections~\ref{sec:reco-electron-efficiency} and \ref{sec:reco-muon-efficiency}). The ratio of efficiencies is typically close to unity, and the corresponding uncertainty ranges from $1$--$5\%$.
 
-	\item \textbf{Lepton energy scale and resolution} (LES/LER): To improve agreement between data and simulation, the electron energy is scaled in data, and the electrom energy and muon momenta are smeared in Monte Carlo (see sections~\ref{sec:reco-electron-energymomentum} and \ref{sec:reco-muon-energymomentum}). The corrections carry small systematic uncertainties that primarily affect the analysis due to leptons migrating between passing and failing the selection, or lepton pairs moving in or out of the $Z$ mass window. 
+	\item \textbf{Lepton energy scale and resolution} (LES/LER): To improve agreement between data and simulation, the electron energy is scaled in data, and the electron energy and muon momenta are smeared in Monte Carlo (see sections~\ref{sec:reco-electron-energymomentum} and \ref{sec:reco-muon-energymomentum}). The corrections carry small systematic uncertainties that primarily affect the analysis due to leptons migrating between passing and failing the selection, or lepton pairs moving in or out of the $Z$ mass window. 
 
 	\item \textbf{Jet energy scale and resolution} (JES/JER): Like the leptons, systematic uncertainties are assigned to the jet energy scale and resolution (see section~\ref{sec:reco-jets-energy-scale-resolution}). The jet energy uncertainties have a small impact on this analysis, only affecting the normalization of the $\threeljj$ signal regions when the dijet mass is pushed in or out of the window $\SI{60.385}{\giga\electronvolt}<m_{jj}<\SI{150.9}{\giga\electronvolt}$. 
 \end{itemize}
@@ -1135,7 +1135,6 @@ The total number of observed events each signal region is shown in table~\ref{ta
 \begin{figure}[htbp]
 	\centering
 	\vspace{-0.3in}
-	\hfill
 	\subfloat[] {% [$Z+e$, $\fourl$ category] {
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/resonance/c_output_DeltaM_Ze_FourLNoM3L_300GeV_hide_ratio.pdf}}
 	}
@@ -1143,9 +1142,7 @@ The total number of observed events each signal region is shown in table~\ref{ta
 	\subfloat[] {% [$Z+\mu$, $\fourl$ category] {
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/resonance/c_output_DeltaM_Zmu_FourLNoM3L_300GeV_hide_ratio.pdf}}
 	} 
-	\hfill
 	\\
-	\hfill
 	\subfloat[] {% [$Z+e$, $\threeljj$ category] {
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/resonance/c_output_DeltaM_Ze_ThreeLDijetNoM3L_300GeV_hide_ratio.pdf}}
 	}
@@ -1153,9 +1150,7 @@ The total number of observed events each signal region is shown in table~\ref{ta
 	\subfloat[] {% [$Z+\mu$, $\threeljj$ category] {
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/resonance/c_output_DeltaM_Zmu_ThreeLDijetNoM3L_300GeV_hide_ratio.pdf}}
 	}
-	\hfill
 	\\
-	\hfill
 	\subfloat[] {% [$Z+e$, $\threelo$ category] {
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/resonance/c_output_DeltaM_Ze_ElseNoM3L_300GeV_log.pdf}}
 	}
@@ -1163,7 +1158,6 @@ The total number of observed events each signal region is shown in table~\ref{ta
 	\subfloat[] {% [$Z+\mu$, $\threelo$ category] {
 		\resizebox{0.4\textwidth}{!}{\includegraphics{figures/resonance/c_output_DeltaM_Zmu_ElseNoM3L_300GeV_log.pdf}}
 	}
-	\hfill
 	\caption{The $\deltam$ distributions for the $\fourl$ (top), $\threeljj$ (middle), and $\threelo$ (bottom) categories, divided into the $Z+e$ (left) and $Z+\mu$ (right) flavor channels. The data are shown as black points, while the pre-fit background expectations are shown in the solid histograms. Signal contributions from a $\SI{140}{\giga\electronvolt}$ $\lpm$ in the VLL model and a $\SI{300}{\giga\electronvolt}$ $\lpm$ in the seesaw model are also shown. The error bars on the points represent statistical uncertainties, and the shaded bands represent the systematic uncertainties on the background predictions.}
 	\label{fig:SR-DeltaM}
 \end{figure}
